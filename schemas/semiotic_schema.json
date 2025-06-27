@@ -1,0 +1,300 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Semiotic Analysis Schema",
+  "description": "Schema for structured semiotic analysis based on Greimas' plastic semiotics with PropBank roles",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "analysisId": {"type": "string", "format": "uuid"},
+        "imagePath": {"type": "string"},
+        "factStatement": {"type": "string"},
+        "model": {"type": "string"},
+        "dateCreated": {"type": "string", "format": "date-time"},
+        "analysisStep": {"type": "string", "enum": ["semiotic_description"]}
+      },
+      "required": ["analysisId", "imagePath", "factStatement", "model", "dateCreated", "analysisStep"]
+    },
+    "semioticAnalysis": {
+      "type": "object",
+      "properties": {
+        "topology": {
+          "type": "object",
+          "description": "Distribution of elements in space",
+          "properties": {
+            "spatialAxis": {
+              "type": "object",
+              "properties": {
+                "primaryAxis": {"type": "string", "enum": ["vertical", "horizontal", "diagonal", "circular", "none"]},
+                "secondaryAxis": {"type": "string", "enum": ["vertical", "horizontal", "diagonal", "circular", "none"]},
+                "description": {"type": "string"}
+              }
+            },
+            "focalPoints": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "element": {"type": "string"},
+                  "position": {"type": "string"},
+                  "significance": {"type": "string"}
+                }
+              }
+            },
+            "depth": {
+              "type": "object",
+              "properties": {
+                "depthType": {"type": "string", "enum": ["flat", "shallow", "deep", "mixed"]},
+                "backgroundElements": {"type": "array", "items": {"type": "string"}},
+                "foregroundElements": {"type": "array", "items": {"type": "string"}},
+                "description": {"type": "string"}
+              }
+            },
+            "proximity": {
+              "type": "object",
+              "properties": {
+                "closestElements": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "element1": {"type": "string"},
+                      "element2": {"type": "string"},
+                      "distance": {"type": "string", "enum": ["touching", "close", "medium", "far"]},
+                      "significance": {"type": "string"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "eidetic": {
+          "type": "object",
+          "description": "Shapes, lines, borders and contours",
+          "properties": {
+            "shapes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "element": {"type": "string"},
+                  "shapeType": {"type": "string", "enum": ["angular", "rounded", "curved", "geometric", "organic", "mixed"]},
+                  "dominantLines": {"type": "string", "enum": ["straight", "curved", "angular", "mixed"]},
+                  "edges": {"type": "string", "enum": ["sharp", "soft", "blurred", "defined", "undefined"]},
+                  "description": {"type": "string"}
+                }
+              }
+            },
+            "lines": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "lineType": {"type": "string", "enum": ["contour", "force", "direction", "boundary", "decorative"]},
+                  "direction": {"type": "string", "enum": ["vertical", "horizontal", "diagonal", "curved", "radial", "mixed"]},
+                  "thickness": {"type": "string", "enum": ["thin", "medium", "thick", "varying"]},
+                  "elements": {"type": "array", "items": {"type": "string"}},
+                  "significance": {"type": "string"}
+                }
+              }
+            },
+            "contours": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "element": {"type": "string"},
+                  "definition": {"type": "string", "enum": ["clear", "blurred", "partial", "disrupted"]},
+                  "contrast": {"type": "string", "enum": ["high", "medium", "low"]},
+                  "description": {"type": "string"}
+                }
+              }
+            }
+          }
+        },
+        "chromatic": {
+          "type": "object",
+          "description": "Colors, saturation, values (amount of light)",
+          "properties": {
+            "colorPalette": {
+              "type": "object",
+              "properties": {
+                "dominantColors": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "color": {"type": "string"},
+                      "elements": {"type": "array", "items": {"type": "string"}},
+                      "significance": {"type": "string"}
+                    }
+                  }
+                },
+                "colorHarmony": {"type": "string", "enum": ["complementary", "analogous", "monochromatic", "triadic", "contrasting"]},
+                "overallTone": {"type": "string", "enum": ["warm", "cool", "neutral", "mixed"]}
+              }
+            },
+            "saturation": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "element": {"type": "string"},
+                  "level": {"type": "string", "enum": ["high", "medium", "low", "desaturated"]},
+                  "description": {"type": "string"}
+                }
+              }
+            },
+            "values": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "element": {"type": "string"},
+                  "lightLevel": {"type": "string", "enum": ["bright", "medium", "dark", "shadowed"]},
+                  "contrast": {"type": "string", "enum": ["high", "medium", "low"]},
+                  "description": {"type": "string"}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "semanticRelations": {
+      "type": "object",
+      "description": "Semantic relationships and PropBank roles",
+      "properties": {
+        "mainScene": {
+          "type": "object",
+          "properties": {
+            "sceneType": {"type": "array", "items": {"type": "string"}},
+            "description": {"type": "string"},
+            "temporalAspect": {"type": "string", "enum": ["instantaneous", "ongoing", "completed", "recurring"]}
+          }
+        },
+        "participants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "element": {"type": "string"},
+              "propbankRoles": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["COM", "LOC", "DIR", "GOL", "MNR", "TMP", "EXT", "PRP", "CAU", "MOD", "NEG", "ADV"]
+                },
+                "description": "PropBank roles: COM (accompaniment), LOC (location), DIR (direction), GOL (goal), MNR (manner), TMP (temporal), EXT (extent), PRP (purpose), CAU (cause), MOD (modal), NEG (negation), ADV (adverbial)"
+              },
+              "attributes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "attribute": {"type": "string"},
+                    "value": {"type": "string"},
+                    "category": {"type": "string", "enum": ["physical", "emotional", "behavioral", "relational"]}
+                  }
+                }
+              },
+              "actions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "action": {"type": "string"},
+                    "target": {"type": "string"},
+                    "manner": {"type": "string"},
+                    "intensity": {"type": "string", "enum": ["low", "medium", "high", "extreme"]},
+                    "propbankRoles": {
+                      "type": "object",
+                      "properties": {
+                        "COM": {"type": "string", "description": "Who the action was done with"},
+                        "LOC": {"type": "string", "description": "Where the action takes place"},
+                        "DIR": {"type": "string", "description": "Direction of motion"},
+                        "GOL": {"type": "string", "description": "Goal of the action"},
+                        "MNR": {"type": "string", "description": "How the action is performed"},
+                        "TMP": {"type": "string", "description": "When the action took place"},
+                        "EXT": {"type": "string", "description": "Amount of change from the action"},
+                        "PRP": {"type": "string", "description": "Motivation for the action"},
+                        "CAU": {"type": "string", "description": "Reason for the action"},
+                        "MOD": {"type": "string", "description": "Modal (will, may, can, must, shall, might, should, could, would)"},
+                        "NEG": {"type": "string", "description": "Negation of the action"},
+                        "ADV": {"type": "string", "description": "Adverbial modification"}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "relationships": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "participant1": {"type": "string"},
+              "participant2": {"type": "string"},
+              "relationType": {"type": "string", "enum": ["action_on", "spatial_relation", "temporal_relation", "causal_relation", "part_of", "similar_to", "contrasts_with", "partnership", "companionship", "interaction", "proximity", "hierarchy", "support", "opposition", "collaboration", "guidance", "protection", "mentorship", "friendship", "alliance"]},
+              "description": {"type": "string"},
+              "propbankRole": {"type": "string", "enum": ["COM", "LOC", "DIR", "GOL", "MNR", "TMP", "EXT", "PRP", "CAU", "MOD", "NEG", "ADV"]}
+            }
+          }
+        },
+        "extraSchemaRelations": {
+          "type": "array",
+          "description": "Relations that don't fit the predefined schema but are valuable insights from the model",
+          "items": {
+            "type": "object",
+            "properties": {
+              "participant1": {"type": "string"},
+              "participant2": {"type": "string"},
+              "relationType": {"type": "string", "description": "Original relation type that wasn't in the schema"},
+              "description": {"type": "string"},
+              "propbankRole": {"type": "string", "enum": ["COM", "LOC", "DIR", "GOL", "MNR", "TMP", "EXT", "PRP", "CAU", "MOD", "NEG", "ADV"]},
+              "originalRelationType": {"type": "string", "description": "The original relation type that caused this to be moved here"}
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "category": {"type": "string", "description": "Type of object (e.g., character, object, background, text, symbol, concept, idea, event, action, emotion, phenomenon, etc.)"},
+          "attributes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "attribute": {"type": "string"},
+                "value": {"type": "string"},
+                "semioticLevel": {"type": "string", "enum": ["topology", "eidetic", "chromatic"]}
+              }
+            }
+          },
+          "propbankRole": {"type": "string", "enum": ["COM", "LOC", "DIR", "GOL", "MNR", "TMP", "EXT", "PRP", "CAU", "MOD", "NEG", "ADV"]},
+          "description": {"type": "string"}
+        }
+      }
+    },
+    "overallImpression": {
+      "type": "object",
+      "properties": {
+        "mood": {"type": "string"},
+        "tension": {"type": "string", "enum": ["low", "medium", "high", "extreme"]},
+        "dynamics": {"type": "string"},
+        "keyVisualElements": {"type": "array", "items": {"type": "string"}},
+        "summary": {"type": "string"}
+      }
+    }
+  },
+  "required": ["metadata", "semioticAnalysis", "semanticRelations", "objects", "overallImpression"]
+} 

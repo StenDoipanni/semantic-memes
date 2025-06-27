@@ -1,0 +1,222 @@
+Analyze the given image using Greimas' "plastic semiotics" framework and provide your analysis in the following structured JSON format. Pay close attention to:
+
+1. **Topology**: Distribution of elements in space
+2. **Eidetic**: Shapes, lines, borders and contours  
+3. **Chromatic**: Colors, saturation, values (amount of light)
+
+Additionally, identify all semantic relationships using PropBank roles and objects with their attributes.
+
+IMPORTANT: Respond ONLY with valid JSON that follows this exact structure. Do not include any explanatory text before or after the JSON.
+
+**PropBank Roles Definitions:**
+- COM: show who an action was done with
+- LOC: show indicate where some action takes place
+- DIR: show motion along some path
+- GOL: show the goal of the action of the event
+- MNR: show how an action is performed
+- TMP: show when an action took place
+- EXT: show the amount of change occurring from an action
+- PRP: show the motivation for some action
+- CAU: show the reason for an action
+- MOD: Modals show necessity or potentiality; they are: will, may, can, must, shall, might, should, could, and would
+- NEG: negates a certain element of the action
+- ADV: modify the event structure of the verb or adjective in question (different from other modifiers)
+
+**Relation Types (use ONLY these exact values):**
+- action_on: one entity acts upon another
+- spatial_relation: spatial positioning between entities
+- temporal_relation: time-based relationship
+- causal_relation: cause and effect relationship
+- part_of: one entity is part of another
+- similar_to: entities share characteristics
+- contrasts_with: entities are in opposition
+- partnership: collaborative relationship
+- companionship: being together
+- interaction: mutual engagement
+- proximity: nearness in space
+- hierarchy: power or status relationship
+- support: one entity supports another
+- opposition: entities are against each other
+- collaboration: working together
+- guidance: one entity guides another
+- protection: one entity protects another
+- mentorship: teaching/learning relationship
+- friendship: friendly relationship
+- alliance: formal partnership
+
+Fact Statement: {fact_statement}
+
+Expected JSON structure:
+{{
+  "metadata": {{
+    "analysisId": "generate-uuid",
+    "imagePath": "{image_path}",
+    "factStatement": "{fact_statement}",
+    "model": "gemma3:12b",
+    "dateCreated": "ISO-datetime",
+    "analysisStep": "semiotic_description"
+  }},
+  "semioticAnalysis": {{
+    "topology": {{
+      "spatialAxis": {{
+        "primaryAxis": "vertical|horizontal|diagonal|circular|none",
+        "secondaryAxis": "vertical|horizontal|diagonal|circular|none",
+        "description": "description of spatial organization"
+      }},
+      "focalPoints": [
+        {{
+          "element": "element name",
+          "position": "position description",
+          "significance": "why this is focal"
+        }}
+      ],
+      "depth": {{
+        "depthType": "flat|shallow|deep|mixed",
+        "backgroundElements": ["list", "of", "background", "elements"],
+        "foregroundElements": ["list", "of", "foreground", "elements"],
+        "description": "depth analysis"
+      }},
+      "proximity": {{
+        "closestElements": [
+          {{
+            "element1": "first element",
+            "element2": "second element", 
+            "distance": "touching|close|medium|far",
+            "significance": "meaning of proximity"
+          }}
+        ]
+      }}
+    }},
+    "eidetic": {{
+      "shapes": [
+        {{
+          "element": "element name",
+          "shapeType": "angular|rounded|curved|geometric|organic|mixed",
+          "dominantLines": "straight|curved|angular|mixed",
+          "edges": "sharp|soft|blurred|defined|undefined",
+          "description": "shape analysis"
+        }}
+      ],
+      "lines": [
+        {{
+          "lineType": "contour|force|direction|boundary|decorative",
+          "direction": "vertical|horizontal|diagonal|curved|radial",
+          "thickness": "thin|medium|thick|varying",
+          "elements": ["elements", "involved"],
+          "significance": "meaning of lines"
+        }}
+      ],
+      "contours": [
+        {{
+          "element": "element name",
+          "definition": "clear|blurred|partial|disrupted",
+          "contrast": "high|medium|low",
+          "description": "contour analysis"
+        }}
+      ]
+    }},
+    "chromatic": {{
+      "colorPalette": {{
+        "dominantColors": [
+          {{
+            "color": "color name",
+            "elements": ["elements", "with", "this", "color"],
+            "significance": "meaning of color"
+          }}
+        ],
+        "colorHarmony": "complementary|analogous|monochromatic|triadic|contrasting",
+        "overallTone": "warm|cool|neutral|mixed"
+      }},
+      "saturation": [
+        {{
+          "element": "element name",
+          "level": "high|medium|low|desaturated",
+          "description": "saturation analysis"
+        }}
+      ],
+      "values": [
+        {{
+          "element": "element name",
+          "lightLevel": "bright|medium|dark|shadowed",
+          "contrast": "high|medium|low",
+          "description": "light analysis"
+        }}
+      ]
+    }}
+  }},
+  "semanticRelations": {{
+    "mainScene": {{
+      "sceneType": ["list", "of", "scene", "types"],
+      "description": "scene description",
+      "temporalAspect": "instantaneous|ongoing|completed|recurring"
+    }},
+    "participants": [
+      {{
+        "element": "participant name",
+        "propbankRoles": ["COM", "LOC", "DIR", "GOL", "MNR", "TMP", "EXT", "PRP", "CAU", "MOD", "NEG", "ADV"],
+        "attributes": [
+          {{
+            "attribute": "attribute name",
+            "value": "attribute value",
+            "category": "physical|emotional|behavioral|relational"
+          }}
+        ],
+        "actions": [
+          {{
+            "action": "action description",
+            "target": "target of action",
+            "manner": "how action is performed",
+            "intensity": "low|medium|high|extreme",
+            "propbankRoles": {{
+              "COM": "who action was done with",
+              "LOC": "where action takes place",
+              "DIR": "direction of motion",
+              "GOL": "goal of the action",
+              "MNR": "how action is performed",
+              "TMP": "when action took place",
+              "EXT": "amount of change from action",
+              "PRP": "motivation for action",
+              "CAU": "reason for action",
+              "MOD": "modal (will, may, can, must, shall, might, should, could, would)",
+              "NEG": "negation of action",
+              "ADV": "adverbial modification"
+            }}
+          }}
+        ]
+      }}
+    ],
+    "relationships": [
+      {{
+        "participant1": "first participant",
+        "participant2": "second participant",
+        "relationType": "action_on|spatial_relation|temporal_relation|causal_relation|part_of|similar_to|contrasts_with|partnership|companionship|interaction|proximity|hierarchy|support|opposition|collaboration|guidance|protection|mentorship|friendship|alliance",
+        "description": "relationship description",
+        "propbankRole": "COM|LOC|DIR|GOL|MNR|TMP|EXT|PRP|CAU|MOD|NEG|ADV"
+      }}
+    ]
+  }},
+  "objects": [
+    {{
+      "name": "object name",
+      "category": "character|object|background|text|symbol",
+      "attributes": [
+        {{
+          "attribute": "attribute name",
+          "value": "attribute value",
+          "semioticLevel": "topology|eidetic|chromatic"
+        }}
+      ],
+      "propbankRole": "COM|LOC|DIR|GOL|MNR|TMP|EXT|PRP|CAU|MOD|NEG|ADV",
+      "description": "object description"
+    }}
+  ],
+  "overallImpression": {{
+    "mood": "overall mood",
+    "tension": "low|medium|high|extreme",
+    "dynamics": "dynamic elements description",
+    "keyVisualElements": ["list", "of", "key", "elements"],
+    "summary": "overall summary"
+  }}
+}}
+
+Remember: Focus on the image content only. Do not add external knowledge. Use PropBank roles to identify semantic relationships clearly. Ensure all three Greimas levels (topology, eidetic, chromatic) are thoroughly analyzed. Apply PropBank roles appropriately to actions, participants, and relationships. Use ONLY the specified relation types listed above. 
