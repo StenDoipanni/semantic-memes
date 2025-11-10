@@ -42,10 +42,83 @@ cp .env.example .env
 # CLAUDE_API_KEY=your_claude_api_key_here
 ```
 
-### 2. Basic Usage
+### 2. Recommended: Using Batch Scripts (Easiest Method)
+
+**We strongly recommend using the provided batch scripts** for running the pipeline. These scripts handle environment setup, configuration, and provide convenient presets for dimension extraction.
+
+#### Why Use Batch Scripts?
+
+- **Automatic Environment Setup**: Handles conda environment activation and dependency checks
+- **Pre-configured Settings**: Environment variables and paths are automatically set
+- **Convenient Presets**: Easy-to-use "Core" and "All" dimension modes
+- **Flexible Dimension Selection**: Can use presets or specify custom dimensions
+- **Error Handling**: Built-in validation and helpful error messages
+
+#### Basic Usage with Batch Scripts
+
+The main batch script is located at `scripts/sh/run_meme_pipeline.sh`. It supports two convenient modes:
+
+**Core Mode** (4 dimensions - recommended for quick analysis):
+- `TextualMaterial` - Written or textual content
+- `VisualMaterial` - Visual content elements  
+- `SceneUnderstanding` - Spatial arrangements and organization
+- `BackgroundKnowledge` - Contextual information and references
+
+**All Mode** (13 dimensions - comprehensive analysis):
+- All available dimensions including Core plus: `EmotionExpression`, `ColorComposition`, `Metadata`, `MetaphoricalAndAnalogicalMapping`, `OverallIntent`, `SemioticInterpretation`, `TargetCommunity`, `TemplateStructure`, `ToxicityAssessment`
+
+#### Examples
+
+```bash
+# Navigate to the project directory
+cd /path/to/meme-pipeline-server
+
+# Extract Core dimensions (4 dimensions - faster, good for most use cases)
+./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode Core
+
+# Extract All dimensions (13 dimensions - comprehensive analysis)
+./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode All
+
+# Extract specific custom dimensions
+./scripts/sh/run_meme_pipeline.sh --image img/meme.png --dimensions "VisualMaterial TextualMaterial OverallIntent"
+
+# Use HuggingFace instead of Claude
+./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode Core --llm-provider huggingface
+
+# Specify custom output directory
+./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode All --output-dir ./custom_output
+```
+
+#### Dimension Selection Options
+
+1. **Use Preset Modes** (recommended):
+   - `--mode Core`: Extracts 4 core dimensions (faster, good for most analyses)
+   - `--mode All`: Extracts all 13 dimensions (comprehensive, slower)
+
+2. **Specify Custom Dimensions**:
+   - `--dimensions "Dimension1 Dimension2 ..."`: Extract only specific dimensions
+   - Example: `--dimensions "VisualMaterial TextualMaterial OverallIntent"`
+
+3. **Available Dimensions**:
+   - `VisualMaterial`, `TextualMaterial`, `EmotionExpression`, `ColorComposition`
+   - `SceneUnderstanding`, `BackgroundKnowledge`, `Metadata`
+   - `MetaphoricalAndAnalogicalMapping`, `OverallIntent`, `SemioticInterpretation`
+   - `TargetCommunity`, `TemplateStructure`, `ToxicityAssessment`
+
+#### Batch Script Help
+
+```bash
+# View all options
+./scripts/sh/run_meme_pipeline.sh --help
+```
+
+### 3. Alternative: Direct Python Usage (Advanced)
+
+If you prefer to call Python scripts directly or need more control, you can use the Python modules directly:
 
 ```python
 from pipeline import analyze_meme
+from pathlib import Path
 
 # Analyze a single meme
 result = analyze_meme(
@@ -60,20 +133,17 @@ print(f"Dimensions extracted: {result['summary']['dimensions_extracted']}")
 print(f"Q&A pairs generated: {result['summary']['qa_pairs_generated']}")
 ```
 
-### 3. Command Line Usage
+Or via command line:
 
 ```bash
 # Analyze a single meme
-python run_pipeline.py /path/to/meme.png
+python scripts/py/run_pipeline.py /path/to/meme.png --mode dimension_extraction
 
 # Analyze with specific dimensions
-python run_pipeline.py /path/to/meme.png --dimensions VisualMaterial TextualMaterial
-
-# Batch analyze multiple memes
-python run_pipeline.py /path/to/memes/ --batch
+python scripts/py/run_pipeline.py /path/to/meme.png --dimensions VisualMaterial TextualMaterial
 
 # Use specific LLM provider
-python run_pipeline.py /path/to/meme.png --llm-provider claude
+python scripts/py/run_pipeline.py /path/to/meme.png --llm-provider claude
 ```
 
 ## 🔧 Configuration
@@ -154,7 +224,68 @@ The pipeline generates multiple output formats:
 
 ## 📝 Usage Examples
 
-### Example 1: Basic Analysis
+### Example 1: Quick Analysis with Core Dimensions (Recommended)
+
+Using the batch script with Core mode for fast analysis:
+
+```bash
+# Extract 4 core dimensions from a meme
+./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode Core
+```
+
+This extracts:
+- `TextualMaterial` - Written or textual content
+- `VisualMaterial` - Visual content elements
+- `SceneUnderstanding` - Spatial arrangements
+- `BackgroundKnowledge` - Contextual information
+
+### Example 2: Comprehensive Analysis with All Dimensions
+
+Using the batch script with All mode for complete analysis:
+
+```bash
+# Extract all 13 dimensions from a meme
+./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode All
+```
+
+This extracts all available dimensions including Core plus:
+- `EmotionExpression`, `ColorComposition`, `Metadata`
+- `MetaphoricalAndAnalogicalMapping`, `OverallIntent`
+- `SemioticInterpretation`, `TargetCommunity`
+- `TemplateStructure`, `ToxicityAssessment`
+
+### Example 3: Custom Dimension Selection
+
+Extract only specific dimensions you need:
+
+```bash
+# Extract only VisualMaterial and OverallIntent
+./scripts/sh/run_meme_pipeline.sh --image img/meme.png --dimensions "VisualMaterial OverallIntent"
+
+# Extract multiple specific dimensions
+./scripts/sh/run_meme_pipeline.sh --image img/meme.png --dimensions "TextualMaterial VisualMaterial EmotionExpression OverallIntent"
+```
+
+### Example 4: Using Different LLM Providers
+
+```bash
+# Use Claude (default, recommended for best quality)
+./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode Core --llm-provider claude
+
+# Use HuggingFace (local, requires GPU)
+./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode Core --llm-provider huggingface
+```
+
+### Example 5: Custom Output Directory
+
+```bash
+# Save output to a custom directory
+./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode All --output-dir ./results/analysis_001
+```
+
+### Example 6: Direct Python Usage (Advanced)
+
+If you need programmatic control:
 
 ```python
 from pipeline import analyze_meme
@@ -162,53 +293,14 @@ from pathlib import Path
 
 result = analyze_meme(
     image_path=Path("meme.png"),
-    output_dir=Path("output")
+    selected_dimensions=["OverallIntent", "VisualMaterial"],
+    question_types=["descriptive", "interpretive"],
+    questions_per_type=2
 )
 
 if result['success']:
     print(f"Found {result['summary']['dimensions_extracted']} dimensions")
     print(f"Generated {result['summary']['qa_pairs_generated']} Q&A pairs")
-```
-
-### Example 2: Custom Configuration
-
-```python
-from pipeline import MemeAnalysisPipeline
-
-pipeline = MemeAnalysisPipeline(
-    llm_provider="claude",
-    output_dir=Path("custom_output")
-)
-
-result = pipeline.analyze_meme(
-    image_path=Path("meme.png"),
-    selected_dimensions=["OverallIntent", "VisualMaterial"],
-    question_types=["descriptive", "interpretive"],
-    questions_per_type=3
-)
-```
-
-### Example 3: Batch Processing
-
-```python
-from pipeline import batch_analyze_memes
-from pathlib import Path
-
-image_paths = [
-    Path("meme1.png"),
-    Path("meme2.png"),
-    Path("meme3.png")
-]
-
-results = batch_analyze_memes(
-    image_paths=image_paths,
-    selected_dimensions=["OverallIntent", "TextualMaterial"],
-    question_types=["descriptive"],
-    questions_per_type=2
-)
-
-successful = sum(1 for r in results if r['success'])
-print(f"Successfully analyzed {successful}/{len(results)} memes")
 ```
 
 ## 🛠️ Advanced Usage
