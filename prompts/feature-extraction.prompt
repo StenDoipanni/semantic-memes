@@ -1,0 +1,47 @@
+
+
+### LLM
+
+Model used: Claude 4 Sonnet
+
+
+### Prompt 1
+
+
+We are a team of expert ontology engineers.
+
+Our goal is to reverse engineer the conceptual elements considered in analysing internet memes, to determine their toxicity, harmfulness, hate content, etc.
+
+To do so, our theory is that you can ground your understanding of a meme on a set of "conceptual components": elements you use in your semiotic interpretation of the meme.
+
+It could be the color, the text, the entities, the positional relation between text and a certain entity, the pixels, the blob or bounding box of certain scene / entity, etc. All of these elements play a role in this meaning-production process.
+
+Now, in order to start our work, we need to know which and how many are these "components".
+
+I'm giving you 5 papers that use datasets about memes to individuate various aspects. What we want here, is to extract a list of "features" for which we have some recorded data. It could be something abstract like "toxicity level" with a score, but it could also be something very material, like "object bounding box (coordinates)".
+
+For each paper, read it carefully, and extract all the features they consider for their analysis, implicitly and explicitly.
+
+An example of explicit use is e.g. "sentiment measurement". This could be the final outcome of the analysis.
+
+An example of implicit use could be e.g. "...we considered text provided in memes' post as additional context for..." --> "memes posts' text", is the datum used to perform the analysis, therefore it is an element (or grounded in an element) of the meme.
+
+Attached you have the 5 papers. Provide in json like format:
+
+- paper title
+
+- name of the dataset
+
+- considered features list
+
+
+
+### Prompt 2
+
+
+ok, that was great, but I think we can refine more. When it is noted "text content" or "image content": what aspects are considered? For text content it could be the meaning of the text, ore the presence of slur, etc. but is it only that or also e.g. the text position, the font, the size, etc. ? and for "image content" are we talking about "scene recognition" or "color composition", or "entity recognition", etc.?
+
+Let's refine the analysis looking for more details for each and every paper. We need also the technique with which a certain information such as "misogynistic content detection" is extracted. Please refine the analysis and provide these additional information.
+
+
+
