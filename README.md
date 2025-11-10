@@ -73,7 +73,7 @@ The main batch script is located at `scripts/sh/run_meme_pipeline.sh`. It suppor
 # Navigate to the project directory
 cd /path/to/meme-pipeline-server
 
-# Extract Core dimensions (4 dimensions - faster, good for most use cases)
+# Extract Core dimensions (4 dimensions - faster, necessary for more layered dimensions)
 ./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode Core
 
 # Extract All dimensions (13 dimensions - comprehensive analysis)
@@ -92,7 +92,7 @@ cd /path/to/meme-pipeline-server
 #### Dimension Selection Options
 
 1. **Use Preset Modes** (recommended):
-   - `--mode Core`: Extracts 4 core dimensions (faster, good for most analyses)
+   - `--mode Core`: Extracts 4 core dimensions (faster, necessary for further extraction since these are the core dimensions to be used by others)
    - `--mode All`: Extracts all 13 dimensions (comprehensive, slower)
 
 2. **Specify Custom Dimensions**:
