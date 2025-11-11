@@ -181,9 +181,9 @@ class DimensionExtractionModule:
                 "total_dimensions_found": 0
             }
             
-            # Store VisualMaterial and TextualMaterial entities for SceneUnderstanding and BackgroundKnowledge
-            # Store BackgroundKnowledge entities for MetaphoricalAndAnalogicalMapping
-            # Store MetaphoricalAndAnalogicalMapping entities for ToxicityAssessment
+            # Store VisualMaterial and TextualMaterial entities for Scene and BackgroundKnowledge
+            # Store BackgroundKnowledge entities for AnalogicalMapping
+            # Store AnalogicalMapping entities for ToxicityAssessment
             visual_material_entities = []
             textual_material_entities = []
             background_knowledge_entities = []
@@ -195,8 +195,8 @@ class DimensionExtractionModule:
                     continue
                 
                 try:
-                    # For SceneUnderstanding, pass VisualMaterial entities
-                    if dimension_name == "SceneUnderstanding" and visual_material_entities:
+                    # For Scene, pass VisualMaterial entities
+                    if dimension_name == "Scene" and visual_material_entities:
                         dimensions = self._extract_single_dimension(
                             image_path, 
                             dimension_name, 
@@ -231,10 +231,10 @@ class DimensionExtractionModule:
                         else:
                             logger.warning(f"EmotionExpression extraction skipped: No VisualMaterial or TextualMaterial entities available yet")
                             dimensions = []
-                    # For MetaphoricalAndAnalogicalMapping, pass VisualMaterial, TextualMaterial, and BackgroundKnowledge entities
-                    elif dimension_name == "MetaphoricalAndAnalogicalMapping":
+                    # For AnalogicalMapping, pass VisualMaterial, TextualMaterial, and BackgroundKnowledge entities
+                    elif dimension_name == "AnalogicalMapping":
                         if visual_material_entities or textual_material_entities or background_knowledge_entities:
-                            logger.info(f"Extracting MetaphoricalAndAnalogicalMapping with {len(visual_material_entities)} VisualMaterial, {len(textual_material_entities)} TextualMaterial, and {len(background_knowledge_entities)} BackgroundKnowledge entities")
+                            logger.info(f"Extracting AnalogicalMapping with {len(visual_material_entities)} VisualMaterial, {len(textual_material_entities)} TextualMaterial, and {len(background_knowledge_entities)} BackgroundKnowledge entities")
                             dimensions = self._extract_single_dimension(
                                 image_path, 
                                 dimension_name, 
@@ -244,12 +244,12 @@ class DimensionExtractionModule:
                                 background_knowledge_entities=background_knowledge_entities
                             )
                         else:
-                            logger.warning(f"MetaphoricalAndAnalogicalMapping extraction skipped: No VisualMaterial, TextualMaterial, or BackgroundKnowledge entities available yet")
+                            logger.warning(f"AnalogicalMapping extraction skipped: No VisualMaterial, TextualMaterial, or BackgroundKnowledge entities available yet")
                             dimensions = []
-                    # For ToxicityAssessment, pass VisualMaterial, TextualMaterial, BackgroundKnowledge, and MetaphoricalAndAnalogicalMapping entities
+                    # For ToxicityAssessment, pass VisualMaterial, TextualMaterial, BackgroundKnowledge, and AnalogicalMapping entities
                     elif dimension_name == "ToxicityAssessment":
                         if visual_material_entities or textual_material_entities or background_knowledge_entities or metaphorical_mapping_entities:
-                            logger.info(f"Extracting ToxicityAssessment with {len(visual_material_entities)} VisualMaterial, {len(textual_material_entities)} TextualMaterial, {len(background_knowledge_entities)} BackgroundKnowledge, and {len(metaphorical_mapping_entities)} MetaphoricalAndAnalogicalMapping entities")
+                            logger.info(f"Extracting ToxicityAssessment with {len(visual_material_entities)} VisualMaterial, {len(textual_material_entities)} TextualMaterial, {len(background_knowledge_entities)} BackgroundKnowledge, and {len(metaphorical_mapping_entities)} AnalogicalMapping entities")
                             dimensions = self._extract_single_dimension(
                                 image_path, 
                                 dimension_name, 
@@ -260,7 +260,7 @@ class DimensionExtractionModule:
                                 metaphorical_mapping_entities=metaphorical_mapping_entities
                             )
                         else:
-                            logger.warning(f"ToxicityAssessment extraction skipped: No VisualMaterial, TextualMaterial, BackgroundKnowledge, or MetaphoricalAndAnalogicalMapping entities available yet")
+                            logger.warning(f"ToxicityAssessment extraction skipped: No VisualMaterial, TextualMaterial, BackgroundKnowledge, or AnalogicalMapping entities available yet")
                             dimensions = []
                     else:
                         dimensions = self._extract_single_dimension(
@@ -293,13 +293,13 @@ class DimensionExtractionModule:
                             logger.info(f"Extracted {len(dimensions)} instances for dimension: {dimension_name}")
                             
                             # Print terminal output for key dimensions
-                            if dimension_name in ["TextualMaterial", "VisualMaterial", "BackgroundKnowledge", "SceneUnderstanding"]:
+                            if dimension_name in ["TextualMaterial", "VisualMaterial", "BackgroundKnowledge", "Scene"]:
                                 self._print_dimension_output(dimension_name, dimensions)
                         else:  # Empty list
                             logger.warning(f"Extracted 0 instances for dimension: {dimension_name} (empty result)")
                             extraction_metadata["dimensions_processed"].append(dimension_name)
                         
-                        # Store VisualMaterial entities for SceneUnderstanding and BackgroundKnowledge
+                        # Store VisualMaterial entities for Scene and BackgroundKnowledge
                         # These are already normalized above
                         if dimension_name == "VisualMaterial" and dimensions:
                             visual_material_entities = dimensions
@@ -311,17 +311,17 @@ class DimensionExtractionModule:
                             textual_material_entities = dimensions
                             logger.info(f"Stored {len(textual_material_entities)} TextualMaterial entities")
                         
-                        # Store BackgroundKnowledge entities for MetaphoricalAndAnalogicalMapping
+                        # Store BackgroundKnowledge entities for AnalogicalMapping
                         # These are already normalized above
                         if dimension_name == "BackgroundKnowledge" and dimensions:
                             background_knowledge_entities = dimensions
                             logger.info(f"Stored {len(background_knowledge_entities)} BackgroundKnowledge entities")
                         
-                        # Store MetaphoricalAndAnalogicalMapping entities for ToxicityAssessment
+                        # Store AnalogicalMapping entities for ToxicityAssessment
                         # These are already normalized above
-                        if dimension_name == "MetaphoricalAndAnalogicalMapping" and dimensions:
+                        if dimension_name == "AnalogicalMapping" and dimensions:
                             metaphorical_mapping_entities = dimensions
-                            logger.info(f"Stored {len(metaphorical_mapping_entities)} MetaphoricalAndAnalogicalMapping entities")
+                            logger.info(f"Stored {len(metaphorical_mapping_entities)} AnalogicalMapping entities")
                     else:
                         logger.error(f"Extraction returned None for dimension: {dimension_name}")
                     
@@ -387,7 +387,7 @@ class DimensionExtractionModule:
             image_path: Path to the image
             dimension_name: Name of the dimension
             prompt_data: Prompt data from JSON-LD file
-            visual_material_entities: Optional list of VisualMaterial entities for SceneUnderstanding
+            visual_material_entities: Optional list of VisualMaterial entities for Scene
             
         Returns:
             List of extracted dimension instances
@@ -443,7 +443,7 @@ class DimensionExtractionModule:
             base_prompt: Base prompt from JSON-LD file
             prompt_data: Complete prompt data
             dimension_name: Name of the dimension being extracted
-            visual_material_entities: Optional list of VisualMaterial entities for SceneUnderstanding
+            visual_material_entities: Optional list of VisualMaterial entities for Scene
             
         Returns:
             Complete extraction prompt
@@ -452,8 +452,8 @@ class DimensionExtractionModule:
         dimension_label = prompt_data.get("rdfs:label", "Unknown Dimension")
         dimension_comment = prompt_data.get("rdfs:comment", "")
         
-        # For SceneUnderstanding, add VisualMaterial entities context
-        if dimension_name == "SceneUnderstanding" and visual_material_entities:
+        # For Scene, add VisualMaterial entities context
+        if dimension_name == "Scene" and visual_material_entities:
             entities_context = "\n\nVisual Material entities found in the image (use only these entity names exactly as shown):\n"
             for i, entity in enumerate(visual_material_entities, 1):
                 instance_name = entity.get("instance_name", f"entity_{i}")
@@ -562,8 +562,8 @@ IMPORTANT:
 
 Please analyze the image and provide your response in the exact JSON format specified in the prompt above. Be thorough and accurate in your analysis."""
         
-        # For MetaphoricalAndAnalogicalMapping, add VisualMaterial, TextualMaterial, and BackgroundKnowledge entities context
-        elif dimension_name == "MetaphoricalAndAnalogicalMapping" and (visual_material_entities or textual_material_entities or background_knowledge_entities):
+        # For AnalogicalMapping, add VisualMaterial, TextualMaterial, and BackgroundKnowledge entities context
+        elif dimension_name == "AnalogicalMapping" and (visual_material_entities or textual_material_entities or background_knowledge_entities):
             entities_context = "\n\nEntities found in the image (use these to identify metaphorical mappings):\n"
             
             if visual_material_entities:
@@ -612,7 +612,7 @@ IMPORTANT:
 
 Please analyze the image and provide your response in the exact JSON format specified in the prompt above. Be thorough and accurate in your analysis."""
         
-        # For ToxicityAssessment, add VisualMaterial, TextualMaterial, BackgroundKnowledge, and MetaphoricalAndAnalogicalMapping entities context
+        # For ToxicityAssessment, add VisualMaterial, TextualMaterial, BackgroundKnowledge, and AnalogicalMapping entities context
         elif dimension_name == "ToxicityAssessment" and (visual_material_entities or textual_material_entities or background_knowledge_entities or metaphorical_mapping_entities):
             entities_context = "\n\nEntities found in the image (assess toxicity for these):\n"
             
@@ -664,7 +664,7 @@ Description: {dimension_comment}
 {base_prompt}
 
 IMPORTANT: 
-- Assess toxicity for entities from VisualMaterial, TextualMaterial, BackgroundKnowledge, and MetaphoricalAndAnalogicalMapping.
+- Assess toxicity for entities from VisualMaterial, TextualMaterial, BackgroundKnowledge, and AnalogicalMapping.
 - Identify toxicity types from these categories:
   * Abusive: memes used to threaten and abuse individuals or specific target communities. They contain words that target individuals or different protected communities, implicitly containing hateful, harmful, and antisemitic content.
   * Cyberbulling: memes that disparage an individual based on characteristics such as color, gender, race, sexual orientation, ethnicity, nationality, or other features.
@@ -716,11 +716,11 @@ Please analyze the image and provide your response in the exact JSON format spec
             # Try to extract JSON from the response
             json_data = self._extract_json_from_response(response)
             
-            # Debug logging for SceneUnderstanding
-            if dimension_name == "SceneUnderstanding":
-                logger.info(f"SceneUnderstanding raw response: {response[:500]}...")
-                logger.info(f"SceneUnderstanding parsed JSON: {json_data}")
-                logger.info(f"SceneUnderstanding JSON type: {type(json_data)}")
+            # Debug logging for Scene
+            if dimension_name == "Scene":
+                logger.info(f"Scene raw response: {response[:500]}...")
+                logger.info(f"Scene parsed JSON: {json_data}")
+                logger.info(f"Scene JSON type: {type(json_data)}")
             
             if isinstance(json_data, list):
                 # Multiple dimensions
@@ -861,13 +861,13 @@ Please analyze the image and provide your response in the exact JSON format spec
         if "instance_name" in data:
             data["instance_name"] = self._normalize_instance_name(data["instance_name"])
         
-        # Normalize hasEntities (SceneUnderstanding)
+        # Normalize hasEntities (Scene)
         if "hasEntities" in data and isinstance(data["hasEntities"], list):
             for entity in data["hasEntities"]:
                 if isinstance(entity, dict) and "entity" in entity:
                     entity["entity"] = self._normalize_instance_name(entity["entity"])
         
-        # Normalize directRelations (SceneUnderstanding)
+        # Normalize directRelations (Scene)
         if "directRelations" in data and isinstance(data["directRelations"], list):
             for rel in data["directRelations"]:
                 if isinstance(rel, dict):
@@ -888,7 +888,7 @@ Please analyze the image and provide your response in the exact JSON format spec
                 if isinstance(rel, dict) and "entity" in rel:
                     rel["entity"] = self._normalize_instance_name(rel["entity"])
         
-        # Normalize identifiedAs (MetaphoricalAndAnalogicalMapping)
+        # Normalize identifiedAs (AnalogicalMapping)
         if "identifiedAs" in data and isinstance(data["identifiedAs"], list):
             for rel in data["identifiedAs"]:
                 if isinstance(rel, dict) and "entity" in rel:
@@ -922,10 +922,10 @@ Please analyze the image and provide your response in the exact JSON format spec
         try:
             formatted_instances = []
             
-            # Debug logging for SceneUnderstanding
-            if dimension_name == "SceneUnderstanding":
-                logger.info(f"SceneUnderstanding _create_dimension_instance called with data: {data}")
-                logger.info(f"SceneUnderstanding data keys: {list(data.keys()) if isinstance(data, dict) else 'Not a dict'}")
+            # Debug logging for Scene
+            if dimension_name == "Scene":
+                logger.info(f"Scene _create_dimension_instance called with data: {data}")
+                logger.info(f"Scene data keys: {list(data.keys()) if isinstance(data, dict) else 'Not a dict'}")
             
             # Universal dimension instance creation - works for all formats
             # Strategy 1: Direct format (has instance_name, label, and optionally description)
@@ -955,8 +955,8 @@ Please analyze the image and provide your response in the exact JSON format spec
                     "dimension_index": prompt_data.get("dimensionIndex", 0)
                 }
                 
-                # For SceneUnderstanding, preserve frame-based relations
-                if dimension_name == "SceneUnderstanding":
+                # For Scene, preserve frame-based relations
+                if dimension_name == "Scene":
                     if "hasEntities" in data:
                         dimension["hasEntities"] = data["hasEntities"]
                     if "directRelations" in data:
@@ -972,8 +972,8 @@ Please analyze the image and provide your response in the exact JSON format spec
                     if "hasExpressor" in data:
                         dimension["hasExpressor"] = data["hasExpressor"]
                 
-                # For MetaphoricalAndAnalogicalMapping, preserve identifiedAs relations
-                if dimension_name == "MetaphoricalAndAnalogicalMapping":
+                # For AnalogicalMapping, preserve identifiedAs relations
+                if dimension_name == "AnalogicalMapping":
                     if "identifiedAs" in data:
                         dimension["identifiedAs"] = data["identifiedAs"]
                 
@@ -1008,7 +1008,7 @@ Please analyze the image and provide your response in the exact JSON format spec
                                     }
                                     formatted_instances.append(dimension)
             
-            # Strategy 3: Single object with custom fields (like SceneUnderstanding)
+            # Strategy 3: Single object with custom fields (like Scene)
             else:
                 # Extract instance_name and label with fallbacks
                 instance_name = data.get("instance_name", f"{dimension_name.lower()}_instance")
@@ -1036,8 +1036,8 @@ Please analyze the image and provide your response in the exact JSON format spec
                     "dimension_index": prompt_data.get("dimensionIndex", 0)
                 }
                 
-                # For SceneUnderstanding, preserve frame-based relations
-                if dimension_name == "SceneUnderstanding":
+                # For Scene, preserve frame-based relations
+                if dimension_name == "Scene":
                     if "hasEntities" in data:
                         dimension["hasEntities"] = data["hasEntities"]
                     if "directRelations" in data:
@@ -1053,8 +1053,8 @@ Please analyze the image and provide your response in the exact JSON format spec
                     if "hasExpressor" in data:
                         dimension["hasExpressor"] = data["hasExpressor"]
                 
-                # For MetaphoricalAndAnalogicalMapping, preserve identifiedAs relations
-                if dimension_name == "MetaphoricalAndAnalogicalMapping":
+                # For AnalogicalMapping, preserve identifiedAs relations
+                if dimension_name == "AnalogicalMapping":
                     if "identifiedAs" in data:
                         dimension["identifiedAs"] = data["identifiedAs"]
                 
@@ -1065,9 +1065,9 @@ Please analyze the image and provide your response in the exact JSON format spec
                 
                 formatted_instances.append(dimension)
             
-            # Debug logging for SceneUnderstanding
-            if dimension_name == "SceneUnderstanding":
-                logger.info(f"SceneUnderstanding returning {len(formatted_instances)} instances: {formatted_instances}")
+            # Debug logging for Scene
+            if dimension_name == "Scene":
+                logger.info(f"Scene returning {len(formatted_instances)} instances: {formatted_instances}")
             
             return formatted_instances if formatted_instances else None
             
@@ -1234,8 +1234,8 @@ Please analyze the image and provide your response in the exact JSON format spec
                 desc = description[:200] + "..." if len(description) > 200 else description
                 print(f"     Description: {desc}")
             
-            # Special handling for SceneUnderstanding with frame-based relations
-            if dimension_name == "SceneUnderstanding":
+            # Special handling for Scene with frame-based relations
+            if dimension_name == "Scene":
                 if "hasEntities" in dim and dim["hasEntities"]:
                     print(f"     Scene → Entity Relations:")
                     for rel in dim["hasEntities"]:
@@ -1396,7 +1396,7 @@ Please analyze the image and provide your response in the exact JSON format spec
             enhanced_ttl += "#    Extracted Dimension Instances\n"
             enhanced_ttl += "#################################################################\n\n"
             
-            # Collect directRelations from SceneUnderstanding to add as separate statements
+            # Collect directRelations from Scene to add as separate statements
             direct_relations_statements = []
             
             # Add extracted dimensions as TTL individuals
@@ -1427,8 +1427,8 @@ Please analyze the image and provide your response in the exact JSON format spec
                 enhanced_ttl += f"                :extractionMethod \"{escape_ttl_string(dim['extraction_method'])}\" ;\n"
                 # enhanced_ttl += f"                :confidence {dim.get('confidence', 0.8)} ;\n"  # Commented out - confidence field removed
                 
-                # Handle frame-based relations for SceneUnderstanding
-                if class_name == "SceneUnderstanding":
+                # Handle frame-based relations for Scene
+                if class_name == "Scene":
                     # Add scene→entity relations (hasEntities)
                     if "hasEntities" in dim and dim["hasEntities"]:
                         for rel in dim["hasEntities"]:
@@ -1475,15 +1475,15 @@ Please analyze the image and provide your response in the exact JSON format spec
                                     f":{instance_name} :{relation} :{entity} ."
                                 )
                 
-                # Handle identifiedAs relations for MetaphoricalAndAnalogicalMapping
-                if class_name == "MetaphoricalAndAnalogicalMapping":
+                # Handle identifiedAs relations for AnalogicalMapping
+                if class_name == "AnalogicalMapping":
                     # Collect identifiedAs relations to add as separate statements later
                     if "identifiedAs" in dim and dim["identifiedAs"]:
                         for rel in dim["identifiedAs"]:
                             entity = self._normalize_instance_name(rel.get("entity", ""))
                             relation = self._normalize_instance_name(rel.get("relation", "identifiedAs"))
                             if instance_name and entity and relation:
-                                # Store for later: these are MetaphoricalAndAnalogicalMapping→entity relations
+                                # Store for later: these are AnalogicalMapping→entity relations
                                 direct_relations_statements.append(
                                     f":{instance_name} :{relation} :{entity} ."
                                 )
@@ -1584,7 +1584,7 @@ Please analyze the image and provide your response in the exact JSON format spec
             if property_name not in skip_properties:
                 properties_used.add(property_name)
         
-        # Pattern 3: Properties in direct relations (BackgroundKnowledge relatedTo, SceneUnderstanding directRelations)
+        # Pattern 3: Properties in direct relations (BackgroundKnowledge relatedTo, Scene directRelations)
         # These appear as standalone statements: ":knowledge :relatedTo :entity ."
         # Already covered by pattern 1, but let's also check for properties that might appear
         # in multi-line format

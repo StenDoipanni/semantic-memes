@@ -1,0 +1,150 @@
+@prefix meme: <http://example.org/meme#> .
+@prefix rel: <http://example.org/relation#> .
+
+# ========================================
+# CORE DIMENSIONS - Foundation
+# ========================================
+
+# VisualMaterial relations
+meme:VisualMaterial rel:visualComponentOf meme:Meme .
+#meme:VisualMaterial rel:requiresInterpretationBy meme:BackgroundKnowledge .
+meme:VisualMaterial rel:roleOf meme:SceneUnderstanding .
+#meme:VisualMaterial rel:mapsOnto meme:TextualMaterial .
+
+# TextualMaterial relations
+meme:TextualMaterial rel:textualComponentOf meme:Meme .
+#meme:TextualMaterial rel:requiresInterpretationBy meme:BackgroundKnowledge .
+#meme:TextualMaterial rel:references meme:SceneUnderstanding .
+#meme:TextualMaterial rel:mapsOnto meme:VisualMaterial .
+
+# BackgroundKnowledge relations
+meme:BackgroundKnowledge rel:referredIn meme:VisualMaterial . # example: "the image of Bill Cosby"
+meme:BackgroundKnowledge rel:referredIn meme:TextualMaterial . # example: "the text 'when you see Bill Cosby'"
+meme:BackgroundKnowledge rel:referredIn meme:SceneUnderstanding . # example: "a man telling another man <<try this bat meat, what could go wrong?>> --> ref to Covid-19"
+#meme:BackgroundKnowledge rel:contextualizes meme:AnalogicalMapping .
+
+# SceneUnderstanding relations
+meme:SceneUnderstanding rel:hasRole meme:VisualMaterial . # example: "distracted boyfriend situation hasRole boyfriend"
+meme:SceneUnderstanding rel:augmentedBy meme:TextualMaterial . # example: "distracted boyfriend situation augmentedBy text <<when you're a Linux user and you see a new distro>>"
+meme:SceneUnderstanding rel:refersTo meme:BackgroundKnowledge . # example: Lego reproduction of an existing meme template, or some real-world event happened in the past
+meme:SceneUnderstanding rel:expressorOf meme:EmotionExpression . # example: "distracted boyfriend situation expressorOf <<concern>>"
+
+# ========================================
+# CORE TO ADDITIONAL DIMENSIONS
+# ========================================
+
+# VisualMaterial to Additional
+meme:VisualMaterial rel:determines meme:ColorComposition .
+meme:VisualMaterial rel:conveys meme:EmotionExpression .
+meme:VisualMaterial rel:participatesIn meme:AnalogicalMapping .
+meme:VisualMaterial rel:influences meme:SemioticInterpretation .
+meme:VisualMaterial rel:instantiates meme:TemplateStructure .
+meme:VisualMaterial rel:mayContribute meme:ToxicityAssessment .
+
+# TextualMaterial to Additional
+meme:TextualMaterial rel:participatesIn meme:AnalogicalMapping .
+meme:TextualMaterial rel:reveals meme:OverallIntent .
+meme:TextualMaterial rel:influences meme:SemioticInterpretation .
+meme:TextualMaterial rel:identifiesTarget meme:TargetCommunity .
+meme:TextualMaterial rel:mayContribute meme:ToxicityAssessment .
+meme:TextualMaterial rel:complements meme:EmotionExpression .
+
+# BackgroundKnowledge to Additional
+meme:BackgroundKnowledge rel:necessaryFor meme:AnalogicalMapping .
+meme:BackgroundKnowledge rel:revealsIntent meme:OverallIntent .
+meme:BackgroundKnowledge rel:enablesInterpretation meme:SemioticInterpretation .
+meme:BackgroundKnowledge rel:identifiesAudience meme:TargetCommunity .
+meme:BackgroundKnowledge rel:recognizes meme:TemplateStructure .
+meme:BackgroundKnowledge rel:assessesContext meme:ToxicityAssessment .
+
+# SceneUnderstanding to Additional
+meme:SceneUnderstanding rel:conveys meme:EmotionExpression .
+meme:SceneUnderstanding rel:groundsMapping meme:AnalogicalMapping .
+meme:SceneUnderstanding rel:supportsInterpretation meme:SemioticInterpretation .
+meme:SceneUnderstanding rel:conformsTo meme:TemplateStructure .
+
+# ========================================
+# ADDITIONAL DIMENSION INTER-RELATIONS
+# ========================================
+
+# ColorComposition relations
+meme:ColorComposition rel:derivedFrom meme:VisualMaterial .
+meme:ColorComposition rel:influences meme:EmotionExpression .
+meme:ColorComposition rel:constrainedBy meme:TemplateStructure .
+meme:ColorComposition rel:contributesTo meme:SemioticInterpretation .
+
+# EmotionExpression relations
+meme:EmotionExpression rel:expressedsThrough meme:VisualMaterial .
+meme:EmotionExpression rel:reinforcedBy meme:TextualMaterial .
+meme:EmotionExpression rel:modulatedBy meme:ColorComposition .
+meme:EmotionExpression rel:derivedFrom meme:SceneUnderstanding .
+meme:EmotionExpression rel:indicatesIntent meme:OverallIntent .
+meme:EmotionExpression rel:shapesInterpretation meme:SemioticInterpretation .
+meme:EmotionExpression rel:contributes meme:ToxicityAssessment .
+
+# Metadata relations
+meme:Metadata rel:providesContext meme:OverallIntent .
+meme:Metadata rel:identifiesAudience meme:TargetCommunity .
+meme:Metadata rel:influences meme:SemioticInterpretation .
+meme:Metadata rel:augments meme:ToxicityAssessment .
+meme:Metadata rel:preservesOrigin meme:TemplateStructure .
+meme:Metadata rel:supplementsUnderstanding meme:BackgroundKnowledge .
+
+# AnalogicalMapping relations
+meme:AnalogicalMapping rel:connects meme:VisualMaterial .
+meme:AnalogicalMapping rel:connects meme:TextualMaterial .
+meme:AnalogicalMapping rel:requiresUnderstanding meme:BackgroundKnowledge .
+meme:AnalogicalMapping rel:groundedIn meme:SceneUnderstanding .
+meme:AnalogicalMapping rel:conveys meme:OverallIntent .
+meme:AnalogicalMapping rel:enablesProjection meme:SemioticInterpretation .
+meme:AnalogicalMapping rel:typical meme:TemplateStructure .
+
+# OverallIntent relations
+meme:OverallIntent rel:expressedThrough meme:TextualMaterial .
+meme:OverallIntent rel:expressedThrough meme:VisualMaterial .
+meme:OverallIntent rel:revealedBy meme:AnalogicalMapping .
+meme:OverallIntent rel:decodedUsing meme:BackgroundKnowledge .
+meme:OverallIntent rel:manifestedIn meme:EmotionExpression .
+meme:OverallIntent rel:directed meme:TargetCommunity .
+meme:OverallIntent rel:determines meme:ToxicityAssessment .
+meme:OverallIntent rel:influencedBy meme:Metadata .
+
+# SemioticInterpretation relations
+meme:SemioticInterpretation rel:projectsOnto meme:VisualMaterial .
+meme:SemioticInterpretation rel:projectsOnto meme:TextualMaterial .
+meme:SemioticInterpretation rel:shapedBy meme:BackgroundKnowledge .
+meme:SemioticInterpretation rel:influencedBy meme:EmotionExpression .
+meme:SemioticInterpretation rel:enabledBy meme:AnalogicalMapping .
+meme:SemioticInterpretation rel:variesBy meme:TargetCommunity .
+meme:SemioticInterpretation rel:contextualizedBy meme:Metadata .
+meme:SemioticInterpretation rel:affects meme:ToxicityAssessment .
+
+# TargetCommunity relations
+meme:TargetCommunity rel:identifiedThrough meme:TextualMaterial .
+meme:TargetCommunity rel:identifiedThrough meme:BackgroundKnowledge .
+meme:TargetCommunity rel:targetedBy meme:OverallIntent .
+meme:TargetCommunity rel:sharesUnderstanding meme:TemplateStructure .
+meme:TargetCommunity rel:interpretsUsing meme:SemioticInterpretation .
+meme:TargetCommunity rel:identifiedIn meme:Metadata .
+meme:TargetCommunity rel:affectedBy meme:ToxicityAssessment .
+
+# TemplateStructure relations
+meme:TemplateStructure rel:manifestedIn meme:VisualMaterial .
+meme:TemplateStructure rel:constrains meme:TextualMaterial .
+meme:TemplateStructure rel:recognizedThrough meme:BackgroundKnowledge .
+meme:TemplateStructure rel:defines meme:SceneUnderstanding .
+meme:TemplateStructure rel:prescribes meme:ColorComposition .
+meme:TemplateStructure rel:structures meme:AnalogicalMapping .
+meme:TemplateStructure rel:sharedWithin meme:TargetCommunity .
+meme:TemplateStructure rel:documentedIn meme:Metadata .
+
+# ToxicityAssessment relations
+meme:ToxicityAssessment rel:evaluates meme:VisualMaterial .
+meme:ToxicityAssessment rel:evaluates meme:TextualMaterial .
+meme:ToxicityAssessment rel:dependsOn meme:BackgroundKnowledge .
+meme:ToxicityAssessment rel:considers meme:EmotionExpression .
+meme:ToxicityAssessment rel:assessesMapping meme:AnalogicalMapping .
+meme:ToxicityAssessment rel:derivedFrom meme:OverallIntent .
+meme:ToxicityAssessment rel:variesBy meme:SemioticInterpretation .
+meme:ToxicityAssessment rel:considersTarget meme:TargetCommunity .
+meme:ToxicityAssessment rel:informedBy meme:Metadata .

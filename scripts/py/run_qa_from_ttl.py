@@ -60,8 +60,8 @@ def extract_dimensions_from_ttl(ttl_file: Path) -> List[Dict[str, Any]]:
         # Find all dimension instances (only those with proper class types)
         dimension_classes = [
             "TextualMaterial", "VisualMaterial", "EmotionExpression", 
-            "ColorComposition", "SceneUnderstanding", "BackgroundKnowledge",
-            "Metadata", "MetaphoricalAndAnalogicalMapping", "OverallIntent",
+            "ColorComposition", "Scene", "BackgroundKnowledge",
+            "Metadata", "AnalogicalMapping", "OverallIntent",
             "SemioticInterpretation", "TargetCommunity", "TemplateStructure",
             "ToxicityAssessment"
         ]

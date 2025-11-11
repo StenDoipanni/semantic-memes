@@ -61,11 +61,11 @@ The main batch script is located at `scripts/sh/run_meme_pipeline.sh`. It suppor
 **Core Mode** (4 dimensions - recommended for quick analysis):
 - `TextualMaterial` - Written or textual content
 - `VisualMaterial` - Visual content elements  
-- `SceneUnderstanding` - Spatial arrangements and organization
+- `Scene` - Spatial arrangements and organization
 - `BackgroundKnowledge` - Contextual information and references
 
 **All Mode** (13 dimensions - comprehensive analysis):
-- All available dimensions including Core plus: `EmotionExpression`, `ColorComposition`, `Metadata`, `MetaphoricalAndAnalogicalMapping`, `OverallIntent`, `SemioticInterpretation`, `TargetCommunity`, `TemplateStructure`, `ToxicityAssessment`
+- All available dimensions including Core plus: `EmotionExpression`, `ColorComposition`, `Metadata`, `AnalogicalMapping`, `OverallIntent`, `SemioticInterpretation`, `TargetCommunity`, `TemplateStructure`, `ToxicityAssessment`
 
 #### Examples
 
@@ -101,8 +101,8 @@ cd /path/to/meme-pipeline-server
 
 3. **Available Dimensions**:
    - `VisualMaterial`, `TextualMaterial`, `EmotionExpression`, `ColorComposition`
-   - `SceneUnderstanding`, `BackgroundKnowledge`, `Metadata`
-   - `MetaphoricalAndAnalogicalMapping`, `OverallIntent`, `SemioticInterpretation`
+   - `Scene`, `BackgroundKnowledge`, `Metadata`
+   - `AnalogicalMapping`, `OverallIntent`, `SemioticInterpretation`
    - `TargetCommunity`, `TemplateStructure`, `ToxicityAssessment`
 
 #### Batch Script Help
@@ -173,10 +173,10 @@ The pipeline can extract the following dimensions from memes:
 - `TextualMaterial` - Written or textual content
 - `EmotionExpression` - Emotional content and expressions
 - `ColorComposition` - Color schemes and arrangements
-- `SceneUnderstanding` - Spatial arrangements and organization
+- `Scene` - Spatial arrangements and organization
 - `BackgroundKnowledge` - Contextual information and references
 - `Metadata` - Technical and descriptive information
-- `MetaphoricalAndAnalogicalMapping` - Symbolic representations
+- `AnalogicalMapping` - Symbolic representations
 - `OverallIntent` - Primary purpose or intention
 - `SemioticInterpretation` - Signs, symbols, and meaning
 - `TargetCommunity` - Intended audience
@@ -236,7 +236,7 @@ Using the batch script with Core mode for fast analysis:
 This extracts:
 - `TextualMaterial` - Written or textual content
 - `VisualMaterial` - Visual content elements
-- `SceneUnderstanding` - Spatial arrangements
+- `Scene` - Spatial arrangements
 - `BackgroundKnowledge` - Contextual information
 
 ### Example 2: Comprehensive Analysis with All Dimensions
@@ -250,7 +250,7 @@ Using the batch script with All mode for complete analysis:
 
 This extracts all available dimensions including Core plus:
 - `EmotionExpression`, `ColorComposition`, `Metadata`
-- `MetaphoricalAndAnalogicalMapping`, `OverallIntent`
+- `AnalogicalMapping`, `OverallIntent`
 - `SemioticInterpretation`, `TargetCommunity`
 - `TemplateStructure`, `ToxicityAssessment`
 

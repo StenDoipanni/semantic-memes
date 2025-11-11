@@ -27,10 +27,10 @@ AVAILABLE_DIMENSIONS = [
     "TextualMaterial",
     "EmotionExpression",
     "ColorComposition",
-    "SceneUnderstanding",
+    "Scene",
     "BackgroundKnowledge",
     "Metadata",
-    "MetaphoricalAndAnalogicalMapping",
+    "AnalogicalMapping",
     "OverallIntent",
     "SemioticInterpretation",
     "TargetCommunity",
@@ -53,7 +53,7 @@ Examples:
   python extract_dimensions.py image.png --dimensions EmotionExpression
   
   # Extract with custom output directory
-  python extract_dimensions.py image.png --dimensions SceneUnderstanding BackgroundKnowledge --output-dir ./my_output
+  python extract_dimensions.py image.png --dimensions Scene BackgroundKnowledge --output-dir ./my_output
   
   # Use specific LLM provider
   python extract_dimensions.py image.png --dimensions VisualMaterial --llm-provider claude

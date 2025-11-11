@@ -32,7 +32,7 @@ show_help() {
     echo "Options:"
     echo "  --image PATH              Path to meme image (required)"
     echo "  --mode Core|All           Use predefined dimension sets"
-    echo "    Core: TextualMaterial, VisualMaterial, SceneUnderstanding, BackgroundKnowledge"
+    echo "    Core: TextualMaterial, VisualMaterial, Scene, BackgroundKnowledge"
     echo "    All:  All 13 available dimensions"
     echo "  --llm-provider PROVIDER   LLM provider: claude or huggingface (default: claude)"
     echo "  --output-dir DIR          Output directory (default: ./output)"
@@ -54,10 +54,10 @@ while [[ $# -gt 0 ]]; do
             ;;
         --mode)
             if [[ "$2" == "Core" ]]; then
-                DIMENSIONS="TextualMaterial VisualMaterial SceneUnderstanding BackgroundKnowledge"
+                DIMENSIONS="TextualMaterial VisualMaterial Scene BackgroundKnowledge"
                 echo -e "${BLUE}📊 Using Core dimensions: $DIMENSIONS${NC}"
             elif [[ "$2" == "All" ]]; then
-                DIMENSIONS="TextualMaterial VisualMaterial EmotionExpression ColorComposition SceneUnderstanding BackgroundKnowledge Metadata MetaphoricalAndAnalogicalMapping OverallIntent SemioticInterpretation TargetCommunity TemplateStructure ToxicityAssessment"
+                DIMENSIONS="TextualMaterial VisualMaterial EmotionExpression ColorComposition Scene BackgroundKnowledge Metadata AnalogicalMapping OverallIntent SemioticInterpretation TargetCommunity TemplateStructure ToxicityAssessment"
                 echo -e "${BLUE}📊 Using All dimensions: $DIMENSIONS${NC}"
             else
                 echo -e "${RED}❌ Error: --mode must be either 'Core' or 'All'${NC}"

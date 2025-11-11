@@ -63,8 +63,8 @@ mkdir -p "$OUTPUT_DIR"
 IMAGE_PATH="9_image_batch_2.png"
 
 # Dimension sets
-CORE_DIMENSIONS="TextualMaterial VisualMaterial SceneUnderstanding BackgroundKnowledge"
-ALL_DIMENSIONS="TextualMaterial VisualMaterial EmotionExpression ColorComposition SceneUnderstanding BackgroundKnowledge Metadata MetaphoricalAndAnalogicalMapping OverallIntent SemioticInterpretation TargetCommunity TemplateStructure ToxicityAssessment"
+CORE_DIMENSIONS="TextualMaterial VisualMaterial Scene BackgroundKnowledge"
+ALL_DIMENSIONS="TextualMaterial VisualMaterial EmotionExpression ColorComposition Scene BackgroundKnowledge Metadata AnalogicalMapping OverallIntent SemioticInterpretation TargetCommunity TemplateStructure ToxicityAssessment"
 
 # Default to Core dimensions
 DIMENSIONS="$CORE_DIMENSIONS"
@@ -105,7 +105,7 @@ while [[ $# -gt 0 ]]; do
             echo "Options:"
             echo "  --image PATH              Path to meme image (default: $IMAGE_PATH)"
             echo "  --mode Core|All           Use predefined dimension sets"
-            echo "    Core: TextualMaterial, VisualMaterial, SceneUnderstanding, BackgroundKnowledge"
+            echo "    Core: TextualMaterial, VisualMaterial, Scene, BackgroundKnowledge"
             echo "    All:  All 13 available dimensions"
             echo "  --dimensions \"DIM1 DIM2\"  Space-separated list of dimensions (overrides --mode)"
             echo "  --output-dir PATH         Output directory (default: $OUTPUT_DIR)"
@@ -113,8 +113,8 @@ while [[ $# -gt 0 ]]; do
             echo ""
             echo "Available dimensions:"
             echo "  VisualMaterial, TextualMaterial, EmotionExpression, ColorComposition,"
-            echo "  SceneUnderstanding, BackgroundKnowledge, Metadata,"
-            echo "  MetaphoricalAndAnalogicalMapping, OverallIntent, SemioticInterpretation,"
+            echo "  Scene, BackgroundKnowledge, Metadata,"
+            echo "  AnalogicalMapping, OverallIntent, SemioticInterpretation,"
             echo "  TargetCommunity, TemplateStructure, ToxicityAssessment"
             echo ""
             echo "Examples:"

@@ -26,7 +26,7 @@ def main():
     
     # Configuration
     image_path = Path("/Users/stefanodegiorgis/Downloads/dev_set_task3_labeled/9_image_batch_2.png")
-    selected_dimensions = ["TextualMaterial", "VisualMaterial", "SceneUnderstanding", "BackgroundKnowledge"]
+    selected_dimensions = ["TextualMaterial", "VisualMaterial", "Scene", "BackgroundKnowledge"]
     output_dir = Path("./output/simple_extraction")
     llm_provider = "claude"
     

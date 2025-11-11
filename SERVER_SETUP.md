@@ -121,7 +121,7 @@ ls -la output/qa/
 ```
 - TextualMaterial
 - VisualMaterial  
-- SceneUnderstanding
+- Scene
 - BackgroundKnowledge
 
 #### All Dimensions (13)
@@ -130,7 +130,7 @@ ls -la output/qa/
 ```
 - All Core dimensions plus:
 - EmotionExpression, ColorComposition, Metadata
-- MetaphoricalAndAnalogicalMapping, OverallIntent
+- AnalogicalMapping, OverallIntent
 - SemioticInterpretation, TargetCommunity
 - TemplateStructure, ToxicityAssessment
 
