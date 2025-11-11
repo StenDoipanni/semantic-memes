@@ -65,7 +65,7 @@ The main batch script is located at `scripts/sh/run_meme_pipeline.sh`. It suppor
 - `BackgroundKnowledge` - Contextual information and references
 
 **All Mode** (13 dimensions - comprehensive analysis):
-- All available dimensions including Core plus: `EmotionExpression`, `ColorComposition`, `Metadata`, `AnalogicalMapping`, `OverallIntent`, `SemioticInterpretation`, `TargetCommunity`, `TemplateStructure`, `ToxicityAssessment`
+- All available dimensions including Core plus: `Emotion`, `ColorComposition`, `Metadata`, `AnalogicalMapping`, `OverallIntent`, `SemioticInterpretation`, `TargetCommunity`, `TemplateStructure`, `Toxicity`
 
 #### Examples
 
@@ -100,10 +100,10 @@ cd /path/to/meme-pipeline-server
    - Example: `--dimensions "VisualMaterial TextualMaterial OverallIntent"`
 
 3. **Available Dimensions**:
-   - `VisualMaterial`, `TextualMaterial`, `EmotionExpression`, `ColorComposition`
+   - `VisualMaterial`, `TextualMaterial`, `Emotion`, `ColorComposition`
    - `Scene`, `BackgroundKnowledge`, `Metadata`
    - `AnalogicalMapping`, `OverallIntent`, `SemioticInterpretation`
-   - `TargetCommunity`, `TemplateStructure`, `ToxicityAssessment`
+   - `TargetCommunity`, `TemplateStructure`, `Toxicity`
 
 #### Batch Script Help
 
@@ -171,7 +171,7 @@ The pipeline can extract the following dimensions from memes:
 
 - `VisualMaterial` - Visual content elements
 - `TextualMaterial` - Written or textual content
-- `EmotionExpression` - Emotional content and expressions
+- `Emotion` - Emotional content and expressions
 - `ColorComposition` - Color schemes and arrangements
 - `Scene` - Spatial arrangements and organization
 - `BackgroundKnowledge` - Contextual information and references
@@ -181,7 +181,7 @@ The pipeline can extract the following dimensions from memes:
 - `SemioticInterpretation` - Signs, symbols, and meaning
 - `TargetCommunity` - Intended audience
 - `TemplateStructure` - Structural patterns
-- `ToxicityAssessment` - Harmful or offensive elements
+- `Toxicity` - Harmful or offensive elements
 
 ### Available Question Types
 
@@ -249,10 +249,10 @@ Using the batch script with All mode for complete analysis:
 ```
 
 This extracts all available dimensions including Core plus:
-- `EmotionExpression`, `ColorComposition`, `Metadata`
+- `Emotion`, `ColorComposition`, `Metadata`
 - `AnalogicalMapping`, `OverallIntent`
 - `SemioticInterpretation`, `TargetCommunity`
-- `TemplateStructure`, `ToxicityAssessment`
+- `TemplateStructure`, `Toxicity`
 
 ### Example 3: Custom Dimension Selection
 
@@ -263,7 +263,7 @@ Extract only specific dimensions you need:
 ./scripts/sh/run_meme_pipeline.sh --image img/meme.png --dimensions "VisualMaterial OverallIntent"
 
 # Extract multiple specific dimensions
-./scripts/sh/run_meme_pipeline.sh --image img/meme.png --dimensions "TextualMaterial VisualMaterial EmotionExpression OverallIntent"
+./scripts/sh/run_meme_pipeline.sh --image img/meme.png --dimensions "TextualMaterial VisualMaterial Emotion OverallIntent"
 ```
 
 ### Example 4: Using Different LLM Providers

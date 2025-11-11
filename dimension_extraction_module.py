@@ -183,7 +183,7 @@ class DimensionExtractionModule:
             
             # Store VisualMaterial and TextualMaterial entities for Scene and BackgroundKnowledge
             # Store BackgroundKnowledge entities for AnalogicalMapping
-            # Store AnalogicalMapping entities for ToxicityAssessment
+            # Store AnalogicalMapping entities for Toxicity
             visual_material_entities = []
             textual_material_entities = []
             background_knowledge_entities = []
@@ -217,10 +217,10 @@ class DimensionExtractionModule:
                         else:
                             logger.warning(f"BackgroundKnowledge extraction skipped: No VisualMaterial or TextualMaterial entities available yet")
                             dimensions = []
-                    # For EmotionExpression, pass both VisualMaterial and TextualMaterial entities
-                    elif dimension_name == "EmotionExpression":
+                    # For Emotion, pass both VisualMaterial and TextualMaterial entities
+                    elif dimension_name == "Emotion":
                         if visual_material_entities or textual_material_entities:
-                            logger.info(f"Extracting EmotionExpression with {len(visual_material_entities)} VisualMaterial and {len(textual_material_entities)} TextualMaterial entities")
+                            logger.info(f"Extracting Emotion with {len(visual_material_entities)} VisualMaterial and {len(textual_material_entities)} TextualMaterial entities")
                             dimensions = self._extract_single_dimension(
                                 image_path, 
                                 dimension_name, 
@@ -229,7 +229,7 @@ class DimensionExtractionModule:
                                 textual_material_entities=textual_material_entities
                             )
                         else:
-                            logger.warning(f"EmotionExpression extraction skipped: No VisualMaterial or TextualMaterial entities available yet")
+                            logger.warning(f"Emotion extraction skipped: No VisualMaterial or TextualMaterial entities available yet")
                             dimensions = []
                     # For AnalogicalMapping, pass VisualMaterial, TextualMaterial, and BackgroundKnowledge entities
                     elif dimension_name == "AnalogicalMapping":
@@ -246,10 +246,10 @@ class DimensionExtractionModule:
                         else:
                             logger.warning(f"AnalogicalMapping extraction skipped: No VisualMaterial, TextualMaterial, or BackgroundKnowledge entities available yet")
                             dimensions = []
-                    # For ToxicityAssessment, pass VisualMaterial, TextualMaterial, BackgroundKnowledge, and AnalogicalMapping entities
-                    elif dimension_name == "ToxicityAssessment":
+                    # For Toxicity, pass VisualMaterial, TextualMaterial, BackgroundKnowledge, and AnalogicalMapping entities
+                    elif dimension_name == "Toxicity":
                         if visual_material_entities or textual_material_entities or background_knowledge_entities or metaphorical_mapping_entities:
-                            logger.info(f"Extracting ToxicityAssessment with {len(visual_material_entities)} VisualMaterial, {len(textual_material_entities)} TextualMaterial, {len(background_knowledge_entities)} BackgroundKnowledge, and {len(metaphorical_mapping_entities)} AnalogicalMapping entities")
+                            logger.info(f"Extracting Toxicity with {len(visual_material_entities)} VisualMaterial, {len(textual_material_entities)} TextualMaterial, {len(background_knowledge_entities)} BackgroundKnowledge, and {len(metaphorical_mapping_entities)} AnalogicalMapping entities")
                             dimensions = self._extract_single_dimension(
                                 image_path, 
                                 dimension_name, 
@@ -260,7 +260,7 @@ class DimensionExtractionModule:
                                 metaphorical_mapping_entities=metaphorical_mapping_entities
                             )
                         else:
-                            logger.warning(f"ToxicityAssessment extraction skipped: No VisualMaterial, TextualMaterial, BackgroundKnowledge, or AnalogicalMapping entities available yet")
+                            logger.warning(f"Toxicity extraction skipped: No VisualMaterial, TextualMaterial, BackgroundKnowledge, or AnalogicalMapping entities available yet")
                             dimensions = []
                     else:
                         dimensions = self._extract_single_dimension(
@@ -317,7 +317,7 @@ class DimensionExtractionModule:
                             background_knowledge_entities = dimensions
                             logger.info(f"Stored {len(background_knowledge_entities)} BackgroundKnowledge entities")
                         
-                        # Store AnalogicalMapping entities for ToxicityAssessment
+                        # Store AnalogicalMapping entities for Toxicity
                         # These are already normalized above
                         if dimension_name == "AnalogicalMapping" and dimensions:
                             metaphorical_mapping_entities = dimensions
@@ -522,8 +522,8 @@ IMPORTANT:
 
 Please analyze the image and provide your response in the exact JSON format specified in the prompt above. Be thorough and accurate in your analysis."""
         
-        # For EmotionExpression, add VisualMaterial and TextualMaterial entities context
-        elif dimension_name == "EmotionExpression" and (visual_material_entities or textual_material_entities):
+        # For Emotion, add VisualMaterial and TextualMaterial entities context
+        elif dimension_name == "Emotion" and (visual_material_entities or textual_material_entities):
             entities_context = "\n\nEntities found in the image (link emotions to these expressors using hasExpressor):\n"
             
             if visual_material_entities:
@@ -612,8 +612,8 @@ IMPORTANT:
 
 Please analyze the image and provide your response in the exact JSON format specified in the prompt above. Be thorough and accurate in your analysis."""
         
-        # For ToxicityAssessment, add VisualMaterial, TextualMaterial, BackgroundKnowledge, and AnalogicalMapping entities context
-        elif dimension_name == "ToxicityAssessment" and (visual_material_entities or textual_material_entities or background_knowledge_entities or metaphorical_mapping_entities):
+        # For Toxicity, add VisualMaterial, TextualMaterial, BackgroundKnowledge, and AnalogicalMapping entities context
+        elif dimension_name == "Toxicity" and (visual_material_entities or textual_material_entities or background_knowledge_entities or metaphorical_mapping_entities):
             entities_context = "\n\nEntities found in the image (assess toxicity for these):\n"
             
             if visual_material_entities:
@@ -882,7 +882,7 @@ Please analyze the image and provide your response in the exact JSON format spec
                 if isinstance(rel, dict) and "entity" in rel:
                     rel["entity"] = self._normalize_instance_name(rel["entity"])
         
-        # Normalize hasExpressor (EmotionExpression)
+        # Normalize hasExpressor (Emotion)
         if "hasExpressor" in data and isinstance(data["hasExpressor"], list):
             for rel in data["hasExpressor"]:
                 if isinstance(rel, dict) and "entity" in rel:
@@ -894,7 +894,7 @@ Please analyze the image and provide your response in the exact JSON format spec
                 if isinstance(rel, dict) and "entity" in rel:
                     rel["entity"] = self._normalize_instance_name(rel["entity"])
         
-        # Normalize manifestsToxicity (ToxicityAssessment)
+        # Normalize manifestsToxicity (Toxicity)
         if "manifestsToxicity" in data and isinstance(data["manifestsToxicity"], list):
             for rel in data["manifestsToxicity"]:
                 if isinstance(rel, dict) and "entity" in rel:
@@ -967,8 +967,8 @@ Please analyze the image and provide your response in the exact JSON format spec
                     if "relatedTo" in data:
                         dimension["relatedTo"] = data["relatedTo"]
                 
-                # For EmotionExpression, preserve hasExpressor relations
-                if dimension_name == "EmotionExpression":
+                # For Emotion, preserve hasExpressor relations
+                if dimension_name == "Emotion":
                     if "hasExpressor" in data:
                         dimension["hasExpressor"] = data["hasExpressor"]
                 
@@ -977,8 +977,8 @@ Please analyze the image and provide your response in the exact JSON format spec
                     if "identifiedAs" in data:
                         dimension["identifiedAs"] = data["identifiedAs"]
                 
-                # For ToxicityAssessment, preserve manifestsToxicity relations
-                if dimension_name == "ToxicityAssessment":
+                # For Toxicity, preserve manifestsToxicity relations
+                if dimension_name == "Toxicity":
                     if "manifestsToxicity" in data:
                         dimension["manifestsToxicity"] = data["manifestsToxicity"]
                 
@@ -1048,8 +1048,8 @@ Please analyze the image and provide your response in the exact JSON format spec
                     if "relatedTo" in data:
                         dimension["relatedTo"] = data["relatedTo"]
                 
-                # For EmotionExpression, preserve hasExpressor relations
-                if dimension_name == "EmotionExpression":
+                # For Emotion, preserve hasExpressor relations
+                if dimension_name == "Emotion":
                     if "hasExpressor" in data:
                         dimension["hasExpressor"] = data["hasExpressor"]
                 
@@ -1058,8 +1058,8 @@ Please analyze the image and provide your response in the exact JSON format spec
                     if "identifiedAs" in data:
                         dimension["identifiedAs"] = data["identifiedAs"]
                 
-                # For ToxicityAssessment, preserve manifestsToxicity relations
-                if dimension_name == "ToxicityAssessment":
+                # For Toxicity, preserve manifestsToxicity relations
+                if dimension_name == "Toxicity":
                     if "manifestsToxicity" in data:
                         dimension["manifestsToxicity"] = data["manifestsToxicity"]
                 
@@ -1462,15 +1462,15 @@ Please analyze the image and provide your response in the exact JSON format spec
                                     f":{instance_name} :{relation} :{entity} ."
                                 )
                 
-                # Handle hasExpressor relations for EmotionExpression
-                if class_name == "EmotionExpression":
+                # Handle hasExpressor relations for Emotion
+                if class_name == "Emotion":
                     # Collect hasExpressor relations to add as separate statements later
                     if "hasExpressor" in dim and dim["hasExpressor"]:
                         for rel in dim["hasExpressor"]:
                             entity = self._normalize_instance_name(rel.get("entity", ""))
                             relation = self._normalize_instance_name(rel.get("relation", "hasExpressor"))
                             if instance_name and entity and relation:
-                                # Store for later: these are EmotionExpression→entity relations
+                                # Store for later: these are Emotion→entity relations
                                 direct_relations_statements.append(
                                     f":{instance_name} :{relation} :{entity} ."
                                 )
@@ -1488,15 +1488,15 @@ Please analyze the image and provide your response in the exact JSON format spec
                                     f":{instance_name} :{relation} :{entity} ."
                                 )
                 
-                # Handle manifestsToxicity relations for ToxicityAssessment
-                if class_name == "ToxicityAssessment":
+                # Handle manifestsToxicity relations for Toxicity
+                if class_name == "Toxicity":
                     # Collect manifestsToxicity relations to add as separate statements later
                     if "manifestsToxicity" in dim and dim["manifestsToxicity"]:
                         for rel in dim["manifestsToxicity"]:
                             entity = self._normalize_instance_name(rel.get("entity", ""))
                             relation = self._normalize_instance_name(rel.get("relation", "manifestsToxicity"))
                             if instance_name and entity and relation:
-                                # Store for later: these are ToxicityAssessment→toxicity_type relations
+                                # Store for later: these are Toxicity→toxicity_type relations
                                 direct_relations_statements.append(
                                     f":{instance_name} :{relation} :{entity} ."
                                 )

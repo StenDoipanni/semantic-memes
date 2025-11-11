@@ -129,10 +129,10 @@ ls -la output/qa/
 ./run_server_pipeline.sh --image meme.jpg --mode All
 ```
 - All Core dimensions plus:
-- EmotionExpression, ColorComposition, Metadata
+- Emotion, ColorComposition, Metadata
 - AnalogicalMapping, OverallIntent
 - SemioticInterpretation, TargetCommunity
-- TemplateStructure, ToxicityAssessment
+- TemplateStructure, Toxicity
 
 #### Custom Dimensions
 ```bash

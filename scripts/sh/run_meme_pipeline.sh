@@ -57,7 +57,7 @@ while [[ $# -gt 0 ]]; do
                 DIMENSIONS="TextualMaterial VisualMaterial Scene BackgroundKnowledge"
                 echo -e "${BLUE}📊 Using Core dimensions: $DIMENSIONS${NC}"
             elif [[ "$2" == "All" ]]; then
-                DIMENSIONS="TextualMaterial VisualMaterial EmotionExpression ColorComposition Scene BackgroundKnowledge Metadata AnalogicalMapping OverallIntent SemioticInterpretation TargetCommunity TemplateStructure ToxicityAssessment"
+                DIMENSIONS="TextualMaterial VisualMaterial Emotion ColorComposition Scene BackgroundKnowledge Metadata AnalogicalMapping OverallIntent SemioticInterpretation TargetCommunity TemplateStructure Toxicity"
                 echo -e "${BLUE}📊 Using All dimensions: $DIMENSIONS${NC}"
             else
                 echo -e "${RED}❌ Error: --mode must be either 'Core' or 'All'${NC}"

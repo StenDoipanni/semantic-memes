@@ -69,7 +69,7 @@ class OntologyConfig:
     DIMENSION_CLASSES = [
         "VisualMaterial",
         "TextualMaterial", 
-        "EmotionExpression",
+        "Emotion",
         "ColorComposition",
         "Scene",
         "BackgroundKnowledge",
@@ -79,7 +79,7 @@ class OntologyConfig:
         "SemioticInterpretation",
         "TargetCommunity",
         "TemplateStructure",
-        "ToxicityAssessment"
+        "Toxicity"
     ]
     
     # Properties to extract from classes
@@ -111,7 +111,7 @@ class PipelineConfig:
     DIMENSION_CLASSES = [
         "VisualMaterial",
         "TextualMaterial", 
-        "EmotionExpression",
+        "Emotion",
         "ColorComposition",
         "Scene",
         "BackgroundKnowledge",
@@ -121,7 +121,7 @@ class PipelineConfig:
         "SemioticInterpretation",
         "TargetCommunity",
         "TemplateStructure",
-        "ToxicityAssessment"
+        "Toxicity"
     ]
 
 # Q&A Generation Configuration

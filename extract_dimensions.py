@@ -6,9 +6,9 @@ This script allows you to specify exactly which dimensions you want to extract
 from the command line.
 
 Usage:
-    python extract_dimensions.py <image_path> --dimensions VisualMaterial TextualMaterial EmotionExpression
+    python extract_dimensions.py <image_path> --dimensions VisualMaterial TextualMaterial Emotion
     
-    python extract_dimensions.py <image_path> --dimensions EmotionExpression --output-dir ./output
+    python extract_dimensions.py <image_path> --dimensions Emotion --output-dir ./output
 """
 
 import argparse
@@ -25,7 +25,7 @@ from dimension_extraction_module import extract_dimensions_from_image
 AVAILABLE_DIMENSIONS = [
     "VisualMaterial",
     "TextualMaterial",
-    "EmotionExpression",
+    "Emotion",
     "ColorComposition",
     "Scene",
     "BackgroundKnowledge",
@@ -35,7 +35,7 @@ AVAILABLE_DIMENSIONS = [
     "SemioticInterpretation",
     "TargetCommunity",
     "TemplateStructure",
-    "ToxicityAssessment"
+    "Toxicity"
 ]
 
 
@@ -50,7 +50,7 @@ Examples:
   python extract_dimensions.py image.png --dimensions VisualMaterial TextualMaterial
   
   # Extract single dimension
-  python extract_dimensions.py image.png --dimensions EmotionExpression
+  python extract_dimensions.py image.png --dimensions Emotion
   
   # Extract with custom output directory
   python extract_dimensions.py image.png --dimensions Scene BackgroundKnowledge --output-dir ./my_output

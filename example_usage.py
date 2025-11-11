@@ -132,7 +132,7 @@ def example_custom_pipeline():
     if image_path.exists():
         result = pipeline.analyze_meme(
             image_path=image_path,
-            selected_dimensions=["OverallIntent", "EmotionExpression", "ColorComposition"],
+            selected_dimensions=["OverallIntent", "Emotion", "ColorComposition"],
             question_types=["interpretive", "evaluative"],
             questions_per_type=3,
             save_outputs=True

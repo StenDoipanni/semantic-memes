@@ -28,4 +28,4 @@ echo "  # Core dimensions (4): TextualMaterial, VisualMaterial, Scene, Backgroun
 echo "  python run_pipeline.py 9_image_batch_2.png --mode dimension_extraction --dimensions TextualMaterial VisualMaterial Scene BackgroundKnowledge --llm-provider claude"
 echo ""
 echo "  # All dimensions (13): All available dimensions"
-echo "  python run_pipeline.py 9_image_batch_2.png --mode dimension_extraction --dimensions TextualMaterial VisualMaterial EmotionExpression ColorComposition Scene BackgroundKnowledge Metadata AnalogicalMapping OverallIntent SemioticInterpretation TargetCommunity TemplateStructure ToxicityAssessment --llm-provider claude"
+echo "  python run_pipeline.py 9_image_batch_2.png --mode dimension_extraction --dimensions TextualMaterial VisualMaterial Emotion ColorComposition Scene BackgroundKnowledge Metadata AnalogicalMapping OverallIntent SemioticInterpretation TargetCommunity TemplateStructure Toxicity --llm-provider claude"
