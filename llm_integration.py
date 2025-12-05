@@ -122,7 +122,9 @@ class ClaudeProvider(LLMProvider):
             Exception: If the API call fails
         """
         if not self.is_available():
-            raise Exception("Claude provider is not available")
+            if not self.api_key:
+                raise Exception("Claude API key is not set. Please set CLAUDE_API_KEY environment variable.")
+            raise Exception("Claude provider is not available. Check API key and initialization.")
         
         try:
             # Prepare the message content
@@ -141,11 +143,13 @@ class ClaudeProvider(LLMProvider):
                 })
             
             # Prepare the request parameters
+            # NOTE: Each call creates a fresh conversation with no history.
+            # This ensures each dimension extraction is independent.
             request_params = {
                 "model": self.model,
                 "max_tokens": max_tokens or LLMConfig.CLAUDE_MAX_TOKENS,
                 "temperature": temperature or LLMConfig.CLAUDE_TEMPERATURE,
-                "messages": [{"role": "user", "content": content}]
+                "messages": [{"role": "user", "content": content}]  # Fresh conversation, no history
             }
             
             # Make the API call with retries
@@ -263,7 +267,20 @@ class ClaudeProvider(LLMProvider):
                 
             except Exception as e:
                 last_exception = e
-                logger.warning(f"Claude API attempt {attempt + 1} failed: {e}")
+                error_str = str(e)
+                
+                # Check for authentication errors
+                if "401" in error_str or "authentication" in error_str.lower() or "invalid x-api-key" in error_str.lower():
+                    logger.error(f"❌ Claude API authentication failed (attempt {attempt + 1}): {e}")
+                    logger.error("   This usually means:")
+                    logger.error("   1. The API key is invalid or expired")
+                    logger.error("   2. The API key format is incorrect")
+                    logger.error("   3. The API key doesn't have the required permissions")
+                    logger.error(f"   API key preview: {self.api_key[:20] if self.api_key else 'NOT SET'}...")
+                    # Don't retry on authentication errors
+                    raise Exception(f"Claude API authentication failed: {e}. Please check your CLAUDE_API_KEY environment variable.")
+                else:
+                    logger.warning(f"Claude API attempt {attempt + 1} failed: {e}")
                 
                 if attempt < LLMConfig.MAX_RETRIES - 1:
                     time.sleep(LLMConfig.RETRY_DELAY * (attempt + 1))
@@ -343,13 +360,15 @@ class HuggingFaceProvider(LLMProvider):
     def _load_model(self) -> None:
         """Lazily load the model and processor (only when first needed)."""
         if self._model_loaded:
+            logger.info("Model already loaded, skipping reload")
             return
         
         try:
             from transformers import AutoProcessor, AutoTokenizer, AutoModelForCausalLM
             import torch
             
-            logger.info(f"Loading HuggingFace model: {self.model_name} on {self.device}")
+            logger.info(f"🚀 Starting to load HuggingFace model: {self.model_name} on {self.device}")
+            logger.info(f"   This may take several minutes for large models like Qwen3-VL...")
             
             # Check if it's Qwen3-VL (requires Qwen3VLForConditionalGeneration)
             is_qwen3_vl = "qwen3" in self.model_name.lower() and "vl" in self.model_name.lower()
@@ -489,6 +508,8 @@ class HuggingFaceProvider(LLMProvider):
                 
                 # Qwen2-VL/Qwen3-VL requires apply_chat_template to insert image placeholders
                 # Then process the text (with image tokens) along with the actual image
+                # NOTE: Each call creates a fresh conversation with no history.
+                # This ensures each dimension extraction is independent.
                 messages = [
                     {
                         "role": "user",
@@ -497,7 +518,7 @@ class HuggingFaceProvider(LLMProvider):
                             {"type": "text", "text": prompt}
                         ]
                     }
-                ]
+                ]  # Fresh conversation, no history
                 
                 # Apply chat template - this inserts <image> tokens into the text
                 text_with_image_tokens = self.processor.apply_chat_template(
@@ -677,11 +698,16 @@ class LLMManager:
         Raises:
             Exception: If no providers are available or all fail
         """
-        if provider and provider in self.providers:
-            # Use specified provider
-            return self.providers[provider].generate_response(
-                prompt, image_path, **kwargs
-            )
+        if provider:
+            if provider in self.providers:
+                # Use specified provider
+                logger.info(f"Using specified provider: {provider}")
+                return self.providers[provider].generate_response(
+                    prompt, image_path, **kwargs
+                )
+            else:
+                logger.warning(f"Requested provider '{provider}' not found. Available: {list(self.providers.keys())}")
+                # Fall through to try available providers
         
         # Try providers in order of preference
         preferred_order = ["claude", "huggingface"]
@@ -689,14 +715,17 @@ class LLMManager:
         for provider_name in preferred_order:
             if provider_name in self.providers:
                 try:
+                    logger.info(f"Trying provider: {provider_name}")
                     return self.providers[provider_name].generate_response(
                         prompt, image_path, **kwargs
                     )
                 except Exception as e:
                     logger.warning(f"Provider {provider_name} failed: {e}")
+                    import traceback
+                    logger.error(traceback.format_exc())
                     continue
         
-        raise Exception("No available LLM providers or all providers failed")
+        raise Exception(f"No available LLM providers or all providers failed. Available: {list(self.providers.keys())}")
     
     def get_current_model(self) -> str:
         """

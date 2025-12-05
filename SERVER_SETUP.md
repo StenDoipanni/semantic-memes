@@ -131,7 +131,7 @@ ls -la output/qa/
 - All Core dimensions plus:
 - Emotion, ColorComposition, Metadata
 - AnalogicalMapping, OverallIntent
-- SemioticInterpretation, TargetCommunity
+- SemioticProjection, TargetCommunity
 - TemplateStructure, Toxicity
 
 #### Custom Dimensions

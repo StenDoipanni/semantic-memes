@@ -65,7 +65,7 @@ The main batch script is located at `scripts/sh/run_meme_pipeline.sh`. It suppor
 - `BackgroundKnowledge` - Contextual information and references
 
 **All Mode** (13 dimensions - comprehensive analysis):
-- All available dimensions including Core plus: `Emotion`, `ColorComposition`, `Metadata`, `AnalogicalMapping`, `OverallIntent`, `SemioticInterpretation`, `TargetCommunity`, `TemplateStructure`, `Toxicity`
+- All available dimensions including Core plus: `Emotion`, `ColorComposition`, `Metadata`, `AnalogicalMapping`, `OverallIntent`, `SemioticProjection`, `TargetCommunity`, `TemplateStructure`, `Toxicity`
 
 #### Examples
 
@@ -102,7 +102,7 @@ cd /path/to/meme-pipeline-server
 3. **Available Dimensions**:
    - `VisualMaterial`, `TextualMaterial`, `Emotion`, `ColorComposition`
    - `Scene`, `BackgroundKnowledge`, `Metadata`
-   - `AnalogicalMapping`, `OverallIntent`, `SemioticInterpretation`
+   - `AnalogicalMapping`, `OverallIntent`, `SemioticProjection`
    - `TargetCommunity`, `TemplateStructure`, `Toxicity`
 
 #### Batch Script Help
@@ -178,10 +178,103 @@ The pipeline can extract the following dimensions from memes:
 - `Metadata` - Technical and descriptive information
 - `AnalogicalMapping` - Symbolic representations
 - `OverallIntent` - Primary purpose or intention
-- `SemioticInterpretation` - Signs, symbols, and meaning
+- `SemioticProjection` - Projection of the User onto meme elements
 - `TargetCommunity` - Intended audience
 - `TemplateStructure` - Structural patterns
-- `Toxicity` - Harmful or offensive elements
+- `ToxicityAssessment` - Harmful or offensive elements
+
+## 🔄 Reversed Pipeline
+
+The pipeline includes a **reversed extraction order** that starts with `OverallIntent` and passes context between dimensions. This approach ensures that later dimensions have access to previously extracted information, improving accuracy and coherence.
+
+### Reversed Pipeline Extraction Order
+
+The reversed pipeline extracts dimensions in the following order, with each step receiving context from previous steps:
+
+| Step | Dimension | Receives Context From |
+|------|-----------|----------------------|
+| 1 | **OverallIntent** | None (extracted first) |
+| 2 | **TextualMaterial** | OverallIntent graph |
+| 3 | **VisualMaterial** | OverallIntent graph |
+| 4 | **Scene** | OverallIntent graph + VisualMaterial entities |
+| 5 | **BackgroundKnowledge** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene entities |
+| 6 | **EmotionExpression** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge entities |
+| 7 | **AnalogicalMapping** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, EmotionExpression entities |
+| 8 | **SemioticProjection** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, AnalogicalMapping entities |
+| 9 | **ToxicityAssessment** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, EmotionExpression, AnalogicalMapping, SemioticProjection entities |
+| 10 | **TargetCommunity** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, AnalogicalMapping, ToxicityAssessment entities |
+
+#### Detailed Description
+
+1. **OverallIntent** (first - no dependencies)
+   - Extracts the primary purpose or intention behind the meme
+   - Generates a TTL graph that is passed to all subsequent steps
+
+2. **TextualMaterial** (receives OverallIntent graph as context)
+   - Extracts written or textual content
+   - Uses the OverallIntent graph to understand the meme's purpose
+
+3. **VisualMaterial** (receives OverallIntent graph as context)
+   - Extracts visual content elements
+   - Uses the OverallIntent graph to understand the meme's purpose
+
+4. **Scene** (receives OverallIntent graph + VisualMaterial entities)
+   - Extracts spatial arrangements and organization
+   - Uses OverallIntent graph and VisualMaterial entities to understand scene composition
+
+5. **BackgroundKnowledge** (receives OverallIntent graph + VisualMaterial, TextualMaterial, Scene entities)
+   - Extracts contextual information and references
+   - Uses OverallIntent graph and all previously extracted entities to identify background knowledge
+
+6. **EmotionExpression** (receives OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge entities)
+   - Extracts emotional content and affective dimensions
+   - Uses OverallIntent graph and previously extracted entities to identify emotions
+
+7. **AnalogicalMapping** (receives OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, EmotionExpression entities)
+   - Extracts symbolic representations and analogical mappings
+   - Uses OverallIntent graph and all previously extracted entities to identify mappings
+
+8. **SemioticProjection** (receives OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, AnalogicalMapping entities)
+   - Extracts user projections onto meme elements
+   - Uses OverallIntent graph and previously extracted entities to identify semiotic projections
+
+9. **ToxicityAssessment** (receives OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, EmotionExpression, AnalogicalMapping, SemioticProjection entities)
+   - Evaluates harmful or offensive elements
+   - Uses OverallIntent graph and all previously extracted entities to assess toxicity
+
+10. **TargetCommunity** (receives OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, AnalogicalMapping, ToxicityAssessment entities)
+    - Extracts the intended audience or community
+    - Uses OverallIntent graph and previously extracted entities to identify target community
+
+### Context Passing Mechanism
+
+Each dimension extraction step receives:
+- **OverallIntent graph**: A TTL-formatted knowledge graph containing the extracted OverallIntent dimension
+- **Entity lists**: Lists of previously extracted entities from specific dimensions (e.g., VisualMaterial entities, TextualMaterial entities)
+
+This context is included in the prompt as "In Context Material for the Meme Analysis", allowing the LLM to make more informed and coherent extractions.
+
+### Using the Reversed Pipeline
+
+To use the reversed pipeline, use the `extract_dimensions_reversed.py` script:
+
+```bash
+# Extract dimensions using reversed pipeline with Claude
+python extract_dimensions_reversed.py img/meme.png --llm-provider claude
+
+# Extract dimensions using reversed pipeline with HuggingFace
+python extract_dimensions_reversed.py img/meme.png --llm-provider huggingface
+
+# Specify custom output directory
+python extract_dimensions_reversed.py img/meme.png --output-dir ./output_reversed
+```
+
+Or use the SLURM batch script:
+
+```bash
+# Submit job to SLURM cluster
+sbatch scripts/sbatch/extract_dimensions_reversed.sbatch img/meme.png --llm-provider claude
+```
 
 ### Available Question Types
 
@@ -251,7 +344,7 @@ Using the batch script with All mode for complete analysis:
 This extracts all available dimensions including Core plus:
 - `Emotion`, `ColorComposition`, `Metadata`
 - `AnalogicalMapping`, `OverallIntent`
-- `SemioticInterpretation`, `TargetCommunity`
+- `SemioticProjection`, `TargetCommunity`
 - `TemplateStructure`, `Toxicity`
 
 ### Example 3: Custom Dimension Selection

@@ -32,7 +32,7 @@ AVAILABLE_DIMENSIONS = [
     "Metadata",
     "AnalogicalMapping",
     "OverallIntent",
-    "SemioticInterpretation",
+    "SemioticProjection",
     "TargetCommunity",
     "TemplateStructure",
     "Toxicity"

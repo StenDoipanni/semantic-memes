@@ -26,22 +26,17 @@ meme:Meme meme:hasColorComposition meme:ColorComposition .
 
 # VisualMaterial relations
 meme:VisualMaterial meme:visualComponentOf meme:Meme .
-#meme:VisualMaterial meme:requiresInterpretationBy meme:BackgroundKnowledge .
 meme:VisualMaterial meme:roleOf meme:Scene .
-#meme:VisualMaterial meme:mapsOnto meme:TextualMaterial .
 meme:VisualMaterial meme:hasColor meme:Color .
 
 # TextualMaterial relations
 meme:TextualMaterial meme:textualComponentOf meme:Meme .
-#meme:TextualMaterial meme:requiresInterpretationBy meme:BackgroundKnowledge .
-#meme:TextualMaterial meme:references meme:Scene .
-#meme:TextualMaterial meme:mapsOnto meme:VisualMaterial .
 
 # BackgroundKnowledge relations
 meme:BackgroundKnowledge meme:referredIn meme:VisualMaterial . # example: "the image of Bill Cosby"
 meme:BackgroundKnowledge meme:referredIn meme:TextualMaterial . # example: "the text 'when you see Bill Cosby'"
 meme:BackgroundKnowledge meme:referredIn meme:Scene . # example: "a man telling another man <<try this bat meat, what could go wrong?>> --> ref to Covid-19"
-#meme:BackgroundKnowledge meme:contextualizes meme:AnalogicalMapping .
+
 
 # Scene relations
 meme:Scene meme:hasRole meme:VisualMaterial . # example: "distracted boyfriend situation hasRole boyfriend"
@@ -58,30 +53,22 @@ meme:VisualMaterial meme:hasColor meme:Color .
 meme:VisualMaterial meme:expresses meme:Emotion .
 meme:VisualMaterial meme:roleOf meme:AnalogicalMapping .
 meme:VisualMaterial meme:projectedElementOf meme:SemioticInterpretation .
-#meme:VisualMaterial meme:instantiates meme:TemplateStructure .
 meme:VisualMaterial meme:vehicleOf meme:Toxicity .
 
 # TextualMaterial to Additional
 meme:TextualMaterial meme:roleOf meme:AnalogicalMapping .
-#meme:TextualMaterial meme:reveals meme:OverallIntent .
 meme:TextualMaterial meme:projectedElementOf meme:SemioticInterpretation .
-#meme:TextualMaterial meme:identifiesTarget meme:TargetCommunity .
 meme:TextualMaterial meme:vehicleOf meme:Toxicity .
 meme:TextualMaterial meme:expresses meme:Emotion .
 
 # BackgroundKnowledge to Additional
-#meme:BackgroundKnowledge meme:necessaryFor meme:AnalogicalMapping .
-#meme:BackgroundKnowledge meme:revealsIntent meme:OverallIntent .
 meme:BackgroundKnowledge meme:projectedElementOf meme:SemioticInterpretation .
 meme:BackgroundKnowledge meme:roleOf meme:AnalogicalMapping .
-#meme:BackgroundKnowledge meme:identifiesAudience meme:TargetCommunity .
-#meme:BackgroundKnowledge meme:recognizes meme:TemplateStructure .
-#meme:BackgroundKnowledge meme:assessesContext meme:Toxicity .
+
 
 # Scene to Additional
 meme:Scene meme:expresses meme:Emotion .
 meme:Scene meme:settingFor meme:AnalogicalMapping .
-#meme:Scene meme:supportsInterpretation meme:SemioticInterpretation .
 meme:Scene meme:conformsTo meme:TemplateStructure .
 
 # ========================================
@@ -89,10 +76,6 @@ meme:Scene meme:conformsTo meme:TemplateStructure .
 # ========================================
 
 # ColorComposition relations
-#meme:ColorComposition meme:derivedFrom meme:VisualMaterial .
-#meme:ColorComposition meme:influences meme:Emotion .
-#meme:ColorComposition meme:constrainedBy meme:TemplateStructure .
-#meme:ColorComposition meme:contributesTo meme:SemioticInterpretation .
 meme:ColorComposition meme:includesColor meme:Color .
 meme:Color meme:colorOf meme:VisualMaterial .
 meme:Color meme:colorOf meme:TextualMaterial .
@@ -103,18 +86,11 @@ meme:ColorComposition meme:augments meme:TemplateStructure .
 # Emotion relations
 meme:Emotion meme:expressedsVia meme:VisualMaterial .
 meme:Emotion meme:expressedsVia meme:TextualMaterial .
-#meme:Emotion meme:modulatedBy meme:ColorComposition .
 meme:Emotion meme:expressedVia meme:Scene .
-#meme:Emotion meme:indicatesIntent meme:OverallIntent .
-#meme:Emotion meme:shapesInterpretation meme:SemioticInterpretation .
-#meme:Emotion meme:contributes meme:Toxicity .
+
 
 # Metadata relations
 meme:Metadata meme:providesContext meme:OverallIntent .
-#meme:Metadata meme:identifiesAudience meme:TargetCommunity .
-#meme:Metadata meme:influences meme:SemioticInterpretation .
-#meme:Metadata meme:augments meme:Toxicity .
-#meme:Metadata meme:preservesOrigin meme:TemplateStructure .
 meme:Metadata meme:refersTo meme:BackgroundKnowledge .
 meme:Metadata meme:augments meme:TextualMaterial .
 meme:Metadata meme:augments meme:VisualMaterial .
@@ -122,21 +98,13 @@ meme:Metadata meme:augments meme:VisualMaterial .
 # AnalogicalMapping relations
 meme:AnalogicalMapping meme:hasRole meme:VisualMaterial .
 meme:AnalogicalMapping meme:hasRole meme:TextualMaterial .
-#meme:AnalogicalMapping meme:requiresUnderstanding meme:BackgroundKnowledge .
 meme:AnalogicalMapping meme:groundedIn meme:Scene .
-#meme:AnalogicalMapping meme:expresses meme:OverallIntent .
-#meme:AnalogicalMapping meme:enablesProjection meme:SemioticInterpretation .
-#meme:AnalogicalMapping meme:typical meme:TemplateStructure .
+
 
 # OverallIntent relations
-#meme:OverallIntent meme:expressedThrough meme:TextualMaterial .
-#meme:OverallIntent meme:expressedThrough meme:VisualMaterial .
-#meme:OverallIntent meme:revealedBy meme:AnalogicalMapping .
 meme:OverallIntent meme:relatedTo meme:BackgroundKnowledge .
-#meme:OverallIntent meme:manifestedIn meme:Emotion .
 meme:OverallIntent meme:relatedTo meme:TargetCommunity .
 meme:OverallIntent meme:contains meme:Toxicity .
-#meme:OverallIntent meme:influencedBy meme:Metadata .
 
 # SemioticInterpretation relations
 meme:SemioticInterpretation meme:hasProjectedEntity meme:VisualMaterial .
@@ -145,12 +113,7 @@ meme:SemioticInterpretation meme:hasProjectedEntity meme:Scene .
 meme:SemioticInterpretation meme:hasProjectedUser meme:User .
 meme:SemioticInterpretation meme:hasProjectedCommunity meme:TargetCommunity .
 meme:User meme:progectsOnto owl:Thing .
-#meme:SemioticInterpretation meme:shapedBy meme:BackgroundKnowledge .
-#meme:SemioticInterpretation meme:influencedBy meme:Emotion .
-#meme:SemioticInterpretation meme:enabledBy meme:AnalogicalMapping .
-#meme:SemioticInterpretation meme:variesBy meme:TargetCommunity .
-#meme:SemioticInterpretation meme:contextualizedBy meme:Metadata .
-#meme:SemioticInterpretation meme:affects meme:Toxicity .
+
 meme:projectsOnto a owl:ObjectProperty ;
     rdfs:domain meme:User ;
     rdfs:range [
@@ -162,10 +125,7 @@ meme:projectsOnto a owl:ObjectProperty ;
 meme:TargetCommunity meme:referredIn meme:TextualMaterial .
 meme:TargetCommunity meme:referredIn meme:VisualMateria .
 meme:TargetCommunity meme:impactedBy meme:OverallIntent .
-#meme:TargetCommunity meme:sharesUnderstanding meme:TemplateStructure .
 meme:TargetCommunity meme:projectedElementOf meme:SemioticInterpretation .
-#meme:TargetCommunity meme:identifiedIn meme:Metadata .
-#meme:TargetCommunity meme:affectedBy meme:Toxicity .
 
 
 # TemplateStructure relations

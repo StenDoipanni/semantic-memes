@@ -64,7 +64,7 @@ IMAGE_PATH="9_image_batch_2.png"
 
 # Dimension sets
 CORE_DIMENSIONS="TextualMaterial VisualMaterial Scene BackgroundKnowledge"
-ALL_DIMENSIONS="TextualMaterial VisualMaterial Emotion ColorComposition Scene BackgroundKnowledge Metadata AnalogicalMapping OverallIntent SemioticInterpretation TargetCommunity TemplateStructure Toxicity"
+ALL_DIMENSIONS="TextualMaterial VisualMaterial Emotion ColorComposition Scene BackgroundKnowledge Metadata AnalogicalMapping OverallIntent SemioticProjection TargetCommunity TemplateStructure Toxicity"
 
 # Default to Core dimensions
 DIMENSIONS="$CORE_DIMENSIONS"
@@ -114,7 +114,7 @@ while [[ $# -gt 0 ]]; do
             echo "Available dimensions:"
             echo "  VisualMaterial, TextualMaterial, Emotion, ColorComposition,"
             echo "  Scene, BackgroundKnowledge, Metadata,"
-            echo "  AnalogicalMapping, OverallIntent, SemioticInterpretation,"
+            echo "  AnalogicalMapping, OverallIntent, SemioticProjection,"
             echo "  TargetCommunity, TemplateStructure, Toxicity"
             echo ""
             echo "Examples:"

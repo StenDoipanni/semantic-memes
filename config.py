@@ -76,7 +76,7 @@ class OntologyConfig:
         "Metadata",
         "AnalogicalMapping",
         "OverallIntent",
-        "SemioticInterpretation",
+        "SemioticProjection",
         "TargetCommunity",
         "TemplateStructure",
         "Toxicity"
@@ -118,7 +118,7 @@ class PipelineConfig:
         "Metadata",
         "AnalogicalMapping",
         "OverallIntent",
-        "SemioticInterpretation",
+        "SemioticProjection",
         "TargetCommunity",
         "TemplateStructure",
         "Toxicity"

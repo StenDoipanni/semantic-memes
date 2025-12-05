@@ -62,7 +62,7 @@ def extract_dimensions_from_ttl(ttl_file: Path) -> List[Dict[str, Any]]:
             "TextualMaterial", "VisualMaterial", "Emotion", 
             "ColorComposition", "Scene", "BackgroundKnowledge",
             "Metadata", "AnalogicalMapping", "OverallIntent",
-            "SemioticInterpretation", "TargetCommunity", "TemplateStructure",
+            "SemioticProjection", "TargetCommunity", "TemplateStructure",
             "Toxicity"
         ]
         
