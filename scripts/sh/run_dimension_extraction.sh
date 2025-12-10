@@ -12,7 +12,9 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 cd "$REPO_ROOT"
 
 # Set environment variables
-export CLAUDE_API_KEY="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"
+# API key should be set via environment variable or .env file
+# Do not hardcode API keys in version control
+# export CLAUDE_API_KEY="${CLAUDE_API_KEY:-}"
 export ONTOLOGY_PATH="/home/sdegiorgis/memes/meme-pipeline-server/memes-features/meme-dimensions.ttl"
 export PROMPTS_DIR="/home/sdegiorgis/memes/meme-pipeline-server/memes-features/prompts/dimension-extraction-prompts"
 export OUTPUT_DIR="$REPO_ROOT/output"

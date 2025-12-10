@@ -22,8 +22,10 @@ if str(REPO_ROOT) not in sys.path:
 
 # Set up environment variables BEFORE importing modules
 import os
+# API key should be set via environment variable or .env file
+# Do not hardcode API keys in version control
 if not os.getenv("CLAUDE_API_KEY"):
-    os.environ["CLAUDE_API_KEY"] = "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"
+    raise ValueError("CLAUDE_API_KEY environment variable is not set. Please set it in your environment or .env file.")
 
 # Set HuggingFace environment variables if needed
 if not os.getenv("HUGGINGFACE_MODEL"):

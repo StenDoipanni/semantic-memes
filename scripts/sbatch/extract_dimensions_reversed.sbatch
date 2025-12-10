@@ -46,7 +46,11 @@ else:
 fi
 
 # Set pipeline environment variables
-export CLAUDE_API_KEY="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"
+# Claude API key should be set via environment variable or .env file
+# Do not hardcode API keys in version control
+if [[ -z "$CLAUDE_API_KEY" ]]; then
+    echo "⚠️  Warning: CLAUDE_API_KEY not set. Please set it in your environment or .env file."
+fi
 export ONTOLOGY_PATH="/home/sdegiorgis/memes/meme-pipeline-server/memes-features/meme-dimensions.ttl"
 export PROMPTS_DIR="/home/sdegiorgis/memes/meme-pipeline-server/prompts/dimension-extraction-prompts-refined"
 export HUGGINGFACE_MODEL="${HUGGINGFACE_MODEL:-Qwen/Qwen3-VL-8B-Instruct}"

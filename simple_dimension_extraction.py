@@ -11,7 +11,9 @@ import sys
 from pathlib import Path
 
 # Set environment variables
-os.environ['CLAUDE_API_KEY'] = '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'
+# API key should be set via environment variable or .env file
+# Do not hardcode API keys in version control
+# os.environ['CLAUDE_API_KEY'] = 'your_api_key_here'  # Set via environment instead
 os.environ['ONTOLOGY_PATH'] = '/home/sdegiorgis/memes/meme-pipeline-server/memes-features/meme-dimensions.ttl'
 os.environ['PROMPTS_DIR'] = '/home/sdegiorgis/memes/meme-pipeline-server/memes-features/prompts/dimension-extraction-prompts'
 
