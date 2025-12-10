@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "EmotionExpression",
+  "@type": "owl:Class",
+  "rdfs:subClassOf": "Dimension",
+  "dimensionIndex": 3,
+  "rdfs:comment": "Emotion Expression includes: facial expressions, emotional gestures, words and phrases that express emotions, affective elements, and emotional cues.",
+  "rdfs:label": "Emotion Expression",
+  "promptExtractionText": "TASK: you have to extract emotions from the image and represent them in a knowledge graph. For each emotion: 1) Provide instance_name (e.g., 'mischievousness', 'concern', 'happiness'), 2) Provide label (e.g., 'the mischievous expression', 'concerned emotion'), 3) Provide description of the emotional state or expression. 4) VERY IMPORTANT: Add \":hasExpressor\" relation linking the emotion to: VisualMaterial or TextualMaterial or Scene or BackgroundKnowledge entities that express it. For example, if there is a child smiling, you should retunr something like \":joy :hasExpressor :child\". Return it in JSON array like this: [{\"instance_name\": \"emotion_id\", \"label\": \"emotion description\", \"description\": \"emotional expression details\", \"hasExpressor\": \"expressor_name\"}]"
+}

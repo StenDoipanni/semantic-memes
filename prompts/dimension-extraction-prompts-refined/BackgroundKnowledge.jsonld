@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "BackgroundKnowledge",
+  "@type": "owl:Class",
+  "rdfs:subClassOf": "Dimension",
+  "dimensionIndex": 6,
+  "rdfs:comment": "Background Knowledge includes pieces of knowledge OUTSIDE the image that are required to understand the meme. These are real-world entities, events, concepts, stereotypes or references that are implicitly referred to but NOT directly visible in the image. Examples: specific actor/character names, historical events, countries, political parties, art movements, cultural phenomena, social trends, disparaging stereotypes, or any real-world knowledge implicitly referenced.",
+  "rdfs:label": "Background Knowledge",
+  "promptExtractionText": "Identify background knowledge (BG) *outside* of the image needed to understand the meme. Focus on: stereotypes, real-world entities, events, concepts implicitly referenced but NOT visible in the image (e.g., actor names (Tilda Swinton), historical events (Covid-19 pandemics), countries (China), stereotypes ('black people are robbers', 'women are only good at housework', 'muslims are terrorists'). Generate new nodes for these background knowledge entities. For each BG entity add a :relatedTo property linking it to: VisualMaterial, or TextualMaterial, or Scenes, or AnalogicalMapping . Return JSON array: [{\"instance_name\": \"knowledge_item\", \"label\": \"knowledge name\", \"description\": \"context and significance\", \"relatedTo\": [{\"entity\": \"entity_name\", \"relation\": \"relatedTo\"}]}]"
+}

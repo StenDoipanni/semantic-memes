@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "AnalogicalMapping",
+  "@type": "owl:Class",
+  "rdfs:subClassOf": "Dimension",
+  "dimensionIndex": 8,
+  "rdfs:comment": "Analogical Mapping is a mapping between one entity and another in the meme, usually between a visual element and a textual element. It follows the pattern: 'X is Y'. E.g. the juxtaposition of a certain text to some visual material creates a mapping between the text and the visual material.",
+  "rdfs:label": "Analogical Mapping",
+  "promptExtractionText": "Analogical Mapping is a mapping between one dimension onto another in an image. Usually, in memes, as the one here attached, some (part of the) visual material is mapped onto a textual element. For example, the juxtaposition of a person in the image with the text 'me' is an analogical mapping for which the user ('me') is mapped onto the person in the image. TASK: your taks is to identify analogical mappings between textual and visual material in the meme. In addition, you will have to represent this mapping formally in a knowledge graph. To represent formally the mapping you will adopt a 'frame semantics inspired' approach, i.e. you will create an individual for the mapping instantiation, with a relation ':hasMappedEntity' towards the TextualMaterial, and a relation ':hasMappingEntity' towards the VisualMaterial entities that are involved in the mapping. Return JSON array: [{\"instance_name\": \"mapping_id\", \"label\": \"mapping description\", \"description\": \"analogical mapping details\", \"hasMappedEntity\": \"textual_entity_name\", \"hasMappingEntity\": \"visual_entity_name\"}]"
+}
+
+
+
+

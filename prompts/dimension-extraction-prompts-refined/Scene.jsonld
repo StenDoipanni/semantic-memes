@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "Scene",
+  "@type": "owl:Class",
+  "rdfs:subClassOf": "Dimension",
+  "dimensionIndex": 5,
+  "rdfs:comment": "A Scene is the interpretation of a composition of visual material entities that are related to each other in a specific way. It includes: visual elements participating in the scene, spatial arrangements, element positioning, scene understanding, layout structures, and spatial relationships.",
+  "rdfs:label": "Scene",
+  "promptExtractionText": "A Scene is the interpretation of a composition of visual material entities that are related to each other in a specific way. It includes: visual elements participating in the scene, spatial arrangements, element positioning, scene understanding, layout structures, and spatial relationships. TASK: you have to identify scenes in the attached meme, and represent them in a knowledge graph. You will represent scenes adopting a 'frame semantics inspired' approach: you will create an individual for the scene, and connect it with the individual entities that are involved in the scene. For example, a meme with a person in the foreground talking to a person in the background is a scene of 'talking_people' that involves the two persons. VERY IMPORTANT: In this case, you will create an individual 'talking_people', connected with the relation ':hasParticipant' to the 'foreground_person' and the 'background_person'. If the persons are not there create them and then create the scene. Try representing also the relation between the participants, i.e. the relation ':foreground_person' ':talks to' ':background_person'. To represent this in a knowledge graph return the analysis in a JSON array: [{\"instance_name\": \"scene_id\", \"label\": \"scene description\", \"description\": \"scene details\", \"hasParticipant\": [{\"entity\": \"entity1_name\", \"relation\": \"hasParticipant\"}, {\"entity\": \"entity2_name\", \"relation\": \"hasParticipant\"}], \"directRelations\": [{\"from\": \"entity1_name\", \"relation\": \"talksTo\", \"to\": \"entity2_name\"}]}]"
+}
+

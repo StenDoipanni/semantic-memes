@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "TextualMaterial",
+  "@type": "owl:Class",
+  "rdfs:subClassOf": "Dimension",
+  "dimensionIndex": 2,
+  "rdfs:comment": "Textual Material includes: captions, text overlays, speech bubbles, written words, phrases, sentences, and any visible text.",
+  "rdfs:label": "Textual Material",
+  "promptExtractionText": "Identify text chunks and boxes in image. Return JSON array: [{\"instance_name\": \"text_chunk\", \"label\": \"text location\", \"description\": \"text content and position\"}]"
+}

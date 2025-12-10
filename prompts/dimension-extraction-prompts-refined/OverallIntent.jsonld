@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "OverallIntent",
+  "@type": "owl:Class",
+  "rdfs:subClassOf": "Dimension",
+  "dimensionIndex": 9,
+  "rdfs:comment": "Overall Intent includes: communicative purposes, creator intentions, message goals, intended effects, purpose indicators, and intent signals.",
+  "rdfs:label": "Overall Intent",
+  "promptExtractionText": "The overall intent of a meme is the purpose or goal of the meme. You have to provide a brief description as follows: 1) a description of the scene and elements taking part in the scene; 2) focus on toxicity and possible harmful contents. In particular if any of the following types of toxicity is present, include it in the description: - Abusive (memes used to threaten and abuse individuals or specific target communities), - Cyberbulling (memes that disparage an individual based on characteristics such as color, gender, race, sexual orientation, ethnicity, nationality), - Harmful (memes that have the potential to cause harm to an individual, an organization, a community, or society), - Hateful (memes characterized as direct or indirect attacks on individuals based on protected characteristics), - Mysogynous (memes containing hate against women), - Propaganda (memes to influence opinions or actions toward a specific goal). 3) Porvide a brief explanation of the intento of the meme, considering the analogical mapping e.g. some visual material mapped onto some textual material via juxtaposition of text an image. Return the analysis in a JSON array where you connect the 'meme' individual (use file name as part of the identifier) to its 'overall-intent' via the relation ':hasOverallIntent': [{\"meme-id\": \"meme_file_name\", \"hasOverallIntent\": \"overall-intent_id\", \"overall-intent-description\": \"overall-intent_description\"}]"
+}

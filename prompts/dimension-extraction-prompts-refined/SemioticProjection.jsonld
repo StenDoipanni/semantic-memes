@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "SemioticProjection",
+  "@type": "owl:Class",
+  "rdfs:subClassOf": "Dimension",
+  "dimensionIndex": 10,
+  "rdfs:comment": "Semiotic Projection is about the projection of the User seeing the meme onto a certain part of the meme. The projection could be onto some VisualMaterial or some TextualMaterial or some Scene.",
+  "rdfs:label": "Semiotic Projection",
+  "promptExtractionText": "Semiotic Projection is about the projection of the User seeing the meme onto a certain part of the meme. The projection could be onto some VisualMaterial or some TextualMaterial or some Scene. TASK: your task is to identify if the User is projected onto some element of the meme e.g. if there is some explicit deictic like \"me\", \"you\" or \"your...\", \"mine...\" etc. You have to include this information in a knowledge graph. To do so, you will adopt a \"frame semantics inspired\" approach, creating a \"semiotic_projection_1\" node, which has \":hasProjectedUser\" some user and \":hasProjectedEntity\" the entity of the meme on which the user is projected onto. Include also the horizontal relation: :user :projectedOnto :entity. Return the analysis in a JSON array: [{\"instance_name\": \"semiotic_projection_1\", \"label\": \"semiotic projection description\", \"description\": \"projection details\", \"hasProjectedUser\": \"user_entity_name\", \"hasProjectedEntity\": \"projected_entity_name\", \"directRelations\": [{\"from\": \"user_entity_name\", \"relation\": \"projectedOnto\", \"to\": \"projected_entity_name\"}]}]"
+}
+

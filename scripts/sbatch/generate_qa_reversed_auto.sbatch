@@ -89,6 +89,7 @@ echo ""
 # Set GPU environment variables
 export CUDA_VISIBLE_DEVICES=0
 export HUGGINGFACE_DEVICE="cuda"
+# HUGGINGFACE_MODEL will be set from --llm-model parameter if provided, otherwise use default
 export HUGGINGFACE_MODEL="${HUGGINGFACE_MODEL:-Qwen/Qwen3-VL-8B-Instruct}"
 
 # Set pipeline environment variables (using relative paths from repo root)
@@ -126,13 +127,14 @@ echo "✅ Environment activated: $CONDA_DEFAULT_ENV"
 echo ""
 
 # Parse command line arguments
-# Usage: sbatch generate_qa_reversed_auto.sbatch <image_name> [--image-path PATH] [--llm-provider claude|huggingface] [--output-dir PATH]
+# Usage: sbatch generate_qa_reversed_auto.sbatch <image_name> [--image-path PATH] [--llm-provider claude|huggingface] [--llm-model MODEL_NAME] [--output-dir PATH]
 
 IMAGE_NAME=""
 IMAGE_PATH=""
 OUTPUT_REVERSED_DIR="./output_reversed"
 OUTPUT_DIR=""  # Will be set based on image name
 LLM_PROVIDER="huggingface"  # Default to HuggingFace
+LLM_MODEL=""  # Will be set if --llm-model is provided
 
 while [[ $# -gt 0 ]]; do
     case $1 in
@@ -142,6 +144,12 @@ while [[ $# -gt 0 ]]; do
             ;;
         --llm-provider)
             LLM_PROVIDER="$2"
+            shift 2
+            ;;
+        --llm-model)
+            LLM_MODEL="$2"
+            # Set HUGGINGFACE_MODEL environment variable if provided
+            export HUGGINGFACE_MODEL="$2"
             shift 2
             ;;
         --output-dir)
@@ -161,6 +169,8 @@ while [[ $# -gt 0 ]]; do
             echo "  --image-path PATH          Full path to image file (recommended for vision models)"
             echo "                            If provided, image name is extracted from filename"
             echo "  --llm-provider PROVIDER    LLM provider: claude or huggingface (default: huggingface)"
+            echo "  --llm-model MODEL_NAME     HuggingFace model name (e.g., Qwen/Qwen3-VL-30B-A3B-Instruct)"
+            echo "                            Default: Qwen/Qwen3-VL-8B-Instruct"
             echo "  --output-dir PATH          Output directory (default: {image_name}_qa_out)"
             echo "  --output-reversed-dir PATH Directory containing reversed pipeline output (default: ./output_reversed)"
             echo ""
@@ -168,6 +178,7 @@ while [[ $# -gt 0 ]]; do
             echo "  sbatch ... sea_monkeys                                    # Uses sea_monkeys as image name"
             echo "  sbatch ... --image-path img/sea_monkeys.png              # Extracts 'sea_monkeys' from path"
             echo "  sbatch ... sea_monkeys --image-path img/sea_monkeys.png # Positional arg is redundant but OK"
+            echo "  sbatch ... --llm-provider huggingface --llm-model Qwen/Qwen3-VL-30B-A3B-Instruct"
             echo ""
             echo "Note: The output directory defaults to '{image_name}_qa_out' (e.g., sea_monkeys_qa_out)"
             echo "      The image path is passed to the Q&A generation for vision models like Qwen3-VL"
@@ -305,6 +316,9 @@ echo "  Output Directory: $OUTPUT_DIR"
 echo "  LLM Provider: $LLM_PROVIDER"
 if [[ "$LLM_PROVIDER" == "huggingface" ]]; then
     echo "  Model: $HUGGINGFACE_MODEL"
+    if [[ -n "$LLM_MODEL" ]]; then
+        echo "  Model (from --llm-model): $LLM_MODEL"
+    fi
     echo "  Device: $HUGGINGFACE_DEVICE"
 fi
 echo "  TTL File: $TTL_FILE"

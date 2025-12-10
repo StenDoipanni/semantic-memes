@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "ToxicityAssessment",
+  "@type": "owl:Class",
+  "rdfs:subClassOf": "Dimension",
+  "dimensionIndex": 13,
+  "rdfs:comment": "Toxicity Assessment includes: harmful elements, offensive content, toxic indicators, problematic elements, negative aspects, and harmful signals.",
+  "rdfs:label": "Toxicity Assessment",
+  "promptExtractionText": "Identify toxicity among the following types: Abusive (memes used to threaten and abuse individuals or specific target communities), Cyberbulling (memes that disparage an individual based on characteristics such as color, gender, race, sexual orientation, ethnicity, nationality), Harmful (memes that have the potential to cause harm to an individual, an organization, a community, or society), Hateful (memes characterized as direct or indirect attacks on individuals based on protected characteristics), Mysogynous (memes containing hate against women), Propaganda (memes to influence opinions or actions toward a specific goal).  TASK: you have to assess toxicity in the attached meme, and represent it in a knowledge graph. You will represent toxicity adopting a 'frame semantics inspired' approach: you will create an individual for the toxicity type, and connect it with the individual manifesting toxicity. For example, a meme with a black person eating and the text 'feeding the dog' is a meme that manifests toxicity. In this case, you will create an individual 'toxicity_1', connected with the relation ':hasToxicElement' to the Analogical mapping, because in this case the text 'feeding the dog' is not toxic per se, and the image of the black person is not toxic per se, but the mapping is toxic because it is dehumanizing the person. If the AnalogicalMapping individual is not there create it and then assess toxicity as detailed. To represent this in a knowledge graph return the analysis in a JSON array: [{\"instance_name\": \"toxicity_id\", \"label\": \"toxicity description\", \"description\": \"harmful content\", \"hasToxicElement\": \"toxicity_element_name\"}]"
+}

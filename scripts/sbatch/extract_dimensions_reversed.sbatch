@@ -53,6 +53,7 @@ if [[ -z "$CLAUDE_API_KEY" ]]; then
 fi
 export ONTOLOGY_PATH="/home/sdegiorgis/memes/meme-pipeline-server/memes-features/meme-dimensions.ttl"
 export PROMPTS_DIR="/home/sdegiorgis/memes/meme-pipeline-server/prompts/dimension-extraction-prompts-refined"
+# HUGGINGFACE_MODEL will be set from --llm-model parameter if provided, otherwise use default
 export HUGGINGFACE_MODEL="${HUGGINGFACE_MODEL:-Qwen/Qwen3-VL-8B-Instruct}"
 export HUGGINGFACE_DEVICE="${HUGGINGFACE_DEVICE:-cuda}"
 
@@ -117,8 +118,9 @@ fi
 cd /home/sdegiorgis/memes/meme-pipeline-server
 
 # Parse command line arguments
-# Usage: sbatch extract_dimensions_reversed.sbatch <image_path> [--llm-provider claude|huggingface] [--output-dir ./output_reversed] [--additional-kb <path> ...] [--iterative-kb true|false]
+# Usage: sbatch extract_dimensions_reversed.sbatch <image_path> [--llm-provider claude|huggingface] [--llm-model MODEL_NAME] [--output-dir ./output_reversed] [--additional-kb <path> ...] [--iterative-kb true|false]
 # Example: sbatch extract_dimensions_reversed.sbatch image.png --llm-provider claude
+# Example: sbatch extract_dimensions_reversed.sbatch image.png --llm-provider huggingface --llm-model Qwen/Qwen3-VL-30B-A3B-Instruct
 # Example: sbatch extract_dimensions_reversed.sbatch image.png --additional-kb prompts/dimension-extraction-prompts-refined/AdditionalKnowledgeBase.jsonld --iterative-kb true
 # Example: sbatch extract_dimensions_reversed.sbatch image.png --additional-kb prompts/dimension-extraction-prompts-refined/AdditionalKnowledgeBase.jsonld --additional-kb prompts/dimension-extraction-prompts-refined/Qua-EntitiesKnowledgeBas.jsonld
 
@@ -126,12 +128,13 @@ IMAGE_PATH="${1}"
 if [[ -z "$IMAGE_PATH" ]]; then
     echo "❌ Error: Image path is required"
     echo ""
-    echo "Usage: sbatch extract_dimensions_reversed.sbatch <image_path> [--llm-provider claude|huggingface] [--output-dir ./output_reversed] [--additional-kb <path> ...] [--iterative-kb true|false]"
+    echo "Usage: sbatch extract_dimensions_reversed.sbatch <image_path> [--llm-provider claude|huggingface] [--llm-model MODEL_NAME] [--output-dir ./output_reversed] [--additional-kb <path> ...] [--iterative-kb true|false]"
     echo ""
     echo "Examples:"
     echo "  sbatch extract_dimensions_reversed.sbatch image.png"
     echo "  sbatch extract_dimensions_reversed.sbatch image.png --llm-provider claude"
     echo "  sbatch extract_dimensions_reversed.sbatch image.png --llm-provider huggingface --output-dir ./my_output"
+    echo "  sbatch extract_dimensions_reversed.sbatch image.png --llm-provider huggingface --llm-model Qwen/Qwen3-VL-30B-A3B-Instruct"
     echo "  sbatch extract_dimensions_reversed.sbatch image.png --additional-kb prompts/dimension-extraction-prompts-refined/AdditionalKnowledgeBase.jsonld"
     echo "  sbatch extract_dimensions_reversed.sbatch image.png --additional-kb prompts/dimension-extraction-prompts-refined/AdditionalKnowledgeBase.jsonld --iterative-kb true"
     echo "  sbatch extract_dimensions_reversed.sbatch image.png --additional-kb prompts/dimension-extraction-prompts-refined/AdditionalKnowledgeBase.jsonld --additional-kb prompts/dimension-extraction-prompts-refined/Qua-EntitiesKnowledgeBas.jsonld"
@@ -155,12 +158,19 @@ LLM_PROVIDER="${LLM_PROVIDER:-claude}"
 OUTPUT_DIR="${OUTPUT_DIR:-./output_reversed}"
 ADDITIONAL_KB=()
 ITERATIVE_KB="false"
+LLM_MODEL=""  # Will be set if --llm-model is provided
 shift
 
 while [[ $# -gt 0 ]]; do
     case $1 in
         --llm-provider)
             LLM_PROVIDER="$2"
+            shift 2
+            ;;
+        --llm-model)
+            LLM_MODEL="$2"
+            # Set HUGGINGFACE_MODEL environment variable if provided
+            export HUGGINGFACE_MODEL="$2"
             shift 2
             ;;
         --output-dir)
@@ -238,6 +248,9 @@ echo "  Dimensions: OverallIntent → TextualMaterial → VisualMaterial → Sce
 echo "  LLM Provider: $LLM_PROVIDER"
 if [[ "$LLM_PROVIDER" == "huggingface" ]]; then
     echo "  Model: $HUGGINGFACE_MODEL"
+    if [[ -n "$LLM_MODEL" ]]; then
+        echo "  Model (from --llm-model): $LLM_MODEL"
+    fi
     echo "  Device: $HUGGINGFACE_DEVICE"
     echo "  GPU: $CUDA_VISIBLE_DEVICES"
 fi
