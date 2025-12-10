@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#qa_c652da5c-2098-4d85-a947-77097b7b9581",
+  "@type": "QuestionAnswerPair",
+  "question": "What text appears in the meme?",
+  "answers": [
+    {
+      "text": "beach monkeys",
+      "is_correct": false
+    },
+    {
+      "text": "ocean creatures",
+      "is_correct": false
+    },
+    {
+      "text": "sea monkeys",
+      "is_correct": true
+    },
+    {
+      "text": "None of the above",
+      "is_correct": false
+    }
+  ],
+  "explanation": "The text 'sea monkeys' is directly visible in the meme's overlay.",
+  "dimension": "TextualMaterial",
+  "relatedInstances": [
+    "text_chunk"
+  ],
+  "generationTimestamp": "2025-12-10T19:42:40.189683",
+  "generationMethod": "huggingface_api",
+  "sourceImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_sea_monkeys",
+    "@type": "Image",
+    "filename": "sea_monkeys.png",
+    "path": "/gpfs/home2/sdegiorgis/memes/meme-pipeline-server/img/sea_monkeys.png"
+  }
+}

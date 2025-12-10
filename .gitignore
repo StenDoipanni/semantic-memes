@@ -52,6 +52,11 @@ output/
 *.txt
 !requirements.txt
 !README.md
+# Allow prompt JSON-LD files
+!prompts/**/*.jsonld
+# Allow example output files
+!output_reversed/sea_monkeys_*
+!output_reversed/**/sea_monkeys_*
 
 # Backup files
 *.zip
@@ -70,6 +75,8 @@ output/
 # *.jpeg
 # *.gif
 # *.webp
+# Allow example image
+!img/sea_monkeys.png
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -77,6 +84,7 @@ output/
 
 # SLURM job files
 *.sbatch
+!scripts/sbatch/*.sbatch
 slurm-*.out
 
 # Temporary files

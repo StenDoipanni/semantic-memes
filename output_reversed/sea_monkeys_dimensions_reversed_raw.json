@@ -1,0 +1,170 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: sea monkeys; hasOverallIntent: hateful; overall-intent-description: The image depicts a group of Black children joyfully playing in water, with the overlaid text 'sea monkeys'. This juxtaposition is a direct and derogatory racial stereotype, equating Black people with primates, which is a well-documented form of anti-Black racism. The intent is to demean and dehumanize the subjects by invoking a harmful, degrading metaphor rooted in historical racial prejudice. The meme is not merely humorous but functions as a hateful caricature that reinforces racist tropes by visually mapping the children's appearance and activity onto the offensive term 'sea monkeys', thereby targeting them based on their race.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "sea monkeys",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "children",
+      "label": "group of Black children",
+      "description": "A group of Black children, mostly barefoot and wearing swimwear or minimal clothing, are playing joyfully in shallow water. Their expressions and movements suggest playfulness and freedom. They are the central focus of the image, occupying the foreground and midground.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "children_playing_in_water",
+      "label": "children playing in water",
+      "description": "A group of Black children are joyfully playing in shallow water, splashing and moving energetically. Their positions vary across the foreground and midground, creating a dynamic and lively scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "children",
+          "relation": "are_playing_in",
+          "to": "water"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_stereotype_sea_monkeys",
+      "label": "Racial Stereotype: 'Sea Monkeys' as a derogatory term for Black people",
+      "description": "The term 'sea monkeys' is used in the meme as a degrading racial stereotype to equate Black people with primates. This is a well-documented form of anti-Black racism that dehumanizes Black individuals by invoking historical and ongoing racial prejudice. The term is not a literal or scientific reference but a harmful caricature rooted in racist tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "children",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_racism",
+      "label": "Anti-Black Racism",
+      "description": "The meme functions as a hateful caricature that reinforces anti-Black racism by visually mapping the children's appearance and activity onto the offensive term 'sea monkeys'. This stereotype is rooted in historical racial prejudice and aims to demean and dehumanize Black people based on their race.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "children",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_racial_prejudice",
+      "label": "Historical Racial Prejudice",
+      "description": "The use of the term 'sea monkeys' to refer to Black people is a manifestation of historical racial prejudice that has been used to dehumanize and demean Black individuals. This prejudice has deep roots in colonialism, slavery, and systemic racism, and continues to influence harmful stereotypes today.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "children",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful emotion",
+      "description": "The children are actively playing, splashing, and moving energetically in the water, indicating a state of happiness and enjoyment. Their body language and dynamic poses convey a sense of freedom and playfulness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Children are mapped as 'sea monkeys'",
+      "description": "The overlaid text 'sea monkeys' is directly juxtaposed with the visual of Black children playing in water. This creates an analogical mapping where the children are being equated with 'sea monkeys', a derogatory racial stereotype. The mapping is explicit through the text's placement over the image, visually associating the children's appearance and activity with the offensive term. This is a harmful dehumanizing metaphor rooted in anti-Black racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the text 'sea monkeys' as the primary target of the meme's hateful intent. The text explicitly labels the visual scene with a derogatory racial stereotype, forcing the viewer to confront the dehumanizing metaphor. The projection is not deictic (e.g., 'you' or 'me') but rather implicit through the meme's structure: the user is positioned as the one interpreting the harmful mapping between the children and the term 'sea monkeys', thereby internalizing or being confronted with the racist message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly equates Black children with 'sea monkeys', a derogatory racial stereotype rooted in anti-Black racism. This is a hateful caricature that dehumanizes the subjects based on their race.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed to target and provoke members of the general public who may be unaware of or insensitive to the deeply offensive racial stereotype it employs. The intended audience includes individuals who might find the juxtaposition of the text 'sea monkeys' with the image of Black children humorous or amusing without recognizing the hateful, dehumanizing nature of the stereotype. The meme functions as a tool to spread anti-Black racism by appealing to those who may not critically engage with the historical and cultural context of the term 'sea monkeys' as a racial slur. The target community is not a specific demographic group but rather any audience that could be exposed to the meme and potentially internalize or perpetuate the harmful stereotype, thereby reinforcing systemic racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "img/sea_monkeys.png",
+    "image_name": "sea_monkeys.png",
+    "extraction_timestamp": "2025-12-03T18:24:12.362580",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

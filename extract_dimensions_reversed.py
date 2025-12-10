@@ -89,8 +89,9 @@ Default reversed pipeline dimensions:
     parser.add_argument(
         "--additional-kb",
         type=Path,
+        nargs="+",
         default=None,
-        help="Path to additional knowledge base file (JSON-LD format) to include in prompts"
+        help="Path(s) to additional knowledge base file(s) (JSON-LD format) to include in prompts. Can specify multiple files."
     )
     
     parser.add_argument(
@@ -155,7 +156,7 @@ def main():
             selected_dimensions=dimensions,
             output_dir=output_dir,
             llm_provider=args.llm_provider,
-            additional_kb_path=args.additional_kb,
+            additional_kb_paths=args.additional_kb,
             iterative_kb=iterative_kb
         )
         

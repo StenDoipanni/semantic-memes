@@ -178,7 +178,7 @@ Generate one question-answer pair (Q&A). The Q&A pair should:
 
 CRITICAL REQUIREMENTS:
 - Make ALL answers similar in length (2-8 words each)
-- Randomize the order of answers (correct answer should NOT be first)
+- Randomize the order of answers (correct answer should NOT be always first)
 - Ensure the correct answer is not obviously longer or more detailed
 - Make plausible and implausible answers equally convincing in length
 
@@ -286,7 +286,11 @@ IMPORTANT: Randomize the answer order and keep all answers concise and similar i
         
         try:
             # Create Q&A directory
-            qa_dir = output_dir / "qa" / dimension_name
+            # If output_dir already ends with "qa", don't add another "qa" subdirectory
+            if output_dir.name == "qa":
+                qa_dir = output_dir / dimension_name
+            else:
+                qa_dir = output_dir / "qa" / dimension_name
             qa_dir.mkdir(parents=True, exist_ok=True)
             
             # Generate base filename

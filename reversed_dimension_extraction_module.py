@@ -206,36 +206,53 @@ class ReversedDimensionExtractionModule:
         
         return ttl_graph
     
-    def _load_additional_kb(self, kb_path: Path) -> Optional[str]:
+    def _load_additional_kb(self, kb_paths) -> Optional[str]:
         """
-        Load additional knowledge base from a JSON-LD file.
+        Load additional knowledge base from one or more JSON-LD files.
         
         Args:
-            kb_path: Path to the JSON-LD file containing additional knowledge
+            kb_paths: Path or list of paths to JSON-LD file(s) containing additional knowledge
             
         Returns:
-            The promptExtractionText from the JSON-LD file, or None if not found
+            Combined promptExtractionText from all JSON-LD files, or None if not found
         """
         try:
-            if not kb_path.exists():
-                logger.warning(f"Additional KB file not found: {kb_path}")
+            # Handle both single path and list of paths
+            if isinstance(kb_paths, Path):
+                kb_paths = [kb_paths]
+            elif not isinstance(kb_paths, list):
+                logger.warning(f"Invalid kb_paths type: {type(kb_paths)}")
                 return None
             
-            with open(kb_path, 'r', encoding='utf-8') as f:
-                kb_data = json.load(f)
+            all_kb_texts = []
             
-            # Extract promptExtractionText or rdfs:comment
-            kb_text = kb_data.get("promptExtractionText") or kb_data.get("rdfs:comment", "")
+            for kb_path in kb_paths:
+                if not kb_path.exists():
+                    logger.warning(f"Additional KB file not found: {kb_path}")
+                    continue
+                
+                with open(kb_path, 'r', encoding='utf-8') as f:
+                    kb_data = json.load(f)
+                
+                # Extract promptExtractionText or rdfs:comment
+                kb_text = kb_data.get("promptExtractionText") or kb_data.get("rdfs:comment", "")
+                
+                if not kb_text:
+                    logger.warning(f"No promptExtractionText or rdfs:comment found in {kb_path}")
+                    continue
+                
+                all_kb_texts.append(kb_text)
+                logger.info(f"Loaded additional KB from {kb_path.name}")
             
-            if not kb_text:
-                logger.warning(f"No promptExtractionText or rdfs:comment found in {kb_path}")
+            if not all_kb_texts:
                 return None
             
-            logger.info(f"Loaded additional KB from {kb_path.name}")
-            return kb_text
+            # Combine all knowledge bases with separators
+            combined_text = "\n\n".join(all_kb_texts)
+            return combined_text
             
         except Exception as e:
-            logger.error(f"Error loading additional KB from {kb_path}: {e}")
+            logger.error(f"Error loading additional KB: {e}")
             return None
     
     def extract_dimensions_from_image(
@@ -243,7 +260,7 @@ class ReversedDimensionExtractionModule:
         image_path: Path,
         selected_dimensions: Optional[List[str]] = None,
         output_dir: Optional[Path] = None,
-        additional_kb_path: Optional[Path] = None,
+        additional_kb_paths: Optional[List[Path]] = None,
         iterative_kb: bool = False
     ) -> Dict[str, Any]:
         """
@@ -256,7 +273,7 @@ class ReversedDimensionExtractionModule:
             image_path: Path to the meme image
             selected_dimensions: List of dimension names to extract
             output_dir: Directory to save output files
-            additional_kb_path: Optional path to additional knowledge base JSON-LD file
+            additional_kb_paths: Optional list of paths to additional knowledge base JSON-LD files
             iterative_kb: If True, attach additional KB to all prompts; if False, only to OverallIntent
             
         Returns:
@@ -267,13 +284,13 @@ class ReversedDimensionExtractionModule:
             self._validate_image_path(image_path)
             
             # Load additional KB if provided
-            if additional_kb_path:
-                self.additional_kb_text = self._load_additional_kb(additional_kb_path)
+            if additional_kb_paths:
+                self.additional_kb_text = self._load_additional_kb(additional_kb_paths)
                 self.iterative_kb = iterative_kb
                 if self.additional_kb_text:
-                    logger.info(f"Additional KB loaded. Will be included in {'all prompts' if iterative_kb else 'OverallIntent only'}")
+                    logger.info(f"Additional KB loaded from {len(additional_kb_paths) if isinstance(additional_kb_paths, list) else 1} file(s). Will be included in {'all prompts' if iterative_kb else 'OverallIntent only'}")
                 else:
-                    logger.warning("Additional KB file provided but could not be loaded")
+                    logger.warning("Additional KB file(s) provided but could not be loaded")
             else:
                 self.additional_kb_text = None
                 self.iterative_kb = False
@@ -2063,7 +2080,7 @@ def extract_dimensions_from_image_reversed(
     selected_dimensions: Optional[List[str]] = None,
     output_dir: Optional[Path] = None,
     llm_provider: str = "claude",
-    additional_kb_path: Optional[Path] = None,
+    additional_kb_paths: Optional[List[Path]] = None,
     iterative_kb: bool = False
 ) -> Dict[str, Any]:
     """
@@ -2074,7 +2091,7 @@ def extract_dimensions_from_image_reversed(
         selected_dimensions: List of dimension names to extract
         output_dir: Directory to save results
         llm_provider: LLM provider to use
-        additional_kb_path: Optional path to additional knowledge base JSON-LD file
+        additional_kb_paths: Optional list of paths to additional knowledge base JSON-LD files
         iterative_kb: If True, attach additional KB to all prompts; if False, only to OverallIntent
         
     Returns:
@@ -2085,7 +2102,7 @@ def extract_dimensions_from_image_reversed(
         image_path, 
         selected_dimensions, 
         output_dir,
-        additional_kb_path=additional_kb_path,
+        additional_kb_paths=additional_kb_paths,
         iterative_kb=iterative_kb
     )
 

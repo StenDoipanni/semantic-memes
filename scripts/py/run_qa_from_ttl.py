@@ -181,6 +181,12 @@ Examples:
     )
     
     parser.add_argument(
+        "--image-path",
+        type=Path,
+        help="Explicit path to the image file (if not provided, will try to find from TTL filename)"
+    )
+    
+    parser.add_argument(
         "--verbose",
         "-v",
         action="store_true",
@@ -217,35 +223,56 @@ Examples:
     
     print(f"✅ Extracted {len(dimensions)} dimensions")
     
-    # Create a dummy image path (Q&A generator needs it for metadata)
-    # Extract base name from TTL filename, handling various naming patterns
-    image_name = args.ttl_file.stem
-    
-    # Remove all common suffixes that might be in TTL filenames
-    suffixes_to_remove = [
-        "_enhanced_ontology_claude_haiku", "_enhanced_ontology_claude4", "_enhanced_ontology_llama",
-        "_enhanced_ontology", "_claude_haiku", "_claude4", "_llama"
-    ]
-    
-    for suffix in suffixes_to_remove:
-        if image_name.endswith(suffix):
-            image_name = image_name.replace(suffix, "")
-            break
-    
-    # Try to find the actual image file
-    possible_extensions = [".png", ".jpg", ".jpeg"]
-    dummy_image_path = None
-    
-    for ext in possible_extensions:
-        candidate_path = Path(f"img/{image_name}{ext}")
-        if candidate_path.exists():
-            dummy_image_path = candidate_path
-            break
-    
-    # If no image found, create a dummy path (Q&A generator will validate it exists)
-    if not dummy_image_path:
-        dummy_image_path = Path(f"img/{image_name}.png")
-        logger.warning(f"Image file not found, using dummy path: {dummy_image_path}")
+    # Determine image path
+    if args.image_path:
+        # Use explicitly provided image path
+        image_path = args.image_path.resolve()
+        if not image_path.exists():
+            logger.error(f"Image file not found: {image_path}")
+            sys.exit(1)
+        image_name = image_path.stem
+        logger.info(f"Using provided image path: {image_path}")
+    else:
+        # Try to find image from TTL filename
+        # Extract base name from TTL filename, handling various naming patterns
+        image_name = args.ttl_file.stem
+        
+        # Remove all common suffixes that might be in TTL filenames
+        suffixes_to_remove = [
+            "_enhanced_ontology_reversed", "_enhanced_ontology_claude_haiku", "_enhanced_ontology_claude4", 
+            "_enhanced_ontology_llama", "_enhanced_ontology", "_claude_haiku", "_claude4", "_llama"
+        ]
+        
+        for suffix in suffixes_to_remove:
+            if image_name.endswith(suffix):
+                image_name = image_name.replace(suffix, "")
+                break
+        
+        # Try to find the actual image file
+        possible_extensions = [".png", ".jpg", ".jpeg"]
+        image_path = None
+        
+        # Try multiple locations
+        search_paths = [
+            Path(f"img/{image_name}"),
+            Path(f"./img/{image_name}"),
+            Path(f"../img/{image_name}"),
+        ]
+        
+        for base_path in search_paths:
+            for ext in possible_extensions:
+                candidate_path = base_path.with_suffix(ext)
+                if candidate_path.exists():
+                    image_path = candidate_path.resolve()
+                    break
+            if image_path:
+                break
+        
+        # If no image found, create a path and warn
+        if not image_path:
+            image_path = Path(f"img/{image_name}.png")
+            logger.warning(f"Image file not found, using path: {image_path}")
+            logger.warning("Q&A generation may fail if image is required by the LLM")
     
     # Create dimension files structure for qa_generation_module
     print("📁 Creating dimension files structure...")
@@ -289,7 +316,7 @@ Examples:
     qa_module = QAGenerationModule(llm_provider=args.llm_provider or "claude")
     
     results = generate_qa_for_image(
-        image_path=dummy_image_path,
+        image_path=image_path,
         dimensions_dir=dimensions_dir,
         output_dir=args.output_dir,
         llm_provider=args.llm_provider or "claude"
