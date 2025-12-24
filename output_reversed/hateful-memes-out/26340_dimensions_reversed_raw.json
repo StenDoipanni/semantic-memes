@@ -1,0 +1,190 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: goats_cant_talk_meme; hasOverallIntent: hateful; overall-intent-description: The meme juxtaposes an image of a large crowd of men, many wearing traditional Islamic headwear, with the text 'goats can't talk' at the top and 'why are so few muslim rapes reported?' at the bottom. This creates a false and degrading analogy, implying that because goats cannot speak, Muslim men are somehow incapable of reporting or being victims of sexual violence. This is a harmful and hateful stereotype that equates a religious group with animals, and it uses the image of a crowd of men to reinforce a false narrative about the prevalence or reporting of sexual assault within the Muslim community. The intent is to delegitimize the experiences of Muslim victims and to perpetuate Islamophobic tropes by suggesting that the community is inherently untruthful or unreporting due to cultural or religious reasons, rather than systemic barriers or social stigma. The meme is designed to provoke outrage or dismiss the seriousness of sexual violence against Muslims by framing it as a 'non-issue' based on a baseless and offensive comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "goats can't talk",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "crowd_of_men",
+      "label": "group of men",
+      "description": "A large crowd of men, predominantly wearing traditional Islamic headwear such as turbans and caps, are gathered closely together. Many are raising their hands, some with open palms, suggesting participation in a rally, protest, or religious gathering. Their expressions vary from serious to engaged, and their attire includes loose-fitting garments typical of certain Muslim communities. The density of the crowd and the uniformity of dress create a visually cohesive group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "crowd_with_raised_hands",
+      "label": "crowd of men raising hands",
+      "description": "A large crowd of men, predominantly wearing traditional Islamic headwear, are gathered closely together. Many are raising their hands, some with open palms, suggesting participation in a rally, protest, or religious gathering. Their expressions vary from serious to engaged, and their attire includes loose-fitting garments typical of certain Muslim communities. The density of the crowd and the uniformity of dress create a visually cohesive group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobic Stereotype: Equating Muslim men with animals",
+      "description": "The meme relies on the harmful stereotype that Muslim men are inherently untruthful or unreporting due to cultural or religious reasons, by comparing them to goats — animals that cannot speak. This is a form of Islamophobic tropes that degrades the community by suggesting their experiences are not valid or that they are incapable of reporting crimes due to inherent traits.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny_stereotype",
+      "label": "Misogynistic Stereotype: Dismissing victimhood of Muslim women",
+      "description": "The meme implicitly relies on the stereotype that Muslim women are not credible victims of sexual violence, and that their experiences are not taken seriously. This is rooted in misogynistic tropes that deny the competence or truthfulness of women, especially those from marginalized communities, and frames their victimization as a 'non-issue' due to cultural or religious reasons.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexual_violence_statistics",
+      "label": "Real-world knowledge: Reporting rates of sexual violence",
+      "description": "The meme references the real-world issue of underreporting of sexual violence, particularly against Muslim women, which is often attributed to systemic barriers, social stigma, and cultural norms. The meme falsely implies that the low reporting rate is due to inherent characteristics of the Muslim community, rather than structural or societal factors.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "goats_cant_talk_analogy",
+      "label": "Disparaging Analogy: 'Goats can't talk'",
+      "description": "The phrase 'goats can't talk' is a degrading metaphor used to imply that Muslim men are incapable of speaking out or reporting crimes, suggesting they are mute or complicit. This is a form of animalization that reduces human beings to animals, which is a common tactic in hate speech and dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_tropes",
+      "label": "Islamophobic Tropes: 'Muslims are terrorists' and 'Backwards culture'",
+      "description": "The meme uses the broader context of Islamophobic tropes that portray Muslim communities as inherently violent, untruthful, or culturally backward. These tropes are used to delegitimize the experiences of Muslim victims and to perpetuate the idea that the community is inherently untruthful or unreporting due to cultural or religious reasons.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "crowd_of_men",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_anger",
+      "label": "hateful anger expressed through degrading analogy",
+      "description": "The meme expresses hateful anger by using a degrading and false analogy ('goats can't talk') to imply that Muslim men are incapable of reporting sexual violence, which is a form of Islamophobic hate speech. The visual of a large crowd of men with raised hands, combined with the text, conveys a sense of aggressive dismissal and contempt for Muslim victims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "goats_cant_talk_mapping",
+      "label": "Goats are mapped onto Muslim men",
+      "description": "The top text 'goats can't talk' is mapped onto the visual entity 'crowd_of_men'. The meme uses the visual of a large crowd of men (many raising hands) to represent Muslim men, and analogizes them to goats — implying they are mute or incapable of speaking out, particularly regarding reporting sexual violence. This is a degrading and false analogy rooted in Islamophobic stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual analogy as a speaker of the false equivalence",
+      "description": "The user is implicitly projected onto the top text 'goats can't talk' as the originator or embodiment of the degrading analogy. The meme constructs a false equivalence by projecting the user's perspective onto the text, suggesting that the user is making or endorsing the claim that Muslim men are mute or incapable of reporting crimes, thereby aligning the user with the hateful stereotype. This projection is not explicit with deictic pronouns like 'you' or 'me', but is implied through the meme's structure, where the user is expected to understand and accept the analogy as a valid framing of the issue.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobic Stereotype",
+      "description": "The meme equates Muslim men with goats, implying they are mute or incapable of reporting crimes, which degrades the community and perpetuates harmful stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed to target and provoke individuals who hold Islamophobic or misogynistic views, particularly those who may be inclined to believe or spread stereotypes about Muslim communities being untruthful or unreporting of sexual violence. The visual of a crowd of men in traditional Islamic attire, combined with the text 'goats can't talk' and 'why are so few muslim rapes reported?', is crafted to appeal to audiences who are already predisposed to dehumanize or stereotype Muslim men, often by equating them with animals or implying cultural backwardness. The meme’s intent is to normalize or reinforce these harmful tropes, making it most effective for audiences who consume and share content that perpetuates Islamophobic and misogynistic narratives.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/26340.png",
+    "image_name": "26340.png",
+    "extraction_timestamp": "2025-12-15T19:37:49.935818",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

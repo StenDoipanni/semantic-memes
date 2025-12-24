@@ -1,0 +1,178 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: a_fire_cracker; hasOverallIntent: Harmful; overall-intent-description: The image depicts a man engulfed in flames with the text 'a fire cracker' overlaid. The visual metaphor suggests the person is volatile, explosive, or prone to sudden, destructive outbursts. While not explicitly targeting a specific protected group, the metaphor can be interpreted as demeaning or dehumanizing, implying the person is dangerous or unstable. The intent is likely to use the visual of fire and the metaphorical text to convey a negative judgment about the individual's temperament or behavior, which can be harmful by stigmatizing or labeling the person as unpredictable or dangerous. The meme may be used to express frustration or to mock someone perceived as emotionally volatile, potentially leading to social harm or reinforcing negative stereotypes about emotional instability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "a fire cracker",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with short brown hair and a beard, wearing a dark button-up shirt and dark pants, standing with arms crossed. He is engulfed in flames, creating a visual metaphor for being volatile or explosive. The flames are concentrated around his torso and head, with his face visible and expression neutral. This is the central and most salient visual element in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "fire_cracker_metaphor",
+      "label": "man engulfed in flames as a fire cracker",
+      "description": "The scene depicts a man with short brown hair and a beard, wearing a dark button-up shirt and dark pants, standing with arms crossed. He is engulfed in flames, creating a visual metaphor for being volatile or explosive. The text 'a fire cracker' is overlaid on the image, reinforcing the metaphor. The man is the central and most salient visual element in the image, positioned centrally against a plain gray background. The flames are concentrated around his torso and head, with his face visible and expression neutral. The overall composition uses the visual of fire and the metaphorical text to convey a negative judgment about the individual's temperament or behavior, suggesting he is dangerous or unstable.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "is engulfed in",
+          "to": "flames"
+        },
+        {
+          "from": "man",
+          "relation": "is labeled as",
+          "to": "a_fire_cracker"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "fire_cracker_metaphor",
+      "label": "Firecracker Metaphor",
+      "description": "The metaphor of a 'firecracker' refers to a person who is volatile, explosive, or prone to sudden, destructive outbursts. This is a common cultural metaphor used to describe someone's temperament or behavior as unpredictable or dangerous. The term 'firecracker' itself is associated with loud, sudden, and often destructive explosions, which is visually represented by the flames engulfing the man. This metaphor is used to convey a negative judgment about the individual's emotional stability or behavior, which can be stigmatizing or dehumanizing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "emotional_instability_stereotype",
+      "label": "Emotional Instability Stereotype",
+      "description": "This stereotype involves labeling individuals as 'crazy,' 'hysterical,' or 'volatile' to imply they are emotionally unstable or unpredictable. It is often used to demean or dehumanize people, particularly in contexts where their behavior is perceived as erratic or out of control. This stereotype is part of broader misogynistic tropes that associate women (and sometimes men) with emotional instability, which can lead to social harm or reinforce negative societal perceptions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dangerous_person_stereotype",
+      "label": "Dangerous Person Stereotype",
+      "description": "This stereotype involves portraying individuals as inherently dangerous or unstable, often based on their behavior or appearance. It is used to justify fear, avoidance, or hostility toward the person, and can be used to stigmatize or marginalize them. This stereotype is often applied to people who are perceived as emotionally volatile, unpredictable, or prone to outbursts, which aligns with the visual metaphor of the man being engulfed in flames.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dehumanizing_metaphor",
+      "label": "Dehumanizing Metaphor",
+      "description": "This refers to the use of metaphors or analogies that strip a person of their humanity, often by comparing them to inanimate objects or animals. In this case, comparing a person to a 'firecracker' reduces them to a volatile, explosive object, which can be seen as dehumanizing. This type of metaphor is often used to justify negative judgments or actions against the person, as it implies they are not worthy of empathy or understanding.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "emotional_instability",
+      "label": "emotional instability stereotype",
+      "description": "The visual metaphor of the man engulfed in flames, combined with the text 'a fire cracker', expresses a stereotype of emotional instability. The metaphor implies the person is volatile, explosive, and prone to sudden, destructive outbursts, which is a negative judgment about their temperament or behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "fire_cracker_mapping",
+      "label": "The man is mapped as a fire cracker",
+      "description": "The textual element 'a fire cracker' is directly mapped onto the visual entity 'man' who is engulfed in flames. This creates an analogical mapping where the man is being metaphorically equated with a firecracker, implying he is volatile, explosive, and prone to sudden outbursts. The visual of flames reinforces the textual metaphor, establishing a direct and explicit analogical relationship between the text and the visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man as a firecracker",
+      "description": "The user is projecting themselves onto the visual material of the man engulfed in flames, interpreting him as a 'firecracker' through the metaphorical text. This projection implies the user sees themselves or someone they are referring to as volatile, explosive, or prone to sudden outbursts. The metaphorical mapping of the man to a firecracker is the core of the projection, and the user is likely identifying with this characterization or using it to describe another person.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme depicts a man engulfed in flames with the text 'a fire cracker', using a visual metaphor to label him as volatile, explosive, and dangerous. This metaphor can be interpreted as demeaning or dehumanizing, implying the person is emotionally unstable or unpredictable, which can lead to social harm or stigmatization. The overall intent is to convey a negative judgment about the individual's temperament or behavior, potentially reinforcing harmful stereotypes about emotional instability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "person",
+      "description": "The target community is individuals who perceive or label someone as emotionally volatile or unpredictable, often using derogatory metaphors like 'firecracker' to demean or stigmatize them. This includes people who engage in or consume memes that use such stereotypes to express frustration, mockery, or judgment toward others' behavior, particularly in social or online contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/31627.png",
+    "image_name": "31627.png",
+    "extraction_timestamp": "2025-12-15T22:06:44.738345",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

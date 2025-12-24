@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "disdain",
+      "expressors": [
+        {
+          "entity": "woman_in_foreground",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman_in_foreground",
+          "relation": "emotionalRelationToEntity",
+          "to": "dike_paying_for_pads_scene"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":disdain :hasExpressor :woman_in_foreground .",
+    ":woman_in_foreground :emotionalRelationToEntity :dike_paying_for_pads_scene ."
+  ],
+  "triples_count": 2
+}

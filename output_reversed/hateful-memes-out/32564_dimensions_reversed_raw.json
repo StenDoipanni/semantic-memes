@@ -1,0 +1,207 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts the World Trade Center towers during the 9/11 attacks, with smoke billowing from one tower after being struck by a plane. The overlaid text reads: 'a fiery blasts rocks the world trade center after being hit by two planes.' This is a historically accurate depiction of a catastrophic event that resulted in the deaths of nearly 3,000 people. The overall intent is not to convey hate or abuse, but to present a factual, albeit emotionally charged, visual of a major historical tragedy. The intent is informational or commemorative, not propagandistic or harmful in the sense of targeting a specific group. However, the meme format itself, by reducing a complex, devastating event to a simple image and text, may trivialize the human cost and emotional weight of the event, which can be considered harmful in its potential to desensitize viewers or misrepresent the gravity of the tragedy. The text contains a grammatical error ('blasts' should be 'blasts' or 'blast' depending on context, but the intent is clear). There is no toxicity toward any protected group, as the subject is a global historical event, not a targeted community. The intent is to evoke recognition of the event, not to attack or demean any group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "a fiery blasts rocks the world trade center after being hit by two planes",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "World_Trade_Center_Tower",
+      "label": "Skyscraper",
+      "description": "A tall, modern skyscraper with a distinctive rectangular shape and a spire on top, partially obscured by thick smoke. This is one of the Twin Towers of the World Trade Center, visibly damaged with smoke billowing from its upper floors, indicating a catastrophic event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "catastrophic_event_at_world_trade_center",
+      "label": "World Trade Center under attack",
+      "description": "A scene depicting the World Trade Center Tower engulfed in smoke and fire after being struck by an aircraft, with the surrounding city skyline visible under a clear blue sky. The text overlay describes the event as a 'fiery blast' following a plane impact, indicating a moment of catastrophic destruction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "World_Trade_Center_Tower",
+          "relation": "is emitting smoke from",
+          "to": "World_Trade_Center_Tower"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "9_11_Attacks",
+      "label": "September 11, 2001 Terrorist Attacks",
+      "description": "A series of coordinated terrorist attacks carried out by the extremist group al-Qaeda against the United States, which included the hijacking of four commercial airplanes. Two of the planes were flown into the Twin Towers of the World Trade Center in New York City, causing their collapse and resulting in nearly 3,000 deaths. This event is one of the most significant and tragic moments in modern history and is widely recognized globally.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "catastrophic_event_at_world_trade_center",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Twin_Towers",
+      "label": "World Trade Center Twin Towers",
+      "description": "The original Twin Towers were the two main skyscrapers of the World Trade Center complex in Lower Manhattan, New York City. They were iconic symbols of global commerce and American economic power. Their destruction during the 9/11 attacks was a defining moment in modern history and had profound global repercussions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "World_Trade_Center_Tower",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "catastrophic_event_at_world_trade_center",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "al_Qaeda",
+      "label": "al-Qaeda",
+      "description": "A militant Islamist terrorist organization founded by Osama bin Laden, responsible for the 9/11 attacks. The group's ideology and actions have been the subject of global counter-terrorism efforts and have shaped international security policies for decades.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "catastrophic_event_at_world_trade_center",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "United_States",
+      "label": "United States of America",
+      "description": "A country in North America, the target of the 9/11 attacks. The event had a profound impact on U.S. domestic and foreign policy, leading to the War on Terror, the invasion of Afghanistan, and significant changes in national security and civil liberties.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "catastrophic_event_at_world_trade_center",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "New_York_City",
+      "label": "New York City",
+      "description": "The largest city in the United States and a global hub for finance, culture, and media. The World Trade Center was located in Lower Manhattan, and its destruction had a devastating impact on the city's economy, infrastructure, and cultural identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "catastrophic_event_at_world_trade_center",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "textual_error",
+      "label": "Grammatical Error in Text",
+      "description": "The text overlay contains a grammatical error: 'a fiery blasts rocks' should be 'a fiery blast rocks' or 'fiery blasts rock'. This error is not a stereotype or concept but a linguistic flaw that requires external knowledge to identify and correct.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "grief",
+      "label": "grief emotion",
+      "description": "The image depicts a catastrophic event with smoke billowing from the World Trade Center tower, evoking a profound sense of loss and sorrow associated with the 9/11 attacks. The visual of destruction and the textual description of a 'fiery blast' after being hit by planes amplify the emotional weight of human tragedy and collective mourning.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The text describes the visual event as a fiery blast at the World Trade Center",
+      "description": "The textual material 'a fiery blasts rocks the world trade center after being hit by two planes' is directly mapped onto the visual material of the World Trade Center Tower engulfed in smoke and fire. The text explicitly labels the visual event as a 'fiery blast' occurring at the World Trade Center after being hit by planes, creating an analogical mapping where the text's description is projected onto the visual depiction of the catastrophic event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material describing the event",
+      "description": "The user is projected onto the text_chunk 'a fiery blasts rocks the world trade center after being hit by two planes' as the primary interpretive lens for the visual scene. The text acts as a direct label for the visual material, forcing the user to interpret the image through this specific narrative frame, even though the text contains a grammatical error. The projection is not deictic (e.g., 'you', 'me') but semantic, where the user's understanding is anchored to the textual description overlaying the visual scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme format reduces a complex, devastating historical tragedy to a simple image and text, potentially trivializing the human cost and emotional weight of the 9/11 attacks. This can desensitize viewers or misrepresent the gravity of the event, which is harmful to society by diminishing the significance of a major global catastrophe.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "General Public",
+      "description": "The meme is designed for a broad, general audience familiar with global historical events, particularly the 9/11 attacks. The visual and textual content references a widely recognized and emotionally charged moment in modern history, making it accessible to viewers with basic knowledge of world events. The intent is informational or commemorative, aiming to evoke recognition of the event rather than targeting a specific demographic or community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/32564.png",
+    "image_name": "32564.png",
+    "extraction_timestamp": "2025-12-15T22:26:19.887483",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

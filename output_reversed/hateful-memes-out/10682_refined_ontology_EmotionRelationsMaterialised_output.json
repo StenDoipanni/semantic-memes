@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful_anger_expression",
+      "expressors": [
+        {
+          "entity": "Stephen_Miller",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Stephen_Miller",
+          "relation": "emotionalRelationToEntity",
+          "to": "the_jew_with_the_soul_of_a_nazi"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_anger_expression :hasExpressor :Stephen_Miller .",
+    ":Stephen_Miller :emotionalRelationToEntity :the_jew_with_the_soul_of_a_nazi ."
+  ],
+  "triples_count": 2
+}

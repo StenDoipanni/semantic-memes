@@ -1,0 +1,205 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: white_people_after_they_put_the_divider_in_between_your_groceries; hasOverallIntent: Hateful; overall-intent-description: The meme uses a photo of Drake, a Black man, in a context that implies he is mocking or expressing satisfaction about a racially charged situation — specifically, the act of 'white people putting a divider between your groceries,' which is a reference to racial segregation in public spaces. The juxtaposition of the image of Drake (a Black celebrity) with the text implies that Black people are being subjected to racial segregation or discrimination in a mundane, everyday setting. This is a hateful meme because it uses a Black person’s image to represent a stereotype or to imply that Black people are being treated as inferior or less than human in a public space. The meme is not merely humorous; it is a form of racial stereotyping and reinforces harmful racial hierarchies by suggesting that Black people are being 'segregated' or 'divided' by white people in a way that is both demeaning and dehumanizing. The meme is also potentially harmful because it normalizes and trivializes racial segregation and discrimination, which can contribute to a culture of racial hostility and misunderstanding. The meme does not contain any direct abusive language or cyberbullying, but it does contain hateful content that targets Black people based on their race.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "white people after they put the divider in between your groceries",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Drake",
+      "label": "person",
+      "description": "A Black man with a beard, wearing a green hoodie with yellow and orange lettering, smiling and gesturing with his right hand. He is seated in what appears to be a stadium or arena setting, and is the central focus of the image. His expression and body language suggest satisfaction or amusement, which is juxtaposed with the meme's text to imply racial segregation or discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "drake_smiling_in_stadium",
+      "label": "Drake smiling and gesturing in a stadium setting",
+      "description": "Drake, a Black man with a beard wearing a green hoodie, is seated in a stadium or arena. He is smiling and gesturing with his right hand, appearing amused or satisfied. The scene includes other people in the background, suggesting a public event or gathering. The meme text overlays the image, implying a racially charged context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Drake",
+          "relation": "isSeatedInFrontOf",
+          "to": "people"
+        },
+        {
+          "from": "Drake",
+          "relation": "isSmilingAndGesturing",
+          "to": "people"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_segregation_in_public_spaces",
+      "label": "Racial Segregation in Public Spaces",
+      "description": "The meme references the historical and ongoing practice of racial segregation in public spaces, such as grocery stores, where physical dividers or policies may be used to separate people based on race. This is a real-world social issue rooted in systemic racism and historical discrimination against Black people in the United States and other countries. The phrase 'white people putting a divider between your groceries' implies a racially motivated act of exclusion or separation, which is a form of microaggression or institutionalized racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "drake_smiling_in_stadium",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "Anti-Black Stereotype",
+      "description": "The meme relies on the stereotype that Black people are inferior or less than human, and that they are subjected to racial segregation or discrimination in mundane, everyday settings. This stereotype is reinforced by using Drake’s image — a Black celebrity — to represent the experience of being 'divided' or 'segregated' by white people. The meme implies that Black people are being treated as less than human or as objects to be separated, which is a form of racial dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "drake_smiling_in_stadium",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_meme",
+      "label": "Hateful Meme",
+      "description": "The meme is classified as hateful because it uses a Black person’s image to represent a stereotype or to imply that Black people are being treated as inferior or less than human in a public space. The juxtaposition of Drake’s satisfied expression with the text about racial segregation implies that Black people are being subjected to racial discrimination in a demeaning and dehumanizing way. This is not merely humorous; it is a form of racial stereotyping and reinforces harmful racial hierarchies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "drake_smiling_in_stadium",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "drake_as_black_celebrity",
+      "label": "Drake as Black Celebrity",
+      "description": "Drake is a Black man and a globally recognized celebrity. His image is used in the meme to represent a Black person, and his expression of satisfaction is juxtaposed with the text to imply that he is mocking or expressing approval of racial segregation. This is a form of racial stereotyping that uses a Black celebrity’s image to represent a stereotype or to imply that Black people are being treated as inferior or less than human in a public space.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "drake_smiling_in_stadium",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "grocery_store_divider",
+      "label": "Grocery Store Divider",
+      "description": "The phrase 'divider in between your groceries' refers to a physical or policy-based separation in a grocery store, which is a real-world practice that can be used to enforce racial segregation. This is a form of institutionalized racism that has historical roots in the United States and other countries, where Black people were often excluded from certain areas of public spaces. The meme uses this concept to imply that white people are deliberately separating Black people from their groceries, which is a form of racial discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "satisfaction",
+      "label": "satisfied emotion",
+      "description": "Drake is smiling broadly with a relaxed, content expression, and gesturing with his hand in a way that suggests amusement or approval. This facial expression and body language convey a sense of satisfaction or enjoyment, which is juxtaposed with the meme's text to imply approval or mockery of racial segregation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Drake is mapped as 'white people after they put the divider in between your groceries'",
+      "description": "The meme text 'white people after they put the divider in between your groceries' is juxtaposed with Drake's image. His satisfied expression and body language are analogically mapped to the implied satisfaction or amusement of 'white people' in the scenario described by the text. This mapping uses Drake's visual representation to stand in for the 'white people' who are supposedly acting in a racially discriminatory manner, thereby projecting the textual concept onto the visual entity. The mapping is hateful as it uses a Black celebrity to represent a stereotype of racial segregation and dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material describing racial segregation",
+      "description": "The user is projected onto the textual material 'white people after they put the divider in between your groceries' because the phrase uses 'your groceries' which implies a direct address to the viewer (the user) as the recipient of the discriminatory action. The user is positioned as the 'you' in the scenario, experiencing the racial segregation depicted. This projection is hateful as it frames the user as a victim of racial discrimination in a mundane setting, reinforcing anti-Black stereotypes by making the viewer identify with the targeted group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses a Black person’s image to represent a stereotype or to imply that Black people are being treated as inferior or less than human in a public space. The juxtaposition of Drake’s satisfied expression with the text about racial segregation implies that Black people are being subjected to racial discrimination in a demeaning and dehumanizing way. This is a form of racial stereotyping and reinforces harmful racial hierarchies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The target community is individuals who are familiar with racial segregation tropes, anti-Black stereotypes, and the use of Black celebrities in racially charged memes. This includes people who understand the historical context of racial segregation in public spaces and who may find humor in or be complicit with the dehumanizing portrayal of Black people. The meme is designed to resonate with those who either perpetuate or are indifferent to systemic racism, particularly in the context of everyday microaggressions like grocery store dividers. The audience is likely to be online users who engage with internet memes, particularly those that rely on racial stereotypes for comedic effect, and who may not recognize the hateful intent behind the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/75928.png",
+    "image_name": "75928.png",
+    "extraction_timestamp": "2025-12-19T12:47:27.782405",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

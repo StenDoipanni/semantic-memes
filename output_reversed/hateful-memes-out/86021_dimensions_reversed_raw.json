@@ -1,0 +1,193 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: hitler_enjoying_a_chill_day_at_kehlsteinhaus; hasOverallIntent: Hateful; overall-intent-description: The image depicts Adolf Hitler, a genocidal dictator responsible for the Holocaust and World War II, in a juxtaposition with the text 'hitler enjoying a chill day at kehlsteinhaus'. This creates a darkly humorous or ironic tone that trivializes his monstrous historical legacy by portraying him as a relaxed, leisurely figure. The intent is to mock or satirize Hitler by reducing his historical horror to a mundane, almost mundane, 'chill' activity. This is a hateful intent because it directly targets an individual whose actions caused immense suffering and death, using his image to generate ridicule rather than confronting the gravity of his crimes. The meme is not abusive or cyberbullying in the traditional sense, but it is harmful as it normalizes and trivializes the figure of a mass murderer, potentially desensitizing viewers to the scale of his atrocities. The overall intent is to provoke laughter or shock by juxtaposing the image of a historical villain with a modern, casual lifestyle trope, thereby diminishing the seriousness of his crimes through humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "hitler enjoying a chill",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Adolf_Hitler",
+      "label": "historical figure",
+      "description": "A black-and-white portrait of Adolf Hitler, the German dictator and architect of the Holocaust, shown with his characteristic mustache and uniform. He is the central and only person depicted in the image, and his presence is the primary visual material. The image is a historical photograph, not a modern depiction, and his expression is serious and direct, contrasting with the humorous text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "hitler_chill_day",
+      "label": "Hitler enjoying a chill day",
+      "description": "A scene depicting Adolf Hitler in a relaxed, leisurely state, juxtaposed with the text 'hitler enjoying a chill day at kehlsteinhaus'. The scene is ironic and satirical, contrasting Hitler's historical atrocities with a mundane, modern 'chill' activity. The visual material is a black-and-white portrait of Hitler, with text overlays providing context and humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Adolf_Hitler",
+          "relation": "isDepictedIn",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "describes",
+          "to": "Adolf_Hitler"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "kehlsteinhaus",
+      "label": "Kehlsteinhaus",
+      "description": "The Kehlsteinhaus, also known as the Eagle's Nest, is a mountain retreat built by Adolf Hitler in the Bavarian Alps. It was constructed as a luxury villa and a symbol of Nazi power, used for private gatherings and as a venue for high-ranking Nazi officials. Its association with Hitler is central to understanding the meme's irony — juxtaposing the site of Nazi grandeur with the trivial 'chill' activity described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "hitler_chill_day",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "holocaust_minimization",
+      "label": "Holocaust Minimization",
+      "description": "This is a form of antisemitic stereotype that involves downplaying or trivializing the Holocaust, the genocide of six million Jews by Nazi Germany during World War II. The meme's intent to portray Hitler as 'enjoying a chill day' directly references and relies on this concept — reducing the gravity of his crimes to a mundane, humorous activity. This is a harmful and offensive trope that normalizes the figure of a mass murderer.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "hitler_chill_day",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nazi_germany",
+      "label": "Nazi Germany",
+      "description": "The Nazi regime in Germany, led by Adolf Hitler, was responsible for the Holocaust, World War II, and the systematic persecution and murder of millions of people, including Jews, Roma, disabled individuals, and others. The meme's context requires knowledge of this regime to understand the historical horror being juxtaposed with the 'chill' text. The image of Hitler is a direct reference to this regime and its atrocities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "adolf_hitler",
+      "label": "Adolf Hitler",
+      "description": "Adolf Hitler was the dictator of Nazi Germany and the primary architect of the Holocaust. His image is central to the meme, and understanding his historical role — as a genocidal leader — is essential to interpreting the meme's intent. The meme uses his image to create a darkly ironic contrast with the 'chill' text, which relies on the viewer's knowledge of his monstrous legacy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "chill_culture",
+      "label": "Chill Culture",
+      "description": "A modern cultural trope that refers to a relaxed, leisurely, or laid-back lifestyle, often associated with social media and internet humor. The phrase 'enjoying a chill day' is a contemporary expression that contrasts sharply with the historical context of Hitler and the Kehlsteinhaus. This cultural reference is necessary to understand the meme's satirical tone — it mocks the idea of trivializing a historical villain by placing him in a modern, casual context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "hitler_chill_day",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous expression",
+      "description": "Adolf Hitler's facial expression in the photograph is stern, direct, and unsmiling, with a fixed gaze and a rigid posture. This conveys a sense of disdain or contempt, which is historically consistent with his public demeanor and the authoritarian nature of his regime. The expression is not one of relaxation or enjoyment, but rather of cold authority and control.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Hitler is mapped as 'enjoying a chill day'",
+      "description": "The text 'hitler enjoying a chill' is mapped onto the visual entity 'Adolf_Hitler'. The meme creates an analogical mapping where the historical figure Adolf Hitler is projected onto the textual description of 'enjoying a chill day', implying that he is depicted as a relaxed, leisurely individual. This mapping is ironic and satirical, contrasting his genocidal legacy with a modern, casual lifestyle trope. The visual material (Adolf_Hitler) is juxtaposed with the textual material ('hitler enjoying a chill') to create this humorous and offensive analogy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of Hitler enjoying a chill day",
+      "description": "The user is projected onto the ironic and satirical scene where Adolf Hitler is depicted as 'enjoying a chill day at kehlsteinhaus'. This projection is implicit, as the meme invites the viewer to imagine themselves in the context of the absurd juxtaposition — viewing Hitler through the lens of modern 'chill culture' — thereby creating a humorous or mocking perspective. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the framing of the meme (text + image) creates a direct engagement where the viewer is positioned as the one interpreting the irony, thus projecting themselves onto the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme trivializes Adolf Hitler, a genocidal dictator responsible for the Holocaust and World War II, by portraying him as 'enjoying a chill day' at Kehlsteinhaus, thereby diminishing the gravity of his crimes through dark humor. This directly targets an individual whose actions caused immense suffering and death, using his image to generate ridicule rather than confronting the gravity of his crimes. The intent is hateful as it normalizes and trivializes the figure of a mass murderer, potentially desensitizing viewers to the scale of his atrocities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals familiar with internet meme culture, particularly those who understand and engage with dark humor, historical satire, and ironic juxtapositions. The meme relies on cultural references such as 'chill culture' (a modern trope for relaxed, leisurely lifestyles) and the specific historical context of Adolf Hitler and the Kehlsteinhaus (Eagle's Nest). The audience is expected to recognize the absurdity of portraying a genocidal dictator as enjoying a mundane, modern activity, which requires knowledge of Nazi Germany and the Holocaust. The meme is designed for viewers who appreciate or are exposed to edgy, offensive humor that trivializes historical atrocities, often found in online communities that value shock value and satire over historical sensitivity. The target audience is likely to be adults or older teens who are active on social media platforms where such memes circulate, and who may be desensitized to or indifferent to the gravity of the historical figure being mocked.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/86021.png",
+    "image_name": "86021.png",
+    "extraction_timestamp": "2025-12-19T15:37:48.121884",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

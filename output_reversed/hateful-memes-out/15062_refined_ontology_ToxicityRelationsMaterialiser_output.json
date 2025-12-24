@@ -1,0 +1,40 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "person_with_vitiligo_on_phone"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk_1"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "overallintent_instance"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "racial_stereotyping"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "anti_black_stereotype"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :person_with_vitiligo_on_phone .",
+    ":toxicity_1 :hasToxicElement :text_chunk_1 .",
+    ":toxicity_1 :hasToxicElement :overallintent_instance .",
+    ":toxicity_1 :hasToxicElement :racial_stereotyping .",
+    ":toxicity_1 :hasToxicElement :anti_black_stereotype ."
+  ],
+  "triples_count": 5
+}

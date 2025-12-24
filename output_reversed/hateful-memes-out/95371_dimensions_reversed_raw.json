@@ -1,0 +1,222 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: down_syndrome_girl_put_on_makeup_for_a_party; hasOverallIntent: Harmful; overall-intent-description: The image depicts a woman with Down syndrome applying makeup in front of a mirror, with text overlay stating 'down syndrome girl put on makeup for a party.' The overall intent is to portray her as an object of pity or amusement, reinforcing harmful stereotypes by focusing on her disability as the central theme. This is a form of ableism, as it infantilizes and reduces her to a spectacle, implying she is incapable of self-expression or social agency without external validation. The meme trivializes her personal effort and dignity, potentially causing harm by normalizing the viewing of disability through a lens of pity or mockery. The juxtaposition of the image with the text frames her actions as unusual or amusing rather than empowering or celebratory, which can contribute to negative societal perceptions of people with Down syndrome.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "down syndrome girl put",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person with Down syndrome",
+      "description": "A woman with Down syndrome is shown applying makeup in front of a mirror. She has dark hair, is wearing a red floral top, and is holding a makeup brush near her eye. Her expression appears focused or slightly surprised. The image is framed to show her reflection in the mirror, with her profile visible on the left side of the frame.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "makeup_application_scene",
+      "label": "woman applying makeup in front of mirror",
+      "description": "A woman with Down syndrome is shown applying makeup in front of a mirror. Her reflection is visible, and she is holding a makeup brush near her eye. The scene is framed to show both her profile and her reflection, with the mirror occupying a significant portion of the background. The spatial arrangement suggests she is in a bathroom or similar setting, with tiled walls and a potted plant visible in the background. The text overlay 'down syndrome girl put on makeup for a party' contextualizes the scene as a personal preparation for an event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "isReflectedIn",
+          "to": "mirror"
+        },
+        {
+          "from": "woman",
+          "relation": "isApplyingMakeupTo",
+          "to": "mirror"
+        },
+        {
+          "from": "text",
+          "relation": "describes",
+          "to": "woman"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism_stereotype",
+      "label": "Ableism Stereotype",
+      "description": "The meme relies on the harmful stereotype that people with Down syndrome are incapable of self-expression or social agency without external validation, reducing them to a spectacle. This is a form of 'inspiration porn' or 'pity narrative' that infantilizes and mocks their personal effort and dignity, implying they are only worthy of attention when performing tasks that are perceived as 'unusual' or 'amusing' for someone with a disability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "developmental_disability_infantilization",
+      "label": "Developmental Disability Infantilization",
+      "description": "The meme implicitly reinforces the stereotype that individuals with Down syndrome are childlike or incapable of independent decision-making, thereby reducing their personal agency. The framing of the image as 'amusing' or 'pity-inducing' suggests that their actions are not to be taken seriously, which infantilizes them and denies their autonomy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "inspiration_porn",
+      "label": "Inspiration Porn",
+      "description": "The meme uses the trope of 'inspiration porn' — portraying people with disabilities as inspirational or heartwarming subjects for the benefit of able-bodied viewers — to frame the woman's makeup application as a spectacle rather than a personal, empowering act. This trope trivializes the individual's dignity and reduces their experience to a narrative for others' consumption.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pity_narrative",
+      "label": "Pity Narrative",
+      "description": "The meme constructs a narrative centered on pity by implying that the woman's actions are unusual or amusing because she has Down syndrome. This narrative frames her as an object of pity rather than as a capable individual preparing for a social event, which reinforces negative societal perceptions and diminishes her agency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "Ableism",
+      "description": "The meme is an example of ableism — discrimination or prejudice against people with disabilities — by portraying the woman as an object of pity or amusement rather than as a person with agency and dignity. It normalizes viewing disability through a lens of pity or mockery, which can contribute to negative societal perceptions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "pity",
+      "label": "pitying emotion",
+      "description": "The emotion expressed is pity, conveyed through the framing of the image and text that portrays the woman as an object of pity or amusement due to her disability, reducing her personal effort to a spectacle for others' consumption.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The text 'down syndrome girl' maps onto the visual entity of the woman with Down syndrome.",
+      "description": "The text explicitly identifies the visual subject as a 'down syndrome girl', creating a direct analogical mapping between the textual label and the visual entity. This mapping is central to the meme's harmful intent, as it reduces the woman to her disability and frames her actions through the lens of pity or amusement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material identifying the woman as a 'down syndrome girl'",
+      "description": "The user is projected onto the textual material 'down syndrome girl put' which explicitly labels the visual subject by her disability. This projection frames the user's perspective as one that categorizes and reduces the woman to her disability, aligning with the meme's harmful intent of infantilization and pity narrative. The user is not directly addressed with deictic pronouns like 'you' or 'me', but the textual labeling creates an implicit projection where the viewer is positioned as someone who interprets the woman's actions through the lens of her disability, reinforcing ableist stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme portrays a woman with Down syndrome applying makeup in a way that frames her actions as unusual or amusing due to her disability, reinforcing harmful stereotypes and infantilizing her. This is a form of ableism and 'inspiration porn' that trivializes her personal effort and dignity, potentially causing harm by normalizing the viewing of disability through a lens of pity or mockery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "able-bodied viewers",
+      "description": "The meme is designed for able-bodied viewers who may be exposed to content that frames people with disabilities through a lens of pity or amusement, reinforcing harmful stereotypes and infantilizing individuals with Down syndrome.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/95371.png",
+    "image_name": "95371.png",
+    "extraction_timestamp": "2025-12-19T18:32:39.381930",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

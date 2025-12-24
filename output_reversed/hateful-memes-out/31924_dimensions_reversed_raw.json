@@ -1,0 +1,323 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: harvey-price-growth-meme; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes two images: the top shows a young Black boy (Harvey Price) in a movie poster with adult actors, and the bottom shows him as a child with a white woman and two other children in front of a Burger King. The text 'this is how harvey price has grown over the years' implies a comparison of his physical appearance and social context across time. While not overtly abusive or hateful, the meme's intent is potentially harmful because it reduces a person's identity to a visual comparison of growth, which can be infantilizing or objectifying. It may also unintentionally reinforce stereotypes by focusing on physical appearance changes in a public context, potentially contributing to a culture of superficial judgment. The meme does not contain explicit hate speech or targeted abuse, but its framing can be seen as harmful due to its focus on physical transformation and public visibility, which may normalize or trivialize personal development narratives.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text overlay at top of image",
+      "description": "this is how harvey price",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Harvey_Price",
+      "label": "young Black boy",
+      "description": "A young Black boy, identified as Harvey Price, is featured prominently in both the top and bottom images. In the top image, he appears as a child in a movie poster, wearing a pink shirt and a black cap. In the bottom image, he is shown as a slightly older child, standing in front of a Burger King, wearing a brown jacket. His presence is central to the meme's message of growth over time.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "growth_comparison_scene",
+      "label": "Growth Comparison Scene",
+      "description": "A scene depicting Harvey Price at two different stages of his life, juxtaposed to illustrate physical growth over time. The top image shows him as a child in a movie poster, while the bottom image shows him as a slightly older child in front of a Burger King. The text 'this is how harvey price has grown over the years' frames the comparison. The scene includes Harvey_Price in both images, with the bottom image also featuring a white woman and two other children, creating a social context contrast.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Harvey_Price",
+          "relation": "is_compared_to",
+          "to": "Harvey_Price"
+        },
+        {
+          "from": "Harvey_Price",
+          "relation": "stands_next_to",
+          "to": "white_woman"
+        },
+        {
+          "from": "white_woman",
+          "relation": "stands_next_to",
+          "to": "child1"
+        },
+        {
+          "from": "white_woman",
+          "relation": "stands_next_to",
+          "to": "child2"
+        },
+        {
+          "from": "child1",
+          "relation": "stands_next_to",
+          "to": "child2"
+        },
+        {
+          "from": "Harvey_Price",
+          "relation": "is_in_front_of",
+          "to": "burger_king_sign"
+        },
+        {
+          "from": "white_woman",
+          "relation": "is_in_front_of",
+          "to": "burger_king_sign"
+        },
+        {
+          "from": "child1",
+          "relation": "is_in_front_of",
+          "to": "burger_king_sign"
+        },
+        {
+          "from": "child2",
+          "relation": "is_in_front_of",
+          "to": "burger_king_sign"
+        },
+        {
+          "from": "adults_in_background",
+          "relation": "is_behind",
+          "to": "Harvey_Price"
+        },
+        {
+          "from": "adults_in_background",
+          "relation": "is_behind",
+          "to": "white_woman"
+        },
+        {
+          "from": "adults_in_background",
+          "relation": "is_behind",
+          "to": "child1"
+        },
+        {
+          "from": "adults_in_background",
+          "relation": "is_behind",
+          "to": "child2"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harvey_price",
+      "label": "Harvey Price",
+      "description": "Harvey Price is a real person, a young Black boy who has been featured in public media and social media memes. His appearance in the meme is used to illustrate physical growth over time, but the framing can be seen as infantilizing or objectifying, reducing his identity to a visual comparison of growth. This requires background knowledge about his public visibility and the cultural context of such comparisons.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "growth_comparison_scene",
+      "label": "Growth Comparison Scene",
+      "description": "The scene juxtaposes Harvey Price at two different stages of his life to illustrate physical growth over time. This requires background knowledge about the cultural phenomenon of 'growth memes' and the potential harm in reducing a person's identity to a visual comparison of physical development, which can normalize or trivialize personal development narratives.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "overallintent_instance",
+      "label": "Overall Intent",
+      "description": "The meme's intent is potentially harmful because it reduces a person's identity to a visual comparison of growth, which can be infantilizing or objectifying. It may also unintentionally reinforce stereotypes by focusing on physical appearance changes in a public context, potentially contributing to a culture of superficial judgment. This requires background knowledge about the social implications of visual comparisons and the potential for reinforcing stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "Ableism",
+      "description": "Ableism refers to the discrimination and social disadvantage faced by people with disabilities. The meme's framing of Harvey Price's growth can be seen as infantilizing or objectifying, which is a form of ableism that denies his independence and competence. This requires background knowledge about ableism and how it manifests in societal perceptions of physical development.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "infantilization",
+      "label": "Infantilization",
+      "description": "Infantilization is the process of treating a person as if they are a child, regardless of their actual age or maturity level. The meme's focus on Harvey Price's physical growth can be seen as infantilizing, reducing his identity to a visual comparison of growth. This requires background knowledge about infantilization and its social implications.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification",
+      "label": "Objectification",
+      "description": "Objectification is the process of treating a person as an object, rather than as a person with agency and dignity. The meme's focus on Harvey Price's physical growth can be seen as objectifying, reducing his identity to a visual comparison of growth. This requires background knowledge about objectification and its social implications.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "public_visibility",
+      "label": "Public Visibility",
+      "description": "Public visibility refers to the extent to which a person is visible and recognized in public spaces. Harvey Price's appearance in the meme is a result of his public visibility, which can be seen as a form of public scrutiny. This requires background knowledge about public visibility and its social implications.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "superficial_judgment",
+      "label": "Superficial Judgment",
+      "description": "Superficial judgment refers to the process of evaluating a person based on superficial characteristics, rather than on their abilities, character, or achievements. The meme's focus on Harvey Price's physical growth can be seen as a form of superficial judgment, which can contribute to a culture of superficial judgment. This requires background knowledge about superficial judgment and its social implications.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cultural_phenomenon",
+      "label": "Cultural Phenomenon",
+      "description": "A cultural phenomenon is a widespread social trend or event that has a significant impact on a culture. The meme's framing of Harvey Price's growth as a cultural phenomenon requires background knowledge about cultural phenomena and their social implications.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_implications",
+      "label": "Social Implications",
+      "description": "Social implications refer to the potential consequences of a social phenomenon on a society. The meme's framing of Harvey Price's growth as a social phenomenon requires background knowledge about social implications and their potential consequences.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "infantilization",
+      "label": "infantilizing emotion",
+      "description": "The meme reduces Harvey Price's identity to a visual comparison of physical growth, treating him as an object of observation rather than a person with agency, which can be seen as infantilizing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_harvey_price_growth",
+      "label": "Harvey Price is mapped as the subject of growth comparison",
+      "description": "The text 'this is how harvey price has grown over the years' explicitly identifies the young Black boy in both images as Harvey Price, establishing him as the central entity being compared across time. The visual material (top and bottom images) shows his physical appearance at different stages, mapping directly onto the textual claim of growth. This is a direct analogical mapping where the text names the visual subject and frames the visual comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the growth comparison scene",
+      "description": "The user is projected onto the 'growth_comparison_scene' as the implied observer of the visual comparison of Harvey Price's physical development over time. The meme's framing invites the user to view the images as a personal narrative of growth, even though the text does not contain explicit deictic pronouns like 'you' or 'me'. The projection is implicit, as the user is positioned as the one interpreting the visual and textual material to understand the 'growth' narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme reduces Harvey Price's identity to a visual comparison of growth, which can be infantilizing or objectifying, potentially reinforcing stereotypes by focusing on physical appearance changes in a public context, contributing to a culture of superficial judgment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet meme audience",
+      "description": "The meme is designed for a broad online audience familiar with internet culture, particularly those who engage with visual comparison memes and public figures in media. The target community includes users who find humor or relatability in juxtaposing images of people at different life stages, often with a focus on physical appearance changes. The meme’s framing relies on the cultural phenomenon of 'growth memes' and appeals to viewers who enjoy or are accustomed to superficial judgments based on visual transformation, which is a common trope in social media.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/31924.png",
+    "image_name": "31924.png",
+    "extraction_timestamp": "2025-12-15T22:13:21.171512",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 19,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

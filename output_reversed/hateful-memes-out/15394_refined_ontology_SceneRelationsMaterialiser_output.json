@@ -1,0 +1,30 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "birthday_celebration",
+      "participants": [
+        {
+          "entity": "Hulk_Hogan",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Hulk_Hogan",
+          "relation": "isDeliveringBirthdayGreetingTo",
+          "to": "brother"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":birthday_celebration :hasParticipant :Hulk_Hogan .",
+    ":Hulk_Hogan :isDeliveringBirthdayGreetingTo :brother ."
+  ],
+  "triples_count": 2
+}

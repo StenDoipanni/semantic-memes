@@ -1,0 +1,243 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a woman in a maternal or nurturing role feeding a man spaghetti while text overlays suggest he has participated in a political protest. The juxtaposition of the tender, domestic scene with the political act creates a humorous or ironic contrast. The intent appears to be to mock or trivialize political activism by framing it as childish or overly emotional, implying that protesting is a 'mommy' activity for 'big boys'. This can be seen as harmful because it undermines the seriousness of political engagement and may discourage participation by portraying it as immature or unworthy of adult political discourse. The meme does not target any specific protected group with hate or abuse, but it does use a stereotype of political activism as being associated with emotional or childish behavior, which can be demeaning to those who engage in protest. The overall intent is to satirize or belittle political protest through an analogy of domestic infantilization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "i protested trump today mommy",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "elderly woman",
+      "description": "An elderly woman with gray hair and glasses, wearing a pearl necklace and lace collar, is seen kissing the man on the cheek while feeding him spaghetti. Her expression is affectionate and maternal, and she appears to be in a nurturing or caretaking role.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "maternal_feeding_scene",
+      "label": "maternal_feeding_scene",
+      "description": "A tender, domestic scene where an elderly woman is feeding a man spaghetti while affectionately kissing his cheek, portraying a nurturing, maternal relationship. The man is enjoying the food with a blissful expression, and the woman's posture and expression suggest care and affection. The scene is framed to emphasize the intimacy and tenderness of the interaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "feeds",
+          "to": "man"
+        },
+        {
+          "from": "woman",
+          "relation": "kisses",
+          "to": "man"
+        },
+        {
+          "from": "woman",
+          "relation": "nurtures",
+          "to": "man"
+        },
+        {
+          "from": "man",
+          "relation": "receives_food_from",
+          "to": "woman"
+        },
+        {
+          "from": "man",
+          "relation": "is_being_nurtured_by",
+          "to": "woman"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_protest_stereotype",
+      "label": "Political Protest as Childish or Infantilized",
+      "description": "The meme relies on the stereotype that political activism, particularly protesting, is an immature or overly emotional activity, often associated with 'mommy' figures or 'big boys' who are being pampered. This frames protest as something that should be done by children or under maternal supervision, thereby mocking its seriousness and adult relevance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "maternal_role_stereotype",
+      "label": "Maternal Role as Nurturing and Controlling",
+      "description": "The image uses the stereotype of the maternal figure as nurturing, caring, and sometimes controlling, often associated with domesticity and emotional regulation. In this meme, the maternal figure is used to infantilize the protestor, implying that his political action is emotionally driven and needs to be 'fed' or 'taken care of' like a child.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "infantilization_stereotype",
+      "label": "Infantilization of Adult Political Actors",
+      "description": "The meme employs the stereotype of infantilizing adults by portraying them as children who need to be fed and cared for, thereby undermining their agency and seriousness. This is a form of ableism and misogyny, as it reduces adult political engagement to a childish, domestic activity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "trump_referential_context",
+      "label": "Donald Trump as a Political Figure",
+      "description": "The text 'i protested trump today mommy' requires background knowledge that Donald Trump is a real-world political figure who was the President of the United States and a major public figure whose policies and persona sparked widespread political protests. The meme's humor and irony depend on this real-world context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "spaghetti_as_domestic_symbol",
+      "label": "Spaghetti as a Symbol of Domesticity and Comfort",
+      "description": "The image of feeding spaghetti is a culturally recognized symbol of domestic comfort and nurturing care, often associated with maternal figures. This reinforces the meme's infantilizing message by linking political protest to a domestic, comforting, and childlike activity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_formatting_convention",
+      "label": "Meme Textual Formatting and Irony",
+      "description": "The meme uses a specific textual format (top text, bottom text) and ironic juxtaposition to create humor. The bottom text 'ooOOOh, who's my big boy' is a common phrase used in domestic or infantilizing contexts, which requires knowledge of meme conventions and cultural irony to understand the satirical intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "maternal_affection",
+      "label": "maternal affection emotion",
+      "description": "The elderly woman's facial expression and gesture—kissing the man on the cheek while feeding him spaghetti—convey deep affection, nurturing care, and a maternal bond. Her eyes are closed in tenderness, and her posture is intimate and protective, reinforcing a loving, caretaking emotion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Political protest is mapped onto a maternal feeding scene",
+      "description": "The top text 'i protested trump today mommy' maps the act of political protest onto the visual scene of a maternal figure feeding a man spaghetti. The text implies that the man's protest is being 'fed' or 'nurtured' by a maternal figure, thereby infantilizing the political act and associating it with domestic care. The visual material (maternal_feeding_scene) is used to represent the textual concept (political_protest_stereotype).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the protestor as the 'big boy' being infantilized",
+      "description": "The user is projected onto the man in the image, who is portrayed as the 'big boy' being fed and praised by the maternal figure. The text 'i protested trump today mommy' and 'ooOOOh, who's my big boy' creates an implicit deictic where the user identifies with the protestor, positioning themselves as the 'big boy' whose political action is being infantilized and cared for by a maternal figure. This projection is reinforced by the visual scene of nurturing care and the ironic textual framing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes political protest by infantilizing the protestor and associating it with domestic, maternal care, thereby undermining the seriousness of political engagement and potentially discouraging participation. This is harmful as it frames protest as an immature or emotionally driven activity, reducing adult political discourse to a childish, domestic context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who are familiar with political protest culture, particularly around Donald Trump, and who understand the meme format of ironic juxtaposition. The meme is designed to mock or belittle political activism by infantilizing it, implying that protesting is a childish or overly emotional activity associated with maternal care. This targets those who engage in or observe political protest, and likely those who find humor in satirical depictions of political behavior. The use of 'mommy' and 'big boy' references also targets audiences familiar with domestic infantilization tropes, potentially including those who view political engagement through a lens of emotional or childish behavior. The meme’s humor relies on cultural knowledge of Trump as a polarizing political figure and the meme convention of using maternal feeding scenes to symbolize infantilization, thus appealing to an audience that recognizes and engages with internet satire and political commentary.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/42983.png",
+    "image_name": "42983.png",
+    "extraction_timestamp": "2025-12-16T01:26:32.713551",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,201 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: kill_all_americans_meme; hasOverallIntent: Hateful; overall-intent-description: The image depicts a large gathering of Muslims praying in unison, juxtaposed with the text 'kill all americans & remind them islam is peaceful'. This combination is intentionally provocative and hateful, directly targeting Americans and associating them with a violent act while simultaneously attempting to misrepresent Islam as peaceful. The meme uses the visual of peaceful religious practice to contrast with a call for mass violence, which is a form of hate speech and harmful propaganda. It promotes a dangerous and false narrative that equates a specific religious group with terrorism, which is a form of Islamophobia and constitutes a hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "kill all americans",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "large_crowd_of_people",
+      "label": "people",
+      "description": "A vast number of individuals, predominantly men, are gathered in rows, all in a uniform posture of bowing or prostrating, indicating a collective religious act. They are dressed in varied but mostly light-colored clothing, suggesting a communal prayer setting. This is the most salient visual element, occupying the majority of the frame.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "praying_crowd_scene",
+      "label": "praying_crowd",
+      "description": "A large crowd of people is gathered in a mosque courtyard, all bowing or prostrating in unison during a collective religious prayer. The crowd is arranged in neat, orderly rows, filling the open space in front of a large, historic-looking mosque building. The visual composition emphasizes the scale and unity of the gathering, with the architectural structure providing a backdrop.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "large_crowd_of_people",
+          "relation": "isPrayingIn",
+          "to": "mosque_architecture"
+        },
+        {
+          "from": "text",
+          "relation": "isSuperimposedOn",
+          "to": "large_crowd_of_people"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The meme relies on the harmful stereotype that Islam is inherently violent or associated with terrorism, which is a core component of Islamophobia. This stereotype is used to misrepresent the peaceful nature of the religious practice shown in the image, thereby promoting a false and dangerous narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "praying_crowd_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism_association",
+      "label": "Terrorism Association",
+      "description": "The meme implicitly references the real-world association between Islam and terrorism, which is a common and dangerous stereotype. This association is used to justify the hateful message in the text, even though the image depicts peaceful religious practice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islam_is_peaceful_claim",
+      "label": "Claim that Islam is Peaceful",
+      "description": "The meme uses the phrase 'islam is peaceful' as a counterpoint to the violent call in the text. This claim is a common, but often misused, assertion in public discourse. The meme's irony lies in juxtaposing this claim with a call for mass violence, which is a form of propaganda.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "american_population_target",
+      "label": "Targeting the American Population",
+      "description": "The text 'kill all americans' explicitly targets the American population. This is a direct and hateful reference to a specific national group, which requires knowledge of geopolitical entities and the concept of national identity to understand the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_concept",
+      "label": "Islamophobia Concept",
+      "description": "The meme is an example of Islamophobia, which is the fear, hatred, or prejudice against Islam and Muslims. This concept is central to understanding the meme's hateful intent and the dangerous stereotypes it promotes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "praying_crowd_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is hatred, conveyed through the explicit and violent text 'kill all americans' which directly targets a national group. This is juxtaposed with the image of peaceful religious practice, creating a hateful and provocative message that promotes violence against Americans while misrepresenting Islam as peaceful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Textual claim about Islam is mapped onto the visual of praying Muslims",
+      "description": "The text 'islam is peaceful' is juxtaposed with the visual of a large crowd of Muslims praying in unison. This creates an analogical mapping where the peacefulness of Islam is projected onto the visual of the praying crowd, despite the violent text 'kill all americans' that contradicts this peaceful portrayal. The mapping is ironic and hateful, using the visual of peaceful religious practice to falsely support the claim that Islam is peaceful, while simultaneously promoting violence against Americans.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message",
+      "description": "The user is projected onto the text 'kill all americans' and '& remind them islam is peaceful', as these are the explicit, direct commands and claims that the meme is designed to make the viewer confront or internalize. The meme does not use deictic pronouns like 'you' or 'me', but the imperative nature of the text ('kill') and the accusatory framing ('remind them') create a direct address to the viewer, making them the implied subject of the violent command and the recipient of the false claim about Islam. The user is thus projected onto the textual material as the target of the hateful message and the one who must 'remind' the audience of the false narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme contains explicit and direct calls for violence against a specific national group (Americans) and promotes a false and dangerous narrative that equates Islam with terrorism, which is a form of hate speech and harmful propaganda.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "american_population_target",
+      "label": "Targeting the American Population",
+      "description": "The text 'kill all americans' explicitly targets the American population, indicating the meme is designed to incite hatred or violence against Americans.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/13086.png",
+    "image_name": "13086.png",
+    "extraction_timestamp": "2025-12-15T14:49:14.068372",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

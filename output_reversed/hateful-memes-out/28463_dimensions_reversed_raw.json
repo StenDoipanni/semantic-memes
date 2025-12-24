@@ -1,0 +1,188 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: harmful; overall-intent-description: The meme juxtaposes a dog being washed with a skewer of food labeled 'your dog's favorite food,' creating a humorous and absurd contrast. The intent is to mock the idea that dogs might enjoy human food, implying it's something they would not normally eat or that it's an inappropriate or silly notion. While not overtly abusive, hateful, or propagandistic, the meme relies on a potentially harmful stereotype — the 'watermelon and fried chicken' trope — by suggesting that dogs, like Black people in historical racist stereotypes, are only suited for certain foods. This can be seen as a subtle form of racialized humor that may be offensive to some viewers, especially those who are aware of the historical context of such food stereotypes. The meme's overall intent is to provoke laughter through absurdity and potentially offensive cultural references, which can be considered harmful due to its reliance on a stereotype that has been used to demean a specific racial group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "your dog's favorite food",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "human",
+      "description": "A person sitting on a chair, holding a hose and washing a dog. Only their legs, hands, and feet are visible. They are wearing denim shorts and sandals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "dog_bath_scene",
+      "label": "person washing dog with hose",
+      "description": "A person is sitting on a chair and using a hose to wash a beagle dog on a grassy lawn. A red plastic tub is nearby. The scene is outdoors in daylight.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person",
+          "relation": "washes",
+          "to": "dog"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "watermelon_and_fried_chicken_stereotype",
+      "label": "Watermelon and Fried Chicken Stereotype",
+      "description": "A historical and racist stereotype that portrays Black people as being associated with watermelon and fried chicken, often used to demean and caricature them. This stereotype is referenced in the meme's overall intent as a basis for the absurd and offensive comparison between dogs and human food.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dog_food_stereotype",
+      "label": "Dog Food Stereotype",
+      "description": "The stereotype that dogs are only suited for specific types of food, often implying they are incapable of enjoying or digesting human food. This is referenced in the meme to create the absurd contrast with the image of a dog being washed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racialized_humor",
+      "label": "Racialized Humor",
+      "description": "Humor that relies on racial stereotypes or caricatures to create comedic effect, often at the expense of a marginalized group. The meme's intent is described as relying on this type of humor, specifically by invoking the 'watermelon and fried chicken' trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dog_bath_scene",
+      "label": "Dog Bath Scene",
+      "description": "The scene of a dog being washed with a hose is used in the meme to contrast with the text 'your dog's favorite food', implying the dog is not suited for human food. This scene is part of the visual material that requires external knowledge to understand the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "text_chunk",
+      "label": "Textual Material: 'your dog's favorite food'",
+      "description": "The text 'your dog's favorite food' is used to create a humorous and absurd contrast with the image of a dog being washed. This text requires external knowledge about dog food stereotypes and racialized humor to understand the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "absurdity",
+      "label": "absurd emotional expression",
+      "description": "The emotion expressed is one of absurdity, stemming from the juxtaposition of a dog being washed with the text 'your dog's favorite food', creating a humorous and illogical contrast that is meant to provoke laughter through its silliness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "dog's favorite food is being washed",
+      "description": "The text 'your dog's favorite food' is mapped onto the visual scene of a dog being washed with a hose. This creates an absurd and humorous contrast, implying that the dog's 'favorite food' is being subjected to a bath, which is not a food item but a cleansing activity. The mapping is based on the juxtaposition of the text with the visual material, where the dog is the central subject of both the text and the image, and the act of washing is humorously equated with the concept of 'favorite food'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the text 'your dog's favorite food' because the phrase uses the possessive pronoun 'your', directly addressing the viewer and inviting them to imagine their own dog's preferences. This creates a personal connection, making the viewer feel as if they are the one whose dog is being referenced, thereby anchoring the humor and absurdity of the meme to their own experience or perspective.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Racialized Humor",
+      "description": "The meme relies on the 'watermelon and fried chicken' food stereotype, which historically caricatures Black people, to create an absurd and potentially offensive comparison between dogs and human food. This humor is considered harmful due to its reliance on a stereotype that has been used to demean a specific racial group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "human",
+      "description": "The meme is designed for a general audience that understands and finds humor in absurd or ironic juxtapositions, particularly those involving pets and human food. The target community includes pet owners, especially dog owners, who are familiar with the concept of 'dog food' and the humorous notion of dogs enjoying human food. The meme relies on the audience's recognition of the dog bath scene and the text 'your dog's favorite food' to create the comedic effect, implying a dog's 'favorite food' is being washed — an absurd and humorous contrast. The audience is likely to be familiar with internet memes and cultural references to racialized humor, specifically the 'watermelon and fried chicken' stereotype, which the meme invokes to create its punchline. The target community may also include individuals who appreciate or are aware of the historical context of such stereotypes, even if they are not directly targeted by them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/28463.png",
+    "image_name": "28463.png",
+    "extraction_timestamp": "2025-12-15T20:36:27.814811",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

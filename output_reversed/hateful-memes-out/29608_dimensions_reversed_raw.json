@@ -1,0 +1,173 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts a smiling emoji with rainbow stripes (symbolizing LGBTQ+ identity) and glasses, overlaid with the text 'when you're the gay friend and also the meme lord.' The scene is lighthearted and self-deprecating, celebrating a person who identifies as gay and is also known for creating or popularizing memes. There is no toxicity present in this meme. It does not contain abusive, cyberbullying, harmful, hateful, misogynous, or propaganda elements. The intent is to humorously acknowledge and celebrate the dual identity of being both a gay friend and a meme creator, using the rainbow emoji as a visual metaphor for LGBTQ+ pride and the glasses as a common meme trope for 'nerd' or 'smart' personas. The overall intent is self-referential and celebratory, not targeting or disparaging any group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you're the gay friend and also the meme lord",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "emoji",
+      "label": "rainbow-colored smiling face emoji",
+      "description": "A circular emoji with a smiling face, featuring horizontal stripes in the colors of the rainbow flag (red, orange, yellow, green, blue, purple), symbolizing LGBTQ+ identity. The emoji wears black-rimmed glasses, which are a common visual trope in memes to suggest intelligence, nerdiness, or a 'meme lord' persona. The eyes are large and cartoonish, and the smile is wide and simple. This emoji is the central visual element of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "gay_meme_lord_scene",
+      "label": "Self-referential celebration of dual identity",
+      "description": "The scene depicts a single visual entity, the rainbow-colored smiling face emoji, which symbolizes LGBTQ+ identity and is also portrayed as the 'meme lord' through the use of glasses (a common meme trope for intelligence or nerdiness). The text overlay 'when you're the gay friend and also the meme lord' directly references this dual identity, creating a self-deprecating and celebratory scene. The emoji is the sole participant and central focus, with no other entities or interactions depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "LGBTQ_Pride_Flag",
+      "label": "LGBTQ+ Pride Flag",
+      "description": "The rainbow stripes on the emoji are a direct visual representation of the LGBTQ+ Pride Flag, which is a symbol of LGBTQ+ identity, pride, and community. Understanding this flag as a symbol is essential to interpret the emoji's meaning as representing a gay person.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "emoji",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Meme_Lord",
+      "label": "Meme Lord",
+      "description": "The term 'meme lord' is a colloquial, internet-based title used to describe someone who is highly skilled at creating, curating, or popularizing memes. It implies a level of authority or dominance in the meme culture space. This concept is not visually depicted but is essential to understand the text's meaning.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Glasses_as_a_Meme_Trope",
+      "label": "Glasses as a Meme Trope",
+      "description": "The use of glasses on the emoji is a common visual trope in internet memes to signify intelligence, nerdiness, or a 'cool' persona. This trope is widely understood in meme culture and is used here to visually reinforce the 'meme lord' identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "emoji",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Self_Deprecating_Humor",
+      "label": "Self-Deprecating Humor",
+      "description": "The meme uses self-deprecating humor to celebrate a dual identity. This is a common comedic technique where the subject makes fun of themselves to create a relatable and endearing effect. Understanding this comedic style is necessary to appreciate the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "LGBTQ_Identity",
+      "label": "LGBTQ+ Identity",
+      "description": "The meme references the identity of being gay, which is part of the broader LGBTQ+ community. Understanding this identity as a social and cultural construct is necessary to interpret the emoji's symbolism and the text's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "celebratory and self-deprecating joy",
+      "description": "The wide, simple smile of the emoji, combined with the lighthearted and self-referential text 'when you're the gay friend and also the meme lord,' conveys a sense of joyful pride and amusement. The emotion is celebratory of a dual identity and self-deprecating in tone, creating an endearing and humorous emotional expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The rainbow emoji is mapped as the 'gay friend' and 'meme lord'",
+      "description": "The text 'when you're the gay friend and also the meme lord' explicitly identifies the visual entity (the rainbow emoji) as embodying both identities. The rainbow stripes visually map to 'gay friend' (via LGBTQ+ Pride Flag symbolism), and the glasses map to 'meme lord' (via Glasses_as_a_Meme_Trope). This creates an analogical mapping where the visual entity is projected as the subject of the text's description.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the gay meme lord scene",
+      "description": "The user is projected onto the central visual entity (the rainbow emoji with glasses) which is explicitly identified in the text as 'the gay friend and also the meme lord'. The text 'when you're...' directly addresses the viewer, creating a self-referential projection where the user sees themselves as the subject of the description. The projection is onto the visual material (emoji) and the scene (gay_meme_lord_scene), which together form the entity embodying the dual identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "LGBTQ_Identity",
+      "label": "LGBTQ+ Community",
+      "description": "The meme uses the rainbow-colored emoji, a direct visual representation of the LGBTQ+ Pride Flag, to symbolize LGBTQ+ identity. The text explicitly references being 'the gay friend,' which directly targets individuals within the LGBTQ+ community, particularly those who identify as gay. The overall intent is celebratory and self-referential, making it most relevant and relatable to members of the LGBTQ+ community who may also be involved in internet culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/29608.png",
+    "image_name": "29608.png",
+    "extraction_timestamp": "2025-12-15T21:05:16.416803",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

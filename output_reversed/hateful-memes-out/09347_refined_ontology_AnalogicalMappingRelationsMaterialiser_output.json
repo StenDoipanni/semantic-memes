@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "landmine_weight_mapping",
+      "hasMappedEntity": "text_chunk",
+      "hasMappingEntity": "warning_sign"
+    },
+    {
+      "from": "warning_sign",
+      "relation": "mappedOnto",
+      "to": "text_chunk"
+    }
+  ],
+  "triples": [
+    ":landmine_weight_mapping :hasMappedEntity :text_chunk .",
+    ":landmine_weight_mapping :hasMappingEntity :warning_sign .",
+    ":warning_sign :mappedOnto :text_chunk ."
+  ],
+  "triples_count": 3
+}

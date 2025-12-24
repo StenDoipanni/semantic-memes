@@ -1,0 +1,38 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "disappointed emotion",
+      "expressors": [
+        {
+          "entity": "child1",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "child2",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "child1",
+          "relation": "emotionalRelationToEntity",
+          "to": "child2"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":disappointed_emotion :hasExpressor :child1 .",
+    ":disappointed_emotion :hasExpressor :child2 .",
+    ":child1 :emotionalRelationToEntity :child2 ."
+  ],
+  "triples_count": 3
+}

@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "encouraging emotion",
+      "expressors": [
+        {
+          "entity": "Prince Harry",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Prince Harry",
+          "relation": "emotionalRelationToEntity",
+          "to": "child"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":encouraging_emotion :hasExpressor :Prince_Harry .",
+    ":Prince_Harry :emotionalRelationToEntity :child ."
+  ],
+  "triples_count": 2
+}

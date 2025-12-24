@@ -1,0 +1,175 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Mysogynous; overall-intent-description: The image depicts a woman holding a pregnancy test with a shocked or distressed expression, overlaid with text that humorously describes a scenario involving pregnancy and tampon use. The scene is framed to evoke a relatable, humorous moment of surprise or confusion. While the visual content does not contain explicit hate or abuse, the meme's intent is rooted in a misogynistic trope by framing pregnancy as a 'mystery' or 'mysterious' event that requires a woman to 'discover' it through a bodily experience (tampon cotton being 'picked off'), which implies a lack of agency or control over one's reproductive health. This aligns with the 'Mysogynous' category because it reinforces the idea that women's bodies are unpredictable and require constant monitoring, and it trivializes the serious, life-altering nature of pregnancy by reducing it to a humorous, almost absurd anecdote. The meme's intent is to elicit laughter through a relatable, albeit slightly absurd, scenario, but the underlying message subtly reinforces stereotypes about women's bodies and reproductive experiences.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you realize you're pregnant because you pull out your tampon but all the cotton was mysteriously picked off",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A Black woman with braided hair, wearing a white tank top, holding a pregnancy test and looking distressed or confused, with one hand on her forehead. She appears to be in a bathroom or bedroom setting, with a towel on her head.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "pregnancy_test_revelation",
+      "label": "woman reacting to pregnancy test result",
+      "description": "A Black woman with braided hair, wearing a white tank top, is holding a pregnancy test and looking distressed or confused, with one hand on her forehead. She appears to be in a bathroom or bedroom setting, with a towel on her head. The scene is framed to evoke a relatable, humorous moment of surprise or confusion, as indicated by the overlaid text describing a scenario involving pregnancy and tampon use.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_trope",
+      "label": "Misogynous Trope: Pregnancy as a 'Mystery' Requiring Bodily Discovery",
+      "description": "The meme relies on a misogynistic trope that frames pregnancy as an unpredictable, mysterious event that must be 'discovered' through bodily experiences (like tampon cotton being 'picked off'), implying a lack of agency or control over one's reproductive health. This trope reinforces stereotypes that women's bodies are inherently unpredictable and require constant monitoring, trivializing the serious, life-altering nature of pregnancy by reducing it to a humorous, absurd anecdote.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "reproductive_health_stereotype",
+      "label": "Reproductive Health Stereotype: Women's Bodies as Unpredictable and Need Constant Monitoring",
+      "description": "The meme implicitly references the stereotype that women's reproductive systems are inherently unpredictable and require constant vigilance or monitoring, which is a common theme in misogynistic discourse. This stereotype is used to frame pregnancy as a 'mystery' that must be solved through bodily signs, rather than through medical knowledge or agency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "tampon_cotton_mystery",
+      "label": "Tampon Cotton Mystery: A Humorous Trope About Tampon Use and Pregnancy",
+      "description": "The meme references a humorous, albeit absurd, trope that suggests tampon cotton being 'picked off' is a sign of pregnancy. This is a fictional and medically inaccurate concept, used for comedic effect but rooted in the idea that women must 'discover' pregnancy through bodily anomalies, reinforcing the stereotype that women's bodies are mysterious and require constant interpretation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pregnancy_test_revelation",
+      "label": "Pregnancy Test Revelation: A Common Cultural Moment of Surprise or Confusion",
+      "description": "The image depicts a common cultural moment where a woman receives a positive pregnancy test result, often accompanied by surprise, confusion, or shock. This moment is culturally recognized and often used in media and memes to represent the emotional and physical impact of pregnancy, which the meme uses to frame its humorous scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "distress",
+      "label": "distressed emotion",
+      "description": "The woman's facial expression, with her hand on her forehead and a look of confusion or shock, conveys a state of distress or disbelief. This is amplified by the context of holding a pregnancy test and the overlaid text describing a surprising and potentially alarming discovery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The woman is mapped as the person who realizes she is pregnant through the tampon cotton mystery.",
+      "description": "The text 'when you realize you're pregnant because you pull out your tampon but all the cotton was mysteriously picked off' is overlaid on the image of the woman holding a pregnancy test. The visual of the woman's distressed expression and her holding the pregnancy test is mapped onto the textual description of a woman experiencing a surprising pregnancy revelation. The woman in the image is the visual instantiation of the 'you' in the text, representing the person undergoing this humorous, albeit absurd, scenario. This mapping is reinforced by the context of the pregnancy test and her emotional reaction, which aligns with the text's narrative of discovery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman in the image",
+      "description": "The user is projected onto the visual material of the woman holding the pregnancy test, as the text 'when you realize you're pregnant...' uses the second-person pronoun 'you', directly addressing the viewer and mapping them onto the depicted woman. The woman's distressed expression and the context of the pregnancy test align with the narrative of 'you' experiencing this scenario, creating a direct semiotic projection of the user onto the visual entity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme relies on a misogynistic trope that frames pregnancy as an unpredictable, mysterious event that must be 'discovered' through bodily experiences (like tampon cotton being 'picked off'), implying a lack of agency or control over one's reproductive health. This trope reinforces stereotypes that women's bodies are inherently unpredictable and require constant monitoring, trivializing the serious, life-altering nature of pregnancy by reducing it to a humorous, absurd anecdote.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "woman",
+      "description": "The target community is women, particularly those who are familiar with or have experienced pregnancy, menstruation, and tampon use. The meme relies on a relatable, albeit absurd, scenario involving bodily experiences that are common to women, making it primarily targeted at this demographic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/61597.png",
+    "image_name": "61597.png",
+    "extraction_timestamp": "2025-12-16T07:09:24.199950",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

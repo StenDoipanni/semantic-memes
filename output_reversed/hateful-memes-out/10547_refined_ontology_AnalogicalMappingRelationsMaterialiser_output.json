@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_fuck_banks_to_custer",
+      "hasMappedEntity": "text_chunk: fuck banks",
+      "hasMappingEntity": "man"
+    },
+    {
+      "from": "man",
+      "relation": "mappedOnto",
+      "to": "text_chunk: fuck banks"
+    }
+  ],
+  "triples": [
+    ":mapping_fuck_banks_to_custer :hasMappedEntity :text_chunk_fuck_banks .",
+    ":mapping_fuck_banks_to_custer :hasMappingEntity :man .",
+    ":man :mappedOnto :text_chunk_fuck_banks ."
+  ],
+  "triples_count": 3
+}

@@ -1,0 +1,239 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a group of Black youth holding signs that say 'This is America. Count every vote,' which is a positive message about voting rights and civic participation. However, the overlaid text 'what if i told you blacks should not vote' is a hateful and racist statement that directly attacks Black people by suggesting they should be denied the fundamental democratic right to vote. This is a clear example of hate speech targeting a specific racial group, invoking historical and systemic racism against Black Americans. The juxtaposition of the positive civil rights imagery with the hateful text creates a deliberately provocative and offensive message intended to incite racism and undermine the legitimacy of Black political participation. The meme's intent is to spread hateful rhetoric by using the visual of a peaceful civil rights moment to contrast with a racist, exclusionary message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "what if i told you",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "group_of_people",
+      "label": "people",
+      "description": "A group of Black youth, likely teenagers or young adults, are gathered together. They are dressed in white shirts and appear to be participating in a peaceful protest or civil rights demonstration. Their expressions range from serious to smiling, conveying a sense of unity and purpose. The group is diverse in gender and facial features, representing a collective identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "protest_scene",
+      "label": "civil_rights_protest",
+      "description": "A group of Black youth are gathered in a peaceful civil rights demonstration, holding red signs that read 'This is America. Count every vote.' They are dressed in white shirts and appear united in their purpose. The scene is set outdoors under a bright sky with trees in the background, conveying a message of civic engagement and equality. The overlaid text 'what if i told you blacks should not vote' creates a jarring contrast, turning the peaceful protest into a scene of hate speech juxtaposed with civil rights imagery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "group_of_people",
+          "relation": "holds",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "overlays",
+          "to": "group_of_people"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_hate_speech",
+      "label": "Racist Hate Speech",
+      "description": "The overlaid text 'what if i told you blacks should not vote' constitutes a direct racist hate speech targeting Black Americans by denying them the fundamental democratic right to vote. This is not merely a political opinion but a hateful and exclusionary statement rooted in systemic racism and historical oppression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "civil_rights_movement",
+      "label": "Civil Rights Movement",
+      "description": "The image visually references the American Civil Rights Movement, particularly the era of the 1960s when Black Americans fought for voting rights and equality. The signs 'This is America. Count every vote' are a direct nod to the movement's core message of universal suffrage and democratic participation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_voting_rights_struggle",
+      "label": "Historical Struggle for Voting Rights",
+      "description": "The meme implicitly references the long and difficult historical struggle of Black Americans to secure the right to vote, including the Jim Crow laws, poll taxes, literacy tests, and voter suppression tactics that were used to disenfranchise them for generations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "systemic_racism",
+      "label": "Systemic Racism",
+      "description": "The meme's hateful message is rooted in systemic racism — the institutionalized and structural discrimination against Black people that has historically denied them equal access to political power and civic rights, even after legal victories like the Voting Rights Act of 1965.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "voting_rights_act_of_1965",
+      "label": "Voting Rights Act of 1965",
+      "description": "This landmark U.S. federal law outlawed discriminatory voting practices, including literacy tests and poll taxes, that had been used to disenfranchise Black voters, especially in the Southern United States. The message 'Count every vote' directly references this legislation and the movement that led to it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "Anti-Black Stereotype",
+      "description": "The meme invokes the harmful stereotype that Black people are inherently undeserving of political power or civic participation, which is a direct continuation of racist ideologies that have been used to justify disenfranchisement and oppression throughout American history.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_disenfranchisement",
+      "label": "Historical Disenfranchisement of Black Americans",
+      "description": "The meme's message is a direct echo of historical efforts to disenfranchise Black Americans, including through violence, intimidation, and legal barriers, which were used to maintain white supremacy and political control in the United States.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The overlaid text 'what if i told you blacks should not vote' expresses a hateful and racist sentiment, directly attacking Black people by denying them the fundamental democratic right to vote. This emotion is rooted in systemic racism and historical oppression, and is intended to incite racism and undermine Black political participation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "hateful text mapped onto peaceful civil rights protesters",
+      "description": "The overlaid text 'what if i told you blacks should not vote' is juxtaposed with the visual of a group of Black youth holding civil rights signs ('This is America. Count every vote'). This creates an analogical mapping where the hateful text is projected onto the visual material, implying that the group of people depicted are the target of the racist message. The mapping is spatial and contextual: the text directly overlays the image, creating a contrast between the peaceful protest and the hateful statement, thereby mapping the hateful sentiment onto the visual representation of Black civic engagement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the hateful text overlay",
+      "description": "The user is projected onto the textual material 'what if i told you blacks should not vote' because the phrase 'what if i told you' directly addresses the viewer ('you'), creating an implicit deictic that positions the user as the recipient of the hateful proposition. The user is thus projected onto this text, which is the core message of the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The overlaid text 'what if i told you blacks should not vote' constitutes a direct racist hate speech targeting Black Americans by denying them the fundamental democratic right to vote. This is not merely a political opinion but a hateful and exclusionary statement rooted in systemic racism and historical oppression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed to target and provoke individuals who hold racist, anti-Black ideologies, particularly those who support or are sympathetic to systemic disenfranchisement of Black Americans. The hateful text 'what if i told you blacks should not vote' is explicitly directed at Black people, using the visual of a peaceful civil rights protest to amplify its message. The target audience is likely those who are either unaware of or deliberately ignore the historical and ongoing struggle for Black voting rights, and who may be susceptible to racist rhetoric that denies Black people's civic legitimacy. The meme functions as a tool to spread hate speech by invoking historical and systemic racism, making its primary target community those who are predisposed to or receptive to anti-Black stereotypes and exclusionary political messaging.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/31769.png",
+    "image_name": "31769.png",
+    "extraction_timestamp": "2025-12-15T22:09:42.900120",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

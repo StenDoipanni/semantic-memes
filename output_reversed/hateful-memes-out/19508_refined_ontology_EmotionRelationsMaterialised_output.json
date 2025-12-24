@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "racial_disgust",
+      "expressors": [
+        {
+          "entity": "the_definition_of_utter_disgust_in_plain_black_and_white",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "the_definition_of_utter_disgust_in_plain_black_and_white",
+          "relation": "emotionalRelationToEntity",
+          "to": "Black_man"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":racial_disgust :hasExpressor :the_definition_of_utter_disgust_in_plain_black_and_white .",
+    ":the_definition_of_utter_disgust_in_plain_black_and_white :emotionalRelationToEntity :Black_man ."
+  ],
+  "triples_count": 2
+}

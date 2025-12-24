@@ -1,0 +1,30 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "Farmer holding healthy animal",
+      "participants": [
+        {
+          "entity": "man_holding_animal",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_holding_animal",
+          "relation": "isHolding",
+          "to": "animal"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":Farmer_holding_healthy_animal :hasParticipant :man_holding_animal .",
+    ":man_holding_animal :isHolding :animal ."
+  ],
+  "triples_count": 2
+}

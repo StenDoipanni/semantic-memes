@@ -1,0 +1,218 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a tender, affectionate moment between two men and a young child, visually representing a loving family unit. The overlaid text, however, is deliberately hateful and inflammatory, using the image to propagate a false and dangerous association between gay marriage and pedophilia. This is a direct attack on the LGBTQ+ community, leveraging the visual of a happy family to misrepresent and stigmatize a specific group based on a baseless and harmful stereotype. The intent is to incite fear, prejudice, and hatred against LGBTQ+ individuals by falsely equating their relationships with child sexual abuse, which is a form of hate speech and harmful misinformation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "and so it begins...",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "two_men",
+      "label": "adult males",
+      "description": "Two adult males are seated at a table, one on the left wearing a white shirt and the other on the right wearing a gray sweater. Both are smiling and appear affectionate toward the child. The man on the right is leaning in to kiss the child's cheek.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "affectionate_family_moment",
+      "label": "Affectionate family moment",
+      "description": "A tender scene where two adult males are seated at a table with a young child. The man on the right is leaning in to kiss the child's cheek, while both adults are smiling affectionately. The child is eating a snack and looking up. The setting includes cups and a vase with flowers on the table, suggesting a calm, domestic environment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "two_men",
+          "relation": "affectionately_interacting_with",
+          "to": "child"
+        },
+        {
+          "from": "two_men",
+          "relation": "seated_at_table_with",
+          "to": "child"
+        },
+        {
+          "from": "child",
+          "relation": "being_kissed_by",
+          "to": "two_men"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pedophilia_false_association",
+      "label": "False association between LGBTQ+ relationships and pedophilia",
+      "description": "A harmful stereotype that falsely equates same-sex relationships, particularly those involving children, with child sexual abuse. This is a baseless and dangerous myth used to stigmatize and demonize LGBTQ+ individuals and families. It is not grounded in reality and is widely condemned by mental health professionals, child protection agencies, and the broader public. The meme leverages this stereotype to incite fear and hatred.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gay_marriage",
+      "label": "Gay marriage",
+      "description": "The legal and social recognition of marriage between two individuals of the same sex. It is a civil right protected in many countries and is a cornerstone of LGBTQ+ equality. The meme falsely implies that gay marriage is inherently linked to pedophilia, which is a dangerous and false narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "christian_condemnation",
+      "label": "Christian condemnation of LGBTQ+ relationships",
+      "description": "A theological and cultural stance held by some Christian denominations that views same-sex relationships as sinful or immoral, often based on interpretations of religious texts. The meme references this by claiming 'we Christians tried to warn you,' implying that religious opposition to gay marriage is justified or valid, despite the false and harmful nature of the underlying stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hate_speech",
+      "label": "Hate speech",
+      "description": "Speech that is intended to incite hatred, violence, or discrimination against a particular group based on characteristics such as race, religion, sexual orientation, or gender. The meme is an example of hate speech because it uses a benign image to propagate a false and dangerous stereotype about LGBTQ+ individuals, aiming to incite prejudice and fear.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misinformation",
+      "label": "Misinformation",
+      "description": "False or inaccurate information that is spread, often unintentionally, but which can have harmful consequences. The meme spreads misinformation by falsely equating gay marriage with pedophilia, which is a baseless and dangerous myth. This misinformation is used to stigmatize and demonize the LGBTQ+ community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "affection",
+      "label": "affectionate emotion",
+      "description": "The visual scene depicts two adult males smiling warmly and one leaning in to kiss the child's cheek, conveying deep affection and tenderness. The child is calmly eating, suggesting comfort and safety in the environment. This creates an overall emotional tone of love and familial bonding.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The affectionate family moment is mapped as the beginning of a dangerous narrative.",
+      "description": "The top text 'and so it begins...' is analogically mapped onto the visual scene of the affectionate family moment. The text implies that the depicted tender family scene is the starting point for a harmful or sinister development — specifically, the false association with pedophilia. The visual material (affectionate_family_moment) is being used to symbolize the 'beginning' of the hateful narrative described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message as the target of the hateful narrative",
+      "description": "The user is projected onto the textual material (text_chunk_1: 'and so it begins...') and the underlying hateful narrative it introduces. The phrase 'and so it begins...' implies that the user (as the viewer) is being positioned as the one who is now witnessing or experiencing the 'beginning' of a dangerous or sinister development — specifically, the false association between gay marriage and pedophilia. The user is not directly addressed with 'you' or 'your', but the deictic 'it begins' creates an implicit projection where the user is the one who is now entering or witnessing this harmful narrative. The projection is onto the text and the scene it frames, making the user feel implicated in or responsible for the unfolding of the hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses a tender, affectionate family scene to propagate a false and dangerous stereotype that equates gay marriage with pedophilia, which is a direct attack on the LGBTQ+ community based on sexual orientation. This is hate speech designed to incite fear, prejudice, and hatred.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "LGBTQ+ community",
+      "description": "The meme is designed to target and incite hatred against the LGBTQ+ community by falsely associating gay marriage with pedophilia, using a tender family scene to misrepresent and stigmatize same-sex relationships.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/59408.png",
+    "image_name": "59408.png",
+    "extraction_timestamp": "2025-12-16T06:29:27.162576",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

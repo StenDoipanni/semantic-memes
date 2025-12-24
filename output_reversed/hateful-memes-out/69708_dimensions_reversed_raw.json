@@ -1,0 +1,170 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: goes_on_a_date; hasOverallIntent: Harmful; overall-intent-description: The meme depicts a man with a resigned, frustrated expression, juxtaposed with the text 'goes on a date' and 'gets stood up,' conveying the universal experience of being ghosted after a date. The image is used to humorously illustrate the emotional letdown of dating rejection. There is no toxicity present in the meme; it does not target any specific group based on race, gender, religion, or other protected characteristics. The intent is to relate to a common social experience through relatable visual and textual elements, without promoting harm or hate. The man's expression is a universal symbol of disappointment, not a caricature or stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "goes on a date",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A young Black man with short, curly black hair, wearing a plain white t-shirt. He has a resigned, frustrated expression, with his eyes closed and his right hand pressed against his cheek and jawline, conveying disappointment or exasperation. He has a small earring in his left ear. The man is the central visual element and the subject of the meme's narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "date_rejection_scene",
+      "label": "man_experiencing_date_rejection",
+      "description": "A scene depicting a young Black man expressing disappointment and resignation after being stood up on a date. The man is the central participant, with his hand on his face and eyes closed, conveying emotional letdown. The scene is framed by text overlays that narrate the sequence: 'goes on a date' above and 'gets stood up' below, establishing the context of the emotional experience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dating_rejection_concept",
+      "label": "Dating Rejection Concept",
+      "description": "The meme relies on the universal social experience of being rejected after a date, which is a common phenomenon in modern dating culture. This concept involves emotional letdown, disappointment, and the social stigma associated with being 'ghosted' or 'stood up'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ghosting_phenomenon",
+      "label": "Ghosting Phenomenon",
+      "description": "Ghosting refers to the act of abruptly cutting off all communication with someone after a date or relationship, without explanation. It is a modern dating trend that often leads to emotional distress and is the central event described in the meme's text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "emotional_disappointment",
+      "label": "Emotional Disappointment",
+      "description": "The man's facial expression and body language (hand on face, closed eyes) are culturally understood as symbols of disappointment, frustration, or resignation. This emotional state is central to the meme's humor and relatability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "modern_dating_culture",
+      "label": "Modern Dating Culture",
+      "description": "The meme is rooted in the context of contemporary dating practices, including online dating, casual encounters, and the emotional expectations associated with them. The experience of being stood up is a common trope in modern dating narratives.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "emotional_disappointment",
+      "label": "disappointed emotion",
+      "description": "The man's facial expression, with eyes closed and hand pressed against his cheek and jawline, conveys a sense of resignation, frustration, and disappointment. This is a culturally recognized gesture of emotional letdown, particularly in the context of being stood up after a date.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The man is mapped as the person who goes on a date and gets stood up",
+      "description": "The visual material of the man, with his resigned and disappointed expression, is mapped onto the textual narrative 'goes on a date' and 'gets stood up'. The man's emotional state and body language are used to represent the experience of dating rejection described in the text. This is an analogical mapping where the visual entity (the man) embodies the textual concept (the person experiencing dating rejection).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man experiencing dating rejection",
+      "description": "The user is projected onto the visual material of the man, who embodies the experience of going on a date and getting stood up. The man's resigned, frustrated expression and body language (hand on face, eyes closed) are culturally understood as symbols of disappointment and emotional letdown, which are central to the meme's narrative. The user identifies with this emotional state, projecting themselves onto the man as a representation of their own potential experience of dating rejection. This projection is implicit, as there are no explicit deictic pronouns like 'me' or 'you' in the text, but the universal relatability of the scenario and the man's universal expression create a strong implicit identification.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who experience or are familiar with modern dating culture, particularly those who have encountered the phenomenon of being 'ghosted' or stood up after a date. The meme uses a universally relatable emotional expression (disappointment, resignation) to connect with anyone who has faced dating rejection, regardless of specific demographic characteristics. The visual of a young Black man is used as a neutral, relatable figure to represent the experience, not as a stereotype or caricature, and the overall intent is to humorously depict a common social experience without targeting any specific group based on race, gender, religion, or other protected characteristics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/69708.png",
+    "image_name": "69708.png",
+    "extraction_timestamp": "2025-12-19T10:30:30.563705",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

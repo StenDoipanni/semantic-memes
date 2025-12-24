@@ -1,0 +1,53 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "making_sandwiches_together",
+      "participants": [
+        {
+          "entity": "mother",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "daughter",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "mother",
+          "relation": "isMakingSandwichWith",
+          "to": "daughter"
+        },
+        {
+          "from": "daughter",
+          "relation": "isWatching",
+          "to": "mother"
+        },
+        {
+          "from": "mother",
+          "relation": "isSpreadingPeanutButterOn",
+          "to": "bread"
+        },
+        {
+          "from": "daughter",
+          "relation": "isSmilingAt",
+          "to": "mother"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":making_sandwiches_together :hasParticipant :mother .",
+    ":making_sandwiches_together :hasParticipant :daughter .",
+    ":mother :isMakingSandwichWith :daughter .",
+    ":daughter :isWatching :mother .",
+    ":mother :isSpreadingPeanutButterOn :bread .",
+    ":daughter :isSmilingAt :mother ."
+  ],
+  "triples_count": 6
+}

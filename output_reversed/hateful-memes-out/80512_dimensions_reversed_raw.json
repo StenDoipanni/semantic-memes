@@ -1,0 +1,189 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: harmful; overall-intent-description: The image features a man with a cigar in his mouth, juxtaposed with text that reads: 'you can make jokes about anything, just not illegals that's crossing the border.' This meme uses a visual of a stereotypical 'wise' or 'serious' man to deliver a message that humorously or sarcastically suggests that jokes about illegal immigration are taboo. The intent is to provoke thought or commentary on the topic of immigration and border control, but it does so by invoking a harmful stereotype — specifically, the association of immigrants with criminality and illegality — which is a well-documented form of anti-Latino/hispanic prejudice. The meme's overall intent is to be provocative and potentially inflammatory, using the juxtaposition of the image and text to reinforce a negative, fear-based narrative about immigrants, which can contribute to xenophobia and social division. The meme is harmful because it normalizes and spreads a prejudiced viewpoint that can lead to discrimination and hostility toward immigrant communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "you can make jokes about anything.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A middle-aged man with receding hairline, wearing a striped collared shirt, with a cigar in his mouth, looking directly at the camera with a serious or slightly surprised expression. He is the central visual subject of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "joke_delivery_scene",
+      "label": "man delivering a joke",
+      "description": "A man with a cigar in his mouth is positioned centrally, looking directly at the camera, with text overlaid that reads 'you can make jokes about anything, just not illegals that's crossing the border.' The scene interprets the man as the source of the joke, with the text serving as the content of the joke being delivered. The man's serious expression contrasts with the humorous, yet controversial, nature of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "delivers",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_latino_hispanic_stereotypes",
+      "label": "Anti-Latino/Hispanic Stereotypes",
+      "description": "The meme relies on the stereotype that Latinos are associated with criminality and illegal immigration, which is a well-documented form of prejudice. The text 'just not illegals that's crossing the border' directly invokes this stereotype, implying that jokes about illegal immigration are taboo, while normalizing the idea that such people are inherently criminal or undesirable. This stereotype is used to provoke a reaction and reinforce a negative narrative about immigrants.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "border_crossing_imagery",
+      "label": "Border-Crossing Imagery",
+      "description": "The phrase 'illegals that's crossing the border' references the common media and political imagery of undocumented immigrants crossing national borders, often depicted as a threat or problem. This imagery is used to evoke fear and reinforce the stereotype that border crossing equals criminality, which is a key element of the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "criminality_associations",
+      "label": "Criminality Associations",
+      "description": "The meme implicitly references the stereotype that immigrants, particularly Latinos, are associated with criminal behavior. This is a common and harmful trope used to justify restrictive immigration policies and to dehumanize immigrant communities. The text 'just not illegals that's crossing the border' implies that these individuals are inherently criminal or dangerous, which is a false and prejudiced assumption.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "joke_delivery_scene",
+      "label": "Joke Delivery Scene",
+      "description": "The scene interprets the man as delivering a joke, which requires understanding the cultural context of humor and satire. The meme uses the juxtaposition of a serious-looking man with a humorous, yet controversial, text to create a comedic effect that is intended to provoke thought or commentary on immigration. The humor is derived from the absurdity of the taboo subject matter, which relies on the audience's knowledge of social norms and political discourse around immigration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "sarcasm",
+      "label": "sarcastic emotion",
+      "description": "The man's serious, slightly surprised facial expression, combined with the juxtaposition of the text 'you can make jokes about anything, just not illegals that's crossing the border,' conveys a sarcastic tone. The humor is derived from the absurdity of the taboo subject matter, implying that the 'joke' is actually a statement of prejudice, and the man's demeanor mocks the idea of a 'joke' being delivered in such a serious context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_joke_delivered_by_man",
+      "label": "The man is mapped as the source delivering the joke.",
+      "description": "The visual entity 'man' is mapped onto the textual entity 'text_chunk_1' (you can make jokes about anything.) as the speaker or source of the joke. The text is presented as if it is being delivered by the man, who is visually positioned as the central figure in the scene. His serious expression and the juxtaposition with the text create an analogical mapping where the man is the 'joke-deliverer' in the context of the meme's narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the joke delivery scene",
+      "description": "The user is projected onto the scene where the man is delivering the joke, as the meme invites the viewer to imagine themselves in the role of the joke-teller or the audience reacting to the taboo subject matter. The visual of the man with the cigar and the text 'you can make jokes about anything, just not illegals that's crossing the border' creates an implicit address to the viewer, making them part of the joke's context or its intended audience. The humor and provocation are directed at the user's understanding of social norms and political discourse around immigration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme promotes harmful stereotypes by equating illegal immigration with criminality, which can contribute to xenophobia and social division. It normalizes prejudice against immigrant communities, particularly Latinos, by framing jokes about them as taboo, thereby reinforcing a negative, fear-based narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with or engaged in political or social discourse surrounding immigration, particularly those who hold or are exposed to anti-Latino/Hispanic stereotypes. The meme is designed to resonate with people who understand the cultural and political context of border-crossing imagery and criminality associations, and who may find humor in the taboo nature of jokes about illegal immigration. The audience is likely to include those who consume internet memes as a form of commentary or satire, and who are aware of the stereotype that Latinos are associated with criminality and illegal immigration. The meme's intent to provoke thought or commentary on immigration suggests that the target audience is politically or socially aware, and may be drawn to the meme for its provocative and inflammatory nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/80512.png",
+    "image_name": "80512.png",
+    "extraction_timestamp": "2025-12-19T13:50:16.788993",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

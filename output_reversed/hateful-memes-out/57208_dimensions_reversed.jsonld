@@ -1,0 +1,172 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_91fc8b56",
+  "@type": "AnalysisDocument",
+  "title": "57208.png - Dimension Analysis",
+  "created": "2025-12-16T05:37:34.392278",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_267d4bec",
+    "@type": "Image",
+    "filename": "57208.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/57208.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/57208.png",
+    "image_name": "57208.png",
+    "extraction_timestamp": "2025-12-16T05:36:20.028702",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_64334d28",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: i_had_potato_for_lunch; hasOverallIntent: Harmful; overall-intent-description: The image shows a man smiling while the text 'i had potato for lunch' is overlaid. The overall intent is to create humor by juxtaposing the mundane act of eating a potato with the man's cheerful expression, implying a sense of pride or satisfaction in a simple meal. There is no direct targeting of any protected group or harmful intent toward any individual or community. However, the meme may be considered mildly harmful or insensitive in contexts where it could trivialize food insecurity or poverty, as it humorously frames a basic food item as a significant or noteworthy lunch. The meme does not contain abusive, cyberbullying, hateful, misogynistic, or propagandistic elements. The humor is derived from the contrast between the simplicity of the meal and the exaggerated positive reaction, which may unintentionally reinforce stereotypes about people who eat basic foods, though this is not explicitly targeted or malicious.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_91fc8b56"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f20178ef",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "i had potato for lunch",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_91fc8b56"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e56432c0",
+      "@type": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A smiling man with short dark hair and a light beard, wearing a blue polo shirt. He is the central subject of the image and appears cheerful or satisfied.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_91fc8b56"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fbffeb9f",
+      "@type": "Scene",
+      "instance_name": "man_smiling_with_text",
+      "label": "man smiling with overlaid text",
+      "description": "A smiling man is the central subject, with the text 'i had potato for lunch' overlaid on the image. The scene captures the man's cheerful expression juxtaposed with the text, creating a humorous or ironic context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_91fc8b56"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f245f195",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "potato_food_stereotype",
+      "label": "Potato as a basic/cheap food stereotype",
+      "description": "The meme humorously frames eating a potato as a significant or noteworthy lunch, which may unintentionally reinforce stereotypes about people who eat basic foods, implying poverty or lack of access to better meals. This stereotype is often used to mock or trivialize food insecurity.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_91fc8b56"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0719439a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "food_insecurity_stereotype",
+      "label": "Food insecurity and poverty stereotypes",
+      "description": "The meme may be considered mildly harmful or insensitive in contexts where it trivializes food insecurity or poverty by humorously elevating a basic food item (potato) to a 'lunch' achievement. This can imply that people who eat such meals are somehow 'poor' or 'unfortunate', reinforcing negative social perceptions.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_91fc8b56"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_277a0f76",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "simple_lunch_stereotype",
+      "label": "Stereotype of simple meals as 'poor' or 'unremarkable'",
+      "description": "The juxtaposition of a simple meal (potato) with a cheerful expression may unintentionally reinforce the stereotype that people who eat basic meals are somehow 'less than' or 'unremarkable', which can be linked to broader social judgments about socioeconomic status.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_91fc8b56"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5e96f69c",
+      "@type": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "cheerful satisfaction emotion",
+      "description": "The man's broad smile, visible teeth, and bright eyes convey a strong sense of happiness or satisfaction, likely in response to the text 'i had potato for lunch'. His expression is exaggerated and cheerful, suggesting pride or delight in a simple meal.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_91fc8b56"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_14f3976d",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The man is mapped as the person who had potato for lunch",
+      "description": "The text 'i had potato for lunch' is overlaid on the image of the smiling man, creating an analogical mapping where the man visually represents the 'i' (the speaker) in the text. The man's cheerful expression is juxtaposed with the mundane meal, implying he is the one who experienced this simple lunch with pride or satisfaction. This mapping projects the textual subject 'i' onto the visual entity 'man'.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_91fc8b56"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_75218fd5",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man in the image",
+      "description": "The user is projected onto the visual material of the smiling man, as the text 'i had potato for lunch' implies the man is the speaker ('i'). The user identifies with the man as the subject of the statement, projecting themselves onto the visual entity. This projection is implicit through the first-person pronoun 'i' in the text, which is visually anchored to the man's image, creating an analogical mapping where the man represents the user's own experience or identity in the meme context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_91fc8b56"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0fb00afe",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme may be considered mildly harmful or insensitive in contexts where it trivializes food insecurity or poverty by humorously elevating a basic food item (potato) to a 'lunch' achievement. This can imply that people who eat such meals are somehow 'poor' or 'unfortunate', reinforcing negative social perceptions.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_91fc8b56"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_189d4418",
+      "@type": "TargetCommunity",
+      "instance_name": "person",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with internet humor and meme culture, particularly those who appreciate ironic or absurdist juxtapositions. The target community includes individuals who understand the humor in trivializing a simple meal (potato) as a noteworthy lunch, often used to mock or parody the idea of 'pride in poverty' or 'basic living'. The cheerful expression of the man contrasts with the mundane text, appealing to those who enjoy visual gags and relatable, slightly self-deprecating humor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_91fc8b56"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

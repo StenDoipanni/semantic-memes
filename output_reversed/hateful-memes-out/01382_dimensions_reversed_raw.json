@@ -1,0 +1,238 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: my_body_my_choice_meme; hasOverallIntent: Propaganda; overall-intent-description: The image depicts a hand erasing the word 'Abortion' from a chalkboard, with the text 'my body my choice' overlaid. This visual metaphor suggests the erasure or rejection of abortion as a choice, framing it as something to be removed or denied. The overall intent is propagandistic, aiming to influence viewers to oppose abortion by associating it with the removal of personal autonomy. The juxtaposition of the erasing action with the slogan implies that abortion is being taken away or invalidated, which is a direct attempt to sway public opinion against abortion rights. This meme does not contain explicit toxicity such as abusive, cyberbullying, harmful, hateful, misogynous, or other forms of targeted discrimination as defined in the provided knowledge base, but it does promote a specific political stance through visual and textual manipulation, which qualifies as propaganda.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "my body my choice",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "hand",
+      "label": "human hand",
+      "description": "A right hand holding a piece of chalk, actively erasing the word 'Abortion' from a green chalkboard. The hand is in focus and positioned in the upper right quadrant of the image, indicating an action of removal or rejection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "erasing_abortion",
+      "label": "hand erasing the word 'Abortion'",
+      "description": "A right hand holding chalk is actively erasing the word 'Abortion' written on a green chalkboard. The action symbolizes removal or rejection of the concept of abortion. The hand is positioned in the upper right quadrant, indicating an active, deliberate act of erasure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "hand",
+          "relation": "erases",
+          "to": "Abortion"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "abortion_rights_movement",
+      "label": "Abortion Rights Movement",
+      "description": "A social and political movement advocating for the legal right to abortion, often framed as a matter of personal autonomy and bodily integrity. The phrase 'my body my choice' is a central slogan of this movement, emphasizing that individuals should have the right to make decisions about their own reproductive health without government interference. The meme's depiction of erasing 'Abortion' directly opposes this movement and its core principles.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "erasing_abortion",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "reproductive_autonomy",
+      "label": "Reproductive Autonomy",
+      "description": "The concept that individuals have the right to make decisions about their own reproductive health, including the choice to have or not have children, and access to reproductive healthcare services such as contraception and abortion. This concept is foundational to the 'my body my choice' slogan and is directly challenged by the visual metaphor of erasure in the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "erasing_abortion",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_abortion_activism",
+      "label": "Anti-Abortion Activism",
+      "description": "A political and social movement that opposes abortion and seeks to restrict or ban it through legislation, public campaigns, and sometimes direct action. The visual of erasing 'Abortion' in the meme is a common tactic used by anti-abortion activists to symbolize the removal or rejection of abortion as a legal or moral option. This meme aligns with the messaging and visual rhetoric of this movement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "erasing_abortion",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "bodily_integrity",
+      "label": "Bodily Integrity",
+      "description": "The ethical and legal principle that individuals have the right to control what happens to their own bodies, including the right to make decisions about their own health, reproduction, and medical treatment. This principle underpins the 'my body my choice' slogan and is the core value being visually attacked in the meme by the act of erasure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "erasing_abortion",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_propaganda",
+      "label": "Political Propaganda",
+      "description": "The dissemination of information, often biased or misleading, to promote a particular political agenda or ideology. The meme's overall intent, as described, is propagandistic, using visual symbolism (erasing abortion) and text ('my body my choice') to influence public opinion against abortion rights. This requires understanding the broader context of political messaging and manipulation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "erasing_abortion",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "visual_metaphor",
+      "label": "Visual Metaphor",
+      "description": "A figure of speech that uses imagery to represent an abstract idea. In this meme, the act of erasing the word 'Abortion' with chalk is a visual metaphor for the removal or invalidation of abortion as a choice or right. Understanding this requires knowledge of how visual symbols are used to convey abstract political or social messages.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "erasing_abortion",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pro_choice_movement",
+      "label": "Pro-Choice Movement",
+      "description": "A political and social movement that supports the right to abortion and reproductive freedom. The phrase 'my body my choice' is a hallmark of this movement. The meme's visual and textual content directly opposes this movement, making understanding of its principles necessary to interpret the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "opposition",
+      "label": "opposing emotion",
+      "description": "The emotion expressed is opposition or resistance, conveyed through the visual act of erasing the word 'Abortion' and the juxtaposition with the slogan 'my body my choice', which frames abortion as something to be removed or denied. This reflects a stance against reproductive autonomy and abortion rights.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The slogan 'my body my choice' is mapped onto the visual act of erasing 'Abortion'.",
+      "description": "The text 'my body my choice' is overlaid on the image of a hand erasing the word 'Abortion'. This creates an analogical mapping where the slogan, which represents the pro-choice principle of bodily autonomy, is visually contrasted with the act of erasure, symbolizing the rejection or removal of abortion as a choice. The mapping implies that the slogan is being used to frame the erasure as a positive or justified action, thereby associating the pro-choice message with the visual metaphor of removal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual slogan 'my body my choice'",
+      "description": "The user is projected onto the text 'my body my choice' overlaid on the image. This projection implies that the user is identifying with or adopting the slogan as their own stance, even though the visual metaphor of erasing 'Abortion' directly contradicts the pro-choice message. The projection is implicit, not explicit, but the slogan's placement and the meme's overall intent create a framing where the viewer is invited to see themselves as the holder of the 'my body my choice' principle, despite the visual act of erasure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Propaganda",
+      "description": "The meme uses visual and textual manipulation to promote a specific political stance against abortion rights, aiming to influence public opinion. The erasure of 'Abortion' juxtaposed with 'my body my choice' frames abortion as something to be removed or denied, which is a direct attempt to sway viewers toward an anti-abortion position.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "anti_abortion_activism",
+      "label": "Anti-Abortion Activism",
+      "description": "The meme is designed for individuals aligned with the anti-abortion movement, who oppose abortion and seek to restrict or ban it. The visual metaphor of erasing 'Abortion' and the juxtaposition with the slogan 'my body my choice' directly aligns with the messaging and visual rhetoric used by anti-abortion activists to symbolize the removal or rejection of abortion as a legal or moral option.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/01382.png",
+    "image_name": "01382.png",
+    "extraction_timestamp": "2025-12-15T10:37:48.680859",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

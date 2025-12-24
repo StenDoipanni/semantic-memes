@@ -1,0 +1,202 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Mysogynous; overall-intent-description: The image depicts an elderly woman falling on the floor, with text overlay that reads 'when you floor it but your passengers aren't ready.' The visual of an older woman falling is juxtaposed with the phrase 'floor it,' which is a driving term implying sudden acceleration. The meme uses this contrast to imply that the woman is clumsy or unprepared, which can be interpreted as mocking her physical abilities. This portrayal of an older woman as uncoordinated or incapable of handling sudden movements is a form of age-based stereotyping and can be considered misogynous, as it reinforces negative stereotypes about older women's physical competence and stability. The meme's intent is to create humor by highlighting the perceived clumsiness of older women, which can be seen as demeaning and potentially harmful to older women, contributing to ageist and misogynous attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you floor it",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "elderly_woman",
+      "label": "person",
+      "description": "An elderly woman with blonde hair, wearing a pink shirt and white pants, is sitting on the floor in a living room, appearing to have fallen. She is holding her leg and looking down with a pained or embarrassed expression. Her glasses are on the floor near her hand. This is the central visual subject and the focus of the meme's humor and stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "elderly_woman_falling",
+      "label": "elderly woman falling on floor",
+      "description": "An elderly woman is depicted sitting on the wooden floor in a living room, appearing to have fallen. She is holding her leg, looking down with a pained or embarrassed expression, and her glasses are on the floor near her hand. The scene is framed by household items like a white cabinet, a radiator, and a blue couch in the background. The text overlay 'when you floor it but your passengers aren't ready' contextualizes the scene as a humorous or mocking depiction of clumsiness or lack of preparedness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "driving_ability_mockery",
+      "label": "Driving Ability Mockery",
+      "description": "The phrase 'when you floor it' is a driving term meaning to accelerate suddenly. The meme uses this phrase in a context that implies the elderly woman is clumsy or unprepared for sudden movements, which is a common stereotype used to mock older people's physical abilities, particularly in driving contexts. This stereotype is part of broader misogynous and ageist tropes that portray older women as incapable or uncoordinated.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "elderly_woman_falling",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "age_appearance_based_value_judgments",
+      "label": "Age and Appearance-Based Value Judgments",
+      "description": "The meme relies on the stereotype that older women are less physically capable or more prone to clumsiness, which is a form of age-based discrimination. This stereotype reduces the value of older women based on their physical appearance and perceived mobility, reinforcing societal biases that older people are less competent or worthy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "elderly_woman_falling",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "clumsiness_stereotype",
+      "label": "Clumsiness Stereotype",
+      "description": "The image and text together imply that the elderly woman is clumsy, which is a common stereotype applied to older women. This stereotype is used humorously in the meme to suggest that she is unprepared for sudden movements, which is a form of ageist and misogynous humor that reinforces negative perceptions of older women's physical abilities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "elderly_woman_falling",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "The meme's portrayal of an elderly woman as clumsy or unprepared for sudden movements is rooted in misogynous stereotypes that portray older women as emotionally unstable or physically incapable. This reinforces negative societal attitudes toward older women, contributing to ageist and misogynous discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "elderly_woman_falling",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ageism",
+      "label": "Ageism",
+      "description": "The meme uses the image of an elderly woman falling to mock her physical abilities, which is a form of ageism. Ageism is the stereotyping and discrimination against individuals or groups based on their age, particularly older adults. The meme reinforces the idea that older people are less capable or more prone to accidents, which is a harmful societal bias.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "elderly_woman_falling",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "embarrassment",
+      "label": "embarrassed emotion",
+      "description": "The elderly woman's facial expression, with her head bowed and eyes looking down, conveys a sense of embarrassment or shame, likely due to having fallen and appearing unprepared or clumsy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The elderly woman is mapped as the 'passenger' who isn't ready for sudden acceleration.",
+      "description": "The text 'when you floor it but your passengers aren't ready' implies that the elderly woman is a passenger who is unprepared for sudden movements. The visual of her falling on the floor, holding her leg, and looking embarrassed is mapped onto this textual role, suggesting she is the 'passenger' who is clumsy or unprepared. This mapping is reinforced by the meme's overall intent to mock older women's physical abilities, which is a form of ageism and misogyny.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the elderly woman as the passenger who isn't ready",
+      "description": "The user is projected onto the elderly woman (VisualMaterial entity) who is depicted as the 'passenger' in the meme's scenario. The text 'when you floor it but your passengers aren't ready' uses 'your passengers' to imply the user is the driver, and the elderly woman is the passenger. The user identifies with the driver role, projecting themselves onto the scenario where they are causing the sudden movement ('flooring it') that results in the passenger (the elderly woman) falling. This projection is reinforced by the meme's overall intent to mock older women's physical abilities, making the user feel they are the one 'flooring it' while the 'passenger' (the elderly woman) is unprepared.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme portrays an elderly woman as clumsy and unprepared for sudden movements, reinforcing negative stereotypes about older women's physical competence and stability. This is rooted in misogynous tropes that portray older women as emotionally unstable or physically incapable, contributing to ageist and misogynous attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who are familiar with or find humor in ageist and misogynous stereotypes, particularly those who perceive older women as physically clumsy or unprepared for sudden movements. The meme appeals to a community that enjoys mocking or ridiculing older women’s physical abilities, often in the context of driving or everyday mobility. This audience may include younger adults or people who hold ageist or misogynous views, and who find amusement in portraying older women as 'unready' for sudden changes, reinforcing societal biases against older women. The humor is derived from the juxtaposition of the phrase 'when you floor it' (a driving term) with the image of an elderly woman falling, which targets those who accept or enjoy such stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/32485.png",
+    "image_name": "32485.png",
+    "extraction_timestamp": "2025-12-15T22:24:38.085492",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

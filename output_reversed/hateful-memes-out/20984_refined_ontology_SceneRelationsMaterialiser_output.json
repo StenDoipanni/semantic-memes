@@ -1,0 +1,47 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "child_with_defiant_expression",
+      "participants": [
+        {
+          "entity": "girl",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "man",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "girl",
+          "relation": "standsInFrontOf",
+          "to": "man"
+        },
+        {
+          "from": "girl",
+          "relation": "hasDefiantExpression",
+          "to": "man"
+        },
+        {
+          "from": "man",
+          "relation": "isBlurredInBackground",
+          "to": "girl"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":child_with_defiant_expression :hasParticipant :girl .",
+    ":child_with_defiant_expression :hasParticipant :man .",
+    ":girl :standsInFrontOf :man .",
+    ":girl :hasDefiantExpression :man .",
+    ":man :isBlurredInBackground :girl ."
+  ],
+  "triples_count": 5
+}

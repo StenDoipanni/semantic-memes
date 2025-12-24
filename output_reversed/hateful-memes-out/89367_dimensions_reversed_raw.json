@@ -1,0 +1,200 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: mr-president-epstein-still-alive; hasOverallIntent: Harmful; overall-intent-description: The meme uses a photo of former President Bill Clinton with the text 'mr. president, epstein is still alive' to imply that Clinton is somehow responsible for or complicit in the continued existence of Jeffrey Epstein, a convicted sex offender. This is a harmful meme because it attempts to link a former president to a criminal's alleged survival, potentially damaging Clinton's reputation and exploiting public outrage over Epstein's crimes. The meme is not directly abusive or hateful toward a protected group, but it is harmful as it spreads misinformation and conspiracy theories, which can incite public anger and undermine trust in political figures. The intent is to provoke shock and outrage by juxtaposing a respected political figure with a notorious criminal, thereby creating a false narrative of guilt or complicity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "mr. president,",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Bill_Clinton",
+      "label": "Former U.S. President",
+      "description": "A close-up of Bill Clinton, former President of the United States, shown with a serious, slightly skeptical expression. He is wearing a gray suit jacket over a red collared shirt, with white hair and visible facial lines. The background features a blurred American flag, suggesting a formal or political setting. He is the central and most salient visual entity in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "accusation_scene",
+      "label": "Accusation Scene",
+      "description": "A scene where a former U.S. President is visually depicted as being addressed with an accusatory message regarding the alleged survival of Jeffrey Epstein. The text overlays imply a direct address to the President, creating a confrontational and accusatory tone. The President is the central figure, and the text acts as the accusatory voice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "addresses",
+          "to": "Bill_Clinton"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "jeffrey_epstein",
+      "label": "Jeffrey Epstein",
+      "description": "Jeffrey Epstein was a convicted sex offender and financier who was arrested in 2019 and died in custody in 2019 under controversial circumstances. The meme references his alleged survival as a false or conspiratorial claim, implying that former President Bill Clinton may be responsible or complicit. This requires external knowledge of Epstein’s crimes, his arrest, and his death to understand the meme’s accusatory intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "bill_clinton_presidency",
+      "label": "Bill Clinton's Presidency",
+      "description": "Bill Clinton served as the 42nd President of the United States from 1993 to 2001. His presidency is associated with economic growth, the expansion of the internet, and the Monica Lewinsky scandal. The meme uses his image to imply a connection to Jeffrey Epstein, which requires knowledge of his political career and public image to understand the meme’s intent to link him to a criminal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "epstein_death_controversy",
+      "label": "Epstein's Death Controversy",
+      "description": "Jeffrey Epstein died in a federal prison in 2019 under circumstances that sparked public debate and conspiracy theories. The meme references his alleged survival, which is a false claim, and implies that Clinton may be responsible. This requires knowledge of the controversy surrounding Epstein’s death to understand the meme’s false accusation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "conspiracy_theory",
+      "label": "Conspiracy Theory",
+      "description": "The meme relies on the trope of conspiracy theories, which are false or unfounded explanations for events. The claim that Epstein is 'still alive' is a conspiracy theory, and the meme uses this to imply Clinton’s guilt or complicity. This requires knowledge of conspiracy theories to understand the meme’s intent to spread misinformation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_accusation_meme",
+      "label": "Political Accusation Meme",
+      "description": "This meme is a type of political accusation meme that uses a photo of a political figure to imply guilt or complicity in a crime. The meme’s intent is to provoke outrage and damage the reputation of the political figure. This requires knowledge of political memes and their use to understand the meme’s harmful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "skepticism",
+      "label": "skeptical expression",
+      "description": "Bill Clinton's facial expression, characterized by a slightly raised eyebrow, narrowed eyes, and a downturned mouth, conveys skepticism or disbelief. This expression suggests he is questioning or unconvinced by the accusation presented in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Accusation directed at the President",
+      "description": "The text 'mr. president,' directly addresses the visual entity Bill Clinton, mapping the textual role of 'Mr. President' onto the visual entity Bill Clinton. This creates an analogical mapping where the text assigns the formal title and role of President to the person depicted, implying he is being held accountable for the accusation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the accusatory scene",
+      "description": "The user is projected onto the accusatory scene where the text 'mr. president, epstein is still alive' is directed at Bill Clinton. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the meme's structure creates an implicit projection where the viewer assumes the role of the accuser, addressing the President directly. This projection is onto the scene as a whole, which includes both the visual material (Bill Clinton) and the textual material (the accusation).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme attempts to link former President Bill Clinton to the alleged survival of Jeffrey Epstein, a convicted sex offender, which is a harmful conspiracy theory. This falsely implies Clinton’s guilt or complicity, potentially damaging his reputation and exploiting public outrage over Epstein’s crimes. The meme spreads misinformation and can incite public anger and undermine trust in political figures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "Conspiracy Theory Enthusiasts",
+      "description": "The meme targets individuals who are drawn to conspiracy theories, particularly those that involve political figures and high-profile criminal cases. The false claim that Jeffrey Epstein is 'still alive' is a classic conspiracy trope, and the meme leverages this to appeal to audiences who enjoy or are skeptical of official narratives, especially regarding powerful individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/89367.png",
+    "image_name": "89367.png",
+    "extraction_timestamp": "2025-12-19T16:46:22.726592",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

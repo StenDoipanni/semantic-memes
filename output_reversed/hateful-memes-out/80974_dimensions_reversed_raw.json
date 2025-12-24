@@ -1,0 +1,161 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: bacon_and_cats_meme; hasOverallIntent: non-toxic; overall-intent-description: The meme juxtaposes an image of three cats with a plate of bacon, with text reading 'for no reason' and 'here's an image of bacon and cats'. The intent is purely humorous and absurd, playing on the common association of cats with bacon (as a food they might be tempted by). There is no toxicity, harmful content, or targeting of any protected group. The humor stems from the unexpected and random pairing of the two images, which is a common meme format used for lighthearted, non-malicious comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "Text content: 'for no reason'. Position: centered at the top of the image, above the image of the cats.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "bottom text overlay",
+      "description": "Text content: 'here's an image of bacon and cats'. Position: centered across the bottom half of the image, above the image of the bacon.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "cats",
+      "label": "three cats",
+      "description": "Three cats are visible in the top panel: one black cat with bright green eyes, and two tabby cats with striped fur. They are sitting side-by-side on a ledge, looking directly at the camera. The black cat is on the left, and the two tabbies are on the right. They are the central visual focus of the top panel.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "bacon_and_cats_scene",
+      "label": "bacon_and_cats_scene",
+      "description": "A scene composed of two distinct visual panels: the top panel shows three cats sitting side-by-side on a ledge, and the bottom panel shows a wooden cutting board with cooked bacon strips. The two panels are juxtaposed vertically, with text overlaying each panel. The cats are positioned centrally in the top panel, while the bacon is arranged in a row on the cutting board in the bottom panel. The scene is structured to create a humorous, absurd juxtaposition between cats and bacon, as indicated by the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "cats",
+          "relation": "juxtaposedWith",
+          "to": "bacon"
+        },
+        {
+          "from": "text",
+          "relation": "overlaying",
+          "to": "cats"
+        },
+        {
+          "from": "text",
+          "relation": "overlaying",
+          "to": "bacon"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cat_bacon_stereotype",
+      "label": "Cats and Bacon Stereotype",
+      "description": "The meme relies on the common cultural stereotype that cats are attracted to or obsessed with bacon, often depicted as being irresistibly drawn to it. This is a humorous exaggeration of a real-world phenomenon where cats may be tempted by the smell or taste of bacon, even though it is not part of their natural diet. The meme plays on this stereotype for comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "absurd_juxtaposition_meme_format",
+      "label": "Absurd Juxtaposition Meme Format",
+      "description": "The meme format used here — presenting two unrelated images with a caption that implies a random or nonsensical connection — is a common internet meme structure. It relies on the viewer’s understanding of internet humor culture, where absurdity and randomness are used for comedic effect. The phrase 'for no reason' is a key indicator of this format.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "humor",
+      "label": "humorous emotion",
+      "description": "The overall emotional tone of the meme is lighthearted and comedic, stemming from the absurd juxtaposition of cats and bacon, reinforced by the text 'for no reason' and 'here's an image of bacon and cats'. The humor is derived from the unexpected and random pairing, which is a common meme format for comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Text 'for no reason' maps to the absurd juxtaposition of cats and bacon",
+      "description": "The top text 'for no reason' establishes the meme's absurdist intent, mapping the entire visual scene (cats and bacon) as an arbitrary, nonsensical pairing. The text does not refer to a specific visual element but rather to the overall composition and intent of the scene, which is an absurd juxtaposition. The phrase 'for no reason' implies that the pairing of cats and bacon is random and without logical cause, which is the core of the meme's humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the absurd juxtaposition of cats and bacon",
+      "description": "The user is projected onto the overall scene (bacon_and_cats_scene) which is framed as an arbitrary, nonsensical pairing by the text 'for no reason'. The humor arises from the user being invited to perceive the image as a random, absurd combination, without any logical connection, which is a common meme format. There are no explicit deictic pronouns like 'me' or 'you', but the phrase 'for no reason' implicitly invites the user to accept the absurdity as the point of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "internet meme enthusiasts",
+      "description": "The target community is internet meme enthusiasts who are familiar with absurd juxtaposition humor and the specific cultural reference of cats being associated with bacon. The meme relies on understanding internet humor culture, where randomness and nonsensical pairings are used for comedic effect, as indicated by the text 'for no reason' and the visual contrast between cats and bacon.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/80974.png",
+    "image_name": "80974.png",
+    "extraction_timestamp": "2025-12-19T14:06:48.811455",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 11,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

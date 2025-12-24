@@ -1,0 +1,181 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: overall-intent_id; overall-intent-description: The image shows a man in a suit, likely from a historical or dramatic film, sitting in a chair and smoking, with text overlaid that reads 'i felt a great disturbance in the force' and 'as if a million snowflakes all melted at once.' The scene is a visual reference to the Star Wars character Obi-Wan Kenobi, known for his Jedi powers and the phrase 'I felt a great disturbance in the force.' The text is a humorous, absurd, and self-aware parody of the dramatic tone of Star Wars, using an exaggerated and nonsensical metaphor to describe a minor or trivial event. The overall intent is comedic and satirical, aiming to evoke laughter through the juxtaposition of a serious, cinematic moment with a ridiculous, over-the-top explanation. There is no toxicity, harmful content, or hateful messaging present. The meme is purely for entertainment and does not target any specific group or individual with disparaging or harmful intent. The intent is to create humor through absurdity and pop culture reference.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "i felt a great disturbance in the force",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "elderly man in suit",
+      "description": "An elderly man with a white beard and mustache, wearing a dark suit, vest, and bow tie, seated in a chair and smoking a cigarette. He appears contemplative or serious, with one hand near his mouth and the other resting on his lap. The setting is an indoor room with warm lighting, likely from a lamp visible in the background. This is a still from a film, visually resembling the character Obi-Wan Kenobi from Star Wars, though the image is not from the original Star Wars films but rather a still from a different production (possibly 'The Man Who Knew Too Much' or similar period drama).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "contemplative_man_smoking",
+      "label": "man contemplating while smoking",
+      "description": "An elderly man in a suit is seated in a chair, holding a cigarette near his mouth, appearing contemplative or serious. The setting is an indoor room with warm lighting from a lamp in the background. The man is the central visual element, and his posture and expression suggest deep thought or concern.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "star_wars_jedi_force",
+      "label": "Star Wars Jedi Force",
+      "description": "The phrase 'I felt a great disturbance in the force' is a famous line from the Star Wars franchise, spoken by the Jedi Master Obi-Wan Kenobi. It refers to the mystical energy field that surrounds all living things, which Jedi and Sith can sense and manipulate. This concept is central to the Star Wars universe and is not visible in the image but is essential to understanding the meme's reference.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "obi_wan_kenobi",
+      "label": "Obi-Wan Kenobi",
+      "description": "Obi-Wan Kenobi is a fictional character from the Star Wars universe, portrayed by actors such as Alec Guinness and Ewan McGregor. He is a Jedi Master known for his wisdom, calm demeanor, and iconic lines. The visual of the elderly man in the suit is a well-known visual reference to Obi-Wan Kenobi, even though the image is from a different film. This character is essential to understanding the meme's visual and textual parody.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "contemplative_man_smoking",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "star_wars_culture",
+      "label": "Star Wars Culture",
+      "description": "Star Wars is a global cultural phenomenon that has influenced film, fashion, language, and popular imagination for decades. The phrase 'I felt a great disturbance in the force' is part of the iconic lexicon of the franchise. The meme's humor relies on the audience recognizing this cultural reference and the dramatic tone associated with it, which is not visible in the image but is required for comprehension.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "absurd_comedy",
+      "label": "Absurd Comedy",
+      "description": "The meme uses absurd humor by juxtaposing a serious, cinematic moment (Obi-Wan sensing the Force) with a ridiculous, nonsensical metaphor ('as if a million snowflakes all melted at once'). This comedic technique relies on the audience understanding the contrast between high-stakes dramatic tropes and low-stakes, trivial explanations, which is a common trope in internet humor and satire.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "snowflake_metaphor",
+      "label": "Snowflake Metaphor",
+      "description": "The phrase 'as if a million snowflakes all melted at once' is a hyperbolic, absurd metaphor used to describe a sudden, overwhelming, or emotionally impactful event. While not a widely recognized cultural reference, it is a form of figurative language that requires understanding of metaphorical expression to be appreciated in context. The meme uses this to parody the dramatic tone of Star Wars.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contemplative_seriousness",
+      "label": "serious contemplative emotion",
+      "description": "The man's facial expression, with his brow slightly furrowed and his gaze directed thoughtfully, conveys a sense of deep contemplation or seriousness. His posture, with one hand near his mouth while smoking, reinforces this introspective and solemn mood.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man is mapped as Obi-Wan Kenobi sensing the Force",
+      "description": "The visual of the elderly man in a contemplative pose, smoking, is mapped onto the textual phrase 'i felt a great disturbance in the force', which is a famous line from Star Wars spoken by Obi-Wan Kenobi. The visual material (the man) is being used to represent the character Obi-Wan Kenobi in the context of his iconic line, creating an analogical mapping where the man's serious demeanor and setting evoke the dramatic tone of the Star Wars character.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual metaphor as a self-referential experience",
+      "description": "The user is projected onto the bottom textual material ('as if a million snowflakes all melted at once') as a way to identify with the absurd, exaggerated emotional response being described. The meme invites the user to imagine themselves experiencing this trivial yet overwhelming sensation, making the metaphor a direct projection of the user's potential subjective experience. There is no explicit deictic pronoun like 'me' or 'you', but the self-referential nature of the humor implies the user is the one feeling the 'disturbance' or imagining the 'snowflakes melting'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "star_wars_culture",
+      "label": "Star Wars fans",
+      "description": "The meme relies on a well-known cultural reference from the Star Wars franchise, specifically the iconic line 'I felt a great disturbance in the force' spoken by Obi-Wan Kenobi. The humor is derived from the audience's recognition of this phrase and its dramatic context, making Star Wars fans the primary target community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/71482.png",
+    "image_name": "71482.png",
+    "extraction_timestamp": "2025-12-19T11:01:32.050230",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,183 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a man with a beard and hair styled in a manbun, wearing a patterned shirt, sitting on a couch. The text overlay reads: \"you know it's going a be a serious blowjob when he puts his hair up in a manbun.\" The overall intent of this meme is to use a sexualized and objectifying trope to mock or stereotype men who wear their hair in a manbun, implying that such a hairstyle is somehow linked to sexual performance or availability. This is a form of harmful content because it reduces a person's identity to a sexualized stereotype, potentially contributing to the objectification of men and reinforcing gendered assumptions about masculinity and sexual behavior. The meme does not target a specific racial, ethnic, religious, or LGBTQ+ group, but it does contain misogynous undertones by using hypersexualized language to describe a male physical trait, which can be seen as a form of gendered objectification. The intent is to create humor through the juxtaposition of the image of a man with a manbun and the sexually suggestive text, but this humor is rooted in a potentially demeaning stereotype that could be offensive to some viewers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top_text",
+      "description": "you know it's going a be a serious blowjob",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "a man with a beard and hair styled in a manbun",
+      "description": "The central figure in the image is a man with a full beard and dark hair pulled up into a manbun. He is wearing a patterned, open-collared shirt and appears to be sitting on a couch, with his hands placed on top of his head. His expression is somewhat pensive or self-conscious. The man is the primary subject and the focus of the meme's visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "man_with_manbun_sitting_on_couch",
+      "label": "man with manbun sitting on couch",
+      "description": "A man with a beard and hair styled in a manbun is sitting on a couch, with his hands placed on top of his head. He is wearing a patterned, open-collared shirt. The scene is framed by a patterned canopy above him, suggesting an indoor setting, possibly a living room or lounge area. The text overlay humorously suggests that his hairstyle implies a certain level of sexual performance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization_of_men",
+      "label": "Hypersexualization of Men",
+      "description": "The meme relies on the stereotype that men with manbuns are hypersexualized, implying they are sexually available or performative. This is a form of gendered objectification that reduces a man's identity to a sexualized trait, which is a common misogynous trope in popular culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_with_manbun_sitting_on_couch",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "manbun_stereotype",
+      "label": "Manbun Stereotype",
+      "description": "The manbun hairstyle is culturally associated with certain male archetypes, often linked to masculinity, sexual availability, or 'coolness'. The meme uses this stereotype to imply that a manbun signals a specific sexual performance, which is a form of objectification.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_with_manbun_sitting_on_couch",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_undertones",
+      "label": "Misogynous Undertones",
+      "description": "The meme contains misogynous undertones by using hypersexualized language to describe a male physical trait, which can be seen as a form of gendered objectification. This trope reinforces harmful assumptions about masculinity and sexual behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_with_manbun_sitting_on_couch",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexual_performance_stereotype",
+      "label": "Sexual Performance Stereotype",
+      "description": "The meme implies that a man's hairstyle (manbun) is a signifier of his sexual performance, which is a stereotype that reduces a person's identity to a sexualized trope. This is a common trope in humor that objectifies men based on their appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_with_manbun_sitting_on_couch",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "self_consciousness",
+      "label": "self-conscious emotion",
+      "description": "The man's posture—hands on his head, looking downward—and his pensive facial expression suggest he is feeling self-conscious or perhaps embarrassed, possibly in response to the stereotype being applied to him via the text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "manbun hairstyle mapped to sexual performance stereotype",
+      "description": "The text 'you know it's going a be a serious blowjob when he puts his hair up in a manbun' explicitly maps the visual entity 'man_with_manbun_sitting_on_couch' (specifically his manbun hairstyle) onto the textual concept of 'sexual performance'. The meme uses the manbun as a signifier for hypersexualized behavior, creating an analogical mapping between the visual trait and the textual stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man with manbun",
+      "description": "The user is projected onto the visual material of the man with a manbun, as the meme uses the text 'you know it's going a be a serious blowjob' to imply that the viewer (user) is imagining themselves in the context of the man's hairstyle and its supposed sexual connotation. The projection is indirect but implied through the first-person perspective of the text, which frames the viewer as someone who would recognize or experience the situation described.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Misogynous",
+      "description": "The meme contains misogynous undertones by using hypersexualized language to describe a male physical trait, which can be seen as a form of gendered objectification. This trope reinforces harmful assumptions about masculinity and sexual behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who are familiar with and find humor in gendered stereotypes, particularly those that hypersexualize men based on their appearance (e.g., manbun hairstyle). The meme appeals to an audience that understands and engages with internet humor rooted in objectification and sexualized tropes, often found in online communities that share memes with misogynous undertones. The audience likely includes people who recognize the manbun as a cultural signifier of masculinity or sexual availability and who find the juxtaposition of the image with the hypersexualized text amusing, even if it is offensive to others. The meme’s humor is derived from reinforcing a stereotype that reduces a man’s identity to a sexualized trait, which is a common trope in certain online spaces that prioritize shock value or exaggerated humor over sensitivity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/83216.png",
+    "image_name": "83216.png",
+    "extraction_timestamp": "2025-12-19T14:36:46.531709",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,189 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: you-just-ran-past-full-retard-and-went-straight-to-potato; hasOverallIntent: Abusive; overall-intent-description: The image features a man with a stern, intense expression, overlaid with text that reads 'you just ran past full retard and went straight to potato.' The phrase 'full retard' is a derogatory slur targeting individuals with intellectual disabilities, falling under the category of ableism. The juxtaposition of the man's serious demeanor with the crude, insulting text creates a meme intended to mock or insult someone who allegedly failed to recognize or acknowledge a person with a disability. The use of such a slur is abusive and degrading, aiming to demean the target of the meme by invoking a harmful stereotype. The 'potato' reference is a common internet trope used to imply someone is unintelligent or foolish, further reinforcing the insult. The overall intent is to deliver a hostile, mocking message that targets individuals with disabilities, making it abusive in nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "you just ran past full retard",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with disheveled brown hair, intense blue eyes, and a stern, focused expression, wearing a green military-style uniform. He is the central subject of the image and is overlaid with text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "abusive_meme_scene",
+      "label": "Abusive Meme Scene",
+      "description": "A scene depicting a man with a stern expression overlaid with abusive text. The text is meant to insult someone by referencing a disability and using a derogatory trope ('potato'). The man's intense gaze and the confrontational text create a hostile, mocking atmosphere.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "isOverlaidBy",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism_stereotype",
+      "label": "Ableism Stereotype",
+      "description": "The meme uses derogatory language targeting individuals with intellectual disabilities, specifically the term 'full retard,' which is a slur rooted in ableist prejudice. This stereotype dehumanizes and mocks people with disabilities by equating them with unintelligence or incompetence, reinforcing harmful societal attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "potato_trope",
+      "label": "Potato Trope",
+      "description": "The phrase 'went straight to potato' is an internet meme trope used to describe someone as unintelligent or foolish. It is a form of ridicule that implies the person lacks critical thinking or common sense, often used in a mocking or dismissive context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "derogatory_slur",
+      "label": "Derogatory Slur",
+      "description": "The term 'retard' (used in 'full retard') is a historically offensive and derogatory slur used to demean individuals with intellectual disabilities. Its use in the meme is a direct example of ableist language that perpetuates stigma and discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mocking_expression",
+      "label": "Mocking Expression",
+      "description": "The man's stern, intense gaze is used to convey a confrontational or accusatory tone, which, when combined with the abusive text, serves to amplify the insult. This visual cue is culturally understood as a form of aggressive mockery or judgment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_expression",
+      "label": "mocking emotion",
+      "description": "The man's stern, intense gaze and focused expression convey a confrontational and accusatory tone, which, when combined with the abusive text, serves to amplify the insult and mockery directed at the target of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'you just ran past full retard' maps to the man as the target of the insult.",
+      "description": "The top text overlay 'you just ran past full retard' directly refers to a person (the target of the meme) who allegedly failed to acknowledge or recognize someone with a disability. The man in the image, with his stern and confrontational expression, is visually mapped as the embodiment of this target — the person being mocked for their supposed ignorance or dismissiveness. The visual material (the man) is thus mapped onto the textual entity (the insult directed at 'you').",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the target of the insult",
+      "description": "The user is projected onto the person being mocked, as indicated by the text 'you just ran past full retard'. The text directly addresses the user ('you'), making the user the target of the insult. The visual material (the man) is used to represent this target, creating a semiotic projection where the user sees themselves as the subject of the mockery. The man's stern expression reinforces the accusatory tone directed at the user.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Abusive",
+      "description": "The meme uses derogatory language targeting individuals with intellectual disabilities, specifically the term 'full retard,' which is a slur rooted in ableist prejudice. This stereotype dehumanizes and mocks people with disabilities by equating them with unintelligence or incompetence, reinforcing harmful societal attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with internet meme culture, particularly those who recognize and understand the 'potato' trope and the use of derogatory ableist slurs. The meme is designed to be understood and appreciated by users who find humor in mocking ignorance or perceived stupidity, especially in the context of disability. The audience likely includes online communities that engage with edgy, confrontational, or abusive humor, where the use of such slurs is normalized or seen as 'dark comedy'. The visual of the stern man is used to amplify the insult, appealing to an audience that interprets such expressions as aggressive mockery. The meme's toxicity and offensive nature suggest it is targeted at users who are desensitized to ableist language and who may find the combination of the 'potato' trope and the 'full retard' slur amusing or entertaining, despite its harmful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/64193.png",
+    "image_name": "64193.png",
+    "extraction_timestamp": "2025-12-16T08:07:20.034199",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

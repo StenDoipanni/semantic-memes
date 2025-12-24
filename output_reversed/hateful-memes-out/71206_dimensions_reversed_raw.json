@@ -1,0 +1,218 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image features a Black man with a serious expression against a textured background, overlaid with text that delivers a moralistic message about relationships and financial responsibility. The text advises against having multiple girlfriends, suggesting that it leads to financial loss and lack of life progress, and instead promotes finding one girlfriend to invest in and build a future together. While the message is framed as advice, it contains harmful stereotypes by implying that Black men are inherently prone to financial irresponsibility and relationship instability due to having multiple partners. This perpetuates a negative stereotype that links Black men with promiscuity and financial mismanagement, which is a form of racialized misogyny and harmful generalization. The meme uses the man's image to visually reinforce the stereotype, potentially reinforcing damaging societal narratives about Black men's behavior and financial competence. The overall intent is to deliver a moralistic, racially coded message that could be interpreted as a warning or judgment, which may contribute to harmful social perceptions and discrimination against Black men.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "my brother, the more girlfriends you have the more money you lose, the more you don't progress in life",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "Black man",
+      "description": "A Black man with a serious, intense expression, looking directly at the camera. He has short dark hair, visible facial stubble, and is wearing a brightly patterned shirt with yellow, white, and blue floral or geometric designs. His skin tone is dark, and his eyes are a striking amber or brown color. The background is a textured, reddish-brown brick or mud wall, suggesting an outdoor or rustic setting. The man's expression and the context of the overlaid text suggest a tone of warning or moral instruction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "moral_advice_scene",
+      "label": "moral_advice_scene",
+      "description": "A scene where a Black man with a serious expression is visually used to deliver a moralistic message about relationships and financial responsibility. The text overlays the image, advising against multiple girlfriends and promoting commitment to one partner. The man's intense gaze and the rustic background contribute to a tone of warning or moral instruction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "delivers_message_to",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "advises",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_hypersexualization",
+      "label": "Anti-Black Stereotype: Hypersexualization",
+      "description": "The meme implicitly relies on the stereotype that Black men are inherently promiscuous or sexually driven, which is used to justify the moralistic warning about having multiple girlfriends. This stereotype is a form of racialized misogyny and is commonly used to pathologize Black male sexuality and behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "moral_advice_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_financial_irresponsibility",
+      "label": "Anti-Black Stereotype: Financial Irresponsibility",
+      "description": "The meme implicitly references the stereotype that Black men are financially irresponsible or prone to spending money recklessly, particularly in the context of relationships. This stereotype is used to frame the message that having multiple girlfriends leads to financial loss, reinforcing a harmful racialized narrative about Black men's economic competence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "moral_advice_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racialized_misogyny",
+      "label": "Racialized Misogyny",
+      "description": "The meme combines racial stereotypes (about Black men) with misogynistic tropes (about women being 'gold diggers' or requiring financial investment) to deliver a moralistic message. This intersection of racism and misogyny is a key element of the meme's harmful intent, as it blames Black men for relationship failures while implicitly devaluing women as financial assets.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "moral_advice_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "moralistic_advice_tropes",
+      "label": "Moralistic Advice Tropes",
+      "description": "The meme uses a common cultural trope of delivering moralistic advice through a stern, authoritative figure (in this case, a Black man). This trope is often used to frame complex social issues as simple moral failures, which can be harmful when applied to marginalized groups. The use of a Black man as the moral authority reinforces the stereotype that Black men are inherently 'wise' or 'responsible' in a way that is not true for all individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "moral_advice_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_black_man_as_fool",
+      "label": "Stereotype: Black Man as Fool",
+      "description": "The meme implicitly relies on the stereotype that Black men are 'fools' or 'simpletons' who are easily led astray by women, particularly in financial matters. This stereotype is used to justify the moralistic warning and to position the Black man as the 'victim' of his own choices, which is a form of racialized victim-blaming.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "moral_advice_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "serious_warning",
+      "label": "serious warning expression",
+      "description": "The man's intense, direct gaze and solemn facial expression convey a tone of stern admonishment or moral instruction, as if delivering a grave warning to the viewer. His unsmiling, focused look reinforces the gravity of the overlaid text's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The man is mapped as 'my brother' delivering moral advice",
+      "description": "The top text 'my brother, the more girlfriends you have...' explicitly identifies the visual entity (the Black man) as 'my brother'. This creates an analogical mapping where the man is being projected as a moral authority figure ('my brother') who is giving advice. The visual material (the man's serious expression) is mapped onto the textual role of 'my brother' who is delivering a warning. This mapping reinforces the stereotype that Black men are inherently moral authorities or figures of wisdom, which is part of the racialized moralistic trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual advice as the recipient of moral instruction",
+      "description": "The user is projected onto the textual material as the intended recipient of the moral advice. The text explicitly uses 'you' ('you have the more girlfriends you have...') and 'your' ('your future'), directly addressing the viewer. This creates a semiotic projection where the user is positioned as the person who must heed the advice, making the moralistic message feel personal and directed at them. The visual material (the man) is presented as the moral authority ('my brother') delivering this advice to 'you'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_2",
+      "label": "User projected onto the visual material as the moral authority figure",
+      "description": "The user is projected onto the visual material (the Black man) as the moral authority figure ('my brother') who is delivering the advice. The text explicitly identifies the man as 'my brother', which creates an analogical mapping where the user is implicitly positioned as the 'sibling' or 'relative' who is being addressed by this moral figure. This projection reinforces the stereotype that Black men are inherently moral authorities or figures of wisdom, which is part of the racialized moralistic trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Racialized Misogyny",
+      "description": "The meme combines racial stereotypes about Black men with misogynistic tropes, implying that Black men are inherently prone to financial irresponsibility and relationship instability due to having multiple partners, while also suggesting women are financial assets to be 'invested in'. This intersection of racism and misogyny is a key element of the meme's harmful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are exposed to or consume internet memes, particularly those who may be influenced by or resonate with moralistic, racially coded advice. The meme is designed to appeal to a broad online audience, but its harmful stereotypes primarily target and reinforce negative perceptions of Black men, making it especially impactful for communities that may already hold or be exposed to anti-Black stereotypes. The use of a Black man as the moral authority figure ('my brother') and the framing of the message as a warning or life advice suggest the meme is intended for viewers who are open to simplistic moral lessons, potentially including younger audiences or those seeking social commentary. The meme’s racialized misogyny and financial stereotypes also imply it may be consumed by audiences who are familiar with or perpetuate these harmful tropes, often found in online spaces that normalize or amplify racial and gendered stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/71206.png",
+    "image_name": "71206.png",
+    "extraction_timestamp": "2025-12-19T10:52:55.651771",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,196 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The scene features a bald man (actor Patrick Stewart) pointing directly at the viewer, with text overlaid that reads: 'if you're gonna screenshot a meme at least crop out the black space.' The meme is a common internet trope used to mock or criticize people who take screenshots of memes without cropping out unnecessary black bars or empty space around the image. The intent is to deliver a lighthearted, humorous scolding or critique of poor meme-sharing etiquette. There is no toxicity present in this meme. It does not target any specific group based on protected characteristics, nor does it contain abusive, cyberbullying, harmful, hateful, misogynous, or propagandistic content. The intent is purely comedic and instructional, using the actor's stern expression and pointing gesture to analogically map the 'scolding' tone onto the textual advice about meme formatting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "if you're gonna screenshot a meme",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Patrick_Stewart",
+      "label": "actor",
+      "description": "A bald, older man with a stern expression, wearing a dark hoodie over a gray t-shirt, pointing directly at the viewer. He is the central visual element and the subject of the meme's scolding tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "scolding_meme",
+      "label": "a man scolding the viewer about meme formatting",
+      "description": "The scene features Patrick_Stewart pointing directly at the viewer with a stern expression, overlaid with text that reads: 'if you're gonna screenshot a meme at least crop out the black space.' The composition uses his direct gaze and gesture to create a confrontational, scolding tone toward the audience, instructing them on proper meme-sharing etiquette.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Patrick_Stewart",
+          "relation": "pointsAt",
+          "to": "viewer"
+        },
+        {
+          "from": "Patrick_Stewart",
+          "relation": "scolds",
+          "to": "viewer"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_formatting_etiquette",
+      "label": "Meme Formatting Etiquette",
+      "description": "The implicit cultural norm that memes should be cropped to remove unnecessary black bars or empty space when shared, to maintain visual clarity and aesthetic appeal. This is a common social expectation in online communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scolding_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "patrick_stewart_actor",
+      "label": "Patrick Stewart as Actor",
+      "description": "Patrick Stewart is a well-known actor, famous for his role as Captain Jean-Luc Picard in Star Trek: The Next Generation. His stern, authoritative demeanor and direct gaze are often used in memes to convey a scolding or admonishing tone, making him a popular figure for this type of meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scolding_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "star_trek_culture",
+      "label": "Star Trek Cultural Reference",
+      "description": "The meme leverages Patrick Stewart's iconic role as Captain Picard from Star Trek, a franchise known for its themes of leadership, discipline, and moral authority. The use of his character implies a 'Captain Picard' style of scolding, which is culturally understood by fans and internet users.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scolding_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "internet_meme_tropes",
+      "label": "Internet Meme Tropes",
+      "description": "The meme format of a person pointing sternly at the viewer to deliver advice or criticism is a common internet trope. This trope is used to create a humorous, exaggerated sense of accountability or moral instruction, often in a lighthearted context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scolding_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_media_practices",
+      "label": "Social Media Practices",
+      "description": "The meme references the common practice of screenshotting and sharing memes on social media platforms. The critique is about proper formatting etiquette, which is a real-world concern in digital communication and content sharing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scolding_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "scolding",
+      "label": "the scolding emotion",
+      "description": "The emotion expressed is a stern, admonishing tone, conveyed through Patrick Stewart's direct gaze, pointing finger, and serious facial expression, combined with the text that delivers a humorous critique about meme formatting. This creates a lighthearted but authoritative scolding directed at the viewer.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "scolding_mapping_001",
+      "label": "The viewer is mapped onto Patrick Stewart as the recipient of scolding advice",
+      "description": "The text 'if you're gonna screenshot a meme' implicitly refers to the viewer as the person performing the action. This textual entity is analogically mapped onto Patrick Stewart, who visually embodies the role of the scolding authority figure. His stern expression, direct gaze, and pointing gesture create a visual representation of someone scolding the viewer, thus establishing the mapping between the textual 'you' (the viewer) and the visual entity Patrick_Stewart.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene as the recipient of scolding advice",
+      "description": "The user is projected onto the scene (scolding_meme) as the person being scolded for improper meme formatting. This projection is established through the textual material ('if you're gonna screenshot a meme') which directly addresses the viewer ('you'), and the visual material (Patrick_Stewart pointing sternly) which visually embodies the role of the scolding authority figure. The mapping is analogical: the viewer ('you') is projected onto Patrick_Stewart as the recipient of the scolding instruction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "meme_formatting_etiquette",
+      "label": "Meme Formatting Etiquette",
+      "description": "The target community is individuals who engage in sharing memes on social media platforms, particularly those who are aware of and care about visual presentation and aesthetic standards in digital content. The meme critiques poor meme-sharing practices, specifically the failure to crop out black bars, which is a common issue in online meme culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/83074.png",
+    "image_name": "83074.png",
+    "extraction_timestamp": "2025-12-19T14:35:08.392053",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

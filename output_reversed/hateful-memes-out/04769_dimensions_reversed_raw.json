@@ -1,0 +1,179 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Mysogynous; overall-intent-description: The image depicts a woman from behind, wearing a sweater and red underwear, looking out a window. The text reads: 'if she's pouting like this and you don't immediately drop the argument, motherfucker you gay.' The overall intent is to use the visual of a woman's body (specifically her backside and underwear) in a suggestive manner to imply that if a woman is upset or pouting, a man should immediately concede an argument, otherwise he is deemed gay. This is a misogynistic trope that objectifies women by reducing their emotional expression to a physical cue that should compel men to submit, and it uses a homophobic slur ('motherfucker you gay') to enforce this behavior. The meme is designed to normalize male submission to female emotional displays while simultaneously mocking men who don't comply, using gendered stereotypes and a homophobic insult to reinforce its message. The visual element (the woman's body) is juxtaposed with the text to create a crude, objectifying message that frames women's emotions as a tool to control men's behavior, which is a clear example of mysogynous intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "if she's pouting like this and you don't immediately",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "a woman viewed from behind, wearing a grey sweater and red underwear, sitting near a window. Her posture suggests she is pouting or looking out the window with a sulky expression. The focus is on her backside and the visible underwear, which is used to create a suggestive or objectifying visual.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "woman_pouting_at_window",
+      "label": "woman pouting at window",
+      "description": "A woman viewed from behind, wearing a grey sweater and red underwear, is sitting near a window. Her posture suggests she is pouting or looking out the window with a sulky expression. The focus is on her backside and the visible underwear, which is used to create a suggestive or objectifying visual. The scene is framed to emphasize her physical form in relation to the window, with the text overlay providing context about her emotional state and the expected male response.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype",
+      "label": "Misogynous Stereotype",
+      "description": "The meme relies on the stereotype that women's emotional expressions (like pouting) should compel men to submit or concede arguments, reducing women's emotional states to a tool for male behavioral control. This is a misogynistic trope that objectifies women by focusing on their bodies and linking their emotional displays to male submission.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "woman_pouting_at_window",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "homophobic_slur",
+      "label": "Homophobic Slur",
+      "description": "The use of the slur 'motherfucker you gay' is a homophobic insult used to shame or demean men who do not immediately concede to a woman's emotional display. This leverages the fear of being labeled gay as a social punishment to enforce gendered behavioral norms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gendered_behavior_norm",
+      "label": "Gendered Behavior Norm",
+      "description": "The meme implicitly references the social expectation that men should be submissive to women's emotional cues, particularly in domestic or interpersonal settings. This norm is enforced through ridicule and shame, using gendered stereotypes to reinforce male compliance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman_pouting_at_window",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification",
+      "label": "Objectification",
+      "description": "The visual focus on the woman's backside and underwear, combined with the text, objectifies her body as a cue for male behavior rather than as a person with agency or emotional depth. This is a common tactic in misogynistic memes to reduce women to physical attributes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "woman_pouting_at_window",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "pouting",
+      "label": "the sulky emotional expression",
+      "description": "The woman's posture, viewed from behind, suggests she is pouting or looking out the window with a sulky expression. This is an emotional gesture indicating displeasure or resentment, often used to signal that someone is upset or wants something to change.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The woman's pouting expression is mapped as the trigger for male submission",
+      "description": "The text 'if she's pouting like this' directly maps onto the visual depiction of the woman viewed from behind, suggesting her posture and expression (pouting) are the key visual cue that should compel the male viewer to immediately drop the argument. The visual entity (woman_pouting_at_window) is the subject of the textual condition, establishing an analogical mapping where the woman's emotional state (pouting) is the trigger for the behavioral norm described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the viewer's expected behavioral response to the woman's pouting",
+      "description": "The user is projected onto the implied 'you' in the text, which commands the viewer to immediately drop the argument if the woman is pouting. This creates a direct address to the user, positioning them as the male figure expected to comply with the misogynistic norm. The projection is onto the textual material that demands action from the viewer, making the user the subject of the behavioral expectation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme objectifies the woman by focusing on her body (backside and underwear) and reduces her emotional expression (pouting) to a tool that should compel male submission, reinforcing harmful gender stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "men",
+      "description": "The meme is designed for a male audience, as it uses a homophobic slur ('motherfucker you gay') to shame men who do not immediately concede to a woman's emotional display, thereby enforcing gendered behavioral norms. The visual objectification of the woman's body is also targeted at men, implying they should respond to her physical cues.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/04769.png",
+    "image_name": "04769.png",
+    "extraction_timestamp": "2025-12-15T11:48:27.063823",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

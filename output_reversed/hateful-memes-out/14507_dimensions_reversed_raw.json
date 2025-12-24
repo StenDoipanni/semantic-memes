@@ -1,0 +1,178 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme depicts two people covering their mouths in apparent distress or discomfort, with text that reads 'when your history teacher starts talking about the holocaust.' The overall intent is to humorously suggest that discussing the Holocaust is so emotionally overwhelming or disturbing that it causes physical reactions like gagging or crying. While the meme uses a common comedic trope of exaggerated emotional response, it is harmful because it trivializes the profound suffering and historical gravity of the Holocaust. The Holocaust was the systematic, state-sponsored persecution and murder of six million Jews by Nazi Germany and its collaborators. Reducing such a monumental atrocity to a joke about discomfort or gagging undermines its historical significance and the trauma experienced by survivors and their descendants. This trivialization can be seen as disrespectful and potentially offensive to victims, survivors, and the broader Jewish community, and it risks normalizing the minimization of genocide. The meme's intent is to create humor through shock value, but this humor is derived from the very subject matter that demands solemnity and respect, making it inherently harmful in its potential to diminish the gravity of one of history's most horrific events.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when your history teacher",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with dark hair, wearing a light-colored checkered shirt, sitting with his hand over his mouth, appearing distressed or uncomfortable.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "distressed_people",
+      "label": "people covering mouths in distress",
+      "description": "Two people are sitting side by side, both covering their mouths with their hands, showing expressions of discomfort or distress. The man on the right has his hand over his mouth and appears to be gagging or crying. The woman on the left also covers her mouth and has a pained expression. They are positioned next to each other against a plain background, suggesting a shared emotional reaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "sittingNextTo",
+          "to": "woman"
+        },
+        {
+          "from": "woman",
+          "relation": "sittingNextTo",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust",
+      "label": "The Holocaust",
+      "description": "The Holocaust was the systematic, state-sponsored persecution and murder of six million Jews by Nazi Germany and its collaborators. It is one of the most horrific genocides in human history and demands solemnity and respect. The meme references this event to imply that discussing it causes extreme emotional discomfort, which is a form of trivialization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust_minimization",
+      "label": "Holocaust Minimization",
+      "description": "A form of antisemitic trope that involves downplaying or trivializing the Holocaust, often by reducing its gravity to something humorous or mundane. This is considered harmful and offensive as it undermines the suffering of victims and the historical significance of the event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "History_teacher",
+      "label": "History Teacher",
+      "description": "A professional educator who teaches history, often covering sensitive and traumatic events such as the Holocaust. The meme implies that the teacher's discussion of the Holocaust is so emotionally overwhelming that it causes physical reactions in students, which is a humorous but harmful trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Emotional_distress_in_class",
+      "label": "Emotional Distress in Class",
+      "description": "A social phenomenon where students experience strong emotional reactions during class discussions, particularly on sensitive historical topics. The meme uses this as a comedic device to exaggerate the emotional impact of learning about the Holocaust.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "distressed_people",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "distress",
+      "label": "emotional distress",
+      "description": "Both individuals are covering their mouths with their hands and displaying pained facial expressions, suggesting strong emotional discomfort or nausea. This is a physical manifestation of being overwhelmed or disturbed by the subject matter mentioned in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The emotional distress of students reacting to a history teacher discussing the Holocaust is mapped onto the visual of two people covering their mouths in discomfort.",
+      "description": "The text 'when your history teacher starts talking about the holocaust' is mapped onto the visual of two people (a man and a woman) covering their mouths and showing expressions of distress. This mapping suggests that the visual representation of emotional discomfort (distress) is being used to symbolize the overwhelming emotional reaction one might have to learning about the Holocaust in class. The visual material (distressed_people) is being analogically mapped to the textual material (text_chunk) to convey the idea that the subject matter is so emotionally heavy that it causes physical reactions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of distressed people",
+      "description": "The user is projected onto the visual scene of two people covering their mouths in distress, as indicated by the textual material 'when your history teacher starts talking about the holocaust.' The phrase 'your history teacher' directly addresses the user, implying that the user is the one experiencing the emotional reaction depicted in the visual material. The user is thus projected onto the scene of emotional distress (distressed_people) as a representation of their own potential reaction to the topic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the Holocaust by reducing its profound historical and emotional gravity to a humorous or comedic trope of exaggerated emotional distress. This minimization can be seen as disrespectful and potentially offensive to victims, survivors, and the broader Jewish community, and it risks normalizing the minimization of genocide.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "students or history class participants",
+      "description": "The meme targets individuals who have experienced or are familiar with the emotional impact of learning about the Holocaust in a history class, particularly students who may feel overwhelmed or distressed during such discussions. The visual of two people covering their mouths in distress, paired with the text 'when your history teacher starts talking about the holocaust,' is designed to resonate with students who have encountered this topic in school, implying a shared, exaggerated emotional reaction. The target community is likely young adults or teenagers who have been exposed to Holocaust education in a formal educational setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/14507.png",
+    "image_name": "14507.png",
+    "extraction_timestamp": "2025-12-15T15:46:24.018736",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

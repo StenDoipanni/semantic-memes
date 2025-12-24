@@ -1,0 +1,35 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "cosplay_on_red_carpet",
+      "participants": [
+        {
+          "entity": "Goku",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "Luffy",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Goku",
+          "relation": "posedWith",
+          "to": "Luffy"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":cosplay_on_red_carpet :hasParticipant :Goku .",
+    ":cosplay_on_red_carpet :hasParticipant :Luffy .",
+    ":Goku :posedWith :Luffy ."
+  ],
+  "triples_count": 3
+}

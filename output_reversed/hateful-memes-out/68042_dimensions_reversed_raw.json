@@ -1,0 +1,190 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: overall-intent-description; overall-intent-description: The scene depicts a man in a kitchen, leaning over an open dishwasher, with text overlay reading 'i think i almost got my dishwasher working.' The visual element of steam rising from the dishwasher and the man's intense, focused expression are juxtaposed with the text to create a humorous, self-deprecating tone. The meme's intent is to convey the absurdity or difficulty of fixing a household appliance, using the man's exaggerated effort as a comedic device. There is no toxicity present in this meme; it does not target any protected group or contain hateful, abusive, cyberbullying, harmful, misogynous, or propagandistic content. The humor is derived from relatable domestic frustration, not from disparaging any group or individual.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "i think i almost",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A balding man wearing a dark blue sweatshirt with white stripes on the sleeves, leaning over an open dishwasher in a kitchen. He has a focused, intense expression and is reaching into the dishwasher with his right hand. He is wearing a silver watch on his left wrist. His posture and facial expression suggest concentration or effort.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "man_inspecting_dishwasher",
+      "label": "man inspecting dishwasher",
+      "description": "A man is leaning over an open dishwasher in a kitchen, reaching inside with his right hand while looking intently at the dishes. Steam is rising from the dishwasher, suggesting it may be malfunctioning or recently used. The man's focused expression and posture indicate he is trying to diagnose or fix the appliance. The scene is framed to emphasize his interaction with the dishwasher and the humorous implication that he might have 'almost got it working.'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "reachesInto",
+          "to": "dishwasher"
+        },
+        {
+          "from": "man",
+          "relation": "leansOver",
+          "to": "dishwasher"
+        },
+        {
+          "from": "man",
+          "relation": "looksAt",
+          "to": "dishwasher"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dishwasher_malfunction_stereotype",
+      "label": "Dishwasher malfunction stereotype",
+      "description": "The meme relies on the common household experience of a malfunctioning dishwasher, which is often a source of frustration and humor. The exaggerated effort of the man, combined with the steam, implies a comedic take on the difficulty of fixing such appliances, a trope often found in domestic humor and relatable memes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_inspecting_dishwasher",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "domestic_frustration_stereotype",
+      "label": "Domestic frustration stereotype",
+      "description": "The meme taps into the widespread stereotype of domestic chores being tedious and frustrating, especially when appliances fail. The man’s intense focus and the steam rising from the dishwasher are visual cues that amplify the comedic portrayal of this common household struggle.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_inspecting_dishwasher",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "self_deprecating_humor",
+      "label": "Self-deprecating humor",
+      "description": "The text 'i think i almost got my dishwasher working' is a classic example of self-deprecating humor, where the individual humorously acknowledges their own incompetence or the absurdity of the situation. This is a common comedic device in memes and everyday banter.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_inspecting_dishwasher",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "appliance_fixing_stereotype",
+      "label": "Appliance fixing stereotype",
+      "description": "The image and text imply a stereotype that people often attempt to fix household appliances themselves, even when it’s beyond their skill set. This is a common trope in DIY humor and sitcoms, where characters struggle with broken appliances, often leading to comedic outcomes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_inspecting_dishwasher",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "determinedness",
+      "label": "determined emotional expression",
+      "description": "The man's intense, focused facial expression and his leaning posture while reaching into the dishwasher convey a strong sense of determination. He appears deeply concentrated on the task, as if trying to solve a complex problem, despite the likely futility of his effort.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "man is the person who thinks he almost got his dishwasher working",
+      "description": "The text 'i think i almost got my dishwasher working' is mapped onto the visual entity 'man', implying that the man in the image is the one who is attempting to fix the dishwasher. The man's intense focus, posture, and the steam rising from the dishwasher visually support the textual claim that he is engaged in a self-deprecating effort to fix the appliance, creating an analogical mapping where the man represents the 'I' in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man in the meme",
+      "description": "The user is projected onto the man in the image, who is depicted as the one attempting to fix the dishwasher. This projection is implied by the self-deprecating text 'i think i almost got my dishwasher working,' which uses 'I' to refer to the person performing the action. The man's intense focus, posture, and the steam rising from the dishwasher visually support this projection, creating an analogical mapping where the man represents the 'I' in the text. The user identifies with this persona, seeing themselves in the man's situation of domestic frustration and appliance repair attempts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "domestic appliance user",
+      "description": "The meme targets individuals who have experienced the frustration of dealing with malfunctioning household appliances, particularly dishwashers, and who may attempt to fix them themselves. The man’s intense focus and the steam rising from the dishwasher visually represent the common domestic struggle, making the meme relatable to anyone who has faced appliance issues or DIY repair attempts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/68042.png",
+    "image_name": "68042.png",
+    "extraction_timestamp": "2025-12-16T09:11:18.631800",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

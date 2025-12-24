@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "holocaust_minimization_mapping",
+      "hasMappedEntity": "text_chunk",
+      "hasMappingEntity": "Adolf_Hitler"
+    },
+    {
+      "from": "Adolf_Hitler",
+      "relation": "mappedOnto",
+      "to": "text_chunk"
+    }
+  ],
+  "triples": [
+    ":holocaust_minimization_mapping :hasMappedEntity :text_chunk .",
+    ":holocaust_minimization_mapping :hasMappingEntity :Adolf_Hitler .",
+    ":Adolf_Hitler :mappedOnto :text_chunk ."
+  ],
+  "triples_count": 3
+}

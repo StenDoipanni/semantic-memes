@@ -1,0 +1,235 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: chimpanzee-protest-meme; hasOverallIntent: hateful; overall-intent-description: The meme depicts chimpanzees in a satirical context, using them as a visual metaphor to mock French citizens and their political behavior. The text overlays imply that French protesters are unintelligent and hypocritical for protesting high taxes that fund 'free shit' they supposedly wanted. This is a harmful and hateful stereotype that reduces human beings to animals, specifically chimpanzees, which is a well-documented racist trope used to demean Black people. The meme's intent is to dehumanize and insult a specific national group by associating them with primates, thereby promoting prejudice and hostility toward them. The use of chimpanzees as a visual metaphor for French people is a direct example of the 'Comparing Black people to primates' stereotype from the provided knowledge base, which is inherently racist and degrading. The meme's overall intent is to provoke ridicule and contempt for French citizens, using a derogatory and offensive visual analogy to achieve its hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top-left text",
+      "description": "why are the french protesting",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "chimpanzee",
+      "label": "chimpanzee",
+      "description": "A group of four chimpanzees are depicted sitting on the ground in a natural outdoor setting. One chimpanzee is sitting upright in the center, another is sitting to its left with its hand on its chin, a third is sitting to its right, and a fourth is partially visible behind the central chimpanzee. All chimpanzees are black and appear to be in a relaxed or contemplative pose. The chimpanzees are the central visual material and are used as a metaphor in the meme to represent French citizens.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "chimpanzee_protest_scene",
+      "label": "chimpanzee protest scene",
+      "description": "A scene depicting four chimpanzees sitting on the ground in a natural outdoor setting, arranged in a group with one central chimpanzee, another to its left with hand on chin, one to its right, and one partially visible behind. The scene is overlaid with text that satirically frames the chimpanzees as representing French protesters, mocking their hypocrisy regarding taxes and 'free shit'. The spatial arrangement suggests a group discussion or contemplation, with the central chimpanzee as the focal point.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "chimpanzee",
+          "relation": "grouped_with",
+          "to": "chimpanzee"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "french_citizens",
+      "label": "French citizens",
+      "description": "The meme refers to French citizens as the subject of protest, specifically mocking their political behavior and perceived hypocrisy regarding taxes and 'free shit'. This requires knowledge of France as a country with a history of social and political protests, particularly around taxation and public services.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_3",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_4",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "chimpanzee_as_metaphor_for_black_people",
+      "label": "Chimpanzee as metaphor for Black people",
+      "description": "The use of chimpanzees to represent French citizens is a racist trope that dehumanizes Black people by equating them with primates. This stereotype is rooted in historical and ongoing racial prejudice and is used to demean and insult Black individuals and communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "chimpanzee",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_comparing_to_primates",
+      "label": "Anti-Black stereotype: Comparing Black people to primates",
+      "description": "This is a well-documented racist stereotype that has been used historically to justify discrimination and dehumanization of Black people. The meme leverages this stereotype to insult French citizens by associating them with chimpanzees, which is a direct reference to this harmful trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "chimpanzee",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "taxation_and_public_services_in_france",
+      "label": "Taxation and public services in France",
+      "description": "The meme references 'high taxes that pay for their free shit', which implies knowledge of France's social welfare system and its funding through taxation. This requires understanding of French political economy and public policy, including debates around taxation and social benefits.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_3",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "protest_hypocrisy_stereotype",
+      "label": "Protest hypocrisy stereotype",
+      "description": "The meme mocks protesters for protesting high taxes while supposedly wanting 'free shit', implying a stereotype that protesters are hypocritical or inconsistent in their demands. This requires knowledge of political discourse and common criticisms of protest movements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_3",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_4",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "intelligence_mockery_stereotype",
+      "label": "Intelligence mockery stereotype",
+      "description": "The final line 'nobody said they were smart' is a direct reference to the stereotype that certain groups are unintelligent or foolish. This is a common form of dehumanization and insult used to belittle and demean.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_4",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous emotion",
+      "description": "The meme expresses contempt through its sarcastic text overlays that mock French protesters as hypocritical and unintelligent. The phrase 'nobody said they were smart' directly conveys disdain and ridicule toward the subject group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "French protesters are mapped onto chimpanzees",
+      "description": "The text 'why are the french protesting' and subsequent lines are mapped onto the visual entity of the chimpanzees, implying that the chimpanzees represent French citizens protesting. This is a direct analogical mapping where the visual material (chimpanzees) is used to stand in for the textual subject (French protesters).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the chimpanzee visual material as a metaphor for French protesters",
+      "description": "The user is projected onto the visual material of the chimpanzees, which are used as a metaphor for French citizens. The meme's overall intent is to dehumanize French citizens by equating them with chimpanzees, a racist trope. The user, by consuming and interpreting this meme, is implicitly aligned with the meme's hateful projection, which dehumanizes a specific national group. The projection is not explicit (e.g., no 'you' or 'me' text), but it is implicit through the user's engagement with the meme's visual and textual content, which frames the chimpanzees as representing the target group (French protesters).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses chimpanzees as a visual metaphor for French citizens, which is a direct reference to the racist trope of comparing Black people to primates. This dehumanizes French citizens by equating them with chimpanzees, promoting prejudice and hostility toward them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "french_citizens",
+      "label": "French citizens",
+      "description": "The meme targets French citizens as its primary subject, using satirical text to mock their political behavior, specifically their protests over taxation and public services. The visual metaphor of chimpanzees is applied to them, indicating the meme is designed to provoke ridicule and contempt toward this demographic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/12580.png",
+    "image_name": "12580.png",
+    "extraction_timestamp": "2025-12-15T14:40:27.739032",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

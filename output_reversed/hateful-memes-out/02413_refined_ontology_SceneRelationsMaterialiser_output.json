@@ -1,0 +1,36 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "woman_with_injuries_and_text",
+      "participants": [
+        {
+          "entity": "woman",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "isSubjectOf",
+          "to": "OverallIntent"
+        },
+        {
+          "from": "woman",
+          "relation": "isReferencedIn",
+          "to": "VisualMaterial"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":woman_with_injuries_and_text :hasParticipant :woman .",
+    ":woman :isSubjectOf :OverallIntent .",
+    ":woman :isReferencedIn :VisualMaterial ."
+  ],
+  "triples_count": 3
+}

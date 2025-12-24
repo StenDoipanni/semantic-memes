@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#qa_1e58e56a-0065-4d27-957d-dfb2964d833e",
+  "@type": "QuestionAnswerPair",
+  "question": "What text is overlaid on the image?",
+  "answers": [
+    {
+      "text": "None of the others",
+      "is_correct": false
+    },
+    {
+      "text": "police emergency",
+      "is_correct": false
+    },
+    {
+      "text": "officer down",
+      "is_correct": true
+    },
+    {
+      "text": "help me now",
+      "is_correct": false
+    }
+  ],
+  "explanation": "The text 'officer down' is the only phrase visibly overlaid on the image, matching the specified text_chunk instance.",
+  "dimension": "TextualMaterial",
+  "relatedInstances": [
+    "text_chunk"
+  ],
+  "generationTimestamp": "2025-12-23T21:00:15.806525",
+  "generationMethod": "huggingface_api",
+  "sourceImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_13856",
+    "@type": "Image",
+    "filename": "13856.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/13856.png"
+  }
+}

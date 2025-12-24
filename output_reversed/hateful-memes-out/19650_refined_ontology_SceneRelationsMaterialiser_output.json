@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "person_caring_for_lion",
+      "participants": [
+        {
+          "entity": "person",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "lion",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "person",
+          "relation": "caring_for",
+          "to": "lion"
+        },
+        {
+          "from": "lion",
+          "relation": "being_cared_for_by",
+          "to": "person"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":person_caring_for_lion :hasParticipant :person .",
+    ":person_caring_for_lion :hasParticipant :lion .",
+    ":person :caring_for :lion .",
+    ":lion :being_cared_for_by :person ."
+  ],
+  "triples_count": 4
+}

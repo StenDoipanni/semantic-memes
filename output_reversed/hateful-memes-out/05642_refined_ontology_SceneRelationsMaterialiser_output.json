@@ -1,0 +1,30 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "burning_car_scene",
+      "participants": [
+        {
+          "entity": "silver_sedan",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "silver_sedan",
+          "relation": "isOnFire",
+          "to": "burning_car_scene"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":burning_car_scene :hasParticipant :silver_sedan .",
+    ":silver_sedan :isOnFire :burning_car_scene ."
+  ],
+  "triples_count": 2
+}

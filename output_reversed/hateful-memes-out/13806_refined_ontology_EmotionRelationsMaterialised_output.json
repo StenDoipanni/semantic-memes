@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "ironic expression",
+      "expressors": [
+        {
+          "entity": "Michael_J_Fox",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Michael_J_Fox",
+          "relation": "emotionalRelationToEntity",
+          "to": "ice_cream_shop"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":ironic_expression :hasExpressor :Michael_J_Fox .",
+    ":Michael_J_Fox :emotionalRelationToEntity :ice_cream_shop ."
+  ],
+  "triples_count": 2
+}

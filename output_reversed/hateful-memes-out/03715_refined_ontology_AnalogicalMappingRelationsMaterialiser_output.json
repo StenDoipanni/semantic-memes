@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "top_text",
+      "hasMappingEntity": "washing_machine"
+    },
+    {
+      "from": "washing_machine",
+      "relation": "mappedOnto",
+      "to": "top_text"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :top_text .",
+    ":mapping_1 :hasMappingEntity :washing_machine .",
+    ":washing_machine :mappedOnto :top_text ."
+  ],
+  "triples_count": 3
+}

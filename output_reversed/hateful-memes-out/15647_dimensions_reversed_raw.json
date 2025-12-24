@@ -1,0 +1,202 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: broken_dishwasher_for_sale_or_rent; hasOverallIntent: Harmful; overall-intent-description: The image depicts a woman in a yoga pose on a mat, with text overlay reading 'broken dishwasher for sale or rent.' The overall intent is to create a humorous or ironic juxtaposition by implying that the woman's flexibility or physical ability is being offered for sale or rent, as if she were a functional appliance. This is a form of absurd humor that may be perceived as mocking or devaluing the woman's physical capabilities or body, potentially falling under misogynous or ableist tropes by reducing human physicality to a commodity or broken appliance. While not overtly abusive or hateful toward a specific protected group, the humor relies on objectifying the woman's body and may be considered harmful or offensive to some viewers due to its degrading tone and potential reinforcement of stereotypes about women's bodies being 'broken' or 'for sale.'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "broken dishwasher",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman in a white t-shirt and black leggings is performing a yoga split on a red mat. She is looking to her left with a neutral expression. Her hair is tied back in a ponytail. The pose suggests flexibility and physical control.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "yoga_pose_scene",
+      "label": "woman_performing_yoga_split",
+      "description": "A woman is performing a yoga split on a red mat in what appears to be a gym or studio setting. She is wearing a white t-shirt and black leggings, with her hair tied back. The scene is framed with text overlays that read 'broken dishwasher' at the top and 'for sale or rent' at the bottom, creating a humorous and ironic juxtaposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification_of_women",
+      "label": "Objectification of Women",
+      "description": "The meme relies on the stereotype that women's bodies are objects to be valued or commodified, reducing human physicality to a broken appliance. This is a form of misogynous humor that objectifies the woman's body and may be considered harmful or offensive to some viewers due to its degrading tone and potential reinforcement of stereotypes about women's bodies being 'broken' or 'for sale.'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "broken_appliance_metaphor",
+      "label": "Broken Appliance Metaphor",
+      "description": "The meme uses the metaphor of a 'broken dishwasher' to imply that the woman's physical flexibility is being offered for sale or rent, as if she were a functional appliance. This metaphor is absurd and relies on the viewer understanding the concept of appliances and their commodification in a domestic context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "yoga_pose_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "yoga_as_flexibility_symbol",
+      "label": "Yoga as Symbol of Flexibility",
+      "description": "The image of a woman performing a yoga split is a common visual representation of physical flexibility and control. The meme uses this visual to imply that her flexibility is a commodity, which requires the viewer to understand yoga as a practice associated with physical prowess and discipline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "yoga_pose_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "commodification_of_bodies",
+      "label": "Commodification of Bodies",
+      "description": "The meme implies that human physical abilities can be treated as commodities for sale or rent, which is a concept rooted in capitalist and consumerist ideologies. This requires the viewer to understand the broader social context of commodification and how it applies to human bodies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "yoga_pose_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_tropes",
+      "label": "Misogynous Tropes",
+      "description": "The meme relies on misogynous tropes that reduce women's physical abilities to a commodity or broken appliance, potentially reinforcing stereotypes about women's bodies being 'broken' or 'for sale.' This requires the viewer to understand the cultural context of misogyny and how it manifests in humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking",
+      "label": "mocking emotion",
+      "description": "The emotion expressed is mocking, conveyed through the absurd and degrading juxtaposition of the woman's physical flexibility with the idea of a 'broken dishwasher for sale or rent'. The tone is intentionally humorous but offensive, mocking the woman's body by reducing it to a broken appliance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "woman is mapped as a broken dishwasher",
+      "description": "The text 'broken dishwasher' is overlaid on the image of the woman performing a yoga split, creating an analogical mapping where the woman's physical flexibility is humorously equated to a broken appliance. This mapping relies on the visual of the woman's body being interpreted as a commodity or broken object, aligning with the misogynous trope of objectifying women's bodies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman as a broken appliance",
+      "description": "The user is projected onto the visual material of the woman performing the yoga split, interpreting her physical flexibility as if it were a broken dishwasher for sale or rent. This projection relies on the viewer identifying with the implied commodification of the woman's body, aligning with misogynous tropes that objectify women's physical abilities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Misogynous",
+      "description": "The meme reduces the woman's physical flexibility to a broken appliance for sale or rent, objectifying her body and reinforcing harmful stereotypes about women's bodies being commodified or 'broken'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "woman performing yoga split",
+      "description": "The target community for this meme is individuals who understand and appreciate internet humor that relies on absurd juxtapositions and objectification, particularly those familiar with the trope of reducing human physicality to a broken appliance. The meme is designed for viewers who recognize the visual of a woman in a yoga pose as a symbol of flexibility and are willing to engage with the misogynous humor that equates her body to a commodity. This includes audiences familiar with online meme culture, particularly those who find humor in degrading or commodifying the human body, especially women's bodies, under the guise of irony or absurdity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/15647.png",
+    "image_name": "15647.png",
+    "extraction_timestamp": "2025-12-15T16:12:52.856546",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,237 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: a_head_diaper_is_required_when_you_have_shit_for_brains; hasOverallIntent: Hateful; overall-intent-description: The image depicts a woman, identified by her nameplate as 'Ms. Omar', seated at a formal meeting table, likely a congressional hearing or similar official proceeding. The overlaid text, 'a head diaper is required when you have shit for brains,' is a vulgar and degrading insult. This text is juxtaposed with her image to mock her intelligence and competence. The phrase 'shit for brains' is a direct and offensive insult targeting her cognitive abilities, which falls under the category of intelligence-related slurs and is a form of racialized and misogynistic degradation. The meme is designed to attack her character and intellect in a hateful and degrading manner, using crude language to demean her professional presence and perceived mental capacity. This constitutes a hateful meme targeting an individual based on her identity and perceived competence, with the intent to insult and belittle her.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "caption_text",
+      "label": "text overlay on image",
+      "description": "a head diaper is required when you have shit for brains",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with dark skin, wearing a white headscarf, seated at a wooden table in what appears to be a formal meeting or hearing room. She is smiling and looking slightly to her right. Her nameplate reads 'Ms. OMAR'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "formal_meeting_scene",
+      "label": "woman_seated_at_meeting_table",
+      "description": "A woman, identified by her nameplate as 'Ms. OMAR', is seated at a wooden table in what appears to be a formal meeting or hearing room. She is wearing a white headscarf and smiling while looking slightly to her right. The scene includes a nameplate for 'Mr. PHILLIPS' to her right and a dark curtain in the background. The overlaid text 'a head diaper is required when you have shit for brains' is present, indicating a hateful and degrading context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "is_seated_at",
+          "to": "table"
+        },
+        {
+          "from": "woman",
+          "relation": "is_in_front_of",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "is_overlaid_on",
+          "to": "woman"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotypes",
+      "label": "Anti-Black Stereotypes",
+      "description": "The meme relies on the stereotype that Black people are intellectually inferior, which is a form of racism. The phrase 'shit for brains' is an intelligence-related slur targeting the woman's perceived cognitive abilities, which is a common racist trope used to demean Black individuals. This stereotype is not visible in the image but is required to understand the hateful intent of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "caption_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "intelligence_related_slurs",
+      "label": "Intelligence-related Slurs",
+      "description": "The phrase 'shit for brains' is a vulgar and degrading insult targeting cognitive ability. This type of slur is used to demean individuals, particularly people of color, and is a form of ableism and racism. It is not visible in the image but is essential to understanding the offensive nature of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "caption_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "The meme targets a woman in a position of power, using crude language to insult her intelligence and competence. This reflects misogynistic tropes that deny women's intellectual capabilities and reduce them to stereotypes. This is not visible in the image but is required to understand the gendered nature of the insult.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "caption_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "Ableism",
+      "description": "The meme uses the phrase 'shit for brains' to mock the woman's mental capacity, which is a form of ableism. This involves mocking or devaluing individuals based on perceived intellectual disability or incompetence. This is not visible in the image but is required to understand the offensive nature of the insult.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "caption_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racism",
+      "label": "Racism",
+      "description": "The meme is rooted in racist tropes that associate Black people with inferior intelligence. The use of the phrase 'shit for brains' is a racist insult that targets the woman's race and perceived cognitive abilities. This is not visible in the image but is required to understand the hateful intent of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "caption_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "The woman is wearing a headscarf, which is often associated with Islam. The meme may be using this to imply that she is 'not smart' because she is Muslim, which is a form of Islamophobia. This is not visible in the image but is required to understand the potential religious bias in the insult.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "caption_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous expression",
+      "description": "The woman's facial expression, characterized by a slight smirk and upward gaze, conveys a sense of disdain or superiority, which is juxtaposed with the hateful text overlay to create a mocking tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'a head diaper is required when you have shit for brains' is mapped onto the woman (Ms. Omar) in the image.",
+      "description": "The meme uses the visual of Ms. Omar, a Black woman wearing a headscarf in a formal setting, to represent the target of the insult. The text 'a head diaper is required when you have shit for brains' is an intelligence-related slur that is projected onto her, implying she is intellectually inferior. This mapping is based on the juxtaposition of the text with her image, creating a hateful and degrading association. The mapping involves the textual insult being applied to the visual entity (Ms. Omar), who is the subject of the insult. This is a clear case of analogical mapping where the text explicitly identifies or attributes a negative quality to the visual entity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual insult",
+      "description": "The user is projected onto the textual material 'a head diaper is required when you have shit for brains' as the object of the hateful projection. The text explicitly attributes the degrading quality to the visual entity (Ms. Omar), and the user, by consuming and interpreting the meme, is positioned as the one who is projecting this insult onto her. There are no explicit deictic pronouns like 'me' or 'you' in the text, but the act of viewing the meme and the hateful intent of the text create an implicit projection where the user is the one who is 'seeing' or 'imagining' the insult being applied to the target. The projection is onto the textual material, which serves as the vehicle for the hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Ms. Omar based on her race, gender, and religion, using vulgar and degrading language to insult her intelligence and competence. The text 'a head diaper is required when you have shit for brains' is a hateful insult targeting her cognitive abilities, which is a form of racism, ableism, and misogyny. The analogical mapping of this insult onto her image constitutes a direct attack on her identity and perceived competence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience consists of individuals who hold racist, misogynistic, and Islamophobic views, particularly those who engage in online hate speech and targeted attacks against public figures of color, especially Black Muslim women in positions of power. The meme is designed to appeal to communities that perpetuate stereotypes about Black intellectual inferiority, gendered incompetence, and religiously motivated mockery, using crude language and visual juxtaposition to reinforce these biases.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/59128.png",
+    "image_name": "59128.png",
+    "extraction_timestamp": "2025-12-16T06:23:23.480083",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

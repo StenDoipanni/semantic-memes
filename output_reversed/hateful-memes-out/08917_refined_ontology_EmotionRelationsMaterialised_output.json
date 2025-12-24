@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful emotion",
+      "expressors": [
+        {
+          "entity": "text_chunk",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "text_chunk",
+          "relation": "emotionalRelationToEntity",
+          "to": "cat"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_emotion :hasExpressor :text_chunk .",
+    ":text_chunk :emotionalRelationToEntity :cat ."
+  ],
+  "triples_count": 2
+}

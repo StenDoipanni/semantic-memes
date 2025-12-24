@@ -1,0 +1,216 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Propaganda; overall-intent-description: The image depicts a woman with a confused or exasperated expression, arms outstretched, against a plain white background. The text overlays pose a rhetorical question: 'if democrats really cared about election interference then why are they so against voter id laws?'. The overall intent is propagandistic, aiming to influence political opinion by suggesting a contradiction in Democratic Party positions — implying that if they genuinely cared about election integrity, they would support voter ID laws. This is a form of political argumentation designed to sway viewers by framing the issue as one of hypocrisy. The visual of the woman is used analogically to convey confusion or disbelief, reinforcing the rhetorical question. There is no direct targeting of individuals based on protected characteristics, but the meme is politically charged and potentially divisive, as it simplifies complex political positions into a binary of 'caring' vs. 'not caring' and uses a partisan framing to question Democratic policy positions. The meme does not contain abusive, cyberbullying, harmful, hateful, or misogynous content in the sense of targeting individuals based on gender, race, etc., but it does contain political propaganda that may be perceived as misleading or inflammatory by those who disagree with the premise.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "if democrats really cared about election interference",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with long brown hair, wearing a gray tank top with lace trim and blue jeans, standing with arms outstretched in a gesture of confusion or exasperation. Her facial expression shows wide eyes and a slightly open mouth, conveying disbelief or bewilderment. She is the central visual element and is used analogically to represent confusion or rhetorical questioning in the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "confused_question_scene",
+      "label": "woman_expressing_confusion_through_rhetorical_question",
+      "description": "The scene depicts a woman with a confused or exasperated expression, arms outstretched, against a plain white background. The text overlays pose a rhetorical question: 'if democrats really cared about election interference then why are they so against voter id laws?'. The woman's body language and facial expression are used analogically to convey confusion or disbelief, reinforcing the rhetorical question. The scene is structured to present a political argumentation by framing the issue as one of hypocrisy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "democrats",
+      "label": "Democratic Party",
+      "description": "The Democratic Party is one of the two major political parties in the United States. It is a political entity whose positions on issues such as election integrity and voter ID laws are central to political discourse and debate. The meme references this party as a specific political actor whose policy positions are being questioned.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "voter_id_laws",
+      "label": "Voter ID Laws",
+      "description": "Voter ID laws are state or federal regulations that require voters to present specific forms of identification at polling places. These laws are a contentious political issue in the U.S., often debated in terms of election integrity, voter access, and civil rights. The meme references these laws as a policy position held by the Democratic Party.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "election_interference",
+      "label": "Election Interference",
+      "description": "Election interference refers to actions intended to influence the outcome of an election, often through fraud, manipulation, or coercion. This is a real-world political concept that is central to the meme's rhetorical question, implying that the Democratic Party should support voter ID laws to prevent such interference.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "rhetorical_question",
+      "label": "Rhetorical Question",
+      "description": "A rhetorical question is a question asked not to elicit an answer but to make a point or provoke thought. The meme uses this device to frame a political argument as a contradiction, implying that the Democratic Party's opposition to voter ID laws is inconsistent with their stated concern for election integrity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_propaganda",
+      "label": "Political Propaganda",
+      "description": "Political propaganda is the dissemination of information—often biased or misleading—to promote a political agenda. The meme is an example of this, using visual and textual elements to influence political opinion by suggesting a contradiction in Democratic Party positions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypocrisy",
+      "label": "Hypocrisy",
+      "description": "Hypocrisy is the practice of claiming to have moral standards or beliefs to which one's actions do not conform. The meme frames the Democratic Party's position as hypocritical, implying that their opposition to voter ID laws contradicts their stated concern for election integrity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "Misogyny is the hatred or prejudice against women. While the meme does not directly target women as individuals, the use of a woman’s image to represent confusion or disbelief can be interpreted as reinforcing gender stereotypes, particularly the trope of women being 'crazy' or 'hysterical' when expressing political disagreement. This is a potential implicit stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "confusion",
+      "label": "confused emotion",
+      "description": "The woman's facial expression, with wide eyes and a slightly open mouth, combined with her arms outstretched in a shrugging gesture, conveys a state of bewilderment or disbelief. This is reinforced by the rhetorical question in the text, which frames the viewer to question the Democratic Party's position, thereby invoking a feeling of confusion about the apparent contradiction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "woman represents confusion about Democratic Party's stance",
+      "description": "The visual entity 'woman' is mapped onto the textual concept of 'confusion' or 'bewilderment' expressed through the rhetorical question. The woman's facial expression and body language (wide eyes, open mouth, arms outstretched) are used analogically to represent the viewer's or the meme's implied confusion regarding the Democratic Party's position on voter ID laws, despite their stated concern for election interference. This mapping is reinforced by the rhetorical question text, which frames the issue as a contradiction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the rhetorical question scene",
+      "description": "The user is projected onto the scene where the rhetorical question is posed, which frames the viewer as someone who should be confused or questioning the Democratic Party's position. The rhetorical question 'if democrats really cared about election interference then why are they so against voter id laws?' implicitly addresses the viewer, inviting them to consider the contradiction and aligning their perspective with the meme's argument. The visual of the woman expressing confusion reinforces this projection, as the viewer is encouraged to see themselves in her bewilderment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Propaganda",
+      "description": "The meme uses political propaganda to influence opinion by framing Democratic Party positions as hypocritical, suggesting a contradiction between their stated concern for election integrity and their opposition to voter ID laws. This is a form of political argumentation designed to sway viewers by simplifying complex positions into a binary of 'caring' vs. 'not caring' and using partisan framing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who are politically engaged, particularly those who identify with or support the Republican Party or conservative political viewpoints in the United States. The meme is designed to resonate with this audience by framing the Democratic Party's opposition to voter ID laws as hypocritical or inconsistent with their stated concern for election integrity. The rhetorical question and the visual of the woman expressing confusion are used to provoke agreement or at least contemplation among viewers who already hold skepticism toward Democratic positions on election-related issues. The meme leverages partisan political framing and assumes prior knowledge of the debate around voter ID laws and election interference, making it most effective for audiences familiar with U.S. political discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/42861.png",
+    "image_name": "42861.png",
+    "extraction_timestamp": "2025-12-16T01:25:00.632664",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

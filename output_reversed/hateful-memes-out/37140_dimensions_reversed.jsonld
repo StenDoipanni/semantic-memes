@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_1bbf3f22",
+  "@type": "AnalysisDocument",
+  "title": "37140.png - Dimension Analysis",
+  "created": "2025-12-15T23:42:57.612109",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_2b8e7b85",
+    "@type": "Image",
+    "filename": "37140.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/37140.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/37140.png",
+    "image_name": "37140.png",
+    "extraction_timestamp": "2025-12-15T23:39:49.777489",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_60c8daa4",
+      "@type": "OverallIntent",
+      "instance_name": "dimension_1",
+      "label": "the overallintent",
+      "description": "The meme juxtaposes a glamorous woman with red nail polish and a historical photograph of Adolf Hitler, using the same text in both panels: ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1bbf3f22"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_acae0abb",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "removes polish with chemicals nobody bats an eye",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1bbf3f22"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_41965dbb",
+      "@type": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "glamorous woman with red nail polish",
+      "description": "A woman with dark hair, prominent makeup, and red nail polish, posing with her hand near her face. She appears to be in a studio setting with professional lighting. Her expression is confident and direct. This image is commonly associated with beauty and glamour.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1bbf3f22"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_995bc698",
+      "@type": "Scene",
+      "instance_name": "polish_removal_comparison",
+      "label": "comparison_of_polish_removal_reactions",
+      "description": "A scene comparing the reaction to removing nail polish with chemicals: the top panel shows a glamorous woman with red nail polish, where the text says 'nobody bats an eye', implying it's normal or unremarkable. The bottom panel shows a historical photograph of Adolf Hitler, where the text says 'everybody loses his shit', implying a dramatic or shocking reaction. The scene juxtaposes these two images to create a humorous or satirical contrast.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1bbf3f22"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_14b47bf3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "adolf_hitler",
+      "label": "Adolf Hitler",
+      "description": "Historical figure and leader of Nazi Germany, known for his role in World War II and the Holocaust. His image is used here as a symbol of extreme historical evil and controversy, which is central to the meme's satirical contrast.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1bbf3f22"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3f652440",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nail_polish_removal",
+      "label": "Nail polish removal",
+      "description": "The act of removing nail polish, often using chemicals, is a common, everyday activity. The meme uses this mundane act as a contrast to the extreme reaction implied by the Hitler image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1bbf3f22"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f8aa52ab",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_semitism_stereotype",
+      "label": "Anti-Semitic Stereotype",
+      "description": "The meme implicitly relies on the historical and cultural association of Adolf Hitler with anti-Semitism, which is a core component of the meme's satirical contrast. The use of Hitler's image to represent an extreme, shocking reaction is rooted in this stereotype.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1bbf3f22"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e910d27a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "meme_juxtaposition",
+      "label": "Meme Juxtaposition",
+      "description": "The meme format of juxtaposing two contrasting images with identical text to create a humorous or satirical effect. This is a common internet meme structure that relies on the viewer's understanding of visual contrast and irony.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1bbf3f22"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_32759869",
+      "@type": "EmotionExpression",
+      "instance_name": "calm_confidence",
+      "label": "calm and confident emotion",
+      "description": "The woman's facial expression is composed, direct, and self-assured, with her hand gently touching her face. Her makeup and posture convey a sense of poise and control, aligning with the text 'nobody bats an eye' which implies indifference or normalcy.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1bbf3f22"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f9e6001b",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The glamorous woman is mapped as the person who removes polish with chemicals and nobody bats an eye",
+      "description": "The top panel shows a glamorous woman with red nail polish, and the text 'removes polish with chemicals nobody bats an eye' is directly mapped onto her visual representation. This implies that her appearance and demeanor (calm, confident, glamorous) are being used as an analogy for the mundane, socially accepted act of removing nail polish with chemicals.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1bbf3f22"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c70dab8f",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of polish removal comparison",
+      "description": "The user is projected onto the overall scene of the meme, which contrasts the mundane act of removing nail polish with chemicals (represented by the glamorous woman) against the extreme reaction implied by the Hitler image. The user is not explicitly addressed with deictic pronouns like 'me' or 'you', but the meme's structure invites the user to identify with the viewer of the contrast, making the user the implied subject of the comparison. The projection is onto the entire scene, which includes both visual materials and textual materials.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1bbf3f22"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f269aee0",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses the image of Adolf Hitler, a historical figure associated with genocide and anti-Semitism, to create a satirical contrast. The juxtaposition implies that the reaction to removing nail polish with chemicals is so extreme that it would provoke a reaction comparable to Hitler's historical actions, which is inherently hateful and offensive due to the association with Holocaust denial and anti-Semitic stereotypes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1bbf3f22"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_28b2649b",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals familiar with internet meme culture, particularly those who understand the satirical juxtaposition of mundane activities with extreme historical figures. The meme relies on the audience's recognition of Adolf Hitler as a symbol of extreme evil and their awareness of the absurdity of comparing nail polish removal to such a figure. The audience is likely to be online users who appreciate dark humor, irony, and the use of historical figures for comedic effect, even if the content is offensive. The meme's effectiveness depends on the audience's ability to interpret the visual contrast and textual irony, indicating a community that engages with absurdist humor and historical references in a satirical context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1bbf3f22"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

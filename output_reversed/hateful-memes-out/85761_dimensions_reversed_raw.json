@@ -1,0 +1,179 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image shows a black corrugated pipe on a beach with the text 'no wonder why the pipes are not working.' The visual juxtaposition of the pipe with the ocean and beach setting implies a humorous or sarcastic commentary on infrastructure failure, likely suggesting the pipes are ineffective because they are exposed to the elements or are improperly placed. There is no direct or indirect attack on any protected group, nor is there abusive, cyberbullying, misogynistic, or propagandistic content. The meme's intent is to use absurd or ironic imagery to comment on a mundane problem (non-functioning pipes) in a lighthearted or sarcastic way, which may be perceived as harmless humor by some but could be interpreted as dismissive or unhelpful by others. The overall intent is not harmful in a direct or targeted way, but the humor may trivialize a real infrastructure issue, which could be seen as potentially harmful in context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "no wonder why the pipes are not working",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "black_corrugated_pipe",
+      "label": "object",
+      "description": "A large, black, corrugated plastic or PVC pipe is prominently featured in the foreground, extending from the bottom of the frame toward the beach. It appears to be part of an infrastructure system, possibly for drainage or sewage, and is situated on sandy ground with rocks around it. Its placement near the ocean is visually jarring and is the central visual element that the meme text comments on.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "pipe_on_beach",
+      "label": "pipe_on_beach",
+      "description": "A black corrugated pipe is situated on a sandy beach near the ocean, with rocks around it. The pipe appears to be part of an infrastructure system, possibly for drainage or sewage, and its placement near the ocean is visually jarring. The scene includes the pipe, the beach, the ocean, and a signpost in the background. The text overlay 'no wonder why the pipes are not working' provides context for the scene, implying a humorous or sarcastic commentary on the pipe's ineffectiveness due to its location.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "black_corrugated_pipe",
+          "relation": "is_on",
+          "to": "beach"
+        },
+        {
+          "from": "black_corrugated_pipe",
+          "relation": "faces",
+          "to": "ocean"
+        },
+        {
+          "from": "black_corrugated_pipe",
+          "relation": "is_near",
+          "to": "signpost"
+        },
+        {
+          "from": "text",
+          "relation": "comments_on",
+          "to": "black_corrugated_pipe"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "infrastructure_failure",
+      "label": "Infrastructure Failure",
+      "description": "The meme relies on the real-world concept that pipes, especially those for drainage or sewage, are designed to function within specific contexts (e.g., underground, away from water bodies). The humor stems from the absurdity of a pipe being placed directly on a beach near the ocean, implying it is ineffective or useless. This requires background knowledge about how such infrastructure is typically installed and expected to operate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "pipe_on_beach",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "absurd_humor",
+      "label": "Absurd Humor",
+      "description": "The meme uses absurdity as a comedic device — placing a pipe meant for utility in an obviously inappropriate location (a beach) to make a joke about its failure. This requires understanding of comedic tropes where illogical or exaggerated situations are used to highlight a point or make a joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sarcastic_commentary",
+      "label": "Sarcastic Commentary",
+      "description": "The phrase 'no wonder why the pipes are not working' is sarcastic, implying that the pipe's location is so obviously wrong that its failure is self-evident. This requires background knowledge of sarcasm as a rhetorical device used to convey irony or ridicule.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "environmental_context",
+      "label": "Environmental Context",
+      "description": "The image includes a beach and ocean, which are natural environments. The meme's humor depends on the contrast between man-made infrastructure (the pipe) and the natural environment. Understanding that pipes are typically not meant to be exposed to saltwater or beach conditions is part of the background knowledge needed to appreciate the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "pipe_on_beach",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "sarcastic_irony",
+      "label": "sarcastic irony expression",
+      "description": "The emotion expressed is sarcastic irony, conveyed through the juxtaposition of a utility pipe placed on a beach and the text 'no wonder why the pipes are not working.' The humor arises from the absurdity of the situation, implying the pipe is ineffective due to its location, which is clearly inappropriate for its function. This sarcastic tone is a rhetorical device used to mock or highlight the obvious failure of the infrastructure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The pipe is mapped as the reason for infrastructure failure",
+      "description": "The text 'no wonder why the pipes are not working' sarcastically attributes the failure of the pipes to their visual placement on the beach. The visual material (black_corrugated_pipe) is mapped onto the textual concept of 'pipes' that are not working, creating an analogical mapping where the pipe's absurd location is the cause of its ineffectiveness. This mapping is based on the juxtaposition of the pipe's visual context (on a beach near the ocean) with the text's implication that this context explains its failure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene and text implying shared experience or ironic understanding",
+      "description": "The user is not explicitly projected onto a specific deictic pronoun like 'me' or 'you', but the meme's sarcastic commentary ('no wonder why the pipes are not working') invites the user to project their own understanding or experience onto the absurd visual scene. The user is implicitly projected onto the scene (pipe_on_beach) and the textual material (text_chunk) as the subject of the ironic observation, suggesting that the user recognizes the pipe's placement as obviously flawed and thus finds the humor in its ineffectiveness. The projection is onto the scene and text as a shared point of reference for the meme's joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with absurdist humor and sarcastic commentary. It relies on common knowledge about infrastructure (pipes for drainage/sewage) and the absurdity of placing such items in inappropriate environments (like a beach). The humor is accessible and does not require niche cultural references or specific demographic cues, making it suitable for a wide range of viewers who understand basic visual irony and sarcasm.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/85761.png",
+    "image_name": "85761.png",
+    "extraction_timestamp": "2025-12-19T15:34:53.126628",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

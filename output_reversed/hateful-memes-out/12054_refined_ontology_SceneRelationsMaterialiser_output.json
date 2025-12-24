@@ -1,0 +1,58 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "truck_inspection_scene",
+      "participants": [
+        {
+          "entity": "vintage_blue_Chevrolet_truck",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "person_crouching",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "person_standing",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "person_crouching",
+          "relation": "inspecting",
+          "to": "vintage_blue_Chevrolet_truck"
+        },
+        {
+          "from": "person_standing",
+          "relation": "observing",
+          "to": "vintage_blue_Chevrolet_truck"
+        },
+        {
+          "from": "person_crouching",
+          "relation": "near",
+          "to": "vintage_blue_Chevrolet_truck"
+        },
+        {
+          "from": "person_standing",
+          "relation": "near",
+          "to": "vintage_blue_Chevrolet_truck"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":truck_inspection_scene :hasParticipant :vintage_blue_Chevrolet_truck .",
+    ":truck_inspection_scene :hasParticipant :person_crouching .",
+    ":truck_inspection_scene :hasParticipant :person_standing .",
+    ":person_crouching :inspecting :vintage_blue_Chevrolet_truck .",
+    ":person_standing :observing :vintage_blue_Chevrolet_truck .",
+    ":person_crouching :near :vintage_blue_Chevrolet_truck .",
+    ":person_standing :near :vintage_blue_Chevrolet_truck ."
+  ],
+  "triples_count": 7
+}

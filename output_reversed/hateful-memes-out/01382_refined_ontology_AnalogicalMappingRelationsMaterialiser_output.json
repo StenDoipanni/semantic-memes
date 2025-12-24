@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_id_1",
+      "hasMappedEntity": "text_chunk: text location - my body my choice",
+      "hasMappingEntity": "hand: human hand"
+    },
+    {
+      "from": "hand: human hand",
+      "relation": "mappedOnto",
+      "to": "text_chunk: text location - my body my choice"
+    }
+  ],
+  "triples": [
+    ":mapping_id_1 :hasMappedEntity :text_chunk_text_location_my_body_my_choice .",
+    ":mapping_id_1 :hasMappingEntity :hand_human_hand .",
+    ":hand_human_hand :mappedOnto :text_chunk_text_location_my_body_my_choice ."
+  ],
+  "triples_count": 3
+}

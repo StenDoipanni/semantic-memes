@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_b4a00222",
+  "@type": "AnalysisDocument",
+  "title": "51927.png - Dimension Analysis",
+  "created": "2025-12-16T04:19:42.414072",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_e20ae652",
+    "@type": "Image",
+    "filename": "51927.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/51927.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/51927.png",
+    "image_name": "51927.png",
+    "extraction_timestamp": "2025-12-16T04:17:40.378253",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_97d9f1ed",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: hello_chocolate_paradise_princess; hasOverallIntent: Harmful; overall-intent-description: The image depicts a chef, Albert, holding a spoon with chocolate sauce over a dessert, with the text 'hello chocolate paradise princess' at the top and 'i'm albert' at the bottom. The overall intent is to create a humorous or ironic juxtaposition by using a condescending, overly sweet, and gendered title ('chocolate paradise princess') that contrasts with the mundane, professional setting of a chef. The meme's humor stems from the absurdity of the title applied to a person in a kitchen, likely implying a playful or sarcastic tone. While not overtly abusive or hateful, the use of 'princess' can be seen as potentially objectifying or infantilizing, especially if directed at a woman, which may fall under 'Mysogynous' toxicity. The meme's intent is to provoke laughter through the incongruity of the text and image, but the specific phrasing could be perceived as patronizing or condescending, especially if the target is a woman. The meme does not contain direct attacks on protected characteristics, but the tone may be perceived as dismissive or mocking, which could be considered harmful in certain contexts.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b4a00222"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8ade782c",
+      "@type": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "hello chocolate paradise princess",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b4a00222"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9fa38809",
+      "@type": "VisualMaterial",
+      "instance_name": "chef",
+      "label": "person",
+      "description": "A bald man wearing a white chef's shirt and a black-and-white striped apron, holding a spoon with chocolate sauce over a dessert. He is looking intently at the dessert, suggesting he is either presenting or tasting it. His expression is focused and slightly intense.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b4a00222"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c1b3769b",
+      "@type": "Scene",
+      "instance_name": "chef_presenting_dessert",
+      "label": "chef presenting dessert",
+      "description": "A chef is holding a spoon with chocolate sauce over a dessert, looking intently at it, suggesting he is either presenting or tasting it. The scene is set in a kitchen environment, with the chef as the central focus.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b4a00222"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ed1b96b8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogyny_stereotype",
+      "label": "Misogynous Stereotype: 'Belongs in kitchen'",
+      "description": "The term 'princess' in the context of 'chocolate paradise princess' combined with the chef's professional setting implies a gendered stereotype that women are relegated to domestic or nurturing roles, such as being 'princesses' who belong in kitchens. This stereotype is rooted in historical and cultural norms that have historically confined women to domestic spheres, contrasting with the professional, skilled role of a chef, which is typically associated with men in traditional portrayals.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b4a00222"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_17782ca1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "objectification_stereotype",
+      "label": "Objectification Stereotype: 'Princess' as a diminutive title",
+      "description": "The use of 'princess' as a title for a person, especially in a context involving food and indulgence ('chocolate paradise'), is a form of objectification. It reduces the person to a role or status associated with being pampered, infantilized, or valued for aesthetic or sensual qualities rather than their agency or competence. This is a common trope in media and advertising, often used to demean or infantilize women.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b4a00222"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3e0fb8a1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "condescending_tone",
+      "label": "Condescending Tone in Addressing Others",
+      "description": "The phrase 'hello chocolate paradise princess' is a condescending and patronizing way to address someone, implying they are unworthy of serious consideration and are only valued for their indulgence or perceived femininity. This tone is often used to belittle or infantilize, especially when directed at women, and is a form of social dominance or power play.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b4a00222"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0a4e6814",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "gendered_title_use",
+      "label": "Use of Gendered Titles in Humor or Mockery",
+      "description": "The meme relies on the use of a gendered title ('princess') to create humor or irony. This is a common trope in internet memes and comedy, where exaggerated or inappropriate titles are used to mock or highlight social norms. The title 'princess' is traditionally associated with femininity and is often used in a mocking or infantilizing way in modern contexts, especially when juxtaposed with a professional or serious setting like a kitchen.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b4a00222"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_41b7043a",
+      "@type": "EmotionExpression",
+      "instance_name": "condescending_tone",
+      "label": "condescending emotional expression",
+      "description": "The text 'hello chocolate paradise princess' conveys a patronizing and dismissive tone, implying the recipient is valued only for superficial indulgence or perceived femininity, rather than their competence or agency.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b4a00222"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bc36d278",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Albert is the chocolate paradise princess",
+      "description": "The text 'hello chocolate paradise princess' is mapped onto the chef (Albert) in the image, implying that he is being addressed as 'chocolate paradise princess'. This is an analogical mapping where the textual entity 'chocolate paradise princess' is projected onto the visual entity 'chef'. The mapping is created through the juxtaposition of the text with the visual of the chef presenting dessert, and the bottom text 'i'm albert' confirms the identity of the chef as Albert, making the mapping explicit. This mapping is ironic and condescending, as it uses a gendered, infantilizing title ('princess') to refer to a professional chef, creating a humorous or mocking contrast.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b4a00222"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_54e5a1b4",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the chef as 'chocolate paradise princess'",
+      "description": "The user is projected onto the chef (Albert) through the textual material 'hello chocolate paradise princess' and 'i'm albert'. The meme uses the chef as the subject of the address, implying the user is being humorously or condescendingly addressed as 'chocolate paradise princess'. The bottom text 'i'm albert' confirms the chef's identity and anchors the projection. The projection is onto the VisualMaterial entity 'chef' and the TextualMaterial entity 'top_text', creating an ironic and condescending tone.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b4a00222"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_63fbbce4",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The use of the term 'princess' in 'chocolate paradise princess' objectifies and infantilizes the recipient, reducing them to a role associated with femininity and domesticity, which is a form of misogynous stereotype.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b4a00222"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_72264fba",
+      "@type": "TargetCommunity",
+      "instance_name": "person",
+      "label": "chef",
+      "description": "The intended audience is individuals who are familiar with internet meme culture, particularly those who appreciate ironic, self-deprecating, or condescending humor that plays on gendered stereotypes. The meme targets viewers who understand the absurdity of addressing a professional chef as a 'chocolate paradise princess' and who may find the juxtaposition of a serious culinary setting with a patronizing, infantilizing title amusing or relatable. The humor relies on recognizing the stereotype that women 'belong in the kitchen' or are objectified as 'princesses' for indulgence, which may resonate with audiences who are aware of or critique such tropes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b4a00222"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

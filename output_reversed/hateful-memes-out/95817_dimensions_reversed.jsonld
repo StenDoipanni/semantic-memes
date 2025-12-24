@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879",
+  "@type": "AnalysisDocument",
+  "title": "95817.png - Dimension Analysis",
+  "created": "2025-12-19T18:43:34.430269",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_0f382c5a",
+    "@type": "Image",
+    "filename": "95817.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/95817.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/95817.png",
+    "image_name": "95817.png",
+    "extraction_timestamp": "2025-12-19T18:41:58.054239",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0194e1a2",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: two_sad_images_from_american_history; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes two images: the top image shows a silhouette of a person in a helmet (possibly a soldier or worker) against a cityscape, and the bottom image is a historical illustration from 'Le Petit Journal Illustré' depicting a violent mob scene. The text 'two sad images from american history' is overlaid. The intent appears to be to evoke a sense of historical tragedy or sorrow by pairing these images with the label 'American history.' However, the bottom image is from a French publication ('Le Petit Journal Illustré'), not American, and depicts a scene likely from a European context (possibly the Paris Commune or a similar uprising). This creates a misleading or inaccurate historical framing. The meme's harmful intent lies in its potential to misinform viewers about historical events and their origins, thereby distorting historical understanding. It may also be used to evoke emotional responses without providing accurate context, which can be misleading and potentially harmful to historical education.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c03d588a",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text overlay",
+      "description": "two sad images from",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_61a8d1df",
+      "@type": "VisualMaterial",
+      "instance_name": "silhouette_of_a_person_in_a_helmet",
+      "label": "person",
+      "description": "A black silhouette of a person wearing a helmet, possibly representing a soldier or worker, positioned centrally against a cityscape. The silhouette is the dominant visual element in the top image, conveying a sense of anonymity or universality.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e461fc1b",
+      "@type": "Scene",
+      "instance_name": "silhouette_scene",
+      "label": "silhouette_of_a_person_in_a_helmet_against_cityscape",
+      "description": "A black silhouette of a person wearing a helmet is positioned centrally against a cityscape, conveying a sense of anonymity or universality. The person is the dominant visual element, with the cityscape serving as the background context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_44fc21b6",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "historical_event_paris_commune",
+      "label": "Paris Commune",
+      "description": "The Paris Commune was a revolutionary government that ruled Paris from March 18 to May 28, 1871. It was established after the Franco-Prussian War and is often depicted in historical illustrations as a period of intense social upheaval and violence, including street fighting and mob actions. The bottom image from 'Le Petit Journal Illustré' is a well-known depiction of the Commune's violence, specifically the suppression of the uprising by French government forces. This event is not American, but the meme falsely labels it as 'American history,' which is a key misleading element.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d8feb0bb",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "historical_event_american_civil_war",
+      "label": "American Civil War",
+      "description": "The American Civil War (1861–1865) was a conflict between the Union (Northern states) and the Confederacy (Southern states) over issues including slavery and states' rights. It resulted in massive loss of life and profound social change. The top image, while not explicitly depicting a Civil War scene, is often used in memes to represent the suffering of soldiers or civilians during wartime, particularly in the context of American history. The silhouette of a person in a helmet against a cityscape can be interpreted as a generic symbol of wartime sacrifice or urban destruction, which is commonly associated with American historical tragedies.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_69711b72",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "publication_le_petit_journal_illustr",
+      "label": "Le Petit Journal Illustré",
+      "description": "Le Petit Journal Illustré was a French weekly illustrated newspaper that was published from 1890 to 1944. It was known for its vivid, often sensationalist, illustrations of contemporary events, including political unrest, social movements, and war. The bottom image is a typical example of its style and content, depicting a violent mob scene. The fact that this publication is French, not American, is critical background knowledge that the meme misrepresents by labeling it as 'American history.'",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_99b44b8d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "historical_event_american_industrialization",
+      "label": "American Industrialization",
+      "description": "The period of American industrialization in the late 19th and early 20th centuries involved rapid urbanization, the rise of factories, and the growth of labor movements. The top image, with its silhouette of a person in a helmet against a cityscape, can be interpreted as a symbol of industrial labor or urban workers, possibly representing the harsh conditions of factory work or the sacrifices of workers during this era. This context is necessary to understand the potential emotional weight of the image as part of 'American history.'",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1d785055",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "historical_event_american_reconstruction",
+      "label": "American Reconstruction",
+      "description": "The Reconstruction era (1865–1877) followed the American Civil War and involved efforts to reintegrate the Southern states into the Union and to address the status of formerly enslaved people. This period was marked by political turmoil, violence, and the rise of white supremacist groups. The top image, while not depicting Reconstruction, can be used symbolically to represent the suffering and sacrifice of African Americans during this time, which is a key part of American history. The meme's use of the image in this context is an implicit reference to this period.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1c6373eb",
+      "@type": "EmotionExpression",
+      "instance_name": "sadness",
+      "label": "the sorrowful emotion",
+      "description": "The top image conveys a sense of loss or anonymity through the silhouette of a person in a helmet against a cityscape, evoking feelings of mourning or sacrifice. The bottom image, depicting a violent mob scene from the Paris Commune, expresses intense emotional distress, chaos, and tragedy. The text overlay 'two sad images from american history' explicitly frames both scenes as tragic, amplifying the emotional weight.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7452ca59",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'two sad images from american history' maps onto the visual material depicting the silhouette and the historical illustration.",
+      "description": "The text overlay 'two sad images from american history' is juxtaposed with two visual scenes: the top silhouette and the bottom historical illustration. The text frames both images as 'sad' and 'from American history,' creating an analogical mapping where the textual label 'American history' is projected onto both visual entities, despite the bottom image being from a French publication and depicting a non-American event (the Paris Commune). This mapping is spatially and contextually enforced by the text's placement over both images.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1827eaca",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_2",
+      "label": "The text 'two sad images from american history' maps onto the visual material depicting the historical illustration.",
+      "description": "The text 'two sad images from american history' explicitly labels the bottom visual material (the historical illustration from 'Le Petit Journal Illustré') as part of 'American history,' even though the illustration depicts the Paris Commune, a French historical event. This creates an analogical mapping where the textual entity 'American history' is projected onto the visual entity 'historical_event_paris_commune' (represented by the illustration), misrepresenting its origin and context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_acb2fbf1",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material overlaying the images",
+      "description": "The user is projected onto the text 'two sad images from american history' which frames both visual elements as part of 'American history'. This text acts as a deictic label that imposes a specific historical and emotional context onto the viewer's perception of both images, even though the bottom image is from a French publication and depicts a non-American event. The user is thus projected onto this textual material, which dictates the interpretive framework for the entire meme.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ffc2753a",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme misrepresents historical events by falsely labeling a French historical illustration (Paris Commune) as 'American history,' which distorts historical understanding and can misinform viewers. This misleading framing has the potential to cause harm to historical education and public knowledge.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5fe4bcd3",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience familiar with internet meme culture, historical references, and visual satire. It leverages widely recognizable imagery (a silhouette against a cityscape, a historical illustration of a mob scene) and relies on the audience's ability to recognize the historical inaccuracies to create a sense of irony or shock. The target community likely includes users who engage with historical content, political commentary, or satirical memes, and who may be familiar with the Paris Commune or American Civil War imagery. The meme's appeal lies in its provocative juxtaposition and the emotional weight it assigns to historical events, which can resonate with viewers interested in social commentary or historical revisionism.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cb775879"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

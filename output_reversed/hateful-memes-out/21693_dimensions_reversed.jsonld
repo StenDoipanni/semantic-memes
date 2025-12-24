@@ -1,0 +1,172 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_5fcb77ce",
+  "@type": "AnalysisDocument",
+  "title": "21693.png - Dimension Analysis",
+  "created": "2025-12-15T18:23:49.413509",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_9ad52a36",
+    "@type": "Image",
+    "filename": "21693.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/21693.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/21693.png",
+    "image_name": "21693.png",
+    "extraction_timestamp": "2025-12-15T18:22:18.070212",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1dc2d627",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a Black male cashier in a retail or food service setting, smiling while processing a transaction. The overlaid text reads: \"your purchase of $19.99 comes to $21.36 after theft.\" This text is a direct and malicious accusation, implying that the cashier is responsible for the extra $1.37 charge, framing him as a thief. This is a hateful stereotype that targets Black individuals by associating them with criminal behavior, specifically theft, in a context where they are performing a legitimate job. The meme uses the visual of a Black person in a service role to reinforce a harmful and false narrative, which is a direct attack based on race. The intent is to demean and dehumanize the individual by linking his appearance and profession to dishonesty, which is a form of racialized hate speech.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_5fcb77ce"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8396bc66",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "your purchase of $19.99 comes to",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_5fcb77ce"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_82cf5106",
+      "@type": "VisualMaterial",
+      "instance_name": "cashier",
+      "label": "Black male cashier",
+      "description": "A Black man with curly hair and a beard, wearing a white shirt and a brown apron, smiling while holding a payment terminal. He is positioned behind a counter in what appears to be a café or restaurant, and is the central focus of the image. His cheerful expression contrasts with the hateful text overlay accusing him of theft.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_5fcb77ce"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2728ee08",
+      "@type": "Scene",
+      "instance_name": "transaction_scene",
+      "label": "cashier_processing_payment",
+      "description": "A scene depicting a Black male cashier in a retail or food service setting, smiling while processing a transaction with a customer. The cashier is holding a payment terminal and appears to be engaged in a routine transaction. The customer is partially visible from behind, facing the cashier. The scene is overlaid with text that falsely accuses the cashier of theft, creating a hateful and racially charged context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_5fcb77ce"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_098312c7",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "criminal_behavior_associations",
+      "label": "Criminal Behavior Associations",
+      "description": "The meme relies on the stereotype that Black people are inherently more likely to be associated with criminal behavior, particularly theft. This is a harmful and false stereotype that is used to dehumanize the cashier and justify the hateful accusation in the text overlay.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_5fcb77ce"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_68073afe",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racialized_hate_speech",
+      "label": "Racialized Hate Speech",
+      "description": "The meme uses racial profiling to accuse a Black person of theft, which is a form of racialized hate speech. This speech targets an individual based on their race, implying that their racial identity makes them inherently dishonest or criminal, which is a harmful and false generalization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_5fcb77ce"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_28df6ae5",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_black_people_as_thieves",
+      "label": "Stereotype of Black People as Thieves",
+      "description": "This is a specific, harmful stereotype that links Black individuals to criminal behavior, particularly theft. The meme uses this stereotype to falsely accuse the cashier of stealing money from the customer, which is a direct and malicious application of this stereotype.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_5fcb77ce"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6f979fa4",
+      "@type": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "cheerful expression",
+      "description": "The cashier is smiling broadly, showing teeth, and has a bright, open facial expression that conveys joy or satisfaction. This expression is typical of someone engaged in a positive, routine interaction, such as completing a transaction.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_5fcb77ce"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_cc99acbb",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Cashier is mapped as a thief",
+      "description": "The text overlay explicitly accuses the cashier of theft by stating '$21.36 after theft', directly mapping the visual entity 'cashier' to the textual concept of 'thief'. This is a hateful analogical mapping that uses the visual of a Black man in a service role to project the stereotype of criminal behavior onto him.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_5fcb77ce"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_10dea9e5",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the transaction scene as the target of a racialized accusation",
+      "description": "The user is projected onto the scene of the cashier processing a payment, where the overlaid text falsely accuses the Black cashier of theft. The text 'your purchase of $19.99 comes to $21.36 after theft' uses 'your' to directly address the viewer/user, making them the implied subject of the accusation. The user is thus projected onto the scene as the person who is being targeted by the hateful stereotype, experiencing the false narrative that the cashier is a thief. This projection is reinforced by the visual of the smiling cashier, which contrasts with the hateful accusation, creating a dissonant experience for the user.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_5fcb77ce"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d3a2088a",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly accuses a Black male cashier of theft based on his race, using racially charged language and imagery to dehumanize him. This is a direct attack based on protected characteristics (race) and constitutes hateful content.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_5fcb77ce"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d12dee9c",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who hold or are exposed to racist stereotypes, particularly those who may believe or perpetuate the stereotype that Black people are inherently more likely to be associated with criminal behavior, especially theft. The meme is designed to appeal to or provoke this audience by using racially charged imagery and text to reinforce harmful generalizations. It targets those who may find satisfaction in racially profiling Black individuals, or who are susceptible to misinformation that links race with dishonesty. The audience is likely to be those who consume and share content that relies on racialized hate speech, and who may not recognize the meme as a hateful attack, but rather as a joke or commentary that normalizes racist tropes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_5fcb77ce"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

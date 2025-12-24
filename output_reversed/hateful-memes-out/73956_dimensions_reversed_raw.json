@@ -1,0 +1,187 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Abusive; overall-intent-description: The image depicts two women laughing together while holding mugs, suggesting a casual, friendly interaction. The text overlay reads, 'I just got out of church... just kidding, I'm not that fucking retarded..' The phrase 'that fucking retarded' is a derogatory slur targeting intellectual disability, which falls under the category of ableism. The use of the word 'retarded' is a harmful and offensive term that dehumanizes individuals with developmental disabilities. The meme's intent is to mock or belittle someone by implying they are unintelligent, using a crude and abusive expression. This is an abusive meme as it directly uses vulgar language to demean and insult, potentially threatening or humiliating the target. The juxtaposition of the seemingly innocent image of two women enjoying coffee with the crude, offensive text creates a jarring contrast meant to shock or provoke, which is a form of verbal abuse. The meme does not target a specific racial, gender, or religious group, but rather uses a disability-related slur to insult, making it primarily abusive in nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "i just got out of church... just kidding,",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_on_left",
+      "label": "Black woman with dreadlocks",
+      "description": "A Black woman with long, reddish-brown dreadlocks, wearing a pink cardigan over a green shirt, holding a beige mug. She is smiling broadly while looking at the other woman, suggesting a moment of shared laughter or conversation. Her presence is central to the image's visual composition and emotional tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "laughing_friends",
+      "label": "Two women laughing together while holding mugs",
+      "description": "The scene depicts two women seated outdoors on a couch, sharing a moment of laughter while holding mugs. Their body language and facial expressions suggest a friendly, relaxed interaction. The woman on the left (woman_on_left) is smiling broadly and looking at the woman on the right, who is also laughing. The setting appears to be a patio or garden area with cushions and greenery in the background. The overall mood is casual and convivial.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman_on_left",
+          "relation": "isLaughingWith",
+          "to": "woman_on_right"
+        },
+        {
+          "from": "woman_on_right",
+          "relation": "isLaughingWith",
+          "to": "woman_on_left"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism_slur",
+      "label": "Use of derogatory slur targeting intellectual disability",
+      "description": "The term 'retarded' is a historically offensive and derogatory slur used to demean individuals with developmental disabilities. It is rooted in ableist stereotypes that dehumanize and infantilize people with intellectual disabilities, portraying them as less than human or incapable of independent thought. This slur is not merely a word but a symbol of systemic ableism and discrimination. Its use in the meme is intended to insult and belittle, leveraging the stereotype that people with disabilities are unintelligent or foolish.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "church_context",
+      "label": "Church as a social and cultural institution",
+      "description": "The phrase 'I just got out of church' implies a setting or context associated with religious institutions, particularly Christian churches, which are often seen as places of community, moral guidance, and social gathering. The juxtaposition of this phrase with the crude insult creates a contrast that is meant to be shocking or humorous in a vulgar way. The reference to church is not literal but cultural — it invokes the stereotype that people who attend church are 'serious' or 'stuffy,' making the subsequent joke about being 'retarded' seem like a punchline that subverts expectations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism_stereotype",
+      "label": "Stereotype that people with disabilities are unintelligent or foolish",
+      "description": "This stereotype is a core component of ableism, where individuals with developmental disabilities are often mocked or insulted by being labeled as 'retarded' or 'dumb.' It is a harmful and inaccurate generalization that reduces a person's worth to their perceived cognitive abilities. The meme relies on this stereotype to create its offensive punchline, implying that the person being mocked is so unintelligent that they would be 'retarded' — a term that is both outdated and deeply offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "vulgar_language",
+      "label": "Use of profanity to demean or shock",
+      "description": "The inclusion of the word 'fucking' in the text is a form of vulgar language used to intensify the insult and provoke a reaction. In the context of the meme, it serves to amplify the offensive nature of the slur 'retarded,' making the insult more aggressive and shocking. This use of profanity is a common rhetorical device in abusive memes to elicit a visceral response from the viewer, often to mock or belittle the target.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_laughter",
+      "label": "mocking and sarcastic laughter",
+      "description": "The two women are laughing together, but the context of the text overlay suggests their laughter is not genuine or innocent — it is sarcastic and mocking, used to deliver an offensive punchline. Their facial expressions convey amusement that is juxtaposed with the vulgar and abusive content of the text, creating a jarring emotional contrast.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'I just got out of church... just kidding,' is mapped onto the visual scene of two women laughing together.",
+      "description": "The text 'I just got out of church... just kidding,' is juxtaposed with the visual of two women laughing, creating an analogical mapping where the scene (laughing_friends) is implicitly associated with the speaker of the text. The text implies that the speaker is making a joke about being 'out of church,' and the visual of the laughing women serves as the context or embodiment of the speaker's persona — someone who is casually joking, even if the joke is offensive. The laughter in the image is mapped onto the speaker's tone, suggesting the speaker is mocking or sarcastic, even if the visual doesn't explicitly show the speaker's face.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_2",
+      "label": "The text 'I'm not that fucking retarded..' is mapped onto the visual entity 'woman_on_left'.",
+      "description": "The text 'I'm not that fucking retarded..' is an explicit denial or insult directed at the speaker, who is visually represented by 'woman_on_left'. The meme uses the visual of the woman laughing to imply that she is the one being mocked — the 'I' in the text. The analogical mapping is that the woman_on_left is the person being referenced in the text, even though the text is framed as a self-deprecating or defensive statement. The visual of her laughing while holding a mug is mapped onto the textual persona of the speaker, who is denying being 'retarded' — a slur that targets intellectual disability. The mapping is between the textual speaker and the visual woman, who is the subject of the insult.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman_on_left as the speaker of the offensive text",
+      "description": "The user is projected onto the visual entity 'woman_on_left' because the meme's text 'I'm not that fucking retarded..' is explicitly framed as a self-referential statement ('I'). The visual of the woman laughing while holding a mug is mapped onto the textual persona of the speaker, implying that she is the one being referenced in the text. The user, as the viewer, is positioned to identify with or project themselves onto this speaker, even though the text is an insult. The projection is onto the woman_on_left, who is visually the subject of the insult and the implied speaker of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Abusive",
+      "description": "The meme uses vulgar language and a derogatory slur targeting intellectual disability to insult and demean, creating a hostile and offensive tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "General internet audience",
+      "description": "The meme is designed for a broad online audience familiar with internet humor, vulgar language, and offensive memes. It leverages shock value and crude humor to provoke reactions, targeting viewers who appreciate edgy or abrasive content. The use of a disability-related slur and profanity indicates it is intended for an audience that tolerates or enjoys offensive, ableist humor, often found in meme culture and social media spaces where such content is circulated.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/73956.png",
+    "image_name": "73956.png",
+    "extraction_timestamp": "2025-12-19T11:52:23.692259",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

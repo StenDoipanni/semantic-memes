@@ -1,0 +1,230 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: hateful; overall-intent-description: The image depicts a young child with developmental disabilities reading a book, juxtaposed with a hateful text overlay that uses the slur 'retard' and falsely claims the child has been 'accepted into Harvard' as a cruel joke. This constitutes a direct attack on individuals with developmental disabilities, using derogatory language and mocking their abilities. The meme is designed to be offensive and degrading, fitting the definition of hateful content as it targets a protected characteristic (disability) with malicious intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "just got his euthanasia forms signed, retard can't even read so i told him he got accepted into harvard lmfa",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "child",
+      "label": "young boy with developmental disabilities",
+      "description": "A young boy with light brown hair and visible developmental disabilities is sitting on the floor, leaning over a book. He is wearing a blue t-shirt and jeans, and appears to be focused on reading or looking at the book. His facial expression suggests concentration or curiosity. The child is the central subject of the image and is depicted in a natural, candid moment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "child_reading_book",
+      "label": "child reading a book",
+      "description": "A young boy with developmental disabilities is sitting on the floor, leaning over a book and appearing focused on reading or looking at it. He is wearing a blue t-shirt and jeans. The book is open on his lap, and his hand is resting on the pages. The background shows a classroom setting with shelves and storage bins.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "isReading",
+          "to": "book"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "euthanasia",
+      "label": "Euthanasia",
+      "description": "The concept of euthanasia, which refers to the practice of intentionally ending a life to relieve suffering, is referenced in the text overlay. This is a real-world medical and ethical concept, often controversial and legally restricted in many countries. The meme uses this term in a cruel, false context to mock the child.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harvard",
+      "label": "Harvard University",
+      "description": "Harvard University is a prestigious private Ivy League university in the United States. The meme falsely claims the child has been 'accepted into Harvard' as a cruel joke, leveraging the real-world prestige and exclusivity associated with the institution to mock the child's perceived intellectual limitations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "retard",
+      "label": "Slur 'retard'",
+      "description": "The term 'retard' is a derogatory slur historically used to demean individuals with developmental disabilities. It is a form of ableism and is considered deeply offensive and harmful. The meme uses this slur to dehumanize the child and reinforce negative stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "Ableism",
+      "description": "Ableism is the discrimination or social prejudice against people with disabilities. The meme relies on ableist stereotypes by mocking the child's perceived inability to read and using derogatory language to demean his intellectual capacity, which is a core component of ableist attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "child",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "intelligence_mockery",
+      "label": "Intelligence Mockery",
+      "description": "The meme uses the false claim that the child 'can't even read' to mock his intelligence, which is a common form of ableist mockery. This stereotype implies that individuals with developmental disabilities are intellectually inferior and incapable of academic achievement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "child",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "developmental_disabilities",
+      "label": "Developmental Disabilities",
+      "description": "Developmental disabilities are a group of conditions that affect cognitive, physical, or social functioning, often present from childhood. The meme targets this group by using the child's visible disability as a basis for cruel, false claims and derogatory language.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lmfa",
+      "label": "Laughing Out Loud (LMFAO)",
+      "description": "The text 'lmfa' is an abbreviation for 'laughing my f***ing ass off,' a common internet slang expression used to convey extreme amusement. The meme uses this phrase to signal the author's cruel, mocking intent, implying the joke is meant to be laughed at at the expense of the child.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "cruelty",
+      "label": "cruel emotional expression",
+      "description": "The emotion expressed is cruelty, conveyed through the hateful text overlay that uses derogatory language ('retard') and falsely claims the child has been 'accepted into Harvard' as a cruel joke. The text 'lmfa' further signals mocking amusement at the child's expense.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The child is mapped as a person who is intellectually disabled and incapable of reading, as described by the text.",
+      "description": "The text explicitly refers to the child as 'retard' and claims 'can't even read', directly mapping the visual entity 'child' to the textual description of being intellectually disabled and unable to read. This is a direct analogical mapping where the visual subject is labeled by the text with derogatory attributes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the text_chunk, as the meme's text directly addresses the viewer with a cruel, mocking statement ('just got his euthanasia forms signed, retard can't even read so i told him he got accepted into harvard lmfa'). The use of 'i' and 'you' (implied by the first-person narrative and the act of telling the child) creates a direct projection of the user's perspective onto the text, making the user the one who is 'telling' the joke and thus the one who is projecting their own hateful intent onto the scene. The text is the primary vehicle for this projection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks a child with developmental disabilities using derogatory language ('retard') and false, cruel claims ('euthanasia forms signed', 'accepted into Harvard'), constituting a direct hateful attack based on disability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who engage with internet humor that relies on ableist stereotypes and derogatory language, particularly those who find amusement in mocking people with developmental disabilities. The meme is designed to appeal to an audience that understands and uses internet slang like 'lmfa' and appreciates cruel, offensive jokes that target disability, using the false claim of 'Harvard acceptance' to mock intellectual capacity. This audience is likely familiar with ableist tropes and may be drawn to the meme's shock value and dark humor, even though it is hateful and offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/28964.png",
+    "image_name": "28964.png",
+    "extraction_timestamp": "2025-12-15T20:54:38.751490",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

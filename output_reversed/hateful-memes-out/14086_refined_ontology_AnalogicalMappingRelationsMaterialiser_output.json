@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_id_1",
+      "hasMappedEntity": "text_chunk: top text overlay",
+      "hasMappingEntity": "group_of_young_men"
+    },
+    {
+      "from": "group_of_young_men",
+      "relation": "mappedOnto",
+      "to": "text_chunk: top text overlay"
+    }
+  ],
+  "triples": [
+    ":mapping_id_1 :hasMappedEntity :text_chunk_top_text_overlay .",
+    ":mapping_id_1 :hasMappingEntity :group_of_young_men .",
+    ":group_of_young_men :mappedOnto :text_chunk_top_text_overlay ."
+  ],
+  "triples_count": 3
+}

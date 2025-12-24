@@ -1,0 +1,174 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: that_awkward_moment_candy_in_back; hasOverallIntent: harmless_self_deprecating; overall-intent-description: The image depicts a van with its rear door open, revealing an empty cargo area, with text overlay reading 'that awkward moment when there's no candy in the back.' This is a self-deprecating meme that humorously references a common scenario, likely tied to trick-or-treating or a similar event where candy is expected. The intent is to evoke mild embarrassment or relatability through a harmless, situational joke. There is no toxicity, harmful content, or targeting of any protected group. The humor is situational and universally relatable, not based on stereotypes or prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "that awkward moment",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "van",
+      "label": "vehicle",
+      "description": "A white van with its rear doors open, revealing an empty cargo area. The van is parked on a paved road in front of stone buildings. It appears to be a commercial or delivery van, possibly used for transporting goods or supplies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "empty_van_scene",
+      "label": "van_with_empty_cargo_area",
+      "description": "A white van with its rear doors open, revealing an empty cargo area, parked on a paved road in front of stone buildings. The scene is framed by text overlays that describe a humorous, self-deprecating moment about lacking candy in the van.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "trick_or_treating",
+      "label": "Trick-or-Treating",
+      "description": "The meme humorously references the Halloween tradition of trick-or-treating, where children go door-to-door collecting candy. The scenario of an empty van implies a failure to prepare for this event, which is a common and relatable situation for parents or organizers involved in Halloween activities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "empty_van_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "halloween",
+      "label": "Halloween",
+      "description": "The meme is set within the context of Halloween, a cultural event celebrated in many countries, particularly in North America and parts of Europe. The expectation of candy in a van is tied to Halloween traditions, making the humor dependent on understanding this cultural context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "empty_van_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "parenting_humor",
+      "label": "Parenting Humor",
+      "description": "The meme belongs to a genre of humor that self-deprecatingly portrays the challenges and mishaps of parenting, particularly during holidays. The 'awkward moment' is a common trope in parenting memes, where parents humorously admit to failing at a task they are expected to handle.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "empty_van_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "self_deprecating_meme",
+      "label": "Self-Deprecating Meme",
+      "description": "This meme relies on the cultural understanding of self-deprecating humor, where individuals mock themselves or their situations to create relatable and light-hearted comedy. The humor is derived from the embarrassment of not having candy, which is a common experience for parents or organizers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "empty_van_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "embarrassment",
+      "label": "embarrassed emotion",
+      "description": "The emotion expressed is mild embarrassment, stemming from the humorous acknowledgment of a common failure—specifically, not having candy in the van during a Halloween trick-or-treating scenario. This self-deprecating humor evokes a relatable feeling of awkwardness or shame in the situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "the empty van represents the awkward moment of having no candy",
+      "description": "The visual of the empty van's cargo area is mapped onto the textual phrase 'that awkward moment when there's no candy in the back', creating an analogy where the emptiness of the van symbolizes the embarrassing situation described in the text. The van's empty state visually embodies the 'awkward moment' of lacking candy, which is the core of the meme's humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "user projected onto the scene of an empty van",
+      "description": "The user is projected onto the visual and textual scene of the empty van, which represents the 'awkward moment' of having no candy. The humor relies on the user identifying with the situation, imagining themselves as the person who forgot the candy, thus projecting themselves onto the scene and the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "trick_or_treating",
+      "label": "Trick-or-Treating Participants and Parents",
+      "description": "The meme is designed for parents, caregivers, or event organizers involved in Halloween trick-or-treating, who may humorously admit to forgetting candy in their van. The cultural reference to Halloween candy collection makes it relatable to families participating in this tradition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/15948.png",
+    "image_name": "15948.png",
+    "extraction_timestamp": "2025-12-15T16:23:21.231165",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

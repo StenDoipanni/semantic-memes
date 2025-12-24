@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: prospective_without_white; hasOverallIntent: Harmful; overall-intent-description: The image depicts a person browsing clothing racks in a store, with the text 'prospective without white' overlaid. The phrase 'prospective without white' is ambiguous and potentially misleading, as it may imply a lack of white people or white perspectives in a context where they are expected. This could be interpreted as promoting exclusionary or discriminatory ideas, particularly if it is used to suggest that certain viewpoints or experiences are not valued or are being deliberately omitted. The image itself does not contain overtly abusive, cyberbullying, or misogynistic content, but the textual message carries the potential to be harmful by fostering exclusionary thinking or reinforcing biases against white people or white perspectives. The overall intent appears to be to provoke thought or discussion about representation or perspective, but the phrasing could be misinterpreted as promoting harmful exclusionary ideologies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "prospective without white \" \" located at bottom center of image",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "a person browsing clothing",
+      "description": "A person with short dark hair, wearing a black sheer top with a floral pattern and black shorts, is reaching up to browse clothing on a rack. The person is standing in profile, facing away from the camera, and appears to be focused on selecting an item. Their posture suggests active engagement with the merchandise.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "browsing_clothing",
+      "label": "person browsing clothing racks",
+      "description": "A person with short dark hair, wearing a black sheer top with a floral pattern and black shorts, is reaching up to browse clothing on a rack. The person is standing in profile, facing away from the camera, and appears to be focused on selecting an item. Their posture suggests active engagement with the merchandise. The scene is set in a clothing store with multiple racks of predominantly black garments, and a small section of red plaid fabric is visible. The text 'prospective without white' is overlaid at the bottom of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person",
+          "relation": "browsing",
+          "to": "clothing_rack"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "prospective_without_white_concept",
+      "label": "Concept: 'Prospective without white'",
+      "description": "This phrase is a coded or ambiguous reference to the exclusion of white perspectives or white people from a particular context, often used in discussions about diversity, representation, or social justice. It implies a deliberate omission or marginalization of white voices or experiences, which can be interpreted as promoting exclusionary ideologies. The phrase is not a direct visual element but relies on real-world understanding of racial dynamics and discourse around representation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_exclusion_stereotype",
+      "label": "Stereotype: Racial Exclusion",
+      "description": "The meme implicitly references the stereotype that certain groups (in this case, white people) are systematically excluded from spaces, conversations, or perspectives that are deemed important or 'prospective' (forward-looking, future-oriented). This stereotype is rooted in real-world racial dynamics and can be interpreted as a form of exclusionary rhetoric, often used to justify or normalize the absence of white voices in certain contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_perspective_concept",
+      "label": "Concept: White Perspective",
+      "description": "This refers to the idea that white people or white cultural viewpoints hold a dominant or default position in society, media, or discourse. The phrase 'without white' implies the removal or absence of this perspective, which is a concept often debated in discussions about diversity, representation, and power structures. It is not visible in the image but is essential to understanding the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "diversity_discourse",
+      "label": "Concept: Diversity Discourse",
+      "description": "The meme is embedded in the broader social discourse around diversity, inclusion, and representation. The phrase 'prospective without white' is likely intended to provoke thought or discussion about who is included or excluded in conversations about the future or societal direction. This discourse is a real-world social phenomenon that requires external knowledge to interpret the meme’s intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "exclusionary_ideology",
+      "label": "Concept: Exclusionary Ideology",
+      "description": "The meme may be interpreted as promoting or highlighting an exclusionary ideology — the belief that certain groups (here, white people) should be deliberately omitted from a particular context or conversation. This is a real-world ideological concept that is not visible in the image but is necessary to understand the potential harmful interpretation of the phrase.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "exclusionary_ideology",
+      "label": "exclusionary ideology emotion",
+      "description": "The emotion expressed is one of exclusionary ideology, implied by the text 'prospective without white', which suggests the deliberate omission or marginalization of white perspectives or people from a context. This is not an emotion displayed by the person in the image but is conveyed through the textual message, which carries a potentially harmful and exclusionary sentiment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'prospective without white' maps to the visual scene of a person browsing clothing.",
+      "description": "The phrase 'prospective without white' is overlaid on the image of a person browsing clothing racks. The mapping implies that the visual scene (the person browsing) represents or embodies the concept of 'prospective without white', suggesting that the act of browsing or selecting (a prospective action) is being framed as occurring without the presence or consideration of white perspectives or people. This is an analogical mapping where the visual material (the person browsing) is mapped onto the textual concept (prospective without white).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the text 'prospective without white' located at the bottom center of the image. The text acts as the focal point for the user's interpretation, as it carries the conceptual and potentially harmful message that is being overlaid on the visual scene. The user is not explicitly projected onto the visual material (the person browsing) or the scene itself, but rather onto the textual material which defines the meme's intent and meaning.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The phrase 'prospective without white' implies the deliberate exclusion of white perspectives or people from a context, which can foster exclusionary thinking and reinforce biases against white people or white perspectives. This carries the potential to cause harm by normalizing the omission of certain viewpoints or experiences.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals engaged in discussions about diversity, representation, and social justice, particularly those familiar with or critical of exclusionary ideologies. The meme is designed to provoke thought or debate among people who are aware of racial dynamics and the concept of white perspective dominance in discourse. The visual of a person browsing clothing serves as an analogical representation of 'prospective without white,' suggesting the intended audience interprets the image as a commentary on who is included or excluded in conversations about the future or societal direction. This audience likely includes activists, academics, or online commentators involved in the diversity discourse, who may be familiar with the coded language of racial exclusion and its implications.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/46850.png",
+    "image_name": "46850.png",
+    "extraction_timestamp": "2025-12-16T02:32:00.695812",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

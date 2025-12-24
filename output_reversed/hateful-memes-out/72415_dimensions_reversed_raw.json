@@ -1,0 +1,253 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: harmful; overall-intent-description: The meme juxtaposes a bicycle with a historical photograph of two Black men, using the text 'the first one can't sing when you put chains on it' to imply that Black people are incapable of singing when subjected to chains. This is a harmful and racist stereotype that equates Black people with animals and perpetuates the idea that they are incapable of certain cultural expressions under oppression. The image and text together create a toxic and offensive message rooted in historical racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "text content and position: 'what's the difference between the 2?' positioned at the top of the image, above the bicycle.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "bottom_text",
+      "label": "text location",
+      "description": "text content and position: 'the first one can't sing when you put chains on it' positioned in the center of the historical photograph below the two men.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "bicycle",
+      "label": "a white fixed-gear bicycle",
+      "description": "A white bicycle with thin tires and a simple frame, featuring a yellow chainring and a black saddle. It is positioned centrally in the top half of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "two_men",
+      "label": "two Black men in historical attire",
+      "description": "Two men seated side by side in a vintage black-and-white photograph. Both wear wide-brimmed hats and period clothing. The man on the left has a more expressive, slightly open-mouthed facial expression, while the man on the right has a more stoic, neutral expression. The image has a grainy, aged appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "text_overlay",
+      "label": "text captions",
+      "description": "White text with black outline is overlaid on the image. The top text reads: 'what's the difference between the 2?'. The bottom text reads: 'the first one can't sing when you put chains on it'. The text is positioned to frame the visual elements and deliver the meme's punchline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "historical_photograph",
+      "label": "a sepia-toned, vintage portrait",
+      "description": "The bottom half of the image is a black-and-white photograph with visible grain and aging artifacts, suggesting it is from the late 19th or early 20th century. The men are posed formally, seated on a bench or chair, with a plain background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "bicycle_joke_scene",
+      "label": "bicycle_joke_scene",
+      "description": "A scene composed of a white bicycle and a historical photograph of two Black men, with text overlays that create a racist joke. The bicycle is positioned above the photograph, and the text frames both images to deliver a punchline rooted in historical racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text_overlay",
+          "relation": "frames",
+          "to": "bicycle"
+        },
+        {
+          "from": "text_overlay",
+          "relation": "frames",
+          "to": "historical_photograph"
+        },
+        {
+          "from": "bicycle",
+          "relation": "juxtaposedWith",
+          "to": "historical_photograph"
+        },
+        {
+          "from": "text_overlay",
+          "relation": "deliversPunchline",
+          "to": "historical_photograph"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_chains_singing",
+      "label": "Anti-Black Stereotype: Black people can't sing when chained",
+      "description": "This stereotype is rooted in historical racism and dehumanization, portraying Black people as incapable of cultural expression (like singing) under physical restraint or oppression. It is a racist trope that equates Black people with animals and perpetuates the idea that they are incapable of certain cultural expressions under oppression. The phrase 'can't sing when you put chains on it' is a direct reference to this harmful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_overlay",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_chains_as_slavery_symbol",
+      "label": "Historical association of chains with slavery",
+      "description": "Chains are a powerful symbol of slavery and oppression in American and global history. The reference to 'chains' in the meme implicitly invokes the historical context of chattel slavery, particularly in the United States, where enslaved Black people were forcibly restrained. This historical context is necessary to understand the racist undertone of the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_overlay",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "black_people_as_animals_in_racist_stereotypes",
+      "label": "Racist stereotype: Black people are animals",
+      "description": "This is a long-standing and deeply harmful racist trope that dehumanizes Black people by comparing them to animals. The meme's punchline 'the first one can't sing when you put chains on it' relies on this stereotype to imply that Black people are less than human and incapable of cultural expression under oppression. This is a form of racial degradation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_overlay",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "fixed_gear_bicycle_as_animal",
+      "label": "Fixed-gear bicycle as a metaphor for an animal",
+      "description": "The meme uses the bicycle as a visual pun. The 'first one' (the bicycle) is being compared to the 'second one' (the Black men) in the photograph. The joke implies that the bicycle, like the Black men, 'can't sing' when chains are put on it. This is a racist metaphor that equates the bicycle with a Black person, reinforcing the dehumanizing stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_overlay",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "racist_derision",
+      "label": "derisive and mocking emotion",
+      "description": "The meme expresses a mocking and dehumanizing emotion by juxtaposing a bicycle with a historical photograph of Black men and using the text 'the first one can't sing when you put chains on it' to imply that Black people are incapable of singing under oppression. This is rooted in a racist stereotype that equates Black people with animals and perpetuates historical racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "bicycle mapped as 'the first one'",
+      "description": "The top text 'what's the difference between the 2?' and the bottom text 'the first one can't sing when you put chains on it' create an analogical mapping where the bicycle is identified as 'the first one'. This mapping equates the bicycle with the first Black man in the photograph, using the visual pun that 'putting chains on it' (referring to the bicycle) is analogous to the historical oppression of enslaved Black people. The mapping is established through the textual framing and the juxtaposition of the bicycle with the photograph of the two men.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_2",
+      "label": "two_men mapped as 'the second one'",
+      "description": "The bottom text 'the first one can't sing when you put chains on it' implies a contrast with 'the second one', which is visually represented by the two Black men in the historical photograph. The mapping identifies the two men as 'the second one', contrasting them with the bicycle ('the first one'). This mapping is established through the textual reference to 'the first one' and the visual context of the two men being the only other entities in the image, creating a binary comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the historical photograph of two Black men",
+      "description": "The user is projected onto the visual material of the two Black men in the historical photograph. The meme's text 'the first one can't sing when you put chains on it' implicitly positions the viewer as someone who understands the historical context of chains and slavery, and thus is expected to recognize the racist stereotype being invoked. The user is not explicitly addressed with 'you' or 'me', but the entire scene and the punchline are framed as a question directed at the viewer to 'get it', making the viewer the implied audience and participant in the racist joke. The projection is onto the 'two_men' entity, as the joke's punchline relies on the viewer's recognition of the historical oppression symbolized by the chains and the dehumanizing comparison to the men.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme perpetuates a harmful racist stereotype by equating Black people with animals and implying they are incapable of cultural expression under oppression. The text 'the first one can't sing when you put chains on it' directly references a dehumanizing anti-Black trope rooted in historical slavery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience that may find racist stereotypes humorous or acceptable, particularly those who are unaware of or indifferent to the historical and cultural harm associated with anti-Black racism. The target community likely includes individuals who engage with internet humor that relies on offensive analogies or who are not sensitive to the dehumanizing implications of equating Black people with animals or portraying them as incapable of cultural expression under oppression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/72415.png",
+    "image_name": "72415.png",
+    "extraction_timestamp": "2025-12-19T11:25:03.271323",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 18,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

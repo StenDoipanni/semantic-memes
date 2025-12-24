@@ -1,0 +1,191 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: sharing_and_caring; hasOverallIntent: Harmful; overall-intent-description: The image depicts a man in an orange shirt and bandana sharing a snack with a goat, with the text 'sharing and caring' overlaid. The scene is lighthearted and appears to be a humorous or affectionate moment between a human and an animal. There is no evidence of toxicity, abuse, cyberbullying, misogyny, ableism, or hate toward any protected group. The meme's intent is to create a cute, wholesome, or ironic contrast between the human-animal interaction and the phrase 'sharing and caring,' which may be used to mock or parody the idea of 'caring' behavior. The overall intent is not harmful in the sense of causing direct harm or promoting hate, but it may be considered mildly insensitive or inappropriate in contexts where the phrase 'sharing and caring' is used to describe human social behavior, as it trivializes the concept by juxtaposing it with an animal. The meme does not contain any disparaging metaphors or stereotypes as defined in the provided knowledge base.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "sharing and caring",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "human",
+      "description": "A man wearing an orange shirt and a gray bandana, with a beard, looking at a goat while sharing a snack. He is positioned on the left side of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "sharing_and_caring_interaction",
+      "label": "man_sharing_snack_with_goat",
+      "description": "A scene depicting a man in an orange shirt and bandana sharing a snack with a goat, with the text 'sharing and caring' overlaid. The man is positioned on the left, and the goat is on the right, facing each other in a close, affectionate interaction. The scene is set against a clear blue sky, emphasizing the lighthearted and humorous nature of the moment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "shares_snack_with",
+          "to": "goat"
+        },
+        {
+          "from": "man",
+          "relation": "faces",
+          "to": "goat"
+        },
+        {
+          "from": "goat",
+          "relation": "nuzzles",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sharing_and_caring_phrase",
+      "label": "The phrase 'sharing and caring'",
+      "description": "A common phrase used in social contexts, especially in advertising, charity campaigns, or community initiatives, to promote altruism, empathy, and mutual support among humans. Its use here is ironic or satirical, contrasting the human-animal interaction with the expected human social behavior it implies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "sharing_and_caring_interaction",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "animal_interaction_stereotype",
+      "label": "Stereotype of animals as affectionate or 'caring' companions",
+      "description": "In popular culture and media, animals (especially dogs and cats) are often portrayed as loyal, loving, and emotionally supportive companions to humans. This stereotype is invoked here to contrast with the human social norm implied by 'sharing and caring', creating a humorous or ironic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "sharing_and_caring_interaction",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "human_animal_interaction_stereotype",
+      "label": "Stereotype of humans sharing food or affection with animals",
+      "description": "The trope of humans feeding or affectionately interacting with animals (e.g., goats, dogs, cats) is common in media and advertising, often used to evoke feelings of warmth, innocence, or wholesome behavior. This meme plays on that trope to create a humorous juxtaposition with the phrase 'sharing and caring'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "sharing_and_caring_interaction",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ironic_juxtaposition",
+      "label": "The use of irony in memes to mock or parody social norms",
+      "description": "Memes often use irony by placing an image or scenario in contrast with a phrase or concept to create humor or critique. Here, the image of a man sharing a snack with a goat is juxtaposed with the phrase 'sharing and caring' to mock the idea of human social responsibility or to highlight the absurdity of applying human social norms to animals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "sharing_and_caring_interaction",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "affection",
+      "label": "affectionate emotion",
+      "description": "The man and the goat are positioned close together, with the goat gently touching the man's mouth with its snout, suggesting a tender, affectionate interaction. The man's calm facial expression and the overall serene setting contribute to the feeling of warmth and connection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "sharing_and_caring_mapping",
+      "label": "The phrase 'sharing and caring' is mapped onto the visual interaction between the man and the goat.",
+      "description": "The text 'sharing and caring' is overlaid on the image of a man sharing a snack with a goat. This creates an analogical mapping where the human-animal interaction is interpreted as an example of 'sharing and caring', despite the absurdity of applying this human-centric social concept to an animal. The mapping is ironic, as the visual material (man and goat sharing food) is used to represent the textual concept (sharing and caring), thereby creating a humorous or satirical contrast.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of human-animal interaction",
+      "description": "The user is projected onto the scene depicting the man sharing a snack with the goat, as this is the central visual material that the meme uses to create its ironic juxtaposition with the text 'sharing and caring'. The user is invited to imagine themselves in the role of the man or to identify with the affectionate, humorous interaction being portrayed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses an ironic juxtaposition to trivialize the concept of 'sharing and caring' by applying it to a human-animal interaction, which may be considered mildly insensitive or inappropriate in contexts where the phrase is used to describe human social behavior. This trivialization can be seen as a form of harmful content by undermining the seriousness of the phrase.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet meme audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with meme culture, particularly those who appreciate ironic or satirical juxtapositions. The target community includes users who understand the humor in trivializing human social concepts like 'sharing and caring' by applying them to animal-human interactions, a common trope in online humor. The visual simplicity and relatable scenario (a man sharing food with a goat) make it accessible to a wide demographic, including younger internet users and those who enjoy wholesome or absurd animal memes. The meme does not rely on niche cultural references or specific demographic cues, making it broadly appealing within the context of internet meme communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/52847.png",
+    "image_name": "52847.png",
+    "extraction_timestamp": "2025-12-16T04:46:03.657179",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

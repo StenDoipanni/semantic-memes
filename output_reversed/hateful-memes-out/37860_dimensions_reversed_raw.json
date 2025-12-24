@@ -1,0 +1,261 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: overall-intent-description; overall-intent-description: The meme juxtaposes two images: the top image shows two women sharing a cigarette and ashtray, with the text 'so glad i grew up doing this,' implying a nostalgic or rebellious past. The bottom image shows three women walking down a street, each engrossed in their smartphones, with the text 'not this,' suggesting a modern, passive, or disconnected lifestyle. The overall intent is to humorously contrast a more 'authentic' or 'active' past with a perceived 'lazy' or 'distracted' present, using the smartphone culture as a target. The meme does not contain any toxic elements such as abusive, cyberbullying, harmful, hateful, misogynous, or propaganda content. It is a lighthearted, self-deprecating or observational commentary on generational shifts in social behavior, specifically the contrast between analog social interaction and digital distraction. The intent is to evoke nostalgia and humor by mapping the visual of shared, physical interaction (top) against the visual of individual, digital engagement (bottom), using the text to frame the contrast as a positive reflection on the past versus a negative portrayal of the present.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text overlay on top image",
+      "description": "so glad i grew up doing this",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "two_women",
+      "label": "people",
+      "description": "Two women are shown in the top panel, leaning over a table and sharing a cigarette and ashtray. They appear to be engaged in a close, physical interaction, possibly smoking together. Their faces are close to the ashtray, and they are both holding cigarettes. One woman has dark hair and is wearing a black-and-white patterned top; the other has lighter brown hair and is wearing a dark top. The scene suggests a shared, intimate moment, possibly from a past era.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "shared_smoking_scene",
+      "label": "Two women sharing a cigarette and ashtray",
+      "description": "The top panel shows two women leaning over a table, both holding cigarettes and blowing smoke into a shared ashtray. Their faces are close together, suggesting intimacy or camaraderie. The scene is framed as nostalgic, with the text 'so glad i grew up doing this' implying a contrast with modern behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "two_women",
+          "relation": "share",
+          "to": "cigarette"
+        },
+        {
+          "from": "two_women",
+          "relation": "share",
+          "to": "ashtray"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "analog_social_interaction",
+      "label": "Analog Social Interaction",
+      "description": "The concept of engaging in social activities without digital devices, such as sharing physical objects (like cigarettes) or being physically present with others in a shared space. This is contrasted with the modern trend of digital distraction, and is implied to be more 'authentic' or 'active' in the meme's context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "shared_smoking_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "digital_distraction",
+      "label": "Digital Distraction",
+      "description": "The phenomenon of being engrossed in personal electronic devices (like smartphones) to the point of disengaging from physical surroundings or social interactions. This is portrayed negatively in the meme as a modern, passive lifestyle.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "not_this_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "generational_shift_in_social_behavior",
+      "label": "Generational Shift in Social Behavior",
+      "description": "The cultural and social transition from analog, face-to-face interactions in past decades to digital, device-mediated interactions in the present. This concept underpins the meme's comparison and humor, framing the past as more 'authentic' and the present as 'lazy' or 'distracted'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "shared_smoking_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nostalgia",
+      "label": "Nostalgia",
+      "description": "A sentimental longing for the past, often idealizing previous eras. In the meme, the top image and text 'so glad i grew up doing this' evoke nostalgia for a time perceived as more connected or less digitally mediated.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "shared_smoking_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "self_deprecating_commentary",
+      "label": "Self-Deprecating Commentary",
+      "description": "A form of humor where the speaker makes fun of themselves or their own group. The meme uses this to humorously contrast past behavior with present behavior, implying a lighthearted critique of modern smartphone culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "smartphone_culture",
+      "label": "Smartphone Culture",
+      "description": "The widespread use of smartphones and their impact on social behavior, attention spans, and interpersonal communication. This is the central target of the meme's negative portrayal in the bottom panel.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "not_this_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "rebellious_past",
+      "label": "Rebellious Past",
+      "description": "The stereotype or perception that past generations, especially youth, engaged in more 'risky' or 'non-conformist' behaviors (like smoking together) as a form of rebellion or social bonding. This is implied by the nostalgic tone of the top image and text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "shared_smoking_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "passive_lifestyle",
+      "label": "Passive Lifestyle",
+      "description": "A lifestyle characterized by low levels of physical or mental engagement, often associated with excessive screen time or digital consumption. The bottom image and text 'not this' portray this as undesirable.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "not_this_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "nostalgia",
+      "label": "nostalgic emotion",
+      "description": "The emotion expressed through the top image and text 'so glad i grew up doing this' conveys a sentimental longing for the past, specifically for a time when social interactions were more physical and less digitally mediated. The close, shared act of smoking together evokes a sense of camaraderie and authenticity that is contrasted with the modern, distracted lifestyle.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "nostalgic past mapped onto shared smoking scene",
+      "description": "The text 'so glad i grew up doing this' is mapped onto the visual of two women sharing a cigarette and ashtray, implying that this past behavior is being idealized as more authentic or socially engaging compared to the present. The mapping links the nostalgic sentiment expressed in the text to the visual representation of analog social interaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the nostalgic past behavior",
+      "description": "The user is projected onto the top image and text, which idealizes the past behavior of sharing cigarettes as a form of authentic social interaction. The text 'so glad i grew up doing this' implies the user is identifying with or reflecting on their own past experiences, projecting themselves onto the scene of analog social interaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who grew up in the pre-smartphone era and now reflect nostalgically on that time, particularly those who identify with or critique modern smartphone culture. This includes people who perceive analog social interaction (like sharing cigarettes) as more authentic or engaging compared to the passive, digitally distracted lifestyle portrayed in the bottom image. The meme appeals to a demographic that values face-to-face interaction and may self-deprecatingly or humorously lament the shift toward digital distraction, using the contrast between the two scenes to evoke shared generational experiences and commentary on social behavior changes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/37860.png",
+    "image_name": "37860.png",
+    "extraction_timestamp": "2025-12-15T23:55:51.724044",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

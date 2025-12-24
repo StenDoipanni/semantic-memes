@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_7f2cec2b",
+  "@type": "AnalysisDocument",
+  "title": "43810.png - Dimension Analysis",
+  "created": "2025-12-16T01:43:48.203501",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_5dc488b7",
+    "@type": "Image",
+    "filename": "43810.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/43810.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/43810.png",
+    "image_name": "43810.png",
+    "extraction_timestamp": "2025-12-16T01:42:26.337612",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4dc1ed5c",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes a roasted turkey with the text 'how to cook turkey in usa' above a portrait of a historical figure (likely a Romanian nobleman or ruler) with the text 'how to cook turkey in romania'. The intent is to humorously suggest that cooking turkey in Romania is more complex or culturally significant than in the USA, by implying that Romanians use 'ancient' or 'elaborate' methods. While not overtly abusive or hateful, it relies on a stereotype that Romanian cuisine or culture is more 'traditional' or 'exotic' compared to American food, which can be seen as culturally insensitive or potentially harmful by implying a hierarchy of culinary sophistication. The meme uses visual contrast (modern food vs. historical portrait) to create a comedic effect, but the underlying message may unintentionally reinforce cultural stereotypes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f2cec2b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6b3596fb",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "text location",
+      "description": "how to cook turkey in usa",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f2cec2b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3d5c9f6c",
+      "@type": "VisualMaterial",
+      "instance_name": "roasted_turkey",
+      "label": "food object",
+      "description": "A whole roasted turkey, golden-brown and garnished with herbs, lemon wedges, and mushrooms, presented on a white plate. It is visually prominent and central to the top half of the image, symbolizing a common American Thanksgiving dish.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f2cec2b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_59629494",
+      "@type": "Scene",
+      "instance_name": "turkey_cooking_comparison",
+      "label": "Comparison of turkey cooking methods",
+      "description": "The scene juxtaposes a roasted turkey with text indicating 'how to cook turkey in usa' above a portrait of a historical figure with text indicating 'how to cook turkey in romania', creating a humorous contrast between American and Romanian culinary traditions.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f2cec2b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_34bc3650",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "romania_culinary_stereotype",
+      "label": "Romanian culinary stereotype",
+      "description": "The meme implies that cooking turkey in Romania is more complex or culturally significant, using a historical portrait to suggest 'ancient' or 'elaborate' methods. This relies on a stereotype that Romanian cuisine or culture is more 'traditional' or 'exotic' compared to American food, which can be seen as culturally insensitive or potentially harmful by implying a hierarchy of culinary sophistication.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f2cec2b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4eb37c84",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "usa_culinary_stereotype",
+      "label": "American culinary stereotype",
+      "description": "The meme contrasts American turkey cooking (represented by a modern, simple roasted turkey) with Romanian methods, implying American cooking is straightforward or standardized. This reinforces a stereotype that American food culture is homogenized and less 'traditional' or 'complex' than other cultures, which can be part of a broader cultural hierarchy joke.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f2cec2b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4f0b5c43",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "historical_portrait_context",
+      "label": "Historical portrait context",
+      "description": "The portrait of the man in the image is likely a Romanian nobleman or ruler from the 17th or 18th century, dressed in traditional attire. This visual is used to imply that Romanian cooking methods are 'ancient' or 'historical', which is a cultural stereotype. Understanding the historical context of the portrait is necessary to interpret the meme's humor and underlying message.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f2cec2b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4e0c36ac",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "cultural_hierarchy_joke",
+      "label": "Cultural hierarchy joke",
+      "description": "The meme uses a visual contrast (modern food vs. historical portrait) to create a comedic effect by suggesting that Romanian cuisine is more 'traditional' or 'exotic' than American food. This relies on a real-world concept of cultural hierarchy, where one culture is implicitly deemed more sophisticated or authentic than another, which can be seen as culturally insensitive or potentially harmful.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f2cec2b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e0410097",
+      "@type": "EmotionExpression",
+      "instance_name": "mocking",
+      "label": "mocking emotion",
+      "description": "The meme uses a humorous and exaggerated contrast between a simple American turkey and a historical Romanian figure to mock the idea that Romanian cooking is more complex or 'ancient', implying a cultural hierarchy that is not grounded in reality. The tone is satirical and relies on visual juxtaposition to create a comedic effect that may be perceived as culturally insensitive.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f2cec2b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4aa2970b",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "American turkey cooking method mapped to roasted turkey",
+      "description": "The text 'how to cook turkey in usa' is spatially positioned above the roasted turkey, creating an analogical mapping where the roasted turkey visually represents the method or result of cooking turkey in the USA. The visual material (roasted turkey) is mapped onto the textual concept (USA turkey cooking).",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f2cec2b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_08846a16",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the humorous cultural comparison scene",
+      "description": "The user is projected onto the overall scene of the meme, which juxtaposes American and Romanian turkey cooking methods. The user is invited to imagine themselves engaging with this cultural comparison, humorously evaluating the 'complexity' of cooking turkey in different countries. The projection is implicit, not deictic, but the entire scene invites the user to adopt the meme's perspective and participate in the cultural hierarchy joke.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f2cec2b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c3536843",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Culturally insensitive stereotype",
+      "description": "The meme implies that Romanian cuisine is more 'traditional' or 'exotic' compared to American food, suggesting a hierarchy of culinary sophistication. This relies on a stereotype that Romanian culture is more 'ancient' or 'elaborate', which can be seen as culturally insensitive or potentially harmful by implying a cultural superiority.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f2cec2b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e04dec84",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals familiar with or interested in cultural comparisons, particularly those who understand American and Romanian culinary traditions. The meme relies on a humorous juxtaposition of modern American Thanksgiving turkey preparation with a historical Romanian figure, appealing to viewers who appreciate or are aware of cultural stereotypes and the concept of culinary hierarchy. The audience likely includes internet users who engage with satirical or culturally insensitive memes, often found on social media platforms, and may be drawn to the visual contrast and the implied 'exotic' or 'ancient' methods of cooking in Romania. The meme's humor is derived from the audience's recognition of the stereotype that Romanian cuisine is more traditional or complex, which suggests the target community includes people who are either from or have exposure to both American and Romanian cultures, or who are familiar with internet humor that plays on cultural differences.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f2cec2b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

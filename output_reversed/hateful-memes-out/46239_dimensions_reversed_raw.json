@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image features a Black man with a joyful expression, juxtaposed with a hateful and violent text overlay that falsely claims 'we can kill as many as we want and your stupid government keeps bringing us in.' This text is a direct attack targeting Muslim communities (implied by the head covering) and Black people (the subject's race), invoking Islamophobia and anti-Black racism. The meme uses the visual of a smiling individual to contrast with the violent, conspiratorial message, aiming to incite fear and hatred toward these groups. The intent is to spread hateful rhetoric by associating Muslim and Black communities with terrorism and criminality, which is a clear example of hateful content targeting protected characteristics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "we can kill as many as we want and your stupid government keeps bringing us in",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "Black man with joyful expression",
+      "description": "A Black man with a beard, wearing a pink head covering and a light-colored shirt, is shown smiling broadly with his eyes closed. His expression appears genuinely happy or amused. He is the central and most salient visual element in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "hateful_text_overlay_scene",
+      "label": "hateful_text_overlay_scene",
+      "description": "A scene where a Black man with a joyful expression is juxtaposed with a hateful and violent text overlay that falsely claims 'we can kill as many as we want and your stupid government keeps bringing us in.' The text is a direct attack targeting Muslim communities (implied by the head covering) and Black people (the subject's race), invoking Islamophobia and anti-Black racism. The visual of a smiling individual contrasts with the violent, conspiratorial message, aiming to incite fear and hatred toward these groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "isJuxtaposedWith",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype",
+      "label": "Anti-Muslim Stereotype",
+      "description": "The text explicitly references 'we can kill as many as we want' and 'your stupid government keeps bringing us in', which invokes the stereotype that Muslims are inherently violent and that they are a threat to Western societies. This is a common Islamophobic trope used to justify discrimination and fear. The pink head covering is often used to imply the person is Muslim, linking the visual to the stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_racism_stereotype",
+      "label": "Anti-Black Racism Stereotype",
+      "description": "The text attacks the 'government' and implies that Black people (the subject's race) are being brought in and are dangerous. This ties into broader anti-Black stereotypes that associate Black people with criminality and violence. The visual of a Black man smiling is juxtaposed with this hateful message, which is a common tactic to dehumanize and incite fear toward Black communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism_association_stereotype",
+      "label": "Terrorism Association Stereotype",
+      "description": "The text 'we can kill as many as we want' directly invokes the stereotype that Muslims are inherently violent and associated with terrorism. This is a core element of Islamophobia and is used to justify fear and hostility toward Muslim communities. The head covering is used to visually reinforce this association.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "immigration_conspiracy_stereotype",
+      "label": "Immigration Conspiracy Stereotype",
+      "description": "The phrase 'your stupid government keeps bringing us in' references the conspiracy theory that governments are intentionally importing dangerous people (often immigrants or Muslims) into the country. This is a common trope used to fuel xenophobia and anti-immigrant sentiment, particularly targeting Muslim communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_violence_stereotype",
+      "label": "Anti-Black Violence Stereotype",
+      "description": "The text implies that Black people are violent and dangerous, which is a common racist stereotype. This is reinforced by the visual of a Black man, whose joyful expression is contrasted with the violent message, making the stereotype more potent and disturbing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful expression",
+      "description": "The man is smiling broadly with his eyes closed, conveying a genuine and intense feeling of happiness or amusement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The hateful text is mapped onto the Black man with a joyful expression.",
+      "description": "The text 'we can kill as many as we want and your stupid government keeps bringing us in' is overlaid on the image of a Black man smiling. The text explicitly targets Muslim communities (implied by the head covering) and Black people (the subject's race), invoking Islamophobia and anti-Black racism. The visual of the smiling man is juxtaposed with the violent message, creating an analogical mapping where the man is implicitly represented as the 'we' in the text — the group being blamed for violence and immigration. This mapping is used to dehumanize and incite fear toward these groups by associating them with the hateful claims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the hateful text overlay",
+      "description": "The user is projected onto the textual material of the meme, as the text explicitly uses 'your stupid government', directly addressing the viewer. This deictic pronoun 'your' creates a direct projection of the user as the target of the government's actions, making the viewer feel personally implicated in the hateful message. The user is thus projected onto the text_chunk, which is the primary vehicle of the hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme contains a hateful text overlay that directly attacks Muslim communities and Black people, invoking Islamophobia and anti-Black racism. The text falsely claims 'we can kill as many as we want and your stupid government keeps bringing us in,' which is a direct attack targeting protected characteristics. The visual of a smiling Black man is juxtaposed with this violent message, aiming to incite fear and hatred toward these groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed to incite fear and hatred toward Muslim communities and Black people, using the visual of a smiling Black man with a head covering to represent the 'we' in the hateful text. The target audience is likely individuals who hold or are susceptible to Islamophobic and anti-Black racist beliefs, as the meme leverages stereotypes about Muslim violence and Black criminality to provoke emotional responses and reinforce prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/46239.png",
+    "image_name": "46239.png",
+    "extraction_timestamp": "2025-12-16T02:13:40.074681",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,198 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts a plane taking off at sunset, with text overlay that reads: \"look at the plane, it's your uncle samir\" and \"*was\". The visual of the plane ascending is juxtaposed with the text to imply that the person named 'Samir' (likely of Middle Eastern or Muslim origin, given the name) is no longer alive or present, as if he was 'taken' by the plane. This is a darkly humorous or sarcastic meme that uses the image of a plane to symbolize death or disappearance, possibly referencing a tragic event involving a person named Samir. The intent is to create a punchline through the contrast between the grandeur of the plane taking off and the somber implication of death. There is no direct targeting of any protected group based on race, religion, gender, or sexual orientation in the text or image. The meme is not abusive, cyberbullying, harmful, hateful, misogynistic, or propagandistic. It is a form of dark humor or satire, using the visual metaphor of a plane to convey a tragic or ironic message. The overall intent is to evoke a sense of dark humor or irony by juxtaposing the image of a plane taking off with the implication of death or disappearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "\"look at the plane, it's your uncle samir\"",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "airplane",
+      "label": "aircraft",
+      "description": "A large commercial airplane is depicted in the center of the image, positioned directly above the runway, appearing to be in the process of taking off. The aircraft is viewed from a low-angle perspective, emphasizing its size and the dramatic ascent against the sunset. The plane's landing gear is visible, and its engines are likely active, contributing to the sense of motion. The aircraft is the central visual focus and is directly referenced in the meme's text, which implies a symbolic or metaphorical connection to the person named 'Samir'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "plane_takeoff_scene",
+      "label": "plane_takeoff",
+      "description": "A large commercial airplane is depicted in the center of the image, positioned directly above the runway, appearing to be in the process of taking off. The aircraft is viewed from a low-angle perspective, emphasizing its size and the dramatic ascent against the sunset. The plane's landing gear is visible, and its engines are likely active, contributing to the sense of motion. The aircraft is the central visual focus and is directly referenced in the meme's text, which implies a symbolic or metaphorical connection to the person named 'Samir'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "uncle_samir",
+      "label": "Uncle Samir",
+      "description": "The name 'Samir' is a common Arabic and Muslim name, often associated with Middle Eastern or North African heritage. The meme implies that 'Samir' is a person of this background who has died or disappeared, using the plane as a metaphor for death or disappearance. This requires background knowledge about the cultural and ethnic associations of the name 'Samir' to understand the implied stereotype or reference.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "plane_as_death_metaphor",
+      "label": "Plane as Symbol of Death or Disappearance",
+      "description": "The image of a plane taking off is used metaphorically to represent death or disappearance. This is a common trope in dark humor and satire, where the grandeur of flight is juxtaposed with the finality of death. Understanding this metaphor requires knowledge of cultural symbolism and visual metaphors in media and memes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "plane_takeoff_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dark_humor",
+      "label": "Dark Humor",
+      "description": "The meme uses dark humor to convey a tragic or ironic message. This requires understanding of the cultural context of dark humor, which often involves morbid or taboo subjects presented in a lighthearted or ironic manner. The punchline relies on the audience recognizing the darkly humorous intent behind the juxtaposition of the plane and the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "plane_takeoff_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "The meme implicitly references Islamophobia by associating the name 'Samir' (commonly used by Muslims) with death or disappearance, potentially reinforcing negative stereotypes about Muslims being associated with terrorism or violence. This requires background knowledge about Islamophobic stereotypes and how they are perpetuated in media and memes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "uncle_samir",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism_associations",
+      "label": "Terrorism Associations",
+      "description": "The use of a plane as a metaphor for death or disappearance can be linked to terrorism associations, particularly with the 9/11 attacks. This requires background knowledge about historical events and how they influence cultural metaphors and memes. The meme may be referencing or alluding to such events, even if not explicitly stated.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "plane_takeoff_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "dark_humor",
+      "label": "darkly humorous emotion",
+      "description": "The emotion expressed is dark humor, conveyed through the juxtaposition of a plane taking off (a symbol of life, travel, or escape) with the text implying death or disappearance ('it's your uncle samir *was*'). The tone is ironic and morbid, using a tragic metaphor to create a punchline that is not meant to be taken seriously but rather to provoke a grim, sarcastic reaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Plane as Uncle Samir",
+      "description": "The top text 'look at the plane, it's your uncle samir' explicitly maps the visual entity 'airplane' to the textual entity 'uncle samir'. This is an analogical mapping where the airplane is metaphorically identified as the person named 'Samir', implying his death or disappearance. The visual material (airplane) is being mapped onto the textual material (uncle samir) to create a darkly humorous or ironic statement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material 'your uncle samir'",
+      "description": "The text 'look at the plane, it's your uncle samir' uses the deictic phrase 'your uncle samir', which directly projects the user (the viewer) onto the textual entity 'uncle samir'. The user is positioned as the person who is being addressed and who has a familial relationship with 'Samir', making them the implied subject of the statement. This projection is onto the textual material, as the deictic 'your' explicitly references the user.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobic Stereotype",
+      "description": "The meme implies that a person named 'Samir', commonly associated with Middle Eastern or Muslim heritage, has died or disappeared, using the plane as a metaphor for death or disappearance. This implicitly reinforces negative stereotypes linking Muslims to terrorism or violence, particularly through the association of a plane with tragic events like 9/11.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals familiar with or sensitive to dark humor, particularly those who recognize cultural or historical associations between airplanes and tragic events like 9/11. The meme relies on the audience understanding the metaphorical use of the plane to imply death or disappearance, and it specifically targets those who are aware of the cultural and ethnic connotations of the name 'Samir' (commonly associated with Middle Eastern or Muslim heritage). The intended audience likely includes people who are comfortable with or appreciate ironic or sarcastic commentary on sensitive topics, and who may have personal or communal knowledge of the name 'Samir' or related cultural references. The meme's dark humor and implied Islamophobic stereotype suggest it is designed for an audience that either does not perceive the potential harm or is willing to engage with the meme despite its potentially offensive undertones.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/30862.png",
+    "image_name": "30862.png",
+    "extraction_timestamp": "2025-12-15T21:32:08.301042",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

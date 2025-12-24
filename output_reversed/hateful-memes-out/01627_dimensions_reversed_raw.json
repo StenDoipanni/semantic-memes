@@ -1,0 +1,188 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: jew_jerky_meme; hasOverallIntent: Hateful; overall-intent-description: The image juxtaposes a religious figure on a cross with text that reads 'jew jerky: leave out in the sun until all moisture is gone, store in a cool dark place for 3 days.' This is a hateful antisemitic meme that uses a derogatory stereotype (jew jerky) to demean Jewish people, implying they are inferior or inedible. The visual of the crucifixion is used to reinforce the dehumanizing message, linking the stereotype to a religiously charged and historically traumatic symbol. The intent is to spread antisemitic hatred by associating Jewish people with a grotesque, degrading food metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "jew jerky: leave out in the sun until all moisture is gone",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "bottom text overlay",
+      "description": "store in a cool dark place for 3 days",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "silhouette of a person on a cross",
+      "description": "A dark silhouette of a person with long hair, appearing to be crucified on a cross. The figure is shown from the side, with arms outstretched and legs positioned on the crossbeam. The silhouette is stark against a bright, cloudy sky with sun rays breaking through. This is a visual representation of Jesus Christ on the cross, a central symbol in Christianity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "crucifixion_scene",
+      "label": "crucifixion",
+      "description": "A scene depicting a person in silhouette crucified on a cross against a backdrop of a cloudy sky with sun rays breaking through. The visual composition emphasizes the religious symbolism of crucifixion, with the figure positioned centrally on the cross, which is vertical and prominent in the frame. The sky forms the background, creating a stark contrast with the dark silhouette.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_stereotype_jew_jerky",
+      "label": "Jew Jerky Stereotype",
+      "description": "A derogatory antisemitic stereotype that dehumanizes Jewish people by comparing them to a type of dried meat, implying they are inferior, inedible, or undesirable. This stereotype is rooted in historical antisemitism and is used to demean Jewish identity and worth.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "crucifixion_symbolism",
+      "label": "Crucifixion as a Religious Symbol",
+      "description": "The crucifixion of Jesus Christ is a central event in Christianity, symbolizing sacrifice, suffering, and redemption. In this meme, it is used as a visual metaphor to dehumanize and associate Jewish people with a religiously charged and historically traumatic symbol, reinforcing the hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_concept_dehumanization",
+      "label": "Dehumanization of Jewish People",
+      "description": "A core antisemitic concept that involves portraying Jewish people as less than human, often through grotesque metaphors or comparisons to animals or food. This is used to justify hatred, discrimination, and violence against Jewish communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_concept_food_metaphor",
+      "label": "Food Metaphor in Antisemitism",
+      "description": "The use of food-related metaphors (like 'jew jerky') to describe Jewish people is a common antisemitic trope. It reduces Jewish identity to a consumable object, reinforcing dehumanization and portraying Jewish people as undesirable or inferior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is hatred, conveyed through the antisemitic stereotype of 'jew jerky' and the use of the crucifixion image to dehumanize Jewish people. The text instructs to 'leave out in the sun until all moisture is gone' and 'store in a cool dark place for 3 days,' which is a grotesque metaphor implying Jewish people are inedible and undesirable, reinforcing antisemitic hatred.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_jew_jerky_to_crucifixion",
+      "label": "Jew Jerky stereotype mapped onto crucifixion scene",
+      "description": "The text 'jew jerky: leave out in the sun until all moisture is gone, store in a cool dark place for 3 days' is an antisemitic food metaphor. This text is analogically mapped onto the visual of the crucifixion scene, where the person on the cross is dehumanized and portrayed as an object to be processed (dried, stored), mirroring the grotesque treatment implied by the text. The crucifixion scene visually represents the 'jew jerky' stereotype by associating Jewish people with a degrading, inedible, and religiously charged object.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the antisemitic food metaphor text",
+      "description": "The user is projected onto the textual material describing 'jew jerky' as if they are the one performing the dehumanizing act of processing Jewish people as food. The meme implies the user is the one who would 'leave out in the sun' and 'store' Jewish people, projecting the user into the role of the perpetrator of the antisemitic stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses the antisemitic stereotype of 'jew jerky' and maps it onto the crucifixion scene, dehumanizing Jewish people by portraying them as inedible food. This is a direct attack on Jewish people based on their identity, invoking historical antisemitism and religious symbolism to reinforce hatred.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "antisemitic_haters",
+      "description": "The target community is individuals who hold antisemitic beliefs and are likely to engage with or spread hateful content targeting Jewish people. The meme is designed to resonate with those who understand and perpetuate antisemitic stereotypes, particularly the 'jew jerky' trope, and who may find the visual of crucifixion reinforcing their dehumanizing worldview.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/01627.png",
+    "image_name": "01627.png",
+    "extraction_timestamp": "2025-12-15T10:45:32.477927",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

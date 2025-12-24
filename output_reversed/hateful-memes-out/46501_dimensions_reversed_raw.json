@@ -1,0 +1,209 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes the 9/11 terrorist attacks with a photo of a Muslim woman in Congress in 2019, implying that Muslims are responsible for or should be blamed for the 9/11 attacks. This is a direct attack on Muslims based on their religion, invoking the harmful stereotype of associating Islam with terrorism. The text 'defund homeland security!' further reinforces the hateful intent by suggesting that Muslims are responsible for the need for homeland security, which is a dangerous and false equivalence. The meme uses the traumatic event of 9/11 to stigmatize and demonize Muslims, which is a clear example of Islamophobia and hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "muslims in 2001",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Twin_Towers",
+      "label": "Buildings",
+      "description": "The Twin Towers of the World Trade Center in New York City, visibly engulfed in flames and smoke, indicating a catastrophic event. This is the central visual element in the top panel of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "scene_911_catastrophe",
+      "label": "9/11 attack scene",
+      "description": "The Twin Towers are engulfed in flames and smoke, indicating a catastrophic event. This is the central visual element in the top panel of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "9_11_Terrorist_Attacks",
+      "label": "September 11, 2001 Terrorist Attacks",
+      "description": "The catastrophic terrorist attacks on the World Trade Center in New York City, carried out by al-Qaeda, which resulted in the deaths of nearly 3,000 people. This event is the central historical reference in the top panel of the meme and is used to evoke trauma and blame. The meme's hateful intent relies on the viewer's knowledge of this event and its association with Islam.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_911_catastrophe",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Islamophobia",
+      "label": "Islamophobia",
+      "description": "The fear, hatred, or prejudice against Muslims. This meme explicitly invokes this stereotype by associating Muslims with the 9/11 attacks, which is a core component of Islamophobic rhetoric. The meme uses the traumatic event to stigmatize Muslims and implies they are responsible for the need for homeland security, which is a dangerous and false equivalence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Homeland_Security",
+      "label": "U.S. Department of Homeland Security",
+      "description": "A U.S. federal executive department established in 2002 in response to the 9/11 attacks. The meme references this agency as a target for defunding, implying that Muslims are responsible for its existence, which is a false and hateful equivalence. The viewer must understand the agency's purpose and its creation as a direct consequence of 9/11 to grasp the meme's implication.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Muslim_in_Congress_2019",
+      "label": "Muslim Woman in Congress in 2019",
+      "description": "The image of a Muslim woman in Congress in 2019 is used to contrast with the 9/11 imagery. The viewer must understand that this is a political figure, not a terrorist, to recognize the meme's false equivalence and hateful intent. The meme implies that this person is somehow connected to or responsible for the 9/11 attacks, which is a baseless and dangerous stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_911_catastrophe",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Terrorism_Associations",
+      "label": "Terrorism Associations",
+      "description": "The stereotype that Muslims are inherently associated with terrorism. This is a core component of the meme's hateful intent. The meme uses the 9/11 attacks to imply that all Muslims are responsible for or should be blamed for the attacks, which is a dangerous and false equivalence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "False_Equivalence",
+      "label": "False Equivalence",
+      "description": "A logical fallacy where two things are presented as equivalent when they are not. The meme falsely equates the actions of a small group of terrorists with the entire Muslim population and then implies that a Muslim politician in Congress is somehow responsible for the need for homeland security, which is a dangerous and false equivalence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_anger",
+      "label": "hateful anger expression",
+      "description": "The meme expresses hateful anger by juxtaposing the 9/11 attacks with a Muslim woman in Congress, implying she is somehow responsible for the attacks or the need for homeland security. The text 'defund homeland security!' reinforces this anger by suggesting a political action based on false equivalence and blame. The overall intent is to stigmatize and demonize Muslims through the lens of trauma and fear.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "muslims in 2001 are mapped onto the 9/11 catastrophe",
+      "description": "The text 'muslims in 2001' is positioned directly above the image of the Twin Towers engulfed in flames and smoke, which visually represents the 9/11 attacks. This creates an analogical mapping where the text explicitly identifies the visual material as representing 'muslims in 2001', implying that Muslims are responsible for or associated with the 9/11 attacks. This is a core component of the meme's hateful intent and Islamophobic stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material implying collective blame",
+      "description": "The user is projected onto the top textual material 'muslims in 2001' which is visually mapped onto the 9/11 catastrophe scene. This projection implies that the user is being asked to identify with or internalize the hateful stereotype that all Muslims are responsible for the 9/11 attacks. The meme's structure forces the viewer to project their own understanding of the event onto the text and image, creating a false equivalence that stigmatizes Muslims. The user is not explicitly addressed with 'you' or 'me', but the framing of the meme as a call to action ('defund homeland security!') and the juxtaposition of the 9/11 image with a Muslim politician in 2019 creates an implicit projection of responsibility onto the viewer's perception of Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Muslims by associating them with the 9/11 terrorist attacks, invoking the harmful stereotype of Islam being linked to terrorism. It uses the traumatic event to stigmatize and demonize Muslims, which is a clear example of Islamophobia and hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "text_chunk_1",
+      "label": "audience description",
+      "description": "The text 'muslims in 2001' explicitly targets the Muslim community by directly labeling them in the context of the 9/11 attacks, invoking the harmful stereotype that Muslims are inherently associated with terrorism. This is a core component of the meme's hateful intent and is designed to stigmatize and demonize Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/46501.png",
+    "image_name": "46501.png",
+    "extraction_timestamp": "2025-12-16T02:18:44.582407",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

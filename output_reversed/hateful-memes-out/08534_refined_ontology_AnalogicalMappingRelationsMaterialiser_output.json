@@ -1,0 +1,65 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_id_1",
+      "hasMappedEntity": "top_text",
+      "hasMappingEntity": "woman_on_left"
+    },
+    {
+      "from": "woman_on_left",
+      "relation": "mappedOnto",
+      "to": "top_text"
+    },
+    {
+      "mapping": "mapping_id_2",
+      "hasMappedEntity": "top_text",
+      "hasMappingEntity": "conversational_scene"
+    },
+    {
+      "from": "conversational_scene",
+      "relation": "mappedOnto",
+      "to": "top_text"
+    },
+    {
+      "mapping": "mapping_id_2",
+      "hasMappedEntity": "bottom_text",
+      "hasMappingEntity": "conversational_scene"
+    },
+    {
+      "from": "conversational_scene",
+      "relation": "mappedOnto",
+      "to": "bottom_text"
+    },
+    {
+      "mapping": "mapping_id_3",
+      "hasMappedEntity": "bottom_text",
+      "hasMappingEntity": "conversational_scene"
+    },
+    {
+      "from": "conversational_scene",
+      "relation": "mappedOnto",
+      "to": "bottom_text"
+    }
+  ],
+  "triples": [
+    ":mapping_id_1 :hasMappedEntity :top_text .",
+    ":mapping_id_1 :hasMappingEntity :woman_on_left .",
+    ":woman_on_left :mappedOnto :top_text .",
+    ":mapping_id_2 :hasMappedEntity :top_text .",
+    ":mapping_id_2 :hasMappingEntity :conversational_scene .",
+    ":conversational_scene :mappedOnto :top_text .",
+    ":mapping_id_2 :hasMappedEntity :bottom_text .",
+    ":mapping_id_2 :hasMappingEntity :conversational_scene .",
+    ":conversational_scene :mappedOnto :bottom_text .",
+    ":mapping_id_3 :hasMappedEntity :bottom_text .",
+    ":mapping_id_3 :hasMappingEntity :conversational_scene .",
+    ":conversational_scene :mappedOnto :bottom_text ."
+  ],
+  "triples_count": 12
+}

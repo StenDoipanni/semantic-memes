@@ -1,0 +1,38 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "despairing emotion",
+      "expressors": [
+        {
+          "entity": "emaciated human body suspended upside down",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "emaciated human body partially covered by blanket",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "emaciated human body suspended upside down",
+          "relation": "emotionalRelationToEntity",
+          "to": "emaciated human body partially covered by blanket"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":despairing_emotion :hasExpressor :emaciated_human_body_suspended_upside_down .",
+    ":despairing_emotion :hasExpressor :emaciated_human_body_partially_covered_by_blanket .",
+    ":emaciated_human_body_suspended_upside_down :emotionalRelationToEntity :emaciated_human_body_partially_covered_by_blanket ."
+  ],
+  "triples_count": 3
+}

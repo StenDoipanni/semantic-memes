@@ -1,0 +1,226 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a black cat labeled 'muslim' reaching toward a butterfly labeled 'girl', with the text \"is this a punching bag?\". This visual metaphor is used to imply that Muslim women are treated as objects or targets for violence, suggesting they are 'punching bags' for male aggression. The meme maps the image of a cat (representing a Muslim man) interacting with a butterfly (representing a Muslim woman) to the textual question, creating a harmful stereotype that portrays Muslim women as vulnerable to violence and objectification. This aligns with Islamophobic tropes that depict Muslim women as oppressed or in need of protection, and it reinforces harmful narratives about gender roles and violence within Muslim communities. The intent is to demean and stereotype Muslim women by associating them with vulnerability and being targets for aggression, which is a hateful and harmful representation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "text location",
+      "description": "text content and position: 'girl' positioned above the butterfly.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "text location",
+      "description": "text content and position: 'muslim' positioned on the right side of the cat's body.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_3",
+      "label": "text location",
+      "description": "text content and position: '\"is this a punching bag\"?' positioned at the bottom center of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "black_cat",
+      "label": "animal",
+      "description": "A black cat with yellow eyes, wearing a red collar, is shown reaching up with its paw toward a butterfly. It is labeled 'muslim' in the image, serving as a visual metaphor for a Muslim man in the meme's context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "cat_reaching_for_butterfly",
+      "label": "A black cat reaching toward a butterfly",
+      "description": "The scene depicts a black cat labeled 'muslim' reaching up with its paw toward a butterfly labeled 'girl'. The cat's posture and gaze indicate an attempt to interact with or catch the butterfly. The butterfly is positioned above the cat, and the cat's raised paw suggests motion or intent to strike. The scene is framed against a plain white background, emphasizing the interaction between the two entities. The text overlay 'is this a punching bag?' adds a metaphorical layer, implying the cat (representing a Muslim man) is questioning whether the butterfly (representing a Muslim woman) is a target for violence or aggression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "black_cat",
+          "relation": "reaches_toward",
+          "to": "butterfly"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype: Oppression of Women",
+      "description": "The meme relies on the harmful stereotype that Muslim women are oppressed or vulnerable to violence, which is a common trope in Islamophobic discourse. This stereotype is not visible in the image but is essential to understanding the metaphorical meaning of the cat (representing a Muslim man) questioning whether the butterfly (representing a Muslim woman) is a 'punching bag'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny_stereotype",
+      "label": "Misogyny Stereotype: Objectification of Women",
+      "description": "The meme uses the metaphor of a 'punching bag' to imply that Muslim women are objects to be used or abused, which is a misogynistic trope. This concept is not depicted in the image but is necessary to interpret the cat's question as a commentary on gender-based violence and objectification.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "punching_bag_metaphor",
+      "label": "Punching Bag Metaphor",
+      "description": "The phrase 'is this a punching bag?' is a metaphor for being a target for violence or abuse. This metaphor is culturally understood in contexts of physical or emotional abuse and is central to the meme's message. It is not visible in the image but is required to interpret the cat's question.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype_2",
+      "label": "Islamophobia Stereotype: Incompatibility with Western Values",
+      "description": "The meme implicitly assumes that Muslim identity is incompatible with Western norms, which is a common Islamophobic trope. This background knowledge helps explain why the cat (Muslim man) might be perceived as questioning the butterfly (Muslim woman) in a context of cultural conflict or misunderstanding.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype_3",
+      "label": "Islamophobia Stereotype: Violence and Barbarism",
+      "description": "The meme references the stereotype that Muslims are inherently violent or barbaric, which is used to justify the idea that a Muslim man might view a Muslim woman as a 'punching bag'. This stereotype is not visible in the image but is necessary to understand the meme's underlying message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "curiosity",
+      "label": "curious emotion",
+      "description": "The black cat is reaching up with its paw toward the butterfly, indicating an inquisitive or playful intent to interact with the object. Its upward gaze and raised paw suggest a focused interest in the butterfly, which is interpreted metaphorically as a question about whether the butterfly is a 'punching bag'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The butterfly is mapped as 'girl'",
+      "description": "The text 'girl' is positioned directly above the butterfly, creating a direct analogical mapping where the butterfly visually represents the 'girl'. This mapping is explicit through spatial adjacency and textual labeling.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the cat (muslim) questioning the butterfly (girl)",
+      "description": "The user is projected onto the black cat labeled 'muslim' in the image, as the meme's overall intent and the question 'is this a punching bag?' are framed as a perspective or question posed by the 'muslim' character. The user sees themselves as the 'muslim' cat, projecting their own viewpoint onto the scene, which is then interpreted through the lens of the harmful stereotypes (Islamophobia and misogyny) embedded in the meme's metaphor. The projection is implicit, not explicit with deictic pronouns, but the user is meant to identify with the cat's perspective and question.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme depicts a black cat labeled 'muslim' reaching toward a butterfly labeled 'girl', with the text \"is this a punching bag?\". This visual metaphor is used to imply that Muslim women are treated as objects or targets for violence, suggesting they are 'punching bags' for male aggression. This aligns with Islamophobic tropes that depict Muslim women as oppressed or in need of protection, and it reinforces harmful narratives about gender roles and violence within Muslim communities. The intent is to demean and stereotype Muslim women by associating them with vulnerability and being targets for aggression, which is a hateful and harmful representation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience familiar with Islamophobic and misogynistic stereotypes, particularly those who may hold or propagate harmful views about Muslim women being oppressed or vulnerable to violence. The target audience likely includes individuals who are either unaware of the harmful nature of the meme or who actively engage with content that reinforces these stereotypes. The meme's use of visual metaphors (cat as Muslim man, butterfly as Muslim woman) and the punchline 'is this a punching bag?' are culturally coded to resonate with those who understand or are predisposed to accept Islamophobic tropes and misogynistic objectification. The audience may also include those who are critical of Muslim communities and seek to portray them as inherently violent or incompatible with Western values, as implied by the background knowledge entities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/96204.png",
+    "image_name": "96204.png",
+    "extraction_timestamp": "2025-12-19T19:03:00.953306",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

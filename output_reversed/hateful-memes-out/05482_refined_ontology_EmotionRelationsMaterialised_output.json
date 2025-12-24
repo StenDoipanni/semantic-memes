@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "abusive_judgment",
+      "expressors": [
+        {
+          "entity": "Yoda",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Yoda",
+          "relation": "emotionalRelationToEntity",
+          "to": "stupid_you_are_breed_you_should_not"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":abusive_judgment :hasExpressor :Yoda .",
+    ":Yoda :emotionalRelationToEntity :stupid_you_are_breed_you_should_not ."
+  ],
+  "triples_count": 2
+}

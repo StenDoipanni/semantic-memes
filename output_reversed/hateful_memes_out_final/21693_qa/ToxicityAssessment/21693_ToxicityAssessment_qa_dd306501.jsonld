@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#qa_dd306501-41ff-4809-bff5-25ff1035be48",
+  "@type": "QuestionAnswerPair",
+  "question": "What type of content does this meme contain?",
+  "answers": [
+    {
+      "text": "Customer service complaint",
+      "is_correct": false
+    },
+    {
+      "text": "None of the others",
+      "is_correct": false
+    },
+    {
+      "text": "Racially hateful accusation",
+      "is_correct": true
+    },
+    {
+      "text": "Price calculation error",
+      "is_correct": false
+    }
+  ],
+  "explanation": "The meme uses racially charged language to falsely accuse a Black cashier of theft, which aligns with the 'Hateful' instance under ToxicityAssessment.",
+  "dimension": "ToxicityAssessment",
+  "relatedInstances": [
+    "toxicity_1"
+  ],
+  "generationTimestamp": "2025-12-23T22:42:17.057961",
+  "generationMethod": "huggingface_api",
+  "sourceImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_21693",
+    "@type": "Image",
+    "filename": "21693.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/21693.png"
+  }
+}

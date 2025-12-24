@@ -1,0 +1,176 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: keeping-your-dishwasher-clean; hasOverallIntent: informative; overall-intent-description: The image depicts a person loading dishes into a dishwasher in a kitchen, with overlaid text stating 'keeping your dishwasher clean will make it last longer.' The scene is straightforward and focuses on household maintenance advice. There is no toxicity present, as the content is neutral, practical, and aimed at providing useful information about appliance care. The intent is to educate or remind viewers about the benefits of regular dishwasher maintenance to extend its lifespan, using a relatable domestic scenario. No harmful, hateful, abusive, cyberbullying, misogynistic, or propagandistic elements are present.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "keeping your dishwasher clean",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "human figure",
+      "description": "A person, partially visible from the waist down, is loading dishes into a dishwasher. Their hands and lower torso are visible, wearing dark pants. The person is engaged in a domestic task, indicating a relatable, everyday scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "dishwasher_loading",
+      "label": "person loading dishes into dishwasher",
+      "description": "A person is actively loading white plates into the open dishwasher in a kitchen. The scene depicts a domestic chore, with the person's hands and lower torso visible as they place dishes into the rack. The kitchen setting includes dark cabinets and a stainless steel oven in the background, establishing a typical home environment. The overlaid text 'keeping your dishwasher clean will make it last longer' frames the scene as instructional or advisory.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person",
+          "relation": "loads",
+          "to": "dishwasher"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dishwasher_maintenance",
+      "label": "dishwasher maintenance",
+      "description": "The concept that regular cleaning and maintenance of household appliances like dishwashers can extend their lifespan and improve performance. This is a common piece of practical household advice based on real-world appliance care guidelines.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "dishwasher_loading",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "appliance_lifespan",
+      "label": "appliance lifespan",
+      "description": "The idea that the longevity of household appliances can be influenced by user behavior and maintenance routines. This is a general concept in consumer electronics and home appliance care.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "dishwasher_loading",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "household_chore",
+      "label": "household chore",
+      "description": "The activity of performing domestic tasks such as loading a dishwasher, which is a common chore in many households. This concept is implied by the scene and the text, as it relates to routine home maintenance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dishwasher_loading",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "person",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "domestic_environment",
+      "label": "domestic environment",
+      "description": "The setting of a typical home kitchen, including appliances like dishwashers and ovens, and cabinetry. This context is necessary to understand the relatability of the scene and the advice being given.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dishwasher_loading",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "practicality",
+      "label": "practical emotion",
+      "description": "The emotion conveyed by the scene and text is one of practicality and responsibility, emphasizing the importance of routine maintenance for appliance longevity. The person’s action of loading dishes into the dishwasher, combined with the instructional text, evokes a sense of conscientiousness and care for household upkeep.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "dishwasher maintenance is represented by the person loading dishes",
+      "description": "The text 'keeping your dishwasher clean' is mapped onto the visual entity of the person loading dishes into the dishwasher, implying that the action of loading dishes (a part of dishwasher maintenance) is what keeps the appliance clean and extends its lifespan. The person's action visually represents the textual advice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual advice as the recipient of the household maintenance instruction",
+      "description": "The user is projected onto the textual material 'keeping your dishwasher clean will make it last longer', as the phrase 'your dishwasher' directly addresses the user, implying that the advice is for the viewer to apply to their own appliance. The user is not projected onto the visual material (the person loading dishes) or the scene itself, but rather onto the instructional text, which is framed as a personal directive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "household owners and renters",
+      "description": "The target community is individuals who own or rent homes and are responsible for maintaining household appliances, particularly dishwashers. The visual of a person loading dishes into a dishwasher and the text advising on appliance maintenance clearly indicate the meme is aimed at homeowners or renters who perform domestic chores and seek practical advice for extending the lifespan of their kitchen appliances.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/96784.png",
+    "image_name": "96784.png",
+    "extraction_timestamp": "2025-12-19T19:13:57.332867",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

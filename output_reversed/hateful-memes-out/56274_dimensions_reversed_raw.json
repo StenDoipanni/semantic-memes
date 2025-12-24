@@ -1,0 +1,202 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Mysogynous; overall-intent-description: The image depicts a cat with an exaggerated expression of surprise or excitement, juxtaposed with text that reads 'when she on top & you tryna catch a titty.' This meme uses the cat's innocent, wide-eyed look to humorously contrast with the crude, sexually suggestive text. The overall intent is to create a comedic effect by anthropomorphizing the cat and using it to represent a scenario involving sexualized power dynamics. The text implies a situation where a woman is in control or dominant, and the viewer (or 'you') is attempting to engage in a sexual act, specifically targeting the woman's body. This aligns with misogynous tropes by objectifying women, reducing them to their physical attributes ('titty'), and framing their dominance as something to be 'caught' or pursued sexually. The meme relies on the stereotype that women are sexually available and that men are often fixated on their physical appearance, which is a form of objectification and reinforces harmful gender norms. The humor is derived from the absurdity of the cat's expression paired with the crude text, but the underlying message perpetuates the idea that women's value or control is tied to their sexuality, which is a misogynistic perspective.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "Text content: 'when she on top'. Position: top center of the image, above the cat's head.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "cat",
+      "label": "dominant visual subject",
+      "description": "An orange and white tabby kitten, photographed from a low angle looking upward, with wide, surprised eyes and mouth open in an expression of shock or excitement. The kitten is the central focus and primary visual element, set against a plain white background. Its anthropomorphized expression is used to contrast with the meme's text, creating the comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "cat_expression_scene",
+      "label": "Cat with exaggerated expression",
+      "description": "The scene centers on the orange and white tabby kitten, captured from a low angle looking upward, with wide, surprised eyes and mouth open in an expression of shock or excitement. The kitten is the sole visual participant, set against a plain white background. The scene is framed by text that anthropomorphizes the cat's expression to contrast with the meme's crude, sexually suggestive message, creating a comedic effect through juxtaposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype",
+      "label": "Misogynous Stereotype",
+      "description": "The meme relies on the stereotype that women are sexually available and that men are often fixated on their physical appearance, which is a form of objectification and reinforces harmful gender norms. The phrase 'you tryna catch a titty' reduces a woman's value or control to her physical attributes, aligning with misogynistic tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "cat_expression_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexualized_power_dynamic",
+      "label": "Sexualized Power Dynamic",
+      "description": "The meme implies a scenario where a woman is in control or dominant ('she on top'), and the viewer ('you') is attempting to engage in a sexual act, specifically targeting the woman's body. This reflects a real-world trope that frames women's dominance as something to be 'caught' or pursued sexually, reinforcing patriarchal norms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "cat_expression_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification",
+      "label": "Objectification",
+      "description": "The meme objectifies women by reducing them to their physical attributes ('titty'), implying that their value or control is tied to their sexuality. This is a real-world concept that perpetuates the idea that women are primarily valued for their physical appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "cat_expression_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cat_anthropomorphism",
+      "label": "Cat Anthropomorphism",
+      "description": "The meme uses the cat's innocent, wide-eyed look to humorously contrast with the crude, sexually suggestive text. This relies on the real-world concept of anthropomorphizing animals to represent human emotions or scenarios, which is a common comedic device in internet culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "cat",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "cat_expression_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "internet_meme_culture",
+      "label": "Internet Meme Culture",
+      "description": "The meme is part of a broader internet culture that uses visual humor, juxtaposition, and crude text to create comedic effects. This cultural phenomenon relies on shared understanding of internet humor, which often includes crude or exaggerated content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "cat_expression_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "surprise",
+      "label": "surprised emotion",
+      "description": "The cat's wide, round eyes and open mouth with tongue out convey a state of shock or sudden excitement, which is exaggerated for comedic effect. This expression is anthropomorphized to contrast with the crude text, creating humor through juxtaposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Cat's surprised expression mapped to 'when she on top'",
+      "description": "The cat's wide-eyed, open-mouthed expression of surprise or excitement is mapped onto the textual phrase 'when she on top'. This creates an analogical mapping where the cat's exaggerated emotion is humorously juxtaposed with the text to represent a scenario where a woman is in control or dominant. The visual expression is used to contrast with the crude, sexually suggestive text, creating a comedic effect through anthropomorphism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual entity 'you tryna catch a titty'",
+      "description": "The user is projected onto the textual material 'you tryna catch a titty' located at the bottom of the image. This projection is established by the deictic pronoun 'you' in the text, which directly addresses the viewer, making the user the subject of the action described. The user is thus positioned as the one attempting to 'catch a titty' in the scenario implied by the meme, aligning with the misogynous stereotype of male sexual pursuit.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme objectifies women by reducing them to their physical attributes ('titty'), implying that their value or control is tied to their sexuality. This perpetuates the idea that women are primarily valued for their physical appearance, aligning with misogynistic tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "internet meme culture audience",
+      "description": "The target community is individuals familiar with internet meme culture, who appreciate crude humor, visual juxtaposition, and anthropomorphized animal imagery. This audience understands the comedic effect derived from the contrast between the innocent cat expression and the sexually suggestive text, and is likely to find the meme relatable or funny within the context of online humor communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/56274.png",
+    "image_name": "56274.png",
+    "extraction_timestamp": "2025-12-16T05:17:41.291276",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

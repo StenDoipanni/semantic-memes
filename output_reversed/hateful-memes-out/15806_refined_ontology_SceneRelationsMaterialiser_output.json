@@ -1,0 +1,35 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "trash_scene",
+      "participants": [
+        {
+          "entity": "so_much_trash",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "we_need_a_garbage_collector",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "so_much_trash",
+          "relation": "requires",
+          "to": "we_need_a_garbage_collector"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":trash_scene :hasParticipant :so_much_trash .",
+    ":trash_scene :hasParticipant :we_need_a_garbage_collector .",
+    ":so_much_trash :requires :we_need_a_garbage_collector ."
+  ],
+  "triples_count": 3
+}

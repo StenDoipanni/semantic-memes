@@ -1,0 +1,296 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a crowd of men, one prominently in the foreground with an intense, grieving expression, raising their fists in what appears to be a moment of collective anguish or protest. The overlaid text reads: 'when god grants you a child after 20 years of your marriage and israel bombs him few years later.' This juxtaposition of a deeply personal tragedy — the loss of a child — with the geopolitical context of Israeli bombing is intended to evoke strong emotional responses. The meme uses the image of collective grief to frame the narrative of Palestinian suffering, particularly in the context of the Israeli-Palestinian conflict. While not explicitly targeting a specific protected group with slurs or stereotypes, the meme is harmful because it leverages a universally understood human tragedy to amplify political grievances, potentially inciting anger or reinforcing divisive narratives. It is not abusive or cyberbullying in the direct sense, but it is propagandistic in nature, aiming to influence viewers' perceptions of the conflict by associating Israeli military action with the loss of innocent lives, thereby potentially justifying or intensifying anti-Israel sentiment. The intent is to evoke empathy for Palestinian victims while implicitly blaming Israel for the tragedy, using the visual of collective mourning to amplify the message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when god grants you a child after 20 years of your marriage and israel bombs him few years later",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_in_foreground",
+      "label": "man with white beard and kufi cap",
+      "description": "A central figure in the foreground, an older man with a white beard and a white kufi cap, is shown with an intense, anguished facial expression, mouth open as if screaming or crying out. His eyes are wide and his face is contorted, conveying deep grief or rage. He is surrounded by other men, and his hands are raised, suggesting he is part of a collective protest or mourning scene. His emotional state is the focal point of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "collective_mourning",
+      "label": "collective_mourning",
+      "description": "A scene depicting a group of men, with one prominently in the foreground, expressing intense grief or rage through raised fists and anguished facial expressions, suggesting a collective protest or mourning event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_in_foreground",
+          "relation": "leads",
+          "to": "people"
+        },
+        {
+          "from": "man_in_foreground",
+          "relation": "raises_fists_with",
+          "to": "people"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "israel",
+      "label": "Israel",
+      "description": "The country referenced in the text as the entity conducting the bombing. Understanding the geopolitical context of Israel's military actions, particularly in relation to Palestinian territories, is essential to interpret the meme's message about the loss of a child due to Israeli bombing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "palestine",
+      "label": "Palestine",
+      "description": "The geopolitical region and people referenced implicitly in the meme. The image of collective mourning and the text imply a Palestinian context, as the tragedy described is framed within the Israeli-Palestinian conflict. Knowledge of this conflict is necessary to understand the meme’s intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "collective_mourning",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "israeli_palestinian_conflict",
+      "label": "Israeli-Palestinian Conflict",
+      "description": "The ongoing political and military conflict between Israel and Palestine, which provides the real-world context for the meme. The text references Israeli bombings, and the image of collective mourning is culturally and politically associated with Palestinian suffering in this conflict.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "collective_mourning",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "kufi_cap",
+      "label": "Kufi Cap",
+      "description": "A traditional head covering worn by Muslim men, often symbolizing religious devotion. Its presence in the image helps identify the cultural and religious context of the individuals depicted, which is relevant to understanding the meme’s framing of the event as a religious or cultural tragedy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_in_foreground",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "collective_mourning",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sharia_law",
+      "label": "Sharia Law",
+      "description": "The Islamic legal system, often referenced in discussions about Muslim societies. While not directly visible, the presence of men wearing kufi caps and the context of collective mourning may implicitly reference religious frameworks that govern family life and societal responses to tragedy, which can be tied to Sharia law in some interpretations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_in_foreground",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "collective_mourning",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "arranged_marriage",
+      "label": "Arranged Marriage",
+      "description": "A traditional marriage practice in many Muslim cultures, often involving family involvement and long periods of waiting for a suitable match. The text references a 20-year marriage, which may implicitly reference the cultural context of arranged or long-term marriage practices in some communities, adding depth to the personal tragedy described.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_israel_sentiment",
+      "label": "Anti-Israel Sentiment",
+      "description": "A political and emotional stance against Israel, often rooted in opposition to its policies, military actions, or perceived injustices toward Palestinians. The meme is designed to evoke this sentiment by linking Israeli bombing to the loss of a child, thereby potentially justifying or intensifying anti-Israel views.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "collective_mourning",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "israeli_bombing",
+      "label": "Israeli Bombing",
+      "description": "The act of military bombardment conducted by Israel, often in conflict zones. The text explicitly references this event as the cause of the child’s death, making it a critical real-world concept for understanding the meme’s narrative and emotional impact.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "palestinian_suffering",
+      "label": "Palestinian Suffering",
+      "description": "The collective experience of loss, trauma, and hardship endured by Palestinians, particularly in the context of conflict with Israel. The image and text together aim to evoke empathy for this suffering, framing it as a result of Israeli military actions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "collective_mourning",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "geopolitical_tragedy",
+      "label": "Geopolitical Tragedy",
+      "description": "A tragic event that arises from political or military conflict, often involving civilian casualties. The meme uses the personal tragedy of losing a child to frame a broader geopolitical tragedy, making this concept essential to understanding the meme’s message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "collective_mourning",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "grief",
+      "label": "intense grief expression",
+      "description": "The man in the foreground displays a facial expression of profound sorrow and anguish, with his mouth open in a scream or wail, eyes wide and strained, and his face contorted. His raised fists and the surrounding crowd suggest collective mourning or protest, amplifying the emotional weight of personal loss. This is the central emotional expression in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The collective mourning scene is mapped onto the textual narrative of a child's death due to Israeli bombing.",
+      "description": "The visual entity 'collective_mourning' — depicting men in intense grief and protest — is analogically mapped to the textual narrative 'when god grants you a child after 20 years of your marriage and israel bombs him few years later'. The image of collective anguish serves as a visual representation of the profound personal tragedy described in the text, framing the loss of a child as a communal and political event. The emotional intensity of the visual material (grief, rage, protest) is projected onto the textual material to evoke empathy and associate the personal loss with the broader geopolitical context of Israeli bombing in Palestine.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual narrative as the victim of geopolitical tragedy",
+      "description": "The user is implicitly projected onto the textual material ('text_chunk') which describes a personal tragedy — the loss of a child after 20 years of marriage due to Israeli bombing. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the emotional framing of the meme (collective mourning, intense grief) and the universal nature of the tragedy (loss of a child) create a strong semiotic projection where the viewer identifies with the victim described in the text. The user is projected onto the text_chunk as the person experiencing the described loss, thereby internalizing the narrative as their own or as a shared human experience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Propaganda",
+      "description": "The meme uses the image of collective grief to frame a personal tragedy — the loss of a child — as a political event tied to Israeli military action, aiming to influence viewers' perceptions of the conflict and potentially justify or intensify anti-Israel sentiment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals with anti-Israel sentiment, particularly those sympathetic to Palestinian suffering within the context of the Israeli-Palestinian conflict. The meme leverages the visual of collective mourning (scene_1) and the text narrative (text_chunk) to evoke empathy for Palestinian victims and implicitly blame Israel (israel) for the child’s death (israeli_bombing), thereby aiming to reinforce or intensify anti-Israel views among its audience. The cultural markers — such as the kufi_cap and the implied context of arranged_marriage — further signal that the intended audience is likely to be those familiar with or aligned with Palestinian cultural and religious identity, or those who resonate with narratives of geopolitical tragedy (geopolitical_tragedy) framed through the lens of Palestinian suffering (palestinian_suffering).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/98203.png",
+    "image_name": "98203.png",
+    "extraction_timestamp": "2025-12-19T19:58:36.844097",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 19,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,182 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: master_chef_with_low_rating_meme; hasOverallIntent: Hateful; overall-intent-description: The meme uses a historical photograph of Adolf Hitler, a figure associated with genocide and extreme hatred, and juxtaposes it with the text 'master chef with low rating' and 'master chef with high rating'. This is a hateful and offensive act that equates a mass murderer with a culinary professional, using his image to mock or degrade the concept of 'master chef' ratings. The intent is to provoke shock, ridicule, or contempt by associating a universally reviled historical figure with a modern, seemingly innocuous context. This is a direct attack on the dignity of the historical figure and potentially on the audience's perception of culinary arts, using the image of Hitler to imply that even a 'master chef' can be 'low rated' — a twisted and dangerous analogy that normalizes or trivializes his atrocities. The meme is designed to elicit a reaction through shock value and historical distortion, making it hateful in nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "master chef with low rating",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Adolf_Hitler",
+      "label": "historical figure",
+      "description": "A black-and-white portrait of Adolf Hitler, the former Chancellor of Germany and leader of the Nazi Party, known for his role in World War II and the Holocaust. He is depicted with his characteristic mustache, staring directly at the camera, wearing a collared shirt and tie with a strap over his shoulder. His expression is stern and intense. The image is a historical photograph, likely taken in the 1930s, and is widely recognized as one of the most iconic and controversial images of the 20th century.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "master_chef_rating_comparison",
+      "label": "master chef rating comparison scene",
+      "description": "A scene depicting a historical photograph of Adolf Hitler with text overlays that mockingly compare him to a 'master chef' with low and high ratings. The image uses his stern expression and formal attire to create a jarring juxtaposition with the culinary context. The text is positioned above and below his face, framing him as the subject of the comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Adolf_Hitler",
+          "relation": "isSubjectOfComparison",
+          "to": "text_low_rating"
+        },
+        {
+          "from": "Adolf_Hitler",
+          "relation": "isSubjectOfComparison",
+          "to": "text_high_rating"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_semitism_nose_caricature",
+      "label": "Anti-Semitic Nose Caricature Stereotype",
+      "description": "A widely circulated antisemitic stereotype that caricatures Jewish people by emphasizing their nose, often implying inferiority or criminality. This stereotype is historically rooted in European antisemitism and is used to dehumanize and demean Jewish individuals. In this meme, Hitler’s prominent nose is implicitly referenced as part of the visual stereotype that has been used to mock or dehumanize him, even though the image itself does not contain any explicit antisemitic text or imagery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hitler_nazi_leadership",
+      "label": "Hitler as Nazi Leader",
+      "description": "Adolf Hitler was the leader of the Nazi Party and Chancellor of Germany from 1933 until his death in 1945. His regime was responsible for the Holocaust, the systematic genocide of six million Jews and millions of others, including Roma, disabled people, and Slavs. His leadership is associated with extreme racism, totalitarianism, and global conflict. This background knowledge is essential to understand the offensive nature of the meme, which uses his image to mock a culinary rating system, thereby trivializing his historical atrocities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "master_chef_show",
+      "label": "MasterChef Television Show",
+      "description": "MasterChef is a popular reality television cooking competition show that originated in the United States and has been adapted in many countries. Contestants compete in culinary challenges judged by professional chefs, with ratings and eliminations based on skill and presentation. The meme references this specific cultural phenomenon, using the concept of 'master chef' ratings to create a jarring and offensive juxtaposition with Hitler’s image, implying that even a 'master chef' can be 'low rated' — a twisted analogy that normalizes or trivializes his atrocities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hate_meme_context",
+      "label": "Hate Meme Context",
+      "description": "The meme is designed to provoke shock, ridicule, or contempt by associating a universally reviled historical figure with a modern, seemingly innocuous context. This is a hateful and offensive act that equates a mass murderer with a culinary professional, using his image to mock or degrade the concept of 'master chef' ratings. The intent is to elicit a reaction through shock value and historical distortion, making it hateful in nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "master_chef_rating_comparison",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous expression",
+      "description": "The stern, intense gaze and rigid facial features of Adolf Hitler convey a sense of disdain or contempt, which is amplified by the meme's juxtaposition with the 'master chef' rating context, suggesting a mocking or dismissive attitude toward the culinary profession or ratings system.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Adolf Hitler is mapped as a 'master chef with low rating'",
+      "description": "The top text overlay 'master chef with low rating' is spatially positioned above Adolf Hitler's face, creating an analogical mapping where the visual entity (Adolf Hitler) is being equated with or projected as the textual entity ('master chef with low rating'). This mapping is part of the meme's hateful intent to trivialize Hitler's historical atrocities by associating him with a culinary rating system.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual material of Adolf Hitler as a 'master chef with low rating'",
+      "description": "The user is projected onto the visual material of Adolf Hitler, who is depicted with a stern expression and formal attire, and is explicitly mapped as 'master chef with low rating' by the top text overlay. This projection implies the user is identifying with or imagining themselves as the 'master chef with low rating' in the context of the meme's hateful analogy. The user's perspective is aligned with the degrading and trivializing comparison, projecting their own potential failure or low rating onto Hitler's image, thereby internalizing the meme's offensive framing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme equates Adolf Hitler, a mass murderer and Holocaust perpetrator, with a 'master chef' rating system, trivializing his atrocities and using his image to mock or degrade the concept of culinary excellence. This is a direct attack on the dignity of a universally reviled historical figure and constitutes hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals familiar with the MasterChef television show and its rating system, as well as those who understand the historical context of Adolf Hitler and the Nazi regime. The meme relies on the cultural reference to MasterChef to create a jarring and offensive juxtaposition, implying that even a 'master chef' can be 'low rated' — a twisted analogy that normalizes or trivializes Hitler's atrocities. The audience is likely to be online users who engage with internet memes, particularly those that use shock value and historical distortion for comedic or provocative effect. The meme is designed to elicit a reaction through shock and ridicule, targeting those who are comfortable with dark humor and historical revisionism, and who may be familiar with antisemitic stereotypes (such as the nose caricature) that are implicitly referenced in the visual presentation of Hitler. The target community includes individuals who may be exposed to or participate in hate meme culture, where the intent is to provoke contempt or shock by equating a mass murderer with a culinary professional.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/48276.png",
+    "image_name": "48276.png",
+    "extraction_timestamp": "2025-12-16T03:15:45.136007",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

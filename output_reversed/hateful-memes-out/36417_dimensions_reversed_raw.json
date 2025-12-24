@@ -1,0 +1,182 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: lesbians-have-sex-cat-meme; hasOverallIntent: Hateful; overall-intent-description: The image depicts two cats lying side-by-side on a couch, with the text overlay 'this is how lesbians have sex'. The meme uses the visual of two female cats to create a crude, sexually suggestive analogy for lesbian sexual activity. This is a harmful and hateful representation that reduces a sexual orientation to a simplistic, animalistic, and degrading metaphor. It falls under the category of LGBTQ+ discrimination as it employs a derogatory stereotype by implying lesbian sexuality is primitive or animal-like, which is offensive and stigmatizing. The intent is to mock and demean lesbians through a crude visual pun, leveraging the juxtaposition of the innocent-looking cats with the explicit sexualized text to create a vulgar and demeaning message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "this is how lesbians have sex",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "two_cats",
+      "label": "feline animals",
+      "description": "Two Bengal cats with distinctive spotted and striped coats are lying side-by-side on a brown couch. They are looking directly at the camera with alert, wide eyes and perked ears. Their paws are resting on the edge of the couch cushion, and they appear relaxed yet attentive. The cats are the central visual focus of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "cats_on_couch",
+      "label": "two_cats_laying_together_on_a_couch",
+      "description": "Two Bengal cats are lying side-by-side on a brown couch, looking directly at the camera with alert expressions. Their paws rest on the edge of the cushion, and they are positioned closely together, suggesting companionship or intimacy. The couch forms the primary surface and spatial context for their arrangement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "two_cats",
+          "relation": "are_laying_on",
+          "to": "couch"
+        },
+        {
+          "from": "two_cats",
+          "relation": "are_positioned_next_to_each_other",
+          "to": "two_cats"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lesbian_sexuality_stereotype",
+      "label": "Lesbian Sexuality Stereotype",
+      "description": "The meme relies on a derogatory stereotype that reduces lesbian sexual activity to a simplistic, animalistic metaphor, implying it is primitive or instinctual. This stereotype is part of broader LGBTQ+ discrimination and is used to demean and mock lesbians by associating their sexuality with feline behavior, which is presented as crude and vulgar.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "feline_animalism_stereotype",
+      "label": "Feline Animalism Stereotype",
+      "description": "The meme uses the visual of two female cats to imply a crude, sexually suggestive analogy for lesbian sexual activity. This leverages the stereotype that female cats are 'natural' or 'animalistic' in their behavior, which is then used to mock and degrade lesbian sexuality by reducing it to a simplistic, instinctual metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "two_cats",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "LGBTQ_plus_discrimination",
+      "label": "LGBTQ+ Discrimination",
+      "description": "The meme is an example of LGBTQ+ discrimination, as it employs a derogatory stereotype by implying lesbian sexuality is primitive or animal-like, which is offensive and stigmatizing. It falls under the category of LGBTQ+ discrimination as it uses a crude visual pun to mock and demean lesbians.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization_stereotype",
+      "label": "Hypersexualization Stereotype",
+      "description": "The meme uses the visual of two female cats to create a crude, sexually suggestive analogy for lesbian sexual activity, which is a form of hypersexualization. This stereotype reduces lesbian sexuality to a simplistic, animalistic metaphor, implying it is instinctual and vulgar, which is offensive and stigmatizing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "degrading_mockery",
+      "label": "degrading mockery emotion",
+      "description": "The emotion expressed is one of crude, vulgar mockery, conveyed through the juxtaposition of innocent-looking cats with explicit sexualized text. This creates a demeaning and offensive emotional tone aimed at lesbians, reducing their sexuality to a simplistic, animalistic metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "lesbians_have_sex_cat_meme_mapping",
+      "label": "Lesbian sexuality mapped onto feline companionship",
+      "description": "The text 'this is how lesbians have sex' is mapped onto the visual of two female cats lying side-by-side on a couch. This creates an analogical mapping where the visual material (two cats) is projected as a crude, sexually suggestive metaphor for lesbian sexual activity, reducing it to an animalistic, instinctual behavior. The mapping is explicit through juxtaposition and relies on the stereotype that female cats are 'natural' or 'animalistic' in their behavior, which is then used to demean and mock lesbian sexuality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the text_chunk 'this is how lesbians have sex', as the meme relies on the viewer interpreting the text as the primary meaning and applying it to the visual of the two cats. The text explicitly frames the visual material as a crude analogy, and the user is expected to accept this mapping as the intended message, making the text the focal point of the projection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks lesbians by reducing their sexuality to a crude, animalistic metaphor using two female cats, which is a degrading and hateful representation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "lesbian_sexuality_stereotype",
+      "label": "Lesbian Sexuality Stereotype",
+      "description": "The meme targets the lesbian community by using a derogatory stereotype that reduces lesbian sexual activity to a simplistic, animalistic metaphor, implying it is primitive or instinctual. This is intended to demean and mock lesbians by associating their sexuality with feline behavior, which is presented as crude and vulgar.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/36417.png",
+    "image_name": "36417.png",
+    "extraction_timestamp": "2025-12-15T23:22:19.017369",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

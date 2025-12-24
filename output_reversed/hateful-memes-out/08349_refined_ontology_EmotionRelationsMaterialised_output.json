@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "angry expression",
+      "expressors": [
+        {
+          "entity": "man_shouting",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_shouting",
+          "relation": "emotionalRelationToEntity",
+          "to": "crowd_in_protest"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":angry_expression :hasExpressor :man_shouting .",
+    ":man_shouting :emotionalRelationToEntity :crowd_in_protest ."
+  ],
+  "triples_count": 2
+}

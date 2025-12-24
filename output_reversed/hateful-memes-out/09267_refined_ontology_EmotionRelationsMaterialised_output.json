@@ -1,0 +1,44 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful emotion",
+      "expressors": [
+        {
+          "entity": "top_text_block",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "bottom_text_block",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "top_text_block",
+          "relation": "emotionalRelationToEntity",
+          "to": "man_in_black_cloak"
+        },
+        {
+          "from": "bottom_text_block",
+          "relation": "emotionalRelationToEntity",
+          "to": "green_flag_with_black_border"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_emotion :hasExpressor :top_text_block .",
+    ":hateful_emotion :hasExpressor :bottom_text_block .",
+    ":top_text_block :emotionalRelationToEntity :man_in_black_cloak .",
+    ":bottom_text_block :emotionalRelationToEntity :green_flag_with_black_border ."
+  ],
+  "triples_count": 4
+}

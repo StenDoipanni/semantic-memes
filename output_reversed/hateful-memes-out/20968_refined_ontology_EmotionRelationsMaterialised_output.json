@@ -1,0 +1,39 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "distressed emotion",
+      "expressors": [
+        {
+          "entity": "woman",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "emotionalRelationToEntity",
+          "to": "all men are dogs.."
+        },
+        {
+          "from": "woman",
+          "relation": "emotionalRelationToEntity",
+          "to": "so which breed is your dad?"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":distressed_emotion :hasExpressor :woman .",
+    ":woman :emotionalRelationToEntity :all_men_are_dogs .",
+    ":woman :emotionalRelationToEntity :so_which_breed_is_your_dad ."
+  ],
+  "triples_count": 3
+}

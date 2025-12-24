@@ -1,0 +1,196 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: overall-intent; overall-intent-description: The meme juxtaposes two images: the top image shows a group of people visibly grieving after a tragedy, with text labeling them as 'normal people after a tragedy.' The bottom image shows a man smiling while holding a coffee cup and looking at a laptop, with text reading 'me: oh man these memes are going to be fucking great.' The overall intent is to humorously contrast genuine emotional suffering with the cynical, detached amusement of someone anticipating the creation of memes from that tragedy. The meme's intent is to satirize the tendency of internet culture to commodify and trivialize real human suffering for entertainment. There is no toxicity present in the form of abusive, cyberbullying, harmful, hateful, misogynous, or propaganda content. The humor is derived from the absurdity of the contrast, not from targeting any specific group or individual based on protected characteristics. The intent is to highlight the irony and detachment of internet culture in the face of real tragedy, using analogical mapping: the image of genuine grief is mapped onto the text 'normal people after a tragedy,' while the image of the smiling man is mapped onto the text 'me: oh man these memes are going to be fucking great,' creating a juxtaposition that underscores the meme's satirical message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text overlay on top image",
+      "description": "normal people after a tragedy",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_crying",
+      "label": "woman in white shirt crying",
+      "description": "A woman with short blonde hair, wearing a white shirt and black vest, is visibly crying while holding her face with one hand. She has a red, white, and blue ribbon pinned to her vest, suggesting mourning or support for a cause. Her expression conveys deep sorrow. She is in the foreground of the top image, surrounded by other grieving people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "grieving_people_scene",
+      "label": "grieving_people",
+      "description": "A scene depicting a group of people visibly grieving after a tragedy, with one woman in the foreground crying while holding her face. The text above reads 'normal people after a tragedy.'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman_crying",
+          "relation": "is_part_of",
+          "to": "grieving_people"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "internet_meme_culture",
+      "label": "Internet Meme Culture",
+      "description": "The meme relies on the understanding that internet culture often creates and circulates memes in response to real-world tragedies, sometimes trivializing or commodifying the suffering. This cultural phenomenon involves the rapid spread of humorous or satirical content online, often with ironic or detached tones.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "tragedy_commodification",
+      "label": "Commodification of Tragedy",
+      "description": "The concept that real-life tragedies are sometimes turned into content for entertainment or virality on the internet, often through memes, jokes, or sensationalized media. This involves the ironic or detached observation of suffering as a source of humor or engagement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "genuine_grief_vs_cynical_amusement",
+      "label": "Genuine Grief vs. Cynical Amusement",
+      "description": "The contrast between authentic emotional suffering and the detached, often ironic or cynical amusement of internet users who anticipate or create content from tragedy. This is a social commentary on how online communities sometimes respond to real-world suffering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "grieving_people_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "satirical_juxtaposition",
+      "label": "Satirical Juxtaposition",
+      "description": "The use of contrasting images or concepts to create humor or commentary, often highlighting irony or absurdity. In this meme, the juxtaposition of genuine grief with the man’s amused reaction satirizes the detachment of internet culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "irony_in_meme_context",
+      "label": "Irony in Meme Context",
+      "description": "The use of irony to highlight the absurdity or contradiction in a situation. Here, the irony lies in the man’s cheerful anticipation of memes being created from a tragedy, contrasting with the genuine suffering shown in the top image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "grief",
+      "label": "grieving emotion",
+      "description": "The woman in the white shirt is visibly crying, holding her face with one hand, conveying deep sorrow and emotional distress. Her facial expression and body language indicate profound grief. The surrounding people also show signs of mourning, reinforcing the collective emotional state of sadness and loss.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "genuine grief is mapped onto 'normal people after a tragedy'",
+      "description": "The top image, showing a group of people visibly grieving, is explicitly labeled by the text 'normal people after a tragedy'. This creates an analogical mapping where the visual depiction of genuine grief is identified as representing 'normal people after a tragedy'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man smiling at laptop",
+      "description": "The user is projected onto the man in the bottom image who is smiling while looking at a laptop, as indicated by the text 'me: oh man these memes are going to be fucking great'. The deictic pronoun 'me' explicitly links the user to this character, projecting the user's anticipated reaction onto this visual entity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes genuine human suffering by humorously contrasting real grief with the detached amusement of anticipating memes from a tragedy, which can cause emotional harm to those affected by the tragedy and desensitize viewers to real suffering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "internet_meme_culture",
+      "label": "Internet Meme Culture",
+      "description": "The meme is designed for individuals who are familiar with and participate in internet meme culture, particularly those who understand the phenomenon of creating and circulating memes in response to real-world tragedies. The humor and satire rely on the audience's recognition of how internet culture often commodifies or trivializes suffering for entertainment or virality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/34675.png",
+    "image_name": "34675.png",
+    "extraction_timestamp": "2025-12-15T22:47:39.780660",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

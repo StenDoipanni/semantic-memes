@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "text_chunk: that awkward moment when there's no candy in the back",
+      "hasMappingEntity": "van"
+    },
+    {
+      "from": "van",
+      "relation": "mappedOnto",
+      "to": "text_chunk: that awkward moment when there's no candy in the back"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :text_chunk_that_awkward_moment_when_there_s_no_candy_in_the_back .",
+    ":mapping_1 :hasMappingEntity :van .",
+    ":van :mappedOnto :text_chunk_that_awkward_moment_when_there_s_no_candy_in_the_back ."
+  ],
+  "triples_count": 3
+}

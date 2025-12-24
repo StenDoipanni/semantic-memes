@@ -1,0 +1,166 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: seagulls_meme; hasOverallIntent: Harmful; overall-intent-description: The meme depicts three seagulls standing on rocks near water, with text that reads: 'fine, i'll keep calling them seagulls.. ...but, beach chickens sounds better.' The intent is to humorously suggest an alternative, more colloquial or playful name for seagulls ('beach chickens'), which is a lighthearted and non-offensive pun. There is no toxicity, hate, abuse, or harmful content present. The humor is based on wordplay and casual naming, not on disparaging any group or community. The term 'beach chickens' is not a derogatory stereotype and does not map onto any of the harmful categories listed in the knowledge base. The overall intent is to entertain through linguistic humor, not to cause harm or promote hate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "fine, i'll keep calling them seagulls..",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "seagulls",
+      "label": "birds",
+      "description": "Three seagulls standing on rocks near water, with white bodies, gray wings, and yellow beaks and legs. They are the central visual focus of the image and are the subject of the meme's text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "seagulls_on_rocks",
+      "label": "seagulls standing on rocks near water",
+      "description": "Three seagulls are standing on rocky terrain near a body of water. They are positioned at different distances from the viewer, with one in the foreground, one in the middle, and one in the background. The rocks have some blue graffiti on them. The water is visible behind the rocks, appearing calm with gentle ripples.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "seagulls",
+          "relation": "standingOn",
+          "to": "rocks"
+        },
+        {
+          "from": "rocks",
+          "relation": "near",
+          "to": "water"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "beach_chickens",
+      "label": "beach chickens",
+      "description": "A colloquial, informal, and playful term used to refer to seagulls, especially in beach or coastal settings. It is not a derogatory or offensive term, but rather a humorous, lighthearted nickname that implies a more casual or 'down-to-earth' identity for the birds, contrasting with the more formal or scientific term 'seagull'. This term is part of a broader cultural trend of using whimsical or anthropomorphic nicknames for animals or common objects.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "seagull_naming_convention",
+      "label": "seagull naming convention",
+      "description": "The common practice of referring to the gull family of birds (genus Larus) as 'seagulls' in casual or colloquial contexts, despite the fact that not all gulls are coastal or marine birds. The term 'seagull' is widely accepted and used in everyday language, even though it is technically imprecise. The meme plays on this by suggesting a more playful alternative name.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "bird_nickname_culture",
+      "label": "bird nickname culture",
+      "description": "A cultural phenomenon where people assign informal, often humorous or affectionate nicknames to birds or other animals based on their appearance, behavior, or habitat. This is common in social media, memes, and casual conversation, and often serves to humanize or anthropomorphize animals. The term 'beach chickens' fits into this category as a playful rebranding.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "playfulness",
+      "label": "playful emotion expression",
+      "description": "The text humorously suggests a lighthearted, whimsical alternative name ('beach chickens') for seagulls, conveying a sense of fun and casual wordplay rather than seriousness or negativity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "seagull_naming_mapping",
+      "label": "seagull naming convention mapping",
+      "description": "The text 'fine, i'll keep calling them seagulls..' maps onto the visual entity 'seagulls', acknowledging the common colloquial term for the birds shown. This establishes the baseline naming convention that the meme is playing with.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material expressing a playful naming preference",
+      "description": "The user is projected onto the textual material (top_text and bottom_text) which expresses a humorous, self-deprecating or lighthearted stance on naming seagulls. The text 'fine, i'll keep calling them seagulls..' and '...but, beach chickens sounds better.' implies the user is adopting the perspective of someone making a casual, humorous linguistic choice, projecting their own playful attitude onto the meme's text. There are no explicit deictic pronouns like 'me' or 'you', but the tone and content of the text invite the viewer to identify with the speaker's whimsical perspective.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, casual online audience familiar with internet humor, bird-related memes, and colloquial language play. The humor relies on wordplay and lighthearted rebranding ('beach chickens'), which appeals to users who enjoy relatable, non-offensive, and whimsical content commonly shared on social media platforms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/41376.png",
+    "image_name": "41376.png",
+    "extraction_timestamp": "2025-12-16T00:50:07.741391",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 11,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

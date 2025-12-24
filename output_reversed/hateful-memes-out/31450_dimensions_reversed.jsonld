@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_1949ede1",
+  "@type": "AnalysisDocument",
+  "title": "31450.png - Dimension Analysis",
+  "created": "2025-12-15T22:04:42.007938",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_dfba90a1",
+    "@type": "Image",
+    "filename": "31450.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/31450.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/31450.png",
+    "image_name": "31450.png",
+    "extraction_timestamp": "2025-12-15T22:03:23.603741",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bab03f1c",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: a_local_market; hasOverallIntent: Overall Intent; overall-intent-description: The image depicts a bustling local market scene, likely in Turkey, with vendors wearing red shirts featuring the Turkish flag and serving ice cream cones to customers. The text overlay 'a local market' is generic and descriptive, serving to label the setting. There is no evidence of abusive, cyberbullying, harmful, hateful, misogynous, or propaganda intent. The scene is presented neutrally, capturing a common cultural or tourist experience without targeting any specific group or promoting harmful stereotypes. The intent is to document or share a slice of local life, possibly for travel, cultural, or commercial purposes, without any toxic or discriminatory messaging.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1949ede1"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c1ae4aa2",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "a local market",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1949ede1"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_73baecb6",
+      "@type": "VisualMaterial",
+      "instance_name": "vendor",
+      "label": "man wearing red shirt with Turkish flag design",
+      "description": "A male vendor with dark hair and a beard, wearing a red t-shirt featuring a white star and crescent (Turkish flag motif), actively serving ice cream. He is positioned behind a counter and appears focused on his task.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1949ede1"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8974504f",
+      "@type": "Scene",
+      "instance_name": "ice_cream_serving",
+      "label": "vendor serving ice cream",
+      "description": "A scene where a vendor in a red shirt with a Turkish flag design is actively serving ice cream to customers at a market stall. The vendor is positioned behind a counter, surrounded by customers and stacks of ice cream cones. The scene includes visual elements like a Coca-Cola refrigerator, Turkish flag, and a text overlay 'a local market'.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1949ede1"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fdc99434",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "turkey",
+      "label": "Country",
+      "description": "The presence of the Turkish flag on the vendor's shirt and the Coca-Cola refrigerator with Turkish branding implies the location is Turkey. Understanding the cultural context of Turkey is necessary to interpret the scene as a local market in that country, not just any generic market.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1949ede1"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ae1a0a4a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "turkish_flag",
+      "label": "National Symbol",
+      "description": "The white star and crescent on the red shirt is the national flag of Turkey. Recognizing this symbol as a national emblem is essential to understand the cultural and national identity being represented in the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1949ede1"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2e0ae0d0",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "coca_cola",
+      "label": "Global Brand",
+      "description": "The Coca-Cola refrigerator is a globally recognized brand. Its presence in a local market scene helps ground the image in a real-world commercial context, indicating that even local markets often feature international products.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1949ede1"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_84f6be2a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "ice_cream_cone",
+      "label": "Cultural Food Item",
+      "description": "The large stacks of ice cream cones being sold are a common sight in Turkish street markets, particularly in summer. This knowledge helps contextualize the vendor's activity as a typical local commerce activity in Turkey.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1949ede1"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_aaaaff48",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "local_market",
+      "label": "Cultural Phenomenon",
+      "description": "The text overlay 'a local market' is generic, but understanding that 'local markets' are a common cultural and economic feature in many countries, especially in Turkey, helps interpret the scene as a slice of everyday life rather than an isolated event.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1949ede1"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_96ba5da8",
+      "@type": "EmotionExpression",
+      "instance_name": "neutral_expression",
+      "label": "neutral emotional expression",
+      "description": "The vendor's facial expression is focused and neutral, indicating concentration on his task of serving ice cream rather than conveying strong emotion. His gaze is directed at his work, and his mouth is closed in a relaxed, unemotional state. This reflects a typical professional demeanor in a commercial setting.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1949ede1"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8e37bc5a",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "the scene is labeled as a local market",
+      "description": "The text overlay 'a local market' is positioned over the image to label the entire scene. This creates an analogical mapping where the visual material (the bustling market scene with vendors and customers) is mapped onto the textual description 'a local market'. The text serves to categorize or identify the visual content as a local market, establishing a direct semantic link between the text and the visual entities present (e.g., the vendor, customers, ice cream cones, Turkish flag, Coca-Cola refrigerator).",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1949ede1"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c71def25",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of a local market",
+      "description": "The user is projected onto the overall scene depicted in the image, which includes the vendor, customers, ice cream cones, Turkish flag, and the text overlay 'a local market'. There are no explicit deictic pronouns like 'me', 'you', or 'your...' in the image. The projection is implicit and contextual, as the user is invited to perceive themselves as an observer or participant in the cultural experience being documented — a slice of everyday life in a Turkish local market. The scene itself, as a whole, serves as the projected entity.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1949ede1"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2588b602",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "tourists and locals in Turkey",
+      "description": "The target community is individuals interested in experiencing or documenting local culture in Turkey, including tourists seeking authentic market experiences and locals engaging in everyday commerce. The presence of Turkish flag motifs, ice cream cones as a cultural food item, and the generic label 'a local market' suggests the image is designed to appeal to those curious about Turkish street life, possibly for travel, cultural appreciation, or commercial purposes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1949ede1"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "woman_performing_yoga_split",
+      "participants": [
+        {
+          "entity": "woman",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "isPerforming",
+          "to": "yoga_split"
+        },
+        {
+          "from": "woman",
+          "relation": "isOn",
+          "to": "red_mat"
+        },
+        {
+          "from": "woman",
+          "relation": "isWearing",
+          "to": "white_t-shirt"
+        },
+        {
+          "from": "woman",
+          "relation": "isWearing",
+          "to": "black_leggings"
+        },
+        {
+          "from": "woman",
+          "relation": "hasHairStyle",
+          "to": "ponytail"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":woman_performing_yoga_split :hasParticipant :woman .",
+    ":woman :isPerforming :yoga_split .",
+    ":woman :isOn :red_mat .",
+    ":woman :isWearing :white_t_shirt .",
+    ":woman :isWearing :black_leggings .",
+    ":woman :hasHairStyle :ponytail ."
+  ],
+  "triples_count": 6
+}

@@ -1,0 +1,39 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "bottom_text",
+      "hasMappingEntity": "woman_sitting_next_to_Hitler"
+    },
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "bottom_text",
+      "hasMappingEntity": "Adolf_Hitler"
+    },
+    {
+      "from": "woman_sitting_next_to_Hitler",
+      "relation": "mappedOnto",
+      "to": "bottom_text"
+    },
+    {
+      "from": "Adolf_Hitler",
+      "relation": "mappedOnto",
+      "to": "bottom_text"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :bottom_text .",
+    ":mapping_1 :hasMappingEntity :woman_sitting_next_to_Hitler .",
+    ":mapping_1 :hasMappedEntity :bottom_text .",
+    ":mapping_1 :hasMappingEntity :Adolf_Hitler .",
+    ":woman_sitting_next_to_Hitler :mappedOnto :bottom_text .",
+    ":Adolf_Hitler :mappedOnto :bottom_text ."
+  ],
+  "triples_count": 6
+}

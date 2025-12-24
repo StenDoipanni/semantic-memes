@@ -1,0 +1,52 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "man and woman holding a tiger cub",
+      "participants": [
+        {
+          "entity": "man holding a tiger cub",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "woman holding a tiger cub",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "tiger cub",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man holding a tiger cub",
+          "relation": "isHolding",
+          "to": "tiger cub"
+        },
+        {
+          "from": "woman holding a tiger cub",
+          "relation": "isStandingBeside",
+          "to": "man holding a tiger cub"
+        },
+        {
+          "from": "woman holding a tiger cub",
+          "relation": "isHolding",
+          "to": "tiger cub"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":man_and_woman_holding_a_tiger_cub :hasParticipant :man_holding_a_tiger_cub .",
+    ":man_and_woman_holding_a_tiger_cub :hasParticipant :woman_holding_a_tiger_cub .",
+    ":man_and_woman_holding_a_tiger_cub :hasParticipant :tiger_cub .",
+    ":man_holding_a_tiger_cub :isHolding :tiger_cub .",
+    ":woman_holding_a_tiger_cub :isStandingBeside :man_holding_a_tiger_cub .",
+    ":woman_holding_a_tiger_cub :isHolding :tiger_cub ."
+  ],
+  "triples_count": 6
+}

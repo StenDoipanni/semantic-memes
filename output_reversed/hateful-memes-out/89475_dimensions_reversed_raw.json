@@ -1,0 +1,233 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts a man with a large belly wearing a ballet outfit, including a pink tutu, striking a ballet pose. The text overlay reads, 'when you're not fit but you know you're still majestic af.' The overall intent of this meme is to humorously and self-deprecatingly acknowledge that one may not be physically fit or conventionally graceful, yet still possesses inner majesty or dignity. The meme uses the juxtaposition of a traditionally graceful and physically demanding activity (ballet) with a person who does not conform to the typical physical standards of that activity to create a comedic effect. The intent is not to target any specific group based on protected characteristics, nor does it contain abusive, cyberbullying, harmful, hateful, misogynistic, or propagandistic content. The humor stems from the contrast between the image and the text, celebrating self-acceptance and the idea that beauty or majesty is not solely defined by physical fitness. The meme is light-hearted and does not promote harm or discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you're not fit",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A middle-aged man with gray hair and a beard, wearing a white ballet leotard and a pink tutu, striking a ballet pose with one leg lifted and arms extended. He has a large belly and is barefoot. The man appears to be the central subject of the image, embodying the meme's humorous contrast between physical fitness and self-perceived majesty.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "ballet_pose_scene",
+      "label": "man striking a ballet pose",
+      "description": "A middle-aged man with gray hair and a beard, wearing a white ballet leotard and a pink tutu, is captured mid-pose in a ballet stance with one leg lifted and arms extended. He has a large belly and is barefoot, standing against a plain white background. The scene is framed to emphasize his posture and attire, creating a humorous contrast with the traditional elegance of ballet.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ballet",
+      "label": "ballet",
+      "description": "Ballet is a formalized theatrical dance form with strict techniques and costumes, traditionally associated with grace, discipline, and physical fitness. The meme uses ballet as a cultural reference point to contrast with the man's physical appearance, highlighting the humor in defying conventional standards of beauty or fitness in this context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "self_deprecating_humor",
+      "label": "self-deprecating humor",
+      "description": "This is a comedic technique where individuals make fun of themselves, often to deflect criticism or to express humility. The meme relies on this concept to convey the message that the person is not physically fit but still feels majestic, using humor to soften the self-criticism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "body_positivity",
+      "label": "body positivity",
+      "description": "A social movement that encourages acceptance and appreciation of all body types, regardless of size, shape, or fitness level. The meme aligns with this concept by celebrating self-worth and majesty despite not conforming to traditional physical ideals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "majesty",
+      "label": "majesty",
+      "description": "A term denoting grandeur, dignity, and awe-inspiring presence. In the context of the meme, it is used ironically to describe the person's self-perceived inner worth or confidence, despite not being physically fit or graceful in the traditional sense.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "af",
+      "label": "af",
+      "description": "An internet slang abbreviation for 'as f***' or 'as fuck', used to intensify the meaning of an adjective. In this meme, 'majestic af' emphasizes the exaggerated sense of self-importance or confidence the person feels, adding to the comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "physical_fitness_stereotype",
+      "label": "physical fitness stereotype",
+      "description": "The stereotype that physical fitness and grace are prerequisites for engaging in or being worthy of certain activities, such as ballet. The meme subverts this by showing a man who does not fit this stereotype but still claims majesty, highlighting the absurdity of such rigid standards.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ballet_costume",
+      "label": "ballet costume",
+      "description": "Traditional ballet costumes, such as leotards and tutus, are designed to emphasize grace and movement. The use of a ballet costume on a man who does not conform to the physical norms of ballet creates a humorous juxtaposition, relying on the viewer's understanding of ballet aesthetics and norms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ballet_technique",
+      "label": "ballet technique",
+      "description": "Specific movements and postures in ballet, such as the arabesque or plié, require significant physical control and flexibility. The man's attempt to mimic these techniques, despite his physical limitations, is central to the meme's humor and relies on the viewer's knowledge of ballet standards.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "self_acceptance",
+      "label": "self-acceptance",
+      "description": "The concept of accepting oneself, including one's flaws and imperfections, without judgment. The meme promotes this idea by portraying the man as confident and majestic despite his lack of physical fitness, encouraging viewers to embrace their own imperfections.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "self_deprecating_humor",
+      "label": "self-deprecating humor expression",
+      "description": "The man's pose and the text overlay together convey a humorous acknowledgment of his lack of physical fitness while asserting his inner majesty, using self-mockery to create a light-hearted and relatable emotional tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The man is mapped as 'when you're not fit but you know you're still majestic af'",
+      "description": "The text 'when you're not fit but you know you're still majestic af' is directly mapped onto the visual entity 'man'. The man's physical appearance (large belly, not conventionally fit) is contrasted with his pose and the text's assertion of inner majesty, creating an analogical mapping where the man embodies the textual description. The visual material (man in ballet costume) is used to represent the textual concept of someone who is not physically fit but still feels majestic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man in the ballet pose",
+      "description": "The user is projected onto the visual material of the man striking a ballet pose, as the text 'when you're not fit but you know you're still majestic af' directly addresses the viewer's self-identification with the man's situation. The meme invites the user to see themselves in the man's posture and self-perception, creating an identification with the subject. The man embodies the textual description, and the user is encouraged to project their own experience of being unfit yet majestic onto him.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id_001",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with internet slang, self-deprecating humor, and body positivity movements. The use of 'af' (as f***), the visual contrast of a man in a ballet costume, and the theme of self-acceptance make it accessible and relatable to people who appreciate light-hearted, humorous content that celebrates individual confidence regardless of physical appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/89475.png",
+    "image_name": "89475.png",
+    "extraction_timestamp": "2025-12-19T16:49:48.866746",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

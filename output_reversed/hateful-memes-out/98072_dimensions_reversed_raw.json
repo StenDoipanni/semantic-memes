@@ -1,0 +1,243 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes a photo of Canadian Prime Minister Justin Trudeau with two contradictory and absurd textual claims: first, that Syrian migrants cannot be properly security-checked but can be trusted; second, that firearms should be taken from the 'safest demographics in Canada' because they cannot be trusted. This creates a deliberately misleading and inflammatory analogy, implying that trustworthiness is a binary trait that can be applied arbitrarily to entire groups based on origin or demographic status. The meme is harmful because it promotes dangerous stereotypes by equating national origin with inherent trustworthiness or danger, and it uses a false equivalence to justify discriminatory policies. It is not abusive or cyberbullying toward a specific individual, but it is clearly propagandistic and hateful toward Syrian migrants and other groups it implies are 'untrustworthy,' potentially inciting prejudice and policy support based on fear and misinformation. The intent is to provoke outrage or support for restrictive immigration policies by framing the issue in a morally and logically flawed way.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "we can not security check syrian migrants properly, but we can trust them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Justin_Trudeau",
+      "label": "Canadian Prime Minister",
+      "description": "A man with dark hair and a serious expression, wearing a suit and tie, positioned centrally in the image. He is the focal point of the visual material and is associated with the overlaid text making claims about Syrian migrants and firearms policy in Canada.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "political_meme_scene",
+      "label": "Meme scene with Justin Trudeau and overlaid text",
+      "description": "A scene composed of Justin Trudeau as the central visual entity, with two blocks of overlaid text that present contradictory and inflammatory claims about Syrian migrants and firearms policy in Canada. The scene is framed by national flags in the background, creating a formal political context that contrasts with the absurd and harmful content of the text. The text is positioned above and below Trudeau's image, directly associating him with the claims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text_block_1",
+          "relation": "isAssociatedWith",
+          "to": "Justin_Trudeau"
+        },
+        {
+          "from": "text_block_2",
+          "relation": "isAssociatedWith",
+          "to": "Justin_Trudeau"
+        },
+        {
+          "from": "Justin_Trudeau",
+          "relation": "isPositionedInFrontOf",
+          "to": "flag_background"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "syrian_migrants",
+      "label": "Syrian Migrants",
+      "description": "Refers to individuals who have migrated from Syria, often due to conflict and persecution. The meme uses this group as a target of a false equivalence argument, implying they are inherently untrustworthy despite being unable to be properly vetted. This relies on real-world knowledge of the Syrian civil war and the global refugee crisis, which is not visible in the image but is essential to understand the context of the claim.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "canadian_firearms_policy",
+      "label": "Canadian Firearms Policy",
+      "description": "Refers to the legal and regulatory framework governing firearms in Canada, including the requirement for background checks, licensing, and the prohibition of certain types of weapons. The meme references this policy to create a false equivalence by suggesting that if Syrian migrants are not trusted, then even 'safest demographics' in Canada should have their firearms taken away. This requires knowledge of Canadian gun laws and the political debates surrounding them, which are not visible in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "justin_trudeau",
+      "label": "Justin Trudeau",
+      "description": "The current Prime Minister of Canada, who is depicted in the image. The meme uses his image to associate him with the inflammatory claims, implying that he supports or endorses such policies. This requires knowledge of his political stance on immigration and gun control, which is not visible in the image but is essential to understand the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_syrian_stereotype",
+      "label": "Anti-Syrian Stereotype",
+      "description": "A harmful stereotype that portrays Syrian migrants as inherently dangerous or untrustworthy, often used to justify restrictive immigration policies. The meme relies on this stereotype to create its false equivalence argument. This is a real-world concept that is not visible in the image but is essential to understand the meme's harmful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "false_equivalence",
+      "label": "False Equivalence",
+      "description": "A logical fallacy that occurs when two things are presented as being equivalent when they are not. The meme uses this fallacy to equate the inability to properly vet Syrian migrants with the need to disarm 'safest demographics' in Canada. This requires knowledge of logical fallacies and their use in propaganda, which is not visible in the image but is essential to understand the meme's flawed reasoning.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "A form of prejudice or discrimination against Muslims, often manifesting as the belief that Muslims are inherently violent or dangerous. The meme relies on this prejudice by implying that Syrian migrants (many of whom are Muslim) are untrustworthy. This is a real-world concept that is not visible in the image but is essential to understand the meme's harmful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racism",
+      "label": "Racism",
+      "description": "A system of oppression based on race, often manifesting as the belief that certain racial groups are inherently inferior or dangerous. The meme relies on this system by implying that Syrian migrants are untrustworthy based on their national origin. This is a real-world concept that is not visible in the image but is essential to understand the meme's harmful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_immigrant_sentiment",
+      "label": "Anti-Immigrant Sentiment",
+      "description": "A political and social attitude that is hostile towards immigrants, often manifesting as the belief that immigrants are a threat to national security or cultural identity. The meme relies on this sentiment to create its false equivalence argument. This is a real-world concept that is not visible in the image but is essential to understand the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous expression",
+      "description": "Justin Trudeau's facial expression, characterized by a slight upward tilt of the lips and a narrowed gaze, conveys a subtle sense of disdain or superiority, which is ironically juxtaposed with the inflammatory and absurd claims in the text. This expression is not overtly aggressive but carries an undertone of condescension, aligning with the meme's tone of moral superiority and false equivalence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Justin Trudeau is mapped as the source of the claim about Syrian migrants",
+      "description": "The top text overlay 'we can not security check syrian migrants properly, but we can trust them.' is spatially positioned above Justin Trudeau's image, directly associating him with the claim. This creates an analogical mapping where Justin Trudeau (the visual entity) is implicitly mapped as the entity making or endorsing the claim about Syrian migrants (the textual entity). The meme uses his image to project the stereotype and policy position onto him, implying his endorsement or representation of the anti-Syrian sentiment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual claim about Syrian migrants",
+      "description": "The user is projected onto the top textual material (text_chunk_1) which makes the claim about Syrian migrants. The meme uses the image of Justin Trudeau to visually anchor the claim, but the projection is onto the text itself, as the user is being invited to accept or internalize the false equivalence and discriminatory logic presented in the text. There are no explicit deictic pronouns like 'you' or 'me' in the text, but the meme's structure and intent create an implicit projection where the viewer is expected to identify with the perspective of the claimant (implied to be Justin Trudeau or the political stance he represents) and thus internalize the harmful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme promotes dangerous stereotypes by equating national origin with inherent trustworthiness or danger, and uses a false equivalence to justify discriminatory policies. It is harmful because it incites prejudice and potentially supports restrictive immigration policies based on fear and misinformation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold or are susceptible to anti-immigrant sentiment, particularly those who support restrictive immigration policies based on national origin or perceived trustworthiness. The meme is designed to appeal to people who believe in a false equivalence between Syrian migrants and 'safest demographics' in Canada, and who may be influenced by Islamophobic or racist stereotypes. It targets communities that are politically or culturally aligned with policies that prioritize national security over humanitarian concerns, and who may be receptive to inflammatory rhetoric that frames immigration as a threat. The use of Justin Trudeau's image as a focal point suggests the audience includes those who either support or are critical of his policies, but the meme's intent is to provoke outrage or support for restrictive policies by associating him with the harmful claims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/98072.png",
+    "image_name": "98072.png",
+    "extraction_timestamp": "2025-12-19T19:54:18.503852",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

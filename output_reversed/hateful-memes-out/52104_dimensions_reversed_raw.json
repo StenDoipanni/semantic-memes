@@ -1,0 +1,233 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: lebanon_meme; hasOverallIntent: Harmful; overall-intent-description: The meme depicts a false historical narrative by juxtaposing two images of Lebanon, falsely claiming that 'before Islam' the country was more prosperous or culturally advanced, and 'after Islam' it was less so. The text then adds a sarcastic 'but don't worry!' with a misleading claim about a 'golden age' after Islam. This is a harmful and inaccurate portrayal that promotes Islamophobia by suggesting Islam is inherently destructive to civilization, and it misrepresents Lebanon's complex history. The meme uses visual contrast and false historical claims to provoke negative sentiment toward Islam and Muslim-majority societies, which can contribute to prejudice and misunderstanding. It is not abusive or cyberbullying toward specific individuals, but it is harmful as it spreads misinformation and promotes a hateful stereotype about Islam.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "lebanon:",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "mosque",
+      "label": "Islamic place of worship",
+      "description": "A large, ornate mosque with multiple minarets and a central dome, constructed in a traditional Islamic architectural style, prominently featured in the top panel of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "lebanon_comparison_scene",
+      "label": "Historical comparison scene of Lebanon",
+      "description": "The scene juxtaposes two images of Lebanon to depict a false historical narrative: the top image shows a mosque labeled 'before islam', and the bottom image shows a church labeled 'after islam', with sarcastic text claiming a 'golden age' after Islam. The spatial arrangement contrasts the two architectural styles and implies a decline in cultural or architectural achievement after Islam's arrival.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "mosque",
+          "relation": "isDepictedIn",
+          "to": "top_panel"
+        },
+        {
+          "from": "text",
+          "relation": "labels",
+          "to": "mosque"
+        },
+        {
+          "from": "text",
+          "relation": "labels",
+          "to": "bottom_panel"
+        },
+        {
+          "from": "text",
+          "relation": "contrasts",
+          "to": "mosque"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The meme promotes the harmful stereotype that Islam is inherently destructive to civilization and that Muslim-majority societies are culturally or architecturally inferior after Islam's arrival, which is a core component of Islamophobia. This stereotype is used to provoke negative sentiment toward Islam and Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "lebanon_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "false_historical_narrative",
+      "label": "False Historical Narrative",
+      "description": "The meme falsely claims that Lebanon was more prosperous or culturally advanced 'before Islam' and less so 'after Islam'. This is a historically inaccurate portrayal that misrepresents Lebanon's complex history and is used to promote a hateful stereotype about Islam.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "lebanon_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "golden_age_claim",
+      "label": "Golden Age Claim",
+      "description": "The meme sarcastically claims that 'after Islam takes over, there'll be a golden age', which is a misleading and historically inaccurate statement. This claim is used to further mislead viewers and promote a false narrative about Islam's impact on civilization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "lebanon_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lebanon",
+      "label": "Lebanon",
+      "description": "Lebanon is a country in the Middle East with a complex history of religious and cultural diversity, including periods of Christian, Muslim, and other influences. The meme uses Lebanon as a case study to make false historical claims about Islam's impact, which is misleading and inaccurate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "lebanon_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islam",
+      "label": "Islam",
+      "description": "Islam is a major world religion with a rich history and diverse cultural impact across the globe. The meme falsely portrays Islam as inherently destructive to civilization, which is a harmful and inaccurate stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "lebanon_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "church",
+      "label": "Church",
+      "description": "The church is a Christian place of worship, often associated with Western civilization and Christian history. The meme uses the church to contrast with the mosque, implying a decline in cultural or architectural achievement after Islam's arrival, which is a false and misleading comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "lebanon_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mosque",
+      "label": "Mosque",
+      "description": "The mosque is an Islamic place of worship, often associated with Islamic civilization and architecture. The meme uses the mosque to represent 'before Islam', implying that Islamic architecture or culture is inferior to Christian architecture, which is a false and misleading comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "lebanon_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "sarcasm",
+      "label": "sarcastic tone",
+      "description": "The meme uses sarcastic language to mock the false historical narrative, particularly with the phrase 'but don't worry!' followed by a misleading claim about a 'golden age' after Islam. This conveys a mocking or ironic emotional expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Lebanon is mapped to the mosque and church scenes",
+      "description": "The text 'lebanon:' at the top of the image serves as an introduction, mapping the entire visual comparison scene (top panel: mosque, bottom panel: church) to the country of Lebanon. This establishes Lebanon as the subject of the historical comparison being presented.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the false historical narrative scene",
+      "description": "The user is projected onto the entire lebanon_comparison_scene, which presents a false historical narrative by juxtaposing the mosque ('before islam') and the church ('after islam'), with sarcastic text claiming a 'golden age' after Islam. This projection invites the user to accept or internalize the meme's misleading historical claims and harmful Islamophobic stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobia",
+      "description": "The meme promotes the harmful stereotype that Islam is inherently destructive to civilization and that Muslim-majority societies are culturally or architecturally inferior after Islam's arrival, which is a core component of Islamophobia. This stereotype is used to provoke negative sentiment toward Islam and Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobic audience",
+      "description": "The meme is designed to target individuals who hold or are susceptible to Islamophobic stereotypes, particularly those who believe Islam is inherently destructive to civilization and that Muslim-majority societies are culturally or architecturally inferior after Islam's arrival. The visual contrast and false historical claims are intended to provoke negative sentiment toward Islam and Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/52104.png",
+    "image_name": "52104.png",
+    "extraction_timestamp": "2025-12-16T04:25:22.283491",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

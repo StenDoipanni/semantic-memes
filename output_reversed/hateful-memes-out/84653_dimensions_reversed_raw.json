@@ -1,0 +1,202 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a young man with braces and glasses, smiling, with text overlay that reads 'finally gets naked with girl in shower' at the top and 'holocaust' at the bottom. The juxtaposition of a mundane, often humorous or awkward scenario (a romantic or sexual moment in a shower) with the word 'holocaust' — a term referring to the systematic, state-sponsored persecution and murder of six million Jews by Nazi Germany and its collaborators during World War II — is intentionally shocking and deeply offensive. This is a form of 'dark humor' or 'edgy' meme that uses the Holocaust as a punchline or absurd comparison, which is not only tasteless but also potentially harmful. It trivializes one of the most horrific events in human history, reducing its gravity to a joke about a personal, intimate moment. This type of content can cause emotional distress, promote disrespect for victims of genocide, and normalize the use of historical trauma for comedic effect. The meme's intent is to shock or provoke laughter through the absurd juxtaposition, but it does so at the expense of historical sensitivity and human dignity, making it harmful to society and potentially offensive to Jewish communities and others affected by the Holocaust. The overall intent is to elicit a reaction (laughter or shock) by leveraging the extreme gravity of the Holocaust as a comedic device, which is both inappropriate and damaging.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "Text at the top of the image reads: 'finally gets naked with girl in shower'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "young_man",
+      "label": "person",
+      "description": "A young male with curly brown hair, wearing glasses and braces, smiling broadly. He is dressed in a green striped polo shirt over a white t-shirt. His expression is cheerful and slightly awkward, typical of a stock photo subject.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "juxtaposed_text_scene",
+      "label": "juxtaposed_text_scene",
+      "description": "A scene composed of a young man with a cheerful expression and two text overlays that create a shocking and offensive juxtaposition. The top text describes a mundane, intimate scenario, while the bottom text references the Holocaust, creating a deeply inappropriate and harmful comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text_top",
+          "relation": "contrastsWith",
+          "to": "text_bottom"
+        },
+        {
+          "from": "young_man",
+          "relation": "isSubjectOf",
+          "to": "text_top"
+        },
+        {
+          "from": "young_man",
+          "relation": "isSubjectOf",
+          "to": "text_bottom"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "holocaust",
+      "label": "Holocaust",
+      "description": "The Holocaust was the systematic, state-sponsored persecution and murder of six million Jews by Nazi Germany and its collaborators during World War II. It is one of the most horrific events in human history and is universally recognized as a symbol of genocide and human atrocity. Referencing it in a meme context trivializes its gravity and is deeply offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "juxtaposed_text_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "holocaust_denial_minimization",
+      "label": "Holocaust Denial/Minimization Themes",
+      "description": "This refers to the act of downplaying, denying, or trivializing the Holocaust, which is a form of antisemitism. The meme uses the Holocaust as a punchline, which falls under this category of harmful and offensive behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "juxtaposed_text_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitism",
+      "label": "Antisemitism",
+      "description": "A long-standing form of prejudice and discrimination against Jewish people, often manifesting in stereotypes, conspiracy theories, and hate speech. The use of the Holocaust as a joke in this meme is a direct example of antisemitic tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "juxtaposed_text_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dark_humor",
+      "label": "Dark Humor",
+      "description": "Humor derived from taboo, morbid, or tragic subjects. The meme uses dark humor to juxtapose an intimate moment with the Holocaust, which is inappropriate and offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "juxtaposed_text_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "edgy_meme",
+      "label": "Edgy Meme",
+      "description": "A type of internet meme designed to shock or provoke by using offensive, controversial, or taboo content. This meme fits the 'edgy' category due to its offensive and inappropriate content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "juxtaposed_text_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "shock",
+      "label": "shocked emotion",
+      "description": "The emotion expressed is shock, stemming from the deeply offensive and inappropriate juxtaposition of a mundane, intimate scenario with the Holocaust. The visual of the smiling young man contrasts with the horrific gravity of the word 'holocaust', creating a jarring and shocking effect intended to provoke a reaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The young man is mapped as the 'holocaust' in the meme",
+      "description": "The bottom text 'holocaust' is juxtaposed with the visual of the young man, creating an analogical mapping where the young man is being equated with or represents the Holocaust. This is a deeply offensive and harmful mapping that trivializes the Holocaust by associating it with a mundane, personal scenario involving the young man. The mapping is established through the visual-textual juxtaposition, where the text 'holocaust' is placed directly below the image of the young man, forcing the viewer to associate the visual entity with the textual entity in a shocking and inappropriate way.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the young man as the subject of the Holocaust joke",
+      "description": "The user is projected onto the visual material of the young man, who is the central figure in the meme. The meme's structure, with the top text describing a mundane scenario and the bottom text 'holocaust', forces the viewer to associate the young man with the Holocaust. This creates a semiotic projection where the user, as the viewer, is implicitly positioned as the one who is 'finally gets naked with girl in shower' and is being equated with the Holocaust. The projection is not explicit with deictic pronouns like 'me' or 'you', but the visual-textual juxtaposition creates an implicit identification where the user is the subject of the absurd and offensive comparison. The young man's cheerful expression and the mundane context further emphasize the shock value, making the user feel implicated in the joke's premise.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the Holocaust by using it as a punchline for a mundane, intimate scenario, which can cause emotional distress and promote disrespect for victims of genocide.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "edgy meme audience",
+      "description": "The target community is internet users who consume and create 'edgy' memes — content designed to shock or provoke by using offensive, controversial, or taboo material. This audience typically seeks humor derived from dark, absurd, or inappropriate juxtapositions, often without regard for historical sensitivity or social consequences. The meme’s use of the Holocaust as a punchline appeals to this community’s preference for extreme, boundary-pushing humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/84653.png",
+    "image_name": "84653.png",
+    "extraction_timestamp": "2025-12-19T15:10:02.176398",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

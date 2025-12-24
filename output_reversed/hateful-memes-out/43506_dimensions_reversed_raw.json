@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a happy family with a father, mother, and child embracing. The text overlay reads: 'there's a reason they have children. they are pedophiles.' This juxtaposition is intentionally harmful and hateful, using the visual of a loving family to falsely and maliciously imply that having children is inherently tied to pedophilia. This is a direct attack on the family unit and an attempt to stigmatize and dehumanize parents and children by falsely associating them with a severe and illegal crime. The meme leverages the visual of a normal, affectionate family to deliver a hateful message that is both false and deeply offensive, targeting the moral and social fabric of parenting and family life. It falls under the 'Hateful' category as it is a direct and malicious attack on a group (parents) based on a false and dangerous association with pedophilia, which is a protected characteristic in the context of hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text overlay",
+      "description": "there's a reason they have children.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "father",
+      "label": "adult male",
+      "description": "man with dark hair and glasses, wearing a blue long-sleeved shirt, smiling while holding a child on his shoulders.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "family_embrace",
+      "label": "family embracing in a happy pose",
+      "description": "A father, mother, and child are in a close, affectionate embrace. The father is holding the child on his shoulders, and the mother is hugging both of them from the side. All three are smiling and appear happy. The scene is framed to show their unity and affection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "father",
+          "relation": "holds",
+          "to": "child"
+        },
+        {
+          "from": "mother",
+          "relation": "hugs",
+          "to": "father"
+        },
+        {
+          "from": "mother",
+          "relation": "hugs",
+          "to": "child"
+        },
+        {
+          "from": "child",
+          "relation": "hugs",
+          "to": "father"
+        },
+        {
+          "from": "child",
+          "relation": "hugs",
+          "to": "mother"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pedophilia",
+      "label": "Pedophilia",
+      "description": "A severe psychological disorder characterized by sexual attraction to prepubescent children. It is a serious criminal offense in most jurisdictions and is widely condemned by society and the medical community. The meme falsely and maliciously associates the act of having children with pedophilia, which is a dangerous and false stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pedophile_stereotype",
+      "label": "Pedophile Stereotype",
+      "description": "A harmful and false stereotype that equates parenting with pedophilia. This is a malicious and baseless association used to dehumanize parents and children, and it is a form of hate speech that targets the family unit. It is explicitly listed in the provided knowledge base as a form of LGBTQ+ discrimination and hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hate_speech",
+      "label": "Hate Speech",
+      "description": "Speech that attacks or demeans a person or group based on attributes such as race, religion, gender, or sexual orientation. The meme's text is an example of hate speech because it uses a false and dangerous association (parenting = pedophilia) to attack and dehumanize parents and children, which is a protected characteristic under hate speech laws.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "family_unit_stigma",
+      "label": "Family Unit Stigma",
+      "description": "The social stigma attached to the family unit, particularly when it is used to attack or dehumanize parents and children. The meme leverages the visual of a happy family to deliver a hateful message, which is a form of stigma that targets the moral and social fabric of parenting and family life.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "false_association",
+      "label": "False Association",
+      "description": "A misleading or incorrect connection between two things. The meme falsely associates the act of having children with pedophilia, which is a dangerous and false association. This is a key element of the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful family emotion",
+      "description": "The father, mother, and child are all smiling broadly and embracing each other in a close, affectionate manner, conveying a strong sense of joy, love, and contentment. Their facial expressions and body language suggest deep happiness and familial bonding.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The family unit is mapped as pedophiles",
+      "description": "The top text 'there's a reason they have children.' is juxtaposed with the visual of a happy family embracing. This creates an analogical mapping where the visual entity 'family_embrace' is implicitly mapped to the textual entity 'pedophile_stereotype' through the false association implied by the bottom text 'they are pedophiles'. The meme uses the visual of a loving family to falsely equate parenting with pedophilia, which is a harmful stereotype and a form of hate speech. The mapping is established by the textual claim that directly attributes the label 'pedophiles' to the visual family unit.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the hateful textual claim",
+      "description": "The user is projected onto the bottom textual material 'they are pedophiles', which is the core hateful assertion of the meme. The meme does not use explicit deictic pronouns like 'you' or 'me', but the user is implicitly projected onto the act of consuming and interpreting this hateful message, which is directed at the family unit. The projection is onto the textual material that delivers the false and malicious association.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly and maliciously attacks parents and children by falsely associating the act of having children with pedophilia, a severe and illegal crime. This is a direct attack on the family unit and an attempt to stigmatize and dehumanize parents and children, falling under the 'Hateful' category as it targets a protected characteristic (parenting) with a false and dangerous association.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "target audience",
+      "description": "The intended audience is individuals who may be exposed to or share such hateful content, particularly those who might be influenced by or propagate false stereotypes linking parenting with pedophilia. The meme targets the broader public, but its primary impact is on communities that may be vulnerable to misinformation or hate speech, including those who might be predisposed to stigmatizing family units or who may not be aware of the severe harm caused by such false associations. The meme is designed to provoke outrage or discomfort, potentially aiming to normalize or spread the dangerous stereotype that parents are inherently pedophiles, thereby targeting anyone who might internalize or disseminate such a harmful narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/43506.png",
+    "image_name": "43506.png",
+    "extraction_timestamp": "2025-12-16T01:36:46.104351",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

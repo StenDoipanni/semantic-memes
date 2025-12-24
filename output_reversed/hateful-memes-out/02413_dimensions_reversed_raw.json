@@ -1,0 +1,253 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Mysogynous; overall-intent-description: The image depicts a woman with visible physical injuries (bruising around the mouth and eye), juxtaposed with the text 'women ask for equal rights, and this is why.' This visual and textual combination uses the woman's suffering as a direct, emotionally charged analogy to justify or explain the demand for equal rights. The intent is to frame the struggle for gender equality as a response to violence and oppression, potentially implying that women's demands are a consequence of systemic abuse. While it may appear to be a call for awareness, the presentation of a traumatized woman as the sole reason for the demand for rights can be interpreted as misogynous, as it reduces the complex, systemic issue of gender inequality to individual victimhood and trauma, thereby potentially reinforcing harmful stereotypes about women as inherently vulnerable or in need of protection. The image leverages the emotional weight of the woman's injuries to evoke sympathy and validate the call for equal rights, but the framing risks portraying women's rights activism as a reaction to personal violence rather than a broader social and political movement, which can be seen as a form of misogynous framing that objectifies and pathologizes women's experiences.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "women ask for equal rights,",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with visible physical injuries, including bruising around her mouth and eye, and disheveled hair. Her expression is serious and direct, looking at the viewer. The injuries suggest she has experienced violence or abuse. She is the central and only person in the image, making her the primary visual entity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "woman_with_injuries_and_text",
+      "label": "woman with visible injuries and accompanying text",
+      "description": "A scene composed of a woman with visible physical injuries (bruising around her mouth and eye) and text overlaid on the image. The text reads 'women ask for equal rights, and this is why,' framing the woman's suffering as the reason for the demand for equal rights. The woman is the central visual entity, and the text is positioned at the top and bottom of the image, directly relating to her condition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "isDepictedIn",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "explains",
+          "to": "woman"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_framing",
+      "label": "Misogynous Framing",
+      "description": "The meme uses the image of a physically injured woman to justify or explain the demand for equal rights, which can be interpreted as misogynous. It reduces the complex, systemic issue of gender inequality to individual victimhood and trauma, potentially reinforcing harmful stereotypes about women as inherently vulnerable or in need of protection. This framing risks portraying women's rights activism as a reaction to personal violence rather than a broader social and political movement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman_with_injuries_and_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gender_inequality",
+      "label": "Gender Inequality",
+      "description": "The concept of gender inequality refers to the systemic and structural disadvantages faced by one gender over another, particularly women, in areas such as employment, education, political representation, and social norms. The meme implicitly references this broader social and political movement as the context for the woman's suffering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "women_rights_activism",
+      "label": "Women's Rights Activism",
+      "description": "The movement advocating for equal rights and opportunities for women, including legal, social, and economic equality. The meme frames the demand for equal rights as a response to the woman's suffering, which is a common but potentially problematic narrative in discussions of gender equality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "systemic_abuse",
+      "label": "Systemic Abuse",
+      "description": "The broader societal structures and institutions that perpetuate harm, discrimination, or violence against women. The meme implies that women's demands for equal rights are a consequence of such systemic abuse, which is a real-world concept that must be understood to interpret the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman_with_injuries_and_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "individual_victimhood",
+      "label": "Individual Victimhood",
+      "description": "The idea that personal suffering or trauma is the primary or sole reason for social or political change. The meme reduces the complex issue of gender inequality to individual victimhood, which is a common but potentially reductive narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman_with_injuries_and_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype",
+      "label": "Misogynous Stereotype",
+      "description": "The stereotype that women are inherently vulnerable, in need of protection, or that their struggles are primarily due to personal victimization rather than systemic oppression. This stereotype is reinforced by the meme's framing of the woman's suffering as the reason for the demand for equal rights.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman_with_injuries_and_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pity_narrative",
+      "label": "Pity Narrative",
+      "description": "A narrative that frames a person's struggle or suffering as something to be pitied or sympathized with, rather than as part of a broader social or political movement. The meme uses the woman's injuries to evoke sympathy, which can be seen as a form of pity narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman_with_injuries_and_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification",
+      "label": "Objectification",
+      "description": "The act of treating a person as an object or commodity, rather than as a person with agency and dignity. The meme risks objectifying the woman by reducing her to her injuries and portraying her as a symbol of the need for equal rights, rather than as an individual with her own agency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman_with_injuries_and_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "trauma_as_motivation",
+      "label": "Trauma as Motivation",
+      "description": "The idea that personal trauma or suffering is the primary motivation for social or political change. The meme implies that women's demands for equal rights are motivated by their personal trauma, which is a common but potentially problematic narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman_with_injuries_and_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "suffering",
+      "label": "the suffering emotion",
+      "description": "The woman's facial expression, combined with visible physical injuries (bruising around the mouth and eye), conveys a state of pain, trauma, and distress. Her direct gaze and serious expression suggest resilience but also the weight of her suffering. This emotional state is central to the meme's message, framing her experience as the reason for the demand for equal rights.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The woman's suffering is mapped as the reason for women's demand for equal rights",
+      "description": "The text 'women ask for equal rights, and this is why' explicitly maps the visual entity 'woman_with_injuries_and_text' (specifically her injuries and suffering) as the causal or explanatory reason for the demand for equal rights. The visual material (the injured woman) is presented as the direct analogical representation of the textual claim (the 'why' behind the demand). This mapping is reinforced by the juxtaposition of the text with the image of trauma, creating a direct analogy: 'the suffering of this woman = the reason why women ask for equal rights'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the injured woman as the embodiment of the 'why' behind women's demands for equal rights",
+      "description": "The user is projected onto the visual material of the woman with injuries, as the meme frames her suffering as the direct reason for the demand for equal rights. The text 'and this is why' explicitly directs the viewer to interpret the woman's trauma as the causal explanation, thereby projecting the user's perspective onto her as the symbolic representation of the justification for women's rights activism. This projection is reinforced by the direct gaze of the woman, which creates an implicit connection between the viewer and the subject of suffering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme frames the demand for women's equal rights as a direct consequence of individual trauma and suffering, reducing the complex, systemic issue of gender inequality to personal victimhood. This reinforces harmful stereotypes that portray women as inherently vulnerable and in need of protection, thereby objectifying and pathologizing women's experiences. The visual of the injured woman is used as a symbolic representation of the 'why' behind the demand, which can be interpreted as a misogynous framing that equates women's activism with personal victimization rather than broader social and political movements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "woman with visible injuries",
+      "description": "The central visual entity, a woman with physical injuries, is presented as the symbolic representation of the suffering that motivates the demand for equal rights. This framing targets audiences who may be sympathetic to the plight of women experiencing violence, or who are familiar with narratives that link personal trauma to social justice movements. The image leverages emotional appeal to evoke empathy and validate the call for equal rights, suggesting the target audience is likely to be individuals who resonate with or support gender equality causes, but also potentially those who are susceptible to pity narratives or misogynous framing that reduces systemic issues to individual victimhood.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/02413.png",
+    "image_name": "02413.png",
+    "extraction_timestamp": "2025-12-15T11:01:31.329194",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 18,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "gentle_care",
+      "expressors": [
+        {
+          "entity": "firefighter",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "firefighter",
+          "relation": "emotionalRelationToEntity",
+          "to": "baby"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":gentle_care :hasExpressor :firefighter .",
+    ":firefighter :emotionalRelationToEntity :baby ."
+  ],
+  "triples_count": 2
+}

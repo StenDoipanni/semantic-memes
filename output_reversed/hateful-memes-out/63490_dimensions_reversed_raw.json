@@ -1,0 +1,277 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a child crying while being held by an adult, with overlaid text that reads: 'mommy, why am i getting christmas presents in august?' and 'because it's cheaper than chemotherapy.' The meme uses the visual of a distressed child to juxtapose a humorous or absurd question with a darkly ironic, potentially harmful answer that references chemotherapy. The intent is to create a jarring, darkly comedic effect by equating the cost of Christmas presents with the cost of medical treatment, which can be seen as insensitive and potentially harmful, especially if it trivializes the serious experience of undergoing chemotherapy. The meme may be intended to provoke laughter through shock value, but it risks causing distress or offense to those who have experienced or know someone who has undergone chemotherapy, as it reduces a serious medical condition to a joke about cost. The overall intent is to elicit a reaction through dark humor, but the content can be perceived as insensitive and potentially harmful to individuals affected by cancer treatment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "mommy, why am i getting christmas presents in august?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "child",
+      "label": "a young child",
+      "description": "A toddler with light-colored hair, wearing a yellow long-sleeved shirt, is visibly crying while being held by an adult. The child's facial expression conveys distress or confusion, and their body is wrapped in the adult's arms. This is the central subject of the visual material and the focus of the overlaid text question.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "child_held_by_adult",
+      "label": "child being held by adult",
+      "description": "A young child, visibly crying and wearing a yellow shirt, is being held tightly by an adult in a knitted sweater. The child is the central focus, and the adult is providing physical comfort. The scene takes place in what appears to be an indoor play area with colorful equipment in the background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "isBeingHeldBy",
+          "to": "adult"
+        },
+        {
+          "from": "adult",
+          "relation": "isHolding",
+          "to": "child"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "chemotherapy",
+      "label": "Chemotherapy",
+      "description": "A medical treatment used to kill cancer cells, often involving harsh side effects and high costs. It is a serious, life-altering treatment that is not trivial or humorous. The meme references it to create dark humor by equating the cost of Christmas presents with the cost of this treatment, which is insensitive and potentially harmful to those undergoing it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "christmas_presents",
+      "label": "Christmas Presents",
+      "description": "Gifts traditionally given during the Christmas holiday season, often associated with celebration, joy, and family. The meme uses the concept of receiving presents in August (outside the traditional holiday season) to create absurdity and contrast with the darkly ironic answer about chemotherapy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "august",
+      "label": "August",
+      "description": "The eighth month of the year, typically associated with summer. The meme uses the timing of August to create a sense of absurdity by juxtaposing the traditional Christmas gift-giving season with a time when such gifts are not expected, thereby enhancing the comedic effect of the dark joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dark_humor",
+      "label": "Dark Humor",
+      "description": "Humor that derives from subjects that are taboo, morbid, or distressing, such as death, suffering, or serious illness. The meme relies on dark humor to create its effect, using the juxtaposition of a child’s innocent question with a jarring, insensitive answer about chemotherapy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "insensitive_joke",
+      "label": "Insensitive Joke",
+      "description": "A joke that lacks consideration for the feelings or experiences of others, particularly those affected by serious conditions like cancer. The meme’s punchline trivializes chemotherapy, which can cause distress or offense to those who have undergone or know someone who has undergone the treatment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cost_comparison",
+      "label": "Cost Comparison",
+      "description": "The implicit idea that one thing is cheaper than another, used here to create a jarring contrast between the cost of Christmas presents and the cost of chemotherapy. This comparison is absurd and inappropriate, as chemotherapy is not a commodity that can be compared to consumer goods in this way.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "medical_treatment",
+      "label": "Medical Treatment",
+      "description": "Any form of medical intervention to treat a disease or condition. The meme references chemotherapy as a specific type of medical treatment, implying its seriousness and cost, which is used to create a darkly ironic contrast with the trivial act of receiving Christmas presents.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "childhood",
+      "label": "Childhood",
+      "description": "The stage of life from birth to adolescence, characterized by innocence, curiosity, and vulnerability. The meme uses the image of a crying child to evoke empathy and contrast it with the darkly ironic answer, highlighting the innocence of the child’s question against the harsh reality of the punchline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "parenting",
+      "label": "Parenting",
+      "description": "The act of raising and caring for children. The meme uses the context of a child asking a question to a parent (‘mommy’), which is a common parental scenario, to create a relatable and emotionally charged situation that is then subverted by the darkly ironic punchline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_held_by_adult",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "indoor_play_area",
+      "label": "Indoor Play Area",
+      "description": "A space designed for children to play indoors, often found in public places like malls or community centers. The setting provides a context of normalcy and playfulness, which contrasts with the darkly ironic content of the meme’s text, enhancing the jarring effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "distress",
+      "label": "the distressed emotion",
+      "description": "The child is visibly crying with a contorted facial expression, indicating emotional distress or confusion. The child's body language, being tightly held by the adult, suggests vulnerability and discomfort.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "child is mapped as the one asking the question",
+      "description": "The text 'mommy, why am i getting christmas presents in august?' is directly addressed to the child in the image, who is visibly distressed and crying. The child is the subject of the question, and the visual material of the crying child is mapped onto the textual entity 'me' (implied by 'i') in the question. The child's emotional state (distress) is central to the mapping, as the question is posed from the child's perspective.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the child in the image",
+      "description": "The user is projected onto the child depicted in the visual material, as the child is the subject of the question 'mommy, why am i getting christmas presents in august?'. The use of 'i' in the text directly maps the user's perspective onto the child's perspective, making the viewer identify with the child's emotional state and question. The child's crying and distressed expression further reinforce this projection, inviting the user to empathize with the child's confusion and vulnerability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_2",
+      "label": "User projected onto the textual question",
+      "description": "The user is projected onto the textual material 'mommy, why am i getting christmas presents in august?' because the text uses the first-person pronoun 'i', which directly addresses the viewer as if they are the child asking the question. This creates an immediate identification with the child's perspective, making the user feel as though they are the one experiencing the confusion and distress depicted in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the serious medical condition of chemotherapy by equating its cost with the cost of Christmas presents, which can cause distress or offense to individuals affected by cancer treatment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience familiar with internet humor, particularly dark humor and meme culture. The use of a crying child and a jarring punchline about chemotherapy is intended to provoke shock and laughter through absurdity, appealing to users who appreciate edgy or insensitive jokes. The visual of a child in a play area and the text 'mommy' create a relatable, everyday scenario that is then subverted, which is a common technique in internet memes to engage viewers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/63490.png",
+    "image_name": "63490.png",
+    "extraction_timestamp": "2025-12-16T07:51:18.128706",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 20,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

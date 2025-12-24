@@ -1,0 +1,227 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: flowers_for_martin_luther_king_day; hasOverallIntent: Harmful; overall-intent-description: The image depicts a bouquet of flowers placed inside an ice cream cone, with the text 'flowers for martin luther king day'. The visual metaphor of placing flowers — typically associated with celebration or sweetness — inside an ice cream cone — a symbol of indulgence or fleeting pleasure — juxtaposed with the solemnity of Martin Luther King Jr. Day, a national day commemorating the life and legacy of a civil rights leader who fought for justice and equality. The overall intent is to create a humorous or ironic contrast, potentially mocking the seriousness of the holiday by reducing it to a trivial or childish image. While not overtly abusive or hateful, the meme's intent is harmful because it trivializes a significant historical and cultural observance, potentially diminishing the gravity of Dr. King's contributions and the ongoing struggle for racial justice. The meme may unintentionally contribute to a culture that devalues the importance of civil rights commemorations, which can be seen as a form of cultural harm.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "flowers for",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "ice_cream_cone",
+      "label": "object",
+      "description": "A waffle cone filled with a bouquet of flowers, serving as a visual metaphor in the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "flowers_in_ice_cream_cone",
+      "label": "flowers placed inside an ice cream cone",
+      "description": "A bouquet of colorful flowers (including yellow daisies and pink carnations) is arranged inside a waffle ice cream cone, creating a visual metaphor. The cone is positioned upright against a plain light blue background. The scene is framed by text at the top and bottom reading 'flowers for' and 'martin luther king day', respectively, which contextualizes the image as a meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "ice_cream_cone",
+          "relation": "contains",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "martin_luther_king_jr",
+      "label": "Martin Luther King Jr.",
+      "description": "The individual commemorated on Martin Luther King Day, a national holiday in the United States honoring his life, legacy, and contributions to the civil rights movement. His work focused on nonviolent resistance and the fight for racial equality and justice, making the holiday a solemn and significant observance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "flowers_in_ice_cream_cone",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "martin_luther_king_day",
+      "label": "Martin Luther King Day",
+      "description": "A federal holiday in the United States observed on the third Monday of January to honor the life and work of Dr. Martin Luther King Jr., a pivotal figure in the American civil rights movement. It is a day for reflection, education, and community service, not trivialization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "flowers_in_ice_cream_cone",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "civil_rights_movement",
+      "label": "Civil Rights Movement",
+      "description": "A major social movement in the United States during the 1950s and 1960s aimed at ending racial segregation and discrimination against African Americans and securing legal recognition and federal protection of their rights. Dr. King was a central leader of this movement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "martin_luther_king_jr",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "flowers_in_ice_cream_cone",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "trivialization",
+      "label": "Trivialization",
+      "description": "The act of reducing something of great importance or solemnity to something insignificant or childish. In this meme, the serious commemoration of Dr. King's legacy is juxtaposed with a childish image (flowers in an ice cream cone), which is a form of trivialization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "flowers_in_ice_cream_cone",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "visual_metaphor",
+      "label": "Visual Metaphor",
+      "description": "A figure of speech that uses an image to represent an idea or concept. In this meme, the ice cream cone (symbolizing indulgence or fleeting pleasure) is used as a metaphor to contrast with the solemnity of Martin Luther King Day, creating irony or humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "flowers_in_ice_cream_cone",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cultural_harm",
+      "label": "Cultural Harm",
+      "description": "The potential damage to societal values or cultural understanding caused by the trivialization or mockery of significant historical or social events. The meme's intent to mock the gravity of Martin Luther King Day can be seen as culturally harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "flowers_in_ice_cream_cone",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mockery",
+      "label": "mocking emotion",
+      "description": "The emotion expressed is mockery, conveyed through the ironic juxtaposition of flowers in an ice cream cone with the solemn commemoration of Martin Luther King Day. The visual metaphor of placing a symbol of celebration or indulgence (flowers in a cone) against a serious historical observance creates a humorous or sarcastic tone, implying trivialization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "flowers are for martin luther king day",
+      "description": "The text 'flowers for martin luther king day' is juxtaposed with the visual of flowers placed inside an ice cream cone. This creates an analogical mapping where the visual material (flowers in an ice cream cone) is being presented as a representation or offering for Martin Luther King Day. The mapping is ironic, as the visual metaphor of flowers in a cone (suggesting triviality or indulgence) is contrasted with the solemnity of the holiday, implying that the offering is inappropriate or childish. The text explicitly labels the visual scene as 'flowers for martin luther king day', establishing a direct mapping between the textual description and the visual arrangement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual metaphor of flowers in an ice cream cone",
+      "description": "The user is projected onto the visual material (ice_cream_cone) which serves as a metaphorical container for the flowers, symbolizing a trivial or childish offering for Martin Luther King Day. The user is implicitly invited to interpret the image as a humorous or ironic commentary on the holiday, aligning with the meme's overall intent to trivialize the solemn occasion. The projection is onto the visual material because the user is expected to see the image and interpret its metaphorical meaning, which is central to the meme's effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes Martin Luther King Day by juxtaposing a solemn national observance with a childish visual metaphor (flowers in an ice cream cone), potentially diminishing the gravity of Dr. King's contributions and the ongoing struggle for racial justice. This can be seen as culturally harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience familiar with Martin Luther King Jr. Day and internet humor, likely targeting viewers who understand the cultural and historical significance of the holiday and appreciate ironic or absurdist visual memes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/98350.png",
+    "image_name": "98350.png",
+    "extraction_timestamp": "2025-12-19T20:06:20.880659",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

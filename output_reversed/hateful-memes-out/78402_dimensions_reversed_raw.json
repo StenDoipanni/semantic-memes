@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a man in a formal setting, likely a congressional hearing, with the text overlay \"state your name for the record\" and \"what page is it on?\". The juxtaposition humorously implies that the man is so accustomed to bureaucratic or procedural formalities that he is confused about basic record-keeping, suggesting he is either overly bureaucratic or out of touch with simple administrative tasks. The meme is not targeting any specific group based on protected characteristics, nor does it contain abusive, cyberbullying, hateful, misogynistic, or propagandistic content. However, it is potentially harmful because it could be used to mock individuals in positions of authority or to undermine their competence in a public forum, which may contribute to a culture of disrespect or cynicism toward institutional processes. The intent is satirical, using the visual of a serious official to contrast with the absurdity of the question, thereby highlighting perceived incompetence or absurdity in bureaucratic systems.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text overlay at top",
+      "description": "\"state your name for the record\"",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_in_foreground",
+      "label": "man speaking at hearing",
+      "description": "An older white man with gray hair, wearing a dark suit and patterned tie, seated at a table with a microphone, appearing to be speaking or responding during a formal proceeding. His expression is one of confusion or bewilderment, emphasized by the text overlay. He is the central focus of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "formal_hearing",
+      "label": "formal_hearing",
+      "description": "A formal hearing scene featuring a man in the foreground speaking into a microphone, with other individuals seated in the background, suggesting a formal proceeding such as a congressional hearing. The text overlays imply a humorous or satirical context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_in_foreground",
+          "relation": "speaks_to",
+          "to": "people_in_background"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "bureaucratic_procedure",
+      "label": "Bureaucratic Procedure",
+      "description": "The phrase 'state your name for the record' is a standard procedural requirement in formal settings like congressional hearings, legal depositions, or official investigations. The humor arises from the juxtaposition of this serious requirement with the absurd follow-up question 'what page is it on?', implying a person so entrenched in bureaucratic thinking that they forget basic record-keeping. This requires knowledge of how formal proceedings operate and the common expectations around record-keeping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "formal_hearing",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "congressional_hearing",
+      "label": "Congressional Hearing",
+      "description": "The setting and the man's attire, along with the microphone and nameplate ('Hon.') suggest a U.S. congressional hearing. This context is essential to understand the seriousness of the situation and the irony of the question. The meme relies on the viewer recognizing that such hearings are formal, high-stakes events where participants are expected to be knowledgeable and composed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "formal_hearing",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_in_foreground",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "satirical_juxtaposition",
+      "label": "Satirical Juxtaposition",
+      "description": "The meme uses satire by placing a serious, formal setting (congressional hearing) with an absurd, bureaucratic question. This requires understanding of satirical humor and the cultural expectation that formal institutions should be efficient and competent, making the character's confusion humorous and critical.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "formal_hearing",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "institutional_competence",
+      "label": "Institutional Competence",
+      "description": "The meme critiques or mocks perceived incompetence or absurdity in bureaucratic or institutional systems. This requires background knowledge about how institutions are expected to function and the public's tendency to hold them accountable for efficiency and competence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "formal_hearing",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_figure",
+      "label": "Political Figure",
+      "description": "The man in the foreground is widely recognized as Robert Mueller, the former special counsel investigating Russian interference in the 2016 U.S. presidential election. His public persona and the context of his hearings (e.g., the Mueller Report) make the meme particularly resonant. The humor stems from the contrast between his serious, authoritative role and the absurdity of the question, which is a commentary on bureaucratic inefficiency or perceived incompetence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_in_foreground",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "formal_hearing",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "bewilderment",
+      "label": "bewildered emotion",
+      "description": "The man in the foreground displays a facial expression of confusion and bewilderment, with wide eyes and an open mouth as if caught off guard or struggling to comprehend a basic request. This is reinforced by the text overlay asking 'what page is it on?', which humorously implies he is so accustomed to bureaucratic procedures that he forgets the most fundamental record-keeping task.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man in the foreground is mapped as the one who should state his name for the record",
+      "description": "The top text 'state your name for the record' is directly addressed to the man in the foreground, who is visually positioned as the speaker at the hearing. The meme implies he is the subject of this procedural request, creating an analogical mapping where the textual instruction is projected onto him as the required actor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man in the foreground as the subject of the procedural request",
+      "description": "The user is projected onto the man in the foreground (man_in_foreground) because the textual material ('state your name for the record') is directly addressed to him, implying he is the one required to perform the action. The user identifies with the role of the person being asked to comply with the formal procedure, creating a direct projection onto this visual entity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme humorously implies incompetence or absurdity in bureaucratic or institutional systems, potentially undermining respect for formal processes and authority figures. While not targeting specific protected groups, it could contribute to cynicism or disrespect toward institutional competence, which may be harmful in a societal context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience consists of individuals familiar with U.S. political processes, particularly congressional hearings, and those who follow or are aware of Robert Mueller's role and the Mueller Report. The meme relies on cultural knowledge of formal bureaucratic procedures and satirical commentary on institutional competence, making it most resonant with viewers who understand the context of high-stakes political hearings and the public perception of bureaucratic inefficiency. The humor is directed at perceived incompetence or absurdity in formal institutions, appealing to an audience that is critical of or cynical toward governmental processes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/78402.png",
+    "image_name": "78402.png",
+    "extraction_timestamp": "2025-12-19T13:17:31.318230",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

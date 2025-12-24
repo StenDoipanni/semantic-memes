@@ -1,0 +1,39 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "text_chunk_1",
+      "hasMappingEntity": "man_taking_selfie"
+    },
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "text_chunk_2",
+      "hasMappingEntity": "man_taking_selfie"
+    },
+    {
+      "from": "man_taking_selfie",
+      "relation": "mappedOnto",
+      "to": "text_chunk_1"
+    },
+    {
+      "from": "man_taking_selfie",
+      "relation": "mappedOnto",
+      "to": "text_chunk_2"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :text_chunk_1 .",
+    ":mapping_1 :hasMappingEntity :man_taking_selfie .",
+    ":mapping_1 :hasMappedEntity :text_chunk_2 .",
+    ":mapping_1 :hasMappingEntity :man_taking_selfie .",
+    ":man_taking_selfie :mappedOnto :text_chunk_1 .",
+    ":man_taking_selfie :mappedOnto :text_chunk_2 ."
+  ],
+  "triples_count": 6
+}

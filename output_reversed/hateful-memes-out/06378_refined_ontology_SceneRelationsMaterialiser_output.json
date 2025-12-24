@@ -1,0 +1,35 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "human_hand_holding_orangutan_hand",
+      "participants": [
+        {
+          "entity": "human_hand",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "orangutan_hand",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "human_hand",
+          "relation": "holding",
+          "to": "orangutan_hand"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":human_hand_holding_orangutan_hand :hasParticipant :human_hand .",
+    ":human_hand_holding_orangutan_hand :hasParticipant :orangutan_hand .",
+    ":human_hand :holding :orangutan_hand ."
+  ],
+  "triples_count": 3
+}

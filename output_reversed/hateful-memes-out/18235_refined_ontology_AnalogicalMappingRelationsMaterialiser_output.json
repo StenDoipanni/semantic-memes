@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_001",
+      "hasMappedEntity": "text",
+      "hasMappingEntity": "airplane engine heat is hot"
+    },
+    {
+      "from": "airplane engine heat is hot",
+      "relation": "mappedOnto",
+      "to": "text"
+    }
+  ],
+  "triples": [
+    ":mapping_001 :hasMappedEntity :text .",
+    ":mapping_001 :hasMappingEntity :airplane_engine_heat_is_hot .",
+    ":airplane_engine_heat_is_hot :mappedOnto :text ."
+  ],
+  "triples_count": 3
+}

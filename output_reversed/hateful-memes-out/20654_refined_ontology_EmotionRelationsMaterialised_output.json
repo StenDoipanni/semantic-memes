@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful emotion",
+      "expressors": [
+        {
+          "entity": "go_be_gay_somewhere_else",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "go_be_gay_somewhere_else",
+          "relation": "emotionalRelationToEntity",
+          "to": "LGBTQ+ individuals"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_emotion :hasExpressor :go_be_gay_somewhere_else .",
+    ":go_be_gay_somewhere_else :emotionalRelationToEntity :LGBTQ_individuals ."
+  ],
+  "triples_count": 2
+}

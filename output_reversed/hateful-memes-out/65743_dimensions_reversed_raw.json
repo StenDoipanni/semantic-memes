@@ -1,0 +1,241 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: mommy_look_an_indian_man; hasOverallIntent: Hateful; overall-intent-description: The meme depicts a child pointing at an Indian man, with a mother warning the child not to be influenced by him, followed by the child asking for explicit content. This juxtaposition is intended to mock and stereotype Indian men, particularly by associating them with sexualized or inappropriate behavior, which is a form of hateful content targeting a specific ethnic group. The text 'show bobs and vagene pls' is a vulgar and degrading request, reinforcing the harmful stereotype. The meme uses visual and textual elements to create a demeaning and offensive portrayal of Indian men, fitting the definition of hateful content as it directly attacks individuals based on their ethnicity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "mommy look! an indian man!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "middle text overlay",
+      "description": "don't look at them ricky. i don't want you to be influenced by...ohgodno",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_3",
+      "label": "bottom text overlay",
+      "description": "rickyyy",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_4",
+      "label": "bottom right text overlay",
+      "description": "Show bobs and vagene pls",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "mother",
+      "label": "woman holding a child",
+      "description": "A woman in a light-colored top, holding a young child, looking upward with a concerned or warning expression. She appears to be in a public, possibly commercial, setting at night. Her posture and facial expression suggest she is cautioning the child.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "scene_1",
+      "label": "mother warning child",
+      "description": "A mother is holding a child and looking upward with a concerned expression, while the child points at something in the distance. The mother is warning the child not to look at someone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "mother",
+          "relation": "warns",
+          "to": "child"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_indian_racism_stereotype",
+      "label": "Anti-Indian Racism Stereotype",
+      "description": "The meme relies on a harmful stereotype that portrays Indian men as hypersexualized and morally corrupt, which is a form of anti-Indian racism. This stereotype is not visible in the image but is implied by the mother's warning and the child's vulgar request, which targets Indian men specifically.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_4",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization_stereotype",
+      "label": "Hypersexualization Stereotype",
+      "description": "The meme uses the phrase 'Show bobs and vagene pls' to imply that Indian men are hypersexualized, which is a derogatory stereotype. This concept is not visible in the image but is essential to understanding the offensive nature of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_4",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "emasculation_of_asian_men",
+      "label": "Emasculation of Asian Men",
+      "description": "The meme implies that Indian men are emasculated or sexually inadequate, which is a form of anti-Asian racism. This stereotype is not visible in the image but is inferred from the mother's warning and the child's request, which suggests Indian men are not to be trusted or are sexually deviant.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_4",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The boy in the bottom panel is wearing a white skullcap (kufi), which is associated with Islamic religious practice. The meme implies that his religious practice is somehow linked to the vulgar request, which is a form of Islamophobia. This stereotype is not visible in the image but is implied by the context of the boy's attire and the offensive request.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_4",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny_stereotype",
+      "label": "Misogyny Stereotype",
+      "description": "The phrase 'Show bobs and vagene pls' is a misogynistic objectification of the boy's body, focusing on genitalia. This stereotype is not visible in the image but is essential to understanding the offensive nature of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_4",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "concern",
+      "label": "concerned emotion",
+      "description": "The mother's facial expression and body language convey concern as she holds the child and looks upward, warning the child not to look at the Indian man. Her posture and gaze suggest she is protecting the child from perceived negative influence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Mother warning child about Indian man",
+      "description": "The text 'mommy look! an indian man!' is mapped onto the visual of the mother holding the child, who is pointing upward. The mother's action and the child's gaze are contextualized by the text to imply she is warning the child about the Indian man seen in the distance. The visual material (mother and child) is mapped onto the textual description of the situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the child's perspective",
+      "description": "The user is projected onto the child (Ricky) who is pointing at the Indian man and later asking for explicit content. The text 'rickyyy' and the child's actions imply the user is identifying with the child's innocent curiosity and subsequent vulgar request, creating a deictic projection onto the child's viewpoint.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_2",
+      "label": "User projected onto the mother's perspective",
+      "description": "The user is projected onto the mother who is warning the child not to look at the Indian man. The text 'don't look at them ricky. i don't want you to be influenced by...ohgodno' implies the user is identifying with the mother's protective and fearful stance, projecting themselves into her role of cautioning the child.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_3",
+      "label": "User projected onto the Indian boy's perspective",
+      "description": "The user is projected onto the Indian boy who is smiling and holding a book, with the text 'Show bobs and vagene pls' implying the user is identifying with his innocence or naivety, or projecting themselves into his role as the object of the child's vulgar request, despite the offensive nature of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Indian men based on ethnicity by associating them with hypersexualized and morally corrupt behavior, which is a form of hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience familiar with and likely to find humor in racist, sexist, and Islamophobic stereotypes, particularly those targeting Indian men. The audience is expected to understand the offensive implications of the text and imagery, such as the hypersexualization of Indian men and the association of Islamic attire with moral corruption or sexual deviance. The meme relies on the audience's acceptance of these harmful tropes to generate its intended effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/65743.png",
+    "image_name": "65743.png",
+    "extraction_timestamp": "2025-12-16T08:38:09.746476",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 19,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

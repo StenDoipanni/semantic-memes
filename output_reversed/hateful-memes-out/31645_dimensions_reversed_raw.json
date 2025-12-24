@@ -1,0 +1,204 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: the_floor_is_jews; hasOverallIntent: Hateful; overall-intent-description: The image displays an ancient mosaic, likely of religious or astrological significance, overlaid with the text 'the floor is jews.' This phrase is a direct and derogatory reference to antisemitic tropes, particularly the historical and modern stereotype that Jews control or manipulate global systems. The juxtaposition of the ancient, culturally significant artwork with the hateful text transforms the image into a vehicle for antisemitic hate speech. The intent is to demean and dehumanize Jewish people by associating them with a base, conspiratorial, and historically harmful narrative. The meme leverages the visual weight of the mosaic to amplify the toxicity of the text, making it a clear example of hateful content targeting a specific protected community based on ethnicity and religion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "the floor is jews",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "ancient_mosaic",
+      "label": "visual artwork",
+      "description": "A circular, intricate mosaic with a central figure surrounded by twelve segments, each containing symbolic imagery and inscriptions in Hebrew. The style suggests an ancient religious or astrological context, possibly from a synagogue or temple floor. The mosaic features stylized human and animal figures, geometric patterns, and decorative borders.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "antisemitic_meme_scene",
+      "label": "antisemitic_meme_scene",
+      "description": "A scene composed of an ancient mosaic overlaid with hateful text, creating a visual juxtaposition that conveys antisemitic hate speech. The mosaic, with its religious or astrological imagery, serves as a backdrop for the derogatory phrase 'the floor is jews,' which is superimposed centrally. The scene leverages the historical and cultural weight of the mosaic to amplify the toxicity of the text, transforming the artwork into a vehicle for antisemitic propaganda.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "isSuperimposedOn",
+          "to": "ancient_mosaic"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_stereotype",
+      "label": "Antisemitic Stereotype: Jews Control Global Systems",
+      "description": "The phrase 'the floor is jews' is a modern antisemitic trope that implies Jewish people are secretly controlling or manipulating global systems, economies, or institutions. This stereotype is rooted in centuries of antisemitic conspiracy theories and is used to dehumanize and demonize Jewish people. It is not visible in the image but is essential to understanding the hateful intent of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "antisemitic_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_conspiracy_theory",
+      "label": "Antisemitic Conspiracy Theory: Jewish Control of Finance and Media",
+      "description": "This theory, often referred to as 'Jewish financial control' or 'Jewish media control,' is a longstanding antisemitic trope that falsely claims Jews manipulate global finance, politics, and media. The meme leverages this stereotype to imply Jewish people are 'on the floor' — a metaphor for being at the bottom or controlling the foundation — which is a distortion of reality and a form of hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "antisemitic_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_metaphor",
+      "label": "Antisemitic Metaphor: 'The Floor is Jews'",
+      "description": "The phrase 'the floor is jews' is a derogatory metaphor that uses the concept of 'the floor' — often associated with the foundation or base level — to imply that Jewish people are either beneath others or secretly controlling the foundation of society. This metaphor is not visible in the image but is central to the meme's message and its hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "antisemitic_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_hate_speech",
+      "label": "Antisemitic Hate Speech",
+      "description": "The meme is an example of antisemitic hate speech, which is a form of verbal or visual expression that targets Jewish people based on their ethnicity and religion. The phrase 'the floor is jews' is a direct and derogatory reference to antisemitic tropes and is intended to demean and dehumanize Jewish people. This concept is not visible in the image but is essential to understanding the meme's harmful nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "antisemitic_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_visual_juxtaposition",
+      "label": "Antisemitic Visual Juxtaposition",
+      "description": "The meme uses the visual juxtaposition of an ancient, culturally significant mosaic with the hateful text 'the floor is jews' to amplify the toxicity of the message. This technique leverages the historical and cultural weight of the mosaic to make the antisemitic message appear more credible or 'serious,' which is a common tactic in hate speech. This concept is not visible in the image but is essential to understanding the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "antisemitic_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is hatred, conveyed through the hateful text 'the floor is jews' superimposed on an ancient mosaic. This text is a direct expression of antisemitic hate speech, intended to demean, dehumanize, and incite prejudice against Jewish people. The juxtaposition of the culturally significant mosaic with the hateful phrase amplifies the emotional weight of the hate, making it appear more serious or 'authentic' to the viewer.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "antisemitic_stereotype_mapped_to_mosaic",
+      "description": "The text 'the floor is jews' is superimposed on the ancient mosaic, creating an analogical mapping where the mosaic (a culturally significant visual entity) is being used to represent or symbolize the antisemitic stereotype that Jews control global systems. The juxtaposition implies that the mosaic, as a foundational or 'floor' element, is metaphorically 'Jewish' — a direct mapping of the hateful text onto the visual material to amplify its message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the hateful textual message",
+      "description": "The user is projected onto the textual material 'the floor is jews' because the meme's intent is to make the viewer identify with or internalize the hateful stereotype being conveyed. There are no explicit deictic pronouns like 'me' or 'you', but the meme's structure and overall intent create an implicit projection where the viewer is positioned as the one who is 'on the floor' — metaphorically and literally — by the antisemitic message. The user is thus projected onto the text_chunk as the target of the hate speech and the implied subject of the metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly targets Jewish people based on their ethnicity and religion through the antisemitic phrase 'the floor is jews,' which is a well-documented hate trope. The visual juxtaposition of the ancient mosaic with the hateful text amplifies the message, making it a clear example of hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "antisemitic_hate_speech",
+      "label": "antisemitic_hate_speech",
+      "description": "The meme is an example of antisemitic hate speech, which is a form of verbal or visual expression that targets Jewish people based on their ethnicity and religion. The phrase 'the floor is jews' is a direct and derogatory reference to antisemitic tropes and is intended to demean and dehumanize Jewish people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/31645.png",
+    "image_name": "31645.png",
+    "extraction_timestamp": "2025-12-15T22:08:02.031544",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,225 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: her-you-must-be-retarded-if-you-think-we-fucking-me; hasOverallIntent: Hateful; overall-intent-description: The image depicts two individuals with visible developmental disabilities sharing a joyful moment on a park bench. The overlaid text, 'her: you must be retarded if you think we fucking me:', is a hateful and derogatory statement that uses the slur 'retarded' to demean the person being addressed. This text is juxtaposed with the image of the two people happily interacting, creating a cruel and offensive contrast. The meme's intent is to mock and dehumanize individuals with developmental disabilities by using a demeaning slur and implying they are incapable of understanding or deserving of affection, which constitutes a direct attack based on disability. This aligns with the 'ABLEISM' category in the provided knowledge base, specifically involving 'intelligence mockery (use of slurs)' and 'developmental disability infantilization'. The meme is designed to provoke discomfort and reinforce harmful stereotypes, making it hateful and potentially harmful to the disability community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "her: you must be retarded if you think we fucking me:",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person with visible developmental disability",
+      "description": "A man with a developmental disability, wearing a light blue checkered shirt and jeans, is seated on a park bench. He is smiling broadly and appears to be laughing, holding a smartphone in his left hand. His physical features suggest he has Down syndrome or a similar condition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "happy_couple_on_bench",
+      "label": "Two people with visible developmental disabilities sharing a joyful moment on a park bench",
+      "description": "A man and a woman, both with visible developmental disabilities, are seated closely together on a wooden park bench. The man, wearing a light blue checkered shirt, is smiling broadly and laughing while holding a smartphone. The woman, wearing a purple zip-up hoodie, is leaning her head affectionately against the man's shoulder, also laughing. They appear to be enjoying each other's company in a relaxed, happy setting. The background shows a blurred park with green grass and trees, suggesting a peaceful outdoor environment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "is_holding",
+          "to": "smartphone"
+        },
+        {
+          "from": "woman",
+          "relation": "is_leaning_on",
+          "to": "man"
+        },
+        {
+          "from": "man",
+          "relation": "is_sitting_next_to",
+          "to": "woman"
+        },
+        {
+          "from": "woman",
+          "relation": "is_sitting_next_to",
+          "to": "man"
+        },
+        {
+          "from": "man",
+          "relation": "is_laughing_with",
+          "to": "woman"
+        },
+        {
+          "from": "woman",
+          "relation": "is_laughing_with",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "intelligence_mockery_use_of_slurs",
+      "label": "Intelligence mockery (use of slurs)",
+      "description": "The slur 'retarded' is used in the text to demean the person being addressed, implying they are unintelligent or incapable. This is a form of ableism that mocks and dehumanizes individuals with developmental disabilities by associating them with low intelligence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "developmental_disability_infantilization",
+      "label": "Developmental disability infantilization",
+      "description": "The meme implies that individuals with developmental disabilities are incapable of understanding or deserving affection, which infantilizes them and reinforces harmful stereotypes that they are childlike or incapable of mature relationships.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "happy_couple_on_bench",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "Ableism",
+      "description": "The meme is an example of ableism, which is discrimination or prejudice against people with disabilities. It uses derogatory language and stereotypes to demean individuals with developmental disabilities, portraying them as inferior or unworthy of affection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "happy_couple_on_bench",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "slur_retarded",
+      "label": "Slur 'retarded'",
+      "description": "The word 'retarded' is a derogatory slur historically used to demean individuals with developmental disabilities. It is now considered offensive and is explicitly referenced in the text to attack the person's intelligence and worth.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_meme",
+      "label": "Hateful meme",
+      "description": "The meme is designed to be hateful and offensive, using a cruel juxtaposition of a joyful image of two people with developmental disabilities with a demeaning and derogatory text. Its intent is to provoke discomfort and reinforce harmful stereotypes about disability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "happy_couple_on_bench",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful emotional expression",
+      "description": "The man and woman are both smiling broadly and laughing, indicating a state of genuine happiness and enjoyment. Their body language—leaning into each other, relaxed postures, and shared laughter—conveys affection and contentment in a peaceful outdoor setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'me' is mapped onto the man with developmental disability",
+      "description": "The text 'me:' at the end of the statement 'her: you must be retarded if you think we fucking me:' explicitly refers to the person being addressed. In the visual material, the man with visible developmental disability is the one being spoken to, and the text 'me:' is positioned to directly map onto him. This creates an analogical mapping where the textual entity 'me' is projected onto the visual entity 'man'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man with developmental disability via the textual deictic 'me'",
+      "description": "The user is projected onto the man with visible developmental disability, as indicated by the textual deictic 'me:' in the text_chunk 'her: you must be retarded if you think we fucking me:'. The text explicitly addresses the man as 'me', creating a direct semiotic projection where the viewer is meant to identify with or project themselves onto the man as the recipient of the hateful statement. This projection is reinforced by the visual material showing the man as the one being spoken to, and the text's placement directly mapping onto him.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses a derogatory slur ('retarded') and implies incapacity and unworthiness based on disability, directly attacking individuals with developmental disabilities. The juxtaposition of a joyful image with hateful text creates a cruel and dehumanizing message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed to target and provoke members of the general public who may hold ableist views or be unfamiliar with the lived experiences of individuals with developmental disabilities. It uses offensive language and stereotypes to elicit discomfort or laughter from those who are not directly affected by the ableism depicted, thereby reinforcing harmful attitudes toward people with disabilities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/37862.png",
+    "image_name": "37862.png",
+    "extraction_timestamp": "2025-12-15T23:57:45.793192",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,195 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: the_lie_detector_test_meme; hasOverallIntent: Harmful; overall-intent-description: The image depicts a man speaking at a podium with text overlay that reads 'the lie detector test determined that was a lie.' This is a satirical or ironic meme, likely referencing a moment where someone is caught in a falsehood, and the lie detector test is used as a humorous or exaggerated tool to 'prove' the lie. The visual element of the man (often identified as actor John Ritter or a similar figure in a comedic context) combined with the text creates an analogy where the lie detector test is being used to expose deception. The meme's intent is to mock or highlight the absurdity of a situation where a lie is being 'detected' by a device, often used to critique dishonesty or to humorously frame a statement as false. There is no direct targeting of any specific group based on protected characteristics, so it does not fall under abusive, cyberbullying, hateful, misogynous, or propaganda categories. However, it may be considered harmful if it is used to undermine someone's credibility or to spread misinformation in a context where the lie detector test is being misrepresented or used to discredit a person or argument. The meme relies on the juxtaposition of the serious-sounding 'lie detector test' with the comedic or ironic tone of the situation, creating a humorous effect that may be interpreted as mocking or ridiculing the subject of the lie.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "the lie detector test",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "man speaking at podium",
+      "description": "A man wearing glasses, a black turtleneck, and a black suit jacket, standing behind a wooden podium with a microphone. He appears to be speaking or reacting with an expressive facial expression, possibly mid-sentence or in surprise. His posture and expression suggest he is the central subject of the image, likely intended to represent a person being caught in a lie or reacting to a lie detector test result. The man is positioned in the foreground, making him the most salient visual element.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "lie_detector_test_scene",
+      "label": "man speaking at podium with lie detector test text",
+      "description": "A man is standing behind a wooden podium with a microphone, speaking or reacting expressively. The scene is overlaid with text that reads 'the lie detector test determined that was a lie,' creating a satirical or ironic context. The man is the central visual element, positioned in the foreground, and the background includes a colorful painting of three stylized dog heads. The scene implies a humorous or mocking situation where a lie is being 'detected' by a lie detector test, likely referencing a moment of deception or public statement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "speaksAt",
+          "to": "podium"
+        },
+        {
+          "from": "man",
+          "relation": "standsBehind",
+          "to": "podium"
+        },
+        {
+          "from": "man",
+          "relation": "isPositionedInFrontOf",
+          "to": "background_painting"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lie_detector_test",
+      "label": "Lie Detector Test",
+      "description": "A polygraph test, commonly known as a lie detector test, is a psychological measurement tool that measures physiological responses (such as heart rate, blood pressure, respiration, and skin conductivity) to determine whether a person is lying. It is often used in legal, investigative, or employment contexts, though its accuracy and reliability are widely debated and it is not admissible as evidence in many courts. The meme uses this concept humorously or satirically to imply that a statement was proven false by such a device, even if the context is absurd or ironic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "john_ritter",
+      "label": "Actor John Ritter",
+      "description": "John Ritter was an American actor known for his roles in television sitcoms such as 'Three's Company', 'The Golden Girls', and 'Night Court'. He was also known for his comedic timing and expressive facial expressions. The man in the image is widely recognized as John Ritter, specifically from his role as the character 'Dr. John Ritter' in the 1990s TV show 'The Ritter Family' or from his appearances in other comedic roles. His likeness is often used in memes for humorous or ironic contexts, especially when paired with text about deception or absurdity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pop_art",
+      "label": "Pop Art Movement",
+      "description": "Pop Art is an art movement that emerged in the mid-20th century, particularly in the 1950s and 1960s, characterized by the use of imagery from popular culture, advertising, and mass media. It often features bold colors, repetition, and irony. The painting in the background of the image, depicting stylized dog heads in vibrant colors, is a clear reference to Pop Art, specifically reminiscent of Andy Warhol's style. This artistic context adds to the ironic or satirical tone of the meme, as the juxtaposition of a serious subject (lie detector test) with a playful, commercial art style enhances the humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "satirical_meme",
+      "label": "Satirical Meme",
+      "description": "A satirical meme is a form of internet humor that uses irony, exaggeration, or ridicule to critique or mock a person, event, or idea. The meme format often involves juxtaposing a serious or official-looking image with humorous or absurd text to create a comedic effect. In this case, the image of a man speaking at a podium (often associated with formal or political settings) combined with the text 'the lie detector test determined that was a lie' creates a satirical commentary on deception, dishonesty, or the absurdity of certain claims. The meme relies on the audience's understanding of the concept of a lie detector test and the comedic context of the image to be effective.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "surprise",
+      "label": "surprised facial expression",
+      "description": "The man's facial expression, with his mouth open and eyes wide, conveys a sense of surprise or shock, as if reacting to unexpected news or a revelation. This expression is central to the meme's humor, suggesting he is caught off guard by the lie detector test result.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man is mapped as the subject of the lie detector test result",
+      "description": "The text 'the lie detector test determined that was a lie' implies that the man is the one being tested and found to be lying. The visual material of the man speaking at the podium is thus mapped onto the textual entity as the person whose lie was detected.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man as the subject of the lie detector test",
+      "description": "The user is projected onto the visual material of the man speaking at the podium, as the text implies he is the one being tested and found to be lying. The meme's structure invites the user to identify with the person being 'caught' in a lie, making the man the focal point of the user's projection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses the lie detector test as a satirical tool to mock or highlight the absurdity of a situation where a lie is being 'detected'. While not targeting any specific group based on protected characteristics, it may be considered harmful if used to undermine someone's credibility or to spread misinformation by misrepresenting the lie detector test. The meme relies on juxtaposition of serious-sounding 'lie detector test' with comedic tone, which can be interpreted as mocking or ridiculing the subject of the lie.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with pop culture references, satirical humor, and the concept of lie detector tests. It leverages widely recognizable imagery (John Ritter's expressive face) and ironic juxtaposition (serious lie detector test text over a comedic scene) to appeal to viewers who appreciate absurdist humor and internet meme culture. The target community includes individuals who understand the satirical intent and can interpret the visual and textual elements in context, without requiring specific demographic or cultural markers beyond general media literacy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/13970.png",
+    "image_name": "13970.png",
+    "extraction_timestamp": "2025-12-15T15:27:54.542932",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

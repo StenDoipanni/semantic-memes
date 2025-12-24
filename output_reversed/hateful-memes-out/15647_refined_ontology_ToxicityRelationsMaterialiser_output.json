@@ -1,0 +1,25 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk: text location - broken dishwasher"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "woman: person"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :text_chunk_text_location_broken_dishwasher .",
+    ":toxicity_1 :hasToxicElement :woman_person ."
+  ],
+  "triples_count": 2
+}

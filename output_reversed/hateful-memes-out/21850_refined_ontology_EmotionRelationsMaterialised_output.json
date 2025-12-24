@@ -1,0 +1,44 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "empowering emotion",
+      "expressors": [
+        {
+          "entity": "the female gender symbol",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "the text listing rights",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "the female gender symbol",
+          "relation": "emotionalRelationToEntity",
+          "to": "women"
+        },
+        {
+          "from": "the text listing rights",
+          "relation": "emotionalRelationToEntity",
+          "to": "women"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":empowering_emotion :hasExpressor :the_female_gender_symbol .",
+    ":empowering_emotion :hasExpressor :the_text_listing_rights .",
+    ":the_female_gender_symbol :emotionalRelationToEntity :women .",
+    ":the_text_listing_rights :emotionalRelationToEntity :women ."
+  ],
+  "triples_count": 4
+}

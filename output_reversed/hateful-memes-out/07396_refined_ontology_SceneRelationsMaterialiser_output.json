@@ -1,0 +1,58 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "suffering_victims_scene",
+      "participants": [
+        {
+          "entity": "emaciated_human_body_1",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "emaciated_human_body_2",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "emaciated_human_body_3",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "emaciated_human_body_1",
+          "relation": "suspended_by_feet",
+          "to": "wooden_structure"
+        },
+        {
+          "from": "emaciated_human_body_2",
+          "relation": "partially_covered_by_blanket",
+          "to": "blanket"
+        },
+        {
+          "from": "emaciated_human_body_1",
+          "relation": "lying_on_ground",
+          "to": "ground"
+        },
+        {
+          "from": "emaciated_human_body_2",
+          "relation": "lying_on_ground",
+          "to": "ground"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":suffering_victims_scene :hasParticipant :emaciated_human_body_1 .",
+    ":suffering_victims_scene :hasParticipant :emaciated_human_body_2 .",
+    ":suffering_victims_scene :hasParticipant :emaciated_human_body_3 .",
+    ":emaciated_human_body_1 :suspended_by_feet :wooden_structure .",
+    ":emaciated_human_body_2 :partially_covered_by_blanket :blanket .",
+    ":emaciated_human_body_1 :lying_on_ground :ground .",
+    ":emaciated_human_body_2 :lying_on_ground :ground ."
+  ],
+  "triples_count": 7
+}

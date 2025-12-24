@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "defiant emotion",
+      "expressors": [
+        {
+          "entity": "mermaid",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "mermaid",
+          "relation": "emotionalRelationToEntity",
+          "to": "role_play_scene"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":defiant_emotion :hasExpressor :mermaid .",
+    ":mermaid :emotionalRelationToEntity :role_play_scene ."
+  ],
+  "triples_count": 2
+}

@@ -1,0 +1,212 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: farm_equipment_and_livestock_don_t_mix; hasOverallIntent: Hateful; overall-intent-description: The image juxtaposes a photo of a Black man and a white woman in an intimate, affectionate pose with the text 'farm equipment and livestock don't mix.' This creates a harmful and hateful stereotype by implying that the Black man is 'livestock' and the white woman is 'farm equipment,' suggesting he is an object to be used or controlled by her. This is a clear example of hypersexualization and racial stereotyping, portraying the Black man as inferior, animalistic, and subordinate to the white woman. The meme uses racist tropes to demean and dehumanize Black men, fitting the 'Anti-Black Stereotypes' category, specifically 'Hypersexualization' and 'Comparing Black people to primates' (by implying he is 'livestock'). The intent is to degrade and insult the Black man based on his race and gender, making it a hateful and harmful meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "farm equipment and livestock don't mix",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "Black man",
+      "description": "A Black man with a visible tattoo on his right arm, smiling and leaning his head on the shoulder of a woman. He appears to be shirtless and is positioned closely to the woman, suggesting intimacy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "intimate_pose",
+      "label": "intimate_pose",
+      "description": "A Black man and a white woman are in a close, affectionate pose, with the man leaning his head on the woman's shoulder, suggesting intimacy and closeness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "leans_on",
+          "to": "woman"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_hypersexualization",
+      "label": "Anti-Black Stereotype: Hypersexualization",
+      "description": "The meme uses the phrase 'farm equipment and livestock don't mix' to imply that the Black man is 'livestock' and the white woman is 'farm equipment,' which is a form of hypersexualization. This stereotype dehumanizes Black men by portraying them as objects for the use or control of white women, reducing their humanity and dignity. This is a well-documented racist trope in American culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "intimate_pose",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_comparing_to_primates",
+      "label": "Anti-Black Stereotype: Comparing Black People to Primates",
+      "description": "The phrase 'livestock' in the meme is a euphemism that implicitly references the dehumanizing stereotype of comparing Black people to animals, particularly primates. This trope has a long history in racist discourse and is used to portray Black people as inferior, animalistic, and lacking human dignity. The use of 'livestock' directly invokes this harmful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_objectification",
+      "label": "Racist Trope: Objectification",
+      "description": "The meme objectifies the Black man by reducing him to a commodity ('livestock') that is 'used' by the white woman ('farm equipment'). This is a form of racial objectification, where a person's worth is diminished to their utility or function in a racist power dynamic. This trope is rooted in historical systems of slavery and racial hierarchy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "intimate_pose",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_subordination",
+      "label": "Racist Trope: Subordination",
+      "description": "The meme implies a power dynamic of subordination, where the Black man is positioned as subordinate to the white woman. This is a common racist trope that reinforces white supremacy by portraying Black men as inferior and controlled by white women, perpetuating harmful gender and racial hierarchies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "intimate_pose",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_racial_hierarchy",
+      "label": "Racist Trope: Racial Hierarchy",
+      "description": "The meme operates within the framework of racial hierarchy, where the white woman is positioned as the dominant 'owner' or 'operator' and the Black man as the subordinate 'asset' or 'livestock.' This reinforces the idea that white people are superior and Black people are inferior, a core tenet of systemic racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "intimate_pose",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "affectionate happiness",
+      "description": "The man and woman are smiling and in an intimate pose, conveying a sense of affection and contentment. Their facial expressions and body language suggest mutual comfort and closeness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Black man is mapped as 'livestock'",
+      "description": "The text 'farm equipment and livestock don't mix' explicitly maps the Black man in the image to 'livestock'. This is a direct analogical mapping where the visual entity (the Black man) is equated with the textual entity 'livestock', reinforcing a dehumanizing stereotype. This mapping is central to the meme's hateful intent, as it reduces the man's humanity to that of an animal commodity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the Black man as 'livestock'",
+      "description": "The user is projected onto the Black man in the image, who is explicitly mapped as 'livestock' by the text 'farm equipment and livestock don't mix'. This projection is implicit but powerful, as the meme positions the viewer to identify with the dominant figure (the white woman) and to see the Black man as an object of use or control, reinforcing the racist trope of hypersexualization and subordination. The user is not directly addressed with deictic pronouns like 'you' or 'me', but the framing of the image and text creates a passive projection where the user is implicitly positioned as the 'owner' or 'operator' (the white woman) in the power dynamic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses racist tropes to demean and dehumanize Black men, fitting the 'Anti-Black Stereotypes' category, specifically 'Hypersexualization' and 'Comparing Black people to primates' (by implying he is 'livestock'). The intent is to degrade and insult the Black man based on his race and gender, making it a hateful and harmful meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with or perpetuate racist tropes, particularly those who engage with or enjoy content that uses hypersexualization and racial objectification of Black men. This includes communities that may find humor or satisfaction in dehumanizing stereotypes, such as 'farm equipment and livestock' metaphors, and who may be drawn to content that reinforces racial hierarchy and subordination. The meme is designed to appeal to those who hold or are entertained by anti-Black stereotypes, particularly those that portray Black men as inferior, animalistic, and subordinate to white women.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/42163.png",
+    "image_name": "42163.png",
+    "extraction_timestamp": "2025-12-16T01:15:28.205452",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

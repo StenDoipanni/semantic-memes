@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "juxtaposed_images_with_text",
+      "participants": [
+        {
+          "entity": "Morgan Freeman",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "Enslaved people",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Morgan Freeman",
+          "relation": "isDepictedIn",
+          "to": "juxtaposed_images_with_text"
+        },
+        {
+          "from": "Enslaved people",
+          "relation": "isDepictedIn",
+          "to": "juxtaposed_images_with_text"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":juxtaposed_images_with_text :hasParticipant :Morgan_Freeman .",
+    ":juxtaposed_images_with_text :hasParticipant :Enslaved_people .",
+    ":Morgan_Freeman :isDepictedIn :juxtaposed_images_with_text .",
+    ":Enslaved_people :isDepictedIn :juxtaposed_images_with_text ."
+  ],
+  "triples_count": 4
+}

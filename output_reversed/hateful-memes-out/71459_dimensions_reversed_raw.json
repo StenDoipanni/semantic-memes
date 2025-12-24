@@ -1,0 +1,250 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: partial_arts; hasOverallIntent: Harmful; overall-intent-description: The image depicts two individuals in martial arts uniforms, one adult and one child, standing in a grassy area in front of a house. The text \"partial arts\" is superimposed, creating a pun that implies the martial arts are only partially practiced or incomplete. The overall intent is to humorously suggest that the martial arts are not fully developed or are being performed in a half-hearted or inadequate manner. This meme is not inherently abusive, cyberbullying, hateful, misogynistic, or propagandistic. However, it can be considered harmful because it trivializes the discipline and seriousness of martial arts by reducing it to a joke about incompleteness, which may disrespect practitioners or the art form itself. The humor is derived from the juxtaposition of the serious martial arts attire and stance with the ironic, dismissive text, implying a lack of commitment or skill.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "partial",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "adult_martial_artist",
+      "label": "person",
+      "description": "An adult person wearing a blue martial arts uniform (gi) with a blue belt, standing in a martial arts stance on grass. The person appears focused and is positioned slightly behind a child, suggesting a teaching or mentoring role. This individual is a central visual element and the larger figure in the composition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "partial_arts_meme",
+      "label": "martial_arts_practice_with_ironic_text",
+      "description": "A scene depicting an adult martial artist and a child martial artist standing in martial arts stances on grass in front of a house, with the text 'partial arts' superimposed to create a pun suggesting incomplete or half-hearted martial arts practice. The adult is positioned slightly behind and to the left of the child, suggesting a teaching or mentoring role. The scene combines visual elements of martial arts discipline with ironic text to convey humor about incompleteness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "adult_martial_artist",
+          "relation": "mentors",
+          "to": "child_martial_artist"
+        },
+        {
+          "from": "adult_martial_artist",
+          "relation": "stands_behind",
+          "to": "child_martial_artist"
+        },
+        {
+          "from": "adult_martial_artist",
+          "relation": "faces",
+          "to": "child_martial_artist"
+        },
+        {
+          "from": "child_martial_artist",
+          "relation": "faces",
+          "to": "adult_martial_artist"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "partial_arts_pun",
+      "label": "The pun 'partial arts'",
+      "description": "The phrase 'partial arts' is a play on words combining 'partial' (meaning incomplete or not fully developed) with 'arts' (referring to martial arts). This pun relies on the understanding of martial arts as a disciplined, complete, and serious practice, which contrasts humorously with the visual of the figures appearing to perform it incompletely or half-heartedly. The humor derives from the juxtaposition of the serious martial arts attire and stance with the ironic, dismissive text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "partial_arts_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "martial_arts_discipline",
+      "label": "Martial arts as a disciplined practice",
+      "description": "Martial arts (such as karate, judo, taekwondo, etc.) are real-world disciplines that require rigorous training, respect, and commitment. The meme's humor is based on the contrast between this serious discipline and the visual implication of 'partial' or incomplete practice. Understanding this context is necessary to appreciate the irony and the implied disrespect toward the art form.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "partial_arts_meme",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "adult_martial_artist",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "child_martial_artist",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "martial_arts_uniforms",
+      "label": "Martial arts uniforms (gi)",
+      "description": "The blue uniforms (gi) worn by the individuals are standard attire in many martial arts disciplines. Recognizing these as martial arts uniforms is necessary to understand the context of the scene. The uniform signifies the practitioner's affiliation with a martial art, which is central to the meme's joke about 'partial' practice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "adult_martial_artist",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "child_martial_artist",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "partial_arts_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "martial_arts_stance",
+      "label": "Martial arts stance",
+      "description": "The stances adopted by the adult and child are characteristic of martial arts forms. The visual of them standing in these stances, combined with the text 'partial arts', creates the humorous implication that their practice is incomplete or inadequate. Understanding the meaning and seriousness of martial arts stances is essential to grasp the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "adult_martial_artist",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "child_martial_artist",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "partial_arts_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_humor_through_irony",
+      "label": "Humor derived from irony",
+      "description": "The meme uses irony to create humor by juxtaposing the serious, disciplined nature of martial arts with the visual suggestion of incompleteness or half-heartedness. This requires understanding the concept of irony as a comedic device, where the literal meaning of the text contradicts the visual context to produce humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "partial_arts_meme",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_harmful_intent",
+      "label": "Harmful intent of trivializing martial arts",
+      "description": "The meme's overall intent is considered harmful because it trivializes the discipline and seriousness of martial arts by reducing it to a joke about incompleteness. This requires understanding the social and cultural context of martial arts as a respected practice, and the potential disrespect it may cause toward practitioners or the art form itself.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "partial_arts_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "ironic_disdain",
+      "label": "ironic disdain emotion",
+      "description": "The emotion expressed through the juxtaposition of the serious martial arts attire and stance with the dismissive text 'partial arts', conveying a humorous yet mocking attitude toward the perceived incompleteness of the practice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "partial_arts_mapping",
+      "label": "The text 'partial arts' maps to the visual depiction of martial artists performing incomplete or half-hearted stances.",
+      "description": "The textual phrase 'partial arts' is superimposed over the image of an adult and a child in martial arts uniforms and stances. The mapping is based on the visual implication that their martial arts practice is incomplete or inadequate, which contrasts with the serious discipline martial arts represents. The text puns on 'partial' (incomplete) and 'arts' (martial arts), creating an ironic mapping where the visual material (the martial artists) is interpreted as embodying the concept of 'partial arts'. This mapping is central to the meme's humor and its harmful intent of trivializing martial arts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the ironic textual material",
+      "description": "The user is projected onto the textual material 'partial arts' because the meme's humor and intent rely on the user interpreting the text as a direct commentary on the visual scene. The user must mentally map the text to the visual depiction of the martial artists to understand the joke and its implied disrespect. The projection is onto the text_chunk entity, as the user's understanding of the meme's meaning is anchored in the textual pun and its ironic contrast with the visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the discipline and seriousness of martial arts by reducing it to a joke about incompleteness, which may disrespect practitioners or the art form itself.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet meme audience",
+      "description": "The target community is internet users familiar with meme culture, particularly those who appreciate wordplay, irony, and visual humor. The meme relies on understanding the pun 'partial arts' and the contrast between the visual depiction of martial arts practitioners and the dismissive text. This audience likely includes individuals who engage with online humor, often appreciating absurdist or self-deprecating jokes, and may not be deeply familiar with the cultural or disciplinary seriousness of martial arts, allowing the joke to land without requiring specialized knowledge.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/71459.png",
+    "image_name": "71459.png",
+    "extraction_timestamp": "2025-12-19T10:59:45.437236",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

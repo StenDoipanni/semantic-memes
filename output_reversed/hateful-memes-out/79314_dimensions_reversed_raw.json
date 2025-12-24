@@ -1,0 +1,239 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a woman holding a protest sign with text that reads 'we demand our city be made a sanctuary city for illegals!' and a second line below stating 'they are trying to send illegals to our sanctuary city!!!'. The visual juxtaposition of the woman's earnest, possibly passionate expression with the contradictory and logically inconsistent text creates a satirical or ironic effect. The meme's intent is to mock or criticize the concept of sanctuary cities by highlighting the absurdity or hypocrisy of the situation — implying that sanctuary cities are being used as a tool to avoid deporting undocumented individuals, or that the policy is being misapplied. The text is intentionally contradictory, suggesting that sanctuary cities are both demanded and then criticized for being 'used' to shelter undocumented individuals. This meme is harmful because it promotes misinformation and stigmatizes undocumented immigrants by framing them as 'illegals' and by implying that sanctuary cities are somehow 'cheating' or 'avoiding' responsibility. It also potentially contributes to anti-immigrant sentiment by portraying sanctuary cities as a failure or a contradiction. The meme does not directly target individuals based on protected characteristics, but it does use dehumanizing language ('illegals') and promotes a divisive political message that can incite hostility toward immigrants. The overall intent is to provoke a reaction by highlighting perceived contradictions in immigration policy, but it does so in a way that can be seen as inflammatory and potentially harmful to immigrant communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "we demand our city be made a sanctuary city for illegals!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "elderly woman holding protest sign",
+      "description": "An elderly woman with blonde hair, wearing a brown coat and a beaded necklace, is holding a wooden stick with a protest sign. She has an expressive, open-mouthed facial expression, suggesting she is shouting or passionately speaking. Her appearance and posture convey intensity and activism. She is the central visual focus of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "protest_scene",
+      "label": "protest_scene",
+      "description": "A scene depicting an elderly woman holding a protest sign with text that reads 'we demand our city be made a sanctuary city for illegals!' and a second line below stating 'they are trying to send illegals to our sanctuary city!!!'. The woman is the central visual focus, holding the sign with an expressive, open-mouthed facial expression, suggesting she is shouting or passionately speaking. The scene is framed to emphasize her activism and the contradictory message of the sign.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "holds",
+          "to": "protest_sign"
+        },
+        {
+          "from": "woman",
+          "relation": "is_shouting",
+          "to": "protest_sign"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sanctuary_city_policy",
+      "label": "Sanctuary City Policy",
+      "description": "A policy adopted by some U.S. cities that limits cooperation with federal immigration enforcement, such as not honoring detainers or not sharing information about undocumented residents with federal authorities. The term 'sanctuary city' is often used in political debates about immigration, and the meme references this policy in a contradictory way — first demanding it, then criticizing it for being 'used' to shelter undocumented individuals. This requires background knowledge of U.S. immigration policy and local government autonomy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "illegals",
+      "label": "Term 'illegals'",
+      "description": "A derogatory and dehumanizing term used to refer to undocumented immigrants. It is not a legal term and is considered offensive and inaccurate. The use of this term in the meme reflects a stereotype that portrays undocumented immigrants as criminals or undesirables, which is a common trope in anti-immigrant rhetoric. Understanding this term's connotation is essential to interpreting the meme's tone and intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_immigrant_rhetoric",
+      "label": "Anti-Immigrant Rhetoric",
+      "description": "A set of political and social arguments that portray immigrants — particularly undocumented immigrants — as a threat to national security, economic stability, or cultural values. This rhetoric often includes fearmongering, scapegoating, and dehumanizing language. The meme’s use of contradictory text and the term 'illegals' is a form of anti-immigrant rhetoric that aims to provoke a reaction by highlighting perceived contradictions in immigration policy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypocrisy_in_politics",
+      "label": "Hypocrisy in Politics",
+      "description": "The concept of hypocrisy refers to the practice of pretending to have virtues, moral principles, or beliefs that one does not actually have. The meme uses the contradiction in the text — demanding a sanctuary city and then criticizing it for being 'used' to shelter undocumented individuals — to satirize or criticize political hypocrisy. This requires background knowledge of political discourse and the use of irony or satire in political memes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "deportation_policy",
+      "label": "Deportation Policy",
+      "description": "A policy or legal process by which a government removes a person from its territory, typically for immigration violations. The meme references the idea of 'sending illegals to our sanctuary city,' which implies a contradiction in deportation policy — that sanctuary cities are somehow 'avoiding' responsibility for deporting undocumented individuals. This requires background knowledge of U.S. immigration enforcement and the legal framework surrounding deportation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_elderly_activists",
+      "label": "Stereotype of Elderly Activists",
+      "description": "A stereotype that portrays elderly people as being more likely to be involved in activism or protests, often as a symbol of moral authority or passionate civic engagement. The image of an elderly woman holding a protest sign may invoke this stereotype, which is used to frame her as a passionate, morally driven figure. This stereotype is often used in media and political discourse to evoke sympathy or to contrast with other groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "satirical_meme_format",
+      "label": "Satirical Meme Format",
+      "description": "A meme format that uses irony, exaggeration, or absurdity to critique or mock a situation, often by juxtaposing contradictory statements or images. The meme’s use of a woman’s passionate expression with contradictory text is a classic satirical format used to highlight perceived hypocrisy or absurdity in political or social issues. Understanding this format is necessary to interpret the meme’s intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "passionate_protest",
+      "label": "passionate protest emotion",
+      "description": "The woman's open-mouthed, intense facial expression, combined with her holding a protest sign and her dynamic posture, conveys a strong, passionate emotion associated with activism and vocal advocacy. Her expression suggests urgency, conviction, and emotional investment in the cause she is protesting for.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The woman is mapped as the speaker of the protest text",
+      "description": "The visual entity 'woman' is mapped onto the textual entity 'text_chunk_1' because she is holding the protest sign and her passionate expression is juxtaposed with the text, implying she is the one demanding the sanctuary city policy. The text 'we demand our city be made a sanctuary city for illegals!' is presented as if spoken or advocated by the woman in the image, creating an analogical mapping where the woman represents the speaker or embodiment of the text's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman as the embodiment of the protest message",
+      "description": "The user is projected onto the visual material of the elderly woman holding the protest sign, interpreting her passionate expression and the text on the sign as representing their own stance or identity in the context of the meme. The woman is visually and textually framed as the speaker of the contradictory message, which invites the user to identify with her as the advocate or victim of the situation described. This projection is implicit, not explicit, but is reinforced by the meme's satirical format that encourages the viewer to adopt the perspective of the activist figure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme promotes misinformation and stigmatizes undocumented immigrants by framing them as 'illegals' and by implying that sanctuary cities are somehow 'cheating' or 'avoiding' responsibility. It also potentially contributes to anti-immigrant sentiment by portraying sanctuary cities as a failure or a contradiction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "anti-immigrant sentiment supporters",
+      "description": "The meme is designed to resonate with individuals who hold anti-immigrant views, particularly those who oppose sanctuary city policies. The use of the term 'illegals' and the satirical framing of sanctuary cities as hypocritical or contradictory are intended to provoke agreement or outrage among those who believe immigration enforcement should be prioritized over local policy autonomy. The meme leverages the stereotype of elderly activists as morally driven to amplify its message, potentially appealing to audiences who view such figures as symbols of civic virtue in the context of immigration debates.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/79314.png",
+    "image_name": "79314.png",
+    "extraction_timestamp": "2025-12-19T13:30:22.675971",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

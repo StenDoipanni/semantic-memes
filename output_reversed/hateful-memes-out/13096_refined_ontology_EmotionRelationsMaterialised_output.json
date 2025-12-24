@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful emotion",
+      "expressors": [
+        {
+          "entity": "meme-id: virgin_sheep_meme",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme-id: virgin_sheep_meme",
+          "relation": "emotionalRelationToEntity",
+          "to": "overallintent - meme-id: virgin_sheep_meme"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_emotion :hasExpressor :meme_id_virgin_sheep_meme .",
+    ":meme_id_virgin_sheep_meme :emotionalRelationToEntity :overallintent_meme_id_virgin_sheep_meme ."
+  ],
+  "triples_count": 2
+}

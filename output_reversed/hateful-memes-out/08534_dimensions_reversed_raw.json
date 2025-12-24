@@ -1,0 +1,221 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts two women in a vintage-style black-and-white photo, with one appearing to be speaking earnestly to the other. The text overlays present two contrasting and extreme statements: the top text warns of eternal damnation for non-believers in God, while the bottom text claims that child abuse isn't necessarily physical. The juxtaposition of these two statements is intentionally jarring and absurd, creating a meme that uses shock value and cognitive dissonance to provoke thought or laughter. The overall intent is not to directly target a specific group with hate, but rather to present a deliberately provocative and potentially harmful message by combining two unrelated and extreme ideas. The meme may be intended to highlight the absurdity of religious dogma or to critique the oversimplification of child abuse, but its presentation can be seen as harmful due to its potential to normalize or trivialize the concept of eternal punishment, and to potentially mislead viewers about the nature of child abuse. The meme's intent is to shock and provoke, but its content can be interpreted as insensitive and potentially damaging to vulnerable individuals or communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "if you don't believe in god you're going to suffer and burn for all eternity in hell",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_on_left",
+      "label": "woman",
+      "description": "A woman with short, styled hair, wearing a patterned blouse and a necklace, gesturing with her right hand while speaking to another woman. Her expression appears earnest or concerned.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "conversational_scene",
+      "label": "two women engaged in a serious conversation",
+      "description": "A vintage-style black-and-white photograph shows two women in a close, intimate setting. The woman on the left is gesturing with her right hand and appears to be speaking earnestly to the woman on the right, who is listening attentively. The composition suggests a personal, possibly advisory or confrontational, dialogue.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman_on_left",
+          "relation": "talksTo",
+          "to": "woman_on_right"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "eternal_punishment_concept",
+      "label": "Concept of Eternal Punishment",
+      "description": "The idea that non-believers in God will suffer and burn for all eternity in hell is a theological doctrine primarily associated with certain Christian denominations, particularly those with Calvinist or fundamentalist leanings. This concept is not universally accepted across all religions or belief systems and is often used as a moral or doctrinal tool to encourage belief in God. Its inclusion in the meme is meant to shock or provoke by juxtaposing it with an unrelated and equally extreme statement about child abuse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "child_abuse_definition",
+      "label": "Definition and Scope of Child Abuse",
+      "description": "Child abuse encompasses physical, emotional, sexual abuse, and neglect. The statement 'child abuse it isn't necessarily physical' is a factual assertion that highlights the non-physical forms of abuse, such as emotional or psychological abuse, which can be just as damaging as physical abuse. This knowledge is necessary to understand the meme's attempt to contrast the extreme theological claim with a factual social issue, creating a jarring juxtaposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_dogma",
+      "label": "Religious Dogma and Its Role in Social Discourse",
+      "description": "Religious dogma refers to authoritative teachings or doctrines that are considered binding and unquestionable within a religious tradition. The top text represents a specific form of religious dogma that uses fear of eternal punishment to enforce belief. The meme's intent to juxtapose this with a statement about child abuse may be intended to critique or satirize the use of religious dogma to justify or explain social issues, or to highlight the absurdity of such extreme beliefs.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_juxtaposition_technique",
+      "label": "Meme Juxtaposition Technique",
+      "description": "This is a common meme format where two unrelated or contrasting ideas are placed together to create a humorous, shocking, or thought-provoking effect. The juxtaposition of the theological claim about hell with the statement about child abuse is a deliberate use of this technique to create cognitive dissonance and provoke a reaction from the viewer. Understanding this technique is necessary to interpret the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_fear_mongering",
+      "label": "Religious Fear Mongering",
+      "description": "The use of threats of eternal punishment to influence belief or behavior is a form of religious fear mongering. This tactic is often used in fundamentalist or evangelical contexts to encourage conversion or adherence to specific doctrines. The meme's inclusion of this concept is meant to highlight or critique the use of fear as a tool in religious discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_issue_juxtaposition",
+      "label": "Juxtaposition of Social Issues",
+      "description": "The meme combines two distinct social issues: religious doctrine and child abuse. This juxtaposition is intended to create a sense of absurdity or to draw attention to the seriousness of both issues by placing them in an unexpected context. Understanding the nature of these social issues is necessary to interpret the meme's message and intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "earnest_concern",
+      "label": "earnest concern emotion",
+      "description": "The woman on the left displays an earnest and concerned facial expression, with her mouth slightly open as if speaking seriously, and her hand gesturing toward the other woman, indicating a sincere attempt to convey an important or troubling message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The earnest concern expressed by the woman on the left is mapped onto the theological warning about eternal punishment.",
+      "description": "The visual entity 'woman_on_left' displays an earnest and concerned expression, which is juxtaposed with the textual entity 'top_text' that presents an extreme theological claim. The mapping suggests that the earnestness of the woman's demeanor is being used to convey or represent the gravity of the theological warning, creating a contrast between the emotional tone of the visual and the content of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_2",
+      "label": "The conversational scene is mapped onto the juxtaposition of two extreme statements.",
+      "description": "The visual entity 'conversational_scene' depicts a serious, intimate dialogue between two women. This scene is mapped onto the textual entities 'top_text' and 'bottom_text', which present two unrelated and extreme ideas. The mapping implies that the serious tone of the conversation is being used to frame or present the juxtaposition of these extreme statements, enhancing the meme's shock value and cognitive dissonance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_3",
+      "label": "The conversational scene is mapped onto the statement about child abuse.",
+      "description": "The visual entity 'conversational_scene' is also mapped onto the textual entity 'bottom_text', which presents a factual assertion about child abuse. This mapping suggests that the serious, advisory tone of the conversation is being used to present the statement about child abuse, creating a contrast between the emotional tone of the visual and the factual nature of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the conversational scene as the recipient of the theological warning",
+      "description": "The user is projected onto the visual entity 'conversational_scene' and the textual entity 'top_text'. The scene depicts one woman earnestly speaking to another, which visually frames the user as the potential recipient of the extreme theological message. The text 'if you don't believe in god you're going to suffer...' directly addresses the user with a conditional statement, creating a direct projection of the user as the target of the warning. The user is implicitly 'you' in the statement, making them the subject of the threat.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme presents two extreme and unrelated statements: the threat of eternal damnation for non-believers and a factual assertion about child abuse. The juxtaposition is intentionally jarring and can be seen as harmful due to its potential to normalize or trivialize the concept of eternal punishment, and to potentially mislead viewers about the nature of child abuse. The overall intent is to shock and provoke, but its content can be interpreted as insensitive and potentially damaging to vulnerable individuals or communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general public",
+      "description": "The meme is designed for a broad, general audience with no specific demographic or community targeting. Its intent is to provoke shock and cognitive dissonance through the juxtaposition of two extreme and unrelated statements — a theological doctrine about eternal punishment and a factual assertion about child abuse — making it accessible to anyone encountering it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/08534.png",
+    "image_name": "08534.png",
+    "extraction_timestamp": "2025-12-15T13:29:35.700008",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

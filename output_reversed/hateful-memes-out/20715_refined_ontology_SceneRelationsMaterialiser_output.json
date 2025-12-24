@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "playful_interaction",
+      "participants": [
+        {
+          "entity": "young_girl",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "adult_woman",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "young_girl",
+          "relation": "interactingWith",
+          "to": "adult_woman"
+        },
+        {
+          "from": "adult_woman",
+          "relation": "engagingWith",
+          "to": "young_girl"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":playful_interaction :hasParticipant :young_girl .",
+    ":playful_interaction :hasParticipant :adult_woman .",
+    ":young_girl :interactingWith :adult_woman .",
+    ":adult_woman :engagingWith :young_girl ."
+  ],
+  "triples_count": 4
+}

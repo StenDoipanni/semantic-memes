@@ -1,0 +1,217 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a woman blowing out candles on a cake with the text 'when they take too long to blow out the candle,' which is a common meme format used to mock or ridicule someone for being slow or indecisive. The scene involves a woman in a celebratory setting, and the meme's intent is to create humor by exaggerating a mundane situation. While the meme does not contain explicit hate speech or targeted discrimination against any specific group, it can be considered harmful because it trivializes a personal moment (a birthday celebration) and reduces it to a comedic trope that may be perceived as demeaning or condescending. The humor is based on the perceived 'failure' to complete a simple task quickly, which can be interpreted as mocking patience or competence. The meme does not contain any abusive, cyberbullying, hateful, misogynous, or propaganda elements, but its potential harm lies in its ability to undermine the dignity of the individual being mocked, even if unintentionally. The overall intent is to entertain through ridicule, but this can lead to negative social consequences if the target is sensitive to such mockery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when they take too long to blow out the candle",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with dark hair and makeup, wearing a black top, blowing out candles on a cake. She is the central subject of the image and the focus of the meme's humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "blowing_out_candles",
+      "label": "woman blowing out candles on a cake",
+      "description": "A woman is blowing out candles on a cake, with text overlay indicating the meme's context about taking too long to blow out the candle. The scene is set in a celebratory environment, likely a birthday party, with the woman as the central focus.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "birthday_celebration",
+      "label": "Birthday Celebration",
+      "description": "The meme references a common social event — a birthday party — where blowing out candles on a cake is a traditional ritual. Understanding this context is necessary to interpret the humor, which stems from exaggerating a mundane, culturally recognized moment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "blowing_out_candles",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_format",
+      "label": "Meme Format: 'When they take too long to blow out the candle'",
+      "description": "This is a widely circulated internet meme format that uses a person’s slow or exaggerated action (here, blowing out candles) to mock or ridicule perceived indecisiveness, incompetence, or lack of urgency. The format relies on cultural understanding of social media humor tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "blowing_out_candles",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_media_humor",
+      "label": "Social Media Humor Tropes",
+      "description": "The meme operates within the broader context of internet culture, where humor often derives from exaggerating everyday situations for comedic effect. This requires background knowledge of how social media memes function and are consumed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "blowing_out_candles",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mockery_of_indecisiveness",
+      "label": "Mockery of Indecisiveness or Slowness",
+      "description": "The humor of the meme is based on ridiculing someone for being slow or indecisive — a common social trope. This requires understanding of how people perceive and react to perceived inefficiency or delay in social settings.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "blowing_out_candles",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gendered_stereotype",
+      "label": "Gendered Stereotype: 'Women are only good at housework'",
+      "description": "While not explicitly visible, the meme’s framing of a woman performing a domestic task (blowing out candles on a cake) can implicitly reinforce or play into stereotypes that associate women with domestic roles. This requires background knowledge of gendered social expectations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "blowing_out_candles",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification",
+      "label": "Objectification of Women",
+      "description": "The meme reduces the woman to a comedic trope — her physical appearance and action are used for humor rather than as a subject of dignity. This requires understanding of how women are often objectified in media and humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mockery",
+      "label": "mocking emotion",
+      "description": "The emotion expressed is mockery, conveyed through the exaggerated action of the woman blowing out candles and the overlaid text 'when they take too long to blow out the candle,' which ridicules perceived slowness or indecisiveness. The humor is derived from exaggerating a mundane social ritual into a comedic trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The woman is mapped as 'they' in the context of taking too long to blow out the candle",
+      "description": "The text 'when they take too long to blow out the candle' is overlaid on the image of a woman blowing out candles. The visual entity (the woman) is being mapped onto the textual pronoun 'they', which refers to the subject performing the action described in the text. This is a direct analogical mapping where the visual subject is identified as the entity being mocked in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman blowing out candles",
+      "description": "The user is projected onto the visual material of the woman blowing out candles, as the meme format 'when they take too long to blow out the candle' implicitly invites the viewer to identify with the subject of the action. The user sees themselves as 'they' in the scenario — someone who is slow or indecisive in performing a simple task — and thus projects their own potential experience or self-perception onto the woman in the image. This projection is not explicit (no 'me' or 'you' text), but it is implied by the meme's participatory nature and common social media humor tropes where the viewer is encouraged to imagine themselves in the situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes a personal moment (a birthday celebration) and reduces it to a comedic trope that may be perceived as demeaning or condescending. The humor is based on the perceived 'failure' to complete a simple task quickly, which can be interpreted as mocking patience or competence. The meme does not contain any abusive, cyberbullying, hateful, misogynous, or propaganda elements, but its potential harm lies in its ability to undermine the dignity of the individual being mocked, even if unintentionally.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "social_media_users",
+      "description": "The meme is designed for internet users familiar with social media humor tropes, particularly those who understand and engage with meme formats that mock indecisiveness or slowness in everyday situations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/64318.png",
+    "image_name": "64318.png",
+    "extraction_timestamp": "2025-12-16T08:11:04.460952",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

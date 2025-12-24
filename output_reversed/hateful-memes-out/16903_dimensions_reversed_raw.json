@@ -1,0 +1,225 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: islam_is_the_religion_of_peace_piece_of_you_over_here_piece_of_you_over_there; hasOverallIntent: Hateful; overall-intent-description: The image juxtaposes a man dressed in Islamic attire with the text 'islam is the religion of peace' at the top and 'piece of you over here, piece of you over there' at the bottom. The latter phrase is a derogatory, violent, and dehumanizing metaphor often used to describe Muslims or people of Islamic faith, implying they are fragmented, dangerous, or should be separated or eliminated. This combination is intended to mock and demean Muslims, associating them with violence or chaos, and is a clear example of Islamophobic hate speech. The meme uses the visual of a calm, peaceful-looking man to contrast with the violent, hateful text, creating a jarring and offensive message that targets a specific religious group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "islam is the religion of peace",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with a full beard and mustache, wearing a white kufi cap and a white shirt, looking directly at the camera with a neutral to slightly serious expression. He is the central and most salient visual element in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "text_contrast_scene",
+      "label": "Text contrast scene",
+      "description": "The scene juxtaposes a man dressed in Islamic attire with two contrasting text overlays: 'islam is the religion of peace' at the top and 'piece of you over here, piece of you over there' at the bottom. The visual of a calm, peaceful-looking man is used to contrast with the violent, hateful text, creating a jarring and offensive message that targets a specific religious group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "isSubjectOf",
+          "to": "text_top"
+        },
+        {
+          "from": "man",
+          "relation": "isSubjectOf",
+          "to": "text_bottom"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islam_is_the_religion_of_peace",
+      "label": "Claim about Islam being a religion of peace",
+      "description": "This phrase is a common religious and political statement used to describe Islam as a peaceful faith. It is often used in interfaith dialogue, by Muslim communities, and by advocates for religious tolerance. However, in the context of this meme, it is juxtaposed with hateful text to create a false or ironic contrast, implying that the peaceful image contradicts the violent message, which is a manipulative tactic often used in Islamophobic rhetoric.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "piece_of_you_over_here_piece_of_you_over_there",
+      "label": "Derogatory phrase implying fragmentation or elimination",
+      "description": "This phrase is a violent, dehumanizing metaphor often used in hate speech to describe Muslims or people of Islamic faith. It implies that they are fragmented, dangerous, or should be separated or eliminated. The phrase is rooted in Islamophobic stereotypes that portray Muslims as inherently violent or chaotic, and it is used to incite fear and hatred. It is not a literal or neutral expression but a hateful trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "System of prejudice and discrimination against Muslims",
+      "description": "Islamophobia is the fear, hatred, or prejudice against Muslims, often manifesting as stereotypes, discrimination, or violence. It is fueled by misinformation, political agendas, and media portrayals that associate Islam with terrorism or barbarism. The meme in question is a clear example of Islamophobic hate speech, using visual and textual elements to demean and dehumanize Muslims by juxtaposing a peaceful image with violent language.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism_associations",
+      "label": "Stereotype linking Islam to terrorism",
+      "description": "This is a common and harmful stereotype that falsely associates Islam with terrorism. It is used to justify discrimination, violence, or political repression against Muslims. The meme uses this stereotype implicitly by pairing the phrase 'piece of you over here, piece of you over there' with a Muslim man, suggesting that even a peaceful-looking Muslim is somehow connected to violence or chaos, which is a core tenet of Islamophobic rhetoric.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sharia_law_fearmongering",
+      "label": "Fear of Sharia law as a threat to Western values",
+      "description": "This is a common trope in Islamophobic discourse that portrays Sharia law as incompatible with Western values and as a threat to freedom, gender equality, or human rights. While Sharia law is a legal system in some Muslim-majority countries, it is often misrepresented or exaggerated in Western media and political discourse. The meme may implicitly reference this fear by using the phrase 'piece of you over here, piece of you over there' to suggest that Muslims are inherently dangerous or incompatible with Western society.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "violence_barbarism_claims",
+      "label": "Stereotype portraying Muslims as violent or barbaric",
+      "description": "This is a harmful stereotype that portrays Muslims as inherently violent or barbaric, often used to justify discrimination or violence against them. The meme uses this stereotype implicitly by juxtaposing the peaceful image of the man with the violent phrase 'piece of you over here, piece of you over there', suggesting that even a peaceful-looking Muslim is somehow connected to violence or chaos, which is a core tenet of Islamophobic rhetoric.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_anger",
+      "label": "hateful anger expressed through violent text",
+      "description": "The emotion of hateful anger is conveyed primarily through the bottom text 'piece of you over here, piece of you over there', which is a violent, dehumanizing metaphor rooted in Islamophobic hate speech. This phrase expresses contempt, fear, and a desire for fragmentation or elimination of the targeted group, creating an aggressive emotional tone that contrasts with the visual calmness of the man.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Mapping of 'islam is the religion of peace' to the man",
+      "description": "The top text 'islam is the religion of peace' is mapped onto the visual entity 'man' dressed in Islamic attire. This mapping implies that the man represents Islam or embodies the concept of 'the religion of peace'. The juxtaposition creates an analogical link where the peaceful visual of the man is used to represent or symbolize the textual claim about Islam.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_2",
+      "label": "Mapping of 'piece of you over here, piece of you over there' to the man",
+      "description": "The bottom text 'piece of you over here, piece of you over there' is mapped onto the visual entity 'man'. This mapping implies that the man is being dehumanized and portrayed as fragmented, dangerous, or targeted for elimination. The text is used to project a violent, hateful stereotype onto the man, who is visually presented as calm and peaceful, creating a jarring contrast that reinforces the Islamophobic message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the derogatory text",
+      "description": "The user is projected onto the bottom textual material 'piece of you over here, piece of you over there', which uses dehumanizing and violent language directed at Muslims. The phrase 'piece of you' is a direct address to the viewer/user, implying the user is being targeted or is part of the group being dehumanized. This creates a semiotic projection where the user is positioned as the recipient of the hate speech, making them complicit or the target of the violent metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses dehumanizing and violent language targeting Muslims, associating them with fragmentation and elimination, which constitutes a direct attack on a religious community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The intended audience is individuals who hold Islamophobic views or are exposed to Islamophobic rhetoric, as the meme is designed to provoke fear, hatred, or dehumanization toward Muslims by juxtaposing a peaceful image with violent, hateful text. The meme targets the Muslim community by using stereotypes and hate speech to imply that even a calm, peaceful-looking Muslim is inherently dangerous or fragmented, thereby inciting prejudice against them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/16903.png",
+    "image_name": "16903.png",
+    "extraction_timestamp": "2025-12-15T16:40:49.869497",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

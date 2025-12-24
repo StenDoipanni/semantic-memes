@@ -1,0 +1,200 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: officer_down_meme; hasOverallIntent: Harmful; overall-intent-description: The image depicts a police officer dramatically spilling coffee while shouting, with the text 'officer down' overlaid. This visual is a common internet meme used to humorously or sarcastically depict a situation where a police officer is 'taken down' — often in a non-violent, ironic, or self-deprecating context (e.g., being overwhelmed by coffee, a prank, or a minor mishap). The intent is not to target any specific group with hate or abuse, but rather to create a relatable, exaggerated, and often absurd scenario. While the meme may be perceived as mocking law enforcement in general, it does not contain explicit toxic content such as racism, antisemitism, misogyny, or ableism. The humor stems from the juxtaposition of the serious phrase 'officer down' (typically used in emergency contexts) with a mundane, comical situation. The meme's overall intent is to entertain through absurdity and situational irony, not to cause harm or promote hate. However, it could be considered potentially harmful if used in contexts that trivialize real-life officer injuries or deaths, though this is not inherent to the image itself.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "officer down",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "police_officer",
+      "label": "person",
+      "description": "A male police officer in uniform, wearing a badge, name tag (reading 'BRADLEY'), and a police cap. He is depicted mid-action, with his mouth open as if shouting, one hand pointing forward, and the other holding a white disposable cup from which coffee is spilling. His expression and posture convey dramatic surprise or alarm.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "coffee_spill_scene",
+      "label": "police_officer_spilling_coffee",
+      "description": "A police officer is dramatically spilling coffee from a white disposable cup while shouting and pointing forward, with the text 'officer down' overlaid. The scene captures a moment of exaggerated surprise or alarm, using the phrase 'officer down' ironically to describe a mundane mishap.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "police_officer",
+          "relation": "spills",
+          "to": "coffee"
+        },
+        {
+          "from": "police_officer",
+          "relation": "holds",
+          "to": "coffee"
+        },
+        {
+          "from": "police_officer",
+          "relation": "shouts",
+          "to": "text"
+        },
+        {
+          "from": "police_officer",
+          "relation": "points_to",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "officer_down_phrase",
+      "label": "Phrase 'officer down'",
+      "description": "The phrase 'officer down' is a term used in real-world emergency contexts to indicate that a police officer has been injured or incapacitated during duty. Its use in this meme is ironic and exaggerated, contrasting the serious connotation with a mundane coffee spill. This requires background knowledge of police emergency protocols and terminology.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "coffee_spill_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "coffee_spill_meme_concept",
+      "label": "Coffee spill as a meme trope",
+      "description": "The image leverages the common internet meme trope of a coffee spill being used to represent a minor, often self-deprecating, mishap. This trope relies on cultural understanding of workplace humor and the relatability of coffee-related accidents. It is not visible in the image but is essential to interpret the humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "coffee_spill_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "police_uniform_context",
+      "label": "Police uniform as a symbol of authority",
+      "description": "The police uniform signifies authority and official duty. The juxtaposition of this symbol with a trivial mishap (coffee spill) is central to the meme's humor and requires understanding of societal perceptions of law enforcement and their public image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "police_officer",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "coffee_spill_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "irony_in_meme",
+      "label": "Use of situational irony",
+      "description": "The meme relies on situational irony — the contrast between the serious phrase 'officer down' and the trivial, comical situation (spilling coffee). This requires background knowledge of rhetorical devices and humor techniques used in internet memes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "coffee_spill_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "dramatic_alarm",
+      "label": "dramatic alarm expression",
+      "description": "The police officer's facial expression, with his mouth wide open as if shouting and his eyes wide, conveys a sense of exaggerated alarm or surprise. This is combined with his pointing gesture and the visible coffee spill, creating a theatrical and over-the-top reaction to a mundane event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "officer_down_mapping",
+      "label": "The phrase 'officer down' is mapped onto the visual of the police officer spilling coffee.",
+      "description": "The text 'officer down' is overlaid on the image of a police officer dramatically spilling coffee while shouting. This creates an analogical mapping where the serious emergency term 'officer down' is humorously and ironically applied to a mundane, non-emergency situation — the coffee spill. The mapping is based on the juxtaposition of the text with the visual, where the officer's exaggerated reaction and the coffee spill are interpreted as a comedic 'down' event, contrasting with the literal meaning of the phrase. This mapping relies on situational irony and the meme trope of using 'officer down' for trivial mishaps.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual material of the police officer spilling coffee",
+      "description": "The user is projected onto the visual material of the police officer (police_officer) in the act of spilling coffee and shouting, as this is the central comedic and ironic subject of the meme. The user identifies with the officer's exaggerated reaction, imagining themselves in a similar situation — a mundane mishap being humorously labeled as a serious emergency. This projection is implicit, not explicit (e.g., no 'me' or 'you' text), but is inferred from the user's engagement with the meme's humor and relatability. The projection is onto the VisualMaterial entity 'police_officer'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses the serious phrase 'officer down' in an ironic context to depict a trivial coffee spill, which could trivialize real-life officer injuries or deaths. While not inherently hateful or abusive, the meme's potential to cause harm arises from its capacity to undermine the gravity of real emergencies involving law enforcement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "internet meme enthusiasts",
+      "description": "The meme is designed for an audience familiar with internet humor, particularly those who recognize and appreciate situational irony and visual tropes like the 'coffee spill' meme. The target community includes individuals who engage with online culture, understand the juxtaposition of serious phrases with mundane situations, and find humor in self-deprecating or exaggerated scenarios involving authority figures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/18946.png",
+    "image_name": "18946.png",
+    "extraction_timestamp": "2025-12-15T17:20:27.394183",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

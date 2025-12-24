@@ -1,0 +1,163 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: image_file_name; hasOverallIntent: harmful; overall-intent-description: The image depicts a car on fire with the text 'did you say dude blew his tranny???' overlaid. The scene shows a silver sedan with visible flames and smoke, suggesting a mechanical failure or accident. The text is a vulgar, slang-based joke referencing a car transmission failure ('blown tranny'), which is a common automotive term. While the meme is not explicitly targeting any specific group based on protected characteristics, it uses crude, offensive language that could be considered harmful due to its vulgar tone and potential to offend viewers sensitive to profanity or automotive jargon. The intent is to create humor through the juxtaposition of a dramatic visual (a burning car) with a crude, colloquial pun. The meme's overall intent is to elicit laughter through shock value and taboo language, which may be perceived as harmful due to its crude nature, even if it lacks direct targeting of a marginalized group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "did you say dude blew his tranny???",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "silver_sedan",
+      "label": "car",
+      "description": "A silver four-door sedan, visibly damaged and on fire, with flames and smoke emanating from the front engine bay. The car is parked on a street, and its hood is open. The license plate is visible and reads '96-51'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "burning_car_scene",
+      "label": "car_on_fire_with_text",
+      "description": "A silver sedan is on fire with flames and smoke coming from the front engine bay. The hood is open, and the car is parked on a street. The text 'did you say dude blew his tranny???' is overlaid at the bottom of the image, suggesting a humorous or vulgar interpretation of the car's mechanical failure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "silver_sedan",
+          "relation": "is_on_fire",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "describes",
+          "to": "silver_sedan"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "car_transmission_failure",
+      "label": "Car Transmission Failure",
+      "description": "The term 'blown tranny' is automotive slang referring to a failed transmission, a common mechanical issue in vehicles. Understanding this technical term is necessary to interpret the joke in the meme. The phrase 'blown tranny' is not a stereotype or disparaging term but a colloquial expression used in car culture to describe a transmission that has failed catastrophically, often resulting in the car being unusable or requiring major repair.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "vulgar_language_use",
+      "label": "Use of Vulgar Language",
+      "description": "The phrase 'dude blew his tranny???' uses crude, offensive language to create shock value and humor. The term 'tranny' is a vulgar slang term for 'transmission' in automotive contexts, but it is also a derogatory slur used against transgender people. The meme relies on the viewer understanding the double meaning and the taboo nature of the language to generate its intended effect, which may be offensive to some audiences.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "automotive_culture",
+      "label": "Automotive Culture",
+      "description": "The meme is rooted in automotive culture, where terms like 'blown tranny' are commonly used among car enthusiasts to describe mechanical failures. Understanding this subculture is necessary to appreciate the humor, as it references a specific jargon and scenario familiar to those in the automotive community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "shock",
+      "label": "shock emotion",
+      "description": "The emotion of shock is expressed through the dramatic visual of a car on fire, combined with the vulgar, taboo-laden text overlay that creates a jarring and unexpected comedic effect. The juxtaposition of the catastrophic scene with crude humor elicits a startled or startled-laughing reaction from the viewer.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Textual joke mapped onto visual car failure",
+      "description": "The text 'did you say dude blew his tranny???' is an analogical mapping that projects the concept of a car transmission failure ('blown tranny') onto the visual of the burning silver sedan. The text humorously interprets the car's catastrophic mechanical failure (indicated by flames and smoke from the engine bay) as a 'blown tranny', using automotive slang. This mapping relies on the viewer understanding the visual context (car on fire) and the textual pun (blown tranny) to create the joke. The mapping is explicit through the juxtaposition of the text with the visual material, where the text assigns a specific mechanical explanation to the visual event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material via deictic reference",
+      "description": "The user is projected onto the textual material 'did you say dude blew his tranny???' through the use of the second-person pronoun 'you' in the text. This deictic reference directly addresses the viewer, inviting them to imagine themselves as the person who made the comment or as the one who is being addressed in the joke. The projection is onto the text_chunk, which contains the deictic element 'you', making the user feel personally implicated or addressed in the humorous scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses vulgar language ('tranny') that is a derogatory slur against transgender people, which can cause harm to transgender individuals or those sensitive to such slurs. The humor relies on this offensive term, making the content potentially harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "automotive enthusiasts",
+      "description": "The meme targets individuals familiar with automotive jargon and culture, particularly those who understand the slang term 'blown tranny' to refer to a failed transmission. The humor relies on this specific technical knowledge, making it most effective for an audience within the automotive community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/05642.png",
+    "image_name": "05642.png",
+    "extraction_timestamp": "2025-12-15T12:26:28.042123",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

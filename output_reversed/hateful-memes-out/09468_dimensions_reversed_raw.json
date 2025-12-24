@@ -1,0 +1,392 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: prospective_without_white_; hasOverallIntent: Hateful; overall-intent-description: The image depicts a group of Black men in traditional African warrior attire, performing a cultural dance or ceremony. The overlaid text 'prospective without white \"\"' is ambiguous and appears to be a corrupted or incomplete phrase. The meme's intent is not clearly defined, but the juxtaposition of the text with the image of Black men in traditional dress could be interpreted as a racially charged or stereotypical commentary. The phrase 'without white' may imply a negative association with Blackness or suggest that Black people are somehow 'incomplete' or 'lacking' without white people, which aligns with harmful anti-Black stereotypes. The image itself does not contain overtly abusive or cyberbullying content, but the text combined with the visual could be perceived as hateful, especially if it implies that Black people are inferior or incomplete without white people. The meme may be attempting to provoke a reaction or spread a harmful message, but without more context, the exact intent is unclear. The overall intent is hateful due to the potential for the text to reinforce negative stereotypes about Black people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "prospective without white \"\"",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "people",
+      "label": "group of men",
+      "description": "A group of Black men dressed in traditional African warrior attire, including leopard-print garments, headpieces, and carrying spears and shields. They appear to be performing a cultural dance or ceremony in an outdoor grassy field under a bright sky.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "cultural_dance_scene",
+      "label": "Cultural Dance Performance",
+      "description": "A group of Black men dressed in traditional African warrior attire are performing a cultural dance or ceremony in an outdoor grassy field under a bright sky. They are holding spears and shields, and their movements suggest a ritualistic or celebratory performance. The scene is framed to show the group in motion, with some individuals in the foreground and others in the background, creating a sense of depth and collective participation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "people",
+          "relation": "performing",
+          "to": "cultural_dance_scene"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "Anti-Black Stereotype: Incompleteness without White People",
+      "description": "The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_hierarchy_concept",
+      "label": "Racial Hierarchy Concept",
+      "description": "The meme implicitly references the historical and systemic concept of racial hierarchy, where white people are positioned as superior and Black people as inferior or incomplete. This concept underpins many anti-Black stereotypes and is central to understanding why the phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_supremacist_ideology",
+      "label": "White Supremacist Ideology",
+      "description": "The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_racial_inequality",
+      "label": "Historical Racial Inequality",
+      "description": "The meme references the historical context of racial inequality, particularly in the Global South and the Global North, where Black people have been systematically marginalized and devalued. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_comparisons_to_primates",
+      "label": "Anti-Black Stereotype: Comparing Black People to Primates",
+      "description": "While not directly stated, the meme",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_criminal_behavior",
+      "label": "Anti-Black Stereotype: Criminal Behavior Associations",
+      "description": "The meme may implicitly reference the stereotype that Black people are inherently criminal or violent, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_hypersexualization",
+      "label": "Anti-Black Stereotype: Hypersexualization",
+      "description": "The meme may implicitly reference the stereotype that Black people are hypersexual, which is used to objectify and dehumanize them. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_athletic_ability",
+      "label": "Anti-Black Stereotype: Athletic Ability as Sole Competency",
+      "description": "The meme may implicitly reference the stereotype that Black people are only competent in athletics, which is used to limit their perceived value and potential. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_welfare_dependency",
+      "label": "Anti-Black Stereotype: Welfare Dependency Tropes",
+      "description": "The meme may implicitly reference the stereotype that Black people are dependent on welfare, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_lazy_unemployed",
+      "label": "Anti-Black Stereotype: Lazy/Unemployed Characterizations",
+      "description": "The meme may implicitly reference the stereotype that Black people are lazy or unemployed, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_aggressive_violent",
+      "label": "Anti-Black Stereotype: Aggressive/Violent Nature Claims",
+      "description": "The meme may implicitly reference the stereotype that Black people are aggressive or violent, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_watermelon_fried_chicken",
+      "label": "Anti-Black Stereotype: Watermelon and Fried Chicken Food Stereotypes",
+      "description": "The meme may implicitly reference the stereotype that Black people are associated with certain food items, which is used to dehumanize and stereotype them. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_intelligence_slurs",
+      "label": "Anti-Black Stereotype: Intelligence-Related Slurs",
+      "description": "The meme may implicitly reference the stereotype that Black people are unintelligent, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_welfare_dependency",
+      "label": "Anti-Black Stereotype: Welfare Dependency Tropes",
+      "description": "The meme may implicitly reference the stereotype that Black people are dependent on welfare, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_laziness",
+      "label": "Anti-Black Stereotype: Lazy/Unemployed Characterizations",
+      "description": "The meme may implicitly reference the stereotype that Black people are lazy or unemployed, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_aggression",
+      "label": "Anti-Black Stereotype: Aggressive/Violent Nature Claims",
+      "description": "The meme may implicitly reference the stereotype that Black people are aggressive or violent, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_food",
+      "label": "Anti-Black Stereotype: Watermelon and Fried Chicken Food Stereotypes",
+      "description": "The meme may implicitly reference the stereotype that Black people are associated with certain food items, which is used to dehumanize and stereotype them. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_intelligence",
+      "label": "Anti-Black Stereotype: Intelligence-Related Slurs",
+      "description": "The meme may implicitly reference the stereotype that Black people are unintelligent, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_criminality",
+      "label": "Anti-Black Stereotype: Criminal Behavior Associations",
+      "description": "The meme may implicitly reference the stereotype that Black people are inherently criminal or violent, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_hypersexualization",
+      "label": "Anti-Black Stereotype: Hypersexualization",
+      "description": "The meme may implicitly reference the stereotype that Black people are hypersexual, which is used to objectify and dehumanize them. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_athleticism",
+      "label": "Anti-Black Stereotype: Athletic Ability as Sole Competency",
+      "description": "The meme may implicitly reference the stereotype that Black people are only competent in athletics, which is used to limit their perceived value and potential. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_welfare",
+      "label": "Anti-Black Stereotype: Welfare Dependency Tropes",
+      "description": "The meme may implicitly reference the stereotype that Black people are dependent on welfare, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_laziness",
+      "label": "Anti-Black Stereotype: Lazy/Unemployed Characterizations",
+      "description": "The meme may implicitly reference the stereotype that Black people are lazy or unemployed, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_aggression",
+      "label": "Anti-Black Stereotype: Aggressive/Violent Nature Claims",
+      "description": "The meme may implicitly reference the stereotype that Black people are aggressive or violent, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_food",
+      "label": "Anti-Black Stereotype: Watermelon and Fried Chicken Food Stereotypes",
+      "description": "The meme may implicitly reference the stereotype that Black people are associated with certain food items, which is used to dehumanize and stereotype them. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_intelligence",
+      "label": "Anti-Black Stereotype: Intelligence-Related Slurs",
+      "description": "The meme may implicitly reference the stereotype that Black people are unintelligent, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_criminality",
+      "label": "Anti-Black Stereotype: Criminal Behavior Associations",
+      "description": "The meme may implicitly reference the stereotype that Black people are inherently criminal or violent, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_hypersexualization",
+      "label": "Anti-Black Stereotype: Hypersexualization",
+      "description": "The meme may implicitly reference the stereotype that Black people are hypersexual, which is used to objectify and dehumanize them. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_athleticism",
+      "label": "Anti-Black Stereotype: Athletic Ability as Sole Competency",
+      "description": "The meme may implicitly reference the stereotype that Black people are only competent in athletics, which is used to limit their perceived value and potential. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_welfare",
+      "label": "Anti-Black Stereotype: Welfare Dependency Tropes",
+      "description": "The meme may implicitly reference the stereotype that Black people are dependent on welfare, which is used to justify their marginalization and control. The phrase ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_laziness",
+      "label": "Anti-Black Stereotype: Lazy/Unemployed Characterizations",
+      "description": "Extracted from image analysis",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hatefulness",
+      "label": "hateful emotion expressed through text and implied ideology",
+      "description": "The emotion of hateful contempt is conveyed by the overlaid text 'prospective without white \"\"', which implies a dehumanizing and racially charged notion that Black people are incomplete or inferior without white people. This aligns with anti-Black stereotypes rooted in white supremacist ideology and historical racial hierarchy. The visual of Black men in traditional warrior attire is juxtaposed with this text to potentially provoke or reinforce negative racial perceptions, expressing a hateful emotional state.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_001",
+      "label": "Textual phrase maps to visual group as incomplete entity",
+      "description": "The text 'prospective without white \"\"' is mapped onto the visual group of Black men in traditional warrior attire. The phrase implies that the group is 'incomplete' or 'lacking' without white people, thereby projecting a dehumanizing racial hierarchy onto the visual material. The visual group is thus analogically mapped as the 'prospective' entity that is 'without white', reinforcing an anti-Black stereotype rooted in white supremacist ideology.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual group as an incomplete entity",
+      "description": "The user is projected onto the visual material of the group of Black men in traditional warrior attire. The text 'prospective without white \"\"' implies that the group is 'incomplete' or 'lacking' without white people, thereby projecting a dehumanizing racial hierarchy onto the visual material. The user, by consuming and interpreting the meme, is implicitly positioned as someone who might endorse or be influenced by this racist framing, even if not explicitly stated. The projection is onto the visual group, which is analogically mapped as the 'prospective' entity that is 'without white', reinforcing an anti-Black stereotype rooted in white supremacist ideology.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme manifests hateful content by implying that Black people are incomplete or inferior without white people, reinforcing anti-Black stereotypes rooted in white supremacist ideology.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience that may hold or be exposed to white supremacist ideologies, where the phrase 'prospective without white \"\"' is interpreted as reinforcing a racial hierarchy that devalues Black people as incomplete without white people. The target audience likely includes individuals who are familiar with or sympathetic to anti-Black stereotypes and racial hierarchy concepts, and who may find the visual of Black men in traditional warrior attire provocative or symbolic within this context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/09468.png",
+    "image_name": "09468.png",
+    "extraction_timestamp": "2025-12-15T13:55:37.742764",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 40,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

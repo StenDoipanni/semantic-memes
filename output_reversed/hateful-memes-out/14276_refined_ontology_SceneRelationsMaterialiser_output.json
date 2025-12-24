@@ -1,0 +1,47 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "disappointed_children_scene",
+      "participants": [
+        {
+          "entity": "child1",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "child2",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "child1",
+          "relation": "mirroredWith",
+          "to": "child2"
+        },
+        {
+          "from": "child1",
+          "relation": "emotionallyConnectedTo",
+          "to": "child2"
+        },
+        {
+          "from": "child2",
+          "relation": "emotionallyConnectedTo",
+          "to": "child1"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":disappointed_children_scene :hasParticipant :child1 .",
+    ":disappointed_children_scene :hasParticipant :child2 .",
+    ":child1 :mirroredWith :child2 .",
+    ":child1 :emotionallyConnectedTo :child2 .",
+    ":child2 :emotionallyConnectedTo :child1 ."
+  ],
+  "triples_count": 5
+}

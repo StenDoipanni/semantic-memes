@@ -1,0 +1,45 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "overallintent_instance"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "cashier"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "textualMaterial"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "criminal_behavior_associations"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "stereotype_of_black_people_as_thieves"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "racialized_hate_speech"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :overallintent_instance .",
+    ":toxicity_1 :hasToxicElement :cashier .",
+    ":toxicity_1 :hasToxicElement :textualMaterial .",
+    ":toxicity_1 :hasToxicElement :criminal_behavior_associations .",
+    ":toxicity_1 :hasToxicElement :stereotype_of_black_people_as_thieves .",
+    ":toxicity_1 :hasToxicElement :racialized_hate_speech ."
+  ],
+  "triples_count": 6
+}

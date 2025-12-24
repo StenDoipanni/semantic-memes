@@ -1,0 +1,202 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: hateful; overall-intent-description: The image depicts a person in mourning, using a white cloth to cover their face, which is a visual symbol of grief. The overlaid text reads \"muslim 49 people were killed at christchurch\" and \"49 people were killed at christchurch mosques muslim,\" which inaccurately and misleadingly frames the victims as exclusively Muslim. This is a harmful and hateful distortion of the 2019 Christchurch mosque shootings, where 51 people were killed, predominantly Muslim, but the text's phrasing implies the victims were Muslim by virtue of being killed in mosques, which is a misrepresentation. The meme uses the image of grief to evoke emotional response while promoting a false narrative that conflates the victims' religion with the location of the attack, potentially reinforcing Islamophobic stereotypes by implying that the attack was specifically targeted at Muslims. The intent is to spread misinformation and potentially incite prejudice against Muslims by simplifying a complex tragedy into a religiously charged statement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "muslim 49 people were killed at christchurch",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "a woman in mourning",
+      "description": "A woman with a blurred face, wearing a black top and a pearl necklace, is holding a white cloth to her face, conveying grief or sorrow. Her posture and the cloth suggest she is crying or deeply distressed. The image is tightly cropped on her upper body and face, emphasizing her emotional state.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "mourning_scene",
+      "label": "a woman in mourning",
+      "description": "A woman is depicted in a state of grief, holding a white cloth to her face. She is wearing a black top and a pearl necklace, and her posture and expression convey deep sorrow. The image is tightly cropped, focusing on her upper body and face to emphasize her emotional state. Overlaid text inaccurately frames the victims of the Christchurch mosque shootings as exclusively Muslim, promoting a hateful and misleading narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "christchurch_mosque_shootings_2019",
+      "label": "2019 Christchurch Mosque Shootings",
+      "description": "A terrorist attack that occurred on March 15, 2019, in Christchurch, New Zealand, where a gunman killed 51 people, predominantly Muslim, in three mosques. This event is referenced in the text overlay as the context for the deaths mentioned. The meme inaccurately frames the victims as 'muslim' by virtue of being killed in mosques, which is a misrepresentation and potentially incites Islamophobia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "A form of prejudice, fear, or hatred directed towards Muslims. The meme promotes a harmful stereotype by implying that the attack was specifically targeted at Muslims, thereby reinforcing Islamophobic tropes such as 'Muslims are terrorists' or 'Muslims are inherently violent'. This is a key background concept needed to understand the hateful intent of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misinformation",
+      "label": "Misinformation",
+      "description": "False or inaccurate information that is spread, often unintentionally, but in this case, the text is deliberately misleading. The meme falsely claims 'muslim 49 people were killed' and implies the victims were Muslim solely because they were killed in mosques, which is a distortion of the facts. This is a core background concept for understanding the meme's deceptive nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religion_and_location_confusion",
+      "label": "Religion and Location Confusion",
+      "description": "The meme conflates the religious identity of the victims with the location of the attack (mosques), implying that being killed in a mosque automatically makes one Muslim. This is a false equivalence that misrepresents the actual victims and is a common tactic in hate speech to simplify complex tragedies into religiously charged narratives.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype",
+      "label": "Anti-Muslim Stereotype",
+      "description": "The stereotype that Muslims are inherently violent or terrorist, which is promoted by the meme's framing. The text 'muslim 49 people were killed at christchurch' implies that the attack was specifically targeted at Muslims, reinforcing the harmful stereotype that Muslims are a threat to society, which is a core element of Islamophobia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "grief",
+      "label": "grieving emotion",
+      "description": "The woman in the image is depicted holding a white cloth to her face, a common gesture associated with mourning and sorrow. Her posture and the act of covering her face suggest deep emotional distress, indicating a state of grief. This emotional expression is visually conveyed through her body language and the symbolic use of the cloth.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Grief is mapped onto the text about Muslim victims",
+      "description": "The visual of the grieving woman is juxtaposed with the text 'muslim 49 people were killed at christchurch', creating an analogical mapping where the emotional state of grief (expressed by the woman) is associated with the tragic event described in the text. The text frames the victims as Muslim, and the image of mourning is used to evoke an emotional response to this specific, misleading narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the grieving woman in the visual material",
+      "description": "The user is projected onto the visual material of the woman in mourning, as the image of grief is used to evoke an emotional response that is then tied to the misleading text about Muslim victims. The user is implicitly invited to identify with the emotional state depicted, even though the text manipulates the context of that emotion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme promotes a hateful distortion of the 2019 Christchurch mosque shootings by inaccurately framing the victims as exclusively Muslim, thereby reinforcing Islamophobic stereotypes and inciting prejudice against Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed to target individuals who hold or are susceptible to Islamophobic beliefs, particularly those who may be influenced by or reinforce stereotypes that associate Muslims with terrorism or violence. The visual of a grieving woman is used to evoke emotional sympathy, but the text deliberately misrepresents the victims as 'muslim' by virtue of being killed in mosques, aiming to frame the tragedy as a religiously motivated attack. This appeals to an audience that may already harbor prejudice against Muslims, using the emotional imagery to amplify and legitimize harmful narratives. The meme’s intent is to incite prejudice against Muslims by simplifying a complex tragedy into a religiously charged statement, thus targeting communities or individuals who are predisposed to anti-Muslim sentiment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/41358.png",
+    "image_name": "41358.png",
+    "extraction_timestamp": "2025-12-16T00:48:07.071369",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

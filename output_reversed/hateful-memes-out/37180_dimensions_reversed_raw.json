@@ -1,0 +1,200 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: look_dad_im_doing_it; hasOverallIntent: Harmful; overall-intent-description: The image depicts a joyful moment of a child riding a bike with a parent's support, overlaid with text that reads 'look dad im doing it' and 'you did it tyrone! you stole your first bike.' The meme's intent is to humorously exaggerate the child's achievement by falsely attributing the bike to a theft, creating a comedic scenario. While the visual content is innocent and positive, the text introduces a misleading and potentially harmful element by implying theft, which could be interpreted as a joke that trivializes property crime or could be misused to mock real-life situations involving theft. The meme does not contain explicit hate or abusive content, but the false accusation of theft could be seen as harmful in contexts where it might be used to mock or belittle individuals who have experienced theft or property loss. The meme's overall intent is to create humor through absurdity, but the potential for harm lies in the misleading implication of criminal behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "look dad im doing it",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "child",
+      "label": "child riding a bike",
+      "description": "A young child, appearing joyful and excited, is riding a bicycle with the help of an adult. The child is wearing a light blue and white plaid shirt and is smiling broadly with eyes closed, suggesting a moment of triumph or happiness. The child's hands are on the handlebars, and they are looking upward, possibly at the adult or the sky, conveying a sense of accomplishment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "child_riding_bike_with_parent_support",
+      "label": "child riding bike with parent support",
+      "description": "A joyful child is riding a bicycle with the support of an adult, who is holding the bike's handlebars. The child is smiling broadly, indicating excitement and accomplishment. The adult is leaning in, providing physical assistance and encouragement. The scene takes place outdoors on a sidewalk with greenery in the background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "isRidingBike",
+          "to": "bike"
+        },
+        {
+          "from": "adult",
+          "relation": "isSupporting",
+          "to": "child"
+        },
+        {
+          "from": "adult",
+          "relation": "isHoldingHandlebars",
+          "to": "bike"
+        },
+        {
+          "from": "child",
+          "relation": "isLookingUpward",
+          "to": "adult"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "criminal_behavior_associations",
+      "label": "Criminal Behavior Associations",
+      "description": "The meme's punchline falsely accuses the child of stealing the bike, which is a criminal act. Understanding this requires real-world knowledge of theft as a crime and the social stigma or consequences associated with it. The humor relies on the absurdity of attributing a serious crime to a child's innocent achievement, which could be seen as trivializing property crime.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "child_stealing_bike_stereotype",
+      "label": "Child Stealing Bike Stereotype",
+      "description": "The meme plays on the stereotype that children, especially in certain contexts, might be mischievous or involved in petty theft. This stereotype is not visible in the image but is implied by the text's false accusation. It reflects a broader cultural trope that children are inherently 'naughty' or 'troublemakers' who might steal things, which is used here for comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "parent_child_bike_lesson_cultural_context",
+      "label": "Parent-Child Bike Lesson Cultural Context",
+      "description": "The image depicts a common cultural moment: a parent helping a child learn to ride a bike. This is a universal rite of passage in many societies, symbolizing growth, independence, and parental support. The meme's humor relies on subverting this wholesome image by introducing a criminal element, which requires understanding of the cultural significance of this scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "theft_as_harmful_act",
+      "label": "Theft as Harmful Act",
+      "description": "The meme's humor is derived from the contrast between the child's joyful achievement and the accusation of theft. To fully understand the meme's intent, one must recognize that theft is a harmful act with real-world consequences, which makes the false accusation in the text particularly jarring and potentially offensive in some contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "joy",
+      "label": "child's joyful expression",
+      "description": "The child is smiling broadly with eyes closed, conveying a sense of triumph, happiness, and excitement as they ride the bike. This expression is central to the visual material and is reinforced by the text 'look dad im doing it', which captures the child's pride and accomplishment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "child's achievement is mapped to the text 'look dad im doing it'",
+      "description": "The text 'look dad im doing it' is directly projected onto the visual of the child riding the bike with joy and triumph. The child's expression and posture visually represent the accomplishment being celebrated in the text. The mapping is explicit: the child's action and emotion are the subject of the text's declaration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the child's joyful achievement",
+      "description": "The user is projected onto the child riding the bike with joy and triumph, as the text 'look dad im doing it' directly addresses the child's accomplishment. The user sees themselves in the child's moment of success and the celebratory tone of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme falsely accuses the child of stealing the bike, which trivializes property crime and could be seen as harmful in contexts where it might mock or belittle individuals who have experienced theft or property loss.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with common online humor tropes, particularly those involving absurd or exaggerated scenarios. The target community includes individuals who appreciate situational irony and relatable, everyday moments (like learning to ride a bike) subverted for comedic effect. The humor relies on universal cultural understanding of parental support during childhood milestones and the shock value of falsely attributing a serious crime (theft) to an innocent child's achievement. The meme does not target any specific demographic, race, gender, or identity group, making it broadly accessible to internet users who understand the visual and textual contrast. The audience is expected to recognize the wholesome scene and the punchline's absurdity, which is a common feature of internet memes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/37180.png",
+    "image_name": "37180.png",
+    "extraction_timestamp": "2025-12-15T23:43:02.744854",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

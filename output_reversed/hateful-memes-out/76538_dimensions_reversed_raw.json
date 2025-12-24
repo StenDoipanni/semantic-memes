@@ -1,0 +1,185 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: you_smell_coffee_cat_meme; hasOverallIntent: non-toxic_humor; overall-intent-description: The image features a gray cat with a skeptical, unimpressed facial expression, overlaid with text that reads 'you smell coffee?' and 'me neither. make some!'. The scene is a humorous juxtaposition of the cat's grumpy demeanor with the mundane request for coffee. The meme's intent is to convey a relatable, lighthearted sentiment — the idea of someone being uninterested or unimpressed with a situation (here, the smell of coffee) and then demanding action. There is no toxicity, harmful content, or disparaging stereotypes present. The humor is derived from anthropomorphizing the cat and using its expression to represent human indifference or laziness in a non-offensive, universally understood way. The meme does not target any specific group or individual based on protected characteristics, nor does it promote hate, abuse, or propaganda. It is a form of benign, self-referential humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "you smell coffee?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "cat",
+      "label": "gray cat",
+      "description": "A gray cat with a skeptical, unimpressed facial expression, featuring narrowed yellow eyes and a slightly downturned mouth. The cat is the central focus of the image, positioned in the foreground with a blurred background. Its fur appears short and smooth, and its ears are perked up, contributing to its grumpy demeanor. The cat's expression is anthropomorphized to convey human-like indifference or laziness, which is central to the meme's humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "cat_demanding_coffee",
+      "label": "cat demanding coffee",
+      "description": "A gray cat with a skeptical, unimpressed facial expression is the central visual element in the scene. The cat's expression is anthropomorphized to convey human-like indifference or laziness, which is central to the meme's humor. The scene is composed of the cat and overlaid text that reads 'you smell coffee?' and 'me neither. make some!'. The cat is positioned in the foreground, and the background is blurred, suggesting an outdoor setting. The text is positioned above and below the cat's face, framing the cat as the main participant in the humorous interaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "cat",
+          "relation": "isExpressing",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "isOverlaidOn",
+          "to": "cat"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "coffee_culture",
+      "label": "Coffee Culture",
+      "description": "The meme references the common social ritual and cultural significance of coffee, particularly the casual, often humorous, expectation of coffee in daily life. The phrase 'you smell coffee?' implies a shared social context where coffee is a common beverage, and the demand 'make some!' reflects a familiar, often lazy or entitled, request within coffee-drinking communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "cat_demanding_coffee",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anthropomorphism",
+      "label": "Anthropomorphism",
+      "description": "The meme relies on the concept of anthropomorphism — attributing human characteristics, emotions, and behaviors to animals — to create humor. The cat’s grumpy expression is interpreted as human-like indifference or laziness, which is a common trope in internet memes and cartoons.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "cat",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "cat_demanding_coffee",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "relatable_humor",
+      "label": "Relatable Humor",
+      "description": "The meme taps into a universal human experience — the desire for coffee and the laziness or indifference to making it oneself. This type of humor is relatable because it mirrors common social behaviors and frustrations, making it widely understood and appreciated across different cultures and age groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "cat_demanding_coffee",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "internet_meme_tropes",
+      "label": "Internet Meme Tropes",
+      "description": "The image and text follow a common internet meme format: a visually expressive animal (often a cat) paired with text that creates a humorous, often sarcastic or ironic, situation. This trope is widely recognized and used across the internet to convey simple, relatable, or exaggerated emotions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "cat",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "cat_demanding_coffee",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "indifference",
+      "label": "the indifferent emotion",
+      "description": "The cat's facial expression — narrowed yellow eyes, slightly downturned mouth, and a grumpy, unimpressed demeanor — conveys a sense of apathy or lack of interest. This is reinforced by the text 'me neither. make some!', which anthropomorphizes the cat's indifference into a demand for action, highlighting a lazy or unenthusiastic emotional state.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The cat is mapped as 'me' in the text",
+      "description": "The text 'me neither. make some!' explicitly uses the pronoun 'me', which is analogically mapped onto the visual entity of the gray cat. The cat's grumpy, indifferent expression is anthropomorphized to represent the speaker's own emotional state — apathy toward the coffee smell and a demand for action. This creates a direct analogical mapping where the cat visually embodies the textual 'me'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the cat as 'me' in the text",
+      "description": "The user is projected onto the gray cat, which is visually represented as 'me' in the textual material 'me neither. make some!'. The cat's grumpy expression is anthropomorphized to embody the user's own apathetic state and demand for action, creating a direct analogical mapping where the user identifies with the cat's persona.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "general internet users",
+      "description": "The meme is designed for a broad, general audience of internet users who are familiar with internet meme tropes, particularly those involving anthropomorphized animals expressing human emotions. The humor is relatable and non-specific, targeting anyone who has experienced indifference or laziness toward making coffee, a common social ritual.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/76538.png",
+    "image_name": "76538.png",
+    "extraction_timestamp": "2025-12-19T13:02:15.970979",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

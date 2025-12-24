@@ -1,0 +1,52 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "juxtaposed_religious_scene",
+      "participants": [
+        {
+          "entity": "John_Malkovich",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "man_carrying_cross",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "police_officer",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_carrying_cross",
+          "relation": "isBeingEscortedBy",
+          "to": "police_officer"
+        },
+        {
+          "from": "man_carrying_cross",
+          "relation": "isCarrying",
+          "to": "cross"
+        },
+        {
+          "from": "police_officer",
+          "relation": "escorts",
+          "to": "man_carrying_cross"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":juxtaposed_religious_scene :hasParticipant :John_Malkovich .",
+    ":juxtaposed_religious_scene :hasParticipant :man_carrying_cross .",
+    ":juxtaposed_religious_scene :hasParticipant :police_officer .",
+    ":man_carrying_cross :isBeingEscortedBy :police_officer .",
+    ":man_carrying_cross :isCarrying :cross .",
+    ":police_officer :escorts :man_carrying_cross ."
+  ],
+  "triples_count": 6
+}

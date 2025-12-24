@@ -1,0 +1,188 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: fuck_banks_fuck_indians_too; hasOverallIntent: Hateful; overall-intent-description: The image uses a historical photograph of a stern-looking man in military uniform (likely General Custer) with the text 'fuck banks' and 'fuck indians too'. This juxtaposition is intended to convey a message of extreme anger and contempt toward both financial institutions and Native American peoples. The meme leverages the historical association of General Custer with the Battle of Little Bighorn, where he was defeated by Native American forces, to imply that the depicted figure represents a violent, aggressive, and ultimately destructive force. The intent is to express a visceral, hateful sentiment toward both banks (as symbols of systemic exploitation and greed) and Native Americans (as a historically oppressed group). The use of the word 'fuck' and the direct targeting of two distinct groups — one representing modern economic power structures and the other representing a marginalized indigenous population — indicates a hateful intent. The meme does not target individuals but rather groups based on their identity and historical context, fitting the definition of hateful content as it attacks specific communities based on protected characteristics (race/ethnicity and economic institution).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "fuck banks",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with long hair and a mustache, wearing a military uniform and a wide-brimmed hat, standing with arms crossed. He appears stern and serious, looking to the side. Based on his appearance and uniform, he is identifiable as General George Armstrong Custer, a Union Army officer during the American Civil War, and later known for his role in the Battle of Little Bighorn. His historical association with Native American conflict is central to the meme's context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "angry_outburst",
+      "label": "angry_outburst",
+      "description": "A scene depicting a man in military uniform with arms crossed, conveying a stern and angry demeanor, overlaid with text expressing hatred toward banks and Native Americans. The scene is composed of the man as the central figure and the text as the expressive element conveying the hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "expresses",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "general_custer_battle_of_little_bighorn",
+      "label": "Battle of Little Bighorn",
+      "description": "The Battle of Little Bighorn, fought in 1876, was a decisive victory for Native American forces led by Sitting Bull and Crazy Horse against the 7th Cavalry Regiment of the U.S. Army, commanded by General George Armstrong Custer. This battle is central to the meme's context, as it is the historical event that links Custer to Native American conflict, allowing the meme to use his image to symbolize violent aggression toward Native Americans. The defeat of Custer at Little Bighorn is a well-known historical event that provides the basis for the meme's juxtaposition of hatred toward both banks and Native Americans.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "general_custer_stereotype",
+      "label": "General Custer as a symbol of military aggression and failure",
+      "description": "General Custer is often stereotyped in popular culture as a reckless, arrogant, and ultimately doomed military leader whose actions led to the defeat of the U.S. Army at Little Bighorn. This stereotype is leveraged in the meme to imply that the figure in the image represents a violent, aggressive force, which is then used to express hatred toward both banks and Native Americans. The meme relies on the public perception of Custer as a symbol of military failure and aggression to convey its message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_native_american_stereotype",
+      "label": "Anti-Native American Stereotype",
+      "description": "The meme relies on the historical and cultural stereotype that portrays Native Americans as violent, uncivilized, or as a threat to white settlers. This stereotype is used to justify the hatred expressed in the text 'fuck indians too'. The meme implicitly references the historical context of U.S. expansion and the violent conflicts between settlers and Native American tribes, which are often depicted in popular culture as a justification for the oppression and marginalization of Native Americans.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_bank_stereotype",
+      "label": "Anti-Bank Stereotype",
+      "description": "The meme relies on the stereotype that banks are greedy, exploitative, and corrupt institutions that profit from the suffering of the working class. This stereotype is used to justify the hatred expressed in the text 'fuck banks'. The meme implicitly references the historical and contemporary context of financial institutions as symbols of systemic exploitation and greed, which are often criticized in popular culture and political discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_content",
+      "label": "Hateful Content",
+      "description": "The meme is an example of hateful content as it attacks specific communities based on protected characteristics (race/ethnicity and economic institution). The use of the word 'fuck' and the direct targeting of two distinct groups — one representing modern economic power structures and the other representing a historically oppressed group — indicates a hateful intent. The meme does not target individuals but rather groups based on their identity and historical context, fitting the definition of hateful content as it attacks specific communities based on protected characteristics (race/ethnicity and economic institution).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "anger",
+      "label": "angry emotion",
+      "description": "The man in the image has a stern, serious facial expression with a set jaw and intense gaze, conveying a strong sense of anger and contempt. This is reinforced by his arms-crossed posture, which is a common gesture of defiance and frustration. The text 'fuck banks' and 'fuck indians too' explicitly expresses extreme anger and hatred toward both financial institutions and Native American peoples.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_fuck_banks_to_custer",
+      "label": "The text 'fuck banks' is mapped onto the visual entity of General Custer",
+      "description": "The text 'fuck banks' is positioned directly over the image of General Custer, creating an analogical mapping where the visual entity (Custer) is interpreted as embodying the sentiment expressed in the text. This mapping leverages Custer's historical association with military aggression and failure to symbolize the hatred toward banks. The visual material (Custer) is mapped onto the textual material ('fuck banks') to imply that Custer represents the aggressive, destructive force being directed at banks.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene expressing hatred toward banks and Native Americans",
+      "description": "The user is not explicitly projected onto a specific visual, textual, or scene element through deictic pronouns like 'me' or 'you'. However, the meme's overall intent is to project the user's own hateful sentiment onto the scene. The user is implicitly projecting their anger and contempt onto the entire scene, which includes the visual of General Custer and the textual message 'fuck banks' and 'fuck indians too'. The scene acts as the container for the user's projected emotion and intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks specific communities based on protected characteristics (race/ethnicity and economic institution).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who are frustrated with financial institutions (banks) and who hold negative views toward Native American peoples, often rooted in historical grievances or contemporary political discourse. The meme appeals to those who identify with or sympathize with anti-bank sentiment and anti-Native American stereotypes, leveraging the historical figure of General Custer to symbolize aggressive, destructive force. The intended audience likely includes people who are politically or economically discontent, particularly those who perceive banks as exploitative and Native Americans as a symbol of historical resistance or conflict. The use of the word 'fuck' and the direct targeting of two distinct groups indicates the meme is designed for an audience that understands and accepts this hateful framing, often found in online communities that engage in political or economic protest rhetoric.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/10547.png",
+    "image_name": "10547.png",
+    "extraction_timestamp": "2025-12-15T14:19:15.720909",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,56 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "joyful emotion",
+      "expressors": [
+        {
+          "entity": "adult_woman",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "adult_woman_2",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "adult_woman",
+          "relation": "emotionalRelationToEntity",
+          "to": "baby"
+        },
+        {
+          "from": "adult_woman",
+          "relation": "emotionalRelationToEntity",
+          "to": "dog"
+        },
+        {
+          "from": "adult_woman_2",
+          "relation": "emotionalRelationToEntity",
+          "to": "baby"
+        },
+        {
+          "from": "adult_woman_2",
+          "relation": "emotionalRelationToEntity",
+          "to": "dog"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":joyful_emotion :hasExpressor :adult_woman .",
+    ":joyful_emotion :hasExpressor :adult_woman_2 .",
+    ":adult_woman :emotionalRelationToEntity :baby .",
+    ":adult_woman :emotionalRelationToEntity :dog .",
+    ":adult_woman_2 :emotionalRelationToEntity :baby .",
+    ":adult_woman_2 :emotionalRelationToEntity :dog ."
+  ],
+  "triples_count": 6
+}

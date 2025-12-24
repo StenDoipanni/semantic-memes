@@ -1,0 +1,221 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: harmful; overall-intent-description: The meme juxtaposes two unrelated images: a child presenting flowers to a dignitary, and a kangaroo drinking beer. The text \"how to remember kid in hot car keep 2nd road beer with them!\" is a nonsensical, poorly constructed pun attempting to create a mnemonic. The intent is to humorously suggest a bizarre, illogical association (kangaroo drinking beer) to remember a serious safety issue (child in hot car). While not overtly abusive or hateful, the meme's humor relies on absurdity and potentially trivializes a dangerous real-world problem. The \"beer with them\" part is a crude, non-sequitur attempt at a mnemonic, which could be seen as harmful by implying that the only way to remember is through an inappropriate or trivial association, potentially undermining the seriousness of child safety. The kangaroo image is not used to target any specific group but is simply a visual gag.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "how to remember",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "middle text overlay",
+      "description": "kid in hot car",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_3",
+      "label": "bottom text overlay",
+      "description": "keep 2nd road",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_4",
+      "label": "bottom text overlay",
+      "description": "beer with them!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_in_suit",
+      "label": "adult male",
+      "description": "A man wearing a dark suit and tie, standing and receiving a bouquet of flowers from a child. He appears to be a dignitary or official, possibly of East Asian descent, based on facial features. He is holding the bouquet with both hands and looking at the child. His expression is neutral to slightly smiling. He is the central figure in the top panel.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "flower_presenting",
+      "label": "child presenting flowers to dignitary",
+      "description": "A child in a school uniform is presenting a bouquet of flowers to a man in a suit, who is receiving it with both hands. The child is standing in front of the man, and the man is looking at the child with a neutral to slightly smiling expression. The scene takes place outdoors, possibly at a public event or ceremony.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "presents_to",
+          "to": "man_in_suit"
+        },
+        {
+          "from": "man_in_suit",
+          "relation": "receives_from",
+          "to": "child"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "child_in_hot_car_safety",
+      "label": "Child in Hot Car Safety",
+      "description": "A real-world public safety issue where children are left unattended in vehicles, leading to potentially fatal heat-related illnesses. The meme attempts to create a mnemonic for this serious problem by associating it with an absurd image (kangaroo drinking beer).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "kangaroo_drinking_beer_stereotype",
+      "label": "Kangaroo Drinking Beer Stereotype",
+      "description": "A humorous, absurd, and culturally inappropriate stereotype that juxtaposes kangaroos (Australian wildlife) with beer consumption, often used in memes for comedic effect. This stereotype is not based on reality and relies on the viewer's understanding of Australian culture and animal behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_in_suit",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "flower_presenting",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_4",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "beer_with_them_mnemonic",
+      "label": "Beer with Them Mnemonic",
+      "description": "A deliberately nonsensical and crude mnemonic device attempting to link the phrase 'keep 2nd road' (a road safety rule) with 'beer with them' (a reference to alcohol) to remember 'kid in hot car'. This is a poor attempt at memory aid that relies on absurd association.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_3",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_4",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "kangaroo_as_animal",
+      "label": "Kangaroo as Animal",
+      "description": "Kangaroos are marsupials native to Australia, known for their distinctive hopping movement and pouches. Their depiction in the image as drinking beer is a surreal and anthropomorphic representation, requiring knowledge of animal biology and behavior to understand the absurdity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_in_suit",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "flower_presenting",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "absurdity",
+      "label": "the absurd emotional expression",
+      "description": "The emotional expression conveyed by the juxtaposition of a dignitary receiving flowers and a kangaroo drinking beer, combined with the nonsensical text 'how to remember kid in hot car keep 2nd road beer with them!', creates a sense of absurdity and humor through illogical association.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Textual mnemonic mapped onto visual absurdity",
+      "description": "The text 'how to remember kid in hot car keep 2nd road beer with them!' is mapped onto the visual juxtaposition of a dignitary receiving flowers and a kangaroo drinking beer. The text attempts to create a mnemonic by associating the serious issue of child safety with an absurd, unrelated image (kangaroo drinking beer), implying that remembering 'beer with them' (a crude, nonsensical phrase) is the key to remembering 'kid in hot car'. The visual material provides the absurd context for this illogical mnemonic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual mnemonic as the intended recipient of the absurd memory aid",
+      "description": "The user is projected onto the text 'how to remember kid in hot car keep 2nd road beer with them!' as the person who is supposed to remember the safety rule. The meme's structure implies that the viewer (user) is the one who needs to recall the mnemonic, making the text the focal point of the user's projection. The user is not explicitly addressed with 'you' or 'me', but the imperative nature of the text ('how to remember') and the instructional framing project the user as the one who must apply this (illogical) mnemonic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme's humor relies on absurdity and potentially trivializes a dangerous real-world problem. The \"beer with them\" part is a crude, non-sequitur attempt at a mnemonic, which could be seen as harmful by implying that the only way to remember is through an inappropriate or trivial association, potentially undermining the seriousness of child safety.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with internet humor, memes, and absurd mnemonics. It relies on the viewer's understanding of basic visual gags, cultural references to Australian wildlife (kangaroos), and the concept of creating nonsensical memory aids. The humor is derived from the juxtaposition of unrelated images and the illogical text, which is a common trope in meme culture. The target audience is likely individuals who engage with online humor, particularly those who appreciate crude, absurdist, or surreal comedy, and are not necessarily targeted at any specific demographic or community based on identity or background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/75230.png",
+    "image_name": "75230.png",
+    "extraction_timestamp": "2025-12-19T12:34:09.725760",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

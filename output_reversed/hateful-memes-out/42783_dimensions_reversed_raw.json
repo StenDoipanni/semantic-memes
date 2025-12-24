@@ -1,0 +1,167 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: hateful; overall-intent-description: The image displays crumpled pieces of paper on a plain background, with overlaid text reading 'farmersonly.com... where white trash meet other white trash.' The visual metaphor of crumpled paper suggests discarded or worthless items, which is juxtaposed with the derogatory term 'white trash' to imply that the website is a space for people who are considered socially or morally inferior. This is a hateful meme as it uses a racialized slur ('white trash') to demean a specific group of people, promoting negative stereotypes and reinforcing harmful social divisions. The term 'white trash' is a derogatory label historically used to demean people of lower socioeconomic status, often targeting white individuals, and is rooted in racial and class-based prejudice. The meme's intent is to dehumanize and insult a group by associating them with trash, thereby fostering contempt and division.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "farmersonly.com... where white trash meet other white trash",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "crumpled_paper",
+      "label": "objects",
+      "description": "Multiple crumpled pieces of white paper scattered across a plain, light-colored surface. These objects are the primary visual elements in the image, symbolizing discarded or worthless items, and are juxtaposed with the overlaid text to reinforce the meme's hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "crumpled_paper_scene",
+      "label": "scene of discarded worthless items",
+      "description": "The scene is composed of multiple crumpled pieces of white paper scattered across a plain, light-colored surface. These objects are arranged in a loose, asymmetrical pattern, suggesting randomness or abandonment. The visual metaphor of crumpled paper symbolizes discarded or worthless items, which is juxtaposed with the overlaid text to reinforce the meme's hateful message. The spatial arrangement creates a sense of disorder and neglect, emphasizing the devaluation implied by the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_trash_stereotype",
+      "label": "White Trash Stereotype",
+      "description": "A derogatory term historically used to demean people of lower socioeconomic status, often targeting white individuals, and is rooted in racial and class-based prejudice. It implies moral or social inferiority and is used to dehumanize and insult a group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "farmersonly_com",
+      "label": "Farmersonly.com",
+      "description": "A website that is the subject of the meme, presented as a space where people labeled 'white trash' gather. The term 'white trash' is used in the meme to imply that the website is for people considered socially or morally inferior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racialized_slur",
+      "label": "Racialized Slur",
+      "description": "The term 'white trash' functions as a racialized slur that dehumanizes and insults a specific group of people, promoting negative stereotypes and reinforcing harmful social divisions. It is rooted in racial and class-based prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_division",
+      "label": "Social Division",
+      "description": "The meme promotes contempt and division by associating a group with 'trash,' thereby fostering social exclusion and reinforcing harmful stereotypes about lower socioeconomic status and race.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous emotion",
+      "description": "The emotion of contempt is expressed through the derogatory text 'white trash' and the visual metaphor of crumpled paper, which symbolizes worthless or discarded items. This combination conveys disdain and a sense of moral or social inferiority toward the group labeled 'white trash'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Crumpled paper represents 'white trash'",
+      "description": "The visual metaphor of crumpled paper, symbolizing discarded or worthless items, is mapped onto the textual concept of 'white trash'. The text explicitly labels the website as a gathering place for 'white trash', and the visual material (crumpled paper) serves as a direct analogical representation of this derogatory label, reinforcing the meme's hateful message by equating the group with trash.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message as the target of the stereotype",
+      "description": "The user is implicitly projected onto the textual message 'farmersonly.com... where white trash meet other white trash' as the intended audience or as the group being stereotyped. The meme positions the viewer as someone who either belongs to or is meant to understand the 'white trash' group being mocked, or as someone who is being invited to join or judge this group. There are no explicit deictics like 'you' or 'me', but the framing of the website as a gathering place for 'white trash' creates an implicit projection where the user is seen as part of the social group being described or as the one who would recognize the stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses the derogatory term 'white trash' as a racialized slur to demean a specific group of people, promoting negative stereotypes and reinforcing harmful social divisions. The visual metaphor of crumpled paper symbolizing discarded items is mapped onto the group, dehumanizing them and fostering contempt.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "white_trash_stereotype",
+      "label": "White Trash Stereotype Audience",
+      "description": "The target community is individuals who identify with or are targeted by the derogatory 'white trash' stereotype, often white individuals of lower socioeconomic status, as well as those who may be familiar with or sympathetic to the website 'farmersonly.com' and its associated community. The meme is designed to appeal to or provoke members of this group by using the term 'white trash' as a racialized slur and associating them with discarded items (crumpled paper), reinforcing social division and contempt.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/42783.png",
+    "image_name": "42783.png",
+    "extraction_timestamp": "2025-12-16T01:20:41.165289",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

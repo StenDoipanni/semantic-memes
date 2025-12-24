@@ -1,0 +1,195 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: harmful; overall-intent-description: The meme juxtaposes an image of an East Asian woman with text claiming she has 'English tattoos too,' then humorously equates this to 'soup' (a play on 'soup' sounding like 'sou' as in 'sou' for 'soup' in English). This is a culturally insensitive and potentially harmful stereotype that relies on the 'all look the same' trope and the 'foreign infiltrator' trope by implying that East Asian people are somehow associated with or 'tattooed' with English words, which is a baseless and offensive generalization. The meme uses visual and textual juxtaposition to create a false and demeaning association, which can be considered harmful as it perpetuates a stereotype that reduces a person's identity to a superficial and inaccurate cultural reference. The humor is derived from a crude and offensive analogy, which can be seen as a form of cultural appropriation and mockery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "text content: 'if astians got random'; position: top of image, above the woman's head.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "East_Asian_woman",
+      "label": "person",
+      "description": "A young East Asian woman with long dark hair, wearing a white sleeveless top, smiling and looking at the camera. She is positioned in the upper half of the image, serving as the primary visual subject and the target of the meme's stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "stereotypical_juxtaposition",
+      "label": "Stereotypical Juxtaposition Scene",
+      "description": "The scene presents a visual and textual juxtaposition that creates a harmful stereotype. It features an East Asian woman positioned above a close-up of ramen noodles, with overlaid text that falsely claims she has 'English tattoos' and humorously equates this to 'soup' (a play on 'sou' as in 'soup' in English). This composition is designed to mock and stereotype East Asian individuals by linking them to a superficial and inaccurate cultural reference.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "East_Asian_woman",
+          "relation": "isJuxtaposedWith",
+          "to": "ramen_noodles"
+        },
+        {
+          "from": "text",
+          "relation": "describes",
+          "to": "East_Asian_woman"
+        },
+        {
+          "from": "text",
+          "relation": "explains",
+          "to": "ramen_noodles"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_asian_racism_stereotype",
+      "label": "Anti-Asian Racism Stereotype",
+      "description": "The meme relies on the 'foreign infiltrator' trope and the 'all look the same' stereotype, implying that East Asian people are somehow associated with or 'tattooed' with English words, which is a baseless and offensive generalization. This stereotype reduces a person's identity to a superficial and inaccurate cultural reference.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "East_Asian_woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "stereotypical_juxtaposition",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "english_tattoo_joke",
+      "label": "English Tattoo Joke",
+      "description": "The joke hinges on the pun that 'soup' sounds like 'sou' (as in 'sou' for 'soup' in English), implying that East Asian people have tattoos of English words. This is a crude and offensive analogy that mocks the idea of East Asian people being 'tattooed' with English, which is a false and demeaning association.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "stereotypical_juxtaposition",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ramen_noodles_as_soup",
+      "label": "Ramen Noodles as Soup",
+      "description": "The image uses ramen noodles to visually represent 'soup', which is a key part of the joke. This is a real-world cultural reference where ramen is a type of soup, and the meme uses this to create a false association with the 'English tattoos' claim.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "stereotypical_juxtaposition",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "english_language",
+      "label": "English Language",
+      "description": "The meme references the English language through the pun 'soup' (sou) and the phrase 'English tattoos'. This is a real-world linguistic reference that is used to create the joke, which is based on the idea that East Asian people are somehow 'tattooed' with English words.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "stereotypical_juxtaposition",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "derision",
+      "label": "derisive emotion",
+      "description": "The emotion expressed is derision, conveyed through the crude and offensive joke that falsely claims East Asian people have 'English tattoos' and equates it to 'soup', mocking their cultural identity. This is a form of mockery rooted in anti-Asian racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "East Asian woman is mapped as having 'English tattoos'",
+      "description": "The text 'english tattoos too' is mapped onto the visual entity 'East_Asian_woman', implying that she is the one who has these tattoos. This is a false and offensive claim that reduces her identity to a superficial cultural reference, aligning with the 'foreign infiltrator' trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the East Asian woman as the target of the stereotype",
+      "description": "The user is projected onto the East Asian woman (East_Asian_woman) as the subject of the meme's harmful stereotype. The meme implies that she is the one who has 'English tattoos' (text_chunk_2), which is a false and offensive claim. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the projection is implicit: the user is positioned as the one interpreting the meme and thus identifying with the perspective that sees the woman as the object of the stereotype. The user is projected onto the visual material (East_Asian_woman) and the textual material (text_chunk_2) that together form the stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme perpetuates a harmful stereotype by falsely claiming East Asian people have 'English tattoos' and equating it to 'soup', reducing their identity to a superficial and inaccurate cultural reference. This is rooted in anti-Asian racism and the 'foreign infiltrator' trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with or find humor in culturally insensitive stereotypes, particularly those who may be aware of or perpetuate anti-Asian racism tropes such as the 'foreign infiltrator' and 'all look the same' claims. The meme is designed to appeal to an audience that finds crude, offensive analogies amusing, especially those who understand the pun on 'soup' and 'sou' as a joke, even if it is rooted in harmful stereotypes. The audience likely includes people who engage with internet memes that rely on visual and textual juxtaposition for humor, often without considering the offensive implications.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/98367.png",
+    "image_name": "98367.png",
+    "extraction_timestamp": "2025-12-19T20:07:42.177474",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,170 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: black_people_anthing_that_doesnt_belong_to_them; hasOverallIntent: Hateful; overall-intent-description: The image depicts a woman holding a rusty, worn-out funnel, with text overlaying the image that reads 'black people' at the top and 'anthing that doesn't belong to them' at the bottom. The visual of the funnel, combined with the text, is an analogical mapping that implies Black people are undeserving of certain things or are being denied access to them. This is a harmful and hateful stereotype that reduces a racial group to a metaphorical object of exclusion and dispossession. The meme uses racist tropes to dehumanize and demean Black people by suggesting they are inherently unworthy of ownership or possession, which is a direct attack based on race. The intent is to perpetuate racial prejudice and reinforce systemic exclusion through visual and textual juxtaposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "black people",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with light brown hair and dark nail polish is holding a rusty funnel. She is in focus in the foreground, looking directly at the camera with a neutral expression. Her face is slightly blurred, suggesting the focus is on the object she is holding.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "holding_funnel",
+      "label": "woman holding a rusty funnel",
+      "description": "A woman with light brown hair and dark nail polish is holding a rusty funnel in front of her, with her hands positioned on either side of the object. The funnel is the central focus of the composition, and the woman's neutral expression and direct gaze suggest she is presenting the object. The background is blurred, emphasizing the interaction between the woman and the funnel.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "holds",
+          "to": "funnel"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "Anti-Black Stereotype: Black people are undeserving of ownership or possession",
+      "description": "This stereotype dehumanizes Black people by implying they are inherently unworthy of certain things or are being denied access to them, reducing them to a metaphorical object of exclusion and dispossession. It is a harmful and hateful trope rooted in systemic racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "holding_funnel",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_analogical_mapping",
+      "label": "Racist Analogical Mapping: Using a rusty funnel to symbolize Black people as 'anthing that doesn't belong to them'",
+      "description": "The meme uses the visual of a rusty, worn-out funnel as a metaphor to imply that Black people are undeserving of certain things or are being denied access to them. This is a racist trope that reduces a racial group to a metaphorical object of exclusion and dispossession.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "holding_funnel",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_intent",
+      "label": "Hateful Intent: The meme's purpose is to perpetuate racial prejudice and reinforce systemic exclusion",
+      "description": "The overall intent of the meme is to perpetuate racial prejudice and reinforce systemic exclusion through visual and textual juxtaposition, which is a direct attack based on race.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "holding_funnel",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_anger",
+      "label": "hateful anger expression",
+      "description": "The emotion expressed is hateful anger, conveyed through the hateful intent of the meme and the dehumanizing metaphor of the rusty funnel representing Black people as 'anthing that doesn't belong to them'. The visual of the woman presenting the funnel, combined with the text, evokes a sense of contempt and disdain toward the targeted group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Black people are mapped onto the rusty funnel",
+      "description": "The top text 'black people' is mapped onto the visual entity 'holding_funnel' (the woman holding the rusty funnel). The rusty, worn-out funnel is used as a metaphor to represent Black people as 'anthing that doesn't belong to them' (bottom text), creating a racist analogical mapping that dehumanizes the group by equating them with an object of exclusion and dispossession.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual metaphor of Black people as an object of exclusion",
+      "description": "The user is projected onto the visual material (the woman holding the rusty funnel) and the textual material ('black people' and 'anthing that doesn't belong to them'), which together form a racist analogical mapping. The user is implicitly identifying with the act of presenting or assigning value to the object (the funnel), thereby projecting themselves onto the dehumanizing metaphor. There are no explicit deictic pronouns like 'me' or 'you', but the framing of the image and the hateful intent create an implicit projection where the viewer is positioned as the one assigning the metaphorical meaning to the visual and textual elements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses a racist analogical mapping to dehumanize Black people by equating them with a rusty, worn-out funnel, implying they are undeserving of ownership or possession. This is a direct attack based on race and perpetuates systemic exclusion and racial prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The target audience is individuals who are familiar with or propagate racist stereotypes against Black people, particularly those who may find humor or validation in dehumanizing imagery and analogical mappings that equate Black people with objects of exclusion. The meme is designed to appeal to or reinforce prejudiced views held by this audience, using visual and textual cues that rely on systemic racism and hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/49856.png",
+    "image_name": "49856.png",
+    "extraction_timestamp": "2025-12-16T03:36:42.049198",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

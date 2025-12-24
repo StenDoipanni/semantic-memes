@@ -1,0 +1,202 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: i_hear_in_heaven_they_have_a_huge_pasture_with_pretty_goat_women; hasOverallIntent: Harmful; overall-intent-description: The image depicts a goat with an open mouth, seemingly speaking, against a backdrop of bare trees and a blue sky. The text reads: 'i hear in heaven they have a huge pasture with pretty goat women.' The overall intent is to create humor through absurdity and anthropomorphism, using the image of a goat to imply a fantastical, sexually suggestive scenario in heaven. While not overtly abusive or hateful toward any specific group, the phrase 'pretty goat women' is inherently objectifying and potentially harmful due to its implication of sexualizing non-human animals and reducing them to a stereotype. This can be seen as a form of animal objectification and may contribute to a broader culture of degrading imagery. The meme's intent is to provoke laughter through surreal and provocative juxtaposition, but the content may be considered offensive or inappropriate by some audiences due to its sexualized and potentially demeaning portrayal of animals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "i hear in heaven",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "goat",
+      "label": "animal",
+      "description": "A white goat with a fluffy coat, open mouth, and expressive eyes, appearing to be speaking or singing. It is the central visual focus of the image, positioned in the foreground against a backdrop of bare trees and a blue sky. The goat's anthropomorphic expression and posture contribute to the meme's humorous and surreal intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "goat_speaking_scene",
+      "label": "goat speaking in heaven",
+      "description": "A white goat with an open mouth appears to be speaking or singing, positioned in the foreground against a backdrop of bare trees and a blue sky. The scene is framed by text that reads 'i hear in heaven they have a huge pasture with pretty goat women,' suggesting a fantastical, surreal, and humorous context. The goat is the central participant, and its anthropomorphic expression contributes to the meme's absurd and provocative intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "goat_women_stereotype",
+      "label": "Stereotype of 'goat women'",
+      "description": "The phrase 'pretty goat women' in the text references a derogatory and objectifying stereotype that reduces non-human animals to sexualized human-like figures, often used in a demeaning or humorous context. This stereotype is part of a broader pattern of animal objectification and hypersexualization, which can be linked to harmful cultural tropes that devalue non-human life.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "animal_objectification",
+      "label": "Animal Objectification",
+      "description": "The meme relies on the concept of animal objectification — reducing animals to mere objects or sexualized entities for comedic or provocative effect. This is a real-world social phenomenon and a form of cultural critique or humor that can be offensive to some audiences due to its degrading portrayal of animals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization",
+      "label": "Hypersexualization",
+      "description": "The phrase 'pretty goat women' implies a hypersexualized portrayal of animals, which is a real-world concept often used in derogatory or fetishistic contexts. This concept is part of broader societal issues around sexualizing non-human entities and is considered harmful or offensive by many.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "heaven_concept",
+      "label": "Concept of Heaven",
+      "description": "The phrase 'in heaven' references the religious or cultural concept of heaven — a place of eternal peace, reward, or paradise. This concept is not visible in the image but is essential to understanding the meme’s absurd and surreal premise, which juxtaposes a mundane animal with a divine setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pasture_concept",
+      "label": "Pasture as a Symbolic Space",
+      "description": "The phrase 'huge pasture' references the real-world concept of a pasture — a grassy field for grazing animals. In the context of the meme, it is used metaphorically to imply a utopian or idyllic setting, which is a common trope in fantasy or humorous imagery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "humor",
+      "label": "humorous expression",
+      "description": "The goat's open-mouthed, expressive face, combined with the absurd and surreal text about 'heaven' and 'pretty goat women,' creates a comedic and whimsical emotional tone. The anthropomorphism of the goat speaking adds to the humorous intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Goat is mapped as a speaker in heaven",
+      "description": "The visual entity 'goat' is mapped onto the textual concept of 'speaking in heaven'. The goat's open mouth and expressive face, combined with the text 'i hear in heaven', create an analogical mapping where the goat is portrayed as the entity that is 'hearing' or 'speaking' from heaven. This mapping is reinforced by the surreal context of the text, which positions the goat as a participant in a heavenly scenario, even though it is an animal. The goat's anthropomorphic expression contributes to the humorous and absurd intent of the meme, aligning with the text's implication that the goat is the one 'hearing' or 'saying' the phrase.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the goat as the speaker in heaven",
+      "description": "The user is projected onto the visual entity 'goat' which is anthropomorphized as speaking or singing in a heavenly context. The goat's open mouth and expressive face, combined with the text 'i hear in heaven', create an implicit identification where the viewer imagines themselves as the goat experiencing or reporting this heavenly vision. This projection is reinforced by the surreal and humorous framing, allowing the user to identify with the goat's perspective and the absurd scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme relies on the concept of animal objectification — reducing animals to mere objects or sexualized entities for comedic or provocative effect. This is a real-world social phenomenon and a form of cultural critique or humor that can be offensive to some audiences due to its degrading portrayal of animals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is likely individuals who appreciate absurdist humor, surreal imagery, and internet meme culture. The meme relies on anthropomorphizing an animal (goat) and juxtaposing it with a fantastical, sexually suggestive scenario ('pretty goat women' in heaven), which appeals to audiences familiar with meme tropes that use shock value, absurdity, and hypersexualization for comedic effect. The audience may also include those who engage with or enjoy content that pushes boundaries of taste or appropriateness, often found in online communities that value edgy or provocative humor. The meme’s reliance on animal objectification and hypersexualization suggests it is designed for an audience that either finds such content amusing or is desensitized to its potentially offensive nature, possibly including younger internet users or those in subcultures that prioritize novelty over social norms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/52168.png",
+    "image_name": "52168.png",
+    "extraction_timestamp": "2025-12-16T04:31:02.529004",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

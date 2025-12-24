@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "derisive emotion",
+      "expressors": [
+        {
+          "entity": "surgeon",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "surgeon",
+          "relation": "emotionalRelationToEntity",
+          "to": "anti_black_stereotype"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":derisive_emotion :hasExpressor :surgeon .",
+    ":surgeon :emotionalRelationToEntity :anti_black_stereotype ."
+  ],
+  "triples_count": 2
+}

@@ -1,0 +1,185 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: just_got_a_bootleg_copy_of_muslim_porn_deep_goat; hasOverallIntent: hateful; overall-intent-description: The image depicts a close-up of a goat being bottle-fed, with overlaid text reading 'just got a bootleg copy of muslim porn' and 'deep goat'. The visual of the goat is juxtaposed with the text to create a derogatory and mocking association between goats and Muslims, implying that Muslims are 'goats' (a term often used in Islamophobic contexts to demean or dehumanize). The phrase 'deep goat' is a play on 'deep state' and 'goat', further reinforcing the stereotype. This meme uses animal imagery to demean a religious group, which falls under Islamophobic toxicity. The intent is to spread hate and ridicule by linking a religious group to an animal, which is a harmful and hateful act.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "just got a bootleg copy of muslim porn",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "goat",
+      "label": "animal",
+      "description": "A close-up of a young goat with white and black fur, blue eyes, and pink nose, being bottle-fed. The goat is the central visual element and is juxtaposed with the text to create a derogatory association.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "bottle_feeding_goat",
+      "label": "goat being bottle-fed",
+      "description": "A close-up scene of a young goat with white and black fur and blue eyes being bottle-fed by a pink bottle. The goat is the central participant, and the bottle is the object being used to feed it. The scene is framed to focus on the goat's face and mouth as it drinks.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "goat",
+          "relation": "isBeingFedBy",
+          "to": "bottle"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobic_stereotype_goat",
+      "label": "Islamophobic Stereotype: Associating Muslims with Goats",
+      "description": "The meme relies on a derogatory stereotype that equates Muslims with goats, which is a form of Islamophobic dehumanization. This stereotype is not visible in the image but is understood through real-world hate speech and discriminatory tropes. The term 'goat' is used pejoratively to demean Muslims, implying they are foolish, subservient, or animal-like. This is a known hate trope in Islamophobic discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "deep_state_meme",
+      "label": "Meme Play on 'Deep State' and 'Deep Goat'",
+      "description": "The phrase 'deep goat' is a satirical and mocking play on the term 'deep state,' which refers to a hypothetical powerful, hidden group of officials allegedly manipulating government policy. By replacing 'state' with 'goat,' the meme creates a crude, absurd, and degrading association, implying that Muslims are somehow 'deep' in a negative, animalistic way. This requires knowledge of political discourse and internet meme culture to understand the joke's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "bootleg_copy_concept",
+      "label": "Concept of 'Bootleg Copy' as Illegitimate or Low-Quality",
+      "description": "The phrase 'bootleg copy' refers to an unauthorized, often low-quality, imitation of a copyrighted or proprietary product. In this context, it is used humorously (and mockingly) to imply that the 'Muslim porn' is a cheap, fake, or inferior version. This requires understanding of copyright law and internet slang to interpret the joke's tone and context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "muslim_porn_stereotype",
+      "label": "Stereotype of 'Muslim Porn' as a Mocking Reference",
+      "description": "The phrase 'Muslim porn' is a deliberately offensive and false stereotype that implies Muslims are somehow associated with pornography, which is a common trope in Islamophobic hate speech. This is not visible in the image but is understood through real-world hate narratives and conspiracy theories that falsely link Muslims to sexual deviance or immorality. The phrase is used here to mock and demean Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The image expresses a hateful emotion through the juxtaposition of a goat being bottle-fed with the text 'just got a bootleg copy of muslim porn' and 'deep goat'. This creates a derogatory and mocking association between goats and Muslims, implying that Muslims are 'goats' (a term often used in Islamophobic contexts to demean or dehumanize). The phrase 'deep goat' is a play on 'deep state' and 'goat', further reinforcing the stereotype. This meme uses animal imagery to demean a religious group, which falls under Islamophobic toxicity. The intent is to spread hate and ridicule by linking a religious group to an animal, which is a harmful and hateful act.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Goat is mapped as 'Muslim' in the context of 'bootleg copy of muslim porn'",
+      "description": "The visual entity 'goat' is mapped onto the textual concept 'Muslim' through the phrase 'just got a bootleg copy of muslim porn'. The meme uses the goat as a visual stand-in for Muslims, creating a derogatory association. This is an analogical mapping where the goat (visual) represents the group being mocked (Muslims, textual).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the goat as a stand-in for Muslims",
+      "description": "The user is projected onto the visual material of the goat, which is being used as a dehumanizing stand-in for Muslims in the meme. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the meme's structure and intent create an implicit projection where the viewer (user) is positioned as the one who 'got' the bootleg copy, thereby identifying with the act of acquiring the offensive content. The goat, as the central visual entity, becomes the projected entity onto which the user's identity is implicitly mapped in the context of the hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobic Toxicity",
+      "description": "The meme uses the visual of a goat being bottle-fed to mock and demean Muslims by associating them with the term 'goat', which is a derogatory and dehumanizing stereotype in Islamophobic discourse. The text 'just got a bootleg copy of muslim porn' and 'deep goat' reinforces this by linking Muslims to animalistic and offensive imagery, creating a hateful and harmful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "Islamophobic audience",
+      "description": "The meme is designed for an audience that engages in or understands Islamophobic tropes, particularly those who recognize and find humor in derogatory stereotypes associating Muslims with goats and animalistic imagery. The target audience likely includes individuals familiar with internet meme culture who appreciate crude, offensive humor that relies on dehumanizing stereotypes, especially those mocking Muslims through the 'deep goat' and 'bootleg copy of muslim porn' phrases.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/84502.png",
+    "image_name": "84502.png",
+    "extraction_timestamp": "2025-12-19T15:08:18.066736",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

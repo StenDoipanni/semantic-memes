@@ -1,0 +1,217 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: removes_polish_with_chemicals_meme; hasOverallIntent: Harmful; overall-intent-description: The meme depicts a child on a scooter with motion blur, juxtaposed with text that contrasts two scenarios: 'removes polish with chemicals nobody bats an eye' and 'removes polish with chemicals everybody loses his shit.' The intent is to humorously highlight how societal reactions differ based on who is perceived as the 'offender' — implying that a child's actions are trivialized while an adult's similar actions are met with outrage. While not explicitly targeting any protected group, the meme relies on a harmful stereotype that equates children with innocence and adults with responsibility, potentially reinforcing the idea that children are inherently 'safe' or 'excused' for misbehavior, which can normalize a lack of accountability. The humor is derived from social hypocrisy, but the underlying message may subtly encourage leniency toward children's actions while amplifying societal judgment toward adults, which can be seen as harmful by promoting a double standard.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "removes polish with chemicals nobody bats an eye",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "child",
+      "label": "person",
+      "description": "A young child wearing a red helmet, black shirt, black shorts, and knee pads, riding a scooter with motion blur in the background. The child is the central focus of the image and is depicted in motion, suggesting activity and energy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "child_on_scooter",
+      "label": "child riding scooter",
+      "description": "A child wearing a red helmet, black shirt, black shorts, and knee pads is riding a scooter with motion blur, indicating movement. The child is the central focus of the image, positioned in the middle ground of the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "child_innocence_stereotype",
+      "label": "Child Innocence Stereotype",
+      "description": "The meme relies on the widespread cultural stereotype that children are inherently innocent and therefore excused for misbehavior or rule-breaking, while adults are held to higher standards and face greater social consequences for similar actions. This stereotype is used to highlight the double standard in societal reactions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "child_on_scooter",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "adult_responsibility_stereotype",
+      "label": "Adult Responsibility Stereotype",
+      "description": "The meme implicitly references the societal expectation that adults are responsible for their actions and should be held accountable for rule-breaking or harmful behavior, contrasting this with the perceived leniency afforded to children. This stereotype is used to underscore the hypocrisy in social reactions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "child_on_scooter",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_double_standard",
+      "label": "Social Double Standard",
+      "description": "The meme critiques the social phenomenon where the same behavior is judged differently based on the perceived social role or status of the actor — in this case, a child versus an adult. This concept is central to understanding the humor and underlying message of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "child_on_scooter",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "polish_removing_action",
+      "label": "Polish Removing Action",
+      "description": "The meme references the specific action of removing polish (likely car or furniture polish) with chemicals, which is a real-world activity that can be considered vandalism or damage. The meme uses this as a neutral example to contrast societal reactions based on the actor's perceived age or status.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "child_on_scooter",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "societal_outrage",
+      "label": "Societal Outrage",
+      "description": "The meme references the concept of 'everybody loses his shit' — a colloquial expression for intense public outrage or reaction — which is a real-world social phenomenon. This is used to contrast the mild reaction to a child's actions with the intense reaction to an adult's similar actions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "child_on_scooter",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "motion_blur_visual_effect",
+      "label": "Motion Blur Visual Effect",
+      "description": "The image uses motion blur to convey speed and energy, which is a common photographic technique. While not directly related to the meme's message, this visual effect is part of the image's composition and helps to emphasize the child's active, carefree state, reinforcing the stereotype of childhood innocence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_on_scooter",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "innocence",
+      "label": "childhood innocence expression",
+      "description": "The child's active, carefree motion and protective gear (helmet, knee pads) combined with the motion blur convey a sense of youthful energy and perceived innocence, reinforcing the stereotype that children are excused for misbehavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Child innocence mapped to mild societal reaction",
+      "description": "The top text 'removes polish with chemicals nobody bats an eye' is analogically mapped onto the visual entity 'child_on_scooter'. The child, depicted in motion with protective gear and youthful energy, represents the 'innocent actor' whose actions (removing polish) are trivialized by society. The visual material of the child embodies the stereotype of childhood innocence, which the text explicitly references by stating that 'nobody bats an eye' — implying societal leniency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the child_on_scooter scene as the innocent actor",
+      "description": "The user is projected onto the visual entity 'child_on_scooter' as the embodiment of the 'innocent actor' whose actions (removing polish with chemicals) are trivialized by society ('nobody bats an eye'). This projection is implicit, drawing on the cultural stereotype of childhood innocence and the meme's contrast with the adult scenario. The user identifies with the child's perceived exemption from social consequences, which is the core of the meme's humor and message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme promotes a harmful double standard by trivializing a child's misbehavior while amplifying societal outrage toward adults for similar actions, potentially normalizing lack of accountability for children and reinforcing a damaging stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience familiar with internet humor, social commentary, and the concept of double standards. It leverages widely understood cultural stereotypes about childhood innocence versus adult responsibility, making it relatable to viewers who recognize and appreciate the irony in societal hypocrisy. The visual of a child on a scooter is universally recognizable and evokes a sense of carefree energy, which aligns with the meme's message. The text references common internet expressions like 'nobody bats an eye' and 'everybody loses his shit,' indicating the target audience is likely digitally native and familiar with casual, meme-based language. The humor is derived from a social observation rather than a specific demographic, making it accessible to a wide range of users across different age groups and backgrounds who engage with online content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/05984.png",
+    "image_name": "05984.png",
+    "extraction_timestamp": "2025-12-15T12:41:11.802245",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

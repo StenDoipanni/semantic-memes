@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: karen_cat_meme; hasOverallIntent: Abusive; overall-intent-description: The image depicts a cat standing on its hind legs with paws raised, appearing to shout or scream, overlaid with the text 'karen' at the top and 'get your shit together' at the bottom. This meme uses the visual of an expressive, seemingly angry cat to symbolize a person (typically a woman) perceived as overly demanding, confrontational, or unreasonable — often in a public or workplace setting. The intent is to mock and ridicule such individuals, particularly those who are stereotyped as 'karens' — a term used pejoratively to describe people who are seen as entitled, aggressive, or demanding in ways that are considered unreasonable or disruptive. The meme's overall intent is abusive, as it targets a specific group (often women) with derogatory and demeaning language, using the cat's exaggerated expression to amplify the insult. The phrase 'get your shit together' is a vulgar, dismissive command that reinforces the hostile tone. While not explicitly targeting protected characteristics like race, gender, or sexual orientation in a discriminatory way, it does rely on a harmful stereotype — the 'karen' trope — which is rooted in misogynistic and classist assumptions about women who are perceived as overly emotional or entitled. The meme functions as a form of social ridicule and can contribute to a hostile environment by reinforcing negative stereotypes and potentially inciting harassment or bullying toward individuals who are labeled 'karens'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "karen",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "cat",
+      "label": "dominant visual subject",
+      "description": "A tabby cat with brown and black fur and white markings on its chest and paws, standing upright on its hind legs in a snowy environment. The cat has its front paws raised high, mouth open as if screaming or yelling, conveying an exaggerated expression of anger or frustration. This posture and expression are central to the meme's visual metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "angry_cat_scene",
+      "label": "cat_yelling_scene",
+      "description": "A tabby cat standing upright on its hind legs in a snowy environment, with its front paws raised high and mouth open as if screaming or yelling, conveying an exaggerated expression of anger or frustration. The scene is overlaid with text at the top and bottom.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "cat",
+          "relation": "yelling_at",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "karen_stereotype",
+      "label": "Karen Stereotype",
+      "description": "A derogatory stereotype referring to a woman (often white, middle-class, or upper-middle-class) perceived as entitled, aggressive, or unreasonable, particularly in public or service settings. The term is used pejoratively to describe individuals who are seen as demanding, confrontational, or overly assertive — often in ways that are considered disruptive or unreasonable. The stereotype is rooted in misogynistic and classist assumptions about women who are perceived as overly emotional or entitled.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "get_your_shit_together_phrase",
+      "label": "Get Your Shit Together Phrase",
+      "description": "A vulgar, dismissive, and confrontational command used to express frustration or anger, often directed at someone perceived as irresponsible, disorganized, or emotionally unstable. In the context of this meme, it reinforces the hostile tone and serves as a mocking retort to the 'karen' stereotype, implying the person should calm down or behave more rationally.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "A system of prejudice and discrimination against women, often manifesting as the belief that women are inferior to men in intelligence, competence, or emotional stability. The 'karen' stereotype is rooted in misogynistic assumptions that women are overly emotional, entitled, or irrational — particularly when they assert themselves in public or professional spaces. This meme relies on such stereotypes to mock and demean its target.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_ritual_of_public_complaint",
+      "label": "Social Ritual of Public Complaint",
+      "description": "A cultural phenomenon where individuals (often women) are perceived as engaging in public, confrontational complaints — typically in service settings or public spaces — that are seen as unreasonable or disruptive. This behavior is often exaggerated or stereotyped, and the 'karen' meme uses the cat's exaggerated expression to symbolize this perceived social ritual.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "angry_cat_visual_metaphor",
+      "label": "Angry Cat Visual Metaphor",
+      "description": "A visual trope where an expressive, often anthropomorphized animal (in this case, a cat) is used to represent human emotions or behaviors — particularly anger, frustration, or aggression. The cat's posture (standing on hind legs, paws raised, mouth open) is exaggerated to mimic human shouting or yelling, serving as a humorous or mocking visual stand-in for a human character. This metaphor is central to the meme’s humor and intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "anger",
+      "label": "angry emotion expression",
+      "description": "The cat is standing upright on its hind legs with front paws raised high and mouth open in a screaming or yelling posture, conveying an exaggerated expression of anger or frustration. This visual gesture is central to the meme's metaphor of a confrontational or aggressive person.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "karen_cat_mapping",
+      "label": "The cat is mapped as 'karen'",
+      "description": "The text 'karen' at the top of the image is explicitly mapped onto the visual entity of the cat. The cat's exaggerated posture and expression — standing on hind legs, paws raised, mouth open as if screaming — are used as a visual metaphor to represent the 'karen' stereotype. This mapping is central to the meme's intent, equating the cat's angry expression with the perceived behavior of a 'karen'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the 'karen' stereotype via the angry cat visual metaphor",
+      "description": "The user is projected onto the 'karen' stereotype, which is visually represented by the angry cat. The text 'karen' at the top explicitly labels the cat as embodying this stereotype, and the phrase 'get your shit together' at the bottom is directed at the cat (and by extension, the 'karen' it represents). The user sees themselves or others as the target of this mockery, projecting their own identity or perception onto the cat as the 'karen' figure. The projection is onto the VisualMaterial entity 'cat' and the TextualMaterial entity 'top_text' (karen), which together form the core of the meme's metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Abusive",
+      "description": "The meme uses the visual of an angry cat to mock and ridicule individuals labeled as 'karens', employing derogatory and demeaning language ('get your shit together') to target a specific group (often women) with harmful stereotypes rooted in misogyny. The overall intent is abusive as it functions as social ridicule and can contribute to a hostile environment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "karen_stereotype",
+      "label": "Target Audience",
+      "description": "The meme is designed for an audience familiar with and critical of the 'karen' stereotype — typically individuals who perceive or have encountered people (often women) seen as entitled, aggressive, or unreasonable in public or service settings. The target audience likely includes those who use or enjoy internet humor rooted in social ridicule, particularly those who identify with or mock the 'karen' trope, which is rooted in misogynistic and classist assumptions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/74312.png",
+    "image_name": "74312.png",
+    "extraction_timestamp": "2025-12-19T12:05:29.672275",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

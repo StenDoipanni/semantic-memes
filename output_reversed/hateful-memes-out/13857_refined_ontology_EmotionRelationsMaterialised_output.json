@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "threatening_anger_emotion",
+      "expressors": [
+        {
+          "entity": "police_officer",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "police_officer",
+          "relation": "emotionalRelationToEntity",
+          "to": "civilian_targeting"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":threatening_anger_emotion :hasExpressor :police_officer .",
+    ":police_officer :emotionalRelationToEntity :civilian_targeting ."
+  ],
+  "triples_count": 2
+}

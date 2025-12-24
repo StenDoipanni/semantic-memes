@@ -1,0 +1,285 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: islam's trojan horse; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes a photo of Barack Obama with a photo of a Sikh man wearing a turban, using the text 'islam's trojan horse' and quotes attributed to Obama to imply that Obama is secretly aligned with Islam or is a Muslim. This is a harmful and hateful stereotype that equates Islam with terrorism or extremism, and it uses the image of a Sikh man (who is visibly wearing a turban, a religious symbol) to reinforce the false association between Islam and the Sikh community. The meme is designed to incite fear and prejudice against Muslims and Sikhs, and it promotes Islamophobia by suggesting that Obama is a 'Trojan horse' for Islamic influence. The meme also contains false and misleading claims about Obama's statements, which are used to manipulate viewers into believing that Obama is secretly supporting Islam, which is a direct attack on his identity and political integrity. The overall intent of the meme is to spread hate and misinformation, and it is intended to provoke fear and division among viewers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text",
+      "description": "islam's trojan horse",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "left_text",
+      "label": "left text",
+      "description": "the only truth obama has told to america",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "right_text",
+      "label": "right text",
+      "description": "the reason obama to support america",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "quote_text",
+      "label": "quote text",
+      "description": "\"i will stand with themuslims should the political winds shift in an ugly direction.\" -barack hussein obama",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Barack_Obama",
+      "label": "Former U.S. President",
+      "description": "A portrait of Barack Obama, the 44th President of the United States, shown in a suit and tie, with text attributing a quote to him and labeling him as 'islam's trojan horse' and 'the only truth obama has told to america'. The image uses his likeness to promote a hateful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "juxtaposed_portraits",
+      "label": "juxtaposed_portraits",
+      "description": "The scene presents two distinct portraits stacked vertically: the top portrait features Barack Obama with text attributing a quote to him and labeling him as 'islam's trojan horse' and 'the only truth obama has told to america', while the bottom portrait features a Sikh man wearing a turban with a name tag that reads 'HELLO my name is'. The spatial arrangement creates a visual contrast intended to imply a connection or comparison between the two individuals, despite their different identities and contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Barack_Obama",
+          "relation": "is_juxtaposed_with",
+          "to": "Sikh_man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The meme relies on the harmful stereotype that Muslims are inherently associated with terrorism or extremism, and that political figures can be 'Trojan horses' for Islamic influence. This stereotype is used to incite fear and prejudice against Muslims and is a core component of the meme's hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "left_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "right_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "quote_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sikh_community_stereotype",
+      "label": "Sikh Community Stereotype",
+      "description": "The meme falsely equates the Sikh community (represented by the man in the turban) with Islam, using the turban as a visual symbol to reinforce the false association. This is a form of religious stereotyping that conflates Sikh identity with Muslim identity, which is a common tactic in Islamophobic rhetoric.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "juxtaposed_portraits",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "barack_obama_identity",
+      "label": "Barack Obama's Identity",
+      "description": "The meme misrepresents Barack Obama's identity and political stance by attributing a fabricated quote and labeling him as 'islam's trojan horse'. This requires knowledge of Obama's actual religious beliefs (Christian) and political record to understand the falsehood and the intent to discredit him.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "quote_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "false_quote_attributed_to_obama",
+      "label": "False Quote Attributed to Obama",
+      "description": "The quote 'I will stand with themuslims should the political winds shift in an ugly direction.' is a fabricated statement. It requires knowledge of Obama's actual public statements and speeches to understand that this is a deliberate falsehood used to manipulate viewers and smear his character.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "quote_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "turban_as_religious_symbol",
+      "label": "Turban as Religious Symbol",
+      "description": "The turban worn by the Sikh man is a religious symbol of Sikhism, not Islam. The meme's intent to equate the turban with Islam requires understanding the cultural and religious significance of the turban to recognize the false association being made.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "juxtaposed_portraits",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "trojan_horse_metaphor",
+      "label": "Trojan Horse Metaphor",
+      "description": "The term 'Trojan horse' is used metaphorically to imply deception or hidden danger. In this context, it suggests that Obama is secretly working to undermine America for Islamic interests. This metaphor requires understanding its historical and cultural connotations to grasp the meme's intended meaning.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_in_political_discourse",
+      "label": "Islamophobia in Political Discourse",
+      "description": "The meme is an example of how Islamophobia is often weaponized in political discourse to create fear and division. It uses false claims and stereotypes to attack a political figure and promote a narrative of 'Islamic threat' to the United States.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The overall emotion expressed by the meme is hate, conveyed through the use of derogatory metaphors, false claims, and the juxtaposition of images to incite fear and prejudice against Muslims and Sikhs. The text 'islam's trojan horse' and the false quote attributed to Obama are designed to provoke anger and hostility toward Obama and by extension, Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Barack Obama is mapped as 'islam's trojan horse'",
+      "description": "The top text 'islam's trojan horse' is directly mapped onto the visual of Barack Obama, implying he is secretly aligned with Islam or is a Muslim. This is a hateful stereotype that equates Islam with terrorism or extremism, and uses Obama's image to promote this false association.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene through the hateful framing of the meme",
+      "description": "The user is not explicitly projected onto a specific visual, textual, or scene element via deictic pronouns like 'you' or 'me'. However, the meme's overall intent and structure create an implicit projection: the viewer is positioned as the recipient of the hateful message, being manipulated into seeing the juxtaposed portraits and text as a coherent, damning narrative about Obama and Islam. The user is thus projected onto the entire scene ('juxtaposed_portraits') as the intended audience for the false equivalence and fear-mongering. The user is implicitly 'you' — the one being shown the 'truth' (according to the meme) that Obama is 'islam's trojan horse' — making the user a passive recipient of the projection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Barack Obama by falsely labeling him as 'islam's trojan horse' and attributing a fabricated quote to him, which is a hateful stereotype that equates Islam with terrorism or extremism. It also falsely equates the Sikh community (represented by the man in the turban) with Islam, using the turban as a visual symbol to reinforce the false association. This is a direct attack on individuals based on their religious identity and political affiliation, promoting Islamophobia and hate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold or are susceptible to Islamophobic beliefs, particularly those who distrust or fear political figures like Barack Obama, and who may be influenced by conspiracy theories or false narratives about Muslim influence in politics. The meme is designed to appeal to viewers who are already predisposed to view Islam as a threat to Western values, and who may be seeking confirmation of their fears through sensationalized and misleading imagery. The use of the 'Trojan horse' metaphor and the false quote attributed to Obama are intended to resonate with audiences who believe in political deception or hidden agendas. Additionally, the meme may target those who are unfamiliar with Sikh identity or religious symbols, exploiting ignorance to reinforce the false association between Sikhism and Islam. The overall intent is to incite fear and division, particularly among communities that are already politically or culturally polarized.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/87120.png",
+    "image_name": "87120.png",
+    "extraction_timestamp": "2025-12-19T16:15:09.716486",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 19,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

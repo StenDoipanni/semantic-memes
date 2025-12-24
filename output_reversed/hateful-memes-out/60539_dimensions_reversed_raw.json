@@ -1,0 +1,261 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: mandatory_vaccinations_no_exemptions; hasOverallIntent: Propaganda; overall-intent-description: The image juxtaposes a historical photograph of Adolf Hitler giving a speech with the text 'mandatory vaccinations \"no exemptions\"'. This is a propagandistic meme that uses the visual association of Hitler with authoritarian control and mass coercion to imply that mandatory vaccination policies are inherently oppressive or totalitarian. The intent is to evoke fear or resistance toward vaccination mandates by invoking the historical association of totalitarian regimes with forced compliance, thereby attempting to influence public opinion or behavior toward vaccine policies. The meme is harmful as it equates a public health measure with historical atrocities, potentially undermining trust in medical science and public health institutions. It is also hateful as it uses a symbol of genocide and oppression to attack a modern policy, and it is abusive in its implication that any form of mandatory vaccination is inherently evil or tyrannical. The meme is not targeted at a specific racial, gender, or sexual orientation group, but rather uses a historical figure to attack a policy, making it a form of political propaganda with harmful consequences.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "mandatory vaccinations \" no exemptions",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Adolf_Hitler",
+      "label": "historical figure",
+      "description": "A man in a military-style uniform with a raised right fist, appearing to be giving a speech. He is the central subject of the image, positioned in the foreground, and is identifiable as Adolf Hitler, the leader of Nazi Germany. His expression is intense and his posture is characteristic of his public appearances.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "propaganda_scene",
+      "label": "propaganda_scene",
+      "description": "A scene depicting a historical photograph of Adolf Hitler giving a speech, overlaid with text that reads 'mandatory vaccinations \"no exemptions\"'. The scene is designed to evoke a propagandistic message by associating mandatory vaccination policies with authoritarian control and mass coercion, using Hitler as a symbol of oppression. The spatial arrangement places Hitler centrally in the foreground, with the text positioned at the top of the image, creating a visual hierarchy that emphasizes the message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Adolf_Hitler",
+          "relation": "gives_speech_to",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Nazi_Germany",
+      "label": "Nazi Germany",
+      "description": "The historical regime led by Adolf Hitler, characterized by totalitarian control, racial persecution, and mass coercion, which is implicitly referenced through the image of Hitler and the propagandistic tone of the meme. This context is essential to understand the meme's association of mandatory vaccination with authoritarian oppression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "propaganda_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mandatory_vaccination_policy",
+      "label": "Mandatory vaccination policy",
+      "description": "A public health policy requiring individuals to receive specific vaccinations, often for disease prevention. This concept is the subject of the meme's text and is juxtaposed with the historical figure of Hitler to evoke fear or resistance, relying on external knowledge of modern public health practices.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "propaganda_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_vaccine_propaganda",
+      "label": "Anti-vaccine propaganda",
+      "description": "A form of misinformation or disinformation that seeks to undermine public trust in vaccines and vaccination mandates, often using fear, conspiracy theories, or historical analogies to discredit public health measures. This is the broader context of the meme’s intent and message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "propaganda_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "totalitarianism",
+      "label": "Totalitarianism",
+      "description": "A political system in which the state holds total authority over society and seeks to control all aspects of public and private life. This concept is implicitly referenced through the visual of Hitler and the meme’s intent to equate vaccination mandates with oppressive state control.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "propaganda_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "genocide",
+      "label": "Genocide",
+      "description": "The deliberate and systematic destruction of a racial, political, or cultural group. This is the historical context associated with Hitler and the Nazi regime, which the meme weaponizes to imply that mandatory vaccination is inherently evil or tyrannical.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "propaganda_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_semitism",
+      "label": "Anti-Semitism",
+      "description": "A form of prejudice and discrimination against Jewish people, historically associated with Hitler and the Nazi regime. The meme uses this stereotype to evoke fear and hatred toward vaccination policies, implying that such policies are part of a broader pattern of oppression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "propaganda_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "public_health",
+      "label": "Public health",
+      "description": "The science and practice of protecting and improving the health of populations. This is the domain in which mandatory vaccination policies operate, and the meme attempts to delegitimize this field by associating it with historical atrocities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "propaganda_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_propaganda",
+      "label": "Historical propaganda",
+      "description": "The use of media and imagery to promote a political or ideological agenda, often through manipulation or distortion of facts. This is the method used in the meme, which leverages the historical image of Hitler to promote a modern political message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "propaganda_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "fear",
+      "label": "fear induced by association with totalitarian oppression",
+      "description": "The emotion of fear is evoked through the juxtaposition of Adolf Hitler's intense, authoritarian expression and gesture with the text 'mandatory vaccinations \"no exemptions\"'. The visual of Hitler, a symbol of historical totalitarianism and genocide, is used to imply that mandatory vaccination policies are inherently oppressive or tyrannical, thereby inducing fear in the viewer regarding the potential loss of personal freedom or autonomy under such policies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "mandatory vaccinations are equated with Hitler's authoritarian regime",
+      "description": "The text 'mandatory vaccinations \"no exemptions\"' is mapped onto Adolf Hitler's image, implying that mandatory vaccination policies are as oppressive and totalitarian as the regime he led. This is a direct analogical mapping where the policy is projected onto the historical figure as a symbol of coercion and control.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message as the target of the meme's rhetorical accusation",
+      "description": "The user is implicitly projected onto the text 'mandatory vaccinations \"no exemptions\"' as the intended recipient of the meme's message. The meme frames the user as someone who might be subject to or support such a policy, and thus is being warned or condemned by the visual association with Hitler. The projection is not explicit (e.g., no 'you' or 'me' text), but is implied through the rhetorical structure: the user is positioned as the potential target of the policy being equated with totalitarianism. The user is projected onto the textual material as the subject of the meme's fear-based argument.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme equates mandatory vaccination policies with the totalitarian regime of Adolf Hitler, which has the potential to cause harm by undermining public trust in medical science and public health institutions, and by promoting fear and resistance toward necessary public health measures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "anti-vaccine activists",
+      "description": "The meme is designed to resonate with individuals who oppose mandatory vaccination policies, using historical association with totalitarianism to frame vaccination mandates as oppressive and coercive. This audience is likely motivated by distrust in public health institutions and may be influenced by conspiracy theories or fear-based messaging.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/60539.png",
+    "image_name": "60539.png",
+    "extraction_timestamp": "2025-12-16T06:49:45.920480",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

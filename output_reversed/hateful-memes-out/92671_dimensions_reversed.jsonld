@@ -1,0 +1,172 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_818b3283",
+  "@type": "AnalysisDocument",
+  "title": "92671.png - Dimension Analysis",
+  "created": "2025-12-19T17:40:24.983786",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_f672a8b2",
+    "@type": "Image",
+    "filename": "92671.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/92671.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/92671.png",
+    "image_name": "92671.png",
+    "extraction_timestamp": "2025-12-19T17:38:41.007667",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5f089321",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a doctor speaking to a Black patient in a hospital bed, with overlaid text reading 'looking at you your condition is improving.' The scene is benign and appears to be a standard medical interaction. However, the text is intentionally misleading and potentially harmful because it implies the patient is being evaluated based on their appearance rather than their medical condition. This creates a subtle but damaging stereotype that associates Black people with being 'seen' or 'evaluated' based on superficial traits rather than their actual health status. This aligns with anti-Black stereotypes that reduce Black individuals to physical appearance or caricature, suggesting they are being judged or perceived as 'improving' based on how they look rather than objective medical metrics. The meme's intent is to create a humorous or ironic effect by juxtaposing the clinical setting with a racially charged, potentially demeaning implication, which can reinforce harmful biases and contribute to systemic racism in healthcare by subtly suggesting that Black patients are being judged on appearance rather than medical need. The overall intent is harmful because it normalizes and potentially perpetuates racial bias in a medical context, even if unintentionally.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_818b3283"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_20d5e129",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "looking at you your condition is improving",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_818b3283"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b389596f",
+      "@type": "VisualMaterial",
+      "instance_name": "doctor",
+      "label": "male healthcare professional",
+      "description": "An older, balding man with glasses and a beard, wearing a white lab coat over green scrubs, holding a tablet computer. He is standing beside the hospital bed, looking down at the patient with a neutral or slightly concerned expression. His stethoscope is draped around his neck. He is the central figure in the medical interaction.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_818b3283"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a3024f09",
+      "@type": "Scene",
+      "instance_name": "medical_consultation",
+      "label": "Doctor consulting with patient",
+      "description": "A doctor is standing beside a hospital bed, holding a tablet, and appears to be speaking to a patient lying in the bed. The scene depicts a typical medical consultation setting with a focus on the interaction between the healthcare provider and the patient.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_818b3283"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e320ca0c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_appearance_based_evaluation",
+      "label": "Anti-Black Stereotype: Appearance-Based Evaluation",
+      "description": "The meme relies on the harmful stereotype that Black individuals are often judged or evaluated based on their physical appearance rather than their actual medical condition or needs. This stereotype is rooted in systemic racism and can lead to biased medical care, where Black patients may be perceived as 'improving' based on superficial traits rather than objective clinical metrics. The text 'looking at you your condition is improving' implies this very notion, suggesting the doctor is assessing the patient's 'look' rather than their health status, which is a racially charged and demeaning implication.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_818b3283"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6afda3fc",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racism_in_healthcare",
+      "label": "Racism in Healthcare",
+      "description": "The meme implicitly references the broader social issue of racism within the healthcare system, where racial bias can influence medical decision-making and patient treatment. This includes the potential for implicit bias, where healthcare providers may unconsciously make judgments based on race, leading to disparities in care. The meme's harmful intent lies in normalizing this bias by framing it as a benign or humorous observation, thereby potentially reinforcing systemic racism in medical contexts.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_818b3283"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a7eead31",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_black_patients_as_superficially_evaluated",
+      "label": "Stereotype: Black Patients Are Superficially Evaluated",
+      "description": "This stereotype suggests that Black patients are often perceived or evaluated based on how they look — such as their skin tone, facial features, or physical demeanor — rather than their actual medical symptoms or clinical data. This is a form of racial stereotyping that can lead to misdiagnosis, inadequate treatment, or dismissal of legitimate medical concerns. The meme's text directly invokes this stereotype by implying the doctor is assessing the patient's 'look' to determine improvement, which is both inaccurate and demeaning.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_818b3283"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4e2adbe2",
+      "@type": "EmotionExpression",
+      "instance_name": "racist_implication",
+      "label": "racist implication emotion",
+      "description": "The emotion expressed is a harmful, racially charged implication that the patient's condition is being judged based on superficial appearance rather than medical metrics. This is conveyed through the text overlay, which suggests the doctor is evaluating the patient's 'look' to determine improvement, invoking a stereotype that reduces Black individuals to physical appearance.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_818b3283"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b2c7fd39",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Doctor's evaluation is mapped onto the patient's appearance",
+      "description": "The text 'looking at you your condition is improving' implies that the doctor is assessing the patient's condition based on how they look, rather than objective medical metrics. This creates an analogical mapping where the visual entity 'patient' (specifically, their physical appearance) is being mapped onto the textual concept of 'condition improving' as judged by superficial observation. This mapping reinforces the harmful stereotype that Black patients are evaluated based on appearance rather than medical need.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_818b3283"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_be2b0854",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the patient via the text's deictic reference",
+      "description": "The user is projected onto the patient (the Black man in the hospital bed) through the deictic pronoun 'you' in the overlaid text 'looking at you your condition is improving'. This creates a direct semiotic projection where the viewer is positioned as the patient being evaluated based on appearance, reinforcing the harmful stereotype that Black patients are judged superficially. The projection is onto the VisualMaterial entity 'patient' via the TextualMaterial entity 'text_chunk'.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_818b3283"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5bcf0078",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme implies that the patient's medical condition is being evaluated based on superficial appearance rather than objective clinical metrics, reinforcing a harmful anti-Black stereotype that reduces Black individuals to physical appearance. This can contribute to systemic racism in healthcare by normalizing biased perceptions.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_818b3283"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6cecbb32",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience familiar with or sensitive to racial stereotypes in healthcare, particularly those related to anti-Black racism. The target community includes individuals who may recognize the harmful implication of evaluating a Black patient's condition based on appearance rather than medical metrics, and who may be aware of systemic racism in healthcare. The meme likely appeals to those who find irony or humor in the juxtaposition of a clinical setting with racially charged stereotypes, though its intent is harmful and potentially reinforces biases. The audience may include internet users who engage with memes that play on social or racial tensions, particularly those who are aware of the 'appearance-based evaluation' stereotype and its implications in medical contexts.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_818b3283"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

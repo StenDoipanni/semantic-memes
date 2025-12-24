@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "Circus Performance Scene",
+      "participants": [
+        {
+          "entity": "audience",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "performers",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "audience",
+          "relation": "watching",
+          "to": "performers"
+        },
+        {
+          "from": "performers",
+          "relation": "performingFor",
+          "to": "audience"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":Circus_Performance_Scene :hasParticipant :audience .",
+    ":Circus_Performance_Scene :hasParticipant :performers .",
+    ":audience :watching :performers .",
+    ":performers :performingFor :audience ."
+  ],
+  "triples_count": 4
+}

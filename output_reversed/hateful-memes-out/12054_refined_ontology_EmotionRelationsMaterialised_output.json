@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "derisive emotion",
+      "expressors": [
+        {
+          "entity": "meme_image",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "transgender_community"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":derisive_emotion :hasExpressor :meme_image .",
+    ":meme_image :emotionalRelationToEntity :transgender_community ."
+  ],
+  "triples_count": 2
+}

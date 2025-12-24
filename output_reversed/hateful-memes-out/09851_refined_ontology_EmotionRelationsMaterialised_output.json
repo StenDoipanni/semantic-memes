@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "derisive emotion",
+      "expressors": [
+        {
+          "entity": "meme_text",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme_text",
+          "relation": "emotionalRelationToEntity",
+          "to": "person_being_addresed"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":derisive_emotion :hasExpressor :meme_text .",
+    ":meme_text :emotionalRelationToEntity :person_being_addresed ."
+  ],
+  "triples_count": 2
+}

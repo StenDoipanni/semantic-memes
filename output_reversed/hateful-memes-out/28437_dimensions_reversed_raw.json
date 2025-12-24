@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: they_can_kill_the_messenger_but_they_cant_kill_the_message; hasOverallIntent: Propaganda; overall-intent-description: The image depicts a silhouette of Jesus Christ on the cross against a dramatic sky, with the text 'they can kill the messenger but they can't kill the message.' This visual and textual combination is used to convey a message of enduring truth or moral conviction, often in the context of religious or political resistance. The overall intent is propagandistic, aiming to inspire resilience and reinforce the idea that oppressive forces cannot extinguish core beliefs or values. The imagery of crucifixion is symbolic of sacrifice and martyrdom, which is juxtaposed with the message to suggest that even in the face of persecution, the underlying truth remains unshakable. There is no toxicity present in this meme as it does not target any specific group based on protected characteristics, nor does it contain abusive, cyberbullying, harmful, hateful, misogynous, or other forms of toxicity. The intent is to motivate and affirm, not to attack or demean.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "they can kill the messenger",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Jesus_Christ",
+      "label": "silhouette of a person on a cross",
+      "description": "A dark silhouette of a person, identifiable as Jesus Christ, is depicted on a cross. The figure is shown in a crucifixion pose, with arms outstretched and head bowed, against a dramatic sky with clouds and sun rays. This is the central visual element and the most salient object in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "crucifixion_scene",
+      "label": "crucifixion_scene",
+      "description": "A scene depicting the crucifixion of Jesus Christ, with the figure silhouetted against a dramatic sky with clouds and sun rays. The scene is framed by text at the top and bottom conveying a message about enduring truth despite persecution.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Jesus_Christ",
+          "relation": "isDepictedOn",
+          "to": "cross"
+        },
+        {
+          "from": "text",
+          "relation": "isOverlaying",
+          "to": "Jesus_Christ"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "crucifixion",
+      "label": "Crucifixion of Jesus Christ",
+      "description": "The event depicted in the image is the crucifixion of Jesus Christ, a central event in Christianity. This event is not just a visual scene but a deeply rooted religious and historical event that carries theological significance. Understanding the meme requires knowledge of Christian doctrine, where Jesus' death is seen as a sacrifice for humanity's sins, and his resurrection as the triumph of life over death. The phrase 'they can kill the messenger' is a metaphorical reference to persecution of prophets or truth-tellers, which is historically and theologically linked to Jesus' own crucifixion as a 'messenger' of God's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Jesus_Christ",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "crucifixion_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "messenger_vs_message",
+      "label": "The 'messenger vs. message' metaphor",
+      "description": "This is a rhetorical and philosophical concept used to describe the distinction between the person conveying a message and the message itself. The phrase 'they can kill the messenger but they can't kill the message' is a common idiom used to assert that even if the bearer of a truth or idea is silenced, the truth or idea remains valid and enduring. This concept is often invoked in political, religious, and social contexts to defend ideas against persecution or censorship. It is not visible in the image but is essential to understanding the textual message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "crucifixion_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Christianity",
+      "label": "Christianity",
+      "description": "The meme relies on the foundational beliefs of Christianity, particularly the idea that Jesus Christ's death and resurrection are central to the faith. The image of Jesus on the cross is a powerful symbol in Christianity, representing sacrifice, redemption, and the triumph of good over evil. The message 'they can't kill the message' is interpreted by many Christians as referring to the enduring nature of the Gospel message, which is believed to be eternal and unchangeable. Understanding this requires knowledge of Christian theology and history.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Jesus_Christ",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "crucifixion_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "persecution_of_prophets",
+      "label": "Historical persecution of religious prophets and messengers",
+      "description": "The phrase 'they can kill the messenger' draws on historical and religious examples of prophets, reformers, and truth-tellers who were persecuted, killed, or silenced for speaking truths that challenged the status quo or powerful institutions. Examples include Jesus, Martin Luther King Jr., Mahatma Gandhi, and many others. This background knowledge is necessary to understand the metaphorical weight of the phrase in the context of the image, which uses Jesus as the 'messenger' who was killed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "crucifixion_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "resilience_and_enduring_truth",
+      "label": "Concept of enduring truth and resilience in the face of adversity",
+      "description": "This is a philosophical and cultural concept that underpins the meme's message. It refers to the idea that certain truths, values, or messages are so fundamental that they cannot be destroyed or erased, even if the people who convey them are silenced or killed. This concept is often invoked in political movements, religious communities, and social justice causes. The image of Jesus on the cross, combined with the text, visually and textually reinforces this idea of resilience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "crucifixion_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "resilience",
+      "label": "resilient emotion",
+      "description": "The emotion conveyed is one of steadfast endurance and unyielding conviction, symbolized by the crucifixion scene and reinforced by the text. The image and words together express the idea that truth or moral principles persist despite persecution or death of those who proclaim them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Jesus Christ as the messenger",
+      "description": "The visual entity 'Jesus_Christ' is mapped onto the textual entity 'messenger' in the phrase 'they can kill the messenger'. The crucifixion scene visually represents Jesus as the messenger who was killed, aligning with the metaphorical meaning of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the messenger metaphor",
+      "description": "The user is projected onto the 'messenger' role, as the text 'they can kill the messenger' implies a personal identification with the figure being persecuted. The visual of Jesus Christ on the cross, as the 'messenger', serves as a symbolic anchor for this projection, inviting the user to see themselves as a bearer of an unkillable message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "Christian audience",
+      "description": "The meme is designed for individuals who identify with or are familiar with Christian theology and symbolism. The central visual of Jesus Christ on the cross, combined with the textual message referencing 'the messenger' (Jesus) and 'the message' (the Gospel), directly appeals to Christian beliefs about sacrifice, resurrection, and the enduring nature of divine truth. The imagery and text are rooted in Christian doctrine, making it most resonant with Christian communities who interpret Jesus' crucifixion as a martyrdom for a message that cannot be silenced.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/28437.png",
+    "image_name": "28437.png",
+    "extraction_timestamp": "2025-12-15T20:34:56.001646",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

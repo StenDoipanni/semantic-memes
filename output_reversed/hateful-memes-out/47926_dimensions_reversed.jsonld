@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_d1648784",
+  "@type": "AnalysisDocument",
+  "title": "47926.png - Dimension Analysis",
+  "created": "2025-12-16T03:02:53.706000",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_8448842b",
+    "@type": "Image",
+    "filename": "47926.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/47926.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/47926.png",
+    "image_name": "47926.png",
+    "extraction_timestamp": "2025-12-16T03:01:21.068746",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_05aa6268",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: shiba_inu_meme_with_antisemitic_text; hasOverallIntent: Hateful; overall-intent-description: The image features a Shiba Inu dog with overlaid text that reads: 'the greatest gift of life is friendship' and 'and jews stole it and have removed it from me.' This juxtaposition of a cute, innocent-looking dog with antisemitic text is designed to evoke a false or exaggerated emotional response by implying that Jews are responsible for taking away friendship, which is a harmful and hateful stereotype. The meme uses the dog's expression to imply a sense of victimhood or sadness, which is then falsely attributed to Jews, thereby promoting antisemitic tropes. The overall intent is to spread hate and misinformation by associating a negative, harmful message with a popular, innocuous image, thus making the hateful content more palatable or shareable. This is a clear example of hateful content targeting a specific ethnic and religious group.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1648784"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_54ae01c8",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "the greatest gift of life is friendship",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1648784"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6cf2e833",
+      "@type": "VisualMaterial",
+      "instance_name": "Shiba_Inu_dog",
+      "label": "dog",
+      "description": "A Shiba Inu dog with a light brown and white coat, large upright ears, and a slightly smug or knowing expression. The dog is the central visual element and is positioned against a plain dark gray background. Its facial features, including the eyes and nose, are clearly visible and are the focal point of the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1648784"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b63e6426",
+      "@type": "Scene",
+      "instance_name": "antisemitic_meme_scene",
+      "label": "antisemitic_meme_with_shiba_inu",
+      "description": "A scene composed of a Shiba Inu dog positioned centrally against a plain dark gray background, overlaid with two lines of white text that deliver a hateful antisemitic message. The dog's expression is used to imply victimhood, which is falsely attributed to Jews in the text. The spatial arrangement places the dog as the focal point, with the text framing the message around it.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1648784"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_64edb75e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "antisemitic_stereotype",
+      "label": "Antisemitic Stereotype",
+      "description": "The meme relies on the harmful antisemitic stereotype that Jews are responsible for global conspiracies or theft of societal values, such as friendship. This is a well-documented form of antisemitism that falsely attributes blame to Jewish people for negative events or conditions, often rooted in historical persecution and modern conspiracy theories.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1648784"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_057044e8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "antisemitic_conspiracy_theory",
+      "label": "Antisemitic Conspiracy Theory",
+      "description": "The text 'and jews stole it and have removed it from me' references a common antisemitic trope that Jews control or manipulate global systems, including finance, media, or social structures. This is a form of antisemitic conspiracy theory that falsely claims Jewish people are responsible for societal problems or the loss of 'gifts' like friendship.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1648784"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bdc48e80",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "shiba_inu_meme_culture",
+      "label": "Shiba Inu Meme Culture",
+      "description": "The use of the Shiba Inu dog as a visual element in memes is part of internet meme culture. The dog's specific expression (often called 'Shiba Inu face' or 'doge') is frequently used to convey emotions like smugness, confusion, or victimhood. In this context, the dog's expression is leveraged to imply a false sense of victimhood, which is then falsely attributed to Jews in the text.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1648784"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fbdda98f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "antisemitic_tropes",
+      "label": "Antisemitic Tropes",
+      "description": "The meme employs antisemitic tropes such as the 'puppet master' imagery (implied by 'stole it and removed it from me') and the false accusation of dual loyalty or control over societal values. These tropes are used to dehumanize and vilify Jewish people, promoting hate and misinformation.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1648784"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f034980f",
+      "@type": "EmotionExpression",
+      "instance_name": "false_victimhood",
+      "label": "false expression of victimhood",
+      "description": "The Shiba Inu dog's facial expression, characterized by its slightly smug or knowing look, is misused to imply a sense of victimhood or sadness. This expression is falsely attributed to Jews in the text, creating a misleading emotional cue that promotes antisemitic tropes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1648784"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2fe20711",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The dog is mapped as the victim of stolen friendship",
+      "description": "The text 'and jews stole it and have removed it from me' explicitly attributes the loss of 'friendship' to 'jews' and implies that the speaker (the 'me') is the victim. The visual material, the Shiba Inu dog, is positioned as the focal point and its expression (false victimhood) is used to visually represent this victimized state. The dog is thus analogically mapped as the 'me' in the text, embodying the victimhood described in the text.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1648784"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_777c1b83",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the Shiba Inu dog as the victim",
+      "description": "The user is projected onto the Shiba Inu dog, which is visually and textually framed as 'me' in the antisemitic message. The text 'and jews stole it and have removed it from me' explicitly uses 'me' to refer to the speaker, and the dog's expression is used to visually represent this victimized state. The dog is analogically mapped as the 'me' in the text, embodying the victimhood described in the message. This projection leverages the dog's innocent appearance to imply a false sense of victimhood, which is then falsely attributed to Jews in the text, thereby making the hateful content more palatable or shareable.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1648784"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_65e004ac",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme contains antisemitic content that directly attacks Jewish people by falsely accusing them of stealing friendship and removing it from the speaker, which is a hateful stereotype.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1648784"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8e7ccd45",
+      "@type": "TargetCommunity",
+      "instance_name": "antisemitic_meme_scene",
+      "label": "antisemitic_meme_with_shiba_inu",
+      "description": "The intended audience is individuals who are exposed to or share antisemitic content online, particularly those who may be influenced by or sympathetic to antisemitic tropes and conspiracy theories. The meme leverages the popular 'Shiba Inu' meme culture to make the hateful message more palatable or shareable, targeting users familiar with internet meme formats. The audience is likely to include those who engage with or spread misinformation, hate speech, or conspiracy theories, particularly those who may be predisposed to antisemitic beliefs or who are unaware of the harmful nature of the content. The meme's design, using a cute dog to imply victimhood, is intended to evoke an emotional response that may be misattributed to the targeted group (Jews), thereby appealing to those who may be seeking simplistic explanations for complex social issues or who are influenced by antisemitic narratives.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1648784"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a yellow origami brain with the text 'when you have an 80 point iq but it's the highest in your village.' The overall intent is to humorously highlight the relatable experience of having above-average intelligence in a context where it is not recognized or valued, such as a small community. The meme uses the visual metaphor of a brain to represent intelligence, and the juxtaposition of the low IQ score with the high status within a village creates a comedic effect. While not explicitly targeting any specific group, it may unintentionally reinforce ableist stereotypes by mocking intellectual ability, which falls under the 'Harmful' category as it could potentially diminish the value of intelligence or make individuals feel inadequate. The meme is not abusive, cyberbullying, or hateful, but its humor may be perceived as dismissive of intellectual achievement in certain contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you have an 80 point iq but it's the highest in your village",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "origami_brain",
+      "label": "object",
+      "description": "A yellow origami sculpture shaped like a human brain, with geometric folds and facets, positioned centrally in the image. It is the primary visual element and serves as a metaphor for intelligence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "intelligence_metaphor_scene",
+      "label": "Scene of intelligence metaphor",
+      "description": "The scene depicts a yellow origami brain as a visual metaphor for intelligence, positioned centrally against a plain background. The text overlay provides context, humorously contrasting a low IQ score with high status in a small community. The spatial arrangement centers the origami brain, with the text positioned above it, creating a composition that emphasizes the brain as the focal point of the intelligence metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "origami_brain",
+          "relation": "isRepresentedBy",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "intelligence_mockery",
+      "label": "Intelligence Mockery",
+      "description": "The meme humorously mocks the concept of intelligence by juxtaposing a low IQ score (80) with the idea of being the 'highest in your village,' implying that intelligence is relative and context-dependent. This relies on the real-world stereotype that intelligence is often mocked or undervalued when it is not recognized as exceptional in a specific social or cultural context. The meme uses this stereotype to create humor by highlighting the absurdity of such a situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "intelligence_metaphor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "relative_intelligence_concept",
+      "label": "Relative Intelligence Concept",
+      "description": "The meme relies on the real-world understanding that intelligence is often perceived as relative within a specific community or social group. An IQ score of 80 is considered below average in many global contexts, but in a small village with limited education or exposure to advanced knowledge, it may be perceived as exceptionally high. This concept is central to the meme's humor and requires background knowledge about how intelligence is measured and perceived differently across cultures and social strata.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "intelligence_metaphor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "iq_score_context",
+      "label": "IQ Score Context",
+      "description": "The meme references the concept of IQ (Intelligence Quotient) as a standardized measure of cognitive ability. An IQ score of 80 is generally considered below average (average is 100), and the meme's humor stems from the contrast between this score and the implied social status of being the 'highest in your village.' This requires background knowledge about IQ scoring systems and their interpretation in different cultural and educational contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "intelligence_metaphor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "village_context",
+      "label": "Village Context",
+      "description": "The meme uses the concept of a 'village' to imply a small, close-knit community with limited exposure to diverse knowledge or advanced education. This context is crucial for understanding the humor, as it suggests that intelligence is not measured by global standards but by local norms. The background knowledge required includes understanding how social structures and educational opportunities vary in rural or isolated communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "intelligence_metaphor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism_stereotype",
+      "label": "Ableism Stereotype",
+      "description": "The meme implicitly references the ableist stereotype of mocking intellectual ability, which is categorized under 'Intelligence mockery' in the provided knowledge base. While the meme is not explicitly targeting any specific group, its humor may unintentionally reinforce ableist stereotypes by making light of intellectual achievement, which can be perceived as dismissive or demeaning in certain contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "intelligence_metaphor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "intellectual优越感",
+      "label": "优越感情绪",
+      "description": "一种因在特定环境中智力表现突出而产生的自豪或优越感，尽管在更广泛的社会标准中可能并不被认可。",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The text maps the concept of 'intelligence' to the origami brain",
+      "description": "The textual material 'when you have an 80 point iq but it's the highest in your village' explicitly refers to intelligence (via 'iq'), and this concept is visually represented by the origami brain, which is a common metaphor for the brain and thus intelligence. The mapping is established through the juxtaposition of the text describing intelligence and the visual object symbolizing it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material describing their relatable experience",
+      "description": "The user is projected onto the text_chunk 'when you have an 80 point iq but it's the highest in your village' because the phrase uses the second-person pronoun 'you', directly addressing the viewer and inviting them to identify with the situation. This creates a personal, relatable experience for the user, making them feel as if the scenario is about them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme humorously mocks the concept of intelligence by juxtaposing a low IQ score (80) with the idea of being the 'highest in your village,' implying that intelligence is relative and context-dependent. This relies on the real-world stereotype that intelligence is often mocked or undervalued when it is not recognized as exceptional in a specific social or cultural context. The meme uses this stereotype to create humor by highlighting the absurdity of such a situation. While not explicitly targeting any specific group, it may unintentionally reinforce ableist stereotypes by making light of intellectual achievement, which can be perceived as dismissive or demeaning in certain contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "individuals with above-average intelligence in small communities",
+      "description": "The meme targets individuals who possess an IQ score that is considered below average (e.g., 80) in a global or urban context but is perceived as exceptionally high within their local, often rural or isolated, community (e.g., a village). The humor arises from the relatable experience of feeling intellectually superior in a context where such ability is not recognized or valued, making it particularly resonant with people who have experienced this social dynamic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/17598.png",
+    "image_name": "17598.png",
+    "extraction_timestamp": "2025-12-15T17:03:55.763067",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

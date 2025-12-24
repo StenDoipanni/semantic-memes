@@ -1,0 +1,204 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: being_conjoined_isn_t_easy; hasOverallIntent: Harmful; overall-intent-description: The image depicts two conjoined twins, likely from a real-life context, surrounded by microphones from various media outlets, suggesting a press conference or public appearance. The overlaid text 'being conjoined isn't easy' is presented in a sarcastic or mocking tone, implying that the experience of being conjoined is somehow trivial or burdensome. This framing is harmful because it reduces a complex, often physically and emotionally challenging medical condition to a joke or a punchline, potentially trivializing the lived experience of conjoined twins. While not explicitly targeting a protected group with hate, the meme's intent is to mock a vulnerable condition, which can be seen as insensitive and potentially damaging to the dignity of those who live with such conditions. The overall intent is to elicit humor through the juxtaposition of the serious reality of conjoined twins with the dismissive, sarcastic text, which can be interpreted as a form of ableist humor that diminishes the gravity of their situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "being conjoined isn't easy",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "two_conjoined_twins",
+      "label": "people",
+      "description": "Two individuals who are conjoined at the chest, both wearing light-colored headscarves, seated side-by-side. Their facial expressions appear serious or weary, and they are surrounded by microphones from various media outlets, suggesting a press conference or public appearance. The image is framed to emphasize their physical connection and the media attention they are receiving.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "press_conference_scene",
+      "label": "press_conference",
+      "description": "A scene depicting two conjoined twins seated side-by-side at a press conference, surrounded by microphones from various media outlets. The twins appear serious or weary, and the image is framed to emphasize their physical connection and the media attention they are receiving. The overlaid text 'being conjoined isn't easy' adds a sarcastic or mocking tone to the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "two_conjoined_twins",
+          "relation": "surrounded_by",
+          "to": "microphones"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableist_humor",
+      "label": "Ableist Humor",
+      "description": "The meme uses sarcasm to trivialize the physical and emotional challenges faced by conjoined twins, reducing their lived experience to a joke. This is a form of ableist humor that mocks a medical condition and diminishes the dignity of those who live with it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "press_conference_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "conjoined_twins_condition",
+      "label": "Conjoined Twins Condition",
+      "description": "A rare congenital condition where two individuals are physically connected at birth. This condition often requires complex medical care, surgical interventions, and can involve significant physical and emotional challenges. The meme misrepresents this condition as trivial or easy, which is inaccurate and insensitive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "two_conjoined_twins",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "press_conference_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "media_attention_stereotype",
+      "label": "Media Attention Stereotype",
+      "description": "The image depicts conjoined twins surrounded by microphones from various media outlets, implying they are being sensationalized or treated as spectacle. This reflects a broader societal tendency to exploit or sensationalize rare medical conditions for public consumption, often reducing the individuals to their physical condition rather than their humanity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "press_conference_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "insensitive_joke",
+      "label": "Insensitive Joke",
+      "description": "The text 'being conjoined isn't easy' is presented in a sarcastic tone, implying that the condition is trivial or burdensome. This is an insensitive joke that mocks a vulnerable group and their physical reality, potentially causing harm to those who live with such conditions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "two_conjoined_twins",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "Ableism",
+      "description": "Ableism is the discrimination or social disadvantage faced by people with disabilities or medical conditions. The meme's intent to mock conjoined twins is a form of ableism, as it reduces their experience to a punchline and ignores the real challenges they face, which can be seen as a form of ableist humor that diminishes their dignity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "two_conjoined_twins",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "press_conference_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_sarcasm",
+      "label": "sarcastic mocking emotion",
+      "description": "The overlaid text 'being conjoined isn't easy' is presented in a sarcastic tone, implying that the condition is trivial or burdensome, which mocks the physical and emotional challenges faced by conjoined twins. This sarcastic expression is intended to elicit humor at the expense of their lived experience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'being conjoined isn't easy' is mapped onto the visual depiction of the two conjoined twins.",
+      "description": "The overlaid text 'being conjoined isn't easy' directly refers to the visual material of the two conjoined twins. The text creates an analogical mapping by attributing the experience of being conjoined to the individuals shown in the image. This mapping is sarcastic and mocking, implying that the condition is trivial or easy, which is a form of ableist humor that trivializes the real physical and emotional challenges faced by conjoined twins. The mapping is established through the direct textual reference to the visual subjects and the context of the press conference scene, which emphasizes their physical connection and media attention.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message as a source of judgment",
+      "description": "The user is projected onto the text 'being conjoined isn't easy', interpreting it as a statement that reflects their own perspective or judgment on the condition depicted. The sarcastic tone of the text invites the user to adopt the meme's dismissive attitude, projecting their own understanding (or mockery) onto the textual material. There are no explicit deictic pronouns like 'me' or 'you', but the framing of the text as a universal, judgmental statement creates an implicit projection of the user's viewpoint onto the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the lived experience of conjoined twins by presenting the text 'being conjoined isn't easy' in a sarcastic tone, reducing a complex medical condition to a joke. This can be seen as ableist humor that diminishes the dignity of those who live with such conditions and potentially causes harm to the community of conjoined twins or those who identify with their experience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience familiar with internet humor, sarcasm, and meme culture. The target community includes individuals who consume and share memes for comedic effect, often without considering the potential harm or sensitivity of the subject matter. The meme’s appeal lies in its ironic juxtaposition of a serious medical condition with dismissive text, which resonates with audiences who enjoy dark or edgy humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/94081.png",
+    "image_name": "94081.png",
+    "extraction_timestamp": "2025-12-19T18:06:44.389098",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

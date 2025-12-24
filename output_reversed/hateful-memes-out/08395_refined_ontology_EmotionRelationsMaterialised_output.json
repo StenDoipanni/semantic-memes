@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "the sad emotion",
+      "expressors": [
+        {
+          "entity": "child",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "emotionalRelationToEntity",
+          "to": "father"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":the_sad_emotion :hasExpressor :child .",
+    ":child :emotionalRelationToEntity :father ."
+  ],
+  "triples_count": 2
+}

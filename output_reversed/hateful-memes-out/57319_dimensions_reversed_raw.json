@@ -1,0 +1,214 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: what_men_want; hasOverallIntent: Mysogynous; overall-intent-description: The image depicts a woman dressed as a football referee in a revealing outfit, holding a beer and a football, with the text 'what men want' overlaid. This visual juxtaposition maps onto the stereotype that men desire women who are hypersexualized and objectified, particularly in contexts like sports. The intent is to reinforce a misogynous trope by portraying the woman as a sexualized object whose value is tied to her appearance and availability, rather than her competence or agency. This aligns with the 'Mysogynous' toxicity category as it contains hate against women by reducing them to sexualized stereotypes and implying their worth is tied to their physical appearance and availability for male gratification.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "what men want",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman dressed in a revealing football referee outfit, holding a beer and a football, smiling at the camera. She is the central visual subject and the focus of the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "sexualized_objectification",
+      "label": "woman_as_sexualized_object",
+      "description": "The woman, dressed in a revealing referee outfit, is positioned centrally holding a beer and a football, visually reinforcing a stereotype of hypersexualized female availability for male gratification. The text 'what men want' explicitly frames her as an object of male desire, reducing her to a sexualized trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization",
+      "label": "Hypersexualization",
+      "description": "A derogatory stereotype that reduces women to sexual objects, implying their value is tied to their physical appearance and availability for male gratification. This concept is central to understanding the meme's message, as the woman is portrayed in a revealing outfit and framed as 'what men want', reinforcing the idea that her worth is sexualized.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification",
+      "label": "Objectification",
+      "description": "The process of treating a person, especially a woman, as an object for the pleasure or gratification of others, rather than as a person with agency, competence, or intrinsic worth. The meme relies on this concept to portray the woman as a sexualized object whose value is tied to her appearance and availability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mysogynous_trope",
+      "label": "Misogynous Trope",
+      "description": "A recurring, often harmful, stereotype or narrative that devalues women by portraying them as sexually available, emotionally unstable, or incompetent outside of traditional roles. The meme uses this trope to imply that men desire women who are hypersexualized and objectified, particularly in contexts like sports.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "football_referee_stereotype",
+      "label": "Football Referee Stereotype",
+      "description": "A cultural trope that associates female referees with hypersexualization and objectification, often portraying them in revealing outfits to appeal to male audiences. This stereotype is used in the meme to reinforce the idea that the woman’s role and appearance are primarily for male gratification.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "beer_and_football_cultural_reference",
+      "label": "Beer and Football Cultural Reference",
+      "description": "A common cultural association between beer consumption and football games, often implying a male-dominated, casual, and sexually charged atmosphere. The combination of beer and football in the image, along with the woman’s appearance, reinforces the stereotype of male desire and leisure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "objectified_happiness",
+      "label": "objectified happiness expression",
+      "description": "The woman is smiling broadly and directly at the camera, conveying a cheerful and engaging emotion. However, this happiness is framed within the context of objectification — her smile and pose are used to reinforce the stereotype that she is 'what men want,' reducing her emotional expression to a tool for male gratification rather than an authentic display of joy or agency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The woman is mapped as 'what men want'",
+      "description": "The text 'what men want' is overlaid on the image of a woman dressed in a revealing football referee outfit, holding a beer and a football. This creates an analogical mapping where the woman is explicitly framed as the object of male desire, reducing her to a sexualized trope. The mapping is direct: the textual phrase 'what men want' is projected onto the visual entity (the woman), implying she embodies that stereotype. This aligns with the misogynous trope of hypersexualization and objectification, where her value is tied to her appearance and availability for male gratification.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material framing the woman as 'what men want'",
+      "description": "The user is projected onto the textual material 'what men want', which explicitly frames the visual material (the woman) as the object of male desire. This projection implies that the user (as a male viewer) is identifying with or imagining themselves as the subject of this desire, aligning with the misogynous trope of hypersexualization. The text acts as a direct deictic projection onto the user's perspective, suggesting the user sees themselves as the 'man' who desires the objectified woman.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme reduces the woman to a sexualized object whose value is tied to her appearance and availability for male gratification, reinforcing a harmful stereotype that devalues women.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "men",
+      "description": "The meme is designed for a male audience, as it explicitly frames the woman as 'what men want,' leveraging hypersexualization and objectification tropes that are commonly directed at or reinforced for male viewers. The visual and textual elements (revealing referee outfit, beer, football, and the phrase 'what men want') are culturally coded to appeal to or resonate with male viewers who may identify with or enjoy such stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/57319.png",
+    "image_name": "57319.png",
+    "extraction_timestamp": "2025-12-16T05:37:39.486064",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

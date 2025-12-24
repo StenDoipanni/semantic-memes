@@ -1,0 +1,39 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "mocking and contemptuous emotion",
+      "expressors": [
+        {
+          "entity": "meme_image",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "woman"
+        },
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "goat"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":mocking_and_contemptuous_emotion :hasExpressor :meme_image .",
+    ":meme_image :emotionalRelationToEntity :woman .",
+    ":meme_image :emotionalRelationToEntity :goat ."
+  ],
+  "triples_count": 3
+}

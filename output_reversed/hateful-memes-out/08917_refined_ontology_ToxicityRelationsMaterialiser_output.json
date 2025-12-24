@@ -1,0 +1,30 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "cat"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "cat_in_historical_building"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :text_chunk .",
+    ":toxicity_1 :hasToxicElement :cat .",
+    ":toxicity_1 :hasToxicElement :cat_in_historical_building ."
+  ],
+  "triples_count": 3
+}

@@ -1,0 +1,202 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a man in a green suit striking a wide-legged, confident pose, with text that reads: 'when a person tells you that your meme meme or joke was heavily offensive' and 'i can go lower.' The visual of the man, often associated with a 'dumb jock' or 'over-the-top macho' stereotype, is juxtaposed with the text to mock the idea of being 'offensive' by implying that the speaker is so confident or oblivious that they can 'go lower' — suggesting the joke or meme is so bad or offensive that it's not even worth taking seriously. The intent is to trivialize or dismiss the concern of others about offensive content, potentially encouraging the creation or sharing of more offensive material. While not explicitly targeting a specific protected group, the meme promotes a culture of disregard for social sensitivity and can be harmful by normalizing offensive behavior and discouraging accountability. The 'can go lower' phrase implies a descent into worse content, which can be seen as encouraging escalation of harmful or offensive material, thus making it potentially harmful to social discourse and community well-being.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "when a person tells you that your meme meme or joke was heavily offensive",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man wearing a green suit with a patterned shirt, standing in a wide-legged, confident pose with hands on hips, holding a cigarette in his mouth. He appears to be posing for a photo, exuding an exaggeratedly macho or 'dumb jock' stereotype often used in memes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "confident_pose_scene",
+      "label": "man striking a confident pose",
+      "description": "A man in a green suit is standing in a wide-legged, confident pose with hands on hips, holding a cigarette in his mouth. The scene is set against a plain background, emphasizing the man's exaggeratedly macho or 'dumb jock' stereotype. The text overlay suggests a dismissive attitude toward criticism of offensive content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dumb_jock_stereotype",
+      "label": "Dumb Jock Stereotype",
+      "description": "A cultural stereotype depicting a man who is overly macho, physically imposing, and often portrayed as unintelligent or lacking in sophistication. This stereotype is frequently used in memes to represent someone who is oblivious to social norms or consequences, and is often associated with exaggerated confidence and a dismissive attitude toward criticism. The visual of the man in the green suit with a wide-legged stance and cigarette is a classic representation of this trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "confident_pose_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "offensive_content_dismissal",
+      "label": "Dismissal of Offensive Content",
+      "description": "The concept that some individuals trivialize or downplay criticism regarding offensive jokes, memes, or content, often by claiming they are 'not that bad' or 'can go lower,' implying that the offense is so minor it's not worth taking seriously. This reflects a broader cultural trend of minimizing social sensitivity and accountability for harmful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "confident_pose_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_culture",
+      "label": "Meme Culture",
+      "description": "A social and internet-based phenomenon characterized by the rapid creation, sharing, and modification of humorous or satirical images, often with text overlays. Memes are used to comment on current events, social issues, or to express shared humor, but can also be used to spread offensive or harmful content. The meme in question is a product of this culture, using visual and textual elements to convey a specific attitude.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "confident_pose_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_sensitivity",
+      "label": "Social Sensitivity",
+      "description": "The awareness and consideration of how one's words, actions, or content may affect others, particularly in terms of cultural, racial, gender, or other social identities. The meme's text references the concept of 'heavily offensive' content, which implies a concern for social sensitivity, making the dismissal of such concerns central to the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "confident_pose_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harmful_social_norms",
+      "label": "Harmful Social Norms",
+      "description": "Norms or behaviors that, while perhaps socially accepted or even encouraged in certain contexts, can lead to negative outcomes such as the normalization of offensive or insensitive content, discouraging accountability, and promoting a culture of disregard for social sensitivity. The meme's intent to trivialize criticism of offensive content can be seen as reinforcing such harmful norms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "confident_pose_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "arrogance",
+      "label": "arrogant emotion",
+      "description": "The man's wide-legged, confident pose with hands on hips and cigarette in mouth conveys an exaggerated sense of self-assurance and disregard for criticism, embodying arrogance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The speaker is mapped onto the man in the green suit",
+      "description": "The text 'when a person tells you that your meme meme or joke was heavily offensive' implies the speaker is the person being criticized. The visual of the man in the green suit, embodying the 'dumb jock' stereotype with his arrogant pose, is used to represent this speaker. The man's exaggerated confidence and dismissive attitude visually map onto the speaker's attitude of trivializing offense, suggesting the speaker is oblivious or arrogant. The text 'i can go lower' reinforces this by implying the speaker is so confident they can escalate the offense, which is embodied by the man's pose and demeanor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the speaker of the meme",
+      "description": "The user is projected onto the person being criticized in the meme, who is represented by the man in the green suit striking a confident pose. The text 'when a person tells you that your meme meme or joke was heavily offensive' explicitly refers to 'you' (the user), and the phrase 'i can go lower' is spoken by the speaker (the user), who is visually embodied by the man. The user sees themselves as the speaker in this scenario, projecting their own attitude of dismissal onto the visual representation of the 'dumb jock' stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes concerns about offensive content by implying that the speaker is so confident or oblivious that they can 'go lower,' suggesting the joke or meme is so bad or offensive that it's not even worth taking seriously. This promotes a culture of disregard for social sensitivity and can be harmful by normalizing offensive behavior and discouraging accountability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "audience description",
+      "description": "The target community is individuals who are part of meme culture and are familiar with internet humor, particularly those who create, share, or engage with offensive or controversial memes and jokes. The meme is designed to resonate with people who identify with or enjoy the 'dumb jock' stereotype, often associated with exaggerated confidence and a dismissive attitude toward criticism. The intended audience likely includes users of social media platforms where memes are commonly shared, and who may be accustomed to or even appreciate the trivialization of social sensitivity in online discourse. The meme appeals to those who see humor in mocking the idea of offense, especially when it comes to internet content, and who may identify with the persona of the man in the green suit as a symbol of oblivious arrogance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/29740.png",
+    "image_name": "29740.png",
+    "extraction_timestamp": "2025-12-15T21:08:00.216685",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

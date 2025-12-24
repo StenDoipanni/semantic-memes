@@ -1,0 +1,183 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Overall Intent; overall-intent-description: The scene depicts a smiling Black man and a smiling white woman embracing outdoors. The text overlay reads: 'when you ready for bed but bae won't leave you alone.' The meme's intent is to humorously depict a common romantic scenario where one partner is ready to sleep but the other is unwilling to let go. There is no toxicity present in this meme. The image does not contain any disparaging metaphors or stereotypes targeting any protected group. The humor is lighthearted and relatable, focusing on a universal experience in relationships without mocking or harming any individual or community. The intent is to evoke laughter and relatability through the juxtaposition of the affectionate image with the text describing a mundane, endearing domestic situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you ready for bed but bae won't leave you alone",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "Black man",
+      "description": "A smiling Black man wearing glasses and a plaid shirt, embracing a woman. He is positioned on the left side of the image, looking at the camera with a warm expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "embrace_scene",
+      "label": "couple_embracing",
+      "description": "A smiling Black man and a smiling white woman are embracing outdoors. The man is on the left, wearing glasses and a plaid shirt, while the woman is on the right, with curly hair, leaning into him. They are both looking at the camera with affectionate expressions. The scene is framed by a blurred natural background, suggesting an outdoor setting. The text overlay humorously contrasts the romantic intimacy with the mundane situation of one partner being ready for bed but unwilling to let go.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "embraces",
+          "to": "woman"
+        },
+        {
+          "from": "woman",
+          "relation": "embraced_by",
+          "to": "man"
+        },
+        {
+          "from": "man",
+          "relation": "looks_at",
+          "to": "camera"
+        },
+        {
+          "from": "woman",
+          "relation": "looks_at",
+          "to": "camera"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "bae",
+      "label": "bae",
+      "description": "The term 'bae' is a colloquial slang term, originating from the phrase 'before anyone else,' which has evolved to mean 'boyfriend' or 'girlfriend' in modern internet and youth culture. It is used to refer to a romantic partner in a casual, affectionate manner. Understanding this slang is necessary to interpret the text overlay 'when you ready for bed but bae won't leave you alone' as referring to a romantic relationship.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ready_for_bed",
+      "label": "ready for bed",
+      "description": "This phrase refers to the common daily routine of preparing to sleep, often involving winding down, turning off electronics, and getting into bed. It is a mundane, relatable activity that forms the context for the meme's humor, contrasting the desire for solitude with the affectionate clinginess of a partner.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "romantic_relationship_dynamics",
+      "label": "romantic relationship dynamics",
+      "description": "The meme relies on the understanding of common behaviors and emotional patterns within romantic relationships, such as the desire for personal space versus the need for physical or emotional closeness. This knowledge is necessary to interpret the humor in the juxtaposition of the affectionate image with the text describing a relatable domestic conflict.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "affectionate_embrace",
+      "label": "affectionate embrace",
+      "description": "This is a common gesture in romantic relationships, symbolizing intimacy, comfort, and emotional connection. The image depicts this gesture, and understanding its cultural and emotional significance is necessary to interpret the contrast between the visual affection and the text's humorous complaint about being unable to sleep due to the partner's clinginess.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "affectionate happiness",
+      "description": "Both individuals in the image are smiling warmly and looking at the camera, conveying a sense of contentment and joy derived from their intimate embrace. Their expressions suggest genuine affection and comfort in each other's presence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The couple's affectionate embrace is mapped onto the textual concept of 'bae' (romantic partner) who won't leave you alone.",
+      "description": "The text 'bae won't leave you alone' is analogically mapped onto the visual entity of the couple embracing. The affectionate embrace visually represents the clinginess or unwillingness to let go described by 'bae'. The visual material (the couple's embrace) is used to embody the textual concept of a romantic partner (bae) who is physically and emotionally attached, preventing the other from being alone. This mapping relies on the cultural understanding that 'bae' refers to a romantic partner, and the visual affectionate embrace symbolizes the clinginess described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material describing a relatable romantic scenario",
+      "description": "The user is projected onto the text 'when you ready for bed but bae won't leave you alone', which uses the second-person pronoun 'you' to directly address the viewer. This creates an identification where the viewer sees themselves in the situation described — being ready for bed but unable to be left alone by their romantic partner. The projection is onto the textual material, which frames the scenario as personal and immediate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "young adults in romantic relationships",
+      "description": "The meme targets young adults who are in romantic relationships, as it uses the slang term 'bae' to refer to a romantic partner and humorously depicts a common scenario where one partner is ready for bed but the other is unwilling to let go. The affectionate embrace and the relatable domestic situation are culturally resonant with individuals navigating early to mid-stage romantic relationships.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/62354.png",
+    "image_name": "62354.png",
+    "extraction_timestamp": "2025-12-16T07:32:29.588749",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

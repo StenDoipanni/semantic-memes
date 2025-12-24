@@ -1,0 +1,207 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: firefighter_saves_baby; hasOverallIntent: Overall Intent; overall-intent-description: The scene depicts a firefighter in full gear holding a baby, with the text 'firefighter saves baby' overlaid. The image is a stock photo commonly used to convey heroism, bravery, and the protective nature of first responders. There is no toxicity present in this meme. It does not contain any disparaging metaphors, stereotypes, or harmful content targeting any protected group. The intent is to evoke positive emotions by associating the firefighter with a noble act of saving a life, using the juxtaposition of the heroic figure (firefighter) and the vulnerable subject (baby) to reinforce the message of courage and care. The meme is not abusive, cyberbullying, harmful, hateful, misogynous, or propagandistic. It is a straightforward, positive portrayal of a heroic act.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "firefighter",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "firefighter",
+      "label": "person",
+      "description": "An adult male wearing a yellow firefighter helmet with the number '14' and full firefighter turnout gear, including a reflective jacket and gloves. He is looking down at the baby with a gentle expression, holding the infant securely. The firefighter is the central figure and the primary subject of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "firefighter_holding_baby",
+      "label": "firefighter holding baby",
+      "description": "A firefighter in full gear is holding a baby in his arms. The firefighter is looking down at the baby with a gentle expression, and the baby is wrapped in a white blanket. The scene conveys a moment of care and protection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "firefighter",
+          "relation": "is_holding",
+          "to": "baby"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "firefighter_saves_baby_meme_concept",
+      "label": "Heroic Act of Saving a Life",
+      "description": "The meme relies on the cultural understanding that firefighters are heroic first responders who risk their lives to save others, especially in emergencies. The act of saving a baby is implicitly understood as a noble, courageous, and emotionally resonant event. This concept is not visible in the image but is essential to interpret the text and the emotional tone of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "firefighter",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "firefighter_holding_baby",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "first_responder_stereotype",
+      "label": "First Responder as Hero",
+      "description": "The image and text invoke the widespread cultural stereotype that first responders (firefighters, police, EMS) are heroic figures who selflessly protect the public. This stereotype is not depicted in the image but is necessary to understand why the scene is framed as 'saving a baby' and why it evokes positive emotions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "firefighter",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "firefighter_holding_baby",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "protective_parenting_stereotype",
+      "label": "Protective Parenting",
+      "description": "The image implies a protective, nurturing role for the firefighter, which is culturally associated with parental care. While the firefighter is not biologically a parent, the act of holding and protecting the baby invokes the stereotype of a parent or guardian. This is not visible in the image but is necessary to understand the emotional context of the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "firefighter_holding_baby",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "baby_as_vulnerable_subject",
+      "label": "Baby as Symbol of Innocence and Vulnerability",
+      "description": "The baby is not just a child but a cultural symbol of innocence, vulnerability, and the need for protection. The meme relies on this symbolic understanding to frame the firefighter's action as heroic. This symbolism is not explicitly shown in the image but is essential to interpret the message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "firefighter_holding_baby",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stock_photo_culture",
+      "label": "Stock Photo Usage in Memes",
+      "description": "The image is a stock photo, commonly used in memes to convey universal, emotionally resonant themes. The meme's effectiveness depends on the viewer recognizing this stock photo format and understanding its typical use for depicting heroism or care. This cultural context is not visible in the image but is necessary to understand the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "firefighter_holding_baby",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "gentle_care",
+      "label": "gentle caring emotion",
+      "description": "The firefighter is looking down at the baby with a soft, focused expression, conveying tenderness and protective care. His posture and the secure way he holds the infant reinforce this emotion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_firefighter_saves_baby",
+      "label": "firefighter is the one who saves the baby",
+      "description": "The text 'firefighter saves baby' explicitly maps the visual entity 'firefighter' as the agent performing the action of saving the baby. The visual material shows a firefighter holding a baby, and the text frames this action as a heroic rescue, creating an analogical mapping where the firefighter is identified as the savior. This mapping relies on the cultural understanding of firefighters as first responders who save lives, and the baby as a vulnerable subject needing protection. The mapping is established through the juxtaposition of the text with the visual scene, where the firefighter's posture and expression (gentle care) reinforce the narrative of rescue and protection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the firefighter as a heroic savior",
+      "description": "The user is projected onto the firefighter, who is visually depicted as the agent performing the heroic act of saving the baby. This projection is implicit, not explicit (e.g., no 'you' or 'me' text), but is established through the meme's overall intent and the cultural framing of the firefighter as a protector and hero. The user identifies with the role of the protector or hero, seeing themselves in the firefighter's action of care and rescue. The projection is onto the VisualMaterial entity 'firefighter' and reinforced by the TextualMaterial 'firefighter saves baby', which assigns agency and heroism to the firefighter.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "general public",
+      "description": "The meme is designed for a broad general public audience, as it relies on universally understood cultural symbols (firefighter as hero, baby as vulnerable) and emotionally resonant imagery to evoke positive feelings. It does not target any specific demographic or community based on race, religion, gender, or identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/17532.png",
+    "image_name": "17532.png",
+    "extraction_timestamp": "2025-12-15T17:01:50.380414",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_09e7c525",
+  "@type": "AnalysisDocument",
+  "title": "39482.png - Dimension Analysis",
+  "created": "2025-12-16T00:26:24.832634",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_59457be3",
+    "@type": "Image",
+    "filename": "39482.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/39482.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/39482.png",
+    "image_name": "39482.png",
+    "extraction_timestamp": "2025-12-16T00:24:54.757741",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7637ae51",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: you're_so_old_meme; hasOverallIntent: Harmful; overall-intent-description: The meme depicts an elderly man dressed as a biblical figure holding a gravestone with the Ten Commandments, overlaid with the text 'you're so old' and 'this was your first school book.' The intent is to mock older individuals by implying their foundational knowledge or values are outdated or simplistic, using age as a target. While not explicitly targeting a protected group, it is ageist and potentially harmful by reducing the value of older people's experience and wisdom to a childish or archaic level. The juxtaposition of the gravestone (symbolizing death or finality) with the Ten Commandments (a foundational text) and the mocking text creates a humorous but demeaning portrayal of aging, which can be hurtful to older individuals.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_09e7c525"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a41bb996",
+      "@type": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "you're so old",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_09e7c525"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a3a94226",
+      "@type": "VisualMaterial",
+      "instance_name": "elderly_man",
+      "label": "person",
+      "description": "An elderly man with a white beard and mustache, wearing a white head covering with brown braided trim and a red tunic under a brown robe. He is holding a wooden staff in his left hand and a gravestone in his right hand. His expression is serious and contemplative, looking slightly upward and to his right. He appears to be dressed as a biblical figure, possibly Moses or an ancient prophet.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_09e7c525"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2c1cbf60",
+      "@type": "Scene",
+      "instance_name": "elderly_man_holding_gravestone",
+      "label": "elderly man holding gravestone",
+      "description": "An elderly man dressed as a biblical figure is holding a gravestone inscribed with the Ten Commandments, with text overlaid on the image mocking his age.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_09e7c525"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4cf456a6",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "ageist_stereotype",
+      "label": "Ageist Stereotype",
+      "description": "The meme relies on the stereotype that older people are outdated, simplistic, or less knowledgeable, by implying their foundational knowledge (the Ten Commandments) is like a 'first school book'. This mocks the value of older people's experience and wisdom, reducing them to a childish or archaic level.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_09e7c525"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b5c16785",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "ten_commandments",
+      "label": "Ten Commandments",
+      "description": "The gravestone inscribed with the Ten Commandments is a direct reference to the foundational religious text in Judaism and Christianity. The meme uses this to imply that the elderly person's 'first school book' is this ancient religious text, mocking the idea that their foundational knowledge is simplistic or outdated.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_09e7c525"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6ad074f5",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "gravestone_as_symbol",
+      "label": "Gravestone as Symbol of Death or Finality",
+      "description": "The gravestone is used symbolically to represent death or finality, contrasting with the idea of 'first school book' which implies beginnings. This juxtaposition is part of the meme's humor and its mocking tone towards aging.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_09e7c525"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_db7c1717",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "mocking_age_juxtaposition",
+      "label": "Mocking Age Juxtaposition",
+      "description": "The meme combines the image of an elderly biblical figure with a gravestone and the text 'you're so old' and 'this was your first school book' to create a humorous but demeaning portrayal of aging. This requires understanding the cultural context of age-related humor and the use of religious imagery for comedic effect.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_09e7c525"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_95157127",
+      "@type": "EmotionExpression",
+      "instance_name": "mocking_contempt",
+      "label": "mocking contemptuous emotion",
+      "description": "The emotion expressed is one of mocking contempt, conveyed through the juxtaposition of the elderly man holding a gravestone with the Ten Commandments and the overlaid text 'you're so old' and 'this was your first school book.' The tone is demeaning, implying that the person's foundational knowledge is simplistic or outdated, which is a form of contemptuous humor targeting age. The visual of the gravestone adds a layer of finality and ridicule, enhancing the mocking tone.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_09e7c525"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1dfbc7b3",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The elderly man is mapped as 'you' in the context of being old",
+      "description": "The top text 'you're so old' directly addresses the elderly man in the image, mapping him as the target of the age-related mockery. The visual entity (elderly_man) is the subject being referred to by the textual entity (top_text).",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_09e7c525"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_28363267",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the elderly man as the target of age-related mockery",
+      "description": "The user is projected onto the elderly man (elderly_man) through the deictic pronoun 'you' in the top text overlay ('you're so old'). This directly addresses the viewer as the subject of the age-related joke, making the user the target of the meme's projection. The user is also implicitly projected onto the concept of 'your first school book' (textual material) as part of the mocking comparison to the Ten Commandments (ten_commandments) inscribed on the gravestone (gravestone_as_symbol).",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_09e7c525"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2c634a4a",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Ageist Stereotype",
+      "description": "The meme mocks older individuals by implying their foundational knowledge or values are outdated or simplistic, using age as a target. It reduces the value of older people's experience and wisdom to a childish or archaic level.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_09e7c525"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c34f56b5",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "ageist audience",
+      "description": "The meme is designed for a general audience familiar with age-related humor and religious references, targeting older individuals by mocking their foundational knowledge as simplistic or outdated, using the Ten Commandments as a symbol of their 'first school book'.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_09e7c525"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

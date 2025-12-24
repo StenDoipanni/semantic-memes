@@ -1,0 +1,237 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a pot of boiling pasta, with text that reads: 'i like my refugees like i like my pasta limp and floating in water.' This is a hateful and dehumanizing metaphor that equates refugees with limp, floating pasta, implying they are undesirable, unproductive, or burdensome. The analogy is intentionally degrading and offensive, using food imagery to demean a vulnerable human population. This aligns with harmful stereotypes that portray refugees as lazy or unworthy, which is a form of xenophobic and hateful rhetoric. The meme's intent is to incite prejudice and hostility toward refugees by reducing them to a grotesque, inedible metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "i like my refugees like i like my pasta",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "pot",
+      "label": "metallic cooking pot",
+      "description": "A large, silver-colored stainless steel pot with two handles, placed on a stovetop burner. It contains boiling water with pasta inside, and is the central visual element of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "boiling_pasta_scene",
+      "label": "boiling_pasta_scene",
+      "description": "A metallic cooking pot is placed on a stovetop burner, containing boiling water with pasta inside. The pot is the central visual element, and the scene is framed by kitchen elements such as a countertop and a decorative container in the background. Text overlays describe a hateful metaphor comparing refugees to limp, floating pasta.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "pot",
+          "relation": "contains",
+          "to": "pasta"
+        },
+        {
+          "from": "pot",
+          "relation": "placedOn",
+          "to": "stovetop"
+        },
+        {
+          "from": "text",
+          "relation": "describes",
+          "to": "pot"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "refugee_stereotype",
+      "label": "Refugee Stereotype",
+      "description": "The meme relies on the harmful stereotype that refugees are lazy, unproductive, or burdensome, equating them to limp, floating pasta. This is a dehumanizing metaphor used to incite prejudice and hostility toward refugees, reducing them to an inedible, undesirable object.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "boiling_pasta_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dehumanizing_metaphor",
+      "label": "Dehumanizing Metaphor",
+      "description": "The meme uses a dehumanizing metaphor by comparing refugees to limp, floating pasta, implying they are undesirable, unproductive, or burdensome. This is a form of xenophobic and hateful rhetoric that reduces human beings to inanimate objects.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "boiling_pasta_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "xenophobia",
+      "label": "Xenophobia",
+      "description": "The meme expresses xenophobic sentiment by portraying refugees as unwelcome and undesirable, using a degrading food analogy to incite fear and hostility toward a vulnerable human population.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "boiling_pasta_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_rhetoric",
+      "label": "Hateful Rhetoric",
+      "description": "The meme employs hateful rhetoric by using offensive and degrading language to demean refugees, equating them to limp, floating pasta, which is intended to provoke prejudice and hostility.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "boiling_pasta_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "food_stereotype",
+      "label": "Food Stereotype",
+      "description": "The meme uses a food stereotype by comparing refugees to limp, floating pasta, implying they are undesirable or inedible. This is a form of dehumanization that reduces human beings to food-like objects.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "boiling_pasta_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "burden_on_society_stereotype",
+      "label": "Burden on Society Stereotype",
+      "description": "The meme implies that refugees are a burden on society by portraying them as limp and floating in water, suggesting they are unproductive or unwelcome, which is a common xenophobic trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "boiling_pasta_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is hatred or deep animosity, conveyed through the dehumanizing and offensive text that equates refugees with limp, floating pasta, inciting prejudice and hostility.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Refugees are mapped to limp floating pasta",
+      "description": "The top text 'i like my refugees like i like my pasta' explicitly maps refugees to pasta. The visual of pasta boiling and floating in water in the pot serves as the visual representation for this metaphorical mapping. The bottom text 'limp and floating in water' reinforces this mapping by describing the state of the pasta, which is then analogously applied to refugees.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the dehumanizing metaphor of refugees as limp floating pasta",
+      "description": "The user is projected onto the textual and visual metaphor that equates refugees with limp, floating pasta. The meme uses the phrase 'i like my refugees like i like my pasta' and the image of pasta boiling to create a direct analogy. The user is implicitly invited to identify with the speaker's perspective, adopting the hateful framing that refugees are undesirable and burdensome, as represented by the pasta metaphor. This projection is onto the textual material (text_chunk_1) and the visual material (pot) that together form the dehumanizing metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme employs hateful rhetoric by equating refugees to limp, floating pasta, inciting prejudice and hostility toward a vulnerable human population.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who hold xenophobic, anti-refugee, or right-wing populist views, likely drawn to hateful rhetoric that dehumanizes refugees by equating them to undesirable, inedible food. This audience may be receptive to stereotypes portraying refugees as burdensome, lazy, or unwelcome, and may be influenced by nationalist or isolationist ideologies that frame immigration as a threat to national identity or economic stability. The meme’s use of a dehumanizing food metaphor appeals to those who use simplistic, visceral analogies to justify prejudice against vulnerable populations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/76348.png",
+    "image_name": "76348.png",
+    "extraction_timestamp": "2025-12-19T12:54:11.024032",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

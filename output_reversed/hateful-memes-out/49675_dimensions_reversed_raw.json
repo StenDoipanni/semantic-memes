@@ -1,0 +1,217 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: alright_girls_smile; hasOverallIntent: Harmful; overall-intent-description: The image shows a group of young girls, likely from a non-Western cultural context, smiling at the camera. The text overlay reads 'alright girls!' and 'smiiiiiiile', which is a common meme format used to mock or pressure people into smiling. While the girls appear happy, the meme's intent is to reduce their authentic expressions to a performative, forced smile, potentially trivializing their emotional state. This can be seen as harmful because it imposes a Western standard of 'appropriate' expression and may contribute to the objectification of women, especially when combined with the visual framing. The meme does not contain overtly abusive, cyberbullying, or hateful language, but it does contain a subtle mysogynous undertone by reducing the girls' identities to their facial expressions and enforcing a specific emotional performance. The overall intent is to create humor through the juxtaposition of the girls' genuine expressions with the exaggerated, demanding text, which can be interpreted as a form of cultural appropriation or mockery of non-Western expressions of joy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "alright girls !",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "girls",
+      "label": "group of young girls",
+      "description": "Five young girls of African descent, likely from a non-Western cultural context, are shown smiling or looking at the camera. They are wearing colorful headscarves (hijabs or headwraps) in various patterns and colors (red/orange, blue, pink, brown). Their expressions range from genuine smiles to more neutral or curious looks. The image appears to be taken outdoors, possibly in a rural or village setting, with natural lighting and a blurred background. The girls are positioned closely together, suggesting camaraderie or a group photo.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "girls_smiling_together",
+      "label": "girls smiling together",
+      "description": "A group of five young girls, likely from a non-Western cultural context, are positioned closely together and smiling or looking at the camera. They are wearing colorful headscarves and appear to be in a natural outdoor setting. The scene is framed to capture their expressions and camaraderie.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_format",
+      "label": "Meme Format: 'Alright Girls! Smiiiiile'",
+      "description": "This is a widely circulated internet meme format that uses an image of a group of girls (often from non-Western cultures) with text overlaying them that demands they smile. The format is used to mock or pressure people into conforming to a Western standard of 'appropriate' or 'performative' happiness, often reducing their identities to their facial expressions. The exaggerated 'smiiiiile' text emphasizes the performative nature of the demand.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "girls_smiling_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cultural_appropriation",
+      "label": "Cultural Appropriation of Non-Western Expressions",
+      "description": "The meme implicitly references the idea that non-Western expressions of joy or emotion are 'other' and must be 'corrected' or 'standardized' to fit Western norms. This reflects a broader pattern of cultural appropriation where Western media or internet culture imposes its own aesthetic or behavioral standards on non-Western subjects, often without context or respect for their cultural authenticity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "girls",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "girls_smiling_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny: Objectification and Emotional Performance",
+      "description": "The meme contains a misogynous undertone by reducing the girls' identities to their facial expressions and enforcing a specific emotional performance (smiling). This reflects the broader stereotype that women, especially women of color, are valued primarily for their appearance and emotional compliance, and that their authentic emotions are less valid than those that conform to societal expectations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "girls",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "girls_smiling_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_non_white_women",
+      "label": "Stereotype: Non-White Women as Emotionally Inexpressive or 'Exotic'",
+      "description": "The meme implicitly relies on the stereotype that non-white women, particularly those from African or Muslim backgrounds, are either overly emotional or 'exotic' in their expressions, and thus need to be 'corrected' to fit a Western standard of 'appropriate' emotion. This stereotype is often used to justify the imposition of Western norms on non-Western cultures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "girls",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "girls_smiling_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "western_standard_of_beauty",
+      "label": "Western Standard of Beauty and Emotional Expression",
+      "description": "The meme implicitly references the Western cultural standard that equates happiness with a specific facial expression (a wide, toothy smile) and that emotional authenticity must be 'performed' for the camera. This standard is often imposed on non-Western subjects, who are expected to conform to it, even if their expressions are genuine or culturally different.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "girls_smiling_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "performative_smiling",
+      "label": "Performative Smiling as a Social Performance",
+      "description": "The meme references the concept of 'performative smiling' — the act of smiling for the camera or in social situations even when one is not genuinely happy. This is often used to create a positive image or to conform to social expectations, and the meme uses this concept to mock or pressure the girls into smiling, even if they are not 'supposed' to.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "girls_smiling_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "genuine happiness expressed through smiling",
+      "description": "The girls in the image are displaying authentic expressions of joy, with wide smiles and bright eyes, suggesting genuine happiness rather than forced or performative emotion. Their body language and facial expressions convey warmth and positivity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Text demands the girls to smile",
+      "description": "The text 'alright girls!' and 'smiiiiiiile' is overlaid on the image of the girls, creating an analogical mapping where the text explicitly commands the visual subjects (the girls) to perform a specific emotional expression (smiling). This mapping is central to the meme's format and intent, as it juxtaposes the text's demand with the girls' genuine or neutral expressions, implying a performative or forced compliance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual demand for smiling",
+      "description": "The user is projected onto the textual material 'smiiiiiiile' and 'alright girls!', which commands the visual subjects to perform a specific emotional expression. This creates an implicit 'you' projection, where the user is positioned as the one issuing the demand or as the one who is expected to comply with the performative smiling standard. The meme format inherently invites the viewer to imagine themselves as the authority figure or the one being addressed, thus projecting the user's identity onto the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Misogynous",
+      "description": "The meme reduces the girls' identities to their facial expressions and enforces a specific emotional performance (smiling), reflecting the stereotype that women, especially women of color, are valued primarily for their appearance and emotional compliance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is primarily internet users familiar with the 'Alright Girls! Smiiiiile' meme format, particularly those who engage with or create content that mocks or pressures non-Western individuals to conform to Western standards of emotional expression. The meme is designed to elicit humor through the juxtaposition of the girls' genuine or neutral expressions with the exaggerated demand to smile, appealing to viewers who find such performative or cultural appropriation-based humor amusing. The audience likely includes individuals who are aware of the meme's history and its underlying misogynistic and culturally insensitive undertones, and who may be drawn to its ironic or satirical nature, even if they are not directly part of the community being depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/49675.png",
+    "image_name": "49675.png",
+    "extraction_timestamp": "2025-12-16T03:30:55.433440",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

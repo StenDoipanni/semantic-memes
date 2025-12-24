@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "top_text_block",
+      "hasMappingEntity": "man_in_black_cloak"
+    },
+    {
+      "from": "man_in_black_cloak",
+      "relation": "mappedOnto",
+      "to": "top_text_block"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :top_text_block .",
+    ":mapping_1 :hasMappingEntity :man_in_black_cloak .",
+    ":man_in_black_cloak :mappedOnto :top_text_block ."
+  ],
+  "triples_count": 3
+}

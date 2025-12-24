@@ -1,0 +1,52 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "text_chunk",
+      "hasMappingEntity": "Nancy_Pelosi"
+    },
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "text_chunk",
+      "hasMappingEntity": "Chuck_Schumer"
+    },
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "text_chunk",
+      "hasMappingEntity": "Black_woman_speaker"
+    },
+    {
+      "from": "Nancy_Pelosi",
+      "relation": "mappedOnto",
+      "to": "text_chunk"
+    },
+    {
+      "from": "Chuck_Schumer",
+      "relation": "mappedOnto",
+      "to": "text_chunk"
+    },
+    {
+      "from": "Black_woman_speaker",
+      "relation": "mappedOnto",
+      "to": "text_chunk"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :text_chunk .",
+    ":mapping_1 :hasMappingEntity :Nancy_Pelosi .",
+    ":mapping_1 :hasMappedEntity :text_chunk .",
+    ":mapping_1 :hasMappingEntity :Chuck_Schumer .",
+    ":mapping_1 :hasMappedEntity :text_chunk .",
+    ":mapping_1 :hasMappingEntity :Black_woman_speaker .",
+    ":Nancy_Pelosi :mappedOnto :text_chunk .",
+    ":Chuck_Schumer :mappedOnto :text_chunk .",
+    ":Black_woman_speaker :mappedOnto :text_chunk ."
+  ],
+  "triples_count": 9
+}

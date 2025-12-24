@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "text_chunk_1",
+      "hasMappingEntity": "darker-skinned hand"
+    },
+    {
+      "from": "darker-skinned hand",
+      "relation": "mappedOnto",
+      "to": "text_chunk_1"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :text_chunk_1 .",
+    ":mapping_1 :hasMappingEntity :darker_skinned_hand .",
+    ":darker_skinned_hand :mappedOnto :text_chunk_1 ."
+  ],
+  "triples_count": 3
+}

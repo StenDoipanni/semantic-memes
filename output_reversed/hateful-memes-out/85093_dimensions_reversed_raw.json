@@ -1,0 +1,216 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: how_slaves_were_mistreated; hasOverallIntent: Harmful; overall-intent-description: The image depicts a historical illustration of enslaved people being physically abused by white overseers, overlaid with the text 'how slaves were mistreated.' The scene shows a violent confrontation with enslaved individuals in various states of distress or submission, while white figures in authority appear to be inflicting punishment. The overall intent is to evoke a visceral reaction by visually representing historical brutality. However, the meme's framing is problematic because it uses a historical image to deliver a message that is not merely educational but potentially reductive or sensationalized. The text is presented in a way that may imply the image is a 'how-to' guide or a shocking revelation, which can be harmful by reinforcing stereotypes or oversimplifying complex historical trauma. The meme does not contain direct abusive or hateful language toward specific individuals, but its presentation of historical violence can be harmful by potentially trivializing or sensationalizing the suffering of enslaved people, and may be used to propagate a distorted or oversimplified view of slavery. The intent is to shock or provoke, but the method risks causing harm by reducing a profound historical injustice to a meme format that may not convey the full context or gravity of the suffering depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "text content and position: 'how slaves' at top of image, centered, large white bold text with black outline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "white_overseer",
+      "label": "man in uniform",
+      "description": "A white man wearing a hat and formal attire, standing authoritatively and gesturing toward a kneeling enslaved person, appearing to be in a position of power and control.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "physical_abuse_scene",
+      "label": "scene of physical abuse",
+      "description": "A scene depicting a white overseer physically abusing enslaved people. The overseer is gesturing authoritatively toward a kneeling enslaved person, while other enslaved individuals are shown in states of distress or submission. Other white figures in authority are also present, observing or participating in the scene. The spatial arrangement places the overseer as the central figure of power, with enslaved people positioned around him in submissive or suffering postures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "white_overseer",
+          "relation": "inflicts_punishment_on",
+          "to": "kneeling_slave"
+        },
+        {
+          "from": "white_overseer",
+          "relation": "commands",
+          "to": "surrounding_slaves"
+        },
+        {
+          "from": "other_white_figures",
+          "relation": "observes",
+          "to": "physical_abuse_scene"
+        },
+        {
+          "from": "kneeling_slave",
+          "relation": "submits_to",
+          "to": "white_overseer"
+        },
+        {
+          "from": "surrounding_slaves",
+          "relation": "witnesses",
+          "to": "physical_abuse_scene"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "slavery_in_america",
+      "label": "Slavery in America",
+      "description": "The image depicts a historical scene of slavery in the United States, specifically the brutal physical abuse of enslaved African Americans by white overseers. This historical institution was a foundational and deeply entrenched system of human exploitation and oppression that existed from the colonial period until its abolition in 1865. Understanding the context of American slavery is essential to interpret the image as a representation of systemic racial violence and dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "physical_abuse_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_illustration",
+      "label": "Historical Illustration",
+      "description": "The image is a 19th-century engraving or lithograph, likely created for publication in a newspaper, magazine, or abolitionist pamphlet. Such illustrations were commonly used to depict the horrors of slavery to sway public opinion and support abolitionist causes. The style and composition are characteristic of moralizing visual propaganda from that era, designed to evoke emotional responses and reinforce narratives of racial injustice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "physical_abuse_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "Anti-Black Stereotype",
+      "description": "The meme's framing, particularly the text 'how slaves were mistreated,' may implicitly reinforce or evoke harmful anti-Black stereotypes by reducing the complex, systemic trauma of slavery to a sensationalized, simplistic visual narrative. This can perpetuate the idea that enslaved people were inherently passive or submissive, ignoring their resistance, agency, and humanity. The image may also be used to reinforce the stereotype that Black people are inherently prone to violence or suffering, which is a distortion of historical reality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "physical_abuse_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "reductionist_meme_format",
+      "label": "Reductionist Meme Format",
+      "description": "The meme format — using a historical image with bold, declarative text — is a reductionist approach that oversimplifies a profound historical injustice. This format can be harmful because it frames historical trauma as a 'how-to' or 'shocking revelation,' which may trivialize the suffering of enslaved people and reduce their experiences to a visual punchline. This format is often used to provoke shock or outrage without providing context or nuance, which can be reductive and potentially offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "physical_abuse_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_context_of_slavery",
+      "label": "Historical Context of Slavery",
+      "description": "To fully understand the image, one must know that slavery was not merely an isolated act of violence but a systemic institution that involved forced labor, separation of families, denial of legal rights, and racialized violence. The image depicts only one moment of brutality within a much larger, centuries-long system of oppression. Without this context, the image can be misinterpreted as a singular, isolated event rather than a symptom of a broader historical injustice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "physical_abuse_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "shock",
+      "label": "shocking emotion",
+      "description": "The image and text together aim to provoke a visceral, shocking reaction by visually depicting brutal physical abuse and framing it as a 'how-to' guide, which can be emotionally jarring and potentially sensationalized.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Textual description of historical brutality mapped onto visual depiction of physical abuse",
+      "description": "The text 'how slaves were mistreated' is overlaid on the image, creating an analogical mapping where the text explicitly labels and frames the visual scene as an illustration of the mistreatment of slaves. The visual material (physical_abuse_scene) is mapped onto the textual concept (how slaves were mistreated) to convey that the depicted violence is an example of the systemic abuse endured by enslaved people. This mapping is direct and spatially anchored, with the text positioned to encompass the entire scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material framing the historical scene",
+      "description": "The user is projected onto the textual material 'how slaves were mistreated' which frames the entire visual scene as a direct illustration of the mistreatment of slaves. The text acts as a deictic label that directs the user's interpretation of the visual material, implying that the depicted violence is a representative example of how slaves were mistreated. This projection is implicit, as the text does not use explicit deictics like 'you' or 'me', but its declarative, instructional tone ('how') creates a direct cognitive link between the user and the visual content, positioning the user as the one who is supposed to understand or witness the 'how' of the mistreatment. The user is thus projected onto the text_chunk as the interpreter or recipient of the message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme presents a historical image of slavery brutality with the text 'how slaves were mistreated,' which can be harmful by reducing a profound historical injustice to a sensationalized, reductive visual format. This framing risks trivializing the suffering of enslaved people and may propagate a distorted view of slavery by implying it is a 'how-to' guide or shocking revelation, thereby potentially reinforcing stereotypes or oversimplifying complex trauma.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general_public",
+      "description": "The meme is designed for a broad general public audience, likely intended to provoke shock or outrage by visually depicting historical brutality. The use of bold, declarative text ('how slaves were mistreated') and a sensationalized historical illustration suggests it targets viewers who may not be deeply familiar with the historical context of slavery, aiming to elicit an emotional reaction through visual and textual juxtaposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/85093.png",
+    "image_name": "85093.png",
+    "extraction_timestamp": "2025-12-19T15:21:00.370555",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

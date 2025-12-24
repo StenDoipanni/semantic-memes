@@ -1,0 +1,280 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: just_trying_to_do_my_part; hasOverallIntent: Harmful; overall-intent-description: The image depicts a severely malnourished child sitting on the ground, with the text overlay 'just trying to do my part.' The visual of a child suffering from extreme hunger and poverty is juxtaposed with the phrase, which implies the child is somehow responsible for or complicit in a larger systemic issue. This creates a harmful and misleading narrative that shifts blame onto the child, suggesting they are at fault for their own suffering. The meme uses the child's vulnerability to evoke pity or discomfort, but the text frames the child as a passive participant in a problem they cannot control, which is both insensitive and potentially damaging. It normalizes suffering and implies that the child's condition is a personal failing rather than a result of systemic poverty, war, or neglect. This can contribute to harmful stereotypes about impoverished communities and may be used to justify inaction or apathy toward global humanitarian crises. The meme does not directly target a specific protected group with hate speech, but its message is harmful by promoting a false equivalence and moralizing suffering, which can lead to further marginalization and dehumanization of vulnerable populations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "just trying to do my part",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "child",
+      "label": "severely malnourished child",
+      "description": "A young child with extreme emaciation, sitting on the ground, appears to be crying or distressed. The child's ribs and bones are visibly protruding, indicating severe malnutrition. The child is shirtless and has a blanket partially draped over their lap. This is the central and most salient visual element in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "child_suffering_scene",
+      "label": "child_suffering_scene",
+      "description": "A severely malnourished child is sitting on the ground, visibly distressed, with a blanket partially draped over their lap. In the background, another person is standing near hanging clothes, seemingly unaware or indifferent to the child's condition. The scene conveys a sense of isolation and hardship, juxtaposed with the text overlay 'just trying to do my part,' which frames the child as complicit in a larger systemic issue, despite their vulnerability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "is_sitting_on_ground",
+          "to": "ground"
+        },
+        {
+          "from": "child",
+          "relation": "is_distressed",
+          "to": "child"
+        },
+        {
+          "from": "person_in_background",
+          "relation": "is_standing_near",
+          "to": "child"
+        },
+        {
+          "from": "person_in_background",
+          "relation": "is_hanging_clothes",
+          "to": "clothesline"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harmful_stereotype_of_child_blame",
+      "label": "Harmful Stereotype: Blaming the Victim",
+      "description": "The meme relies on the harmful stereotype that a child's suffering is their own fault or 'part' in a larger problem, shifting responsibility away from systemic causes like poverty, war, or neglect. This frames the child as morally complicit, which is both false and dehumanizing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_suffering_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "inspiration_porn",
+      "label": "Inspiration Porn",
+      "description": "The meme uses the child's suffering to evoke pity or discomfort, but frames it as a 'part' to be played, which is a form of 'inspiration porn' — portraying vulnerable people as inspirational or morally superior for enduring hardship, rather than acknowledging their need for systemic support.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_suffering_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "systemic_poverty",
+      "label": "Systemic Poverty",
+      "description": "The meme implicitly references the real-world concept of systemic poverty — the structural and institutional conditions that cause widespread deprivation — which is the actual cause of the child's malnutrition, not the child's 'part' in any system.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_suffering_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "global_humanitarian_crisis",
+      "label": "Global Humanitarian Crisis",
+      "description": "The image and text reference the broader context of global humanitarian crises, where millions suffer from hunger, disease, and conflict. The meme's framing is misleading because it suggests the child is somehow responsible for or contributing to this crisis, rather than being a victim of it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_suffering_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "moralizing_suffering",
+      "label": "Moralizing Suffering",
+      "description": "The meme promotes the concept of moralizing suffering — attributing moral worth or blame to individuals based on their suffering — which is a harmful narrative that can lead to further marginalization and dehumanization of vulnerable populations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_suffering_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "false_equivalence",
+      "label": "False Equivalence",
+      "description": "The meme creates a false equivalence by suggesting that the child's suffering is somehow 'equal' to or 'part of' a larger systemic issue, when in reality, the child is a victim, not a participant or contributor to that issue.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_suffering_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "apathy_justification",
+      "label": "Apathy Justification",
+      "description": "The meme can be used to justify inaction or apathy toward global humanitarian crises by implying that the child's suffering is their own fault, making it seem less urgent or worthy of intervention.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_suffering_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dehumanization",
+      "label": "Dehumanization",
+      "description": "The meme contributes to dehumanization by portraying the child as a passive participant in a problem they cannot control, rather than as a human being deserving of compassion and aid.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_suffering_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "distress",
+      "label": "the distressed emotion",
+      "description": "The child's facial expression, with wide eyes, an open mouth, and a contorted face, conveys intense emotional distress, likely pain, fear, or anguish due to severe malnutrition and suffering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The child is mapped as 'just trying to do my part'",
+      "description": "The text 'just trying to do my part' is overlaid on the image of a severely malnourished child. This creates an analogical mapping where the child is implicitly identified as the entity performing the action described in the text — i.e., the child is being framed as if they are voluntarily participating in or contributing to a larger systemic issue, despite being a victim of extreme poverty and malnutrition. This mapping is harmful as it shifts blame from systemic causes to the child, portraying them as morally complicit in their own suffering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the child as if embodying the text's message",
+      "description": "The user is projected onto the severely malnourished child, interpreting the child as 'just trying to do my part' — a deictic projection that frames the viewer as the actor performing the action described in the text. This projection is implicit, not explicit, but it is strongly implied by the meme's structure: the viewer is invited to identify with the child's suffering while simultaneously being told the child is 'doing their part,' which creates a false equivalence and moralizing of suffering. The user is not directly addressed with 'you' or 'me,' but the framing of the child as a passive participant in a larger system implicitly positions the viewer as the one who must 'do their part' — thus projecting the user's identity onto the child's role.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme frames a severely malnourished child as 'just trying to do my part,' which is a harmful narrative that shifts blame from systemic causes like poverty or war to the child, portraying them as morally complicit in their own suffering. This dehumanizes the child and can be used to justify apathy toward global humanitarian crises.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with viral meme formats and cynical humor. It targets viewers who may be exposed to or create content that uses irony, dark humor, or absurdist framing to comment on global issues, often with a tone of detachment or moral relativism. The meme’s appeal lies in its provocative juxtaposition — using a child’s suffering as a punchline — which resonates with audiences who enjoy shock value, satire, or commentary that challenges conventional empathy. The target community includes individuals who may be indifferent to or apathetic toward global humanitarian crises, or who use such memes to justify inaction by framing suffering as 'part of the system' rather than a systemic failure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/85026.png",
+    "image_name": "85026.png",
+    "extraction_timestamp": "2025-12-19T15:18:47.381024",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

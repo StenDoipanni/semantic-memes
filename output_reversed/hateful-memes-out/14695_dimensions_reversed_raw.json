@@ -1,0 +1,205 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts a young Black boy sitting on the floor with a serious, somber expression. The text overlay reads: 'my dad is the best at hide and seek' and 'he's been gone for 15 years.' The overall intent is to use the visual of a child's solemn face juxtaposed with the darkly humorous text to convey a tragic and ironic message about a missing father. The meme is not inherently abusive, cyberbullying, or hateful toward any specific group, but it does contain harmful content by trivializing the trauma of a child whose father has been missing for 15 years. The humor is dark and relies on the contrast between the innocence of childhood and the grim reality of parental absence, which can be insensitive and potentially retraumatizing for those who have experienced similar situations. The meme does not contain explicit toxicity targeting protected characteristics, but its dark humor and implication of long-term absence may be perceived as insensitive or harmful to individuals dealing with parental loss or disappearance. The intent is to create a poignant and darkly comedic effect by mapping the visual of a child's serious expression onto the text about a father who is 'the best at hide and seek,' implying he is metaphorically 'hidden' or absent for an extended period.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "my dad is the best at hide and seek",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "child",
+      "label": "young Black boy",
+      "description": "A young Black boy with short dark hair, wearing a white tank top and blue jeans, is sitting on the floor. He has a serious, somber facial expression, looking directly at the camera. His posture is upright, and his hands are resting on his thighs. The child is the central focus of the image and is the primary subject of the meme's visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "child_sitting_on_floor",
+      "label": "child sitting on floor",
+      "description": "A young Black boy is sitting on the floor in a room, looking directly at the camera with a serious expression. He is wearing a white tank top and blue jeans. The scene includes red floral curtains and a brown leather couch to his left.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dark_humor_about_parental_absence",
+      "label": "Dark Humor About Parental Absence",
+      "description": "The meme uses dark humor to juxtapose the innocence of childhood with the grim reality of a missing parent. The phrase 'my dad is the best at hide and seek' is a metaphor for a father who has been absent for 15 years, implying he is 'hidden' or gone. This type of humor relies on the contrast between a child's serious expression and the absurdity of the situation, which can be insensitive and potentially retraumatizing for those who have experienced similar situations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_sitting_on_floor",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "metaphor_of_hide_and_seek_for_missing_person",
+      "label": "Metaphor of Hide and Seek for Missing Person",
+      "description": "The phrase 'my dad is the best at hide and seek' is a metaphorical expression used to describe a parent who is absent or missing. In this context, 'hide and seek' is not a literal game but a symbolic representation of the father's prolonged absence, suggesting he is 'hiding' or 'gone' for an extended period. This metaphor is culturally understood as a way to express the emotional impact of parental loss or disappearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "long_term_parental_absence",
+      "label": "Long-Term Parental Absence",
+      "description": "The text 'he's been gone for 15 years' refers to a prolonged period of parental absence, which is a real-world phenomenon that can have significant emotional, psychological, and social impacts on children. This concept is not visually depicted but is essential to understanding the meme's message, as it underscores the gravity of the situation being humorously described.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_sitting_on_floor",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "childhood_trauma_and_parental_loss",
+      "label": "Childhood Trauma and Parental Loss",
+      "description": "The meme implicitly references the emotional trauma associated with the loss or absence of a parent during childhood. This is a real-world psychological and social issue that can lead to long-term effects on a child's development, emotional well-being, and sense of security. The child's somber expression in the image is a visual cue that aligns with this concept, even though the trauma itself is not depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_sitting_on_floor",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cultural_concept_of_dark_comedy",
+      "label": "Cultural Concept of Dark Comedy",
+      "description": "Dark comedy is a genre of humor that derives its effect from subjects that are morbid, tragic, or taboo. The meme uses this cultural concept to create a poignant and ironic effect by juxtaposing the innocence of childhood with the grim reality of parental absence. This type of humor is often considered insensitive or harmful because it trivializes serious issues.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_black_children_in_media",
+      "label": "Stereotype of Black Children in Media",
+      "description": "The image of a young Black boy with a serious expression may implicitly reference cultural stereotypes that have historically portrayed Black children in media as either overly aggressive, hypersexualized, or emotionally stoic. While the image itself does not depict any stereotype, the visual of a Black child with a somber expression can be interpreted through the lens of these stereotypes, which may influence how the meme is perceived by different audiences.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "sadness",
+      "label": "the somber emotional state",
+      "description": "The child's facial expression, characterized by a serious, downturned mouth, direct gaze, and lack of smiling, conveys a deep sense of sadness or melancholy. This is reinforced by the context of the text, which implies long-term parental absence, making the sadness emotionally resonant and poignant.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Child is mapped as the speaker of the text about their missing father",
+      "description": "The visual of the young Black boy is mapped onto the textual entity 'my dad' in the phrase 'my dad is the best at hide and seek'. The child, as the visual subject, is the speaker of the text, representing the child's perspective on their absent father. The mapping is established by the juxtaposition of the child's somber expression with the text, which implies the child is the one experiencing the absence and speaking about it. The child's visual presence anchors the entire narrative of the meme, making them the 'I' in 'my dad'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the child as the speaker of the text",
+      "description": "The user is projected onto the visual material of the child, who is depicted as the speaker of the text 'my dad is the best at hide and seek'. The child's somber expression and central position in the image anchor the narrative, making the viewer identify with the child's perspective and experience of parental absence. The deictic 'my dad' in the text directly implicates the child as the speaker, creating a semiotic projection where the user sees themselves as the child in this scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the trauma of a child whose father has been missing for 15 years by using dark humor, which can be retraumatizing for individuals dealing with parental loss or disappearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who are familiar with or have experienced dark humor related to parental absence, particularly those who may have personal connections to missing or absent parents. The meme relies on cultural understanding of metaphors like 'hide and seek' for missing persons and the emotional weight of long-term parental loss. It is likely intended for an online audience that appreciates or engages with dark comedy, especially those who can relate to the juxtaposition of childhood innocence and adult trauma. The visual of a young Black boy may also resonate with audiences who are aware of or sensitive to representations of Black children in media, though the meme does not explicitly target any specific racial or ethnic group beyond the visual subject. The meme's dark humor and tragic irony are designed to provoke a reaction from viewers who understand the gravity of the situation being humorously described, making it most effective for audiences who are already familiar with the concept of parental loss or disappearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/14695.png",
+    "image_name": "14695.png",
+    "extraction_timestamp": "2025-12-15T15:49:57.812520",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

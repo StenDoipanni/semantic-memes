@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "officer_down_mapping",
+      "hasMappedEntity": "text_chunk",
+      "hasMappingEntity": "officer_1"
+    },
+    {
+      "from": "officer_1",
+      "relation": "mappedOnto",
+      "to": "text_chunk"
+    }
+  ],
+  "triples": [
+    ":officer_down_mapping :hasMappedEntity :text_chunk .",
+    ":officer_down_mapping :hasMappingEntity :officer_1 .",
+    ":officer_1 :mappedOnto :text_chunk ."
+  ],
+  "triples_count": 3
+}

@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061",
+  "@type": "AnalysisDocument",
+  "title": "73028.png - Dimension Analysis",
+  "created": "2025-12-19T11:40:47.440470",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_3eab5da3",
+    "@type": "Image",
+    "filename": "73028.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/73028.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/73028.png",
+    "image_name": "73028.png",
+    "extraction_timestamp": "2025-12-19T11:39:14.330288",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7cb72344",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a mechanic working on a car engine, with overlaid text reading 'so, 2 gay guys walk into a bar and pick up a tranny.' This is a homophobic and transphobic joke that uses a sexualized pun ('tranny' as a slang term for a manual transmission, which is then misapplied to refer to a transgender person) to mock LGBTQ+ individuals. The joke relies on offensive stereotypes and language that degrades and objectifies transgender people, which can cause emotional harm and reinforce discrimination. The visual of a mechanic is juxtaposed with the text to create a crude, sexually suggestive punchline that targets the LGBTQ+ community, making it harmful and potentially offensive to those affected by such stereotypes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_aea105e4",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "so, 2 gay guys walk into a bar and pick up a tranny",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4dddc47d",
+      "@type": "VisualMaterial",
+      "instance_name": "mechanic",
+      "label": "person",
+      "description": "A young man with short brown hair, wearing a light gray long-sleeve shirt and blue overalls, is leaning over the open hood of a car, inspecting or working on the engine. He appears focused and is positioned as the central human subject in the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ad22767a",
+      "@type": "Scene",
+      "instance_name": "mechanic_working_on_car",
+      "label": "mechanic working on car engine",
+      "description": "A young man (mechanic) is leaning over the open hood of a car, inspecting or working on the engine. He is focused and positioned as the central human subject in the image. The car's engine bay is visible, and the mechanic's hands are engaged with engine components. The scene is set in what appears to be a garage or auto repair shop, with tools and equipment visible in the background.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d9b8d14b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "LGBTQ_DISCRIMINATION",
+      "label": "LGBTQ+ Discrimination Stereotypes",
+      "description": "The meme relies on offensive stereotypes targeting LGBTQ+ individuals, specifically using the term 'tranny' as a derogatory slang for transgender people. This term is a slur and is used in the joke to mock and dehumanize transgender individuals, fitting under the broader category of LGBTQ+ discrimination stereotypes such as 'gender presentation mockery' and 'hypersexualization'.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3a910393",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "SLUR_USAGE",
+      "label": "Use of the Slur 'Tranny'",
+      "description": "The term 'tranny' is a derogatory slang term for a transgender person, which is used in the joke to create a crude, sexualized punchline. This usage is offensive and relies on real-world knowledge of the slur's meaning and its association with transphobia.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9582754a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "HOMOPHOBIA",
+      "label": "Homophobia Stereotype",
+      "description": "The joke references '2 gay guys', which is a stereotype that reduces LGBTQ+ individuals to a punchline. This is a form of homophobia that relies on the stereotype that gay men are inherently sexual or promiscuous, which is a harmful and inaccurate generalization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_109b198c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "TRANSAPHOBIA",
+      "label": "Transphobia Stereotype",
+      "description": "The joke uses the term 'tranny' to refer to a transgender person, which is a transphobic slur. This stereotype degrades and objectifies transgender individuals, fitting under the 'gender presentation mockery' and 'hypersexualization' categories of transphobic discrimination.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b27ff83e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "PUN_BASED_HUMOR",
+      "label": "Pun-Based Humor",
+      "description": "The joke is a pun that plays on the double meaning of 'tranny' — referring to a manual transmission in cars (which is a mechanical part) and then misapplied to refer to a transgender person. This type of humor relies on real-world knowledge of the term's dual meaning and its offensive usage.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0a5aabcc",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "MECHANIC_STEREOTYPE",
+      "label": "Mechanic Stereotype",
+      "description": "The image of a mechanic working on a car is juxtaposed with the text to create a crude, sexually suggestive punchline. This relies on the stereotype that mechanics are associated with sexual or mechanical 'parts', which is a form of objectification and reinforces harmful stereotypes about gender roles and professions.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f221d0a6",
+      "@type": "EmotionExpression",
+      "instance_name": "derision",
+      "label": "derisive emotional tone",
+      "description": "The emotion expressed is derision, conveyed through the offensive and mocking nature of the overlaid text, which uses a crude pun and derogatory language to demean LGBTQ+ individuals. The visual of the mechanic, juxtaposed with the text, reinforces a tone of crude humor and objectification.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8e1f8bb3",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Mechanic mapped as 'tranny' in the joke",
+      "description": "The text 'pick up a tranny' in the meme creates an analogical mapping where the visual entity 'mechanic' is implicitly mapped onto the textual entity 'tranny'. This mapping is based on the pun where 'tranny' refers to a manual transmission (a mechanical part) and is misapplied to refer to a transgender person. The mechanic, who is working on the car's engine (a mechanical part), is visually juxtaposed with the text to reinforce the crude, sexualized punchline. This mapping relies on the stereotype that mechanics are associated with mechanical 'parts', which is a form of objectification and reinforces harmful stereotypes about gender roles and professions.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_eb64cff1",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the mechanic as the 'tranny'",
+      "description": "The user is projected onto the visual entity 'mechanic' through the textual joke 'pick up a tranny'. The mechanic, who is visually working on the car's engine (a mechanical part), is implicitly mapped onto the slur 'tranny' (a derogatory term for a transgender person). This creates a crude, sexualized punchline that objectifies the mechanic and reinforces harmful stereotypes about gender roles and professions. The projection is implicit, relying on the pun and the visual juxtaposition, rather than explicit deictic pronouns like 'me' or 'you'.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_df73d025",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a crude pun and derogatory language to mock and dehumanize transgender individuals, which can cause emotional harm and reinforce discrimination against the LGBTQ+ community.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2737e9a4",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience that may find crude, pun-based humor offensive or edgy, particularly those unfamiliar with or desensitized to LGBTQ+ discrimination stereotypes. The joke relies on the audience's knowledge of the derogatory slang term 'tranny' and its association with transphobia, as well as the stereotype that mechanics are associated with mechanical 'parts'. The intended audience likely includes individuals who are not directly affected by the harmful stereotypes and may not recognize the offensive nature of the joke, or who may find the humor 'clever' or 'darkly funny' despite its harmful content.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_dbea1061"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: a_stork_might_bring_you_a_baby_but_a_swallow_never_will; hasOverallIntent: Mysogynous; overall-intent-description: The meme uses a woman's exaggerated, surprised facial expression to visually represent the absurdity of the statement 'a stork might bring you a baby but a swallow never will.' The text plays on a common folkloric trope (stork delivering babies) and contrasts it with a bird that cannot do so, implying a humorous or ironic twist. However, the image of the woman, with her wide eyes and pout, is often used in memes to convey shock, disbelief, or comedic exasperation. While the meme itself does not directly target any specific group based on protected characteristics, its visual framing of a woman's exaggerated reaction can be interpreted as reinforcing stereotypes about women's emotional reactivity or irrationality. This aligns with misogynous tropes that portray women as overly emotional, easily shocked, or incapable of rational thought. The meme's intent is to elicit laughter through absurdity and visual exaggeration, but the use of a woman's face in this context can subtly perpetuate the idea that women are the ones who should be surprised or emotionally affected by such nonsense, thus contributing to a misogynous undertone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "a stork might bring you a baby",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with brown, wavy hair and wide, surprised eyes, making a pouting facial expression. She is wearing a floral-patterned top and appears to be looking directly at the camera. Her expression is exaggerated, conveying shock or disbelief, which is central to the meme's visual humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "shocked_reaction_scene",
+      "label": "woman_expressing_shock",
+      "description": "A scene where a woman displays an exaggerated expression of shock or disbelief, visually reacting to the text overlay that reads 'a stork might bring you a baby but a swallow never will.' The woman's wide eyes, pouting lips, and direct gaze at the camera convey comedic surprise, which is central to the meme's humor and intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stork_delivers_babies_folklore",
+      "label": "Stork delivers babies folklore",
+      "description": "A widespread folkloric belief, especially in Western cultures, that storks deliver babies. This is a myth with no basis in reality, often used in children's stories and as a metaphor for unexpected or miraculous births. The meme references this trope to set up the absurd contrast with the swallow.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "swallow_cannot_deliver_babies",
+      "label": "Swallow cannot deliver babies",
+      "description": "A biological and factual impossibility. Swallows are small birds that do not have the physical capability or behavior to deliver babies. The meme uses this as a punchline to contrast with the stork myth, highlighting the absurdity of the initial statement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_of_women_as_emotionally_reactive",
+      "label": "Misogynous stereotype of women as emotionally reactive",
+      "description": "The trope that women are overly emotional, easily shocked, or prone to exaggerated reactions. The meme visually reinforces this by using a woman's face to depict shock, which can be interpreted as perpetuating the stereotype that women are the ones who should be surprised or emotionally affected by absurd or nonsensical situations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "shocked_reaction_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "absurdity_for_comedic_effect",
+      "label": "Absurdity for comedic effect",
+      "description": "The use of illogical or impossible scenarios to create humor. The meme relies on the contrast between the mythical stork and the biologically impossible swallow to generate laughter through absurdity, a common comedic device.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "shocked_reaction_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "shock",
+      "label": "shocked emotion",
+      "description": "The woman's wide eyes, slightly parted lips, and pouting expression convey a state of exaggerated surprise or disbelief, visually reacting to the absurdity of the text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The woman's shocked expression is mapped onto the absurdity of the statement 'a stork might bring you a baby'.",
+      "description": "The visual material of the woman displaying an exaggerated shocked expression is mapped onto the textual material 'a stork might bring you a baby' to convey the comedic surprise or disbelief at the folkloric notion. The woman's reaction visually represents the emotional response to the absurdity of the statement, creating an analogical mapping where her shock is the visual embodiment of the text's implied incredulity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman's shocked expression",
+      "description": "The user is projected onto the visual material of the woman displaying an exaggerated shocked expression, which is used to represent the emotional reaction to the absurd statement in the text. The meme implies that the viewer (user) is the one who should be surprised or shocked by the folkloric and biological contrast presented, thus projecting the user's perspective onto the woman's facial reaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme visually reinforces the stereotype that women are overly emotional and easily shocked, which aligns with misogynous tropes. The woman's exaggerated facial expression is used to represent the absurdity of the statement, but this framing can subtly perpetuate the idea that women are the ones who should be surprised or emotionally affected by such nonsense, thus contributing to a misogynous undertone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with common folkloric tropes (stork delivering babies) and visual humor involving exaggerated facial expressions. The humor relies on absurdity and visual comedy, making it accessible to a wide demographic without specific cultural or community markers beyond general pop culture knowledge.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/05726.png",
+    "image_name": "05726.png",
+    "extraction_timestamp": "2025-12-15T12:28:12.278272",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

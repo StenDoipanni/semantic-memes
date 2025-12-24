@@ -1,0 +1,201 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: rare_picture_of_a_dishwasher_at_birth; hasOverallIntent: Harmful; overall-intent-description: The image depicts an open dishwasher with dishes inside, positioned next to a refrigerator adorned with colorful magnetic letters. The overlaid text reads \"rare picture of a dishwasher at birth\" — a pun suggesting the dishwasher is being born, which is absurd and nonsensical. The intent is to create humor through absurdity and wordplay, not to target any specific group or cause harm. However, the phrase \"at birth\" can be interpreted as potentially infantilizing or mocking the appliance, which may be seen as mildly demeaning or insensitive to some viewers, though not overtly harmful or toxic. The meme relies on visual juxtaposition and textual irony to generate a laugh, with no direct reference to protected characteristics or harmful stereotypes. The humor is derived from the incongruity of the scene and the pun, not from disparaging any group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "rare picture of a",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "dishwasher",
+      "label": "appliance",
+      "description": "An open, stainless steel dishwasher with racks containing dishes, utensils, and a plastic bag. It is positioned on a wooden floor and appears to be in a kitchen setting. The dishwasher is the central object in the image and is the subject of the meme's text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "dishwasher_birth_scene",
+      "label": "dishwasher_at_birth",
+      "description": "A scene depicting an open dishwasher with dishes inside, positioned next to a refrigerator adorned with colorful magnetic letters. The overlaid text humorously labels this as a 'rare picture of a dishwasher at birth', creating a visual and textual juxtaposition for comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "dishwasher",
+          "relation": "isAdjacentTo",
+          "to": "refrigerator"
+        },
+        {
+          "from": "text",
+          "relation": "describes",
+          "to": "dishwasher"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dishwasher_birth_concept",
+      "label": "dishwasher at birth",
+      "description": "The phrase 'dishwasher at birth' is a pun that plays on the human concept of birth — the moment of coming into existence — and applies it to an appliance. This requires understanding that 'birth' is a biological and cultural concept reserved for living beings, and that applying it to inanimate objects is absurd and humorous. The meme relies on this conceptual incongruity for its effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "dishwasher_birth_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "infantilization_appliance",
+      "label": "infantilizing appliances",
+      "description": "The meme subtly infantilizes the dishwasher by calling it 'at birth,' which is a form of anthropomorphism. This requires background knowledge about how people sometimes anthropomorphize objects (e.g., calling a car 'my baby' or a pet 'my child') and how such language can be used humorously or mockingly. The humor derives from the absurdity of treating an appliance as if it were a newborn human.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dishwasher_birth_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pun_based_humor",
+      "label": "pun-based humor",
+      "description": "The meme relies on wordplay — specifically, a pun — to create humor. The phrase 'rare picture of a dishwasher at birth' is a play on the phrase 'rare picture of a baby at birth,' which is a common trope in photography. Understanding this type of humor requires knowledge of linguistic puns and how they are used in comedy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "dishwasher_birth_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "absurdity_comedy",
+      "label": "absurdity as comedic device",
+      "description": "The humor in the meme stems from the absurdity of the situation — a dishwasher being 'born' — which is inherently illogical. This requires background knowledge about comedy techniques, particularly the use of absurdity to generate laughter. The juxtaposition of a mundane kitchen appliance with a biological concept (birth) creates the comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dishwasher_birth_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "appliance_personification",
+      "label": "personification of appliances",
+      "description": "The meme involves personifying the dishwasher, attributing human characteristics (like being 'born') to it. This requires understanding that personification is a common rhetorical and comedic device, often used to make inanimate objects seem more relatable or to create humor through contrast with their actual nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dishwasher_birth_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "absurdity_humor",
+      "label": "humorous absurdity emotion",
+      "description": "The emotion expressed is amusement derived from the absurdity of the situation — the dishwasher being humorously labeled as 'at birth'. This is a comedic emotion triggered by the incongruity between a mundane appliance and the biological concept of birth.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "dishwasher_birth_mapping",
+      "label": "dishwasher is mapped as being at birth",
+      "description": "The text 'rare picture of a dishwasher at birth' creates an analogical mapping where the visual entity 'dishwasher' is mapped onto the textual concept of 'at birth'. This mapping is based on the pun that equates the appliance's 'birth' (i.e., its first use or installation) with the biological concept of human birth, creating absurd humor. The dishwasher is the central visual entity being personified and infantilized by the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the dishwasher_birth_scene",
+      "description": "The user is projected onto the scene of the dishwasher being humorously labeled as 'at birth', creating an identification with the absurd situation. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the humor invites the viewer to participate in the joke by imagining the dishwasher as a newborn, thus projecting themselves into the conceptual framework of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "mild infantilization through anthropomorphism",
+      "description": "The meme uses the phrase 'dishwasher at birth' to anthropomorphize and infantilize an appliance, which may be seen as mildly demeaning or insensitive to some viewers. This is not overtly harmful or toxic, but it does involve a form of object infantilization that could be perceived as mocking or condescending.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with internet humor, wordplay, and visual puns. It relies on absurdity and conceptual incongruity — applying the human concept of 'birth' to an appliance — which is a common comedic device in online culture. The humor is accessible without requiring specific cultural or demographic knowledge, making it suitable for a wide range of viewers who understand basic English and appreciate visual jokes. The target community includes individuals who engage with meme culture, particularly those who enjoy pun-based humor and relatable, everyday scenarios presented in a humorous, exaggerated way.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/38159.png",
+    "image_name": "38159.png",
+    "extraction_timestamp": "2025-12-16T00:07:22.721562",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

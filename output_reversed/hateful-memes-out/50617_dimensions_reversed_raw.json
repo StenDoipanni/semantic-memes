@@ -1,0 +1,192 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Mysogynous; overall-intent-description: The image depicts a woman holding a goat and using the text 'mom?' and 'i'm pregnant!!' to create a humorous analogy. The visual of the goat being petted by the woman, combined with the text, implies a joke about the woman being pregnant and the goat being mistaken for her 'mom'. This meme uses the trope of a woman being pregnant and the goat being a 'mom' to create a humorous, absurd situation. The overall intent is to elicit laughter through absurdity and wordplay, not to target or harm any specific group. However, the meme could be considered mysogynous because it relies on the stereotype that women are primarily defined by their reproductive roles, which can reinforce the idea that a woman's value or identity is tied to her ability to bear children. The meme does not contain any abusive, cyberbullying, harmful, hateful, or propaganda elements. The humor is derived from the juxtaposition of the text and the image, creating a playful and absurd scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "mom?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman wearing a beige blouse and a colorful skirt, holding a smartphone in one hand and petting a goat with the other. She has a strap of a bag over her shoulder. Her face is not visible, focusing attention on her interaction with the goat and the text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "petting_goat",
+      "label": "woman petting a goat",
+      "description": "A woman is gently petting a goat on its head while holding a smartphone in her other hand. The goat is wearing a colorful collar and is looking toward the woman. The scene is outdoors with green foliage in the background. The text overlay 'mom?' and 'i'm pregnant!!' adds a humorous context to the interaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "pets",
+          "to": "goat"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "maternal_role_limitations",
+      "label": "Maternal Role Limitations",
+      "description": "The stereotype that a woman's primary or defining role is as a mother or caregiver, often implying that her value or identity is tied to her reproductive or nurturing functions. This is referenced in the meme through the absurd juxtaposition of the woman being 'pregnant' and the goat being called 'mom', reinforcing the idea that women are defined by their maternal roles.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "women_are_only_good_at_housework",
+      "label": "Women Are Only Good at Housework",
+      "description": "A stereotype that women are primarily suited for domestic tasks and caregiving roles, implying they lack competence or value in other areas. This is implicitly referenced in the meme by the humorous framing of the woman's pregnancy as the central focus, suggesting her identity is reduced to her reproductive state.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "crazy_hysterical_labeling",
+      "label": "Crazy/Hysterical Labeling",
+      "description": "The stereotype that women are emotionally unstable or overly dramatic, often used to dismiss their experiences or opinions. This is indirectly referenced in the meme through the exaggerated, absurd text 'i'm pregnant!!' which plays on the stereotype that women are overly emotional or dramatic about pregnancy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gold_digger_accusations",
+      "label": "Gold Digger Accusations",
+      "description": "The stereotype that women are primarily motivated by financial gain or material wealth, often implying they are opportunistic or manipulative. While not directly referenced, this stereotype is part of the broader misogynistic framework that the meme relies on, which reduces women to their reproductive or financial roles.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification_body_part_focus",
+      "label": "Objectification/Body Part Focus",
+      "description": "The stereotype that women are valued primarily for their physical appearance or body parts, often reducing them to sexual objects. This is indirectly referenced in the meme through the focus on the woman's body (implied by the text 'i'm pregnant!!') and the visual framing of her interaction with the goat, which could be interpreted as a distraction from her actual identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "humor",
+      "label": "humorous emotion",
+      "description": "The emotion expressed is humor, derived from the absurd and playful juxtaposition of the woman petting a goat while the text overlays read 'mom?' and 'i'm pregnant!!'. The humor stems from the unexpected and ridiculous scenario where the goat is humorously mistaken for the woman's 'mom', playing on the stereotype that women are defined by their maternal roles.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Goat is mapped as 'mom'",
+      "description": "The text 'mom?' is overlaid on the image, humorously suggesting that the goat is being mistaken for the woman's mother. This creates an analogical mapping where the visual entity 'petting_goat' (the goat being petted) is mapped onto the textual entity 'mom?' as its role or identity in the absurd scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman in the image",
+      "description": "The user is projected onto the woman (VisualMaterial entity 'woman') as the subject of the meme's humor and the one experiencing the situation described by the text ('i'm pregnant!!'). The meme invites the user to imagine themselves in the role of the pregnant woman, making the absurd scenario personal and relatable. The text 'mom?' and 'i'm pregnant!!' are directed at the woman, implying the user sees themselves as the pregnant person in this scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme relies on the stereotype that women are primarily defined by their reproductive roles, reinforcing the idea that a woman's value or identity is tied to her ability to bear children. This is manifested through the absurd juxtaposition of the woman being 'pregnant' and the goat being called 'mom', which reduces the woman to her maternal function.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with internet humor tropes, particularly those involving absurd analogies and wordplay. The humor relies on visual and textual juxtaposition (a woman petting a goat with text 'mom?' and 'i'm pregnant!!') to create a comedic, surreal scenario. The target community includes individuals who understand and appreciate meme culture, including the use of stereotypes (specifically misogynistic ones) for comedic effect, even if the humor is rooted in outdated or problematic frameworks. The meme does not target a specific demographic (e.g., age, gender, ethnicity) but rather appeals to those who find humor in the absurdity of the situation and the reinforcement of maternal role stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/50617.png",
+    "image_name": "50617.png",
+    "extraction_timestamp": "2025-12-16T03:48:51.082399",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

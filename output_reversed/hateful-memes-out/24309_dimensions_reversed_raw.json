@@ -1,0 +1,212 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: golden-girl-meme; hasOverallIntent: non-toxic-humor; overall-intent-description: The image features a smiling elderly woman, Betty White, with the text 'when people ask me who my favorite golden girl is'. The 'Golden Girls' is a popular TV show, and the meme humorously implies that the person is referring to the show's cast. The intent is lighthearted and nostalgic, celebrating the iconic characters and the actress. There is no toxicity, harmful content, or hateful messaging. The humor is based on pop culture reference and affection for the show, not on any disparaging stereotypes or attacks on any group or individual.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when people ask me who my favorite golden girl is",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Betty_White",
+      "label": "elderly woman",
+      "description": "A smiling elderly woman with blonde, curly hair, wearing a blue top, a white scarf with blue polka dots, and gold jewelry, including earrings and a heart-shaped pendant necklace. She is the central subject of the image and is widely recognized as the actress Betty White.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "golden_girl_meme_scene",
+      "label": "Meme featuring Betty White as the 'favorite golden girl'",
+      "description": "The scene depicts Betty White, smiling and looking directly at the camera, with overlaid text that reads 'when people ask me who my favorite golden girl is'. The composition centers on Betty White as the main subject, with a blurred green background suggesting an outdoor setting. The text is positioned at the top of the image, framing the visual as a humorous pop culture reference to the TV show 'The Golden Girls'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Betty_White",
+          "relation": "isSubjectOf",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "frames",
+          "to": "Betty_White"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "golden_girls_tv_show",
+      "label": "The Golden Girls TV Show",
+      "description": "A popular American sitcom that aired from 1985 to 1992, featuring four older women living together in New York City. The show is known for its humor, strong female characters, and iconic cast. The term 'Golden Girl' refers to one of the main characters, and the phrase 'my favorite golden girl' is a direct reference to the show's cast members. Betty White played the character of Rose Nylund, one of the four main 'Golden Girls'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "golden_girl_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "betty_white",
+      "label": "Betty White",
+      "description": "An American actress, comedian, and television personality, widely regarded as a cultural icon. She is best known for her roles in 'The Golden Girls' (as Rose Nylund), 'The Mary Tyler Moore Show', and 'Hot in Cleveland'. Her long career and enduring popularity make her a recognizable figure associated with the 'Golden Girls' franchise.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "golden_girl_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "rose_nylund",
+      "label": "Rose Nylund",
+      "description": "The character played by Betty White in 'The Golden Girls'. Rose is known for her sweet, naive, and sometimes clumsy personality, often portrayed as the 'golden girl' of the group. The meme's text 'my favorite golden girl' directly references this character and the show's title.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "golden_girls_tv_show",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "golden_girl_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "golden_girls_cast",
+      "label": "The Golden Girls Cast",
+      "description": "The ensemble cast of 'The Golden Girls', including Betty White (Rose Nylund), Bea Arthur (Sophia Petrillo), Rue McClanahan (Blanche Devereaux), and Estelle Getty (Mrs. Henny Youngman). The meme humorously implies that the person is referring to this group of actresses, with Betty White being the 'favorite' among them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "golden_girls_tv_show",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "golden_girl_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pop_culture_reference",
+      "label": "Pop Culture Reference",
+      "description": "The meme relies on a well-known pop culture reference to 'The Golden Girls' TV show. Understanding the humor requires knowledge of the show's popularity, its characters, and the cultural impact of its cast, particularly Betty White's iconic role.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "golden_girl_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful expression",
+      "description": "The elderly woman, Betty White, is smiling broadly with visible teeth, crinkled eyes, and a warm, engaging gaze, conveying genuine joy and contentment. Her facial expression radiates positivity and affection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The person asking about favorite golden girl is mapped onto Betty White",
+      "description": "The text 'when people ask me who my favorite golden girl is' implies that the speaker (the person asking) is identifying themselves as the one who has a favorite among the Golden Girls. The visual material shows Betty White, who is widely recognized as the actress who played Rose Nylund, one of the 'Golden Girls'. The meme humorously maps the speaker's self-identification as 'me' onto Betty White, who is the visual representation of the 'favorite golden girl' in this context. The mapping is established through the textual reference to 'my favorite golden girl' and the visual depiction of Betty White, who is the iconic embodiment of that character in popular culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto Betty White as 'my favorite golden girl'",
+      "description": "The text 'when people ask me who my favorite golden girl is' explicitly uses the first-person pronoun 'me', projecting the user (the person asking) onto the visual entity Betty White. The user is humorously identifying themselves as the one who has a favorite among the Golden Girls, and Betty White, as the iconic actress who played Rose Nylund, becomes the visual embodiment of that 'favorite'. This projection is established through the deictic 'me' in the text and the visual representation of Betty White as the 'golden girl' in the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "pop culture enthusiasts of 'The Golden Girls'",
+      "description": "The meme targets fans of the TV show 'The Golden Girls' who recognize Betty White as the actress who played Rose Nylund, one of the main characters. The humor relies on the audience's familiarity with the show's cast and the affectionate nickname 'Golden Girl' for the characters. The target community includes viewers who appreciate the show's humor, strong female leads, and Betty White's iconic performance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/24309.png",
+    "image_name": "24309.png",
+    "extraction_timestamp": "2025-12-15T18:52:02.689028",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

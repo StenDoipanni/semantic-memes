@@ -1,0 +1,218 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: monkey_chains_meme; hasOverallIntent: harmful; overall-intent-description: The image depicts two monkeys behind a chain-link fence, with text that reads: \"what's the difference between the 2?\" and \"the first one can't sing when you put chains on it.\" This meme uses a visual metaphor to imply that one monkey (the 'first one') is incapable of singing when restrained, while the other (implied to be the 'second') can. The phrase 'put chains on it' is a clear reference to the historical and ongoing racist trope of comparing Black people to monkeys, which is a deeply harmful and degrading stereotype. The meme's intent is to evoke a racist association by using the image of monkeys in a context that implies inferiority and subjugation, thereby perpetuating a harmful and offensive racial stereotype. The overall intent is harmful because it relies on a toxic and historically rooted racist metaphor that can cause psychological harm and reinforce systemic racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text overlay at top",
+      "description": "\"what's the difference between the 2?\"",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "monkey_1",
+      "label": "monkey on the left",
+      "description": "A monkey with a lighter, almost bald head and a more human-like facial expression, looking directly at the viewer through a chain-link fence. Its eyes are wide and appear to be staring intently. This monkey is positioned on the left side of the image and is partially obscured by the fence wires.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "monkeys_behind_fence",
+      "label": "monkeys behind chain-link fence",
+      "description": "Two monkeys are positioned behind a chain-link fence, looking directly at the viewer. The monkey on the left (monkey_1) has a lighter, almost bald head and a more human-like facial expression, while the monkey on the right has a fuller head of fur and is partially obscured by the fence wires. Both monkeys are visually connected by the fence structure, which creates a barrier between them and the viewer. The scene is framed by the fence, emphasizing their confinement and the visual metaphor of restraint.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "monkey_1",
+          "relation": "is_positioned_to_the_left_of",
+          "to": "monkey_2"
+        },
+        {
+          "from": "monkey_2",
+          "relation": "is_positioned_to_the_right_of",
+          "to": "monkey_1"
+        },
+        {
+          "from": "monkey_1",
+          "relation": "is_behind",
+          "to": "chain_link_fence"
+        },
+        {
+          "from": "monkey_2",
+          "relation": "is_behind",
+          "to": "chain_link_fence"
+        },
+        {
+          "from": "chain_link_fence",
+          "relation": "separates",
+          "to": "monkey_1"
+        },
+        {
+          "from": "chain_link_fence",
+          "relation": "separates",
+          "to": "monkey_2"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_monkey_comparison",
+      "label": "Anti-Black Stereotype: Comparing Black People to Primates",
+      "description": "The meme relies on the deeply harmful and racist trope of equating Black people with monkeys, which has been used historically to dehumanize and demean Black individuals. The phrase 'put chains on it' directly references this stereotype, implying that Black people are inherently inferior and incapable of certain behaviors (like 'singing') when restrained — a metaphor rooted in racist pseudoscience and colonialism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "monkey_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "monkey_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "monkeys_behind_fence",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_metaphor_chains",
+      "label": "Racist Metaphor: 'Chains' as Symbol of Subjugation",
+      "description": "The phrase 'put chains on it' is a coded reference to the historical and ongoing practice of enslavement and racial oppression of Black people. In this context, 'chains' symbolize systemic racism, oppression, and the forced subjugation of Black communities, which is a real-world concept not visible in the image but essential to understanding the meme's offensive intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_joke_structure",
+      "label": "Racist Joke Structure: 'What's the Difference?'",
+      "description": "The rhetorical question 'what's the difference between the 2?' is a common structure in racist jokes that sets up a false equivalence or a degrading comparison. In this case, it is used to imply that one group (the 'first one') is inferior or incapable, while the other (the 'second') is not — a structure that relies on real-world racial hierarchies and stereotypes to be understood.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_racism_context",
+      "label": "Historical Context of Racial Stereotypes",
+      "description": "The meme draws from a long history of racist caricatures and pseudoscientific claims that have been used to justify slavery, segregation, and systemic racism. The comparison of Black people to monkeys is not a neutral observation but a historically rooted and offensive trope that has been used to deny Black humanity and justify oppression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "monkeys_behind_fence",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "degrading_concern",
+      "label": "degrading concern expressed through visual and textual elements",
+      "description": "The image and text together convey a degrading and mocking emotion, implying inferiority and subjugation. The monkeys' direct, intense gaze through the fence, combined with the text's racist metaphor, creates an emotionally charged scene that evokes discomfort, fear, and contempt. The emotion is not one of genuine concern but rather a calculated, offensive expression designed to demean and dehumanize.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The 'first one' (monkey_1) is mapped as the entity that cannot sing when put in chains",
+      "description": "The top text asks 'what's the difference between the 2?', and the bottom text answers by referring to 'the first one' — which visually corresponds to monkey_1 on the left. The meme uses monkey_1 as the visual representation of the 'first one' in the racist joke, implying it is the one that cannot sing when restrained (i.e., when 'chains' are put on it). This mapping is explicit through the textual reference to 'the first one' and its visual alignment with monkey_1.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the monkeys behind the fence",
+      "description": "The user is projected onto the scene of the monkeys behind the fence, as the meme uses the visual of the monkeys and the text to create a metaphorical comparison that the user is expected to interpret. The rhetorical question 'what's the difference between the 2?' invites the user to engage with the visual and textual material, projecting themselves into the role of the observer or participant in the implied racial comparison. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the framing of the question and the visual metaphor require the user to mentally position themselves as the one evaluating the difference, thus projecting onto the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme perpetuates a deeply harmful and racist stereotype by equating Black people with monkeys and using the phrase 'put chains on it' to imply inherent inferiority and incapability under restraint. This is a historically rooted trope used to dehumanize and justify systemic oppression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "anti_black_stereotype_monkey_comparison",
+      "label": "Anti-Black Stereotype: Comparing Black People to Primates",
+      "description": "The meme is designed for an audience that may be familiar with or perpetuates the racist trope of equating Black people with monkeys, which is used to dehumanize and demean Black individuals. The visual of monkeys and the text 'put chains on it' are coded references to this stereotype, implying inherent inferiority and incapability under restraint — a concept rooted in historical racism and pseudoscience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/71830.png",
+    "image_name": "71830.png",
+    "extraction_timestamp": "2025-12-19T11:10:29.065598",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

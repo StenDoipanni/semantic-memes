@@ -1,0 +1,181 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: the_only_fuck_i_have_left_to_give_andddddd_there_it_goes; hasOverallIntent: Harmful; overall-intent-description: The image depicts a soldier in military gear, raising one arm in a gesture that appears to be throwing something, with text overlay that reads \"the only fuck i have left to give\" and \"andddddd there it goes.\" The overall intent is to convey a sense of exhaustion or resignation, often used humorously or ironically to express giving one's last effort or resources. The meme does not contain any explicit toxic or harmful content targeting specific protected groups (e.g., race, gender, religion, etc.) as defined in the provided knowledge base. However, the use of the word \"fuck\" and the crude phrasing may be considered offensive or inappropriate in certain contexts, which could potentially cause discomfort or harm to some viewers. The intent is not abusive, cyberbullying, propaganda, or misogynistic, but the language used may be deemed harmful due to its vulgar nature. The visual metaphor maps the act of throwing something (possibly a grenade or a symbolic object) onto the textual expression of giving one's last effort, creating a humorous or dramatic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "the only fuck i have left to give",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "soldier",
+      "label": "person",
+      "description": "A person dressed in military camouflage uniform and helmet, carrying a rifle, raising one arm in a throwing motion. The soldier is the central figure in the image, positioned in an outdoor setting with logs and grass.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "soldier_throwing",
+      "label": "soldier throwing something",
+      "description": "A soldier in military gear is depicted in the act of throwing an object, with text overlay indicating the action is symbolic of giving one's last effort. The soldier is the central participant, positioned outdoors with logs and grass in the background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "soldier",
+          "relation": "throws",
+          "to": "object"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_concept",
+      "label": "Meme Concept: 'The Only Fuck I Have Left to Give'",
+      "description": "This meme format is widely used on social media to humorously or ironically express giving one's last effort, energy, or resources, often in a context of exhaustion, resignation, or dramatic finality. The phrase 'the only fuck I have left to give' is a colloquial, vulgar expression implying that the speaker has nothing more to offer — physically, emotionally, or otherwise — and is using the act of throwing something (often symbolically) to represent this final act. The phrase 'andddddd there it goes' reinforces the dramatic, almost theatrical, nature of the gesture, implying the culmination of effort or the release of all remaining resources. This concept relies on cultural understanding of military imagery, exhaustion tropes, and internet humor involving self-deprecating or exaggerated gestures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "soldier_throwing",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "military_context",
+      "label": "Military Context and Stereotypes",
+      "description": "The image of a soldier in uniform, often associated with discipline, sacrifice, and combat, is used here to evoke the stereotype of the 'soldier as a giver of all' — a trope that implies the soldier has given everything for duty, honor, or mission. This stereotype is often used in media and memes to symbolize ultimate sacrifice or extreme effort. The soldier's gesture of throwing something (possibly a grenade or a symbolic object) is interpreted as a metaphor for giving one's last resource — a concept that is culturally understood through military narratives and popular media depictions of soldiers. The meme leverages this visual and cultural association to create a humorous or dramatic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "soldier",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "soldier_throwing",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "vulgar_language_use",
+      "label": "Use of Vulgar Language in Memes",
+      "description": "The phrase 'the only fuck i have left to give' relies on the use of the word 'fuck,' which is a profanity commonly used in informal, colloquial, or humorous contexts. The use of such language in memes is a cultural phenomenon that often serves to convey intensity, authenticity, or irreverence. While the word 'fuck' is not visible in the image, its inclusion in the text overlay is essential to understanding the tone and intent of the meme. The meme's humor or impact is partly derived from the shock value or the casualness of using such language in a context that might otherwise be serious or dramatic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dramatic_gesture_stereotype",
+      "label": "Dramatic Gesture Stereotype",
+      "description": "The soldier's raised arm and throwing motion is a visual trope often used in media and memes to convey a sense of finality, release, or dramatic action. This gesture is culturally associated with 'throwing something away' — whether literally (like a grenade) or metaphorically (like giving up). The meme relies on viewers understanding this gesture as a symbolic act of surrender or exhaustion, which is a common trope in both military and civilian contexts. The exaggerated 'andddddd there it goes' text reinforces this dramatic interpretation, which is a common feature of internet humor and meme culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "soldier_throwing",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "resignation",
+      "label": "resigned emotion",
+      "description": "The emotion of giving up or having nothing left to offer, conveyed through the soldier's gesture and the text overlay. The phrase 'the only fuck i have left to give' expresses a sense of exhaustion and finality, while 'andddddd there it goes' dramatizes the act of releasing one's last resources.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Soldier's gesture mapped to giving one's last effort",
+      "description": "The textual phrase 'the only fuck i have left to give' is mapped onto the visual action of the soldier raising his arm and throwing something, symbolizing the act of giving one's final resources or effort. This mapping is central to the meme's concept, where the soldier's physical gesture represents the metaphorical 'giving' described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the soldier's action of giving their last effort",
+      "description": "The user is projected onto the soldier (VisualMaterial) performing the gesture of throwing something, which symbolizes giving one's last effort as described in the text. The meme uses the soldier as a stand-in for the user, implying 'this is me' or 'this is what I'm doing'. The text 'the only fuck i have left to give' and 'andddddd there it goes' reinforces this identification, making the user feel they are the one performing the action of exhausting their final resources.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The use of the word 'fuck' in the text overlay is vulgar and may cause discomfort or harm to some viewers, even if the intent is not abusive or targeted at specific protected groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "military personnel",
+      "description": "The meme targets individuals familiar with military imagery and culture, particularly those who understand the symbolic gesture of a soldier throwing something as a metaphor for giving one's last effort. The visual of a soldier in uniform and the context of the phrase 'the only fuck I have left to give' are culturally coded to resonate with audiences who recognize military tropes and the concept of sacrifice or extreme exertion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/67138.png",
+    "image_name": "67138.png",
+    "extraction_timestamp": "2025-12-16T08:52:27.600945",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

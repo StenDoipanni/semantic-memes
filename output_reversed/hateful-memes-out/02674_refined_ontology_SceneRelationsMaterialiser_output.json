@@ -1,0 +1,35 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "juxtaposed_stereotype_scene",
+      "participants": [
+        {
+          "entity": "Asian woman",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "severely damaged car",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Asian woman",
+          "relation": "juxtaposedWith",
+          "to": "severely damaged car"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":juxtaposed_stereotype_scene :hasParticipant :Asian_woman .",
+    ":juxtaposed_stereotype_scene :hasParticipant :severely_damaged_car .",
+    ":Asian_woman :juxtaposedWith :severely_damaged_car ."
+  ],
+  "triples_count": 3
+}

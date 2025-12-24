@@ -1,0 +1,210 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: anne-frank-puzzle-meme; hasOverallIntent: Harmful; overall-intent-description: The image depicts a stylized representation of Anne Frank, a Jewish girl who died in the Holocaust, with the text 'just ordered the new anne frank puzzle.' This juxtaposition is harmful because it trivializes her tragic life and death by framing her as a commercial product or entertainment item. The meme reduces a symbol of historical suffering and genocide into a consumer good, which can be seen as disrespectful and insensitive. While not overtly abusive or hateful toward a specific group, it risks minimizing the gravity of the Holocaust and Anne Frank's legacy, potentially causing harm by normalizing the commodification of trauma. The intent appears to be ironic or sarcastic, but the effect is to potentially desensitize viewers to the historical significance of Anne Frank and the Holocaust, making it a harmful meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "just ordered the new anne frank puzzle",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Anne_Frank",
+      "label": "person",
+      "description": "A young girl with dark, wavy hair, wearing a white dress with red embroidery, seated at a wooden desk. She is smiling and appears to be writing or drawing. This is a stylized representation of Anne Frank, based on historical photographs and depictions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "anne_frank_at_desk",
+      "label": "Anne Frank seated at a wooden desk",
+      "description": "A stylized representation of Anne Frank is seated at a wooden desk, appearing to write or draw. She is positioned in front of a green door and next to a shelf with books and a hanging pink dress. The scene is framed by interior elements suggesting a personal space, possibly a room in a hiding place. The text overlay 'just ordered the new anne frank puzzle' implies a commercial context, contrasting with the solemn historical significance of Anne Frank.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anne_frank_holocaust",
+      "label": "Anne Frank and the Holocaust",
+      "description": "Anne Frank was a Jewish girl who wrote a diary while in hiding from the Nazis during World War II. She and her family were later captured and murdered in the Holocaust, a genocide in which six million Jews were systematically murdered by Nazi Germany and its collaborators. Her diary has become a powerful symbol of the Holocaust and the resilience of the human spirit in the face of persecution. The meme trivializes her legacy by framing her as a commercial product, which is deeply disrespectful to her memory and the victims of the Holocaust.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "holocaust_minimization",
+      "label": "Holocaust Minimization",
+      "description": "This refers to the act of downplaying, trivializing, or ignoring the scale and horror of the Holocaust. The meme's implication that Anne Frank can be 'ordered' as a puzzle is an example of commodification of trauma, which risks reducing a profound historical tragedy to a consumer item. This is a form of Holocaust minimization, which is considered harmful and disrespectful to victims and survivors.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "commodification_of_trauma",
+      "label": "Commodification of Trauma",
+      "description": "This is the process of turning traumatic historical events or individuals into commercial products for entertainment or profit. In this meme, Anne Frank — a symbol of immense suffering and historical significance — is framed as a 'puzzle' to be purchased, which reduces her legacy to a mere object. This concept is widely criticized for being insensitive and disrespectful to victims of historical atrocities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anne_frank_diary",
+      "label": "Anne Frank's Diary",
+      "description": "Anne Frank's diary, 'The Diary of a Young Girl,' is one of the most widely read and influential books in history. It documents her experiences during the Holocaust and has become a global symbol of hope, resilience, and the human cost of genocide. The meme's reference to 'the new anne frank puzzle' implicitly references this iconic text, making the trivialization of her story even more jarring.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "puzzle_commercialization",
+      "label": "Puzzle Commercialization",
+      "description": "The act of creating and selling puzzles based on historical figures or events is a form of commercialization. While not inherently negative, when applied to figures like Anne Frank — whose story is deeply tied to suffering and loss — it can be seen as exploitative or disrespectful. The meme uses this commercial context to create a jarring contrast with the gravity of her story.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "trivialization",
+      "label": "the trivializing emotion",
+      "description": "The emotion expressed through the juxtaposition of Anne Frank's solemn historical legacy with the commercial text 'just ordered the new anne frank puzzle,' which frames her as a purchasable product. This creates an emotional tone of disrespect and insensitivity toward her suffering and the Holocaust.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "anne_frank_as_commercial_product_mapping",
+      "label": "Anne Frank is mapped as a commercial product (puzzle)",
+      "description": "The text 'just ordered the new anne frank puzzle' explicitly maps Anne Frank (the visual entity) onto the category of a commercial product (a puzzle). This creates an analogical mapping where the historical figure is recontextualized as an item for purchase, which is the core of the meme's harmful intent. The visual representation of Anne Frank — a young girl writing at her desk — is juxtaposed with the commercial text, creating a stark contrast between her historical significance and the trivializing commercial framing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material expressing a commercial action",
+      "description": "The user is projecting themselves onto the text 'just ordered the new anne frank puzzle', implying that they are the one who has made this purchase. This projection is implicit, as the text uses first-person voice ('just ordered') to create a direct connection between the viewer/user and the action described. The user is not explicitly deictic (e.g., 'you' or 'me'), but the first-person verb 'ordered' creates a strong sense of personal agency and identification with the act, making the user the implied subject of the statement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes Anne Frank's legacy by framing her as a commercial product, which can be seen as disrespectful and insensitive. It risks minimizing the gravity of the Holocaust and Anne Frank's story, potentially causing harm by normalizing the commodification of trauma.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience familiar with Anne Frank and the Holocaust, likely engaging with internet humor, pop culture references, and meme formats. The target community includes individuals who consume and create internet memes, particularly those who may find irony or sarcasm in juxtaposing historical trauma with consumer products. The meme’s intent to provoke reaction — whether through shock, outrage, or amusement — is aimed at users who are culturally aware of Anne Frank’s legacy and the Holocaust, and who participate in online discourse that often includes controversial or provocative content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/67125.png",
+    "image_name": "67125.png",
+    "extraction_timestamp": "2025-12-16T08:50:32.085360",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

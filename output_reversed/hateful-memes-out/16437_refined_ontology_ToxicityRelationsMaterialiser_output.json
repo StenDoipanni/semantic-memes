@@ -1,0 +1,35 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "overallintent_instance"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "Anthony_T_I_Thornton"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "top_text"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "scene"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :overallintent_instance .",
+    ":toxicity_1 :hasToxicElement :Anthony_T_I_Thornton .",
+    ":toxicity_1 :hasToxicElement :top_text .",
+    ":toxicity_1 :hasToxicElement :scene ."
+  ],
+  "triples_count": 4
+}

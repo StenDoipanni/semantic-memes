@@ -1,0 +1,227 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image features a man in a military-style uniform with a serious expression, overlaid with text that claims transgender identity is a mental illness called 'delusional psychosis.' This statement is a direct and harmful attack on transgender individuals, using medical terminology to pathologize and dehumanize a protected community. The visual of the stern, authoritative figure reinforces the tone of judgment and dismissal. The meme's intent is to spread misinformation and stigmatize transgender people by framing their identity as a mental disorder, which is both medically inaccurate and deeply hateful. This aligns with the 'LGBTQ+ DISCRIMINATION' toxicity category, specifically the 'Mental illness characterizations' stereotype, which is used to delegitimize and vilify transgender identities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "what if i told you transgender is actually a mental illness called delusional psychosis",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A bald man wearing dark sunglasses and a military-style camouflage uniform, looking off to the side with a serious, stern expression. He is the central visual focus of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "hateful_meme_scene",
+      "label": "hateful_meme_scene",
+      "description": "A scene depicting a man in a military-style uniform with a stern expression, overlaid with text that makes a hateful and medically inaccurate claim about transgender people. The visual of the authoritative figure reinforces the tone of judgment and dismissal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "is_displaying",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mental_illness_characterizations_stereotype",
+      "label": "Mental Illness Characterizations Stereotype",
+      "description": "A harmful stereotype that pathologizes and dehumanizes LGBTQ+ identities by framing them as mental illnesses, which is medically inaccurate and used to delegitimize and vilify transgender people. This stereotype is explicitly referenced in the meme's text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "delusional_psychosis",
+      "label": "Delusional Psychosis",
+      "description": "A specific psychiatric diagnosis characterized by persistent false beliefs (delusions) that are not grounded in reality. The meme misuses this term to falsely label transgender identity as a mental illness, which is medically inaccurate and stigmatizing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "transgender_identity",
+      "label": "Transgender Identity",
+      "description": "A social and medical identity referring to individuals whose gender identity differs from the sex they were assigned at birth. The meme attempts to delegitimize this identity by claiming it is a mental illness, which is a form of discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "medical_inaccuracy",
+      "label": "Medical Inaccuracy",
+      "description": "The false claim that transgender identity is a mental illness, which contradicts current medical and psychological consensus. The American Psychiatric Association and other major health organizations recognize gender identity as a natural variation, not a disorder.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stigmatization",
+      "label": "Stigmatization",
+      "description": "The process of devaluing or discrediting a group or identity through negative stereotypes or labels. The meme uses stigmatizing language to attack transgender people, reinforcing societal prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "authority_figure_visual",
+      "label": "Authority Figure Visual",
+      "description": "The visual of a stern, authoritative man (often associated with military or law enforcement) is used to reinforce the tone of judgment and dismissal in the meme. This visual trope is commonly used to imply that the speaker is 'in charge' or 'right' in their harmful claims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_dismissal",
+      "label": "hateful dismissal emotion",
+      "description": "The emotion expressed is one of contemptuous dismissal and judgment, conveyed through the stern, authoritative facial expression of the man and reinforced by the hateful text claiming transgender identity is a mental illness. This emotion is intended to dehumanize and delegitimize transgender people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text claims transgender identity is a mental illness, mapped onto the authoritative figure",
+      "description": "The textual material 'what if i told you transgender is actually a mental illness called delusional psychosis' is juxtaposed with the visual of a stern, authoritative man. This creates an analogical mapping where the man (visual entity) is implicitly mapped as the 'authority' or 'source' of the harmful claim, reinforcing the stereotype that such claims come from an authoritative, judgmental figure. The man's visual presence serves as a visual anchor for the text's assertion, implying that the claim is presented as fact or truth by an authoritative voice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual claim as the speaker of the hateful statement",
+      "description": "The user is projected onto the text_chunk 'what if i told you transgender is actually a mental illness called delusional psychosis' because the meme uses the first-person conditional 'what if i told you' to directly address the viewer, inviting them to imagine themselves as the one making the harmful claim. This creates a direct projection where the user is positioned as the potential source or believer of the statement, even though the text is presented as a hypothetical. The projection is onto the textual material, which acts as the primary vehicle for the user's imagined role.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks transgender individuals by falsely labeling their identity as a mental illness, which is a hateful and dehumanizing statement. The visual of the stern, authoritative figure reinforces the tone of judgment and dismissal, making the overall intent explicitly hateful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "transgender_identity",
+      "label": "Transgender Individuals",
+      "description": "The meme targets transgender individuals by falsely labeling their identity as a mental illness, using stigmatizing language to delegitimize and vilify them. This is a direct attack on the transgender community, aiming to spread misinformation and reinforce harmful stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/96485.png",
+    "image_name": "96485.png",
+    "extraction_timestamp": "2025-12-19T19:10:11.211775",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

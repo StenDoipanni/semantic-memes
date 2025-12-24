@@ -1,0 +1,40 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "racialized_judgment"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "child_stealing_bike_stereotype"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "racial_stereotype_of_white_people_as_criminal"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "white_supremacist_implicit_bias"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :text_chunk .",
+    ":toxicity_1 :hasToxicElement :racialized_judgment .",
+    ":toxicity_1 :hasToxicElement :child_stealing_bike_stereotype .",
+    ":toxicity_1 :hasToxicElement :racial_stereotype_of_white_people_as_criminal .",
+    ":toxicity_1 :hasToxicElement :white_supremacist_implicit_bias ."
+  ],
+  "triples_count": 5
+}

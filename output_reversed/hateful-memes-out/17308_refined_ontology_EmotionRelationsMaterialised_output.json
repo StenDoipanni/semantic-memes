@@ -1,0 +1,38 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful emotion",
+      "expressors": [
+        {
+          "entity": "caricatured_jewish_man_1",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "caricatured_jewish_man_2",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "caricatured_jewish_man_1",
+          "relation": "emotionalRelationToEntity",
+          "to": "caricatured_jewish_man_2"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_emotion :hasExpressor :caricatured_jewish_man_1 .",
+    ":hateful_emotion :hasExpressor :caricatured_jewish_man_2 .",
+    ":caricatured_jewish_man_1 :emotionalRelationToEntity :caricatured_jewish_man_2 ."
+  ],
+  "triples_count": 3
+}

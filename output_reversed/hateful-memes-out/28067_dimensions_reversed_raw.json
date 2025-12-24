@@ -1,0 +1,227 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme uses a close-up of a man with a smug or condescending expression, juxtaposed with text that implies a parent (likely a mother) was fined for littering while dropping off their child at school. The intent is to mock or shame the parent for a minor infraction, potentially implying incompetence or irresponsibility. While not explicitly targeting a specific protected group, it can be perceived as demeaning to parents in general, especially mothers, by highlighting a trivial mistake in a judgmental way. This can be harmful as it may contribute to a culture of public shaming and could make parents feel embarrassed or judged for everyday mistakes, potentially damaging their self-esteem or social standing. The humor is derived from the absurdity of the situation, but the underlying message can be hurtful and discouraging.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "i remember when your mom dropped you off to school",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A middle-aged man with short, curly grayish-brown hair, looking slightly to his right with a smug or condescending expression. He has visible wrinkles, particularly around his eyes and mouth, and is wearing a white shirt. His mouth is slightly open as if speaking. This is a close-up shot focusing on his face and upper neck.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "mocking_conversation",
+      "label": "mocking_conversation",
+      "description": "A scene where a man with a smug expression delivers a mocking or condescending statement, likely directed at an unseen person or audience, as implied by the text overlay. The scene is framed as a humorous or sarcastic commentary, with the man's expression and the text working together to convey judgment or ridicule.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mocking_conversation",
+      "label": "mocking_conversation",
+      "description": "The meme relies on the concept of a mocking or condescending conversation, where one person delivers a sarcastic or judgmental remark to another, often in a humorous or exaggerated way. This social dynamic is not visible in the image but is implied by the text and the man's expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "parenting_stereotype",
+      "label": "parenting_stereotype",
+      "description": "The meme references a stereotype that parents, particularly mothers, are often judged or ridiculed for minor mistakes or perceived incompetence, such as littering while dropping off their child. This stereotype is not visible in the image but is implied by the text and the tone of the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "maternal_role_stereotype",
+      "label": "maternal_role_stereotype",
+      "description": "The meme implicitly references the stereotype that mothers are primarily responsible for child-rearing and are therefore more likely to be scrutinized for their actions, especially in public settings like school drop-offs. This stereotype is not visible in the image but is implied by the text and the tone of the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "public_shaming",
+      "label": "public_shaming",
+      "description": "The meme relies on the concept of public shaming, where a person is ridiculed or humiliated for a minor infraction, often in a judgmental or mocking way. This concept is not visible in the image but is implied by the text and the tone of the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "littering_fine",
+      "label": "littering_fine",
+      "description": "The meme references the real-world concept of littering fines, which are penalties imposed by municipalities or governments for discarding trash in public spaces. This concept is not visible in the image but is implied by the text and the tone of the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "school_drop_off",
+      "label": "school_drop_off",
+      "description": "The meme references the common social ritual of parents dropping off their children at school, which is a routine activity that is often associated with parental responsibility and care. This concept is not visible in the image but is implied by the text and the tone of the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "condescending_expression",
+      "label": "condescending_expression",
+      "description": "The meme relies on the concept of a condescending expression, which is a facial expression that conveys superiority or disdain towards another person. This concept is not visible in the image but is implied by the man's expression and the tone of the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "absurdity_humor",
+      "label": "absurdity_humor",
+      "description": "The meme relies on the concept of absurdity humor, which is a type of humor that derives from the ridiculousness or illogical nature of a situation. This concept is not visible in the image but is implied by the text and the tone of the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "condescension",
+      "label": "condescending emotion",
+      "description": "The man's facial expression, characterized by a slight smirk, raised eyebrows, and a smug look, conveys a sense of superiority or disdain, as if looking down on the person being addressed. This is reinforced by the text overlay that implies judgment of a parent's minor mistake.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man's condescending expression is mapped onto the textual implication of mocking a parent.",
+      "description": "The visual entity 'man' with his smug expression is mapped onto the textual entity 'text_chunk_1' which implies a mocking or condescending statement directed at a parent. The man's facial expression visually embodies the tone of the text, which is judgmental and superior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the implied recipient of the mocking statement",
+      "description": "The user is projected onto the implied 'you' in the text, which refers to the child being addressed. The meme uses 'your mom' to directly address the viewer's child, making the user (the parent) the target of the implied judgment. The user is projected onto the textual material that contains the deictic 'your', which creates a direct address to the viewer's personal context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme mocks a parent for a minor infraction (littering) in a public setting, using a condescending tone and expression. This can be perceived as demeaning to parents in general, especially mothers, by highlighting a trivial mistake in a judgmental way. The humor is derived from the absurdity of the situation, but the underlying message can be hurtful and discouraging, potentially contributing to a culture of public shaming and damaging self-esteem or social standing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "target audience",
+      "description": "The meme is designed for a general audience familiar with parenting, school drop-offs, and public shaming humor. The target community includes individuals who understand the social context of parents dropping off children at school and may find humor in the absurdity of being fined for littering in such a setting. The condescending expression of the man visually targets parents, particularly mothers, as the implied subject of the joke, making the meme resonate with those who recognize or have experienced such social judgment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/28067.png",
+    "image_name": "28067.png",
+    "extraction_timestamp": "2025-12-15T20:21:00.814312",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

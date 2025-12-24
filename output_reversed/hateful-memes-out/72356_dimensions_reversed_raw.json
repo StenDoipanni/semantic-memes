@@ -1,0 +1,192 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: bomb_disarmament_meme; hasOverallIntent: Harmful; overall-intent-description: The image depicts a silhouette of a person kneeling in prayer or supplication in front of a bright doorway, with text overlay stating 'bomb disarmament is a hell of a job. thank you for service.' The visual metaphor of someone kneeling before a light source, combined with the text, is intended to evoke a sense of reverence or gratitude for bomb disposal experts, who face extreme danger. The overall intent is to acknowledge and honor the perilous work of bomb disposal personnel. While the image is not explicitly abusive, hateful, or propagandistic, it carries a potentially harmful undertone by implying that the only way to cope with the trauma of bomb disposal is to 'pray' or seek spiritual solace, which may inadvertently minimize the psychological and emotional toll of the job or suggest that the work is so overwhelming that only divine intervention can help. This framing could be seen as harmful because it potentially romanticizes or spiritualizes the trauma, rather than acknowledging the professional, psychological, and societal support systems needed for those in such high-risk roles. The meme does not target any specific protected group with hate or abuse, but its metaphorical framing may unintentionally contribute to a narrative that downplays the human cost of the work.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "bomb disarmament is a hell of a job.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "silhouette of a kneeling individual",
+      "description": "A human figure is depicted in silhouette, kneeling on the floor with hands raised in a gesture that suggests prayer, supplication, or reverence. The figure is positioned in front of a brightly lit doorway, creating a strong contrast with the dark surroundings. The posture and lighting evoke a sense of solemnity or spiritual devotion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "prayer_scene",
+      "label": "person_praying_before_light",
+      "description": "A silhouette of a person is kneeling on the floor in front of a brightly lit doorway, with hands raised in a gesture of prayer or supplication. The strong contrast between the dark surroundings and the bright light creates a solemn, reverent atmosphere. The scene is framed by the doorway, which acts as a visual boundary and source of illumination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person",
+          "relation": "is_praying_to",
+          "to": "light_source"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "bomb_disarmament_profession",
+      "label": "Bomb Disarmament Profession",
+      "description": "The profession of bomb disposal experts, also known as EOD (Explosive Ordnance Disposal) technicians, involves the dangerous task of safely neutralizing or disposing of explosive devices. This work is performed by military personnel, law enforcement, and specialized civilian teams. The job requires high levels of technical skill, psychological resilience, and often operates under extreme pressure and life-threatening conditions. The phrase 'a hell of a job' reflects the widely acknowledged danger and stress associated with this profession.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "thank_you_for_service_cultural_phenomenon",
+      "label": "Thank You for Service Cultural Phenomenon",
+      "description": "A widespread cultural expression of gratitude and recognition for individuals who serve in the military, law enforcement, or other public service roles, especially those who perform dangerous or high-stress duties. This phrase is often used in public discourse, media, and memorials to honor service members. In the context of this meme, it is used to acknowledge the sacrifices and risks taken by bomb disposal experts, though the visual metaphor may unintentionally romanticize or spiritualize their experience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "prayer_scene_metaphor",
+      "label": "Prayer Scene as Metaphor for Reverence",
+      "description": "The visual of a person kneeling before a light source is a common metaphor in art and media to represent spiritual devotion, supplication, or reverence. In this meme, the silhouette is used to symbolize the profound respect and gratitude owed to bomb disposal experts. The metaphor implies that their work is so perilous and awe-inspiring that it warrants a form of spiritual or divine acknowledgment, which may be seen as a romanticized or overly spiritualized framing of their experience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "spiritualization_of_trauma",
+      "label": "Spiritualization of Trauma",
+      "description": "A conceptual framework where the psychological and emotional trauma experienced by individuals in high-stress or dangerous professions is framed as something that requires spiritual or divine intervention rather than professional psychological support or societal recognition. This can be seen as minimizing the human cost of the work and potentially implying that the only way to cope is through faith or prayer, which may be harmful by downplaying the need for mental health resources and systemic support.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harmful_undertone",
+      "label": "Harmful Undertone in Acknowledgment",
+      "description": "The meme's overall intent, as described in the context, is to acknowledge and honor bomb disposal experts. However, the framing of their work as requiring prayer or divine intervention carries a potentially harmful undertone. This can be interpreted as romanticizing or spiritualizing the trauma of their job, which may inadvertently minimize the psychological and emotional toll and suggest that their experience is so overwhelming that only divine intervention can help. This framing may contribute to a narrative that downplays the need for professional support systems.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "reverence",
+      "label": "reverent emotion",
+      "description": "The emotion expressed through the visual metaphor of a person kneeling in prayer before a bright light, conveying deep respect, awe, and gratitude. This is reinforced by the text 'thank you for service', which frames the bomb disposal profession as worthy of such solemn acknowledgment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "bomb disarmament experts are mapped to the kneeling person",
+      "description": "The text 'bomb disarmament is a hell of a job' is mapped onto the visual entity 'person' who is depicted in a posture of prayer or supplication. This mapping suggests that the bomb disposal profession is being equated with the act of kneeling before a light, implying that the work is so perilous and awe-inspiring that it warrants reverence or spiritual acknowledgment. The visual metaphor of the person kneeling before a light source is used to represent the profound respect and gratitude owed to bomb disposal experts, as reinforced by the text 'thank you for service'. This creates an analogical mapping where the human figure in the image is symbolically identified as the bomb disposal expert, and the act of kneeling is mapped onto the profession's inherent danger and the need for reverence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of reverence",
+      "description": "The user is projected onto the visual scene of the person kneeling in prayer before a light source, as this scene is used metaphorically to represent the reverence and gratitude owed to bomb disposal experts. The text 'thank you for service' reinforces this projection by inviting the user to acknowledge and honor the service of these individuals, positioning the viewer as someone who should feel gratitude or respect for their sacrifice. The user is not explicitly addressed with deictic pronouns like 'you' or 'me' in the text, but the overall framing of the meme (visual and textual) creates an implicit projection where the user is expected to identify with the act of gratitude and reverence depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme carries a potentially harmful undertone by implying that the only way to cope with the trauma of bomb disposal is to 'pray' or seek spiritual solace, which may inadvertently minimize the psychological and emotional toll of the job or suggest that the work is so overwhelming that only divine intervention can help. This framing could be seen as harmful because it potentially romanticizes or spiritualizes the trauma, rather than acknowledging the professional, psychological, and societal support systems needed for those in such high-risk roles.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general public",
+      "description": "The meme is designed for a broad general public audience, particularly those who are aware of or have an interest in military, law enforcement, or public service professions. The phrase 'thank you for service' is a widely recognized cultural expression used to honor service members, making the meme accessible and relatable to many viewers. The visual metaphor of prayer and reverence is intended to evoke a sense of gratitude and respect, which is a common sentiment in public discourse surrounding high-risk professions. The target community includes individuals who may not be directly involved in bomb disposal but are familiar with the concept of 'thank you for service' and are likely to appreciate or be moved by the acknowledgment of the dangers faced by bomb disposal experts. The meme does not target any specific protected group with hate or abuse, but its framing may unintentionally contribute to a narrative that downplays the human cost of the work, which could be seen as harmful by some audiences.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/72356.png",
+    "image_name": "72356.png",
+    "extraction_timestamp": "2025-12-19T11:23:24.077943",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

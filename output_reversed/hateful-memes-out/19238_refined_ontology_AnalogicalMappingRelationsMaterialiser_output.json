@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "gender_swap_joke_mapping_1",
+      "hasMappedEntity": "top_text",
+      "hasMappingEntity": "woman_on_left"
+    },
+    {
+      "from": "woman_on_left",
+      "relation": "mappedOnto",
+      "to": "top_text"
+    }
+  ],
+  "triples": [
+    ":gender_swap_joke_mapping_1 :hasMappedEntity :top_text .",
+    ":gender_swap_joke_mapping_1 :hasMappingEntity :woman_on_left .",
+    ":woman_on_left :mappedOnto :top_text ."
+  ],
+  "triples_count": 3
+}

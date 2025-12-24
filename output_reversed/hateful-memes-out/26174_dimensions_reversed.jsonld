@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7",
+  "@type": "AnalysisDocument",
+  "title": "26174.png - Dimension Analysis",
+  "created": "2025-12-15T19:34:10.742757",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_3d981e88",
+    "@type": "Image",
+    "filename": "26174.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/26174.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/26174.png",
+    "image_name": "26174.png",
+    "extraction_timestamp": "2025-12-15T19:32:45.232354",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_680995ae",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: a_muslim_ban_meme; hasOverallIntent: Hateful; overall-intent-description: The image depicts Donald Trump pointing outward with the overlaid text 'a muslim ban would've stopped that,' implying that a ban on Muslim entry into the U.S. would have prevented a specific event (likely a terrorist attack or related incident). This meme uses a visual of a political figure to promote a policy that is widely condemned as Islamophobic, directly targeting Muslims by suggesting they are inherently dangerous or responsible for harm. The intent is to normalize or justify discriminatory policies against a religious group, which constitutes a hateful message based on religious identity. The meme leverages the image of Trump to associate him with a policy that is rooted in prejudice and fear, aiming to influence public opinion or provoke division by framing Muslims as a threat to national security.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fda87f55",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "a muslim ban",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3b833791",
+      "@type": "VisualMaterial",
+      "instance_name": "Donald_Trump",
+      "label": "political figure",
+      "description": "A man in a dark suit and blue tie, pointing outward with his right hand. He is the central figure in the image, and his expression and gesture are used to convey authority or accusation in the context of the meme text.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3206614f",
+      "@type": "Scene",
+      "instance_name": "accusatory_pointing",
+      "label": "Donald Trump pointing outward with accusatory gesture",
+      "description": "The scene depicts Donald Trump, the central figure, pointing outward with his right hand, suggesting he is directing blame or accusation toward an unseen target. The gesture is framed as authoritative or confrontational, and the overlaid text reinforces this by implying a policy (a Muslim ban) would have prevented a negative event. The background is blurred, focusing attention on Trump's action and expression.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fd9664ed",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "muslim_ban_policy",
+      "label": "Muslim Ban Policy",
+      "description": "A series of executive orders issued by the U.S. government, notably under President Donald Trump, that restricted entry into the United States for citizens of certain predominantly Muslim countries. This policy is widely criticized as Islamophobic and discriminatory, and is the central policy referenced in the meme's text.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_69fa973d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "terrorism_associations_with_muslims",
+      "label": "Terrorism Associations with Muslims",
+      "description": "A pervasive and harmful stereotype that equates Muslims with terrorism, often used to justify discriminatory policies like the Muslim ban. This stereotype is a core component of Islamophobia and is implicitly referenced in the meme by suggesting that a ban would have 'stopped that' (presumably a terrorist attack).",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e3a3a2d4",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "Discrimination, prejudice, or hostility directed against Muslims, often based on false or exaggerated associations with terrorism, violence, or incompatibility with Western values. The meme leverages this stereotype to promote a hateful message by implying Muslims are inherently dangerous.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_cdacda63",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "donald_trump",
+      "label": "Donald Trump",
+      "description": "The 45th President of the United States, known for his controversial policies, including the Muslim ban. His image is used in the meme to associate him with the policy and its implied justification, leveraging his public persona and political stance.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d854994c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "specific_event_implied",
+      "label": "Specific Event Implied (e.g., terrorist attack)",
+      "description": "The meme implies a specific negative event (likely a terrorist attack or related incident) that the text claims would have been prevented by a Muslim ban. While the event is not visible, understanding the meme requires knowledge of such events (e.g., 9/11, Paris attacks, etc.) and the context in which the Muslim ban was proposed as a response.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b1067563",
+      "@type": "EmotionExpression",
+      "instance_name": "accusatory_confrontation",
+      "label": "accusatory and confrontational emotion",
+      "description": "Donald Trump's facial expression and pointing gesture convey a sense of accusation and confrontation, as if blaming or directing responsibility toward an unseen target. This is reinforced by the text overlay, which implies that a policy (the Muslim ban) would have prevented a negative event, framing the gesture as authoritative and judgmental.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0177f370",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Donald Trump is mapped as the proponent of the 'a muslim ban' policy",
+      "description": "The visual entity 'Donald_Trump' is mapped onto the textual entity 'a muslim ban' through the meme's overall intent. The image of Donald Trump pointing outward, combined with the text 'a muslim ban would've stopped that', creates an analogical mapping where Trump is implicitly identified as the person who proposed or supports the Muslim ban policy. This mapping is reinforced by the accusatory gesture and the context of the meme, which associates him with the policy and its implied justification.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_391a839e",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the accusatory pointing gesture of Donald Trump",
+      "description": "The user is projected onto the visual material of Donald Trump pointing outward with an accusatory gesture. This projection is implicit, as the meme uses the gesture and the text to imply that the viewer (user) is being addressed or is expected to align with the policy being promoted. The pointing gesture directs blame or responsibility, and the user is implicitly positioned as the one who should understand or accept the policy's justification. The text 'would've stopped that' further reinforces this by suggesting the user is being asked to consider the policy's purported effectiveness, thereby projecting the user onto the scene of judgment or decision-making.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fa957e01",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme promotes a hateful message by implying that a Muslim ban would have prevented a negative event, thereby associating Muslims with inherent danger and promoting Islamophobic stereotypes. This directly targets a religious group based on prejudice and fear.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e81c5ae1",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who support or are sympathetic to Donald Trump's political stance, particularly those who endorse or are influenced by the idea of a Muslim ban as a policy to prevent terrorism. This includes right-leaning political supporters, followers of Trump’s rhetoric, and those who align with Islamophobic narratives. The meme leverages Trump’s image and gesture to appeal to this audience by associating him with a policy they may support, while implicitly targeting Muslims as a group through the stereotype of terrorism associations with Muslims. The audience is likely to be drawn to the meme’s framing of Muslims as a threat and the policy as a solution, reinforcing existing biases and promoting division.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_bbaa8fa7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

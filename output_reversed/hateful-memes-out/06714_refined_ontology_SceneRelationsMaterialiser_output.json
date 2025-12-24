@@ -1,0 +1,30 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "campaign_promotion",
+      "participants": [
+        {
+          "entity": "Barack_Obama",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Barack_Obama",
+          "relation": "isSubjectOf",
+          "to": "campaign_promotion"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":campaign_promotion :hasParticipant :Barack_Obama .",
+    ":Barack_Obama :isSubjectOf :campaign_promotion ."
+  ],
+  "triples_count": 2
+}

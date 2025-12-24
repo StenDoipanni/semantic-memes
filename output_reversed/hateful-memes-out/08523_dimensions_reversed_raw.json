@@ -1,0 +1,175 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a young woman holding a guitar, with text overlaying the image. The text reads: 'cute kid getting ready to start her life' at the top, and 'too bad she's already fkn' dead raped and murdered by an illegal immigrant' at the bottom. The juxtaposition of the innocent, cheerful image of the young woman with the violent, graphic text creates a hateful and disturbing message. The meme uses the visual of a 'cute kid' to contrast with the horrific claim that she was killed by an 'illegal immigrant,' which is a harmful and hateful trope that targets immigrants, particularly Latino or Hispanic individuals, by associating them with criminality and violence. This is a direct attack on a specific group based on their immigration status, and it promotes fear and prejudice. The meme is designed to incite hatred and reinforce harmful stereotypes about immigrants, making it clearly hateful in intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top left text",
+      "description": "cute kid",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "young_woman",
+      "label": "person",
+      "description": "A young woman with long, wavy brown hair and bangs, smiling broadly while holding an acoustic guitar. She is wearing a light blue denim jacket over a red turtleneck sweater. Her expression is cheerful and innocent, contrasting with the hateful text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "guitar_playing_young_woman",
+      "label": "young woman playing guitar",
+      "description": "A young woman with long, wavy brown hair and bangs, smiling broadly while holding an acoustic guitar. She is wearing a light blue denim jacket over a red turtleneck sweater. Her expression is cheerful and innocent, contrasting with the hateful text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_latino_hispanic_stereotypes",
+      "label": "Anti-Latino/Hispanic Stereotypes",
+      "description": "The meme relies on the harmful stereotype that immigrants, particularly Latino or Hispanic individuals, are inherently criminal and violent. This is a widely disseminated and dangerous trope used to incite fear and prejudice against immigrants. The text explicitly links the victim's death to an 'illegal immigrant,' which is a direct invocation of this stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "illegal_immigrant_stereotype",
+      "label": "Illegal Immigrant Stereotype",
+      "description": "This is a specific subset of anti-Latino/Hispanic stereotypes that falsely associates undocumented immigrants with criminal behavior, particularly violent crimes like murder and rape. The meme uses this stereotype to vilify a specific group based on their immigration status, which is a common tactic in hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hate_speech_trope",
+      "label": "Hate Speech Trope",
+      "description": "The meme employs a well-known hate speech trope: juxtaposing an innocent, vulnerable image (a 'cute kid') with a graphic, violent claim to shock and provoke hatred. This is a deliberate rhetorical strategy to dehumanize a group and justify prejudice or violence against them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "rape_and_murder_stereotype",
+      "label": "Rape and Murder Stereotype",
+      "description": "The meme uses the horrific and false stereotype that immigrants are disproportionately responsible for sexual assault and murder. This is a dangerous and baseless claim that has been used to fuel xenophobia and is not supported by evidence. The text explicitly states the victim was 'raped and murdered by an illegal immigrant,' invoking this harmful trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "innocence",
+      "label": "innocent expression",
+      "description": "The young woman's broad, cheerful smile and relaxed posture while holding a guitar convey an innocent, carefree emotional state. This contrasts sharply with the hateful text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The young woman is mapped as a 'cute kid'",
+      "description": "The text 'cute kid' in the top left corner directly maps onto the visual entity 'young_woman'. The text explicitly labels the visual subject as a 'cute kid', creating an analogical mapping where the textual description is projected onto the visual material. This mapping is central to the meme's hateful intent, as it frames the victim as innocent and vulnerable, which is then contrasted with the violent text below.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the young woman as a 'cute kid'",
+      "description": "The user is projected onto the visual material of the young woman, who is explicitly labeled as a 'cute kid' by the text overlay. This projection frames the user as identifying with or imagining themselves as the innocent, vulnerable subject of the meme, which is then contrasted with the hateful text below. The projection is implicit through the labeling and the emotional contrast, inviting the user to mentally inhabit the role of the 'cute kid' before the violent narrative is imposed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks a specific group based on their immigration status, promoting fear and prejudice against immigrants, particularly Latino or Hispanic individuals, by associating them with criminality and violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who hold or are susceptible to anti-Latino/Hispanic stereotypes, particularly those who believe in the harmful trope that illegal immigrants are inherently criminal and violent. The meme is designed to incite hatred and fear toward immigrants, especially Latino or Hispanic individuals, by associating them with the fictional narrative of being responsible for the rape and murder of a young woman. The visual of a 'cute kid' is used to contrast with the violent text, a rhetorical strategy that targets those who are predisposed to accept or spread xenophobic and racially charged narratives. The intended audience likely includes people who are influenced by or supportive of immigration-related hate speech, and who may be motivated by fear, prejudice, or misinformation about immigrants.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/08523.png",
+    "image_name": "08523.png",
+    "extraction_timestamp": "2025-12-15T13:27:22.874703",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,196 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: black_boyfriend_white_boyfriend_meme; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes a bruised, distressed Black woman labeled 'black boyfriend' with a smiling, happy White woman labeled 'white boyfriend,' implying that Black men are inherently violent or abusive while White men are inherently kind or non-abusive. This is a harmful and hateful stereotype that perpetuates racialized gender violence tropes, suggesting that Black men are more likely to be abusive partners, which is a dangerous and false generalization. The visual contrast is used to reinforce a racist and misogynistic narrative, targeting Black men and women by associating Black men with violence and White men with benignity, thus promoting racial and gender-based prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "black boyfriend",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_with_bruises",
+      "label": "bruised woman",
+      "description": "A woman with visible facial bruising, particularly around her eye and cheek, appearing distressed or battered. Her expression is somber and her hair is dark and messy. She is labeled 'black boyfriend' in the meme, implying she is the victim of abuse by a Black man.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "juxtaposed_victims",
+      "label": "juxtaposed victims of abuse",
+      "description": "The scene presents two women in a vertical split-screen composition, contrasting a bruised, distressed woman labeled 'black boyfriend' with a smiling, happy woman labeled 'white boyfriend'. The spatial arrangement emphasizes a direct visual comparison, implying a narrative of racialized gender violence where the Black woman is portrayed as a victim of abuse while the White woman is portrayed as happy and unharmed. The scene uses the visual contrast to reinforce a harmful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman_with_bruises",
+          "relation": "is_compared_to",
+          "to": "woman_with_smile"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racialized_gender_violence_trope",
+      "label": "Racialized Gender Violence Trope",
+      "description": "The meme relies on the harmful stereotype that Black men are inherently more likely to be abusive partners, while White men are inherently non-abusive. This trope is a form of racialized gender violence that falsely generalizes the behavior of entire racial groups based on the actions of a few individuals, perpetuating systemic racism and misogyny.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities_juxtaposed_victims",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_aggressive_violent_nature",
+      "label": "Anti-Black Stereotype: Aggressive/Violent Nature Claims",
+      "description": "This stereotype, which claims Black people are inherently aggressive or violent, is implicitly referenced in the meme. The image of the bruised woman labeled 'black boyfriend' reinforces the false notion that Black men are more likely to be abusive, which is a dangerous and false generalization rooted in historical racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material_woman_with_bruises",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynistic_stereotype_victim_blaming",
+      "label": "Misogynistic Stereotype: Victim Blaming",
+      "description": "The meme implicitly relies on the idea that women are responsible for their own victimization, particularly by associating the bruised woman with a Black man. This reinforces the harmful notion that women who are abused are somehow 'asking for it' or 'deserving' of their suffering, which is a common misogynistic trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material_woman_with_bruises",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_savior_complex",
+      "label": "White Savior Complex",
+      "description": "The meme implicitly promotes the idea that White men are inherently kind and non-abusive, positioning the smiling White woman as the 'ideal' partner. This reinforces the harmful trope that White men are morally superior and that White women are the 'safe' choice, which is a form of racial and gendered privilege.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material_woman_with_bruises",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_binary_framework",
+      "label": "Racial Binary Framework",
+      "description": "The meme operates within a racial binary framework that pits Blackness against Whiteness, suggesting that one group is inherently 'good' or 'safe' while the other is 'bad' or 'dangerous'. This binary thinking is a core component of systemic racism and is used to justify discrimination and violence against Black people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities_juxtaposed_victims",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "distress",
+      "label": "distressed emotion",
+      "description": "The woman with visible facial bruises exhibits a somber, pained expression, conveying emotional and physical distress. Her downcast eyes and bruised face communicate suffering and victimization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_black_boyfriend_to_bruised_woman",
+      "label": "The text 'black boyfriend' is mapped onto the bruised woman in the top panel.",
+      "description": "The textual label 'black boyfriend' is positioned directly above the image of the bruised woman, creating an analogical mapping where the woman is identified as the 'black boyfriend'. This mapping is part of the meme's harmful racialized gender violence trope, implying that Black men are inherently violent or abusive. The visual material (bruised woman) is explicitly linked to the textual label ('black boyfriend') through spatial adjacency and direct labeling, establishing a clear analogical mapping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the racialized gender violence trope",
+      "description": "The user is projected onto the overall harmful narrative of the meme, which frames the visual and textual elements as a racialized gender violence trope. The user implicitly identifies with the meme's binary framework, projecting their own understanding or biases onto the juxtaposed victims and the racialized labels. The user is not explicitly directed to a specific visual or textual element with deictic pronouns, but the entire scene functions as a projection of the user's internalized stereotypes onto the visual material and textual labels.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks and dehumanizes Black men by associating them with violence and abuse through the visual of a bruised woman labeled 'black boyfriend'. This is a hateful stereotype that perpetuates racialized gender violence tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who hold or are exposed to racially and gendered stereotypes, particularly those who may unconsciously or consciously endorse the harmful trope that Black men are inherently more likely to be abusive partners while White men are inherently kind or non-abusive. The meme is designed to appeal to audiences who are familiar with or reinforce racial binaries and misogynistic narratives, often found in online communities that propagate hate speech, racialized gender violence tropes, and white savior complex ideologies. The visual contrast and labeling are intended to resonate with viewers who interpret the image through the lens of these pre-existing prejudices, making it particularly effective in communities that normalize or celebrate such stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/68094.png",
+    "image_name": "68094.png",
+    "extraction_timestamp": "2025-12-16T09:14:40.959325",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

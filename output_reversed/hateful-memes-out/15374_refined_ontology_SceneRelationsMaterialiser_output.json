@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "meme_composition",
+      "participants": [
+        {
+          "entity": "black_man_in_tuxedo",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "person_in_native_regalia",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "black_man_in_tuxedo",
+          "relation": "isTargetOfHatefulMessage",
+          "to": "person_in_native_regalia"
+        },
+        {
+          "from": "person_in_native_regalia",
+          "relation": "isUsedToMock",
+          "to": "black_man_in_tuxedo"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":meme_composition :hasParticipant :black_man_in_tuxedo .",
+    ":meme_composition :hasParticipant :person_in_native_regalia .",
+    ":black_man_in_tuxedo :isTargetOfHatefulMessage :person_in_native_regalia .",
+    ":person_in_native_regalia :isUsedToMock :black_man_in_tuxedo ."
+  ],
+  "triples_count": 4
+}

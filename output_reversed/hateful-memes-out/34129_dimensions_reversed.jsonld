@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606",
+  "@type": "AnalysisDocument",
+  "title": "34129.png - Dimension Analysis",
+  "created": "2025-12-15T22:37:54.740797",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_ec1a21f1",
+    "@type": "Image",
+    "filename": "34129.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/34129.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/34129.png",
+    "image_name": "34129.png",
+    "extraction_timestamp": "2025-12-15T22:36:39.037613",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_11eb98cf",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a man with glasses and a mustache, overlaid with text that reads: 'she said she wanted the \"d\" so i gave her diabeetus.' This is a crude, offensive joke that plays on the word 'diabetes' by replacing the 'e' with a 't' to form 'diabeetus,' implying a sexual innuendo. The meme uses a juxtaposition of a serious medical condition with a sexually suggestive pun, which is inherently harmful due to its mocking and degrading tone toward people with diabetes. It trivializes a serious health issue and could cause emotional distress to individuals living with diabetes or their families. The humor is based on a vulgar pun and lacks any redeeming value, making it a harmful meme that promotes disrespect for medical conditions and potentially contributes to stigma.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5b365f91",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "she said she wanted the \"d\"",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8bb5a97b",
+      "@type": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "An older man with gray hair, wearing round tortoiseshell glasses and a mustache, looking directly at the camera with a neutral to slightly confused expression. He is the central visual focus of the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e127b19d",
+      "@type": "Scene",
+      "instance_name": "text_joke_scene",
+      "label": "text_joke_scene",
+      "description": "A scene where a man is depicted with overlaid text that forms a crude joke about diabetes, creating a juxtaposition between the serious medical condition and a sexually suggestive pun.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2d183582",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "diabetes",
+      "label": "Medical Condition",
+      "description": "Diabetes is a serious, chronic medical condition characterized by high blood sugar levels due to the body's inability to produce or properly use insulin. It requires lifelong management and can lead to severe complications such as heart disease, kidney failure, blindness, and amputations. The meme trivializes this condition by using a crude pun, which is harmful and disrespectful to people living with diabetes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_af93989e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "diabeetus",
+      "label": "Vulgar Pun",
+      "description": "A deliberately offensive pun created by replacing the 'e' in 'diabetes' with a 't' to form 'diabeetus,' implying a sexual innuendo. This pun is used to mock and degrade people with diabetes, reducing a serious medical condition to a crude joke. It relies on the audience understanding the phonetic and semantic manipulation to grasp the offensive intent.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4b1945f4",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "Disability-Based Discrimination",
+      "description": "Ableism is the discrimination or social prejudice against people with disabilities. It often manifests as mocking or trivializing disabilities, which is exactly what this meme does by making a joke about diabetes, a condition affecting millions of people. The meme promotes ableist attitudes by portraying a medical condition as something to be laughed at rather than respected or taken seriously.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5c36158a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "medical_stigma",
+      "label": "Stigma Around Medical Conditions",
+      "description": "Medical stigma refers to the negative attitudes, beliefs, and behaviors directed toward people with medical conditions. This meme contributes to medical stigma by using humor to demean and belittle those with diabetes, potentially causing emotional distress and reinforcing harmful stereotypes that medical conditions are something to be joked about rather than treated with dignity.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5a2fa4eb",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "sexual_innuendo",
+      "label": "Sexual Double Meaning",
+      "description": "The joke relies on a sexual innuendo, where the word 'diabeetus' is a phonetic play on 'diabetes' that suggests a sexual act. This type of humor is often considered crude and offensive, especially when applied to a serious medical condition. The meme uses this innuendo to create a shockingly inappropriate and disrespectful joke.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_27580f34",
+      "@type": "EmotionExpression",
+      "instance_name": "mocking",
+      "label": "mocking emotion",
+      "description": "The man's neutral to slightly confused facial expression, combined with the crude and offensive text overlay, conveys a mocking tone. The juxtaposition of a serious medical condition with a vulgar pun creates an emotionally charged, disrespectful atmosphere intended to provoke laughter at the expense of people with diabetes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1a28f960",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The man is mapped as the speaker of the joke",
+      "description": "The visual entity 'man' is mapped onto the textual entity 'i' in the text 'so i gave her diabeetus'. The man's presence and expression serve as the visual representation of the speaker ('i') in the joke, creating an analogical mapping where the person in the image is the one performing the action described in the text.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a5bf1077",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the speaker of the joke (the man)",
+      "description": "The user is projected onto the man in the image, who is visually mapped as the speaker ('i') in the textual joke 'so i gave her diabeetus'. The man's presence and expression serve as the visual representation of the narrator performing the action described in the text, creating an analogical mapping where the viewer identifies with or projects themselves onto the speaker.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9212685c",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes a serious medical condition (diabetes) by using a crude, sexually suggestive pun ('diabeetus'), which can cause emotional distress to individuals living with diabetes or their families. The humor is based on mocking and degrading tone, promoting disrespect for medical conditions and potentially contributing to stigma.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_eb6e3f83",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who understand and appreciate crude, sexually suggestive puns that mock serious medical conditions, particularly those familiar with diabetes or ableist humor. The meme relies on the audience recognizing the phonetic play on 'diabetes' to form 'diabeetus' and interpreting it as a vulgar innuendo, indicating a community that finds such offensive humor amusing or acceptable. This audience likely includes people who engage with internet memes that trivialize health issues for shock value, and may be drawn to content that promotes ableist attitudes or medical stigma.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_a27e2606"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

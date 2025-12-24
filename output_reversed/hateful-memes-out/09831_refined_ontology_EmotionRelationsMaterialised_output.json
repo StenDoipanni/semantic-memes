@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "shocked_emotion",
+      "expressors": [
+        {
+          "entity": "woman",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "emotionalReactionTo",
+          "to": "textual_claim"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":shocked_emotion :hasExpressor :woman .",
+    ":woman :emotionalReactionTo :textual_claim ."
+  ],
+  "triples_count": 2
+}

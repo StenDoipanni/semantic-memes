@@ -1,0 +1,196 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: kill_them_meme; hasOverallIntent: Abusive; overall-intent-description: The image depicts Queen Elizabeth II, a revered and symbolic figure of the British monarchy, juxtaposed with the text 'kill them' and 'kill them all !!!!!'. This combination creates a deliberately provocative and abusive meme. The intent is to mock or insult the Queen by associating her with extreme violence, which is a direct and threatening attack on her person and dignity. The use of such violent language in reference to a national icon is intended to provoke outrage or shock, and it constitutes an abusive meme targeting an individual based on her status and identity. The meme does not target a specific racial, ethnic, or religious group, but rather uses the Queen as a figurehead to express anger or hostility, which falls under the category of abusive content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "kill them",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Queen_Elizabeth_II",
+      "label": "person",
+      "description": "An elderly woman with white hair styled in curls, wearing a pearl necklace, pearl earrings, and a white jacket with gold embellishments. She is seated on a red upholstered chair with gold trim, and her expression is stern and serious. She is the central figure in the image, and the text 'kill them' and 'kill them all !!!!!' is superimposed over the image, creating a provocative and abusive meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "abusive_meme_scene",
+      "label": "Abusive Meme Scene",
+      "description": "A scene depicting Queen Elizabeth II as the central figure, with superimposed text 'kill them' and 'kill them all !!!!!' creating a provocative and abusive meme. The scene is composed of the Queen as the primary visual entity, with the text elements serving as the abusive overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Queen_Elizabeth_II",
+          "relation": "isTargetOf",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "queen_elizabeth_ii_revered_figure",
+      "label": "Queen Elizabeth II as a revered national icon",
+      "description": "Queen Elizabeth II was the monarch of the United Kingdom and other Commonwealth realms, serving for over 70 years. She was a globally recognized symbol of stability, tradition, and national identity. Her image is often associated with dignity, formality, and historical continuity. The meme’s violent text juxtaposed with her image is intentionally jarring, as it contrasts her revered status with extreme hostility, making the abuse more shocking and provocative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Queen_Elizabeth_II",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "abusive_meme_intent",
+      "label": "Intent to mock or insult through violent language",
+      "description": "The meme uses violent, threatening language ('kill them', 'kill them all !!!!!') to mock or insult the Queen. This is not a literal call to violence but a form of abusive internet humor that targets a public figure by associating her with extreme violence. The intent is to provoke outrage or shock, and it constitutes an abusive meme targeting an individual based on her status and identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "abusive_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "textual_abuse",
+      "label": "Use of violent text as a form of abuse",
+      "description": "The text 'kill them' and 'kill them all !!!!!' is a direct and threatening expression of hostility. In meme culture, such text is often used to exaggerate or caricature a person’s perceived attitude or to express anger or frustration in a hyperbolic way. The multiple exclamation marks intensify the aggression, making the message more confrontational and shocking.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "abusive_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "monarchy_and_national_identity",
+      "label": "The British monarchy as a symbol of national identity",
+      "description": "The British monarchy, particularly Queen Elizabeth II, is deeply embedded in British national identity and history. She represented continuity, tradition, and the state. The meme’s violent text is a deliberate attack on this symbol, using her status to express anger or hostility. This requires background knowledge of the monarchy’s role in British society to understand the meme’s provocative nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Queen_Elizabeth_II",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "abusive_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "internet_meme_culture",
+      "label": "Context of internet meme culture and abusive content",
+      "description": "This meme is part of a broader internet culture where images are often manipulated with text to create humorous, shocking, or abusive content. The use of a revered figure like the Queen with violent text is a common tactic in abusive memes to provoke strong reactions. Understanding this cultural context is necessary to interpret the meme’s intent and impact.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "abusive_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hostility",
+      "label": "hostile emotion expressed through violent text",
+      "description": "The emotion of hostility is conveyed through the superimposed text 'kill them' and 'kill them all !!!!!', which is a direct and threatening expression of anger and aggression. The multiple exclamation marks intensify the confrontational and shocking nature of the message, indicating a strong emotional state of hostility directed at the Queen.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_kill_them_queen",
+      "label": "Hostility mapped onto Queen Elizabeth II",
+      "description": "The text 'kill them' is superimposed over the image of Queen Elizabeth II, creating an analogical mapping where the violent command is projected onto her as the target. This mapping is abusive, as it associates the revered monarch with extreme violence, using her visual presence to embody the hostile sentiment expressed in the text. The mapping is reinforced by the juxtaposition of her dignified appearance with the aggressive text, creating a jarring contrast that intensifies the meme's provocative intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the abusive textual overlay",
+      "description": "The user is projected onto the textual material 'kill them' and 'kill them all !!!!!', as the meme's intent is to provoke a reaction by associating the user's implied hostility or anger with the visual of Queen Elizabeth II. There are no explicit deictic pronouns like 'me' or 'you', but the meme's structure implies the user is the one expressing the violent sentiment through the text. The projection is onto the textual material, which serves as the vehicle for the abusive intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Abusive",
+      "description": "The meme uses violent, threatening language ('kill them', 'kill them all !!!!!') superimposed on the image of Queen Elizabeth II, a revered national icon, to mock or insult her. This constitutes abusive content targeting an individual based on her status and identity, intended to provoke outrage or shock.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals familiar with British royal history and internet meme culture, particularly those who engage with or create provocative, abusive, or shock-value content online. The meme leverages the global recognition of Queen Elizabeth II as a symbol of British national identity and tradition, making it most effective for audiences who understand her status and the cultural weight of her image. The intended audience likely includes internet users who appreciate hyperbolic, satirical, or confrontational humor that juxtaposes revered figures with extreme, absurd, or violent text to provoke strong reactions. The meme’s effectiveness depends on the audience’s awareness of the Queen’s symbolic role and their participation in meme culture where such juxtapositions are common. The use of violent text ('kill them', 'kill them all !!!!!') is a deliberate choice to shock and outrage, targeting those who are comfortable with or drawn to edgy, offensive humor that challenges norms or authority figures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/48021.png",
+    "image_name": "48021.png",
+    "extraction_timestamp": "2025-12-16T03:08:20.868039",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

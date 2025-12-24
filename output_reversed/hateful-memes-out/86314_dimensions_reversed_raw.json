@@ -1,0 +1,183 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: hurry_up_son_the_owner_is_coming; hasOverallIntent: harmful; overall-intent-description: The image depicts two Samoyed dogs, one adult and one puppy, with text overlaid that reads 'hurry up son, the owner is coming.' The scene is benign and humorous, playing on the common trope of pets being anxious or eager to please their owners. The meme's intent is to evoke laughter through anthropomorphism and relatable pet behavior. There is no toxicity present, as it does not target any protected group or promote harmful stereotypes. The humor is derived from the dogs' perceived obedience and the owner's implied authority, which is a lighthearted and non-harmful analogy. The meme is not abusive, cyberbullying, hateful, misogynistic, or propagandistic. It is a harmless, universally relatable joke about pet behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "hurry up son,",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "adult_Samoyed_dog",
+      "label": "adult dog",
+      "description": "A large, fluffy white adult Samoyed dog standing on grass, looking forward with an alert expression. It is the larger of the two dogs in the image and appears to be the parent or guardian figure in the meme context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "dog_parenting_scene",
+      "label": "adult dog and puppy in a grassy outdoor setting",
+      "description": "An adult Samoyed dog stands alertly on grass, while a smaller puppy sits nearby. The scene is framed with text that anthropomorphizes the dogs, suggesting the adult is urging the puppy to hurry because the owner is coming. The spatial arrangement shows the adult dog as a larger, more dominant figure, and the puppy as smaller and subordinate, creating a dynamic of parental guidance or supervision.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "adult_Samoyed_dog",
+          "relation": "urges",
+          "to": "puppy_Samoyed_dog"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dog_parenting_scene",
+      "label": "Anthropomorphic pet behavior trope",
+      "description": "The meme relies on the cultural trope of anthropomorphizing pets, attributing human-like motivations, emotions, and social roles (e.g., parental guidance, obedience, anxiety about authority figures) to animals. This trope is widely understood in popular culture and is central to the humor and relatability of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dog_parenting_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pet_owner_authority",
+      "label": "Pet owner as authority figure",
+      "description": "The meme implicitly references the common human-animal dynamic where pets are perceived to respond to their owners' commands or presence. The phrase 'the owner is coming' invokes the idea of an owner as a figure of authority or control, which is a real-world concept in pet ownership and training.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dog_parenting_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Samoyed_dog",
+      "label": "Samoyed breed as a popular pet",
+      "description": "The Samoyed breed is widely recognized for its fluffy white coat and friendly, expressive appearance. Their popularity as pets and their frequent portrayal in media and memes contribute to the meme's relatability and visual appeal. The breed's association with 'friendly' or 'obedient' traits is part of its cultural perception.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "adult_Samoyed_dog",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "dog_parenting_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pet_anxiety",
+      "label": "Pet anxiety or eagerness to please",
+      "description": "The meme humorously suggests that pets, particularly dogs, may exhibit anxiety or eagerness to please their owners. This is a common stereotype or observation in pet behavior, often seen in popular media and pet owner anecdotes, and is used here to create a humorous, relatable scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dog_parenting_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "text_chunk",
+      "label": "Meme text as anthropomorphic instruction",
+      "description": "The text 'hurry up son, the owner is coming' is a direct anthropomorphic instruction, attributing human speech and familial dynamics to animals. This requires background knowledge of how memes use text to create humorous narratives by assigning human-like roles and motivations to non-human entities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "paternal_concern",
+      "label": "paternal concern emotion",
+      "description": "The adult Samoyed dog's alert and slightly urgent facial expression, combined with the text 'hurry up son', conveys a sense of paternal concern or authoritative guidance, as if urging the puppy to behave or move quickly.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "adult dog as authoritative parent figure",
+      "description": "The text 'hurry up son' is mapped onto the adult Samoyed dog, which visually represents the authoritative parent figure issuing the command. The adult dog's alert posture and the text's paternal tone create an analogical mapping where the dog is understood as a parent urging the puppy to behave.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the puppy as the 'son' being urged to hurry",
+      "description": "The user is projected onto the puppy in the meme, as the text 'hurry up son' anthropomorphizes the adult dog's command, making the viewer identify with the puppy's role as the obedient child being called to action by the parent figure (the adult dog). The user sees themselves as the 'son' in this familial dynamic, responding to the implied authority of the owner (who is coming).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "pet owners and dog enthusiasts",
+      "description": "The meme is designed for individuals who own dogs or are familiar with dog behavior, particularly those who appreciate anthropomorphized pet humor. The visual of Samoyed dogs and the text 'hurry up son, the owner is coming' rely on common pet-owner experiences and the cultural trope of pets responding to their owners' authority, making it relatable to dog owners and dog lovers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/86314.png",
+    "image_name": "86314.png",
+    "extraction_timestamp": "2025-12-19T15:50:16.415915",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

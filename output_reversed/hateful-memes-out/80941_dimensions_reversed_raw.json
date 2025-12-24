@@ -1,0 +1,190 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: the_day_i_realized_i_didn_t_need_no_bitch_to_bust_a_nut; hasOverallIntent: Hateful; overall-intent-description: The image features a Black man with a surprised or emphatic expression, gesturing with his hands, overlaid with the text 'the day i realized i didn't need no bitch to bust a nut.' The text is a vulgar, sexually explicit phrase that uses the term 'bitch' in a derogatory manner. This phrase, combined with the visual of a Black man, maps onto a harmful stereotype that hypersexualizes Black men and implies they are only valued for their sexual prowess. The meme uses the juxtaposition of the man's expressive face and the crude text to deliver a message that is both misogynistic and racially charged, targeting Black men by reducing their worth to sexual performance. The overall intent is to spread a hateful and degrading message rooted in racial and gender stereotypes, which is harmful and offensive to both Black communities and women.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "the day i realized i didn't need no bitch to bust a nut",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "Black man",
+      "description": "A Black man with a bald head and a gray beard, wearing a black t-shirt, is shown with an expressive face and gesturing hands. His facial expression appears surprised or emphatic, with wide eyes and an open mouth. He is positioned centrally against a dark background, making him the focal point of the image. His hands are raised and open, one near his chest and the other extended outward, suggesting a gesture of explanation or emphasis. The man's skin tone and facial features are clearly visible, and his posture and expression convey a sense of urgency or revelation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "man_gesturing_with_expressive_face",
+      "label": "man gesturing with expressive face",
+      "description": "A Black man with a bald head and gray beard, wearing a black t-shirt, is shown with an expressive face and gesturing hands. His facial expression appears surprised or emphatic, with wide eyes and an open mouth. He is positioned centrally against a dark background, making him the focal point of the image. His hands are raised and open, one near his chest and the other extended outward, suggesting a gesture of explanation or emphasis.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization_stereotype",
+      "label": "Hypersexualization Stereotype",
+      "description": "A harmful stereotype that portrays Black men as inherently sexually aggressive or hypersexual, reducing their value to sexual performance. This stereotype is often used to demean and dehumanize Black men, and is reinforced by media and cultural narratives that focus on their sexual behavior rather than their full humanity or diverse capabilities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynistic_language",
+      "label": "Misogynistic Language",
+      "description": "The use of derogatory and degrading language toward women, particularly the term 'bitch,' which is often used to insult or belittle women. In this context, the phrase 'bitch to bust a nut' is a vulgar expression that reduces women to objects of sexual gratification, reflecting a misogynistic worldview.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_stereotype_in_meme",
+      "label": "Racial Stereotype in Meme",
+      "description": "The meme leverages a racial stereotype by associating the Black man with hypersexualization, implying that his worth or identity is tied to sexual performance. This stereotype is rooted in historical and systemic racism that has long portrayed Black men as hypersexual and dangerous, contributing to their marginalization and dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexual_explicit_phrase",
+      "label": "Sexually Explicit Phrase",
+      "description": "The phrase 'bust a nut' is a vulgar slang term for ejaculation, often used in crude or humorous contexts. Its inclusion in the meme adds a layer of sexual explicitness that, when combined with the racial and misogynistic stereotypes, amplifies the offensive nature of the message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "derogatory_term_bitch",
+      "label": "Derogatory Term 'Bitch'",
+      "description": "The term 'bitch' is a highly derogatory and offensive word used to demean or insult someone, particularly women. In this meme, it is used to devalue women and reinforce the idea that men do not need women for sexual gratification, which is both misogynistic and degrading.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "emotional_revelation",
+      "label": "emotional revelation of self-sufficiency",
+      "description": "The man's facial expression—wide eyes, open mouth, and emphatic hand gestures—conveys a sense of sudden realization or epiphany. His body language suggests he is passionately communicating a personal insight or truth, likely intended to be humorous or provocative in context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The speaker is mapped onto the Black man in the image",
+      "description": "The text 'the day i realized i didn't need no bitch to bust a nut' is spoken by the man depicted in the image. The visual material (the man) is the entity being mapped onto by the textual material, as the text is presented as a personal revelation or statement from the man shown. The man's expressive face and gesturing hands reinforce the idea that he is the one speaking the text, making this a direct analogical mapping where the visual entity represents the speaker of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man in the image",
+      "description": "The user is projected onto the Black man depicted in the visual material, as the meme's text ('the day i realized i didn't need no bitch to bust a nut') is presented as a personal revelation or statement from him. The man's expressive face and gesturing hands reinforce this projection, making the viewer identify with or imagine themselves as the speaker. The text uses 'I' ('i realized'), which directly deictically anchors the projection onto the speaker (the man in the image).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses a Black man as the subject of a vulgar, sexually explicit phrase that reduces his worth to sexual performance, reinforcing a harmful racial and misogynistic stereotype. This directly attacks the subject based on his race and gender, making it hateful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The meme is designed to target and provoke members of communities that perpetuate or benefit from racial and misogynistic stereotypes, particularly those who may find humor in hypersexualizing Black men or in degrading women. The intended audience likely includes individuals who are familiar with and may endorse the hypersexualization stereotype of Black men and misogynistic language, as the meme relies on these harmful tropes for its impact. The use of the derogatory term 'bitch' and the sexually explicit phrase 'bust a nut' suggests the meme is aimed at an audience that either finds such language amusing or is desensitized to its offensive nature, often found in certain online subcultures that normalize or celebrate crude, racially charged humor. The visual of a Black man with an expressive face and gesturing hands is used to reinforce the stereotype, implying the meme is crafted for those who may identify with or mock the hypersexualized portrayal of Black men, or who enjoy content that reinforces misogynistic and racially stereotyped narratives.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/80941.png",
+    "image_name": "80941.png",
+    "extraction_timestamp": "2025-12-19T14:05:11.034346",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

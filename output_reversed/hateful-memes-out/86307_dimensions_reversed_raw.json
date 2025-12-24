@@ -1,0 +1,213 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: hateful; overall-intent-description: The meme depicts a man with a stern expression and crossed arms, overlaid with text that reads, 'I hate everything about America. So I am going to move there to bring it Sharia law,' and at the bottom, 'the real reason for most Muslim immigration.' The visual and textual elements are juxtaposed to create a caricature of a Muslim individual as a threat to American values, implying that Muslims are inherently hostile and seek to impose Sharia law on the U.S. This is a clear example of Islamophobia, as it uses fearmongering about Sharia law to stigmatize and demonize Muslims. The meme's intent is to provoke fear and hostility toward Muslims by suggesting they are dangerous infiltrators who wish to impose their religious laws on a Western society, thereby promoting a hateful and discriminatory narrative. The overall intent is to incite prejudice and reinforce negative stereotypes about Muslims, which falls under the category of hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "Text content: 'I hate everything about america. so i am going to move there to bring it sharia law'. Position: top of the image, spanning across the upper portion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "a man with a beard and crossed arms",
+      "description": "The central figure in the image is a middle-aged man with a long, grayish beard and mustache. He has a stern, serious facial expression, looking directly at the camera. His arms are crossed over his chest, suggesting a defensive or confrontational posture. He is wearing a light-colored, possibly beige or gray, button-up shirt with the sleeves rolled up. A watch is visible on his left wrist. The man’s appearance and demeanor are central to the meme’s visual material and are used to represent a caricatured 'Muslim immigrant' as described in the text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "man_with_crossed_arms",
+      "label": "man with crossed arms",
+      "description": "A man with a long grayish beard and mustache, wearing a light-colored button-up shirt with sleeves rolled up, standing with arms crossed over his chest. He has a stern, serious facial expression and is looking directly at the camera. A watch is visible on his left wrist.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sharia_law_fearmongering",
+      "label": "Sharia Law Fearmongering",
+      "description": "A common Islamophobic stereotype that falsely portrays Sharia law as inherently incompatible with Western values and as a threat to secular governance, often used to stigmatize Muslims and justify discrimination. This concept is central to the meme's text, which falsely claims that Muslims intend to impose Sharia law on America.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "A systemic prejudice and fear of Islam and Muslims, often manifesting as stereotypes that portray Muslims as inherently violent, oppressive, or incompatible with Western societies. The meme relies on this broader social phenomenon to frame its caricature of a Muslim immigrant as a threat.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_with_crossed_arms",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "muslim_immigration_stereotype",
+      "label": "Muslim Immigration Stereotype",
+      "description": "A derogatory stereotype that falsely claims Muslims immigrate to Western countries primarily to impose their religious laws, often used to justify xenophobia and discriminatory policies. The bottom text of the meme explicitly references this stereotype as 'the real reason for most Muslim immigration', which is a false and inflammatory claim.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_with_crossed_arms",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sharia_law",
+      "label": "Sharia Law",
+      "description": "A comprehensive legal and ethical system derived from Islamic jurisprudence, which governs various aspects of life including personal conduct, family law, and criminal justice. The meme misrepresents Sharia law as a tool for oppression and a threat to American values, which is a common but inaccurate trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "america",
+      "label": "America",
+      "description": "The United States of America, a federal republic and one of the world's most powerful nations. The meme references America as a target for the fictional plot to impose Sharia law, which is a central element of the meme's narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "western_values",
+      "label": "Western Values",
+      "description": "A broad term referring to the political, social, and cultural norms and principles commonly associated with Western societies, including democracy, individual rights, secularism, and the rule of law. The meme implies that Sharia law is incompatible with these values, which is a key component of the Islamophobic narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hostility",
+      "label": "hostile expression",
+      "description": "The man's stern facial expression, direct gaze, and crossed arms convey a confrontational and hostile demeanor, visually reinforcing the hateful narrative of the text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The man is mapped as the 'Muslim immigrant' who intends to impose Sharia law on America",
+      "description": "The top text explicitly states 'I hate everything about america. so i am going to move there to bring it sharia law', which directly maps the visual entity 'man_with_crossed_arms' to the role of a Muslim immigrant with hostile intentions. The bottom text reinforces this by labeling the man as 'the real reason for most Muslim immigration', solidifying the analogical mapping between the visual man and the stereotypical 'Muslim immigrant' figure described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man with crossed arms as a caricature of a Muslim immigrant",
+      "description": "The user is projected onto the visual material of the man with crossed arms, who is explicitly mapped as the 'Muslim immigrant' who intends to impose Sharia law on America. The meme uses the man's stern expression and posture to represent a stereotypical 'threat' figure, and the user is implicitly identifying with or projecting their own hateful or fearful perspective onto this visual representation. The text overlays reinforce this projection by framing the man as the embodiment of the 'real reason for most Muslim immigration' — a false and inflammatory stereotype. The user is not directly addressed with deictic pronouns like 'you' or 'me', but the overall intent and framing of the meme create an implicit projection where the viewer (user) is positioned as the one who holds the hateful belief being expressed — that Muslims are inherently hostile and seek to impose Sharia law. This projection is onto the visual material (man_with_crossed_arms) and the textual material (top_text, bottom_text) that together construct the caricature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Muslims by portraying them as inherently hostile and seeking to impose Sharia law on America, which is a clear example of Islamophobia and hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold Islamophobic views or are susceptible to anti-Muslim stereotypes, particularly those who fear or distrust Muslim immigration to Western countries. The meme is designed to resonate with people who believe Muslims intend to impose Sharia law on America, using the caricature of the man with crossed arms as a symbol of the 'Muslim immigrant threat.' It appeals to communities that are politically or culturally aligned with anti-immigration rhetoric, fearmongering about religious extremism, and the 'incompatibility with Western values' trope. The meme’s intent is to reinforce prejudice against Muslims by framing them as inherently hostile and dangerous, thus targeting audiences who are already predisposed to such beliefs.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/86307.png",
+    "image_name": "86307.png",
+    "extraction_timestamp": "2025-12-19T15:48:26.072726",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

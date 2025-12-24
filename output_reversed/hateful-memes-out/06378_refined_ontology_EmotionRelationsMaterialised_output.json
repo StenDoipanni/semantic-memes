@@ -1,0 +1,38 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "anti-Black stereotype emotion",
+      "expressors": [
+        {
+          "entity": "human_hand",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "orangutan_hand",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "human_hand",
+          "relation": "emotionalRelationToEntity",
+          "to": "orangutan_hand"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":anti_Black_stereotype_emotion :hasExpressor :human_hand .",
+    ":anti_Black_stereotype_emotion :hasExpressor :orangutan_hand .",
+    ":human_hand :emotionalRelationToEntity :orangutan_hand ."
+  ],
+  "triples_count": 3
+}

@@ -1,0 +1,186 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: tffw-your-friend-says-that-kirk-is-better-than-picard; hasOverallIntent: Harmful; overall-intent-description: The image depicts a man in nerdy attire (glasses, bow tie, suspenders) standing in front of a chalkboard with mathematical and geometric equations, smiling broadly. The text overlay reads 'tffw your friend says that kirk is better than picard'. This meme is a humorous reaction to a common debate among Star Trek fans about which captain — Captain James T. Kirk or Captain Jean-Luc Picard — is superior. The visual of the 'nerd' character is juxtaposed with the text to imply that someone who is overly passionate or 'obsessed' with this debate is being portrayed as a stereotypical 'nerd' or 'geek'. While the meme is not explicitly abusive, cyberbullying, or hateful toward any specific protected group, it does rely on a stereotype — portraying passionate fans of a particular fandom as 'nerds' — which can be perceived as mildly condescending or dismissive. The humor is derived from the contrast between the earnest, intellectual appearance of the character and the trivial nature of the debate. The meme's intent is to mock or poke fun at the passionate fandom debate, but it does not contain overtly harmful or toxic content. However, the stereotype of 'nerds' as being overly passionate or obsessive about niche topics can be seen as a form of mild social ridicule, which may be considered 'Harmful' in the sense that it could potentially make some fans feel belittled or marginalized, even if unintentionally.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "tffw your friend says",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with dark hair and glasses, wearing a white shirt, red bow tie, and red suspenders, smiling broadly while standing in front of a chalkboard.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "nerd_smiling_in_front_of_chalkboard",
+      "label": "A nerdy man smiling in front of a chalkboard",
+      "description": "The scene depicts a man dressed in nerdy attire (glasses, bow tie, suspenders) standing in front of a chalkboard filled with mathematical and geometric equations, smiling broadly. The text overlay 'tffw your friend says that kirk is better than picard' implies the man is reacting to a fandom debate, portraying him as a stereotypical 'nerd' or 'geek' who is overly passionate about the topic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "star_trek_fandom",
+      "label": "Star Trek Fandom",
+      "description": "The meme references a common debate within the Star Trek fan community about which captain — Captain James T. Kirk or Captain Jean-Luc Picard — is superior. This is a cultural phenomenon rooted in science fiction fandom, where passionate discussions and debates about characters, episodes, and actors are common. Understanding this context is necessary to interpret the humor and the stereotype being applied to the 'nerd' character.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "captain_james_t_kirk",
+      "label": "Captain James T. Kirk",
+      "description": "A fictional character from the Star Trek franchise, portrayed by actor William Shatner. He is the captain of the USS Enterprise in the original Star Trek series. He is often characterized as charismatic, bold, and action-oriented, which contrasts with Picard's more cerebral and diplomatic style. His popularity and the debate around him are central to the meme's context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "captain_jean_luc_picard",
+      "label": "Captain Jean-Luc Picard",
+      "description": "A fictional character from the Star Trek franchise, portrayed by actor Patrick Stewart. He is the captain of the USS Enterprise in the Next Generation series. He is often characterized as wise, diplomatic, and strategic. The debate over whether he or Kirk is 'better' is a long-standing fan discussion, making him a key reference point for the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nerd_stereotype",
+      "label": "Nerd Stereotype",
+      "description": "A cultural stereotype that portrays individuals who are passionate about niche interests, especially science, technology, or fandoms, as overly intellectual, socially awkward, or obsessive. The meme uses this stereotype to mock or ridicule fans who passionately argue about the superiority of Kirk over Picard, implying that such passion is 'nerdy' or excessive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "tffw_meme_format",
+      "label": "Tfw Meme Format",
+      "description": "An internet meme format that stands for 'That Feeling When' or 'That Feeling When Your Friend Says'. It is used to express a humorous or relatable reaction to a situation, often involving a person's exaggerated emotional response. The format is widely recognized in internet culture and is essential to understanding the meme's intent and structure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful expression",
+      "description": "The man in the image is smiling broadly, showing his teeth, which conveys a strong sense of happiness or amusement. This expression is likely meant to portray the exaggerated joy or satisfaction of someone who is passionately defending their opinion (in this case, that Kirk is better than Picard).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The 'nerd' character is mapped onto the person who is passionately defending the opinion that Kirk is better than Picard.",
+      "description": "The text 'tffw your friend says that kirk is better than picard' implies that the person in the image (the 'nerd' character) is the one experiencing the 'that feeling when' scenario — specifically, the feeling of being confronted by a friend who holds the opinion that Kirk is superior to Picard. The visual of the smiling, nerdy-looking man is used to represent this passionate fan. The mapping is established by the meme format 'tffw' which projects the viewer's emotional state onto the visual character, and the text explicitly identifies the character's role as someone reacting to this specific fandom debate. The visual material (the man) is thus mapped onto the textual material (the opinion about Kirk vs. Picard) to create a humorous stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the nerdy man character reacting to the fandom debate",
+      "description": "The user is projected onto the visual material of the man (the 'nerd' character) who is smiling broadly in front of the chalkboard. This projection is established by the 'tffw' meme format, which stands for 'That Feeling When Your Friend Says'. The text explicitly references 'your friend', which directly deictically points to the user as the one whose friend is making the statement. The user is thus positioned as the person experiencing the feeling described — the feeling of being confronted by a friend who holds the opinion that Kirk is better than Picard. The visual of the nerdy man is used to represent this user's emotional or social state in the context of the fandom debate. The projection is onto the VisualMaterial entity 'man' and is mediated by the TextualMaterial 'tffw your friend says'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme relies on a stereotype — portraying passionate fans of a particular fandom as 'nerds' — which can be perceived as mildly condescending or dismissive. The humor is derived from the contrast between the earnest, intellectual appearance of the character and the trivial nature of the debate. The meme's intent is to mock or poke fun at the passionate fandom debate, but it does not contain overtly harmful or toxic content. However, the stereotype of 'nerds' as being overly passionate or obsessive about niche topics can be seen as a form of mild social ridicule, which may be considered 'Harmful' in the sense that it could potentially make some fans feel belittled or marginalized, even if unintentionally.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "star_trek_fandom",
+      "label": "Star Trek Fandom",
+      "description": "The meme is designed for fans of the Star Trek franchise, particularly those familiar with the long-standing debate over whether Captain James T. Kirk or Captain Jean-Luc Picard is the superior captain. The cultural reference to this specific fandom debate is central to the meme's humor and relevance, making it primarily targeted at this community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/39168.png",
+    "image_name": "39168.png",
+    "extraction_timestamp": "2025-12-16T00:19:45.827129",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "threatening emotional expression",
+      "expressors": [
+        {
+          "entity": "female_police_officer",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "female_police_officer",
+          "relation": "emotionalRelationToEntity",
+          "to": "meme_image"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":threatening_emotional_expression :hasExpressor :female_police_officer .",
+    ":female_police_officer :emotionalRelationToEntity :meme_image ."
+  ],
+  "triples_count": 2
+}

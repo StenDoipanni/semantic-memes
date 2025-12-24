@@ -1,0 +1,181 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: Harmful; overall-intent-description: The image depicts an elderly Asian man in a light suit and hat, pointing directly at the viewer with a stern expression. The overlaid text reads, \"it's funny because he's fat!\" This meme uses the man's physical appearance — specifically his weight — as the basis for humor, which is inherently degrading and mocking. While the man's ethnicity is not the direct target of the text, the combination of his age, appearance, and the context of the image (which may be culturally specific or stereotypical) can contribute to harmful stereotypes. The meme's intent is to provoke laughter by highlighting the man's weight, which can be seen as a form of body shaming. This type of humor can be harmful as it reinforces negative societal attitudes toward overweight individuals, potentially contributing to discrimination, low self-esteem, and stigmatization. The meme does not directly target a protected characteristic like race or gender, but it does promote a harmful and degrading form of humor that can be damaging to individuals who are overweight or who are perceived as 'fat' in society. The overall intent is to elicit laughter through ridicule of a person's physical appearance, which can be considered harmful due to its potential to cause psychological distress and perpetuate negative stereotypes about body image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "it's funny because he's fat!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "elderly_man",
+      "label": "person",
+      "description": "An elderly Asian man wearing a light gray suit, a white shirt, dark pants, a black belt, and a black hat. He is pointing directly at the viewer with a stern expression, wearing sunglasses. His physical appearance, particularly his weight, is highlighted by the overlaid text as the source of humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "pointing_elderly_man",
+      "label": "elderly man pointing at viewer",
+      "description": "An elderly Asian man in a light gray suit and black hat is pointing directly at the viewer with a stern expression, while wearing sunglasses. The overlaid text 'it's funny because he's fat!' frames the scene as a meme targeting his physical appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "elderly_man",
+          "relation": "pointsAt",
+          "to": "viewer"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "body_shaming_stereotype",
+      "label": "Body Shaming Stereotype",
+      "description": "The meme relies on the harmful stereotype that a person's worth or humor is derived from their physical appearance, particularly weight. This is a form of ableism and objectification, where the individual is reduced to a physical trait for comedic effect, ignoring their humanity and dignity. The text 'it's funny because he's fat!' explicitly frames the man's weight as the source of humor, which is inherently degrading.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "pointing_elderly_man",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ageism_stereotype",
+      "label": "Ageism Stereotype",
+      "description": "The meme implicitly reinforces ageist stereotypes by portraying the elderly man as an object of ridicule, particularly through his physical appearance. While the text targets his weight, the combination of his age and the mocking tone can contribute to the devaluation of older individuals, reinforcing societal biases that older people are less valuable or worthy of respect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "pointing_elderly_man",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_asian_racism_stereotype",
+      "label": "Anti-Asian Racism Stereotype",
+      "description": "The image of an elderly Asian man, combined with the degrading humor, can implicitly reinforce anti-Asian stereotypes. While the text does not directly target ethnicity, the visual representation of an Asian man in a stereotypical manner (e.g., wearing a hat and suit in a way that may be perceived as 'exotic' or 'othering') can contribute to the broader context of racial stereotyping. This includes the emasculation of Asian men, where their dignity and worth are diminished through ridicule.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "pointing_elderly_man",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mocking_physical_appearance",
+      "label": "Mocking Physical Appearance",
+      "description": "The meme's humor is derived from mocking the man's physical appearance, specifically his weight. This is a common form of social ridicule that can be harmful and degrading. It reflects a broader cultural trend of using physical appearance as a basis for judgment and humor, which can contribute to body shaming and low self-esteem in society.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "pointing_elderly_man",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "derision",
+      "label": "derisive emotion",
+      "description": "The emotion expressed is derision, conveyed through the stern facial expression, the direct pointing gesture toward the viewer, and the overlaid text that explicitly mocks the man's weight as the source of humor. This creates an emotionally hostile and mocking tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The text 'it's funny because he's fat!' maps onto the elderly man's physical appearance, specifically his weight.",
+      "description": "The overlaid text explicitly states that the humor derives from the elderly man's weight, creating a direct analogical mapping between the textual claim and the visual representation of his physical form. The text frames his body as the source of the joke, reducing his identity to a physical trait.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the elderly man pointing at them",
+      "description": "The user is projected onto the elderly man (VisualMaterial entity) because he is pointing directly at the viewer, creating a direct deictic relationship. The text 'it's funny because he's fat!' further reinforces this projection by framing the viewer's perspective as the one who finds the man's appearance humorous, making the user the implied subject of the joke. The pointing gesture and the accusatory tone of the text create a sense of direct address, where the user is positioned as the recipient of the humor or the target of the judgment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme promotes harmful humor by mocking the elderly man's weight, which can cause psychological distress and reinforce negative societal attitudes toward overweight individuals. This type of body shaming is inherently degrading and can contribute to stigmatization and low self-esteem.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "elderly Asian man",
+      "description": "The meme targets overweight elderly Asian men, using their physical appearance — specifically their weight — as the basis for humor. This is a form of body shaming and ableism, reducing the individual to a physical trait for comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/02519.png",
+    "image_name": "02519.png",
+    "extraction_timestamp": "2025-12-15T11:17:25.302296",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

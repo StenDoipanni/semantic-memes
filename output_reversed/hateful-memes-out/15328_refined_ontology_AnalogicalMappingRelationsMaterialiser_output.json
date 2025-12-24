@@ -1,0 +1,39 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "text_chunk_1",
+      "hasMappingEntity": "man_on_left"
+    },
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "text_chunk_2",
+      "hasMappingEntity": "man_in_white_shirt"
+    },
+    {
+      "from": "man_on_left",
+      "relation": "mappedOnto",
+      "to": "text_chunk_1"
+    },
+    {
+      "from": "man_in_white_shirt",
+      "relation": "mappedOnto",
+      "to": "text_chunk_2"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :text_chunk_1 .",
+    ":mapping_1 :hasMappingEntity :man_on_left .",
+    ":mapping_1 :hasMappedEntity :text_chunk_2 .",
+    ":mapping_1 :hasMappingEntity :man_in_white_shirt .",
+    ":man_on_left :mappedOnto :text_chunk_1 .",
+    ":man_in_white_shirt :mappedOnto :text_chunk_2 ."
+  ],
+  "triples_count": 6
+}

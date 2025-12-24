@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "frustrated emotion",
+      "expressors": [
+        {
+          "entity": "woman",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "emotionalRelationToEntity",
+          "to": "film_set_scene"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":frustrated_emotion :hasExpressor :woman .",
+    ":woman :emotionalRelationToEntity :film_set_scene ."
+  ],
+  "triples_count": 2
+}

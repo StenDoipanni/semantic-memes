@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "admiration",
+      "expressors": [
+        {
+          "entity": "no_less_beautiful_meme_concept",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "no_less_beautiful_meme_concept",
+          "relation": "emotionalRelationToEntity",
+          "to": "woman"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":admiration :hasExpressor :no_less_beautiful_meme_concept .",
+    ":no_less_beautiful_meme_concept :emotionalRelationToEntity :woman ."
+  ],
+  "triples_count": 2
+}

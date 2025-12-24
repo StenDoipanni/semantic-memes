@@ -1,0 +1,203 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes a religious figure performing a peace ritual with a mugshot of a young man, using the text 'we have peace but we can give wars' to imply that religious institutions or individuals associated with peace can also be linked to violence or criminality. This creates a harmful association by equating spiritual peace with potential for war or crime, potentially damaging the reputation of religious figures or institutions. The use of a mugshot implies criminality, which is a harmful stereotype that can contribute to negative perceptions of individuals or groups. The meme's intent is to provoke thought or shock by contrasting sacred rituals with criminal imagery, but it does so in a way that can be seen as reductive and potentially offensive to religious communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "we have peace",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "priest",
+      "label": "religious figure",
+      "description": "An older man wearing purple liturgical vestments and a red zucchetto, performing a blessing by placing his hand on the forehead of another man. He is holding a small silver chalice in his other hand. His expression is solemn and focused.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "peace_blessing_scene",
+      "label": "priest performing a peace blessing",
+      "description": "A priest, dressed in purple vestments and a red zucchetto, is blessing a man by placing his hand on the man's forehead. The priest holds a small silver chalice in his other hand. The setting appears to be inside a church, with stained glass windows and architectural columns visible in the background. The text overlay reads 'we have peace'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "priest",
+          "relation": "blesses",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_peace_blessing",
+      "label": "Religious Peace Blessing Ritual",
+      "description": "The act of a priest performing a blessing, often associated with peace or reconciliation, is a common liturgical practice in Christian traditions, particularly in Catholicism. The gesture of placing a hand on the forehead is symbolic of imparting grace or blessing. Understanding this ritual requires knowledge of Christian liturgy and its symbolic meanings.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_peace_blessing_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mugshot",
+      "label": "Mugshot",
+      "description": "A mugshot is a photograph taken by law enforcement of a person who has been arrested or is in custody. It is used for identification and record-keeping purposes. The use of a mugshot in a meme implies criminality or association with the justice system, which is a key element in the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_peace_blessing_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "criminality_association",
+      "label": "Criminality Association Stereotype",
+      "description": "The meme uses the mugshot to imply that the person associated with the religious figure (or the institution) is linked to criminal behavior. This is a harmful stereotype that equates religious figures or institutions with violence or crime, which is not necessarily true and can be offensive to religious communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_institution_stereotype",
+      "label": "Religious Institution Stereotype",
+      "description": "The meme implies that religious institutions or individuals associated with peace can also be linked to violence or criminality. This is a harmful stereotype that can contribute to negative perceptions of religious figures or institutions, and it is based on the assumption that peace and war are mutually exclusive, which is not always the case.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_peace_blessing_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_figure",
+      "label": "Religious Figure",
+      "description": "The priest in the image is a religious figure, specifically a Catholic priest, as indicated by his vestments and the red zucchetto. Understanding the role and symbolism of the priest requires knowledge of Catholicism and religious hierarchy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material_person",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "peace_war_duality",
+      "label": "Peace-War Duality Concept",
+      "description": "The text 'we have peace but we can give wars' implies a duality between peace and war, suggesting that even those who promote peace can be associated with war. This concept is a common theme in political and philosophical discourse, but the meme uses it in a reductive and potentially offensive way.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "solemnity",
+      "label": "solemn religious expression",
+      "description": "The priest's facial expression is serious and focused, conveying a sense of reverence and solemnity appropriate for a religious blessing ritual. His eyes are directed downward toward the person being blessed, and his mouth is closed in a neutral, composed manner, reflecting the gravity of the sacramental act.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Peace blessing ritual mapped to the concept of peace",
+      "description": "The text 'we have peace' is directly mapped onto the visual of the priest performing a peace blessing, implying that the ritual symbolizes or represents peace. The priest's solemn gesture and the religious context reinforce this mapping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the mugshot scene implying personal or collective association with criminality",
+      "description": "The user is implicitly projected onto the lower panel featuring the mugshot, which visually represents criminality. The text 'but we can give wars' combined with the mugshot creates a semiotic projection where the user is invited to identify with or reflect on the potential for violence or criminal behavior associated with the religious figure or institution, even while claiming peace. This projection is not explicit with deictic pronouns like 'you' or 'me', but is implied through the juxtaposition and the accusatory tone of the text, forcing the viewer to confront the duality and potentially internalize the association.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme equates religious peace rituals with criminality by juxtaposing a priest performing a blessing with a mugshot, implying that religious institutions or figures associated with peace can also be linked to violence or crime. This creates a harmful stereotype that can damage the reputation of religious communities and is reductive and potentially offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is likely individuals familiar with Christian religious practices, particularly Catholicism, as the meme centers on a priest performing a peace blessing. The juxtaposition of the sacred ritual with a mugshot implies a critique or stereotype targeting religious institutions or figures, suggesting the audience may include those who are critical of religion, or who are aware of the symbolic meaning of the peace blessing and the connotations of a mugshot. The meme's intent to provoke shock or thought by contrasting peace with criminality suggests it is designed for an audience that engages with internet memes, political commentary, or social critique, and who may hold cynical or skeptical views toward religious authority or institutions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/06375.png",
+    "image_name": "06375.png",
+    "extraction_timestamp": "2025-12-15T12:43:08.698252",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

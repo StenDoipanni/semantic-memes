@@ -1,0 +1,207 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes an image of sheep with their butts facing forward, labeled 'meanwhile,' with an image of men in traditional headwear reacting with shock and amusement, labeled 'at the ISIS strip club.' This creates a crude, mocking analogy suggesting that ISIS members are engaging in sexualized or degrading behavior, implying they are 'stripping' or performing for an audience. The intent is to portray ISIS in a demeaning, sexually suggestive light, which is a form of hateful stereotyping. It reduces a complex, violent extremist group to a crude sexual joke, which is harmful and offensive. The meme relies on the harmful trope of associating Islam or Muslim men with sexual deviance or degradation, which falls under Islamophobia. The use of 'ISIS strip club' is a deliberately provocative and degrading label that equates the group with prostitution or pornography, which is a form of hate speech targeting a specific religious and political group. The overall intent is to mock and degrade ISIS through sexualized imagery and language, which is hateful and potentially harmful to the Muslim community and to the broader public by normalizing such degrading stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "The text 'meanwhile' is displayed in white, bold, sans-serif font with a black outline, centered horizontally across the top portion of the image, overlaying the image of sheep.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "bottom text overlay",
+      "description": "The text 'at the isis strip club' is displayed in white, bold, sans-serif font with a black outline, centered horizontally across the bottom portion of the image, overlaying the image of men in headwear.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "sheep",
+      "label": "group of sheep",
+      "description": "A group of sheep standing in a line with their rear ends facing forward, showing their tails and hind legs. The sheep are in an outdoor setting with grass on the ground. The image is labeled 'meanwhile' above it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "sheep_line",
+      "label": "sheep standing in line showing rear ends",
+      "description": "A group of sheep standing in a line with their rear ends facing forward, showing their tails and hind legs. The sheep are in an outdoor setting with grass on the ground. The image is labeled 'meanwhile' above it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "isis_strip_club_stereotype",
+      "label": "ISIS Strip Club Stereotype",
+      "description": "A derogatory and hateful stereotype that equates ISIS members with sexualized or degrading behavior, often implying they are engaging in prostitution or pornography. This is a form of Islamophobia and hate speech targeting Muslim men and the broader Muslim community. The term 'ISIS strip club' is a deliberately provocative and degrading label used to mock and degrade the group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "A form of prejudice, fear, or hatred directed towards Islam and Muslims. It often manifests as stereotypes that portray Muslims as violent, sexually deviant, or incompatible with Western values. The meme relies on this harmful trope by associating Muslim men with sexual degradation, which is a form of Islamophobic stereotyping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization_stereotype",
+      "label": "Hypersexualization Stereotype",
+      "description": "A harmful stereotype that portrays members of a group (in this case, Muslim men) as inherently sexually deviant or overly sexualized. This stereotype is used in the meme to mock ISIS members by implying they are engaging in sexualized behavior, reducing them to crude, degrading caricatures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "isis",
+      "label": "ISIS (Islamic State of Iraq and Syria)",
+      "description": "A violent extremist group that has been responsible for numerous terrorist attacks and atrocities. The meme references ISIS as a real-world entity, using it to create a hateful and degrading analogy. The group is not associated with strip clubs or sexualized behavior, making the meme's comparison a form of hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "traditional_headwear",
+      "label": "Traditional Headwear (Keffiyeh, Turban, etc.)",
+      "description": "The headwear worn by the men in the bottom image is often associated with Middle Eastern or Muslim cultures. The meme uses this visual cue to imply that the men are Muslim, and the stereotype is then applied to them. This is a form of cultural stereotyping that relies on the viewer's knowledge of cultural attire.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "shock",
+      "label": "shocked emotion",
+      "description": "The men in the bottom image display wide eyes and open mouths, conveying a state of shock or disbelief. Their hands are placed on their heads, intensifying the expression of astonishment or horror.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "sheep are mapped to ISIS members at a strip club",
+      "description": "The top image of sheep showing their rear ends, labeled 'meanwhile', is juxtaposed with the bottom image of men in traditional headwear reacting with shock, labeled 'at the isis strip club'. This creates an analogical mapping where the sheep (visual entity) are implicitly mapped to ISIS members (implied by the text), and their rear-facing posture is humorously equated with the act of 'stripping' or performing in a strip club. The text 'at the isis strip club' explicitly defines the context for the visual material below, establishing the mapping between the sheep's visual presentation and the degrading stereotype applied to ISIS members.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material and visual material of the meme",
+      "description": "The user is projected onto the textual material 'at the isis strip club' and the visual material of the men in traditional headwear, as these elements directly invoke the hateful stereotype being mocked. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the meme's structure and intent require the user to identify with the perspective of the viewer who is interpreting the juxtaposition and the degrading analogy. The user is implicitly projected onto the scene of the men reacting with shock and amusement, as this is the focal point of the bottom panel and the target of the stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme equates ISIS members with sexualized or degrading behavior by implying they are 'stripping' or performing in a strip club, which is a direct attack on a specific religious and political group. This is a form of Islamophobia and hate speech targeting Muslim men and the broader Muslim community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience familiar with or interested in internet humor that relies on crude, degrading stereotypes, particularly those targeting Islam and Muslim men. The target audience likely includes individuals who consume and share memes that use Islamophobic tropes, such as hypersexualization and the 'ISIS strip club' stereotype, often found in online spaces where such content is circulated. The audience is expected to recognize the visual cues (traditional headwear) and textual references ('ISIS strip club') as markers of the meme’s intended target community, which is the Muslim community, and to find the crude analogy humorous or provocative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/31408.png",
+    "image_name": "31408.png",
+    "extraction_timestamp": "2025-12-15T22:01:33.619799",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

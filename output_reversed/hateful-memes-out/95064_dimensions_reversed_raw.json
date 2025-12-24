@@ -1,0 +1,173 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image features a man in a red striped shirt with a serious, slightly exasperated expression, overlaid with text that reads 'hey this bag only weighs .8' and 'it's graam!'. The joke is a play on the common mispronunciation of 'gram' (a unit of weight) as 'graam', implying the bag is extremely light. The man's expression is used to convey the absurdity or disbelief of the statement. There is no toxicity, harmful content, or hateful intent present. The meme is purely humorous and relies on a pun and visual juxtaposition to create a comedic effect. The intent is to entertain through wordplay and the visual reaction of the person in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "hey this bag only weighs .8",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with dark hair, wearing a red striped shirt and blue jeans, sitting in a chair with a serious, slightly exasperated expression. He has a microphone clipped to his shirt and is looking directly at the camera. His hands are clasped together in his lap. The man appears to be in a formal or semi-formal setting, possibly a panel discussion or interview, given the microphone and the background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "text_overlay_scene",
+      "label": "text_overlay_scene",
+      "description": "A scene where text is overlaid on an image of a man, creating a humorous context. The text reads 'hey this bag only weighs .8' at the top and 'it's graam!' at the bottom, playing on the mispronunciation of 'gram'. The man's serious expression contrasts with the absurdity of the text, forming the core of the meme's humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "isSubjectOf",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "describes",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mispronunciation_of_gram",
+      "label": "Mispronunciation of 'gram' as 'graam'",
+      "description": "The humor in the meme relies on the common mispronunciation of the metric unit 'gram' as 'graam', which is a playful and absurd way to suggest the bag is extremely light. This linguistic pun is a real-world phenomenon often used in casual speech or online humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "unit_of_weight_gram",
+      "label": "Gram as a unit of weight",
+      "description": "The joke hinges on the understanding that 'gram' is a standard unit of mass in the metric system, typically used for measuring small quantities. The absurdity comes from the implication that '.8' (presumably .8 grams) is a significant weight, which is not true for most everyday objects.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_format",
+      "label": "Meme format: text overlay on image with reaction",
+      "description": "This meme follows a common internet meme format where a person's facial expression (here, a serious or exasperated look) is juxtaposed with text that creates a humorous or ironic situation. The text provides the context, and the image provides the reaction, which is key to the meme's comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_overlay_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "internet_meme_culture",
+      "label": "Internet meme culture",
+      "description": "The meme is part of a broader internet culture where users create and share humorous images with text overlays. This culture often relies on wordplay, pop culture references, and exaggerated reactions to generate laughs. Understanding this context helps explain why the image is used in this way.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "exasperation",
+      "label": "exasperated expression",
+      "description": "The man's facial expression conveys a sense of mild frustration or disbelief, with furrowed brows, a tight mouth, and direct eye contact, suggesting he is reacting to something absurd or unreasonable. This aligns with the humorous context of the text overlay, which plays on a pun about weight.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The man is mapped as the person reacting to the absurd claim about the bag's weight.",
+      "description": "The text 'hey this bag only weighs .8' and 'it's graam!' creates a humorous context where the man's serious, exasperated expression is mapped onto the role of someone reacting to the absurdity of the statement. The visual material (the man) is the entity being mapped to represent the implied 'person' who is making or reacting to the claim. The text explicitly refers to a 'bag' and its weight, and the man's expression conveys disbelief or mild frustration at the implication that '.8 graam' (a mispronunciation of 'gram') is a significant weight. Thus, the man is analogically mapped as the person who is the subject of the joke — the one whose reaction is being shown.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man in the red striped shirt",
+      "description": "The user is projected onto the visual material of the man (the person) in the image, as the meme's humor relies on the viewer imagining themselves as the person reacting to the absurd claim about the bag's weight. The man's serious, exasperated expression is used to represent the user's potential reaction to the joke. There are no explicit deictic pronouns like 'me' or 'you' in the text, but the meme format inherently invites the user to identify with the person in the image as the one experiencing or expressing the reaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "audience description",
+      "description": "The meme targets a general internet audience familiar with casual wordplay and internet humor, particularly those who recognize the mispronunciation of 'gram' as 'graam' and appreciate the absurdity of the situation. The target community includes users of internet meme culture who enjoy visual reaction-based humor and linguistic puns.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/95064.png",
+    "image_name": "95064.png",
+    "extraction_timestamp": "2025-12-19T18:22:44.328358",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

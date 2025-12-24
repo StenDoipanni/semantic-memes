@@ -1,0 +1,173 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a man with a beard and arms crossed, juxtaposed with text that reads: 'want to rape, steal & murder with no moral repercussions? then islam is definitely the religion for you.' This meme uses a dehumanizing and violent stereotype to associate Islam with criminal behavior and moral decay. The intent is to incite hatred and fear toward Muslims by implying that the religion inherently promotes violence and lawlessness, which is a harmful and hateful generalization. The visual of the man, combined with the text, is designed to provoke negative associations and reinforce Islamophobic tropes, specifically targeting Muslims as a group based on their religious identity. This constitutes a hateful message that attacks a protected characteristic (religion) and promotes prejudice against a specific community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "want to rape, steal & murder with no moral repercussions?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "a man with a beard and arms crossed",
+      "description": "The central visual element is a man with a long, grayish beard, wearing a light-colored, collared shirt with arms crossed over his chest. His expression is stern and direct, looking at the viewer. The man appears to be middle-aged or older, and his posture conveys a sense of defiance or seriousness. This figure is the primary subject of the image and is juxtaposed with the hateful text to reinforce the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "hateful_text_juxtaposition",
+      "label": "hateful_text_juxtaposition",
+      "description": "A scene where a man with a beard and arms crossed is visually juxtaposed with hateful text that promotes Islamophobic stereotypes, creating a composition intended to associate Islam with violence and moral decay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "isJuxtaposedWith",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "The meme relies on the stereotype that Islam inherently promotes violence and moral decay, which is a core component of Islamophobia. This stereotype is used to associate the religion with criminal behavior and lawlessness, targeting Muslims as a group based on their religious identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "hateful_text_juxtaposition",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "violence_barbarism_claims",
+      "label": "Violence/Barbarism Claims",
+      "description": "The meme explicitly references the stereotype that Islam promotes violence and barbarism, which is a common Islamophobic trope used to incite fear and hatred toward Muslims. This stereotype is not visible in the image but is essential to understanding the hateful message conveyed by the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sharia_law_fearmongering",
+      "label": "Sharia Law Fearmongering",
+      "description": "The meme implies that Islam, through its religious practices or laws (such as Sharia), justifies or encourages immoral acts like rape, theft, and murder. This fearmongering about Sharia law is a real-world concept used to demonize Islam and is not visible in the image but is critical to understanding the meme’s intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobic_tropes",
+      "label": "Islamophobic Tropes",
+      "description": "The meme uses a combination of Islamophobic tropes, including associating Islam with terrorism, violence, and moral decay. These tropes are not visible in the image but are essential to understanding the hateful message and the dehumanizing intent of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "hateful_text_juxtaposition",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "menace",
+      "label": "menacing expression",
+      "description": "The man’s stern facial expression, combined with his arms crossed in a defiant posture, conveys a sense of intimidation or threat. His direct gaze and serious demeanor contribute to an overall menacing emotional tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The man is mapped as the embodiment of the violent, morally corrupt 'Islam' described in the text.",
+      "description": "The text explicitly states 'then islam is definitely the religion for you' in response to the hypothetical question about wanting to commit violent acts. The visual of the man with a stern, menacing expression and crossed arms is used to represent or symbolize the 'Islam' that the text claims is suitable for such individuals. This is an analogical mapping where the visual entity (the man) is projected as the textual entity (Islam) in the context of the meme's hateful message. The man's appearance and demeanor are used to visually instantiate the stereotype of Islam as violent and morally bankrupt.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the textual material through the use of second-person address in the text. The text poses a hypothetical question ('want to rape, steal & murder...?') and then directly addresses the user with 'then islam is definitely the religion for you', creating an implicit 'you' that the user is meant to identify with. This projection is onto the textual material, which is the primary vehicle for the hateful message and the deictic address.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Muslims as a group based on their religious identity by associating Islam with violence and moral decay, promoting prejudice and inciting hatred.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for individuals who hold Islamophobic views or are influenced by stereotypes associating Islam with violence and moral decay. The target audience likely includes people who are predisposed to fear or hate Muslims, and who may be seeking validation for their prejudices through the meme’s hateful message. The visual of the man with a stern expression and crossed arms is used to reinforce negative stereotypes about Muslims, making the meme particularly effective for those already harboring Islamophobic beliefs.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/57918.png",
+    "image_name": "57918.png",
+    "extraction_timestamp": "2025-12-16T05:47:56.652447",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

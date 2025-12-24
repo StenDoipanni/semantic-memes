@@ -1,0 +1,44 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "joyful satisfaction emotion",
+      "expressors": [
+        {
+          "entity": "woman_on_left",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "woman_on_right",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman_on_left",
+          "relation": "emotionalRelationToEntity",
+          "to": "woman_on_right"
+        },
+        {
+          "from": "woman_on_right",
+          "relation": "emotionalRelationToEntity",
+          "to": "woman_on_left"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":joyful_satisfaction_emotion :hasExpressor :woman_on_left .",
+    ":joyful_satisfaction_emotion :hasExpressor :woman_on_right .",
+    ":woman_on_left :emotionalRelationToEntity :woman_on_right .",
+    ":woman_on_right :emotionalRelationToEntity :woman_on_left ."
+  ],
+  "triples_count": 4
+}

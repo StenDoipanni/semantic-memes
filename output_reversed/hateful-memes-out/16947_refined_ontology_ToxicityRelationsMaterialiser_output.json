@@ -1,0 +1,30 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "gangster_shooting_scene"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "man_in_fedora"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :gangster_shooting_scene .",
+    ":toxicity_1 :hasToxicElement :text_chunk .",
+    ":toxicity_1 :hasToxicElement :man_in_fedora ."
+  ],
+  "triples_count": 3
+}

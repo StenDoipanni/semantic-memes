@@ -1,0 +1,249 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: ready_for_the_cupcake; hasOverallIntent: Hateful; overall-intent-description: The image features a man in a brown hat and shirt, pointing aggressively at the viewer with a furious expression, set against a dark, stormy background. The text reads: 'ready for the cupcake?' followed by 'wake up and smell the bacon! we're loosing our beloved america to these goat humpers stop being afraid of being called a racist and grow a pair and act like americans.' The phrase 'goat humpers' is a derogatory racial slur targeting Black people, referencing the harmful stereotype of comparing Black people to primates. The meme uses this offensive language to incite anger and promote racial hostility, urging viewers to confront what it frames as 'racist' accusations while simultaneously promoting a hateful, racially charged narrative. The overall intent is to provoke a hostile reaction and normalize racist rhetoric under the guise of patriotic outrage, making it a hateful meme that targets a specific racial group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "ready for the cupcake?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man wearing a brown hat and a beige t-shirt, pointing aggressively at the viewer with a furious expression. His mouth is open as if shouting, and his body language conveys anger and confrontation. He is the central visual focus of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "aggressive_confrontation",
+      "label": "aggressive confrontation scene",
+      "description": "A man in a brown hat and beige t-shirt is pointing aggressively at the viewer with a furious expression, set against a dark, stormy background. The scene conveys anger and confrontation, with the man as the central visual focus. Text overlays the image, adding context to the aggressive tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "pointsAt",
+          "to": "viewer"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_primate_comparison",
+      "label": "Anti-Black Stereotype: Comparing Black People to Primates",
+      "description": "The term 'goat humpers' in the meme is a derogatory racial slur that references the harmful and offensive stereotype of comparing Black people to primates. This stereotype is rooted in historical racism and is used to dehumanize and demean Black individuals. Understanding this specific slur and its historical context is essential to comprehend the hateful intent of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "phrase_wake_up_smell_bacon",
+      "label": "Phrase: 'Wake Up and Smell the Bacon'",
+      "description": "This phrase is a common expression used in political and social commentary to urge people to become aware of a perceived threat or problem, often implying that the audience is ignorant or complacent. In this meme, it is used to incite anger and a sense of urgency about perceived cultural decline, which is a rhetorical device often found in populist and nationalist rhetoric.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "term_goat_humpers",
+      "label": "Term: 'Goat Humpers'",
+      "description": "This is a derogatory racial slur targeting Black people, derived from the offensive stereotype of comparing Black people to goats or primates. It is used in the meme to dehumanize and vilify a specific racial group, and understanding its offensive nature and historical context is necessary to interpret the meme's hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "concept_racial_hostility",
+      "label": "Concept: Racial Hostility",
+      "description": "The meme promotes racial hostility by encouraging viewers to confront what it frames as 'racist' accusations while simultaneously promoting a hateful, racially charged narrative. This concept is central to understanding the meme's intent to provoke anger and normalize racist rhetoric under the guise of patriotic outrage.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "concept_patriotic_outrage",
+      "label": "Concept: Patriotic Outrage",
+      "description": "The meme uses the rhetoric of patriotism to incite anger and a sense of national crisis, framing the perceived threat to 'America' as a justification for racially charged aggression. This concept is used to manipulate viewers into accepting the meme's hateful message under the guise of defending national identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "term_racist_accusation",
+      "label": "Term: 'Racist Accusation'",
+      "description": "The meme urges viewers to 'stop being afraid of being called a racist,' which is a rhetorical device used to normalize and justify racist behavior by framing it as a necessary response to perceived threats. Understanding the concept of 'racist accusation' as a social and political tool is essential to interpret the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "concept_racial_slur",
+      "label": "Concept: Racial Slur",
+      "description": "The use of racial slurs like 'goat humpers' is a form of hate speech that dehumanizes and targets a specific racial group. Understanding the nature and impact of racial slurs is necessary to comprehend the offensive and hateful content of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "concept_hateful_meme",
+      "label": "Concept: Hateful Meme",
+      "description": "The meme is explicitly hateful, as it promotes racial hostility and incites anger against a specific racial group. Understanding the concept of a 'hateful meme' is necessary to classify and interpret the meme's intent and impact.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "rage",
+      "label": "furious anger expression",
+      "description": "The man's facial expression, with an open mouth as if shouting, furrowed brow, and intense eyes, combined with his aggressive pointing gesture, conveys a state of extreme rage and confrontation. His body language is directed at the viewer, amplifying the emotional intensity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man is mapped as the speaker of the text 'ready for the cupcake?'",
+      "description": "The top text 'ready for the cupcake?' is positioned directly above the man's head, creating a direct visual and rhetorical link. The man's aggressive, confrontational expression and pointing gesture are visually mapped onto the act of posing the question, implying he is the one asking it or representing the voice behind the question. This is an analogical mapping where the visual entity (the man) is projected as the entity performing the action or uttering the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the aggressive confrontation scene",
+      "description": "The user is projected onto the aggressive confrontation scene, as the man is pointing directly at the viewer, and the text 'wake up and smell the bacon!' is directed at the audience, creating a confrontational and accusatory tone. The phrase 'stop being afraid of being called a racist' and 'grow a pair' are rhetorical devices that directly address the user, urging them to confront perceived threats and act in a certain way. The overall scene is designed to make the user feel personally targeted and challenged.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme promotes racial hostility by using a derogatory racial slur ('goat humpers') targeting Black people, inciting anger and normalizing racist rhetoric under the guise of patriotic outrage.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who identify as or are perceived to be patriotic Americans, particularly those who resonate with populist, nationalist rhetoric that frames perceived cultural decline as a threat requiring aggressive response. The meme is designed to incite anger and mobilize this audience by invoking a sense of national crisis and encouraging them to confront what it portrays as 'racist' accusations, thereby normalizing racially charged hostility under the guise of defending American identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/49861.png",
+    "image_name": "49861.png",
+    "extraction_timestamp": "2025-12-16T03:38:02.160232",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

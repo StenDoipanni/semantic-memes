@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "ironic emotional expression",
+      "expressors": [
+        {
+          "entity": "man_in_fedora",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_in_fedora",
+          "relation": "emotionalRelationToEntity",
+          "to": "gangster_shooting_scene"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":ironic_emotional_expression :hasExpressor :man_in_fedora .",
+    ":man_in_fedora :emotionalRelationToEntity :gangster_shooting_scene ."
+  ],
+  "triples_count": 2
+}

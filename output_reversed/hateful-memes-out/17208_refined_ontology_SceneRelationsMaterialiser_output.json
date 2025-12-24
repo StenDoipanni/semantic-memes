@@ -1,0 +1,30 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "nazi_parade",
+      "participants": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Adolf_Hitler",
+          "relation": "isIn",
+          "to": "nazi_parade"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":nazi_parade :hasParticipant :Adolf_Hitler .",
+    ":Adolf_Hitler :isIn :nazi_parade ."
+  ],
+  "triples_count": 2
+}

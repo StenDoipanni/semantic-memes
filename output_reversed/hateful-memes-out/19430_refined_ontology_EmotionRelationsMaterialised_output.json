@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful emotional expression",
+      "expressors": [
+        {
+          "entity": "meme",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme",
+          "relation": "emotionalRelationToEntity",
+          "to": "Black people"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_emotional_expression :hasExpressor :meme .",
+    ":meme :emotionalRelationToEntity :Black_people ."
+  ],
+  "triples_count": 2
+}

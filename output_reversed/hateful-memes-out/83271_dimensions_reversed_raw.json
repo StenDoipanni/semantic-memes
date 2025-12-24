@@ -1,0 +1,190 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: having_a_bad_day?; hasOverallIntent: Hateful; overall-intent-description: The meme depicts a man giving a thumbs-up while text humorously suggests that having a bad day could mean being a Siamese twin attached to a gay brother who has a date and the twin is the only one with an ass. This joke relies on degrading and mocking LGBTQ+ individuals by implying that being gay is inherently linked to being 'less desirable' or 'unattractive' (the 'ass' part), and it uses a grotesque, dehumanizing metaphor (Siamese twin) to mock the person's situation. The intent is to provoke laughter through humiliation and ridicule of a marginalized group, which qualifies as hateful content under the provided toxicity categories. The humor is rooted in prejudice and targets the sexual orientation of the person described, making it a direct attack based on a protected characteristic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text",
+      "description": "having a bad day?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with a beard and short dark hair, wearing a dark gray t-shirt, is visible in the background. He is slightly out of focus and is giving a thumbs-up gesture with his right hand. His expression is neutral to slightly smiling.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "thumbs_up_scene",
+      "label": "man giving thumbs-up gesture",
+      "description": "A man is giving a thumbs-up gesture with his right hand, while his face is slightly out of focus in the background. The gesture is central to the visual composition and is accompanied by text overlaying the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "LGBTQ_Discrimination_Stereotype",
+      "label": "LGBTQ+ Discrimination Stereotype",
+      "description": "The meme relies on a harmful stereotype that associates being gay with being 'less desirable' or 'unattractive' (the 'ass' part), and uses a grotesque, dehumanizing metaphor (Siamese twin) to mock the person's situation. This is a form of LGBTQ+ discrimination that targets sexual orientation and implies inherent inferiority based on a protected characteristic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Siamese_Twin_Metaphor",
+      "label": "Siamese Twin Metaphor",
+      "description": "The use of the Siamese twin metaphor is a grotesque and dehumanizing way to describe a person's situation, implying physical and social abnormality. This metaphor is used to mock the person's bad day by linking it to a physically abnormal condition, which is a form of body-shaming and ableism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Gay_Brother_Stereotype",
+      "label": "Gay Brother Stereotype",
+      "description": "The meme references a 'gay brother who has a date' as a contrast to the 'only one with an ass'. This stereotype implies that being gay is inherently linked to being 'less desirable' or 'unattractive', which is a form of LGBTQ+ discrimination and homophobia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Ass_as_a_Negative_Body_Part_Stereotype",
+      "label": "Ass as a Negative Body Part Stereotype",
+      "description": "The use of 'ass' as a negative body part to describe the person's situation is a form of body-shaming and objectification. This stereotype implies that the person is 'unattractive' or 'undesirable' based on their body part, which is a form of misogyny and ableism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Hateful_Humor",
+      "label": "Hateful Humor",
+      "description": "The humor in the meme is rooted in prejudice and targets the sexual orientation of the person described, making it a direct attack based on a protected characteristic. This is a form of hateful humor that relies on degrading and mocking a marginalized group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_laughter",
+      "label": "hateful laughter expression",
+      "description": "The man's neutral to slightly smiling facial expression, combined with the thumbs-up gesture, is used to convey a mocking or sarcastic tone, which aligns with the hateful humor of the meme. The smile is not genuine happiness but rather a performative expression meant to mock the situation described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The man giving a thumbs-up is mapped as the person experiencing a bad day.",
+      "description": "The visual entity 'man' (specifically his thumbs-up gesture and neutral/slightly smiling expression) is mapped onto the textual entity 'having a bad day?' as the subject of the joke. The thumbs-up gesture, typically associated with positivity, is juxtaposed with the text to create a sarcastic or mocking tone, implying that the person is 'thumbs-up' for having a bad day — a humorous inversion. This mapping is reinforced by the overall hateful humor context, where the visual material (the man) is used to represent the person described in the text who is supposedly having a bad day.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the person experiencing a bad day",
+      "description": "The user is projected onto the person described in the text who is supposedly having a bad day. The meme uses the visual of the man giving a thumbs-up (a gesture typically associated with positivity) to sarcastically represent the person's bad day, creating a humorous inversion. The text explicitly addresses the user with 'you could be...', directly projecting the user onto the subject of the joke. The user is thus projected onto the 'person' entity, who is the subject of the textual description and the visual representation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme depicts a man giving a thumbs-up while text humorously suggests that having a bad day could mean being a Siamese twin attached to a gay brother who has a date and the twin is the only one with an ass. This joke relies on degrading and mocking LGBTQ+ individuals by implying that being gay is inherently linked to being 'less desirable' or 'unattractive' (the 'ass' part), and it uses a grotesque, dehumanizing metaphor (Siamese twin) to mock the person's situation. The intent is to provoke laughter through humiliation and ridicule of a marginalized group, which qualifies as hateful content under the provided toxicity categories. The humor is rooted in prejudice and targets the sexual orientation of the person described, making it a direct attack based on a protected characteristic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for a general online audience familiar with internet humor, particularly those who appreciate or are exposed to hateful, degrading, and mocking humor that targets marginalized groups. The target community includes individuals who may find offensive stereotypes and prejudiced content amusing, often without realizing the harm caused. The humor relies on the audience's understanding of LGBTQ+ discrimination tropes, ableism, and body-shaming, suggesting the meme is intended for viewers who either do not recognize the offensive nature of the content or who are deliberately seeking out such material for shock value or dark comedy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/83271.png",
+    "image_name": "83271.png",
+    "extraction_timestamp": "2025-12-19T14:38:25.918432",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

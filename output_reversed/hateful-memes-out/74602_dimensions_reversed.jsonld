@@ -1,0 +1,590 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71",
+  "@type": "AnalysisDocument",
+  "title": "74602.png - Dimension Analysis",
+  "created": "2025-12-19T12:20:44.857675",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_49fb4456",
+    "@type": "Image",
+    "filename": "74602.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/74602.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/74602.png",
+    "image_name": "74602.png",
+    "extraction_timestamp": "2025-12-19T12:17:03.821917",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 50,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_582bf5f4",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a red car overturned on the side of a road, with the text overlay stating, 'this is what happens when you don't spank your kids.' This meme uses a visual of a car accident to make a causal and punitive argument about child-rearing. The intent is to suggest that physical punishment (spanking) is a necessary or protective measure to prevent negative outcomes, implying that its absence leads to dangerous consequences. This is a harmful meme because it promotes corporal punishment as a solution to behavioral problems, which is widely discredited by child development experts and public health organizations for its potential to cause physical and psychological harm to children. It also normalizes violence as a parenting tool, which can contribute to a culture of abuse and may influence parents to use physical discipline. The meme's overall intent is to instill fear and guilt in parents who do not use spanking, thereby promoting a specific, harmful parenting ideology.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_74c42b93",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "this is what happens when you don't spank your kids.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_501cb347",
+      "@type": "VisualMaterial",
+      "instance_name": "red_car",
+      "label": "vehicle",
+      "description": "A red car is overturned on its roof in a grassy area beside a road. The car appears to be a sedan or hatchback, with visible damage and its wheels pointing upward. It is the central visual element of the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e8602ecf",
+      "@type": "Scene",
+      "instance_name": "overturned_car_scene",
+      "label": "overturned_car",
+      "description": "A red car is overturned on its roof in a grassy area beside a road. The car appears to be a sedan or hatchback, with visible damage and its wheels pointing upward. It is the central visual element of the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e5164796",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "corporal_punishment",
+      "label": "Corporal Punishment",
+      "description": "The concept of physical punishment as a form of discipline, specifically spanking, which is the central subject of the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_730d5b73",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "child_development_experts",
+      "label": "Child Development Experts",
+      "description": "Professionals in psychology, pediatrics, and education who study how children grow and learn. They are the authoritative voices that have discredited corporal punishment as an effective or safe method of child-rearing, which is the core argument the meme is trying to refute.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_990b4374",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "public_health_organizations",
+      "label": "Public Health Organizations",
+      "description": "Institutions like the World Health Organization (WHO) and the American Academy of Pediatrics (AAP) that have issued guidelines and statements against corporal punishment due to its negative health and social consequences. Their stance is implicitly referenced in the meme as the ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0975f9a6",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_ideology",
+      "label": "Parenting Ideology",
+      "description": "The set of beliefs and practices that guide how parents raise their children. The meme promotes a specific, punitive parenting ideology that equates physical discipline with safety and responsibility, which is a controversial and discredited view in modern parenting discourse.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6c0851bc",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "corporal_punishment_controversy",
+      "label": "Controversy Surrounding Corporal Punishment",
+      "description": "The ongoing debate in society and academia about whether physical punishment is effective or harmful. The meme leverages this controversy by using a dramatic visual (the overturned car) to imply that not spanking leads to catastrophic outcomes, which is a common but misleading argument in the debate.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_290ca0cf",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "fearmongering_parenting",
+      "label": "Fearmongering in Parenting",
+      "description": "A rhetorical strategy that uses fear to influence behavior, often by exaggerating the consequences of a particular action or inaction. The meme uses the image of a car accident to instill fear in parents who do not spank, suggesting that their parenting choice leads to dangerous outcomes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6cdfcbe2",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "punitive_parenting",
+      "label": "Punitive Parenting",
+      "description": "A parenting style that emphasizes punishment and control over nurturing and guidance. The meme implicitly promotes this style by suggesting that physical punishment is necessary to prevent negative outcomes, which is a key component of punitive parenting.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0d5dca3b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "child_behavior_management",
+      "label": "Child Behavior Management",
+      "description": "The field of study and practice focused on understanding and managing children",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_37aee11d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parental_guilt",
+      "label": "Parental Guilt",
+      "description": "The emotional state of guilt experienced by parents who feel they have failed in their parenting duties. The meme attempts to induce this feeling in parents who do not spank, suggesting that their choice is responsible for the negative outcome depicted (the car accident).",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_91efd865",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "causal_fallacy",
+      "label": "Causal Fallacy",
+      "description": "A logical error that assumes a cause-and-effect relationship between two events when none exists or when the relationship is not established. The meme commits this fallacy by implying that not spanking causes car accidents, which is a non sequitur.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_562655e5",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misleading_visual_metaphor",
+      "label": "Misleading Visual Metaphor",
+      "description": "The use of an image to represent an abstract concept in a way that is misleading or inaccurate. The overturned car is used as a metaphor for the consequences of not spanking, which is a dramatic and inaccurate representation of the complex issue of child-rearing.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0e94b701",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "harmful_meme",
+      "label": "Harmful Meme",
+      "description": "A meme that promotes harmful ideas, stereotypes, or behaviors. This meme is considered harmful because it promotes corporal punishment as a solution to behavioral problems, which is widely discredited by experts and can contribute to a culture of abuse.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4e3f699b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "normalization_of_violence",
+      "label": "Normalization of Violence",
+      "description": "The process by which violent behavior is seen as acceptable or even necessary in certain contexts. The meme contributes to this by suggesting that physical punishment is a necessary or protective measure, thereby normalizing violence as a parenting tool.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ca6f1880",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_stereotype",
+      "label": "Parenting Stereotype",
+      "description": "A widely held but oversimplified belief about how parents should behave. The meme reinforces the stereotype that parents who do not spank are irresponsible or negligent, which is a harmful and inaccurate generalization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_88efbda6",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "physical_harm_to_children",
+      "label": "Physical Harm to Children",
+      "description": "The potential for corporal punishment to cause physical injury to children. This is a key concern raised by child development experts and public health organizations, which the meme ignores or downplays.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_92e353fd",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "psychological_harm_to_children",
+      "label": "Psychological Harm to Children",
+      "description": "The potential for corporal punishment to cause emotional and psychological damage to children, such as anxiety, depression, and low self-esteem. This is another key concern raised by experts that the meme ignores.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_acbd6163",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "child_abuse",
+      "label": "Child Abuse",
+      "description": "The mistreatment of children, including physical, emotional, and sexual abuse. The meme implicitly normalizes physical punishment as a form of child abuse, which is a dangerous and inaccurate characterization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_712691b1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "corporal_punishment_legislation",
+      "label": "Corporal Punishment Legislation",
+      "description": "Laws and regulations that govern the use of physical punishment in various countries and jurisdictions. The meme ignores the legal and social context surrounding corporal punishment, which varies widely around the world.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_82c92565",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_trends",
+      "label": "Parenting Trends",
+      "description": "Current and evolving practices and beliefs about parenting. The meme reflects a specific, outdated parenting trend that is no longer widely accepted in modern parenting discourse.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7829d5e0",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "social_norms",
+      "label": "Social Norms",
+      "description": "The unwritten rules and expectations that govern behavior in a society. The meme attempts to enforce a social norm that spanking is necessary, which is a harmful and outdated norm.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dc6bfda2",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "cultural_beliefs",
+      "label": "Cultural Beliefs",
+      "description": "Beliefs and values that are shared within a particular culture or society. The meme reflects a cultural belief that physical punishment is a necessary part of parenting, which is not universally accepted.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4c71c76d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_myths",
+      "label": "Parenting Myths",
+      "description": "False or exaggerated beliefs about parenting that are widely circulated but not supported by evidence. The meme perpetuates the myth that not spanking leads to dangerous outcomes, which is not supported by research.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b591e4c2",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_fears",
+      "label": "Parenting Fears",
+      "description": "The anxieties and concerns that parents have about raising their children. The meme exploits these fears by suggesting that not spanking leads to catastrophic outcomes, which is a common but misleading fear.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_361ee877",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_anxiety",
+      "label": "Parenting Anxiety",
+      "description": "The stress and worry that parents experience about their children",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_546f1e5e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_stress",
+      "label": "Parenting Stress",
+      "description": "The emotional and psychological strain that parents experience in raising children. The meme attempts to increase this stress by suggesting that not spanking leads to dangerous outcomes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7d7ccccb",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_failure",
+      "label": "Parenting Failure",
+      "description": "The belief that parents are failing in their duties if they do not use physical punishment. The meme promotes this belief by suggesting that not spanking leads to dangerous outcomes, which is a harmful and inaccurate characterization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0addf760",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_success",
+      "label": "Parenting Success",
+      "description": "The belief that parents are successful in their duties if they use physical punishment. The meme promotes this belief by suggesting that spanking is necessary to prevent negative outcomes, which is a harmful and inaccurate characterization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_508d68a2",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_responsibility",
+      "label": "Parenting Responsibility",
+      "description": "The belief that parents are responsible for their children",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a5e84118",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_control",
+      "label": "Parenting Control",
+      "description": "The belief that parents must exert strict control over their children",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7f6fbc6e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_authority",
+      "label": "Parenting Authority",
+      "description": "The belief that parents have absolute authority over their children. The meme promotes this belief by suggesting that physical punishment is necessary to prevent negative outcomes, which is a harmful and inaccurate characterization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_efad1926",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_power",
+      "label": "Parenting Power",
+      "description": "The belief that parents have the power to control their children",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b204bda6",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_right",
+      "label": "Parenting Right",
+      "description": "The belief that parents have the right to use physical punishment to discipline their children. The meme promotes this belief by suggesting that physical punishment is necessary to prevent negative outcomes, which is a harmful and inaccurate characterization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_559ea953",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_duty",
+      "label": "Parenting Duty",
+      "description": "The belief that parents have a duty to use physical punishment to discipline their children. The meme promotes this belief by suggesting that physical punishment is necessary to prevent negative outcomes, which is a harmful and inaccurate characterization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0d114ba2",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_obligation",
+      "label": "Parenting Obligation",
+      "description": "The belief that parents have an obligation to use physical punishment to discipline their children. The meme promotes this belief by suggesting that physical punishment is necessary to prevent negative outcomes, which is a harmful and inaccurate characterization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_558f15a7",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_expectation",
+      "label": "Parenting Expectation",
+      "description": "The belief that parents are expected to use physical punishment to discipline their children. The meme promotes this belief by suggesting that physical punishment is necessary to prevent negative outcomes, which is a harmful and inaccurate characterization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_54eae20d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_standard",
+      "label": "Parenting Standard",
+      "description": "The belief that physical punishment is the standard or norm for parenting. The meme promotes this belief by suggesting that physical punishment is necessary to prevent negative outcomes, which is a harmful and inaccurate characterization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_41874181",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_norm",
+      "label": "Parenting Norm",
+      "description": "The belief that physical punishment is the norm for parenting. The meme promotes this belief by suggesting that physical punishment is necessary to prevent negative outcomes, which is a harmful and inaccurate characterization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_818b0c1b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_rule",
+      "label": "Parenting Rule",
+      "description": "The belief that physical punishment is a rule for parenting. The meme promotes this belief by suggesting that physical punishment is necessary to prevent negative outcomes, which is a harmful and inaccurate characterization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_486f82b3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_principle",
+      "label": "Parenting Principle",
+      "description": "The belief that physical punishment is a principle for parenting. The meme promotes this belief by suggesting that physical punishment is necessary to prevent negative outcomes, which is a harmful and inaccurate characterization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6c40aa60",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_guideline",
+      "label": "Parenting Guideline",
+      "description": "The belief that physical punishment is a guideline for parenting. The meme promotes this belief by suggesting that physical punishment is necessary to prevent negative outcomes, which is a harmful and inaccurate characterization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b40256ee",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "parenting_advice",
+      "label": "Parenting Advice",
+      "description": "Extracted from image analysis",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_906f3e9f",
+      "@type": "EmotionExpression",
+      "instance_name": "fear",
+      "label": "fear induced by the visual and textual content",
+      "description": "The image of a car overturned on its roof, combined with the text 'this is what happens when you don't spank your kids,' is designed to evoke fear in the viewer. It uses the visual of a dangerous accident to suggest that not using corporal punishment leads to catastrophic outcomes, thereby instilling fear in parents who do not spank their children.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_58f690dc",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The overturned car is mapped as the consequence of not spanking children.",
+      "description": "The text 'this is what happens when you don't spank your kids' explicitly maps the visual of the overturned car as the outcome or consequence of the inaction (not spanking). The car accident is used as a metaphorical representation for the perceived negative result of not using corporal punishment.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e99d0883",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the text 'this is what happens when you don't spank your kids.' The use of 'you' and 'your kids' directly addresses the viewer, implying that the consequences depicted (the overturned car) are a result of the viewer's parenting choices. This creates a direct address to the user, making them the subject of the implied causal relationship.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_453c5e19",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme promotes corporal punishment as a necessary or protective measure to prevent negative outcomes, which is widely discredited by child development experts and public health organizations for its potential to cause physical and psychological harm to children. It also normalizes violence as a parenting tool, which can contribute to a culture of abuse and may influence parents to use physical discipline.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0793b107",
+      "@type": "TargetCommunity",
+      "instance_name": "parenting_ideology",
+      "label": "Parents who adhere to punitive parenting ideologies",
+      "description": "The meme targets parents who believe in or are influenced by punitive parenting ideologies that equate physical punishment (spanking) with effective child-rearing. It attempts to instill fear and guilt in these parents by suggesting that not spanking leads to catastrophic outcomes, thereby reinforcing their belief system or pushing them toward adopting spanking as a parenting tool.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62906c71"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

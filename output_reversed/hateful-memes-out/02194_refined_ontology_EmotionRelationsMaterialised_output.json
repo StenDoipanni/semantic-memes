@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "pride in farming success",
+      "expressors": [
+        {
+          "entity": "man_holding_animal",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_holding_animal",
+          "relation": "emotionalRelationToEntity",
+          "to": "animal"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":pride_in_farming_success :hasExpressor :man_holding_animal .",
+    ":man_holding_animal :emotionalRelationToEntity :animal ."
+  ],
+  "triples_count": 2
+}

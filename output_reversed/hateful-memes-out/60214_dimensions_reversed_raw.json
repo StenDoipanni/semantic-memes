@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: transgender_nibbas_waiting_for_the_signal_light_to_turn_red_so_they_can_start_begging; hasOverallIntent: Hateful; overall-intent-description: The image depicts two women, one with blonde hair and the other with brown hair, both appearing to be performing or posing in a nightclub setting. The text overlay reads: 'transgender nibbas waiting for the signal light to turn red so they can start begging.' The term 'nibbas' is a derogatory slang term often used to demean or insult. The phrase 'waiting for the signal light to turn red so they can start begging' is a degrading metaphor implying that transgender individuals are waiting for an opportunity to beg or solicit, which is a harmful stereotype. This meme uses derogatory language and a demeaning metaphor to attack transgender individuals, fitting the definition of a hateful meme as it directly targets a specific community based on their gender identity with offensive and degrading content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "transgender nibbas waiting for the signal light to turn red so they can start begging",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_with_blonde_hair",
+      "label": "person",
+      "description": "A woman with long blonde hair, wearing a black top with a sequined green and gold design, and fishnet stockings. She is extending her arms outward, appearing to be in a performance or posing stance. Her expression is intense, and she is wearing large, ornate earrings and a green wristband.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "performing_women",
+      "label": "Two women performing or posing together in a nightclub",
+      "description": "The scene depicts two women, one with blonde hair and the other with brown hair, extending their arms outward in a synchronized or interactive pose, suggesting a performance or a staged photo opportunity in a nightclub setting. They are positioned facing each other, with their arms reaching across the center of the frame, creating a dynamic visual composition. The background includes other people and dim lighting typical of a club environment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman_with_blonde_hair",
+          "relation": "extends_arm_toward",
+          "to": "woman_with_brown_hair"
+        },
+        {
+          "from": "woman_with_brown_hair",
+          "relation": "extends_arm_toward",
+          "to": "woman_with_blonde_hair"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "transgender_nibbas_waiting_for_the_signal_light_to_turn_red_so_they_can_start_begging",
+      "label": "Derogatory Stereotype Against Transgender People",
+      "description": "The phrase 'transgender nibbas waiting for the signal light to turn red so they can start begging' is a hateful stereotype that degrades transgender individuals by implying they are opportunistic, dependent on others for financial support, and morally inferior. This stereotype is rooted in systemic discrimination and is used to dehumanize and marginalize transgender people. The term 'nibbas' is a derogatory slang term used to demean or insult, often targeting marginalized groups. The metaphor of 'waiting for the signal light to turn red' is a degrading comparison to traffic or street performers, implying that transgender people are waiting for permission or opportunity to beg or solicit, which is a harmful and false characterization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nibbas",
+      "label": "Derogatory Slang Term",
+      "description": "The term 'nibbas' is a vulgar, pejorative slang term used to demean or insult, often targeting marginalized groups including transgender individuals. It is not a respectful or accurate descriptor and is used to dehumanize and belittle. The term is rooted in hate speech and is commonly used in online communities to express contempt or disdain.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "begging",
+      "label": "Stereotype of Economic Dependence",
+      "description": "The stereotype that transgender people are 'begging' implies they are economically dependent, morally inferior, or reliant on charity or handouts. This is a harmful and false stereotype that perpetuates poverty and social exclusion. It is often used to justify discrimination and to deny transgender people access to economic opportunities and social support.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "signal_light",
+      "label": "Metaphor for Opportunity or Permission",
+      "description": "The 'signal light' metaphor in the meme is used to imply that transgender people are waiting for an opportunity or permission to engage in begging or solicitation. This metaphor is degrading and implies that transgender people are opportunistic and morally inferior. It is a harmful stereotype that is used to dehumanize and marginalize transgender people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "transgender_identity",
+      "label": "Gender Identity and Social Recognition",
+      "description": "Transgender identity refers to a person's internal sense of their gender, which may differ from the sex they were assigned at birth. This identity is recognized and protected under human rights frameworks in many countries. The meme's use of derogatory language and stereotypes against transgender people is a form of hate speech that violates human rights and dignity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_meme",
+      "label": "Hateful Meme",
+      "description": "A hateful meme is a form of online content that uses derogatory language, stereotypes, or imagery to attack or demean a specific group of people based on their identity, race, gender, religion, or other characteristics. The meme in question is a hateful meme because it uses derogatory language and a degrading metaphor to attack transgender individuals, which is a form of hate speech and discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_anger",
+      "label": "hateful anger expressed through derogatory text",
+      "description": "The text overlay explicitly uses hateful and derogatory language ('transgender nibbas', 'begging') to express contempt and anger toward transgender individuals, which is the dominant emotional tone of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "transgender individuals are mapped onto the performing women",
+      "description": "The text 'transgender nibbas' explicitly labels the two women in the image as members of the transgender community, creating an analogical mapping where the visual entities (the performing women) are identified as 'transgender nibbas' by the textual material. This mapping is direct and explicit, as the text directly assigns the identity of 'transgender nibbas' to the visual subjects.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the text_chunk because the meme's text explicitly labels the visual subjects as 'transgender nibbas', creating a direct identification that the user is meant to interpret the visual material through this derogatory textual lens. The text acts as a deictic anchor, directing the user's interpretation of the scene and visual material towards the hateful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses derogatory language and a degrading metaphor to attack transgender individuals, directly targeting a specific community based on their gender identity with offensive and degrading content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The intended audience is individuals who are familiar with or sympathetic to the use of derogatory slang like 'nibbas' and who may find offensive stereotypes against transgender people humorous or provocative. This audience likely includes members of online communities that engage with hate speech, trolling, or edgy internet humor, and may be drawn to content that reinforces negative stereotypes or engages in dehumanizing rhetoric. The meme is designed to provoke a reaction from those who either endorse or are indifferent to such hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/60214.png",
+    "image_name": "60214.png",
+    "extraction_timestamp": "2025-12-16T06:39:29.788177",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,220 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: when_you_finally_headshot_150_black_people; hasOverallIntent: Hateful; overall-intent-description: The meme presents a disturbing and violent image of a large crowd of Black people gathered in a field, juxtaposed with the text 'when you finally headshot 150 black people.' This is a direct and hateful attack targeting Black people, using graphic violence as a punchline. The phrase 'headshot' is a violent gaming term, and the number '150' is used to imply mass murder. The image, which appears to depict a real-world event (possibly a funeral or memorial gathering), is weaponized to dehumanize and glorify the killing of Black individuals. This constitutes a hateful message that targets a specific racial group with explicit violence and is designed to provoke fear, disgust, or reinforce racist stereotypes. The meme is not merely humorous; it is a harmful and toxic expression that normalizes racial violence and is deeply offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you finally headshot 150 black people",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "crowd",
+      "label": "large group of people",
+      "description": "A large gathering of people, predominantly Black, in an open field. Many are standing or sitting, some appear to be mourning or participating in a communal event. The crowd is dense and occupies most of the frame.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "gathering_in_field",
+      "label": "crowd gathering in open field",
+      "description": "A large crowd of predominantly Black people is gathered in an open, barren field. Many individuals are standing or sitting, some appear to be mourning or participating in a communal event. The crowd is dense and occupies most of the frame, with some individuals raising their hands or holding objects. The background shows a distant horizon with sparse vegetation and a few structures or tents. The scene is under a clear sky, suggesting daytime.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_violence",
+      "label": "Anti-Black Stereotype: Aggressive/Violent Nature Claims",
+      "description": "The meme relies on the harmful stereotype that Black people are inherently violent or aggressive, which is used to justify the violent imagery and text. This stereotype is not visible in the image but is essential to understanding the meme's hateful intent and its normalization of racialized violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gaming_term_headshot",
+      "label": "Gaming Term: 'Headshot'",
+      "description": "The term 'headshot' originates from video games and refers to a precise, often lethal, shot to the head. Its use here is a violent metaphor, and understanding its gaming context is necessary to interpret the meme's implication of mass murder. This is external knowledge not visible in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racialized_mass_murder_concept",
+      "label": "Concept: Racialized Mass Murder",
+      "description": "The meme weaponizes the idea of mass murder specifically targeting Black people, which is a real-world concept rooted in systemic racism and historical violence (e.g., slavery, Jim Crow, police brutality, genocides). This concept is not depicted in the image but is essential to understanding the meme’s hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dehumanization_through_violence",
+      "label": "Concept: Dehumanization Through Violence",
+      "description": "The meme uses graphic violence to dehumanize Black people, reducing them to a statistic ('150') and framing their lives as expendable. This is a rhetorical strategy rooted in racist ideology, not visible in the image but critical to understanding the meme’s toxicity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_gaming_meme_tropes",
+      "label": "Racist Gaming Meme Tropes",
+      "description": "The meme leverages the trope of 'headshotting' in gaming culture to create a violent, hyperbolic punchline. This trope is used to normalize or glorify racialized violence, which is a form of digital racism. This cultural reference is external to the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_context_of_black_lives_matter",
+      "label": "Historical Context: Black Lives Matter Movement",
+      "description": "The meme is a direct attack on the Black Lives Matter movement and the global struggle against racial violence. Understanding the movement’s context is necessary to recognize the meme’s intent to provoke fear and reinforce racist narratives. This is external knowledge.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_numerical_escalation",
+      "label": "Racist Numerical Escalation: '150'",
+      "description": "The number '150' is used to imply mass murder and is a rhetorical device to exaggerate the scale of violence. This numerical escalation is a common tactic in racist rhetoric to dehumanize and demonize a group. This is external knowledge.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is hatred, conveyed through the violent and racially charged text overlaying the image. The text 'when you finally headshot 150 black people' explicitly expresses hatred toward Black people by glorifying mass racialized murder.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Textual entity '150 black people' mapped onto the visual crowd",
+      "description": "The text '150 black people' is explicitly mapped onto the visual entity 'crowd' in the image. The meme uses the crowd as a visual representation of the '150 black people' mentioned in the text, implying that the entire gathering is being counted or targeted as a group. This mapping is direct and explicit, using the visual material to instantiate the numerical and racialized concept presented in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the textual material 'when you finally headshot 150 black people' because the phrase 'you' directly addresses the viewer, creating an implicit 'you' as the subject performing the violent action. This deictic pronoun 'you' anchors the user's identity as the perpetrator in the meme's hateful narrative, projecting the user onto the text as the agent of the described violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme presents a direct and hateful attack targeting Black people, using graphic violence as a punchline. The phrase 'headshot' is a violent gaming term, and the number '150' is used to imply mass murder. The image, which appears to depict a real-world event (possibly a funeral or memorial gathering), is weaponized to dehumanize and glorify the killing of Black individuals. This constitutes a hateful message that targets a specific racial group with explicit violence and is designed to provoke fear, disgust, or reinforce racist stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience that understands and engages with racist gaming tropes, particularly those that normalize or glorify racialized violence. The target audience likely includes individuals who consume internet memes that weaponize violent imagery and language, often with the intent to provoke, shock, or reinforce harmful stereotypes. This audience may be drawn to the meme’s hyperbolic and graphic nature, which relies on the gaming term 'headshot' and the numerical escalation of '150' to imply mass murder. The meme’s toxicity is directed at Black people, and its intended audience is likely those who either endorse or are indifferent to such racist content, potentially including individuals who hold or are exposed to anti-Black stereotypes such as 'aggressive/violent nature claims.' The meme’s context is rooted in the Black Lives Matter movement and systemic racism, so the target audience may also include those who are unaware of or dismissive of the historical and social context of racialized violence against Black communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/10527.png",
+    "image_name": "10527.png",
+    "extraction_timestamp": "2025-12-15T14:14:42.360598",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

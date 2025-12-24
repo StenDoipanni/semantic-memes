@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "skeptical emotion",
+      "expressors": [
+        {
+          "entity": "woman_on_right",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman_on_right",
+          "relation": "emotionalRelationToEntity",
+          "to": "woman_on_left"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":skeptical_emotion :hasExpressor :woman_on_right .",
+    ":woman_on_right :emotionalRelationToEntity :woman_on_left ."
+  ],
+  "triples_count": 2
+}

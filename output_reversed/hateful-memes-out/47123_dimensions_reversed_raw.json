@@ -1,0 +1,189 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: good_morning_sleepyhead; hasOverallIntent: Hateful; overall-intent-description: The image features a close-up of an elderly Black man with a weary or tired expression, overlaid with the text 'good morning sleepyhead.' The term 'sleepyhead' is used in a condescending and mocking manner, implying laziness or lack of alertness. This meme leverages the visual of a Black man to deliver a disparaging message, which can be interpreted as reinforcing harmful stereotypes about Black people being lazy or unproductive. The juxtaposition of the text with the image creates a demeaning tone, targeting the individual's race and implying a negative character trait. This aligns with the 'Lazy/unemployed characterizations' stereotype under Anti-Black Stereotypes, making the meme hateful and potentially harmful to Black individuals and communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "good morning",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "elderly_black_man",
+      "label": "person",
+      "description": "A close-up of an elderly Black man with a weary or tired expression, wearing a dark pinstripe suit and a purple tie. His facial expression appears to be one of fatigue or mild exasperation, which is juxtaposed with the text 'good morning sleepyhead' to create a demeaning tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "text_overlay_scene",
+      "label": "text_overlay_on_face",
+      "description": "A scene where text is overlaid on the face of an elderly Black man, creating a confrontational or mocking tone. The text 'good morning sleepyhead' is positioned above and below his face, framing his expression as part of the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "isOverlaidOn",
+          "to": "elderly_black_man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lazy_unemployed_characterizations_stereotype",
+      "label": "Lazy/unemployed characterizations",
+      "description": "A harmful stereotype that portrays Black people as inherently lazy or unproductive, often used to justify systemic discrimination or to demean individuals based on race. This stereotype is explicitly referenced in the meme's overall intent and is central to understanding the hateful nature of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "elderly_black_man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotypes",
+      "label": "Anti-Black Stereotypes",
+      "description": "A broader category of racial stereotypes targeting Black people, which includes the 'lazy/unemployed characterizations' stereotype. The meme leverages this category to deliver a racially charged, demeaning message, making it hateful and potentially harmful to Black individuals and communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "elderly_black_man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sleepyhead_term",
+      "label": "Sleepyhead",
+      "description": "A colloquial term used to describe someone who is lazy, unproductive, or overly sleepy. In this meme, it is used in a mocking and condescending manner to imply the elderly Black man is lazy or unalert, reinforcing the stereotype of Black people as lazy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "good_morning_text",
+      "label": "Good Morning",
+      "description": "A common greeting used to start the day. In this meme, it is juxtaposed with 'sleepyhead' to create a sarcastic or mocking tone, implying the recipient is being woken up in a condescending way, which amplifies the insult.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_contempt",
+      "label": "mocking and contemptuous emotion",
+      "description": "The emotion expressed is one of condescending mockery, conveyed through the juxtaposition of the text 'good morning sleepyhead' with the weary facial expression of the elderly Black man. The tone is sarcastic and demeaning, implying laziness and reinforcing harmful stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The elderly Black man is mapped as a 'sleepyhead'",
+      "description": "The text 'sleepyhead' is overlaid on the image of the elderly Black man, creating an analogical mapping where the man is being labeled or identified as a 'sleepyhead'. This mapping is central to the meme's hateful intent, as it projects the stereotype of laziness onto the visual subject, reinforcing the 'lazy/unemployed characterizations' anti-Black stereotype. The term 'sleepyhead' is used condescendingly, and the man's weary expression is juxtaposed with the text to amplify the insult.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the elderly Black man as the recipient of the insult",
+      "description": "The user is implicitly projected onto the recipient of the meme's message — the elderly Black man — who is being addressed with the text 'good morning sleepyhead'. The term 'sleepyhead' is used condescendingly, and the user is positioned as the one delivering the mocking greeting, thereby projecting themselves onto the scene as the speaker or the one who is waking up the 'sleepyhead'. The visual material of the man is the target of the projection, as the user imagines themselves as the one who is 'waking up' or 'talking to' him in a demeaning way. The projection is onto the VisualMaterial entity 'elderly_black_man' and the Scene entity 'text_overlay_scene', which frames the man as the object of the user's address.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme leverages the visual of an elderly Black man to deliver a disparaging message, using the term 'sleepyhead' in a condescending and mocking manner to imply laziness or lack of alertness. This reinforces harmful stereotypes about Black people being lazy or unproductive, making the meme hateful and potentially harmful to Black individuals and communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are aware of and may find humor in racially charged stereotypes, particularly those who recognize or perpetuate the 'lazy/unemployed characterizations' anti-Black stereotype. The meme is designed to elicit a reaction from people who understand the condescending tone of 'good morning sleepyhead' and the visual association with an elderly Black man, often used to mock or demean Black people by implying inherent laziness or unproductivity. This audience may include those who engage with internet memes that rely on harmful racial tropes, and who may not recognize the hateful intent or its impact on Black communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/47123.png",
+    "image_name": "47123.png",
+    "extraction_timestamp": "2025-12-16T02:40:02.028391",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

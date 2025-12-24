@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "map_of_japan_with_labels",
+      "participants": [
+        {
+          "entity": "hiroshima",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "nagasaki",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "hiroshima",
+          "relation": "isLocatedIn",
+          "to": "map_of_japan_with_labels"
+        },
+        {
+          "from": "nagasaki",
+          "relation": "isLocatedIn",
+          "to": "map_of_japan_with_labels"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":map_of_japan_with_labels :hasParticipant :hiroshima .",
+    ":map_of_japan_with_labels :hasParticipant :nagasaki .",
+    ":hiroshima :isLocatedIn :map_of_japan_with_labels .",
+    ":nagasaki :isLocatedIn :map_of_japan_with_labels ."
+  ],
+  "triples_count": 4
+}

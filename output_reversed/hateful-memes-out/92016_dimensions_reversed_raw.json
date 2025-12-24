@@ -1,0 +1,213 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: hateful; overall-intent-description: The image depicts a man engulfed in flames with the text 'get ready for your future white folks.. nuclear fire & eternal slavery!' This is a racially charged and hateful meme that uses violent and apocalyptic imagery to threaten and dehumanize white people, implying they will face punishment or destruction. The use of 'white folks' as a targeted group, combined with the graphic depiction of fire and slavery, constitutes a direct hateful attack based on race. The meme is designed to incite fear and hatred toward a specific racial group, making it clearly hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text",
+      "description": "get ready for your future white folks..",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "a man engulfed in flames",
+      "description": "A Caucasian man with short brown hair and a beard, wearing a dark button-up shirt and dark pants, is depicted with his arms crossed. His body is surrounded by bright orange and yellow flames, suggesting he is on fire. He has a calm, slightly smug facial expression. The background is a plain, dark gray. The image is overlaid with white text: 'get ready for your future white folks..' at the top and 'nuclear fire & eternal slavery!' at the bottom. The visual material is a digitally manipulated image, likely created for a meme, with the flames appearing as a graphic overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "threatening_apocalyptic_scene",
+      "label": "a man engulfed in flames delivering a threatening message",
+      "description": "The scene depicts a man surrounded by flames, with text overlaying the image that delivers a threatening message about 'nuclear fire & eternal slavery' directed at 'white folks'. The man's calm expression contrasts with the violent imagery, creating a jarring and threatening composition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "is engulfed in",
+          "to": "flames"
+        },
+        {
+          "from": "text",
+          "relation": "delivers message to",
+          "to": "man"
+        },
+        {
+          "from": "man",
+          "relation": "is the target of",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racially_targeted_threat",
+      "label": "Racially Targeted Threat",
+      "description": "The meme explicitly targets 'white folks' with violent and apocalyptic imagery, which is a form of racialized hate speech. This requires understanding that racial groups are being singled out for punishment or destruction based on their race, which is a core component of racist ideology.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nuclear_fire",
+      "label": "Nuclear Fire",
+      "description": "The phrase 'nuclear fire' is a metaphorical reference to nuclear weapons or nuclear war, which are real-world catastrophic events with historical and geopolitical significance. This requires background knowledge of nuclear warfare and its association with mass destruction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "eternal_slavery",
+      "label": "Eternal Slavery",
+      "description": "The term 'eternal slavery' refers to the historical institution of slavery, which was a brutal and dehumanizing system of forced labor. This concept is rooted in real-world history and is used here as a metaphor for perpetual oppression or punishment, which requires understanding of the historical and moral weight of slavery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_folks",
+      "label": "White Folks",
+      "description": "The term 'white folks' is a colloquial and often derogatory way to refer to white people, particularly in contexts of racial tension or hate speech. This requires understanding of racial terminology and its use in social and political discourse, especially in the context of racialized hate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "apocalyptic_imagery",
+      "label": "Apocalyptic Imagery",
+      "description": "The use of fire and destruction as visual metaphors for impending doom or punishment is a common trope in apocalyptic literature and rhetoric. This requires understanding of how apocalyptic imagery is used to convey fear, judgment, or divine retribution in cultural and religious contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_content",
+      "label": "Hateful Content",
+      "description": "The meme is explicitly hateful, as it uses violent imagery and racial targeting to incite fear and hatred. This requires understanding of the concept of hate speech and its impact on social discourse and individual well-being.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "menace",
+      "label": "threatening menace",
+      "description": "The man's calm, slightly smug facial expression, combined with the violent imagery of flames and the threatening text, conveys a menacing and intimidating emotion. His composed demeanor contrasts with the apocalyptic message, amplifying the sense of impending doom and hostility.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man engulfed in flames is mapped as the embodiment of the threatening message directed at 'white folks'.",
+      "description": "The visual entity 'man engulfed in flames' is mapped onto the textual entity 'white folks' as the target of the threat. The flames and the man's calm demeanor visually represent the 'nuclear fire & eternal slavery' that is being promised to 'white folks'. The mapping is established through the juxtaposition of the violent imagery with the text that explicitly names the target group and the punishment. The man's presence in the flames serves as a visual metaphor for the impending doom described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the targeted group via deictic language",
+      "description": "The user is projected onto the group 'white folks' as the direct target of the threat. The deictic phrase 'your future' in the top text ('get ready for your future white folks..') explicitly addresses the user, implying that the user belongs to the targeted group and is therefore the recipient of the impending punishment described. The user is thus projected onto the textual entity 'white folks' as the intended victim of the apocalyptic threat.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme explicitly targets 'white folks' with violent and apocalyptic imagery, which is a form of racialized hate speech. This requires understanding that racial groups are being singled out for punishment or destruction based on their race, which is a core component of racist ideology.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "targeted racial group",
+      "description": "white folks",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/92016.png",
+    "image_name": "92016.png",
+    "extraction_timestamp": "2025-12-19T17:24:53.813714",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

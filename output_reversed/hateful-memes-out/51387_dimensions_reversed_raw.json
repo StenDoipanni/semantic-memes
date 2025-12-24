@@ -1,0 +1,162 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: wing_wing_wing; hasOverallIntent: Harmful; overall-intent-description: The image depicts a man in a suit on a phone call, with the text \"wing wing wing\" overlaid. The text is likely meant to mimic the sound of a bird or a playful, nonsensical phrase. The overall intent is not inherently abusive, hateful, or propagandistic, but the phrase \"wing wing wing\" could be interpreted as a childish or mocking sound effect, potentially used to imply absurdity or silliness. While not targeting any specific group with harmful stereotypes, the meme's intent is to create humor through juxtaposition — the serious, professional appearance of the man contrasted with the childish, nonsensical text. This could be seen as mildly harmful if it is used to mock someone's speech or behavior in a derogatory way, but without context, it is primarily a harmless, humorous meme. The image does not contain any explicit toxic elements such as racism, sexism, ableism, or other forms of discrimination. The intent is to evoke amusement through absurdity, not to attack or harm any group or individual.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "text content and position: \"wing wing wing\" appears as a text overlay at the top of the image, enclosed in quotation marks, spanning across the upper portion of the frame.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with short dark hair, wearing glasses, a light blue collared shirt, and a brown velvet blazer. He is holding a smartphone to his ear, appearing to be engaged in a phone conversation. His expression is neutral to slightly surprised or focused. He is positioned in front of a light-colored, vertically paneled background, likely an office or modern interior setting. The man is the central and most salient visual entity in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "phone_call_scene",
+      "label": "man_on_phone_call",
+      "description": "A man is engaged in a phone conversation, holding a smartphone to his ear. The scene is set in a modern interior with a light-colored, vertically paneled background. The man's expression suggests focus or mild surprise. The text 'wing wing wing' is overlaid on the image, implying a humorous or nonsensical context to the call.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "holding",
+          "to": "smartphone"
+        },
+        {
+          "from": "man",
+          "relation": "engaged_in",
+          "to": "phone_call"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "wing_wing_wing_sound_effect",
+      "label": "Nonsensical sound effect phrase",
+      "description": "The phrase 'wing wing wing' is a playful, nonsensical sound effect often used to mimic the sound of a bird flying or to represent a childish, absurd noise. It is not a real-world entity or reference but relies on cultural understanding of sound effects and humor through absurdity. This knowledge is required to interpret the meme's intent as humorous or silly rather than literal or threatening.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "professional_appearance_stereotype",
+      "label": "Professional appearance stereotype",
+      "description": "The man's attire (brown velvet blazer, collared shirt, glasses) and focused expression are culturally associated with professionalism, seriousness, or corporate environments. This stereotype is used in the meme to create a contrast with the childish, nonsensical text 'wing wing wing', enhancing the humor through juxtaposition. Understanding this stereotype is necessary to interpret the meme’s comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "phone_call_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "absurdity_humor_concept",
+      "label": "Absurdity humor concept",
+      "description": "The meme relies on the concept of absurdity humor — using incongruous or illogical elements to create amusement. The juxtaposition of a serious, professional-looking person with a childish, nonsensical phrase is a common comedic device. This requires background knowledge of humor theory and cultural norms around comedic juxtaposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "phone_call_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "amusement",
+      "label": "amused emotional state",
+      "description": "The man's neutral to slightly surprised expression, combined with the absurd and nonsensical text overlay 'wing wing wing', suggests an implied or intended humorous context. The juxtaposition of his professional appearance with the childish sound effect creates a comedic effect that is meant to evoke amusement or lightheartedness from the viewer.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'wing wing wing' is mapped onto the man's phone call scene, implying the sound he is making or hearing.",
+      "description": "The textual phrase 'wing wing wing' is overlaid on the image and is directly associated with the visual of the man on the phone. The mapping suggests that the sound effect is being projected onto the phone call context — either the man is making this sound, or he is hearing it. This creates an analogical mapping where the nonsensical text is mapped onto the auditory experience implied by the visual of the phone conversation. The humor arises from the incongruity between the serious visual context and the childish sound effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the text 'wing wing wing' as the focal point of the meme's humor. The text is the primary element that triggers the user's interpretation of the absurdity, and the projection is onto this textual material rather than a specific visual or scene element. There are no explicit deictic pronouns like 'me' or 'you' in the image, but the user is implicitly projected onto the experience of encountering and interpreting the text overlay, which is the core of the meme's meaning.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with internet humor, sound effects, and absurdist comedy. The target community includes individuals who appreciate visual juxtaposition for comedic effect, particularly those who recognize the contrast between the man's professional appearance and the childish, nonsensical 'wing wing wing' sound effect. The meme relies on cultural understanding of humor through absurdity and does not target any specific demographic or community with harmful stereotypes. It is accessible to anyone who can interpret the visual and textual elements in a humorous context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/51387.png",
+    "image_name": "51387.png",
+    "extraction_timestamp": "2025-12-16T04:06:55.619529",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 11,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

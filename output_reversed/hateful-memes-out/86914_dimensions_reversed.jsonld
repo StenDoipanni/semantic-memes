@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_3e4eef98",
+  "@type": "AnalysisDocument",
+  "title": "86914.png - Dimension Analysis",
+  "created": "2025-12-19T16:13:01.662134",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_6ce9e0cd",
+    "@type": "Image",
+    "filename": "86914.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/86914.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/86914.png",
+    "image_name": "86914.png",
+    "extraction_timestamp": "2025-12-19T16:11:16.080123",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_be672844",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: hateful; overall-intent-description: The image depicts a man in a police uniform with arms crossed, juxtaposed with text that reads 'no pity sex?' and 'i am going to shoot an unarmed black citizen.' This combination is a hateful meme that directly targets Black individuals by invoking a racist stereotype associating them with criminality and violence, while also using the phrase 'no pity sex?' to imply hypersexualization. The meme is designed to provoke and spread harmful racial stereotypes, portraying Black people as inherently dangerous and deserving of lethal force, which constitutes a direct hateful attack based on race. The visual of the police officer reinforces the stereotype that law enforcement is complicit in or representative of this violence against Black citizens. The overall intent is to normalize or justify racialized violence against Black people through the use of dehumanizing and dangerous tropes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3e4eef98"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_051d1037",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "no pity sex?",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3e4eef98"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c0e8db56",
+      "@type": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A bald man with a goatee, wearing a blue police uniform with arms crossed, standing in an office-like setting. He is the central visual focus of the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3e4eef98"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f5087012",
+      "@type": "Scene",
+      "instance_name": "police_officer_confrontation",
+      "label": "police officer standing with arms crossed in an office setting",
+      "description": "A bald man with a goatee, wearing a blue police uniform with arms crossed, standing in an office-like setting. The scene is framed to focus on the officer as the central visual element, with office furniture and blinds in the background. The text overlays imply a confrontational or threatening context, though no other person is visually present.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3e4eef98"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_62f2909a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_criminal_behavior",
+      "label": "Anti-Black Stereotype: Criminal Behavior Associations",
+      "description": "The meme relies on the racist stereotype that Black people are inherently criminal or dangerous, which is reinforced by the text 'i am going to shoot an unarmed black citizen.' This stereotype is used to justify or normalize violence against Black individuals, particularly in the context of police encounters.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3e4eef98"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b26a8819",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_hypersexualization",
+      "label": "Anti-Black Stereotype: Hypersexualization",
+      "description": "The phrase 'no pity sex?' is a dehumanizing trope that hypersexualizes Black men, implying they are sexually aggressive or predatory. This stereotype is used to further demean and justify violence against Black men by portraying them as inherently sexual threats.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3e4eef98"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ae2d7f93",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "police_brutality_context",
+      "label": "Context of Police Brutality Against Black Citizens",
+      "description": "The meme references real-world events and systemic issues of police violence and racial profiling against Black people in the United States, particularly in the context of fatal shootings of unarmed Black individuals. This background knowledge is necessary to understand the meme's hateful intent and its connection to historical and contemporary social justice movements.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3e4eef98"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a43766d3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racialized_violence_norm",
+      "label": "Racialized Violence Norm",
+      "description": "The meme attempts to normalize or justify lethal force against Black citizens by framing it as a 'necessary' or 'logical' response, which is a harmful and false narrative perpetuated by systemic racism and media portrayals. This concept is central to understanding the meme's hateful message.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3e4eef98"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_87ad21c3",
+      "@type": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous expression",
+      "description": "The man's facial expression, with a slight smirk and narrowed eyes, conveys a sense of disdain or contempt, which is amplified by his arms-crossed posture, suggesting arrogance or defiance.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3e4eef98"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_cdce2f88",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The text 'no pity sex?' is mapped onto the visual of the man in the police uniform.",
+      "description": "The top text overlay 'no pity sex?' is juxtaposed with the visual of the bald man in a police uniform. This creates an analogical mapping where the man is implicitly identified as the subject of the phrase 'no pity sex?'. The phrase is a dehumanizing stereotype that hypersexualizes Black men, and by mapping it onto the visual of the police officer, the meme equates the officer with this stereotype, suggesting he embodies or represents this hypersexualized, predatory Black male trope. This mapping reinforces the hateful intent by linking the visual of a police officer to a racist trope.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3e4eef98"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_add74df9",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual material of the police officer",
+      "description": "The user is projected onto the visual material of the man in the police uniform, as the meme uses his image to embody the hateful stereotypes presented in the text. The user is implicitly invited to identify with or project their own perspective onto this visual representation, which is then used to reinforce the racist and dehumanizing message. The visual of the officer is central to the meme's projection, as it is the focal point onto which the hateful text is mapped and interpreted.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3e4eef98"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_52c72d64",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Black individuals by invoking racist stereotypes associating them with criminality and violence, while also using hypersexualization tropes. It portrays Black people as inherently dangerous and deserving of lethal force, which constitutes a direct hateful attack based on race.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3e4eef98"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0703577e",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who hold or are exposed to racist ideologies, particularly those who endorse or normalize anti-Black stereotypes, including criminal behavior associations and hypersexualization tropes. The meme is designed to resonate with audiences who may be influenced by or supportive of narratives that dehumanize Black people and justify racialized violence, especially in the context of police brutality. The visual of the police officer and the text 'i am going to shoot an unarmed black citizen' are intended to provoke and appeal to those who accept or perpetuate systemic racism and racialized violence norms.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3e4eef98"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

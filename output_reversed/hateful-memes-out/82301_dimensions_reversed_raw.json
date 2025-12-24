@@ -1,0 +1,170 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "dimension_1",
+      "label": "the overallintent",
+      "description": "The image depicts a dog, likely a husky or similar breed, with its head tilted back and mouth open as if howling, set against a snowy mountain landscape. The text overlay reads \\",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "Goooooooooooooon!!!!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "dog",
+      "label": "a husky or similar breed dog",
+      "description": "The central subject of the image, a dog with a thick, fluffy coat of brown and white fur, wearing a blue and yellow harness. Its head is tilted back, mouth open, and eyes closed, appearing to howl or sing, set against a snowy mountain backdrop. The dog's posture and expression are the focal point of the visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "dog_howling_in_snowy_landscape",
+      "label": "dog howling in snowy mountain landscape",
+      "description": "A dog, likely a husky or similar breed, is positioned in the foreground with its head tilted back and mouth open, appearing to howl or sing. It is wearing a blue and yellow harness. The background consists of a vast snowy mountain landscape with evergreen trees and a bright sky with clouds. The scene conveys a sense of wilderness and the dog's expressive behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dog_howling_sound",
+      "label": "Dog Howling Sound",
+      "description": "The text 'Goooooooooooooon!!!!' is a humorous, exaggerated representation of a dog howling, mimicking the sound of a dog's vocalization. This requires background knowledge of canine vocalizations and the common meme format of stretching out sounds for comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "dog_howling_in_snowy_landscape",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_format",
+      "label": "Meme Format",
+      "description": "The image uses a common internet meme format where a visual of an animal (often a dog) is paired with text that exaggerates or humorously misrepresents its action. This format relies on understanding internet culture and meme conventions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dog_howling_in_snowy_landscape",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dog_husky",
+      "label": "Husky Breed",
+      "description": "The dog in the image is likely a Siberian Husky or similar breed, known for their vocalizations and expressive faces. Background knowledge of dog breeds and their typical behaviors is needed to understand why this particular dog is being depicted as howling.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dog",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "dog_howling_in_snowy_landscape",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "snowy_mountain_landscape",
+      "label": "Snowy Mountain Landscape",
+      "description": "The background setting of a snowy mountain landscape is culturally associated with wilderness, cold climates, and often used in media to evoke a sense of freedom or isolation. This context helps frame the dog's behavior as natural or dramatic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dog_howling_in_snowy_landscape",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "playfulness",
+      "label": "playful howling expression",
+      "description": "The dog's posture—head tilted back, mouth open, eyes closed—is exaggerated to convey a humorous, almost theatrical howl, suggesting playful or comical vocalization rather than genuine distress or emotion. The text 'Goooooooooooooon!!!!' further amplifies this by stretching the sound for comedic effect, indicating the emotion is meant to be lighthearted and amusing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "dog howling sound mapped to text",
+      "description": "The text 'Goooooooooooooon!!!!' is an exaggerated, humorous representation of the sound a dog makes when howling. The visual material of the dog with its head tilted back and mouth open, appearing to howl, is mapped onto this textual representation. The mapping is based on the visual depiction of the dog's vocalization being directly associated with the stretched-out sound text, creating a comedic analogy where the text mimics the dog's action.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the dog's howling action",
+      "description": "The user is projected onto the visual material of the dog howling, as the exaggerated text 'Goooooooooooooon!!!!' humorously represents the sound the dog is making. The user identifies with the dog's expressive, vocalized behavior, imagining themselves as the source of the howl or experiencing the sensation of howling in that context. This projection is implicit, not explicit (e.g., no 'you' or 'me' text), but is inferred from the meme format where the viewer is invited to imagine themselves in the dog's place or to relate to its exaggerated emotion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "internet meme enthusiasts",
+      "description": "The meme targets a broad audience familiar with internet humor, particularly those who recognize and enjoy exaggerated animal sound memes. The format relies on understanding meme conventions, such as stretching out sounds for comedic effect (e.g., 'Goooooooooooooon!!!!') and pairing it with expressive animal imagery (a dog howling in a snowy landscape). This appeals to users of social media platforms where such memes are commonly shared and appreciated.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/82301.png",
+    "image_name": "82301.png",
+    "extraction_timestamp": "2025-12-19T14:24:49.029262",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,177 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: mysogynous; overall-intent-description: The image depicts a man pointing at a woman while text overlays read 'you see that?? it means get the fuck back to the kitchen.' This juxtaposition maps the visual of a woman in traditional attire with the text enforcing a harmful stereotype that women belong in the kitchen, which is a classic misogynistic trope. The intent is to reinforce the idea that women's place is domestic, which is a form of gender-based discrimination and objectification. The meme uses the image to amplify and spread this harmful stereotype, making it a misogynous meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "text location",
+      "description": "you see that??",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "older man",
+      "description": "An older man wearing glasses and a dark sweater, holding a cigarette in his mouth and pointing his finger forward with a stern expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "man_pointing_at_woman",
+      "label": "man pointing at woman",
+      "description": "An older man wearing glasses and a dark sweater, holding a cigarette in his mouth and pointing his finger forward, is directing his attention toward a woman standing beside him. The woman, dressed in traditional attire, is looking toward the man with a slight smile. The scene is framed against a brick wall background, and overlaid text reads 'you see that?? it means get the fuck back to the kitchen,' which contextualizes the man's gesture as enforcing a misogynistic stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "pointsAt",
+          "to": "woman"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype",
+      "label": "Misogynous Stereotype: 'Women Belong in the Kitchen'",
+      "description": "This is a historically entrenched and harmful stereotype that confines women to domestic roles, implying they are not suited for professional or public life. The meme uses this stereotype to mock or reinforce gender-based discrimination, which is a core component of misogynistic discourse. The text 'it means get the fuck back to the kitchen' explicitly invokes this trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "A systemic prejudice or discrimination against women, often manifesting as the belief that women are inferior to men or should be relegated to domestic roles. The meme's overall intent is to amplify this harmful ideology by using the visual of a woman in traditional attire to symbolize her confinement to the domestic sphere.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "traditional_attire",
+      "label": "Traditional Attire (Kimono)",
+      "description": "The woman is wearing a kimono, which is traditional Japanese clothing. In the context of the meme, this attire is used symbolically to evoke traditional gender roles, particularly the expectation that women should be in the home. The choice of attire reinforces the stereotype being mocked.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cigarette_smoking",
+      "label": "Cigarette Smoking",
+      "description": "The man is smoking a cigarette, which may be used to imply a certain persona or stereotype (e.g., a 'tough' or 'authoritative' male figure). While not central to the meme's message, it contributes to the visual context and may be interpreted as part of the man's character or demeanor, which is used to contrast with the woman's perceived role.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "authoritarian_command",
+      "label": "authoritarian command emotion",
+      "description": "The man's stern facial expression, combined with his pointing gesture and the cigarette in his mouth, conveys an authoritarian tone. His posture and gaze suggest he is issuing a direct, unyielding command, reinforcing the aggressive enforcement of a gender role stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Textual command mapped onto visual gesture",
+      "description": "The text 'you see that?? it means get the fuck back to the kitchen' is mapped onto the visual of the man pointing at the woman. The man's pointing gesture and stern expression are interpreted as embodying the command implied by the text, which enforces the misogynistic stereotype that women belong in the kitchen. The visual action (pointing) is analogically mapped to the textual command (get back to the kitchen).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual command as the recipient of the misogynistic stereotype",
+      "description": "The user is projected onto the text 'you see that??' which directly addresses the viewer, making the user the implied recipient of the command 'get the fuck back to the kitchen'. This creates an identification where the user is positioned as the one being told to return to the kitchen, thereby internalizing the misogynistic stereotype. The deictic 'you' in the text explicitly projects the user's identity onto the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Misogynous",
+      "description": "The meme explicitly enforces the harmful stereotype that women belong in the kitchen, which is a core component of misogynistic discourse. The text 'it means get the fuck back to the kitchen' directly invokes this trope, and the visual of the man pointing at the woman is mapped to this command, reinforcing gender-based discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "misogyny",
+      "label": "misogynistic discourse community",
+      "description": "The meme is designed for an audience that either perpetuates or finds humor in misogynistic stereotypes, particularly the 'women belong in the kitchen' trope. The target community likely includes individuals who engage with or enjoy content that reinforces gender-based discrimination, often through satire or shock value, and may be drawn to memes that mock or amplify traditional gender roles.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/96172.png",
+    "image_name": "96172.png",
+    "extraction_timestamp": "2025-12-19T18:59:42.802227",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

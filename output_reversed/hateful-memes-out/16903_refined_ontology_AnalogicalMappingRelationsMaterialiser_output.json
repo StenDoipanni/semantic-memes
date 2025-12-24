@@ -1,0 +1,39 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_id_1",
+      "hasMappedEntity": "top_text",
+      "hasMappingEntity": "man"
+    },
+    {
+      "from": "man",
+      "relation": "mappedOnto",
+      "to": "top_text"
+    },
+    {
+      "mapping": "mapping_id_2",
+      "hasMappedEntity": "bottom_text",
+      "hasMappingEntity": "man"
+    },
+    {
+      "from": "man",
+      "relation": "mappedOnto",
+      "to": "bottom_text"
+    }
+  ],
+  "triples": [
+    ":mapping_id_1 :hasMappedEntity :top_text .",
+    ":mapping_id_1 :hasMappingEntity :man .",
+    ":man :mappedOnto :top_text .",
+    ":mapping_id_2 :hasMappedEntity :bottom_text .",
+    ":mapping_id_2 :hasMappingEntity :man .",
+    ":man :mappedOnto :bottom_text ."
+  ],
+  "triples_count": 6
+}

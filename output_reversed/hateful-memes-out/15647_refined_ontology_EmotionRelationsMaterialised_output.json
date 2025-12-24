@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "mocking emotion",
+      "expressors": [
+        {
+          "entity": "broken_dishwasher_for_sale_or_rent",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "broken_dishwasher_for_sale_or_rent",
+          "relation": "emotionalRelationToEntity",
+          "to": "woman"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":mocking_emotion :hasExpressor :broken_dishwasher_for_sale_or_rent .",
+    ":broken_dishwasher_for_sale_or_rent :emotionalRelationToEntity :woman ."
+  ],
+  "triples_count": 2
+}

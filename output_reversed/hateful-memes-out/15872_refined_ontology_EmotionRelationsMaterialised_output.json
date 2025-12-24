@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "disapproving emotion",
+      "expressors": [
+        {
+          "entity": "woman",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "emotionalRelationToEntity",
+          "to": "husband"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":disapproving_emotion :hasExpressor :woman .",
+    ":woman :emotionalRelationToEntity :husband ."
+  ],
+  "triples_count": 2
+}

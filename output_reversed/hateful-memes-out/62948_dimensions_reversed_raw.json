@@ -1,0 +1,190 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: black_lives_matter_meme; hasOverallIntent: Hateful; overall-intent-description: The image depicts Black men in prison uniforms carrying large sacks, juxtaposed with the text 'black lives matter' and a sarcastic comment '>\"how\",\"why\"and \"to whom\" is unclear'. This visual and textual combination is a hate-based meme that uses the image of Black men in prison to imply that Black lives do not matter, or that the movement is hypocritical or irrelevant. It leverages a harmful stereotype associating Black people with criminality and incarceration, which is a form of racialized hate speech. The meme's intent is to delegitimize the Black Lives Matter movement by mocking its core message and implying that Black people are inherently criminal or undeserving of protection, thus falling under the category of hateful content targeting a specific racial group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "black lives matter",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Black_men",
+      "label": "People",
+      "description": "A line of Black men, appearing to be in prison uniforms, are carrying large green sacks. The man in the foreground is looking directly at the camera with a skeptical or defiant expression. They are positioned in front of a high-security fence with barbed wire, suggesting a prison or detention facility setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "prisoners_carrying_sacks",
+      "label": "Black men carrying sacks in a prison setting",
+      "description": "A line of Black men in prison uniforms are carrying large green sacks. They are positioned in front of a high-security fence with barbed wire, suggesting a prison or detention facility setting. The man in the foreground is looking directly at the camera with a skeptical or defiant expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Black_men",
+          "relation": "are_carrying",
+          "to": "sacks"
+        },
+        {
+          "from": "Black_men",
+          "relation": "are_positioned_in_front_of",
+          "to": "fence_with_barbed_wire"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_criminality",
+      "label": "Anti-Black Stereotype: Criminal Behavior Associations",
+      "description": "The meme relies on the harmful stereotype that Black people are inherently criminal or associated with incarceration, which is used to mock the 'Black Lives Matter' movement by implying that if Black lives are 'in prison', then they don't matter. This stereotype is a real-world concept used to delegitimize Black communities and is central to understanding the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "prisoners_carrying_sacks",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "black_lives_matter_movement",
+      "label": "Black Lives Matter Movement",
+      "description": "The phrase 'black lives matter' is a social and political movement founded in 2013 to combat systemic racism and police brutality against Black people. The meme's sarcastic text '>\"how\",\"why\"and \"to whom\" is unclear' is a direct attempt to undermine this movement by implying its message is irrelevant or hypocritical, which requires understanding the movement's real-world context and goals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prisoners_carrying_sacks",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "prison_system_context",
+      "label": "Prison System and Incarceration Statistics",
+      "description": "The image of Black men in prison uniforms carrying sacks is used to imply a connection between Black people and incarceration. This requires background knowledge about the disproportionate incarceration rates of Black individuals in the United States, which is a real-world social issue that the meme exploits to reinforce its racist message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "prisoners_carrying_sacks",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_meme_tropes",
+      "label": "Racist Meme Tropes",
+      "description": "The meme format uses a common racist trope of juxtaposing Black people with prison imagery to imply criminality and devalue their lives. This trope is part of a broader pattern of racially charged internet memes that use visual and textual elements to spread hate and misinformation, requiring knowledge of internet culture and racialized humor to understand its impact.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "prisoners_carrying_sacks",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "skepticism",
+      "label": "skeptical expression",
+      "description": "The man in the foreground has a facial expression that conveys doubt, disbelief, or challenge, with his head tilted, eyes narrowed, and lips pursed. This expression is directed at the viewer, suggesting he is questioning or mocking the message presented.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Black Lives Matter is mapped onto Black men in prison uniforms carrying sacks",
+      "description": "The top text 'black lives matter' is juxtaposed with the visual of Black men in prison uniforms carrying sacks, creating an analogical mapping where the phrase 'black lives matter' is implicitly mapped onto the visual representation of Black men in prison. This mapping is central to the meme's hateful intent, as it uses the image of incarcerated Black men to imply that Black lives do not matter, thereby mocking the movement. The mapping is established through direct visual-textual juxtaposition, where the text 'black lives matter' is positioned above the image of the prisoners, creating a direct association between the phrase and the visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the sarcastic textual comment",
+      "description": "The user is projected onto the textual element '>\"how\",\"why\"and \"to whom\" is unclear', which acts as a direct address to the viewer, inviting them to question or mock the 'Black Lives Matter' movement. This text functions as a deictic device that positions the user as the one who must resolve the 'unclear' aspects, thereby implicating them in the meme's hateful logic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses the image of Black men in prison uniforms carrying sacks to imply that Black lives do not matter, mocking the Black Lives Matter movement. This relies on the harmful stereotype that Black people are inherently criminal or associated with incarceration, which is a form of racialized hate speech targeting a specific racial group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold or are exposed to racist ideologies, particularly those who believe in or propagate anti-Black stereotypes associating Black people with criminality and incarceration. The meme is designed to appeal to or reinforce these views by mocking the Black Lives Matter movement through the juxtaposition of Black men in prison uniforms with the phrase 'black lives matter' and a sarcastic comment questioning its relevance. The intended audience likely includes people who are skeptical of or hostile toward the Black Lives Matter movement, and who may find humor or validation in racially charged tropes that devalue Black lives by linking them to prison imagery. This audience is drawn to the meme’s hateful intent and its use of harmful stereotypes, which serve to delegitimize the movement and reinforce systemic racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/62948.png",
+    "image_name": "62948.png",
+    "extraction_timestamp": "2025-12-16T07:46:20.704655",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

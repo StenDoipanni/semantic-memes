@@ -1,0 +1,180 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: officer_down_meme; hasOverallIntent: Harmful; overall-intent-description: The image depicts two police officers in motion, with one appearing to be running or falling, while the text 'officer down' is overlaid. This visual is commonly used as a meme to humorously or sarcastically imply that a situation has gone awry, often in a context where someone is being 'taken down' or 'outsmarted'. The intent is not to target any specific group based on protected characteristics, but rather to use the trope of 'officer down' for comedic effect. However, the phrase 'officer down' is associated with real-life emergency situations involving police officers being injured or killed, which can be harmful if used irresponsibly or in contexts that trivialize real tragedies. The meme's intent is primarily humorous or satirical, but its potential to cause harm arises from the real-world gravity of the phrase, which may be seen as insensitive or disrespectful when used inappropriately.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "officer down",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "officer_1",
+      "label": "police officer running",
+      "description": "A police officer in uniform, wearing a dark jacket, tie, and cap, is captured mid-stride running forward with an expressive, open-mouthed face, suggesting urgency or exertion. He is the central focus of the image and appears to be in motion, possibly falling or being pulled down. His right hand is raised in a gesture that could indicate surprise or effort. The text 'officer down' is overlaid on the image, implying a humorous or sarcastic context of being 'taken down' or 'outsmarted'. His uniform is detailed with badges and insignia, and he is positioned in front of a wall with graffiti.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "officer_down_scene",
+      "label": "officer_down",
+      "description": "A scene depicting two police officers in motion, with one appearing to be running or falling, while the text 'officer down' is overlaid. This visual is commonly used as a meme to humorously or sarcastically imply that a situation has gone awry, often in a context where someone is being 'taken down' or 'outsmarted'. The intent is primarily humorous or satirical, but its potential to cause harm arises from the real-world gravity of the phrase, which may be seen as insensitive or disrespectful when used inappropriately.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "officer_1",
+          "relation": "running_behind",
+          "to": "officer_2"
+        },
+        {
+          "from": "officer_1",
+          "relation": "gesturing_with_hand",
+          "to": "officer_2"
+        },
+        {
+          "from": "text_officer_down",
+          "relation": "overlaying",
+          "to": "officer_1"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "officer_down_meme_concept",
+      "label": "Officer Down Meme Concept",
+      "description": "A widely circulated internet meme format that uses the image of a police officer appearing to be 'taken down' or falling, often with the text 'officer down'. The phrase 'officer down' is a real-world emergency term used in law enforcement to indicate that an officer has been injured or killed. The meme is used humorously or sarcastically to imply that someone has been defeated, outsmarted, or 'taken down' in a situation, often in a lighthearted or exaggerated context. The meme's power relies on the contrast between the serious, life-threatening connotation of the phrase and its comedic or ironic application.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "officer_down_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "real_world_officer_down_emergency_protocol",
+      "label": "Real-World 'Officer Down' Emergency Protocol",
+      "description": "In law enforcement, 'officer down' is a critical emergency call used to alert other officers and emergency services that a police officer has been injured or killed during duty. It triggers immediate response protocols, including medical aid, tactical response, and scene lockdown. The phrase carries immense gravity and is associated with real tragedies, making its use in memes potentially insensitive or disrespectful if applied inappropriately.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "officer_down_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_harm_potential",
+      "label": "Meme Harm Potential",
+      "description": "The meme format 'officer down' can be considered harmful because it trivializes a phrase with real-world consequences. While often used for humor, it may be perceived as disrespectful or insensitive, especially when used in contexts that mock real-life tragedies involving police officers. The meme's intent is primarily satirical, but its potential to cause harm arises from the real-world gravity of the phrase.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "officer_down_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "sarcastic_expressiveness",
+      "label": "sarcastic or ironic emotional expression",
+      "description": "The officer in the foreground has an open-mouthed, strained facial expression combined with a dynamic running posture and a raised hand gesture, which, when paired with the text 'officer down', conveys a humorous or sarcastic portrayal of being 'taken down' or defeated. The expression is exaggerated for comedic effect, contrasting with the serious connotation of the phrase.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "officer_down_mapping",
+      "label": "officer is mapped to 'officer down'",
+      "description": "The text 'officer down' is overlaid on the image of a police officer running or falling, creating an analogical mapping where the visual entity (the officer) is interpreted as being 'down' or defeated, as implied by the text. This mapping is central to the meme's humor, contrasting the serious real-world meaning of 'officer down' with a lighthearted or sarcastic context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual material of the officer running",
+      "description": "The user is projected onto the visual material of the officer running (officer_1), as the meme format relies on the viewer imagining themselves in the situation of being 'taken down' or outsmarted, which is humorously depicted by the officer's exaggerated motion and the overlaid text. The absence of explicit deictic pronouns like 'me' or 'you' means the projection is implicit and metaphorical, based on the viewer's identification with the scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses the phrase 'officer down', which has real-world gravity as an emergency term indicating a police officer is injured or killed. Its use in a humorous or sarcastic context can trivialize real tragedies and be perceived as insensitive or disrespectful, thus having the potential to cause harm to the community or society.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "officer_down_scene",
+      "label": "General Internet Audience",
+      "description": "The meme is designed for a broad general internet audience familiar with internet humor and meme culture. It leverages a widely recognized visual trope (the 'officer down' image) and text overlay to create a humorous or sarcastic effect, appealing to users who understand and engage with internet memes, often for comedic or ironic commentary on situations where someone is 'taken down' or defeated.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/13856.png",
+    "image_name": "13856.png",
+    "extraction_timestamp": "2025-12-15T15:19:53.557696",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

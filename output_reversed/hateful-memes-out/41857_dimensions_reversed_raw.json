@@ -1,0 +1,201 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: nationalism_is_beauty_feminism_isnt; hasOverallIntent: Propaganda; overall-intent-description: The image depicts a crowd of diverse, joyful fans waving national flags and celebrating, visually representing unity and pride associated with nationalism. The overlaid text contrasts this with the assertion that 'feminism isn't,' implying feminism is inferior or less desirable. This juxtaposition is used to propagate a specific ideological message: that nationalism is inherently positive and beautiful, while feminism is not. The meme leverages the positive emotional association of national pride to implicitly discredit or diminish the value of feminism, suggesting it lacks the same aesthetic or moral appeal. This is a form of propaganda designed to influence viewers' opinions by equating nationalistic fervor with beauty and contrasting it with feminism, potentially reinforcing negative stereotypes or biases against feminist movements. The visual of diverse, happy fans is used to frame nationalism as universally appealing and wholesome, while feminism is implicitly portrayed as lacking this quality, which can be seen as a form of ideological manipulation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text overlay",
+      "description": "nationalism is beauty",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "crowd_of_fans",
+      "label": "group of people",
+      "description": "A diverse group of people, mostly young adults, are gathered together, cheering and celebrating. They are visibly excited, with many smiling broadly or laughing, and some have their arms raised in the air. Their expressions convey joy and enthusiasm.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "celebrating_fans",
+      "label": "crowd of fans celebrating together",
+      "description": "A diverse group of young adults are gathered in a crowd, visibly excited and joyful. Many are smiling broadly, laughing, and raising their arms in celebration. Some are draped in national flags, and others have face paint, indicating they are fans at a sporting event or national celebration. The scene conveys a strong sense of unity, enthusiasm, and patriotic pride.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nationalism",
+      "label": "Nationalism",
+      "description": "A political ideology that emphasizes the interests of a particular nation, often prioritizing national unity, cultural identity, and sovereignty over global or international concerns. In the context of this meme, it is portrayed as inherently beautiful and positive, leveraging the visual of joyful fans to associate it with unity and pride.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "celebrating_fans",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "feminism",
+      "label": "Feminism",
+      "description": "A social, political, and cultural movement aimed at establishing and achieving equality for women. It challenges gender-based discrimination and seeks to dismantle patriarchal structures. In this meme, it is contrasted with nationalism and explicitly labeled as 'not beautiful,' which is a form of ideological dismissal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ideological_propaganda",
+      "label": "Ideological Propaganda",
+      "description": "The deliberate dissemination of information or ideas to promote a specific ideology, often to influence public opinion or behavior. This meme functions as propaganda by equating nationalism with beauty and contrasting it with feminism, thereby attempting to diminish the perceived value of feminist movements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_feminism_as_inferior",
+      "label": "Stereotype: Feminism is Inferior or Less Desirable",
+      "description": "A disparaging stereotype that implicitly or explicitly suggests feminism lacks the aesthetic, moral, or social value associated with nationalism. This stereotype is used in the meme to create a contrast, implying that feminism is not as 'beautiful' or 'unified' as national pride, which is a form of ideological manipulation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "patriotic_pride",
+      "label": "Patriotic Pride",
+      "description": "A feeling of deep affection and loyalty towards one's country, often expressed through symbols like flags, national anthems, and public celebrations. The image of fans draped in flags and cheering embodies this concept, which the meme uses to frame nationalism as inherently beautiful and positive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "celebrating_fans",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "The hatred or contempt for women, often manifesting as the belief that women are inferior to men or that their roles should be limited to domestic or subordinate positions. The meme's assertion that 'feminism isn't beauty' implicitly relies on misogynistic stereotypes that devalue feminist movements and women's agency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful celebration emotion",
+      "description": "The crowd of fans is visibly expressing joy through broad smiles, laughter, and raised arms in celebration. Their facial expressions and body language convey intense happiness and excitement, typical of enthusiastic supporters at a sporting or national event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "nationalism is beauty",
+      "description": "The top text overlay 'nationalism is beauty' is mapped onto the visual entity 'celebrating_fans'. The image of joyful, patriotic fans is used to visually represent and equate nationalism with beauty, creating an analogical mapping where the visual material (fans celebrating) stands in for the abstract concept (nationalism) and is labeled as 'beautiful'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the celebratory scene as an idealized participant in nationalist sentiment",
+      "description": "The user is implicitly projected onto the scene of celebrating fans, encouraged to identify with the joy and unity depicted, thereby internalizing the meme's message that nationalism is beautiful. The absence of explicit deictic pronouns like 'you' or 'me' is compensated by the strong emotional and ideological framing of the visual and textual elements, which invite the viewer to adopt the perspective of the fans and equate their experience with the value of nationalism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Misogynous",
+      "description": "The meme implicitly devalues feminism by labeling it as 'not beauty,' which aligns with misogynistic stereotypes that deny women's competence or the value of feminist movements. This is a form of ideological manipulation that undermines gender equality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who are ideologically aligned with or sympathetic to nationalist sentiments, particularly those who view national pride as inherently positive, unifying, and aesthetically beautiful. The meme is designed to appeal to audiences who resonate with patriotic imagery and who may hold misogynistic or anti-feminist views, as it implicitly devalues feminism by contrasting it with the 'beauty' of nationalism. The visual of diverse, joyful fans draped in national flags serves as a cultural reference to rally support for nationalism while simultaneously attempting to discredit feminism, thus targeting communities that prioritize national identity over gender equality. The meme leverages the emotional appeal of unity and celebration to influence viewers who may be susceptible to ideological propaganda that frames feminism as inferior or less desirable.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/41857.png",
+    "image_name": "41857.png",
+    "extraction_timestamp": "2025-12-16T01:08:22.902333",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

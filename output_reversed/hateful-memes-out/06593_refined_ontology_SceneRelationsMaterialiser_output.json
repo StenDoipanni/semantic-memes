@@ -1,0 +1,35 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "baby_interacting_with_dishwasher",
+      "participants": [
+        {
+          "entity": "baby",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "dishwasher",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "baby",
+          "relation": "interactingWith",
+          "to": "dishwasher"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":baby_interacting_with_dishwasher :hasParticipant :baby .",
+    ":baby_interacting_with_dishwasher :hasParticipant :dishwasher .",
+    ":baby :interactingWith :dishwasher ."
+  ],
+  "triples_count": 3
+}

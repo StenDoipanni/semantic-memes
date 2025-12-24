@@ -1,0 +1,258 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Propaganda; overall-intent-description: The image features a large female gender symbol against a pink background with text listing rights such as 'the right to love who they want,' 'the right to equal pay,' and 'the right to become a citizen and work hard like the rest.' The overall intent is propagandistic, aiming to advocate for gender equality and women's rights by framing these as fundamental, deserved rights. The visual and textual elements are juxtaposed to reinforce a message of empowerment and social justice, encouraging viewers to support these causes. There is no toxicity present in the image; it does not contain abusive, cyberbullying, harmful, hateful, misogynous, or other forms of harmful content. The intent is to promote awareness and advocacy for women's rights and equality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "text location",
+      "description": "what the people deserve: the right to love who they want",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "text location",
+      "description": "the right to equal pay",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_3",
+      "label": "text location",
+      "description": "and respect the right to become a citizen and work hard like the rest",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "female_gender_symbol",
+      "label": "graphic element",
+      "description": "A large white female gender symbol (♀) is centrally positioned against a pink background, serving as the primary visual element and focal point of the image. It is rendered in a flat, modern design with a long shadow effect, enhancing its prominence and symbolic weight.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "women_rights_propaganda",
+      "label": "women_rights_propaganda",
+      "description": "A scene depicting a visual and textual message advocating for women's rights, centered around the female gender symbol and listing fundamental rights such as love, equal pay, and citizenship.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "female_gender_symbol",
+          "relation": "symbolizes",
+          "to": "women_rights_propaganda"
+        },
+        {
+          "from": "text",
+          "relation": "supports",
+          "to": "women_rights_propaganda"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gender_equality_movement",
+      "label": "Gender Equality Movement",
+      "description": "A global social and political movement advocating for equal rights and opportunities for all genders, particularly focusing on dismantling systemic sexism and patriarchy. The meme references core tenets of this movement, such as the right to love freely, equal pay, and full citizenship rights, which are central to feminist and gender equity discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "women_rights_propaganda",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "feminist_theory",
+      "label": "Feminist Theory",
+      "description": "An academic and political framework that examines gender roles, power structures, and social inequalities, particularly those affecting women. The text in the meme reflects foundational feminist principles, such as challenging gender-based discrimination in employment and personal relationships.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_3",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "equal_pay_advocacy",
+      "label": "Equal Pay Advocacy",
+      "description": "A social and political campaign demanding that men and women receive equal compensation for equal work. This is a core issue in labor rights and gender equality, often highlighted in feminist movements and supported by international organizations like the UN and ILO.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "citizenship_rights",
+      "label": "Citizenship Rights",
+      "description": "The legal and social rights granted to individuals who are recognized as full members of a nation-state, including the right to vote, work, own property, and access public services. The meme references this as a fundamental right that should be accessible to all, regardless of gender.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_3",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "A deep-seated prejudice or hatred toward women, often manifesting as the belief that women are inferior to men or should be confined to traditional roles (e.g., 'belonging in the kitchen'). The meme implicitly challenges this stereotype by asserting that women deserve the same rights and freedoms as men, thereby countering misogynistic norms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "women_rights_propaganda",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gender_symbol",
+      "label": "Gender Symbol",
+      "description": "The Venus symbol (♀) is a widely recognized symbol representing femininity and the female gender. Its use in this meme is not merely decorative but symbolic, serving as a visual shorthand to represent the target audience (women) and the broader cause of gender equality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "female_gender_symbol",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pink_background",
+      "label": "Pink Background",
+      "description": "The color pink is culturally associated with femininity and is often used in feminist and women's rights imagery to signal solidarity and visibility. The choice of pink in this meme is a deliberate aesthetic decision that reinforces the message's connection to women's issues.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "women_rights_propaganda",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "empowerment",
+      "label": "empowering emotion",
+      "description": "The image conveys a strong sense of empowerment by asserting fundamental rights for women, such as the right to love freely, equal pay, and full citizenship. This emotional tone is reinforced by the prominent female gender symbol and the assertive language in the text, aiming to inspire confidence and solidarity among viewers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The female gender symbol represents the people who deserve the rights listed in the text.",
+      "description": "The visual entity 'female_gender_symbol' is mapped onto the textual material 'text_chunk_1', 'text_chunk_2', and 'text_chunk_3' to signify that the rights mentioned (the right to love who they want, the right to equal pay, and the right to become a citizen and work hard like the rest) are the rights that women, as represented by the symbol, deserve. The juxtaposition of the symbol with the text creates an analogical mapping where the symbol stands for the group of people (women) to whom the rights are being asserted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_2",
+      "label": "The female gender symbol represents the people who deserve the rights listed in the text.",
+      "description": "The visual entity 'female_gender_symbol' is mapped onto the textual material 'text_chunk_2' to signify that the right to equal pay is a right that women, as represented by the symbol, deserve. The juxtaposition of the symbol with the text creates an analogical mapping where the symbol stands for the group of people (women) to whom the right is being asserted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_3",
+      "label": "The female gender symbol represents the people who deserve the rights listed in the text.",
+      "description": "The visual entity 'female_gender_symbol' is mapped onto the textual material 'text_chunk_3' to signify that the right to become a citizen and work hard like the rest is a right that women, as represented by the symbol, deserve. The juxtaposition of the symbol with the text creates an analogical mapping where the symbol stands for the group of people (women) to whom the right is being asserted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the female gender symbol representing the group of people who deserve the listed rights",
+      "description": "The user is projected onto the visual material 'female_gender_symbol', which serves as a symbolic representation of the group (women) to whom the rights mentioned in the text are being asserted. The meme implicitly invites the user to identify with or empathize with this group by framing the rights as fundamental and deserved, thereby projecting the user's perspective onto the symbol and its associated message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "women_rights_propaganda",
+      "label": "women_rights_propaganda",
+      "description": "The intended audience is individuals who support or are interested in women's rights and gender equality, particularly those aligned with feminist movements and advocacy for equal pay, personal freedom, and full citizenship rights for women.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/21850.png",
+    "image_name": "21850.png",
+    "extraction_timestamp": "2025-12-15T18:24:19.011103",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 19,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

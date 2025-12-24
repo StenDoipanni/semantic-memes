@@ -1,0 +1,206 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: asian_drivers_test_meme; hasOverallIntent: hateful; overall-intent-description: The meme juxtaposes a severely damaged car with a professionally posed Asian woman, using the text 'asian drivers test' and 'went as expected' to imply that Asian drivers are inherently bad or dangerous. This directly targets Asian individuals based on their ethnicity, perpetuating the harmful 'driving ability mockery' stereotype from the provided anti-Asian racism knowledge base. The intent is to demean and stereotype a racial group by associating them with incompetence and danger in a traffic context, which is a hateful and harmful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "Text content: 'asian drivers test'. Position: top center of the image, above the damaged car.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "bottom text overlay",
+      "description": "Text content: 'went as expected'. Position: bottom center of the image, below the professionally posed woman.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "Asian woman",
+      "description": "A professionally dressed Asian woman with dark hair, wearing a white blazer and skirt, sitting on a white office chair. She is smiling and posing for the camera, appearing composed and confident. This image is commonly used in memes to represent an idealized or stereotypical 'Asian' woman, often juxtaposed with negative stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "juxtaposed_stereotype_scene",
+      "label": "juxtaposed_stereotype_scene",
+      "description": "The scene juxtaposes a severely damaged car with a professionally posed Asian woman, using the text 'asian drivers test' and 'went as expected' to imply that Asian drivers are inherently bad or dangerous. This directly targets Asian individuals based on their ethnicity, perpetuating the harmful 'driving ability mockery' stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "juxtaposed_with",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "driving_ability_mockery_stereotype",
+      "label": "Driving Ability Mockery Stereotype",
+      "description": "A harmful stereotype that portrays members of certain racial or ethnic groups, particularly Asian drivers, as inherently incompetent or dangerous behind the wheel. This stereotype is often used in memes and media to demean and stereotype individuals based on their ethnicity, perpetuating racial prejudice and discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "model_minority_myth_weaponization",
+      "label": "Model Minority Myth Weaponization",
+      "description": "The use of the 'model minority' stereotype — which portrays Asian Americans as universally successful, hardworking, and academically gifted — to justify or rationalize negative stereotypes, such as the 'driving ability mockery' trope. This involves using the positive stereotype to contrast with a negative one, thereby reinforcing harmful biases.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_asian_racism",
+      "label": "Anti-Asian Racism",
+      "description": "A form of systemic racism that targets Asian individuals and communities based on their ethnicity, often through harmful stereotypes, xenophobia, and discriminatory practices. This includes tropes like 'driving ability mockery' and 'foreign infiltrator' claims, which are used to dehumanize and marginalize Asian people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_meme_intention",
+      "label": "Hateful Meme Intention",
+      "description": "The underlying intent of the meme is to spread hate and prejudice by associating a specific racial group with negative traits or behaviors. In this case, the meme uses the juxtaposition of a damaged car and a professionally posed Asian woman to imply that Asian drivers are inherently dangerous, which is a form of racial stereotyping and discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_contempt",
+      "label": "contemptuous mockery emotion",
+      "description": "The emotion expressed is one of contemptuous mockery, conveyed through the juxtaposition of the severely damaged car with the professionally posed Asian woman, combined with the text 'asian drivers test' and 'went as expected'. This implies that the woman's appearance (representing an idealized 'model minority' stereotype) is being used to mock or belittle the stereotype of 'Asian drivers' as dangerous or incompetent. The overall tone is demeaning and racially charged, expressing contempt for the targeted group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Asian woman is mapped as the 'asian drivers test' subject",
+      "description": "The text 'asian drivers test' is mapped onto the visual entity 'woman' (the professionally posed Asian woman). The meme implies that this woman represents the stereotype of an 'Asian driver' being tested, and the damaged car symbolizes the 'test result'. The mapping is established through the juxtaposition and the text's direct reference to 'asian drivers', which is then visually embodied by the woman in the image, despite her professional appearance contrasting with the car's damage.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene as the implied subject of the 'asian drivers test'",
+      "description": "The user is not explicitly projected onto a specific visual, textual, or scene element via deictic pronouns like 'me' or 'you'. However, the meme's structure and hateful intent create an implicit projection: the user is positioned as the one who 'expects' or 'understands' the outcome (the damaged car) based on the stereotype of 'asian drivers'. The user is thus projected onto the overall scene and its implied narrative, where they are the one interpreting the stereotype and its 'expected' result. The user is not directly mapped to a specific entity like the woman or the car, but rather to the entire meme's message and its implied audience role.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly targets Asian individuals based on their ethnicity, perpetuating the harmful 'driving ability mockery' stereotype. It uses the juxtaposition of a damaged car and a professionally posed Asian woman to imply that Asian drivers are inherently dangerous, which is a form of racial stereotyping and discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience that is familiar with and receptive to racial stereotypes, particularly those targeting Asian individuals. The target community includes viewers who may find humor in or be desensitized to harmful tropes like 'driving ability mockery' and 'model minority myth weaponization'. The meme relies on the audience's understanding of these stereotypes to convey its hateful message, making it most effective for those who already hold or are exposed to anti-Asian racist views.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/02674.png",
+    "image_name": "02674.png",
+    "extraction_timestamp": "2025-12-15T11:21:10.799913",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

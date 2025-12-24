@@ -1,0 +1,202 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: after_group_sex_goats; hasOverallIntent: Harmful; overall-intent-description: The image depicts several goats resting on the ground, with text overlay that reads 'after group sex' and 'mohammed is very tired.' The meme uses the visual of goats, which are often associated with stereotypes or caricatures, to imply a sexualized and demeaning scenario. The reference to 'Mohammed' (presumably referring to the Prophet Muhammad) is highly offensive and potentially Islamophobic, as it attempts to link a religious figure with sexualized and tired imagery, which is disrespectful and harmful. The overall intent is to create humor through crude and disrespectful analogies, which can be seen as harmful due to its potential to offend religious communities and perpetuate negative stereotypes. The meme's intent is to shock or provoke laughter through vulgar and disrespectful content, which may cause distress or harm to those who hold the religious beliefs referenced.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "after group sex",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "goats",
+      "label": "animals",
+      "description": "Four goats are visible in the image, lying on the ground. They have distinct black and white markings, with some having curved horns. Their relaxed postures suggest they are resting or sleeping. The goats are the central visual material and are the subject of the meme's text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "goats_resting_together",
+      "label": "goats resting together",
+      "description": "Four goats are lying on the ground in a relaxed, clustered arrangement, suggesting they are resting or sleeping after an implied event. Their close proximity and calm postures indicate a shared state of rest.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobic Stereotype",
+      "description": "The meme references 'Mohammed' (referring to the Prophet Muhammad) in a sexualized and demeaning context, which is a form of Islamophobia. It uses derogatory imagery to imply that religious figures are hypersexualized or lazy, which is a harmful stereotype targeting Muslims and their faith.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "goats_resting_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization_stereotype",
+      "label": "Hypersexualization Stereotype",
+      "description": "The meme uses the phrase 'after group sex' to imply that the goats (symbolizing 'Mohammed') are sexually exhausted. This is a form of hypersexualization, a stereotype that reduces individuals or groups to sexualized caricatures, often used to demean or mock them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "goats_resting_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_figure_mockery",
+      "label": "Mockery of Religious Figure",
+      "description": "The meme directly references the Prophet Muhammad, a central religious figure in Islam, and depicts him in a crude, tired, and sexually implied state. This is a form of religious mockery, which is offensive and disrespectful to Muslims and their beliefs.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "goats_resting_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "animal_caricature_stereotype",
+      "label": "Animal Caricature Stereotype",
+      "description": "The meme uses goats, which are often associated with stereotypes or caricatures (e.g., as 'dirty' or 'stupid' animals), to represent a human figure (Mohammed). This is a form of animal-based caricature, which is used to demean or dehumanize the subject.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "goats",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "tiredness_stereotype",
+      "label": "Tiredness Stereotype",
+      "description": "The phrase 'Mohammed is very tired' implies that the religious figure is lazy or exhausted, which is a stereotype that associates religious figures with laziness or lack of energy, often used to undermine their perceived authority or moral standing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "goats_resting_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "tiredness",
+      "label": "tired emotion",
+      "description": "The goats are lying down in a relaxed, resting posture, conveying a sense of exhaustion or fatigue. This is reinforced by the text overlay 'mohammed is very tired', which explicitly labels the emotional state as tiredness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "goats are mapped as 'Mohammed'",
+      "description": "The text 'mohammed is very tired' explicitly maps the visual entity 'goats' (specifically, the resting goats) onto the textual entity 'Mohammed'. The meme uses the goats' physical appearance and resting posture to represent the religious figure, creating an analogical mapping where the goats symbolize Mohammed in a demeaning context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of goats resting",
+      "description": "The user is projected onto the scene of the goats resting together, as the meme implies the user is identifying with the tired state of 'Mohammed' (represented by the goats). The visual of the resting goats and the textual overlay 'mohammed is very tired' create a shared state of exhaustion that the user is invited to project themselves onto.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobic Stereotype",
+      "description": "The meme references 'Mohammed' (referring to the Prophet Muhammad) in a sexualized and demeaning context, which is a form of Islamophobia. It uses derogatory imagery to imply that religious figures are hypersexualized or lazy, which is a harmful stereotype targeting Muslims and their faith.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Target Audience: Muslims and those sensitive to religious mockery",
+      "description": "The meme targets the Muslim community by referencing the Prophet Muhammad in a demeaning, sexualized, and tired context, which is a form of Islamophobia. The intended audience likely includes individuals who are familiar with or sensitive to religious figures and the cultural weight associated with them, particularly those who may find such imagery offensive or disrespectful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/58027.png",
+    "image_name": "58027.png",
+    "extraction_timestamp": "2025-12-16T05:51:27.739455",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

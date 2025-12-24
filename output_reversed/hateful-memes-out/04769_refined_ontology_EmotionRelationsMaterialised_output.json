@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "pouting",
+      "expressors": [
+        {
+          "entity": "woman",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "emotionalRelationToEntity",
+          "to": "man"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":pouting :hasExpressor :woman .",
+    ":woman :emotionalRelationToEntity :man ."
+  ],
+  "triples_count": 2
+}

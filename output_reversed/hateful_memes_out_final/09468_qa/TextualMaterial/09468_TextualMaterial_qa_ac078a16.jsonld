@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#qa_ac078a16-ab08-436e-bf2f-c113b5b4da7b",
+  "@type": "QuestionAnswerPair",
+  "question": "What phrase appears as text in the meme?",
+  "answers": [
+    {
+      "text": "white prospective without quotes",
+      "is_correct": false
+    },
+    {
+      "text": "prospective white without text",
+      "is_correct": false
+    },
+    {
+      "text": "None of the others",
+      "is_correct": false
+    },
+    {
+      "text": "prospective without white \"\"",
+      "is_correct": true
+    }
+  ],
+  "explanation": "The exact text overlay on the image reads 'prospective without white \"\"'.",
+  "dimension": "TextualMaterial",
+  "relatedInstances": [
+    "text_chunk"
+  ],
+  "generationTimestamp": "2025-12-23T20:12:18.824144",
+  "generationMethod": "huggingface_api",
+  "sourceImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_09468",
+    "@type": "Image",
+    "filename": "09468.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/09468.png"
+  }
+}

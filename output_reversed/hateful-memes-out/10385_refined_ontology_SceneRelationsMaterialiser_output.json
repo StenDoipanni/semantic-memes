@@ -1,0 +1,35 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "mermaid_defiantly_refusing_role_play",
+      "participants": [
+        {
+          "entity": "mermaid",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "genie_lamp",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "mermaid",
+          "relation": "stands_next_to",
+          "to": "genie_lamp"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":mermaid_defiantly_refusing_role_play :hasParticipant :mermaid .",
+    ":mermaid_defiantly_refusing_role_play :hasParticipant :genie_lamp .",
+    ":mermaid :stands_next_to :genie_lamp ."
+  ],
+  "triples_count": 3
+}

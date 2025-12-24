@@ -1,0 +1,152 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The meme depicts an older woman eating a popsicle, with text that reads 'all these flavors' and 'and you choose to be salty.' The visual of the woman enjoying a sweet treat is juxtaposed with the phrase 'salty,' which is a common slang term for being irritable or argumentative. The intent is to humorously criticize someone for choosing to be unpleasant or disagreeable when there are more positive or enjoyable options available. The meme does not contain any toxic elements such as abusive, cyberbullying, harmful, hateful, misogynous, or propaganda content. The humor is based on a relatable social observation rather than targeting any specific group or individual with derogatory stereotypes. The overall intent is to create a lighthearted, self-deprecating or sarcastic commentary on human behavior, specifically the tendency to be negative when better alternatives exist.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "all these flavors",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "older woman",
+      "description": "An older woman with short, gray hair, wearing a blue shirt, is shown in two panels eating an orange popsicle. Her expression is neutral to slightly amused in both panels. She is the central and most salient visual entity in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "popsicle_eating_scene",
+      "label": "woman eating popsicle",
+      "description": "A scene depicting an older woman with short gray hair wearing a blue shirt, holding and eating an orange popsicle. The scene is split into two panels, both showing the same woman in the same setting, with text overlays that read 'all these flavors' and 'and you choose to be salty'. The background consists of green foliage and colorful hanging flowers, suggesting an outdoor garden setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "salty",
+      "label": "Salty as a slang term for being irritable or argumentative",
+      "description": "The term 'salty' is a colloquial expression used to describe someone who is irritable, resentful, or argumentative, often due to feeling wronged or overlooked. This is a real-world linguistic concept not visible in the image but essential to understanding the meme's humor, which contrasts the sweetness of the popsicle with the negativity implied by 'salty'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "popsicle",
+      "label": "Popsicle as a symbol of sweetness and enjoyment",
+      "description": "A popsicle is a frozen, sweet treat commonly associated with pleasure, refreshment, and childhood innocence. In the context of the meme, it serves as a visual metaphor for 'all these flavors' — implying a wide range of positive, enjoyable options. This cultural association is external knowledge required to interpret the contrast with 'salty'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "older_woman",
+      "label": "Stereotype of older women as being 'salty' or irritable",
+      "description": "While not explicitly derogatory in this meme, the trope of older women being 'salty' (irritable or argumentative) is a common cultural stereotype. The meme uses this stereotype implicitly to create humor by juxtaposing the woman's sweet, innocent act (eating a popsicle) with the negative label 'salty'. This stereotype is outside the image and contributes to the meme's social commentary.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "amusement",
+      "label": "slightly amused expression",
+      "description": "The woman's facial expression in both panels is neutral to slightly amused, with a subtle smile or relaxed demeanor while eating the popsicle. This suggests mild enjoyment or contentment with the sweet treat, contrasting with the negative connotation of 'salty'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The woman is mapped as 'all these flavors'",
+      "description": "The top text 'all these flavors' is mapped onto the visual of the woman eating a popsicle, implying that the woman represents the variety of positive, enjoyable options (symbolized by the popsicle). The popsicle, as a sweet treat, is culturally associated with pleasure and variety, thus the woman is metaphorically mapped as embodying 'all these flavors'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material implying personal choice",
+      "description": "The user is projected onto the second text chunk 'and you choose to be salty', which directly addresses the viewer with 'you', implying that the viewer is the one who chose to be 'salty' (irritable or argumentative) despite having positive options ('all these flavors'). This creates a direct address to the user, making them the subject of the meme's commentary.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Stereotyping older women as irritable",
+      "description": "The meme implicitly relies on the cultural stereotype that older women are 'salty' (irritable or argumentative), which can be seen as ageist and potentially demeaning. While the meme uses this stereotype for humorous effect, the underlying trope can be harmful by reinforcing negative assumptions about older women based on age and gender.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id_1",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with internet slang and cultural references. The humor relies on the widespread understanding of the term 'salty' as a colloquial expression for being irritable or argumentative, and the visual of an older woman eating a popsicle is a relatable, everyday scene. The meme's appeal is universal, targeting anyone who has experienced or observed someone choosing negativity over positivity, without requiring specific demographic or cultural knowledge beyond common internet vernacular.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/26018.png",
+    "image_name": "26018.png",
+    "extraction_timestamp": "2025-12-15T19:31:16.132857",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,191 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: christians_are_bad_drivers; hasOverallIntent: hateful; overall-intent-description: The image juxtaposes a roadside memorial with a school bus in the background, overlaid with the text 'ever notice that christians are bad drivers.' This creates a harmful stereotype by linking religious identity (Christianity) with a negative and dangerous behavior (bad driving), implying that all Christians are inherently reckless or negligent drivers. The visual of a memorial suggests a tragic consequence, which is then falsely attributed to the religious group, making it a hateful meme that targets a specific religious community based on a false and generalized association.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "ever notice that christians are bad drivers",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "roadside_memorial",
+      "label": "memorial cross with flowers",
+      "description": "A white wooden cross with floral arrangements (white, pink, and purple flowers) is placed on dry, sandy ground. The cross has inscriptions, including the name 'Macie' and possibly other names or dates, indicating it is a memorial for a deceased person. It is positioned in the foreground, suggesting a tragic event occurred at this location.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "roadside_memorial_scene",
+      "label": "roadside_memorial_with_school_bus",
+      "description": "A roadside memorial (a white wooden cross with floral arrangements) is positioned in the foreground on dry, sandy ground. In the background, a yellow school bus is visible on a road, creating a juxtaposition that implies a tragic event (possibly a school bus accident) and a memorial. The scene is overlaid with text that links the memorial to a stereotype about Christians being bad drivers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "roadside_memorial",
+          "relation": "is_in_front_of",
+          "to": "school_bus"
+        },
+        {
+          "from": "roadside_memorial",
+          "relation": "is_on",
+          "to": "dry_ground"
+        },
+        {
+          "from": "school_bus",
+          "relation": "is_on",
+          "to": "road"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_christians_bad_drivers",
+      "label": "Stereotype: Christians are bad drivers",
+      "description": "A harmful and false stereotype that attributes reckless or negligent driving behavior to all Christians, implying a religious group is inherently dangerous behind the wheel. This stereotype is used to demean and generalize a religious community based on a perceived association with traffic accidents or fatalities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "roadside_memorial_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "roadside_memorial_concept",
+      "label": "Concept: Roadside Memorial",
+      "description": "A memorial placed at the side of a road to honor a deceased person, often after a fatal accident. These memorials are common in many cultures and are used to express grief and remembrance. In this meme, the memorial is used as a visual symbol of tragedy and loss.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "roadside_memorial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "roadside_memorial_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "school_bus_concept",
+      "label": "Concept: School Bus",
+      "description": "A vehicle specifically designed to transport children to and from school. Its presence in the background of the image, especially juxtaposed with a roadside memorial, implies a potential connection to a school-related accident, which is often used to heighten the emotional impact of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "roadside_memorial_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_meme_concept",
+      "label": "Concept: Hateful Meme",
+      "description": "A meme designed to spread hatred, prejudice, or discrimination against a specific group, often by using false or exaggerated associations. This meme is hateful because it targets Christians based on a false and generalized stereotype about their driving behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is hate, directed toward Christians, as conveyed by the meme's text and visual juxtaposition, which falsely links the religious group to dangerous driving behavior and tragic outcomes. This is a hateful stereotype designed to incite prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Christians are mapped onto the roadside memorial scene",
+      "description": "The text 'ever notice that christians are bad drivers' is overlaid on an image of a roadside memorial with a school bus in the background. The visual material (roadside memorial scene) is being mapped onto the textual concept (stereotype_christians_bad_drivers) by implying that the tragic event (memorial) is caused by or associated with Christians being bad drivers. This creates an analogical mapping where the memorial scene (a symbol of tragedy) is being used to represent or stand in for the stereotype about Christians' driving behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the text 'ever notice that christians are bad drivers' because the meme uses an interrogative tone ('ever notice') that implicitly invites the viewer to consider or acknowledge the stereotype, making the user feel personally addressed or prompted to reflect on the claim. This creates a semiotic projection where the user is positioned as the one who might 'notice' or be aware of the stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Christians as a religious group by falsely attributing dangerous driving behavior to them, using a tragic roadside memorial scene to imply that such accidents are caused by or associated with Christians. This is a hateful stereotype targeting a specific religious community based on a false and generalized association.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "stereotype_christians_bad_drivers",
+      "label": "target community",
+      "description": "The meme targets Christians as a religious community by attributing a harmful stereotype (being bad drivers) to them, using a roadside memorial scene to imply a false association with tragic accidents.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/93521.png",
+    "image_name": "93521.png",
+    "extraction_timestamp": "2025-12-19T17:51:11.888607",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

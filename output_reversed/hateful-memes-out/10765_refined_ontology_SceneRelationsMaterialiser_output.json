@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "man_and_child_in_kitchen",
+      "participants": [
+        {
+          "entity": "man",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "child",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "isCookingNear",
+          "to": "child"
+        },
+        {
+          "from": "child",
+          "relation": "isLookingOutWindow",
+          "to": "man"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":man_and_child_in_kitchen :hasParticipant :man .",
+    ":man_and_child_in_kitchen :hasParticipant :child .",
+    ":man :isCookingNear :child .",
+    ":child :isLookingOutWindow :man ."
+  ],
+  "triples_count": 4
+}

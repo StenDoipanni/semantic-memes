@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "intimate_pose",
+      "participants": [
+        {
+          "entity": "Black man",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "white woman",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Black man",
+          "relation": "inIntimateContactWith",
+          "to": "white woman"
+        },
+        {
+          "from": "white woman",
+          "relation": "inIntimateContactWith",
+          "to": "Black man"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":intimate_pose :hasParticipant :Black_man .",
+    ":intimate_pose :hasParticipant :white_woman .",
+    ":Black_man :inIntimateContactWith :white_woman .",
+    ":white_woman :inIntimateContactWith :Black_man ."
+  ],
+  "triples_count": 4
+}

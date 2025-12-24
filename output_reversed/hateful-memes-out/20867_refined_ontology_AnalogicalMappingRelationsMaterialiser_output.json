@@ -1,0 +1,39 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "muslim",
+      "hasMappingEntity": "goat"
+    },
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "porn star",
+      "hasMappingEntity": "goat"
+    },
+    {
+      "from": "goat",
+      "relation": "mappedOnto",
+      "to": "muslim"
+    },
+    {
+      "from": "goat",
+      "relation": "mappedOnto",
+      "to": "porn star"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :muslim .",
+    ":mapping_1 :hasMappingEntity :goat .",
+    ":mapping_1 :hasMappedEntity :porn_star .",
+    ":mapping_1 :hasMappingEntity :goat .",
+    ":goat :mappedOnto :muslim .",
+    ":goat :mappedOnto :porn_star ."
+  ],
+  "triples_count": 6
+}

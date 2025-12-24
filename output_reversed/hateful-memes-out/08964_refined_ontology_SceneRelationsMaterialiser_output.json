@@ -1,0 +1,42 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "woman_in_bathtub",
+      "participants": [
+        {
+          "entity": "woman",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "isIn",
+          "to": "bathtub"
+        },
+        {
+          "from": "woman",
+          "relation": "holds",
+          "to": "glass"
+        },
+        {
+          "from": "woman",
+          "relation": "isSurroundedBy",
+          "to": "oranges"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":woman_in_bathtub :hasParticipant :woman .",
+    ":woman :isIn :bathtub .",
+    ":woman :holds :glass .",
+    ":woman :isSurroundedBy :oranges ."
+  ],
+  "triples_count": 4
+}

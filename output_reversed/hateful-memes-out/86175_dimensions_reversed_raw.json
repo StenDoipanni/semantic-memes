@@ -1,0 +1,192 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a woman with an angry, accusatory expression, pointing directly at the viewer, overlaid with the text 'when you go see your family because of the barbecue.' The scene is designed to humorously convey the frustration or annoyance one might feel when visiting family for a barbecue, implying that the reason for the visit is superficial or obligatory. The intent is to evoke relatable humor about family gatherings, not to target any specific group or individual. While the image uses an exaggerated emotional reaction, it does not contain any abusive, cyberbullying, hateful, misogynistic, or propagandistic content. The humor is situational and self-referential, relying on the universal experience of family obligations, not on harmful stereotypes or protected characteristics. The meme's intent is to entertain through relatable social commentary, not to cause harm or perpetuate discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you go see your family because of the barbecue",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with long brown hair, wearing a white button-up shirt and gray pants, pointing directly at the viewer with an angry, accusatory expression. Her mouth is open as if shouting, and her eyebrows are furrowed, conveying strong emotion. She is the central and most salient visual element in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "accusatory_pointing",
+      "label": "woman pointing accusingly at viewer",
+      "description": "A woman with an angry, accusatory expression is pointing directly at the viewer, conveying strong emotion. The scene is framed to make the viewer feel directly addressed and blamed, as implied by the text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "pointsAt",
+          "to": "viewer"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "family_gatherings",
+      "label": "Family Gatherings",
+      "description": "The concept of family gatherings, particularly those centered around food and social obligation, is a common cultural phenomenon in many societies. The meme references the common experience of visiting family for events like barbecues, which are often seen as obligatory or socially expected, even if the primary motivation is superficial (e.g., the food or the event itself).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "barbecue",
+      "label": "Barbecue",
+      "description": "A barbecue is a social event involving the grilling of food, often held outdoors and associated with family and community gatherings. It is a common cultural event in many countries, especially in the United States, and is often used as a social bonding activity. The meme uses the barbecue as a specific, relatable context for family visits.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_obligation",
+      "label": "Social Obligation",
+      "description": "The idea that people feel compelled to attend family events due to social norms or expectations, even if they are not enthusiastic about them. This concept is central to understanding the meme’s humor, as it implies the visit is not out of genuine affection but due to external pressure or the lure of the event (the barbecue).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "relatable_humor",
+      "label": "Relatable Humor",
+      "description": "The humor in the meme relies on the universal experience of attending family gatherings that one may not fully enjoy, but feels obligated to attend. This type of humor is common in internet culture and often involves exaggerating a common, mildly frustrating situation to create comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "family_visits",
+      "label": "Family Visits",
+      "description": "The act of visiting family members, often for holidays, celebrations, or social events, is a common social practice. The meme humorously frames this as a superficial or obligatory activity, implying that the primary motivation is not familial affection but the event itself (the barbecue).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "anger",
+      "label": "angry expression",
+      "description": "The woman's facial expression, with furrowed brows, wide-open mouth as if shouting, and intense eye gaze, conveys a strong emotion of anger or frustration. Her accusatory pointing gesture reinforces this emotional state, suggesting she is blaming or confronting the viewer.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The viewer is mapped onto the woman as the person who goes to see family for the barbecue",
+      "description": "The text 'when you go see your family because of the barbecue' directly addresses the viewer ('you'), creating an analogical mapping where the viewer is projected onto the visual entity (the woman). The woman's angry, accusatory expression and pointing gesture serve as a visual representation of the viewer's internal frustration or annoyance at the situation described in the text. The mapping is established through the direct address ('you') in the text and the visual framing that makes the viewer feel personally targeted and blamed, as implied by the woman's expression and gesture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman in the image",
+      "description": "The user is projected onto the woman (VisualMaterial entity) because the text 'when you go see your family because of the barbecue' directly addresses the viewer ('you'), creating an implicit deictic reference. The woman's angry, accusatory expression and pointing gesture visually represent the viewer's internal frustration or annoyance at the situation described in the text. The projection is established through the direct address ('you') in the text and the visual framing that makes the viewer feel personally targeted and blamed, as implied by the woman's expression and gesture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses an exaggerated angry expression and accusatory pointing to humorously convey frustration about visiting family for a barbecue, which may be perceived as mildly irritating or annoying. While the intent is to evoke relatable humor about social obligations, the exaggerated emotional reaction could potentially cause discomfort or be interpreted as overly aggressive by some viewers, especially if they are sensitive to being directly blamed or targeted. The humor is situational and self-referential, but the visual framing makes the viewer feel personally addressed and blamed, which can be perceived as a mild form of social harm or discomfort.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with relatable social commentary and situational humor. It targets individuals who have experienced or can empathize with the social obligation to attend family gatherings, particularly barbecues, often for superficial reasons like food or social pressure, rather than genuine familial affection. The humor relies on universal experiences of family visits and social expectations, making it accessible to a wide demographic across cultures and backgrounds who understand the concept of attending events out of obligation or for the event itself (e.g., the barbecue). The visual of an angry woman pointing directly at the viewer creates a direct, self-referential address that invites the viewer to identify with the frustration, making it especially effective for audiences who recognize and resonate with this common social dynamic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/86175.png",
+    "image_name": "86175.png",
+    "extraction_timestamp": "2025-12-19T15:45:18.662764",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

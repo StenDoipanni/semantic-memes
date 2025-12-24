@@ -1,0 +1,30 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk_1"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "crowd_of_men"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "overallintent_instance"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :text_chunk_1 .",
+    ":toxicity_1 :hasToxicElement :crowd_of_men .",
+    ":toxicity_1 :hasToxicElement :overallintent_instance ."
+  ],
+  "triples_count": 3
+}

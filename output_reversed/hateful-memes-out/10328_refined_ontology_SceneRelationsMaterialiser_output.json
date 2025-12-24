@@ -1,0 +1,53 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "dike_paying_for_pads_scene",
+      "participants": [
+        {
+          "entity": "woman_in_foreground",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "woman_in_background",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman_in_foreground",
+          "relation": "isFocalPointOf",
+          "to": "dike_paying_for_pads_scene"
+        },
+        {
+          "from": "woman_in_background",
+          "relation": "isSecondarySubjectOf",
+          "to": "dike_paying_for_pads_scene"
+        },
+        {
+          "from": "woman_in_foreground",
+          "relation": "isDepictedIn",
+          "to": "dike_paying_for_pads_scene"
+        },
+        {
+          "from": "woman_in_background",
+          "relation": "isDepictedIn",
+          "to": "dike_paying_for_pads_scene"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":dike_paying_for_pads_scene :hasParticipant :woman_in_foreground .",
+    ":dike_paying_for_pads_scene :hasParticipant :woman_in_background .",
+    ":woman_in_foreground :isFocalPointOf :dike_paying_for_pads_scene .",
+    ":woman_in_background :isSecondarySubjectOf :dike_paying_for_pads_scene .",
+    ":woman_in_foreground :isDepictedIn :dike_paying_for_pads_scene .",
+    ":woman_in_background :isDepictedIn :dike_paying_for_pads_scene ."
+  ],
+  "triples_count": 6
+}

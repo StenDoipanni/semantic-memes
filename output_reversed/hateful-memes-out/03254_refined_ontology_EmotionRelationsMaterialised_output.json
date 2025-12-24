@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful_implicit_expression",
+      "expressors": [
+        {
+          "entity": "man_whispering",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_whispering",
+          "relation": "emotionalRelationToEntity",
+          "to": "black_people"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_implicit_expression :hasExpressor :man_whispering .",
+    ":man_whispering :emotionalRelationToEntity :black_people ."
+  ],
+  "triples_count": 2
+}

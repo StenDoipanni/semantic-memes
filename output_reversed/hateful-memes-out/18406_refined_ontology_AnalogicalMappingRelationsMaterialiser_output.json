@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_welcome_to_melbourne",
+      "hasMappedEntity": "top_text",
+      "hasMappingEntity": "adult_woman"
+    },
+    {
+      "from": "adult_woman",
+      "relation": "mappedOnto",
+      "to": "top_text"
+    }
+  ],
+  "triples": [
+    ":mapping_welcome_to_melbourne :hasMappedEntity :top_text .",
+    ":mapping_welcome_to_melbourne :hasMappingEntity :adult_woman .",
+    ":adult_woman :mappedOnto :top_text ."
+  ],
+  "triples_count": 3
+}

@@ -1,0 +1,199 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts a woman with a distressed expression, holding her head in her hands while looking at a laptop, with text overlay that reads 'there must be some way this victimizes me.' The scene conveys frustration or despair related to a situation perceived as unfairly targeting or harming her. The overall intent is to humorously or ironically express the feeling of being a victim of circumstances, often used to describe situations where someone feels unfairly targeted or overwhelmed by external forces. There is no toxicity present in the image; it does not contain abusive, cyberbullying, harmful, hateful, misogynous, or propaganda elements. The meme is self-referential and relatable, using the visual of distress to amplify the textual message about feeling victimized, without targeting any specific group or individual based on protected characteristics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "there must be some way",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with blonde hair, wearing a light-colored fuzzy sweater, is seated at a desk with a distressed expression, holding her head in her hands while looking at a laptop. She appears frustrated or overwhelmed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "distressed_woman_at_laptop",
+      "label": "woman distressed while using laptop",
+      "description": "A woman with blonde hair, wearing a light-colored fuzzy sweater, is seated at a desk, holding her head in her hands while looking at a laptop with a distressed expression. She appears frustrated or overwhelmed by the situation on the screen.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "is_seated_at",
+          "to": "desk"
+        },
+        {
+          "from": "woman",
+          "relation": "is_looking_at",
+          "to": "laptop"
+        },
+        {
+          "from": "woman",
+          "relation": "is_holding_head_in_hands",
+          "to": "woman"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "victimization_stereotype",
+      "label": "Victimization Stereotype",
+      "description": "The meme relies on the cultural stereotype of 'victimhood' — the idea that individuals are unfairly targeted or harmed by external forces, often leading to exaggerated emotional responses. This concept is commonly used in internet humor to express frustration or helplessness in situations perceived as unjust, such as workplace stress, online harassment, or bureaucratic hurdles. The phrase 'this victimizes me' is a self-deprecating or ironic way to frame personal struggles as if they are part of a larger, unfair system.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities_distressed_woman_at_laptop",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "textual_material_text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "online_stress_culture",
+      "label": "Online Stress Culture",
+      "description": "The image and text reference a common modern phenomenon: the overwhelming pressure and frustration experienced when dealing with digital tasks, such as work emails, social media, or complex software. This is often amplified by the 'always-on' nature of digital life, leading to feelings of being overwhelmed or 'victimized' by technology or digital environments. The laptop is a symbol of this digital stress.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities_distressed_woman_at_laptop",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "textual_material_text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ironic_self_deprecation",
+      "label": "Ironic Self-Deprecation",
+      "description": "The meme uses irony to express frustration. The phrase 'there must be some way this victimizes me' is not meant to be taken literally but rather as a humorous exaggeration. It reflects a common internet trope where people mock their own over-the-top emotional reactions to minor inconveniences, often to elicit empathy or shared experience from others. This requires understanding of internet humor conventions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities_distressed_woman_at_laptop",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "textual_material_text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "relatable_meme_format",
+      "label": "Relatable Meme Format",
+      "description": "The visual of a distressed person looking at a screen with text overlay is a widely recognized meme format used to express frustration, helplessness, or despair. This format is often used to convey situations that are universally relatable, such as dealing with complex tasks, bad news, or frustrating technology. The image is a visual shorthand for 'I am overwhelmed by this situation.'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities_distressed_woman_at_laptop",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "textual_material_text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "frustration",
+      "label": "frustrated emotion",
+      "description": "The woman's facial expression, with her eyebrows furrowed and mouth downturned, combined with her hands holding her head, visually conveys intense frustration. This is amplified by the text overlay 'there must be some way this victimizes me,' which humorously exaggerates her feeling of being overwhelmed or unfairly targeted by a situation, likely digital or bureaucratic in nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The distressed woman is mapped as the 'victim' in the text",
+      "description": "The text 'this victimizes me' implies that the woman in the image is the one being victimized. The visual of her distressed expression and posture (holding her head) is mapped onto the textual concept of 'victim' to convey the meme's ironic self-deprecation about feeling overwhelmed or unfairly targeted by a situation. The mapping is established through the juxtaposition of her emotional state with the text, which explicitly labels her as the victim of the situation depicted on the laptop.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the distressed woman as the victim",
+      "description": "The user is projected onto the visual material of the distressed woman (entity: woman) and the textual material 'this victimizes me' (text_chunk_1), which explicitly uses 'me' to indicate self-identification with the victim role. The user sees themselves in the woman's emotional state and the situation described, making the projection onto the woman and the text. The phrase 'this victimizes me' directly deictically refers to the user as the victim, establishing a strong semiotic projection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_2",
+      "label": "User projected onto the textual material 'this victimizes me'",
+      "description": "The user is projected onto the textual material 'this victimizes me' (text_chunk_1) because it contains the deictic pronoun 'me', which directly refers to the user. The user identifies with the feeling of being victimized by the situation, and the text explicitly frames this as 'me', creating a direct projection of the user's self-perception onto the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "general internet users",
+      "description": "The meme is designed for a broad, general audience of internet users who can relate to feelings of frustration, helplessness, or being overwhelmed by digital tasks or situations. The visual of a distressed woman at a laptop is universally relatable and does not target any specific demographic based on protected characteristics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/64385.png",
+    "image_name": "64385.png",
+    "extraction_timestamp": "2025-12-16T08:14:34.091094",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

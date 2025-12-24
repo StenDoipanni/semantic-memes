@@ -1,0 +1,192 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: white trash; hasOverallIntent: Harmful; overall-intent-description: The image depicts a recycling bag filled with paper waste attached to a bicycle, with the text 'white trash' at the top and 'you are doing it right' at the bottom. The overall intent is to mock or demean individuals labeled as 'white trash' by sarcastically praising their recycling efforts. This is a harmful meme because it uses a derogatory racial slur ('white trash') to target a specific group, implying that their behavior (recycling) is somehow 'right' or 'acceptable' only because they are considered 'trash.' The juxtaposition of the text with the image creates a tone of ridicule and reinforces negative stereotypes about people from lower socioeconomic backgrounds, potentially causing emotional harm or reinforcing prejudice against them. The meme does not contain direct abusive, cyberbullying, or propaganda elements, but it is harmful due to its use of a derogatory term and its implication that the targeted group is inherently 'trash' despite their positive action (recycling).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "white trash",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "recycling_bag",
+      "label": "brown paper bag with recycling symbol",
+      "description": "A brown paper bag with a printed recycling symbol (three arrows forming a triangle) is filled with crumpled paper and cardboard, indicating it is being used for recycling. The bag is visibly full and slightly torn at the top, suggesting active use. It is attached to the front of a bicycle.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "recycling_bike_scene",
+      "label": "recycling_bag_attached_to_bicycle",
+      "description": "A brown paper recycling bag filled with paper waste is attached to the front of a light blue bicycle. The bag is positioned in a white wooden crate mounted on the bike's front rack, with the bicycle's handlebars and front wheel visible. The background consists of green foliage, suggesting an outdoor setting. The scene is framed to emphasize the recycling bag as the central subject, with the bicycle serving as its support structure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "recycling_bag",
+          "relation": "attached_to",
+          "to": "bicycle"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_trash_stereotype",
+      "label": "White Trash Stereotype",
+      "description": "A derogatory term used in American English to refer to people from lower socioeconomic backgrounds, often implying they are uneducated, lazy, or morally inferior. It is a racialized and class-based slur that targets white people who are perceived as poor or lacking in social status, often associated with rural or working-class communities. The term is used to demean and dehumanize individuals, reinforcing negative stereotypes about their character, intelligence, and behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "recycling_behavior",
+      "label": "Recycling Behavior",
+      "description": "The act of separating waste materials for disposal or reuse, often to reduce environmental impact. In the context of this meme, recycling is portrayed as a positive, environmentally responsible action. However, the meme sarcastically juxtaposes this positive behavior with the derogatory label 'white trash,' implying that the act of recycling is somehow 'right' or 'acceptable' only because the person performing it is considered 'trash.' This creates a mocking tone that undermines the value of the action by associating it with a negative stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "recycling_bag",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sarcastic_praise",
+      "label": "Sarcastic Praise",
+      "description": "A rhetorical device where something is praised in a mocking or ironic manner to highlight its absurdity or to belittle the person or thing being praised. In this meme, the phrase 'you are doing it right' is used sarcastically to mock the person labeled 'white trash' for recycling, implying that their positive action is only 'right' because they are considered 'trash.' This form of praise is used to reinforce the negative stereotype and to ridicule the individual's perceived social status.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "class_based_stereotype",
+      "label": "Class-Based Stereotype",
+      "description": "A stereotype that associates individuals with specific social classes, often implying that people from lower socioeconomic backgrounds are inherently less capable, less intelligent, or less moral. In this meme, the term 'white trash' is used to target individuals from lower socioeconomic backgrounds, implying that their recycling behavior is somehow 'right' or 'acceptable' only because they are considered 'trash.' This reinforces the idea that their social status is inherently inferior, regardless of their actions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_slur",
+      "label": "Racial Slur",
+      "description": "A word or phrase used to demean or insult a person or group based on their race or ethnicity. In this meme, the term 'white trash' is used as a racial slur to target white people who are perceived as poor or lacking in social status. The term is derogatory and offensive, and its use in the meme is intended to mock and demean the targeted group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_contempt",
+      "label": "mocking contempt emotion",
+      "description": "The emotion expressed is one of ridicule and disdain, conveyed through the sarcastic praise 'you are doing it right' juxtaposed with the derogatory label 'white trash'. This creates a tone of contempt for the targeted group, implying their positive action (recycling) is only 'right' because they are considered 'trash'. The overall intent is to demean and belittle individuals from lower socioeconomic backgrounds.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "white trash is the person recycling",
+      "description": "The text 'white trash' is mapped onto the person who is recycling, as represented by the recycling bag attached to the bicycle. The meme sarcastically implies that the person performing the positive action of recycling is labeled 'white trash', thereby associating the derogatory term with the visual material (the recycling bag and the act of recycling). This mapping is reinforced by the sarcastic praise 'you are doing it right', which further links the text 'white trash' to the visual entity of the recycling bag and the person implied to be using it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the person implied by the 'white trash' label",
+      "description": "The user is projected onto the individual (or group) being labeled 'white trash' in the meme. This projection is implied through the sarcastic praise 'you are doing it right', which directly addresses the person performing the action (recycling) and thereby positions the viewer as the one being addressed or identified with the stereotype. The user is thus projected onto the 'white trash' entity, which is visually represented by the recycling bag and the act of recycling, and is the target of the meme's mockery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses the derogatory racial slur 'white trash' to demean individuals from lower socioeconomic backgrounds, sarcastically praising their recycling behavior. This reinforces negative stereotypes and can cause emotional harm or reinforce prejudice against them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "white_trash_stereotype",
+      "label": "Target Community",
+      "description": "The meme is designed for an audience familiar with and likely to understand the derogatory racialized and class-based slur 'white trash,' which targets white people from lower socioeconomic backgrounds, particularly those perceived as poor or lacking in social status. The intended audience is likely to recognize the stereotype and the sarcastic mockery embedded in the meme, deriving humor or satisfaction from the reinforcement of negative stereotypes about this group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/90186.png",
+    "image_name": "90186.png",
+    "extraction_timestamp": "2025-12-19T17:02:45.536309",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

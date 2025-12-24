@@ -1,0 +1,203 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: harmful; overall-intent-description: The image shows feet submerged in milk, with text reading 'if this offends you you might be lack toes intolerant.' This is a pun-based meme that uses a play on words ('lack toes intolerant' implying 'lack of toe tolerance') to mock people who are offended by the image. While not overtly hateful or abusive, it relies on a crude visual joke and potentially infantilizing or mocking imagery (feet in milk) to elicit a reaction. The intent is to provoke laughter through absurdity and wordplay, but the visual element of feet in milk could be seen as demeaning or gross, potentially causing discomfort or offense to some viewers. The meme's overall intent is to be humorous by exploiting a pun and a potentially distasteful visual, which can be considered harmful due to its potential to cause offense or discomfort, even if not targeting a specific protected group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text",
+      "description": "if this offends you",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "feet",
+      "label": "human feet",
+      "description": "Two sets of human feet are visible, partially submerged in a white liquid, likely milk. The toes are clearly defined and appear to be of an adult. The feet are the central visual focus of the image, emerging from the liquid surface.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "feet_in_milk",
+      "label": "feet submerged in milk",
+      "description": "A scene depicting two human feet partially submerged in a white liquid, likely milk, with the toes visible above the surface. The feet are the central visual focus, emerging from the liquid. The image is overlaid with text that reads 'if this offends you you might be lack toes intolerant,' creating a pun-based humorous context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "feet",
+          "relation": "submerged_in",
+          "to": "milk"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pun_based_wordplay",
+      "label": "Pun-based Wordplay",
+      "description": "The meme relies on a pun where 'lack toes intolerant' is a play on 'lack of toe tolerance,' mocking people who are offended by the image. This requires understanding of linguistic wordplay and humor based on phonetic or semantic similarity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "infantilizing_imagery",
+      "label": "Infantilizing Imagery",
+      "description": "The visual of feet submerged in milk can be interpreted as infantilizing or demeaning, as it evokes imagery associated with babies or toddlers (e.g., bath time, milk baths). This requires cultural knowledge about how certain images are perceived as childish or gross.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "feet_in_milk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "body_part_focus",
+      "label": "Body Part Focus",
+      "description": "The meme centers on feet, which are often used in humor or mockery to objectify or demean individuals. This requires understanding of how body parts (especially feet) are culturally associated with vulgarity, crudeness, or lowbrow humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "feet",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "toe_tolerance_stereotype",
+      "label": "Toe Tolerance Stereotype",
+      "description": "The phrase 'lack toes intolerant' is a derogatory stereotype implying that people who are offended by the image are 'toe intolerant' — a mocking reference to their supposed hypersensitivity or lack of tolerance. This requires understanding of how stereotypes are used to mock or demean individuals based on their reactions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gross_out_humor",
+      "label": "Gross-Out Humor",
+      "description": "The image of feet in milk is intentionally gross or distasteful to provoke a reaction. This requires knowledge of the cultural phenomenon of 'gross-out humor,' which uses disgusting or unpleasant imagery to elicit laughter or shock.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "feet_in_milk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mockery_of_offense",
+      "label": "Mockery of Offense",
+      "description": "The meme mocks people who are offended by the image by suggesting they are 'lack toes intolerant,' implying they are overly sensitive or easily offended. This requires understanding of how humor can be used to mock or ridicule people for their emotional reactions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mockery",
+      "label": "mocking emotion",
+      "description": "The emotion expressed is mockery, directed at individuals who are offended by the image of feet in milk. This is conveyed through the pun-based text 'you might be lack toes intolerant,' which sarcastically suggests that those who find the image offensive are overly sensitive or lacking in tolerance. The humor relies on ridiculing the emotional reaction rather than the subject of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "offense is mapped to feet in milk",
+      "description": "The text 'if this offends you' directly refers to the visual material of feet submerged in milk, implying that the image itself is the source of potential offense. The visual material (feet in milk) is the entity being mapped onto by the textual material (the phrase about offense).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material addressing them directly",
+      "description": "The user is projected onto the textual material 'if this offends you' which directly addresses the viewer using the second-person pronoun 'you'. This creates a direct semiotic projection where the user is positioned as the recipient of the meme's message, being invited to evaluate their own reaction to the visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses gross-out humor and body part focus to mock individuals who are offended by the image, potentially causing discomfort or offense. The pun-based wordplay ('lack toes intolerant') is a form of mockery that targets the emotional reaction of viewers, which can be considered harmful due to its potential to cause offense or discomfort, even if not targeting a specific protected group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "individuals who are offended by the image",
+      "description": "The meme targets individuals who are offended by the visual of feet in milk, mocking them with the pun 'lack toes intolerant' to imply they are overly sensitive or lack tolerance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/56401.png",
+    "image_name": "56401.png",
+    "extraction_timestamp": "2025-12-16T05:21:10.985274",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,30 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "woman_holding_grammy_awards",
+      "participants": [
+        {
+          "entity": "woman",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "holding",
+          "to": "grammy_awards"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":woman_holding_grammy_awards :hasParticipant :woman .",
+    ":woman :holding :grammy_awards ."
+  ],
+  "triples_count": 2
+}

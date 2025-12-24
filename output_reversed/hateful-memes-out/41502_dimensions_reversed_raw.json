@@ -1,0 +1,201 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: jihadi_magazine_s_miss_december; hasOverallIntent: Hateful; overall-intent-description: The image juxtaposes a highly stylized, glamorous portrait of a woman with the text 'jihadi magazine's miss december'. This combination is intentionally provocative and hateful, as it attempts to associate a beauty pageant title with a terrorist organization, thereby dehumanizing and stigmatizing Muslim women by linking them to extremism. The visual presentation of the woman as beautiful and sophisticated is contrasted with the hateful implication that she represents a terrorist group, which is a form of Islamophobic hate speech. The meme uses the visual metaphor of beauty and femininity to frame a negative and dangerous stereotype about Muslim women, suggesting they are inherently linked to terrorism, which is a harmful and hateful message. The intent is to incite fear, prejudice, and hatred against Muslim women by associating them with a violent ideology, thus fulfilling the criteria for a hateful meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text",
+      "description": "jihadi magazine's",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with dark, heavily made-up eyes and a patterned headscarf, partially covering her face. She is holding the fabric of her garment with a hand adorned with a large, ornate ring. Her gaze is direct and intense, and her appearance is stylized and glamorous, suggesting a beauty pageant or fashion context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "glamorous_woman_portrait",
+      "label": "Glamorous woman portrait with text overlay",
+      "description": "A highly stylized, glamorous portrait of a woman with dark, heavily made-up eyes and a patterned headscarf, partially covering her face. She is holding the fabric of her garment with a hand adorned with a large, ornate ring. Her gaze is direct and intense. The image is overlaid with text reading 'jihadi magazine's' at the top and 'miss december' at the bottom, creating a provocative and hateful juxtaposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "isPortrayedBy",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "overlays",
+          "to": "woman"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "The meme relies on the stereotype that Muslim women are inherently linked to terrorism, which is a core component of Islamophobic hate speech. This stereotype is not visible in the image but is essential to understanding the hateful intent of associating 'Miss December' with 'jihadi magazine'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism_associations",
+      "label": "Terrorism Associations",
+      "description": "The term 'jihadi magazine' implicitly references terrorist organizations, particularly those associated with Islamic extremism. This real-world concept is not visible in the image but is critical to understanding the meme's hateful message of linking beauty and femininity to terrorism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "beauty_pageant_stereotype",
+      "label": "Beauty Pageant Stereotype",
+      "description": "The title 'Miss December' implies a beauty pageant context, which is a cultural phenomenon that frames femininity and beauty in a specific, often commodified, way. This context is not directly visible but is necessary to understand the contrast between the glamorous portrayal and the hateful association.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dehumanization",
+      "label": "Dehumanization",
+      "description": "The meme uses the visual metaphor of beauty and femininity to frame a negative stereotype about Muslim women, suggesting they are inherently linked to terrorism. This is a form of dehumanization, a concept outside the image that is central to understanding the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hate_speech",
+      "label": "Hate Speech",
+      "description": "The meme constitutes hate speech by inciting fear, prejudice, and hatred against Muslim women through the association with a terrorist organization. This is a real-world concept that is not visible in the image but is essential to understanding the meme's overall intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hatefulness",
+      "label": "hateful emotion expression",
+      "description": "The emotion expressed is hateful, conveyed through the juxtaposition of a glamorous, beautiful woman with the text 'jihadi magazine's miss december', which is intended to incite prejudice and hatred against Muslim women by associating them with terrorism. The visual presentation of beauty is contrasted with a hateful stereotype, creating an emotionally charged and offensive message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The woman is mapped as 'jihadi magazine's miss december'",
+      "description": "The text 'jihadi magazine's miss december' explicitly maps the visual entity 'woman' onto the role/title of 'Miss December' within the context of 'jihadi magazine'. This is an analogical mapping where the glamorous, stylized visual of the woman is projected onto the textual identity of a beauty pageant title, which is then further associated with a terrorist organization. The mapping is established through the direct textual overlay on the visual portrait, creating a provocative and hateful association.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the glamorous woman portrait",
+      "description": "The user is projected onto the visual material of the woman, as the meme uses her glamorous, stylized appearance to embody the hateful title 'jihadi magazine's miss december'. The user is implicitly invited to see the woman as the representative of the stereotype being projected — a beautiful, feminine figure associated with terrorism — thereby internalizing the dehumanizing and Islamophobic message. There are no explicit deictic pronouns like 'you' or 'me', but the framing of the woman as 'Miss December' of a 'jihadi magazine' creates an implicit projection where the viewer is expected to perceive her as the embodiment of the hateful concept.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly associates a beauty pageant title with a terrorist organization, inciting hatred and prejudice against Muslim women by implying they are inherently linked to extremism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "Muslim woman",
+      "description": "The target community is Muslim women, as the meme explicitly associates the glamorous portrayal of a woman with the title 'Miss December' under the hateful label 'jihadi magazine's', directly linking Muslim femininity to terrorism. This is a core component of Islamophobic hate speech targeting Muslim women.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/41502.png",
+    "image_name": "41502.png",
+    "extraction_timestamp": "2025-12-16T00:55:05.756990",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

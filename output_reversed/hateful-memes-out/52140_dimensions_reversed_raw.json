@@ -1,0 +1,170 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: this_steak_is_so_black_it_asked_me_for_a_newport; hasOverallIntent: Harmful; overall-intent-description: The image features a photo of chef Gordon Ramsay with overlaid text that reads 'this steak is so black it asked me for a newport.' The joke is a play on the word 'black,' which can refer to the color of the steak (overcooked) or to race. The phrase 'asked me for a Newport' is a reference to a cigarette brand, implying the steak is so dark it's 'asking' for a cigarette, which is a crude and potentially offensive pun. While the meme is intended as a humorous exaggeration about a poorly cooked steak, the use of 'black' in this context can be interpreted as a racial stereotype, which may be harmful or offensive to some viewers. The overall intent is to create humor through absurdity and wordplay, but the potential for harm arises from the racial connotation of the word 'black,' which may trigger discomfort or offense in some audiences. The meme does not directly target a specific individual or group with abusive or hateful intent, but the underlying stereotype could be considered harmful due to its potential to perpetuate racial insensitivity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "this steak is so black",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Gordon_Ramsay",
+      "label": "person",
+      "description": "A man with short, styled blonde hair, wearing a black jacket over a black shirt, standing with his hands clasped in front of him. He has a slight smirk and is looking directly at the camera. He is the central figure in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "steak_joke_scene",
+      "label": "steak_joke_scene",
+      "description": "A scene where Gordon Ramsay is the central figure, with overlaid text humorously describing a steak as 'so black it asked me for a newport.' The scene is a meme that uses visual and textual elements to create a joke based on wordplay and absurdity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Gordon_Ramsay",
+          "relation": "isSubjectOf",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "Anti-Black Stereotype",
+      "description": "The meme uses the word 'black' to describe a steak, which can be interpreted as a racial stereotype. This is because 'black' is a term historically and socially associated with Black people, and its use in this context can be seen as a crude, offensive pun that may trigger discomfort or offense due to its potential to perpetuate racial insensitivity. The background knowledge required to understand the meme's potential harm is the understanding of anti-Black stereotypes and the historical weight of the term 'black' in racial discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "newport_cigarette_brand",
+      "label": "Newport Cigarette Brand",
+      "description": "The phrase 'asked me for a Newport' references the cigarette brand Newport, which is a real-world product. The joke implies that the steak is so dark (overcooked) that it is 'asking' for a cigarette, which is a crude and absurd comparison. Understanding the reference to Newport requires knowledge of this specific cigarette brand and its cultural context as a product associated with smoking.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gordon_ramsay",
+      "label": "Gordon Ramsay",
+      "description": "The image features Gordon Ramsay, a well-known chef and television personality. His public persona is often associated with being a harsh critic of food and cooking, which is relevant to the context of the meme. The background knowledge required to understand the meme is the recognition of Gordon Ramsay as a figure in culinary media and his reputation for being a demanding and outspoken judge of food quality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_sarcasm",
+      "label": "sarcastic mocking expression",
+      "description": "Gordon Ramsay's slight smirk and direct gaze convey a tone of exaggerated, sarcastic amusement, fitting the absurd and crude joke about the steak. His expression is not genuine happiness but a performative, mocking reaction to the ridiculous premise.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "steak_black_mapping",
+      "label": "steak is black",
+      "description": "The text 'this steak is so black' is mapped onto the visual material of Gordon Ramsay, who is the central figure in the image. The joke implies that the steak (which is not visible) is so dark (overcooked) that it is 'black' — a wordplay that can be interpreted as a racial stereotype. The visual of Gordon Ramsay, known for his harsh criticism, is used to deliver this absurd and potentially offensive joke. The mapping is created by juxtaposing the text with his image, implying that he is the one who is 'black' (in the racial sense) or that the steak is so black it's 'asking' for a cigarette, which is a crude pun. The visual material (Gordon Ramsay) is mapped onto the textual material ('this steak is so black') to create the analogy that the steak is so black it's asking for a Newport cigarette.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material via the deictic 'me'",
+      "description": "The user is projected onto the textual material 'it asked me for a newport' because the phrase 'me' explicitly refers to the viewer/user. This creates a direct semiotic projection where the user is positioned as the subject of the action described in the text — the one being asked by the steak. The projection is onto the textual material, which contains the deictic pronoun 'me'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses the word 'black' to describe a steak, which can be interpreted as a racial stereotype. This is because 'black' is a term historically and socially associated with Black people, and its use in this context can be seen as a crude, offensive pun that may trigger discomfort or offense due to its potential to perpetuate racial insensitivity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet meme audience",
+      "description": "The meme is designed for a broad online audience familiar with internet humor, wordplay, and pop culture references. It targets viewers who understand the absurdity of the joke, the reference to the cigarette brand 'Newport,' and the visual of Gordon Ramsay as a culinary critic. The humor relies on the unexpected and crude pun involving the word 'black,' which may be appreciated by those who find such edgy or offensive humor amusing, even if it is potentially harmful or offensive to others.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/52140.png",
+    "image_name": "52140.png",
+    "extraction_timestamp": "2025-12-16T04:29:18.387340",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,276 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts a drag performer with bold makeup and a leopard-print outfit, holding a microphone, set against a vibrant, colorful background. The text overlay reads: 'they want to be accepted for who they are, yet there aren't able to accept themselves for who they are.' The overall intent of the meme is to convey a message of self-acceptance and the struggle for self-love, particularly within the context of LGBTQ+ identity. The visual of the drag performer, often associated with gender expression and performance, is juxtaposed with the text to highlight the internal conflict between societal acceptance and personal self-acceptance. There is no toxicity present in this meme; it does not contain abusive, cyberbullying, harmful, hateful, misogynous, or propaganda elements. The intent is reflective and empathetic, aiming to resonate with individuals who may struggle with self-acceptance, without targeting or disparaging any specific group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "they want to be accepted for who",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "drag_performer",
+      "label": "person",
+      "description": "A drag performer with bright orange hair styled in voluminous curls, bold black and white makeup including winged eyeliner and dark lipstick, wearing large hoop earrings and a leopard-print off-the-shoulder top. They are holding a microphone and looking directly at the camera with a confident expression. This individual is the central visual focus of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "self_acceptance_struggle",
+      "label": "Drag performer reflecting on self-acceptance",
+      "description": "The drag performer, central to the scene, is visually positioned as the subject of internal conflict conveyed by the text overlay. The scene captures a moment of self-reflection, where the performer's confident external presentation contrasts with the internal struggle described in the text. The performer is the sole participant in this introspective scene, with the text serving as the narrative voice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "self_acceptance_struggle",
+      "label": "Self-acceptance struggle",
+      "description": "The concept of self-acceptance as a psychological and social challenge, particularly for marginalized identities. This is a universal human experience but is often more pronounced for individuals who face societal rejection or discrimination based on their identity, such as LGBTQ+ individuals. The meme uses the drag performer as a symbol of external acceptance and performance, contrasting with the internal struggle described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "drag_performer",
+      "label": "Drag performer",
+      "description": "A person who performs in drag, typically as part of LGBTQ+ culture, often involving exaggerated makeup, costumes, and gender expression. Drag performers are cultural icons of self-expression and queer identity, and their public performances are often a form of reclaiming space and visibility. The image of a drag performer is central to understanding the meme’s message about societal acceptance versus personal self-acceptance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "LGBTQ",
+      "label": "LGBTQ+ community",
+      "description": "A collective identity encompassing lesbian, gay, bisexual, transgender, queer, and other non-heteronormative or non-cisgender identities. The meme implicitly references the experiences of LGBTQ+ individuals, particularly the struggle for societal acceptance and the internal conflict of self-acceptance. Drag culture is a significant part of LGBTQ+ expression and visibility.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gender_expression",
+      "label": "Gender expression",
+      "description": "The external manifestation of one’s gender identity through clothing, behavior, voice, and appearance. Drag is a form of gender expression that challenges traditional gender norms. The visual of the drag performer’s bold makeup and costume is a direct representation of gender expression, which is central to the meme’s message about identity and acceptance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "self_love",
+      "label": "Self-love",
+      "description": "The practice of accepting and valuing oneself, including one’s flaws and identity. The text in the meme explicitly references the inability to accept oneself, which is a core concept in psychology and self-help literature. The drag performer’s confident external presentation contrasts with the internal struggle of self-love, making this concept central to understanding the meme’s message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "societal_acceptance",
+      "label": "Societal acceptance",
+      "description": "The recognition and approval of an individual or group by society. The text in the meme contrasts the desire for societal acceptance with the inability to accept oneself. This concept is central to understanding the internal conflict described in the meme, particularly for marginalized groups who often face societal rejection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "queer_identity",
+      "label": "Queer identity",
+      "description": "An umbrella term for non-heterosexual and non-cisgender identities. The drag performer in the image is a symbol of queer identity and expression. The meme’s message about acceptance and self-acceptance is deeply rooted in the experiences of queer individuals who often navigate the tension between societal norms and their authentic selves.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "performance_art",
+      "label": "Performance art",
+      "description": "An art form that uses live actions, often theatrical or exaggerated, to convey a message or emotion. Drag performance is a form of performance art that often involves theatricality and exaggeration. The drag performer’s confident expression and bold appearance are part of a performance, which contrasts with the internal struggle described in the text, making this concept essential to understanding the meme’s message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "internal_conflict",
+      "label": "Internal conflict",
+      "description": "A psychological state of tension or struggle within oneself, often between conflicting desires, beliefs, or values. The text in the meme explicitly references the internal conflict between wanting societal acceptance and being unable to accept oneself. This concept is central to understanding the emotional depth of the meme’s message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "identity_struggle",
+      "label": "Identity struggle",
+      "description": "The process of navigating and understanding one’s identity, often involving conflict between societal expectations and personal authenticity. The drag performer’s external presentation is a form of identity expression, while the text describes an internal struggle with identity acceptance. This concept is central to understanding the meme’s message about self-acceptance and societal acceptance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "confident_self_expression",
+      "label": "confident expression of self",
+      "description": "The drag performer displays a confident, composed facial expression with direct eye contact and a neutral-to-subtle smile, conveying self-assurance despite the internal struggle implied by the text. This is reinforced by the bold makeup, voluminous hair, and assertive posture holding a microphone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The drag performer is mapped as the subject of the self-acceptance struggle",
+      "description": "The text 'they want to be accepted for who they are, yet there aren't able to accept themselves for who they are' explicitly refers to 'they' as the subject of the internal conflict. The visual material, the drag performer, is the central entity depicted and is directly mapped onto this textual subject 'they'. The drag performer's confident external presentation (visual) contrasts with the internal struggle described in the text, establishing a clear analogical mapping where the performer embodies the 'they' in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the drag performer as the subject of the self-acceptance struggle",
+      "description": "The user is projected onto the drag performer (visual material) as the embodiment of 'they' in the text, which refers to individuals struggling with self-acceptance. The user identifies with the performer's external confidence (visual) and internal conflict (textual), creating a personal identification with the subject of the message. The drag performer is the focal point of the projection, as the text explicitly addresses 'they' and the visual material directly represents this 'they'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "LGBTQ",
+      "label": "LGBTQ+ community",
+      "description": "The meme is designed for the LGBTQ+ community, as it uses a drag performer—a cultural icon of queer identity and expression—as its central visual and symbolic figure. The text explicitly addresses the struggle for societal acceptance and internal self-acceptance, which are core experiences for many LGBTQ+ individuals navigating identity and visibility. The drag performer’s bold presentation contrasts with the internal conflict described, making the message deeply resonant for those within or connected to this community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/95604.png",
+    "image_name": "95604.png",
+    "extraction_timestamp": "2025-12-19T18:34:33.436886",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 18,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

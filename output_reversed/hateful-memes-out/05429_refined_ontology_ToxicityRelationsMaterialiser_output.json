@@ -1,0 +1,30 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "Adolf_Hitler"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "woman_sitting_next_to_Hitler"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_overlay"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :Adolf_Hitler .",
+    ":toxicity_1 :hasToxicElement :woman_sitting_next_to_Hitler .",
+    ":toxicity_1 :hasToxicElement :text_overlay ."
+  ],
+  "triples_count": 3
+}

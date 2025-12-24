@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "top_text",
+      "hasMappingEntity": "fruit_costumed_people_walking"
+    },
+    {
+      "from": "fruit_costumed_people_walking",
+      "relation": "mappedOnto",
+      "to": "top_text"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :top_text .",
+    ":mapping_1 :hasMappingEntity :fruit_costumed_people_walking .",
+    ":fruit_costumed_people_walking :mappedOnto :top_text ."
+  ],
+  "triples_count": 3
+}

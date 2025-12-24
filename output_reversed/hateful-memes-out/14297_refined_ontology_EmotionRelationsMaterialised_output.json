@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "skeptical emotion",
+      "expressors": [
+        {
+          "entity": "Nancy Pelosi",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Nancy Pelosi",
+          "relation": "emotionalRelationToEntity",
+          "to": "president trump has suggested random drug tests be performed on members of congress"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":skeptical_emotion :hasExpressor :Nancy_Pelosi .",
+    ":Nancy_Pelosi :emotionalRelationToEntity :president_trump_has_suggested_random_drug_tests_be_performed_on_members_of_congress ."
+  ],
+  "triples_count": 2
+}

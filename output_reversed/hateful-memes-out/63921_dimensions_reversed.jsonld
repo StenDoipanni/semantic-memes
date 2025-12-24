@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_1e4eb31c",
+  "@type": "AnalysisDocument",
+  "title": "63921.png - Dimension Analysis",
+  "created": "2025-12-16T08:05:53.101234",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_04362912",
+    "@type": "Image",
+    "filename": "63921.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/63921.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/63921.png",
+    "image_name": "63921.png",
+    "extraction_timestamp": "2025-12-16T08:02:20.497695",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bf05c5d8",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: taking_a_photo_with_family; hasOverallIntent: non-toxic-positive; overall-intent-description: The image depicts a diverse group of people, including multiple generations and various ethnicities, smiling and posing together outdoors for a photo. The scene is warm, familial, and celebratory, with no visible signs of toxicity, hate, or harmful content. The text 'taking a photo with family' reinforces the positive, unifying message of familial bonding and shared joy. There are no elements that map to any of the listed toxic categories (Abusive, Cyberbullying, Harmful, Hateful, Mysogynous, Propaganda), as the image and text promote inclusivity, happiness, and connection without targeting or disparaging any group.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1e4eb31c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_cb267700",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "taking a photo with family",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1e4eb31c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f0ca1b55",
+      "@type": "VisualMaterial",
+      "instance_name": "man_with_gray_hat",
+      "label": "man wearing gray hat",
+      "description": "A man with a gray hat and a blue plaid shirt, smiling and standing behind the central couple, with his arm around a woman.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1e4eb31c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d51461cd",
+      "@type": "Scene",
+      "instance_name": "taking_a_photo_with_family",
+      "label": "taking a photo with family",
+      "description": "A group of diverse people, including multiple generations and various ethnicities, are gathered outdoors for a photo. They are smiling and posing together, with one person on the left holding a camera to take the picture. The scene is warm, familial, and celebratory, emphasizing connection and shared joy.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1e4eb31c"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_43942fc8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "family_photo_convention",
+      "label": "Family Photo Convention",
+      "description": "The act of taking a photo with family is a common cultural practice worldwide, often associated with celebrations, milestones, or simply preserving memories. It implies a shared identity, emotional connection, and collective presence, which are culturally understood concepts. This convention is not visually depicted but is essential to interpret the text and scene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1e4eb31c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_631de9ad",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "intergenerational_family",
+      "label": "Intergenerational Family",
+      "description": "The image shows multiple generations (elderly, middle-aged, young adults) together, which is a common family structure in many cultures. This concept implies continuity, heritage, and shared history, which are culturally understood but not visually explicit. The presence of multiple generations is a key element in understanding the familial bond being celebrated.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1e4eb31c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a776ece4",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "diverse_family",
+      "label": "Diverse Family",
+      "description": "The group includes people of different ethnicities and appearances, which reflects the modern understanding of family as inclusive and non-homogeneous. This concept is culturally significant and implies acceptance and unity across differences, which is not visually explicit but is necessary to interpret the image's message of inclusivity.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1e4eb31c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f41e94b7",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "photography_as_memory_preservation",
+      "label": "Photography as Memory Preservation",
+      "description": "The act of taking a photo is culturally understood as a method to preserve moments and memories. This concept is not visually depicted but is essential to understand why the group is posing and why the text 'taking a photo with family' is used — it implies a desire to capture and cherish a shared experience.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1e4eb31c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3a6e44ea",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "outdoor_family_gathering",
+      "label": "Outdoor Family Gathering",
+      "description": "The setting is outdoors, which is a common context for family photos, suggesting a relaxed, natural, and celebratory atmosphere. This context is culturally understood and helps interpret the mood and intent of the scene, even though the location is not explicitly labeled or described.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1e4eb31c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4553fc16",
+      "@type": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful emotion",
+      "description": "The group of people in the image are smiling broadly and laughing, indicating a strong sense of joy and contentment. Their body language—arms around each other, leaning in, and relaxed postures—further conveys happiness and emotional connection. The overall scene radiates warmth and celebration.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1e4eb31c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_677bd0ab",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "taking a photo with family is depicted by the group of people posing together",
+      "description": "The text 'taking a photo with family' is directly mapped onto the visual scene of a diverse, multi-generational group of people gathered outdoors and posing together for a photograph. The text explicitly labels the activity and the participants (family) shown in the image, creating a direct analogical mapping between the textual description and the visual material. The presence of a person holding a camera on the left further confirms the act of taking a photo, reinforcing the mapping.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1e4eb31c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_26eded85",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of taking a photo with family",
+      "description": "The user is projected onto the scene 'taking_a_photo_with_family' as the implied subject of the activity. The text 'taking a photo with family' and the visual of a group posing together create an inclusive, participatory frame where the viewer is invited to imagine themselves as part of the family gathering or as the one taking the photo. There are no explicit deictic pronouns like 'me' or 'you', but the scene and text collectively invite the user to identify with the familial, celebratory moment being depicted.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1e4eb31c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ae6b7403",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "family-oriented audience",
+      "description": "The meme is designed for individuals who value family connections, including parents, children, grandparents, and other relatives. The image and text emphasize intergenerational bonding, shared joy, and the cultural practice of preserving family memories through photography. The diverse representation suggests inclusivity, appealing to families of various ethnicities and backgrounds who identify with the universal experience of family gatherings.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1e4eb31c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

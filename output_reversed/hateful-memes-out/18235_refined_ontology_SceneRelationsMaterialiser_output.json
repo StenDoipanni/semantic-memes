@@ -1,0 +1,35 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "airplane_and_text_scene",
+      "participants": [
+        {
+          "entity": "text_element",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "airplane_silhouette",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "text_element",
+          "relation": "juxtaposedWith",
+          "to": "airplane_silhouette"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":airplane_and_text_scene :hasParticipant :text_element .",
+    ":airplane_and_text_scene :hasParticipant :airplane_silhouette .",
+    ":text_element :juxtaposedWith :airplane_silhouette ."
+  ],
+  "triples_count": 3
+}

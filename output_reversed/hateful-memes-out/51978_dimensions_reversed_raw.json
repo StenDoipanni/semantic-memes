@@ -1,0 +1,232 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: jesus_doesnt_care_meme; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts a hand offering bread to another hand wearing a knitted glove, symbolizing charity or compassion. The text states that Jesus doesn't care about memorizing Bible verses but cares about how one treats people. This meme aims to convey a message about the importance of practical compassion over religious knowledge. There is no toxicity present in this meme as it does not target any specific group based on protected characteristics, nor does it contain abusive, cyberbullying, harmful, hateful, misogynous, or propaganda elements. The intent is to encourage ethical behavior and empathy in a religious context, using the visual metaphor of sharing food to represent acts of kindness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text",
+      "description": "jesus doesn't care how many bible verses you have memorized",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "hand",
+      "label": "human hand",
+      "description": "A bare hand offering a piece of bread to another hand. The offering hand is positioned on the left side of the image, while the receiving hand is on the right, wearing a knitted glove. The offering hand appears to be of a lighter skin tone, while the receiving hand is partially obscured by the glove, but the visible part suggests a darker skin tone. The gesture is one of giving or sharing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "bread_offering",
+      "label": "hand offering bread",
+      "description": "A scene depicting a bare hand offering a piece of bread to another hand wearing a knitted glove, symbolizing charity or compassion. The offering hand is on the left, and the receiving hand is on the right. The gesture represents giving and sharing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "hand",
+          "relation": "offers",
+          "to": "hand"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "jesus",
+      "label": "Jesus Christ",
+      "description": "The central figure of Christianity, believed by followers to be the Son of God and the Messiah. The meme references his teachings and values, particularly emphasizing compassion and action over mere religious knowledge.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "bible",
+      "label": "The Bible",
+      "description": "The sacred text of Christianity, comprising the Old and New Testaments. It contains religious teachings, stories, and verses that are often memorized by believers. The meme contrasts memorization of verses with practical compassion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "compassion",
+      "label": "Compassion",
+      "description": "The emotional response of sympathy and concern for the suffering of others, often expressed through acts of kindness or charity. The image of offering bread symbolizes this concept, which the text says Jesus values more than memorized scripture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "charity",
+      "label": "Charity",
+      "description": "The practice of giving help or resources to those in need, often motivated by religious or moral principles. The bread offering in the image is a classic visual metaphor for charity, especially in Christian contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_practice",
+      "label": "Religious Practice",
+      "description": "The rituals, behaviors, and beliefs that constitute a religion. The meme contrasts 'religious knowledge' (memorizing Bible verses) with 'religious practice' (how one treats people), suggesting that actions are more important than knowledge in the eyes of Jesus.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "jesus_teachings",
+      "label": "Jesus' Teachings",
+      "description": "The moral and ethical principles taught by Jesus, including love, forgiveness, and caring for the poor and marginalized. The meme draws on these teachings to argue that compassion is more important than religious knowledge.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "bible_memorization",
+      "label": "Bible Memorization",
+      "description": "The practice of memorizing passages from the Bible, often done by religious individuals as a form of devotion or study. The meme critiques this practice as being less important than how one treats others.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_authority",
+      "label": "Religious Authority",
+      "description": "The concept of religious leaders or institutions having authority over doctrine and practice. The meme implicitly critiques the idea that religious authority is defined by knowledge (e.g., memorizing verses) rather than by moral behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "compassion",
+      "label": "compassionate emotion",
+      "description": "The act of offering bread symbolizes care, empathy, and generosity towards someone in need, evoking a compassionate emotional state.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Jesus is mapped onto the act of offering bread",
+      "description": "The text refers to 'Jesus' and states that he cares about how people treat others. The visual of a hand offering bread symbolizes compassion and charity, which are core values attributed to Jesus. The mapping is that Jesus (the textual entity) is represented by the act of giving (the visual entity), as the offering of bread is a metaphor for Jesus' teachings on compassion and helping others.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User is projected onto the receiving hand wearing a knitted glove, symbolizing the recipient of compassion.",
+      "description": "The text 'he cares about how you treat people' directly addresses the viewer ('you'), projecting the user onto the role of the person being treated or receiving care, represented visually by the hand in the knitted glove. The user is invited to identify with the recipient of charity, emphasizing the personal responsibility to act compassionately.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "Christian audience",
+      "description": "The meme is designed for individuals who identify as Christian or are familiar with Christian teachings and practices. It references Jesus, the Bible, and religious concepts such as memorizing scripture and practicing compassion, which are central to Christian identity and community. The visual metaphor of bread offering aligns with Christian charitable traditions, making it particularly resonant with this audience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/51978.png",
+    "image_name": "51978.png",
+    "extraction_timestamp": "2025-12-16T04:19:47.550501",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

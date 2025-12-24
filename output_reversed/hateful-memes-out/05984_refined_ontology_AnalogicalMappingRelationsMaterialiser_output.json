@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "top_text",
+      "hasMappingEntity": "child_on_scooter"
+    },
+    {
+      "from": "child_on_scooter",
+      "relation": "mappedOnto",
+      "to": "top_text"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :top_text .",
+    ":mapping_1 :hasMappingEntity :child_on_scooter .",
+    ":child_on_scooter :mappedOnto :top_text ."
+  ],
+  "triples_count": 3
+}

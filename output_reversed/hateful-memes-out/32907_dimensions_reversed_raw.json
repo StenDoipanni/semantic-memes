@@ -1,0 +1,181 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: organic vegetable; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts two people, a man and a woman, in a field of crops, with the woman appearing to be inspecting or holding a small vegetable. The text overlay reads 'organic vegetable'. The scene is presented in a positive, wholesome context, suggesting a focus on healthy, natural food production. There is no visible toxicity, harmful content, or disparaging stereotypes present in the image. The intent appears to be promotional or educational, aiming to associate the concept of 'organic vegetable' with natural farming, sustainability, and healthy living. The juxtaposition of the text with the image reinforces the idea of organic produce being grown in a natural, unspoiled environment. No abusive, cyberbullying, harmful, hateful, misogynous, or propaganda elements are present.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "organic vegetable",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with long brown hair, wearing a plaid shirt over a green top and blue jeans, is leaning forward and looking down at a small vegetable held by the man. Her posture suggests she is inspecting or examining the vegetable closely.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "inspecting_vegetable",
+      "label": "inspecting_vegetable",
+      "description": "A scene where a woman and a man are in a field, with the woman leaning forward to inspect a small vegetable held by the man. The scene conveys a sense of collaboration and interest in organic produce.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "inspects",
+          "to": "vegetable"
+        },
+        {
+          "from": "man",
+          "relation": "holds",
+          "to": "vegetable"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "organic_farming_practices",
+      "label": "Organic Farming Practices",
+      "description": "The concept of 'organic vegetable' implies adherence to organic farming standards, which exclude synthetic pesticides, fertilizers, genetically modified organisms (GMOs), and irradiation. This knowledge is required to understand the implied value or certification associated with the produce in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sustainable_living",
+      "label": "Sustainable Living",
+      "description": "The image and text promote a lifestyle centered on environmental stewardship and health-conscious choices. This broader cultural trend, often associated with organic food, is implied by the wholesome, natural setting and the positive connotation of 'organic vegetable'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "health_food_trend",
+      "label": "Health Food Trend",
+      "description": "The meme leverages the popular cultural trend of prioritizing health and wellness through diet. 'Organic vegetable' is a common symbol in this trend, implying superior nutritional value and purity compared to conventionally grown produce.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "agricultural_education",
+      "label": "Agricultural Education",
+      "description": "The scene suggests an educational or demonstrative context, where the individuals are learning about or showcasing farming practices. This implies a connection to agricultural education or community farming initiatives, which are real-world concepts not visible in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "curiosity",
+      "label": "curious emotion",
+      "description": "The woman is leaning forward and looking down intently at the small vegetable held by the man, indicating a focused and inquisitive emotional state. Her posture suggests she is examining the vegetable closely, possibly assessing its quality or characteristics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_organic_vegetable_to_inspecting_vegetable",
+      "label": "The text 'organic vegetable' is mapped onto the scene of inspecting a vegetable in the field.",
+      "description": "The text 'organic vegetable' is overlaid on the image of a man and woman in a field, where the woman is inspecting a small vegetable held by the man. The mapping implies that the vegetable being inspected is an 'organic vegetable', and the scene represents the context of organic farming or organic produce. The visual material (the inspecting_vegetable scene) is being used to instantiate or exemplify the textual concept (organic vegetable).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the inspecting_vegetable scene",
+      "description": "The user is projected onto the scene of the woman and man inspecting the vegetable in the field, as this scene visually represents the concept of 'organic vegetable' being promoted. The user is invited to imagine themselves in the role of someone appreciating or learning about organic produce, aligning with the wholesome, educational, and health-conscious intent of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "organic farming enthusiasts",
+      "description": "The meme targets individuals interested in organic farming practices, sustainability, and natural food production. The visual of inspecting a vegetable in a field, combined with the text 'organic vegetable', appeals to those who value eco-friendly agriculture and are likely engaged in or curious about organic food trends.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/32907.png",
+    "image_name": "32907.png",
+    "extraction_timestamp": "2025-12-15T22:33:44.520716",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

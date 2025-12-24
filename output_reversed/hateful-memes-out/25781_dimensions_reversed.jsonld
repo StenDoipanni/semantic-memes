@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_3cd7f289",
+  "@type": "AnalysisDocument",
+  "title": "25781.png - Dimension Analysis",
+  "created": "2025-12-15T19:31:09.897161",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_44720539",
+    "@type": "Image",
+    "filename": "25781.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/25781.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/25781.png",
+    "image_name": "25781.png",
+    "extraction_timestamp": "2025-12-15T19:29:43.511015",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e097e411",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a black man running away from police officers in a confrontational street scene, overlaid with the text 'do you have any idea how black you were going'. This juxtaposition uses a racially charged metaphor, implying the man's skin color is so dark that it is literally 'black' in a derogatory, stereotypical way. This directly invokes anti-Black racism by equating dark skin with criminality or danger, reinforcing harmful stereotypes that associate Blackness with aggression or criminal behavior. The meme's intent is to demean and dehumanize Black individuals by reducing their identity to a racialized, negative caricature, making it a hateful and toxic piece of content.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3cd7f289"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_672a34a7",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "do you have any idea how black you were going",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3cd7f289"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0ceaea90",
+      "@type": "VisualMaterial",
+      "instance_name": "Black_man_running",
+      "label": "person",
+      "description": "A Black man in dark clothing is running away from police officers, appearing to be in a state of urgency or fear. He is the central figure in the foreground and is the subject of the meme's text overlay, which uses a racially charged metaphor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3cd7f289"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a32d244e",
+      "@type": "Scene",
+      "instance_name": "chasing_scene",
+      "label": "Black man being chased by police officers",
+      "description": "A Black man is running away from a group of police officers who are in pursuit. The scene takes place on a city street with a building in the background. The police officers are equipped with riot gear, including helmets and shields, suggesting a tense or confrontational situation. The man appears to be in a state of urgency or fear. The text overlay 'do you have any idea how black you were going' adds a racially charged context to the scene, implying a derogatory stereotype about Blackness.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3cd7f289"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_02f59225",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_criminal_behavior",
+      "label": "Anti-Black Stereotype: Criminal Behavior Associations",
+      "description": "The meme relies on the harmful stereotype that Black people are inherently criminal or dangerous, which is reinforced by the text 'do you have any idea how black you were going'. This phrase uses 'black' as a racial slur implying criminality or menace, reducing the individual to a racialized caricature. This stereotype is a core component of systemic racism and is not visible in the image but is essential to understanding the meme's hateful intent.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3cd7f289"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3d520d56",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racial_slur_metaphor",
+      "label": "Racial Slur Metaphor",
+      "description": "The phrase 'how black you were going' is a derogatory racial metaphor that equates dark skin with criminality or danger. This is not a literal description but a loaded, offensive trope rooted in historical racism. It is essential background knowledge to interpret the meme's intent, which is to demean and dehumanize Black individuals by reducing their identity to a racialized, negative caricature.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3cd7f289"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4d5d8691",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "historical_context_racial_tension",
+      "label": "Historical Context of Racial Tension",
+      "description": "The image, though not explicitly dated, depicts a scene of racialized police pursuit, which is a common trope in historical and contemporary narratives of anti-Black racism in Western societies. The visual of a Black man being chased by police in riot gear evokes real-world incidents of racial profiling and police brutality, which are not directly visible but are necessary to understand the meme's context and its reinforcement of systemic racism.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3cd7f289"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_afdfdd95",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_aggressive_nature",
+      "label": "Anti-Black Stereotype: Aggressive/Violent Nature Claims",
+      "description": "The meme implicitly relies on the stereotype that Black people are inherently aggressive or violent, which is used to justify the portrayal of the Black man as a threat. This stereotype is not visible in the image but is essential to understanding the meme's intent to dehumanize and justify racialized fear or hostility toward Black individuals.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3cd7f289"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c395ffe8",
+      "@type": "EmotionExpression",
+      "instance_name": "fear",
+      "label": "fearful expression",
+      "description": "The Black man running away from police officers displays a clear expression of fear, as indicated by his hurried movement, body posture, and the tense context of being chased. His facial expression, though partially obscured, suggests urgency and apprehension.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3cd7f289"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_36ddc7f8",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Racial slur metaphor mapped onto the Black man running",
+      "description": "The text 'do you have any idea how black you were going' is an analogical mapping that projects the derogatory racial slur 'black' (implying criminality or menace) onto the visual entity 'Black_man_running'. This mapping equates the man's dark skin with a negative stereotype, reducing his identity to a racialized caricature. The text explicitly uses 'black' as a metaphor for danger or criminality, which is visually represented by the man being chased by police in a confrontational scene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3cd7f289"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ec05ff35",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the text 'do you have any idea how black you were going' because the text uses the second-person pronoun 'you', directly addressing the viewer and inviting them to identify with the rhetorical question. This creates a semiotic projection where the user is positioned as the subject of the rhetorical inquiry, making them feel personally implicated in the meme's racially charged message.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3cd7f289"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e58cc04a",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses a racially charged metaphor to dehumanize a Black individual by equating his dark skin with criminality or danger, directly invoking anti-Black racism and reinforcing harmful stereotypes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3cd7f289"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_96c00dcb",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The target community is individuals who may be familiar with or perpetuate anti-Black racist stereotypes, particularly those who find humor or validation in racially charged metaphors that equate dark skin with criminality or danger. The meme is designed to resonate with audiences who either endorse or are indifferent to systemic racism, and who may interpret the visual of a Black man being chased by police as a justification for the derogatory text. This includes communities that engage with or circulate hate-based content, often online, where such memes are used to reinforce harmful narratives about Black people. The audience is likely to be those who are not directly targeted by the stereotype but who may find the meme’s message amusing, provocative, or relatable within a context of racial prejudice.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3cd7f289"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

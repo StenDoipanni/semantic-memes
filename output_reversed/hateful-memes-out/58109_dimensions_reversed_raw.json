@@ -1,0 +1,206 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: hateful; overall-intent-description: The meme juxtaposes two images: the top image shows a group of people holding a framed photo of a person with pink hair and makeup, with the text 'no to transphobes,' while the bottom image shows a person in a Pride flag, with the text 'give trans people peace.' The overall intent is to portray transphobia as a problem that needs to be addressed, but the framing of the top image, with the group holding a framed photo of a person who appears to be a trans woman, may be interpreted as mocking or ridiculing trans people. The meme uses the visual of the framed photo to suggest that trans people are being 'boxed in' or 'contained,' which can be seen as a harmful and hateful representation. The meme's intent is to provoke a reaction and to suggest that transphobia is a problem that needs to be addressed, but the way it is presented may be seen as offensive and harmful to the trans community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "no to transphobes",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "group_of_people_holding_frame",
+      "label": "people holding a framed photo",
+      "description": "A group of five people (three women and two men) are holding a large ornate gold picture frame. The person in the foreground has pink hair and makeup, and appears to be a trans woman. The group is smiling and posing playfully, with some people leaning into the frame. The framing suggests they are presenting or showcasing the person inside the frame. This image is juxtaposed with the text 'no to transphobes'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "framed_photo_presentation",
+      "label": "Group presenting a framed photo of a trans woman",
+      "description": "A group of five people (three women and two men) are holding a large ornate gold picture frame, presenting a photo of a person with pink hair and makeup who appears to be a trans woman. The group is smiling and posing playfully, suggesting they are showcasing or highlighting the person in the frame. This scene is juxtaposed with the text 'no to transphobes'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "transphobia",
+      "label": "transphobia",
+      "description": "A form of prejudice or discrimination against transgender people. The meme uses the phrase 'no to transphobes' to frame transphobia as a social problem to be opposed, but the visual presentation of the framed photo may be interpreted as mocking or ridiculing trans people, which is a form of transphobic imagery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "framed_photo_presentation",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "transgender_identity",
+      "label": "transgender identity",
+      "description": "The social and/or legal recognition of a person's gender identity that differs from the sex they were assigned at birth. The person in the framed photo is visually identifiable as a trans woman, and the meme references 'trans people' in the bottom text, requiring knowledge of transgender identity to understand the context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "framed_photo_presentation",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Pride_flag",
+      "label": "Pride flag",
+      "description": "A symbol of LGBTQ+ pride and solidarity, often used in protests, marches, and public displays to show support for LGBTQ+ rights. The person in the bottom image is wearing a Pride flag, which is a direct visual reference to LGBTQ+ identity and activism, requiring knowledge of this symbol to understand the context of 'give trans people peace'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "group_of_people_holding_frame",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "transphobic_stereotype",
+      "label": "transphobic stereotype",
+      "description": "A harmful and derogatory stereotype that portrays transgender people in a negative or mocking light. The meme's framing of the trans woman in a picture frame, combined with the text 'no to transphobes', may be interpreted as reinforcing a stereotype that trans people are 'boxed in' or 'contained', which is a form of transphobic imagery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "framed_photo_presentation",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "LGBTQ_discrimination",
+      "label": "LGBTQ+ discrimination",
+      "description": "Systemic or individual acts of prejudice or discrimination against LGBTQ+ individuals. The meme references 'trans people' and uses the phrase 'give trans people peace', which implies a call for an end to discrimination against transgender individuals, requiring knowledge of LGBTQ+ discrimination to understand the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "framed_photo_presentation",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_containment",
+      "label": "mocking and condescending emotion",
+      "description": "The top image portrays a group of people holding a framed photo of a trans woman, with the text 'no to transphobes'. The framing of the photo, combined with the group's playful posing, suggests a mocking or condescending attitude toward trans people, implying they are 'boxed in' or 'contained'. This visual metaphor is used to express disdain or ridicule, which is a form of transphobic stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Transphobia is mapped onto the framed photo presentation",
+      "description": "The top text 'no to transphobes' is juxtaposed with the visual of a group holding a framed photo of a trans woman. The framing of the photo, combined with the group's playful posing, creates an analogical mapping where the framed photo (a visual container) is mapped onto the concept of 'transphobia' as a social problem to be opposed. However, the visual metaphor of 'boxing in' the trans woman can be interpreted as mocking or ridiculing trans people, which is a form of transphobic stereotype. This mapping is implicit through the juxtaposition and the emotional tone conveyed by the visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the framed photo presentation",
+      "description": "The user is projected onto the visual material of the group holding the framed photo of the trans woman, as the meme's overall intent and the juxtaposition of images imply a direct address to the viewer regarding transphobia. The framing of the photo and the text 'no to transphobes' suggest the user is being invited to take a stance against transphobia, with the visual of the framed person serving as the focal point of this projection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses the visual metaphor of a framed photo to suggest that trans people are 'boxed in' or 'contained', which can be seen as a harmful and hateful representation. The overall intent is to portray transphobia as a problem that needs to be addressed, but the framing of the top image may be interpreted as mocking or ridiculing trans people, which is a form of transphobic imagery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "transgender_identity",
+      "label": "transgender community",
+      "description": "The meme directly references 'trans people' and uses imagery associated with transgender identity (pink hair, makeup, Pride flag) to frame a call for peace. The target audience is likely individuals who identify as transgender or are allies to the transgender community, as the message is about ending discrimination against them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/58109.png",
+    "image_name": "58109.png",
+    "extraction_timestamp": "2025-12-16T05:53:07.542164",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

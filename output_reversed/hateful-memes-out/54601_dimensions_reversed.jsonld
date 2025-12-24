@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_4f6a0486",
+  "@type": "AnalysisDocument",
+  "title": "54601.png - Dimension Analysis",
+  "created": "2025-12-16T05:07:24.410442",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_577f5627",
+    "@type": "Image",
+    "filename": "54601.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/54601.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/54601.png",
+    "image_name": "54601.png",
+    "extraction_timestamp": "2025-12-16T05:04:18.732220",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d787767a",
+      "@type": "OverallIntent",
+      "instance_name": "dimension_1",
+      "label": "the overallintent",
+      "description": "The image depicts a black-and-white photo of several people, mostly women, struggling to hold a hose while being sprayed with water. The text overlay reads, \\",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4f6a0486"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9e4aa084",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "i hope father jeffrey",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4f6a0486"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_90431f6a",
+      "@type": "VisualMaterial",
+      "instance_name": "people",
+      "label": "group of individuals",
+      "description": "A group of five people, mostly women, are shown in a black-and-white photograph. They are struggling to hold a water hose while being sprayed with water. Their expressions range from determined to amused, and they are dressed in work clothes, suggesting a labor or industrial setting. The group appears to be working together to manage the hose, with some individuals leaning into the effort and others smiling despite the spray.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4f6a0486"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e621b99c",
+      "@type": "Scene",
+      "instance_name": "struggling_with_hose",
+      "label": "people struggling to hold a water hose",
+      "description": "A group of five people, mostly women, are shown in a black-and-white photograph. They are struggling to hold a water hose while being sprayed with water. Their expressions range from determined to amused, and they are dressed in work clothes, suggesting a labor or industrial setting. The group appears to be working together to manage the hose, with some individuals leaning into the effort and others smiling despite the spray.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4f6a0486"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_cbd161ac",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "stereotype_water_swimming_ability",
+      "label": "Stereotype: Black people are poor swimmers",
+      "description": "The meme plays on the racist stereotype that Black people are not good swimmers, implying that if Father Jeffrey (a white person) is going to be in the water, he should be careful not to get wet. This is a derogatory trope rooted in historical racism against Black people, often used to demean their physical abilities.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4f6a0486"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e7a25463",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "stereotype_black_people_aggressive",
+      "label": "Stereotype: Black people are aggressive or violent",
+      "description": "The image of people struggling with a hose while being sprayed with water, combined with the text, implies that the group (likely Black) is being portrayed as 'aggressive' or 'uncontrollable' in their behavior, which is a racist trope used to justify discrimination or fear.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4f6a0486"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e5d06885",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "father_jeffrey",
+      "label": "Father Jeffrey",
+      "description": "Father Jeffrey is a fictional or real person referenced in the meme. The name 'Father Jeffrey' is often used in memes to refer to a stereotypical white Catholic priest, often portrayed as a figure of authority or moral guidance. The joke implies that the group of people (likely Black) are 'trying to drown' him, which is a racist trope.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4f6a0486"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_57987738",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racist_meme_template",
+      "label": "Racist Meme Template",
+      "description": "This meme uses a template of a Black person or group being portrayed as 'dangerous' or 'aggressive' in a water-related scenario, often implying that they are 'trying to drown' a white person. This is a common racist meme format that relies on stereotypes about Black people being violent or aggressive.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4f6a0486"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9c1427df",
+      "@type": "EmotionExpression",
+      "instance_name": "amusement",
+      "label": "amused emotional expression",
+      "description": "One of the individuals in the group is smiling broadly while being sprayed with water, indicating amusement despite the physical struggle. This suggests a lighthearted or playful emotional state.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4f6a0486"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_85f825ac",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Father Jeffrey is mapped onto the group of people struggling with the hose",
+      "description": "The text 'i hope father jeffrey doesnt go in dry today' implies that the group of people (likely Black, based on historical context of the meme) are 'trying to drown' Father Jeffrey (a white person). The visual of the group struggling with the hose while being sprayed with water is mapped onto the textual entity 'father jeffrey', creating an analogical mapping where the group's actions are projected as an attempt to submerge or 'drown' the priest. This is a racist meme template where the visual material (the group) is mapped onto the textual entity (Father Jeffrey) as the target of their 'aggressive' or 'dangerous' behavior.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4f6a0486"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2768a221",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material expressing hope for Father Jeffrey's safety",
+      "description": "The user is projecting themselves onto the textual material 'i hope father jeffrey doesnt go in dry today', imagining themselves as the one expressing concern or hope for Father Jeffrey's safety. This projection is implicit, as the meme does not contain explicit deictic pronouns like 'me' or 'you', but the user is engaging with the meme by adopting the perspective of the speaker of the text.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4f6a0486"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1eb166a1",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Racist",
+      "description": "The meme relies on a racist stereotype that Black people are poor swimmers and aggressive, implying they are trying to drown a white person (Father Jeffrey).",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4f6a0486"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_18d1423f",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who are familiar with and may find humor in racist stereotypes, particularly those that portray Black people as poor swimmers and aggressive, and who recognize the trope of 'Father Jeffrey' as a white Catholic priest figure being targeted in such memes. The meme is designed to appeal to an audience that understands and engages with this specific racist meme template, often found in online spaces where such content is circulated and consumed.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4f6a0486"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

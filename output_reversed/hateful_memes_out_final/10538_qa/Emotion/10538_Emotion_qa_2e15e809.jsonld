@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#qa_2e15e809-241a-4c18-ab4e-77a19be4ea11",
+  "@type": "QuestionAnswerPair",
+  "question": "What emotion does the text falsely attribute to Morgan Freeman?",
+  "answers": [
+    {
+      "text": "Joy from winning an award",
+      "is_correct": false
+    },
+    {
+      "text": "None of the others",
+      "is_correct": false
+    },
+    {
+      "text": "Surprise at the award",
+      "is_correct": false
+    },
+    {
+      "text": "Strong moral disapproval",
+      "is_correct": true
+    }
+  ],
+  "explanation": "The text falsely claims Morgan Freeman is condemning slavery, which is a strong moral disapproval emotion, even though he is just holding an award.",
+  "dimension": "Emotion",
+  "relatedInstances": [
+    "condemnation"
+  ],
+  "generationTimestamp": "2025-12-23T20:23:49.557418",
+  "generationMethod": "huggingface_api",
+  "sourceImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_10538",
+    "@type": "Image",
+    "filename": "10538.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/10538.png"
+  }
+}

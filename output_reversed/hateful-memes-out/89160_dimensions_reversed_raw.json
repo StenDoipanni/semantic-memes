@@ -1,0 +1,158 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: live-your-life-meme; hasOverallIntent: inspirational; overall-intent-description: The image features a smiling older man in a formal suit, with the text 'live your life every moment' overlaid. The scene is posed and celebratory, suggesting a motivational or inspirational message. There is no toxicity present; the meme does not target any specific group or individual with harmful, hateful, abusive, or propagandistic intent. The intent is to encourage viewers to embrace life and make the most of each moment, using the image of a dignified, happy individual as a positive visual anchor for the message. The analogical mapping is straightforward: the joyful expression and confident posture of the man are juxtaposed with the uplifting text to reinforce the idea of living fully.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "live your life",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "older man in formal suit",
+      "description": "A smiling older white man with white hair, wearing a dark blue double-breasted suit, light-colored shirt, and tie. He is holding a small object in his right hand and has a pocket square in his jacket. His expression is joyful and confident, suggesting a celebratory or positive moment. He is the central and most salient visual element in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "celebratory_pose",
+      "label": "man posing confidently with joyful expression",
+      "description": "The scene centers on a single older man in a formal suit, standing in a posed manner with a broad smile and confident posture. He is holding a small object in his right hand and has a pocket square in his jacket. The background is dimly lit and appears to be an indoor event space, suggesting a celebratory or formal occasion. The man is the sole participant and focal point of the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "background_knowledge_item_1",
+      "label": "The motivational phrase 'live your life every moment'",
+      "description": "This phrase is a common inspirational or self-help cliché, often used in motivational literature, speeches, and social media to encourage people to embrace life fully and not waste time. It is not a specific historical event or person but a cultural concept that relies on broader societal values around personal fulfillment and time management.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "background_knowledge_item_2",
+      "label": "The image of a smiling, dignified older man in formal attire as a symbol of success or fulfillment",
+      "description": "The visual of an older, well-dressed, smiling man is often culturally associated with wisdom, achievement, and contentment. This trope is used in media and advertising to represent the rewards of hard work and a life well-lived. The image leverages this cultural association to reinforce the inspirational message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "background_knowledge_item_3",
+      "label": "The concept of 'living in the moment' as a philosophical or psychological idea",
+      "description": "The phrase 'every moment' implies a mindfulness or present-moment awareness philosophy, often associated with Eastern spiritual traditions (like Buddhism) or modern self-help psychology (like mindfulness meditation). This concept is not visible in the image but is essential to understanding the depth of the message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "background_knowledge_item_4",
+      "label": "The use of posed, celebratory imagery in motivational memes",
+      "description": "The image is staged and celebratory, which is a common technique in motivational media to create a positive emotional response. This relies on the cultural understanding that posed, happy images are meant to inspire or uplift, and that the viewer should associate the image with the message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "celebratory_pose",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful and confident emotion",
+      "description": "The older man in the formal suit displays a broad, genuine smile with crinkled eyes, conveying joy and contentment. His confident posture and joyful expression suggest a celebratory and positive emotional state, aligning with the inspirational message of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The joyful, confident man symbolizes living your life fully",
+      "description": "The text 'live your life every moment' is mapped onto the visual of the older man in a formal suit. His joyful expression and confident posture are used as a visual metaphor for the concept of living fully and embracing each moment. The image leverages the cultural association of a dignified, happy older man with wisdom and fulfillment to reinforce the inspirational message. This is an analogical mapping where the visual entity (the man) represents the abstract concept (living every moment) conveyed by the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the inspirational message and the visual representation of living fully",
+      "description": "The user is projected onto the textual message 'live your life every moment' and the visual material of the joyful, confident older man, as the meme implicitly addresses the viewer with a direct motivational call to action. The phrase 'your life' directly deictically refers to the user's own life, and the image of the man serves as a visual model or ideal for the user to aspire to. The user is invited to identify with the man's happiness and confidence as a representation of living fully.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general inspirational audience",
+      "description": "The meme is designed for a broad, general audience seeking motivational or self-help content. The message 'live your life every moment' is a universal inspirational phrase, and the image of a smiling, dignified older man in formal attire is culturally associated with wisdom, achievement, and contentment. This visual metaphor appeals to individuals across demographics who are looking for encouragement to embrace life fully, make the most of each moment, and find fulfillment. The celebratory, posed nature of the image reinforces its use in uplifting contexts, making it suitable for anyone interested in personal growth, mindfulness, or positive affirmations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/89160.png",
+    "image_name": "89160.png",
+    "extraction_timestamp": "2025-12-19T16:41:35.291236",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

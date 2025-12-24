@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "happy_birthday_mapping",
+      "hasMappedEntity": "top_text",
+      "hasMappingEntity": "Hulk_Hogan"
+    },
+    {
+      "from": "Hulk_Hogan",
+      "relation": "mappedOnto",
+      "to": "top_text"
+    }
+  ],
+  "triples": [
+    ":happy_birthday_mapping :hasMappedEntity :top_text .",
+    ":happy_birthday_mapping :hasMappingEntity :Hulk_Hogan .",
+    ":Hulk_Hogan :mappedOnto :top_text ."
+  ],
+  "triples_count": 3
+}

@@ -1,0 +1,207 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Abusive; overall-intent-description: The image depicts a teacher pointing out a mistake on a chalkboard to a student, with overlaid text that reads 'see here's your mistake' and 'you added a fuck that i didnt give.' The tone is confrontational and uses vulgar language, which can be interpreted as abusive. The meme is likely intended to humorously depict a scenario where someone is being corrected harshly, possibly in an academic or professional setting. The use of profanity and the aggressive tone of the text suggest an intent to mock or belittle the student, fitting the definition of abusive content. There is no indication of targeting specific protected characteristics, but the overall intent is to demean or insult the individual being corrected, which aligns with abusive intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "Text content: 'see here's your mistake'. Position: top center of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "bottom text overlay",
+      "description": "Text content: 'you added a fuck that i didnt give'. Position: bottom center of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "adult male",
+      "description": "An adult male, likely a teacher or professor, wearing glasses and a beige ribbed sweater, pointing at a chalkboard with chalk in his right hand. He appears to be correcting something written on the board.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "chalkboard_correction",
+      "label": "teacher_correcting_student",
+      "description": "A teacher is pointing at a chalkboard with chalk in his right hand, correcting a student who is standing beside him. The student is looking at the chalkboard with a backpack on. The scene is set in an academic environment, likely a classroom or lecture hall, with mathematical equations written on the chalkboard. The teacher is actively engaged in correcting the student's work, while the student appears to be listening or reacting to the correction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "points_to",
+          "to": "woman"
+        },
+        {
+          "from": "man",
+          "relation": "explains_to",
+          "to": "woman"
+        },
+        {
+          "from": "woman",
+          "relation": "listens_to",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "academic_setting",
+      "label": "Academic Setting",
+      "description": "The scene is set in an academic environment, likely a classroom or lecture hall, where a teacher is correcting a student's work on a chalkboard. This context is essential to understand the interaction as a pedagogical correction, which is the basis for the meme's humor and tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "chalkboard_correction",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "profanity_use",
+      "label": "Use of Profanity",
+      "description": "The text overlay includes the word 'fuck,' which is vulgar language. Understanding the impact and appropriateness of such language in different contexts (e.g., academic, professional, casual) is necessary to interpret the meme's tone and intent. The use of profanity here is meant to heighten the confrontational and abusive nature of the correction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "teacher_student_dynamic",
+      "label": "Teacher-Student Dynamic",
+      "description": "The meme relies on the stereotype of the authoritarian teacher correcting a student, often implying a power imbalance. This dynamic is culturally understood in educational settings and is central to the meme's humor and critique of harsh correction methods.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "chalkboard_correction",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "academic_corrective_feedback",
+      "label": "Academic Corrective Feedback",
+      "description": "The meme references the common academic practice of correcting mistakes in assignments or exams. The humor arises from the exaggerated and abusive tone applied to this routine process, which is a real-world concept that must be understood to appreciate the meme’s satire.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "chalkboard_correction",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "abusive_tone",
+      "label": "Abusive Tone",
+      "description": "The meme’s overall intent is abusive, as noted in the overall intent instance. The use of vulgar language and the confrontational tone are key to understanding the meme’s intent to demean or insult the student, which is a real-world social phenomenon.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "confrontation",
+      "label": "confrontational emotion",
+      "description": "The teacher's gesture of pointing at the chalkboard and the aggressive tone of the overlaid text convey a confrontational emotional state, indicating a sharp, possibly hostile correction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Teacher correcting student is mapped to 'see here's your mistake'",
+      "description": "The text 'see here's your mistake' is overlaid on the image of the teacher pointing at the chalkboard, mapping the teacher's action of correction to the textual phrase. The teacher's gesture and the text together create an analogical mapping where the teacher's role as the corrector is explicitly linked to the phrase indicating a mistake.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the student as the recipient of the abusive correction",
+      "description": "The user is projected onto the student (the person being corrected) through the deictic pronouns 'your' and 'you' in the text overlays. The phrase 'see here's your mistake' directly addresses the student, and 'you added a fuck that i didnt give' explicitly targets the student as the one who made the error. This creates a semiotic projection where the viewer identifies with the student receiving the harsh feedback.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Abusive",
+      "description": "The meme uses vulgar language and a confrontational tone to demean the student being corrected, fitting the definition of abusive content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "Academic Community",
+      "description": "The meme is designed for individuals familiar with academic settings, particularly students and educators who recognize the dynamics of teacher-student interactions, corrective feedback, and the use of chalkboards in classrooms. The humor and intent rely on the shared understanding of academic correction, making it most resonant with those within or observing educational environments.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/67913.png",
+    "image_name": "67913.png",
+    "extraction_timestamp": "2025-12-16T09:04:27.335212",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

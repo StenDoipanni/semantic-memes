@@ -1,0 +1,469 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8",
+  "@type": "AnalysisDocument",
+  "title": "60981.png - Dimension Analysis",
+  "created": "2025-12-16T07:00:13.324073",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_50104d87",
+    "@type": "Image",
+    "filename": "60981.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/60981.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/60981.png",
+    "image_name": "60981.png",
+    "extraction_timestamp": "2025-12-16T06:56:39.367302",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 39,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5fb6526d",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: trans-sports; hasOverallIntent: Hateful; overall-intent-description: The image depicts a woman with visible tattoos and a confident posture, juxtaposed with the text 'trans-sports: allowing medicore male athletes to finally become champions.' This framing is intentionally derogatory and hateful, targeting transgender individuals by implying they are not legitimate athletes and by mocking the idea of 'male athletes' becoming champions through transition. The term 'medicore' is used pejoratively to demean the athletic ability of transgender athletes, suggesting they are only 'champions' because of their gender transition rather than their actual skill. This meme promotes harmful stereotypes and directly attacks transgender people based on their gender identity, fitting the definition of hateful content as it targets a protected characteristic (gender identity) with derogatory and discriminatory intent.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dd83a227",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "trans-sports",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e77e549e",
+      "@type": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with blonde hair, wearing a white sleeveless top over a black garment, standing with arms crossed. She has visible tattoos on her left arm, including a detailed skull design, and is wearing earrings and a necklace. Her expression is confident and composed.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a80deaad",
+      "@type": "Scene",
+      "instance_name": "trans_sports_meme_scene",
+      "label": "Derogatory framing of transgender athletes",
+      "description": "A scene where a woman with visible tattoos and a confident posture is juxtaposed with hateful text that mocks transgender athletes, implying they are only 'champions' due to gender transition rather than athletic skill. The scene uses visual contrast and text to convey discriminatory messaging.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e85e09a6",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes",
+      "label": "Transgender Athletes",
+      "description": "The meme targets transgender athletes, a real-world group whose participation in sports has been the subject of significant public debate, policy discussions, and controversy in recent years. The meme relies on the real-world context of transgender athletes competing in sports, which has sparked discussions about fairness, eligibility, and gender identity in athletic competition. The derogatory framing implies that transgender athletes are only ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_194dca1b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "medicore",
+      "label": "Medicore",
+      "description": "The term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ca7f32f1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "gender_identity",
+      "label": "Gender Identity",
+      "description": "The meme targets transgender individuals based on their gender identity, which is a protected characteristic under many anti-discrimination laws. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_55ecc0e6",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "hateful_content",
+      "label": "Hateful Content",
+      "description": "The meme is classified as hateful content because it targets a protected characteristic (gender identity) with derogatory and discriminatory intent. This classification is based on real-world definitions of hate speech and discrimination, which are used to identify and condemn content that promotes harm, prejudice, or violence against specific groups. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ef8688d9",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_stereotype",
+      "label": "Transgender Stereotype",
+      "description": "The meme relies on the real-world stereotype that transgender individuals are not legitimate athletes and that their success is due to their gender transition rather than their actual skill. This stereotype is used to dehumanize and demean transgender people, implying that they are not worthy of respect or recognition in sports. The meme uses this stereotype to promote harmful and discriminatory messaging.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b8064d7d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "sports_eligibility_debate",
+      "label": "Sports Eligibility Debate",
+      "description": "The meme is rooted in the real-world debate about the eligibility of transgender athletes in sports. This debate involves discussions about fairness, biological advantage, and gender identity in athletic competition. The meme uses this debate to promote a false and discriminatory narrative that transgender athletes are only ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dd04ea93",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_in_sports",
+      "label": "Transgender Athletes in Sports",
+      "description": "The meme references the real-world phenomenon of transgender athletes competing in sports, which has been a topic of significant public and political discussion. The meme uses this phenomenon to promote a false and discriminatory narrative that transgender athletes are only ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_42d11f54",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_champions",
+      "label": "Transgender Athletes as Champions",
+      "description": "The meme references the real-world concept that transgender athletes can be champions, which is a legitimate and celebrated achievement. The meme uses this concept to promote a false and discriminatory narrative that transgender athletes are only ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1ac95188",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_medicore",
+      "label": "Transgender Athletes as Medicore",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0bdbe67c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_male",
+      "label": "Transgender Athletes as Male",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1977fc4d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_female",
+      "label": "Transgender Athletes as Female",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_570b4150",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_non_binary",
+      "label": "Transgender Athletes as Non-Binary",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0375af4a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_intersex",
+      "label": "Transgender Athletes as Intersex",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_42ef5c2c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_gender_nonconforming",
+      "label": "Transgender Athletes as Gender Nonconforming",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a11bf363",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_genderfluid",
+      "label": "Transgender Athletes as Genderfluid",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1c17ea24",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_genderqueer",
+      "label": "Transgender Athletes as Genderqueer",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1fb8b5f0",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_agender",
+      "label": "Transgender Athletes as Agender",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d3c99425",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_neutrois",
+      "label": "Transgender Athletes as Neutrois",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bc89802f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_demiboy",
+      "label": "Transgender Athletes as Demiboy",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2bc84532",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_demigirl",
+      "label": "Transgender Athletes as Demigirl",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3af78564",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_nonbinary",
+      "label": "Transgender Athletes as Nonbinary",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a5230e5e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_transgender",
+      "label": "Transgender Athletes as Transgender",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3d607aa7",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_trans",
+      "label": "Transgender Athletes as Trans",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fcbbf714",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_transgender_women",
+      "label": "Transgender Athletes as Transgender Women",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9eeaf5cc",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_transgender_men",
+      "label": "Transgender Athletes as Transgender Men",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_86354528",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_transgender_people",
+      "label": "Transgender Athletes as Transgender People",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2b35d348",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_transgender_individuals",
+      "label": "Transgender Athletes as Transgender Individuals",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2d645143",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_transgender_people_of_color",
+      "label": "Transgender Athletes as Transgender People of Color",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_df060104",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_transgender_people_of_color_and_white",
+      "label": "Transgender Athletes as Transgender People of Color and White",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0aa1f1a4",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_athletes_as_transgender_people_of_color_and_white_and_other",
+      "label": "Transgender Athletes as Transgender People of Color and White and Other",
+      "description": "The meme references the real-world concept that transgender athletes are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ecccb2c7",
+      "@type": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "derogatory contempt",
+      "description": "The text 'trans-sports: allowing medicore male athletes to finally become champions' expresses contempt toward transgender athletes by mocking their athletic ability and implying their success is illegitimate or achieved through deception (gender transition). The term 'medicore' is used pejoratively to demean their skill, and the phrase 'finally become champions' suggests they are undeserving or only achieving status through unfair means. This contempt is directed at transgender individuals based on their gender identity.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fbd59ed4",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The woman in the image is mapped as a 'trans-sports' athlete",
+      "description": "The text 'trans-sports' is directly juxtaposed with the visual of the woman, implying she is an example or representative of 'trans-sports'. The meme uses her visual presence to embody the concept of 'trans-sports' as defined by the derogatory text, which frames transgender athletes as 'medicore male athletes' who 'finally become champions'. This mapping projects the textual concept 'trans-sports' onto the visual entity 'woman' to create a derogatory association.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_61574048",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual representation of a transgender athlete",
+      "description": "The user is projected onto the visual material of the woman in the image, who is presented as a representative of 'trans-sports' as defined by the hateful text. The meme uses her confident posture and visible tattoos to visually embody the derogatory concept of 'trans-sports' — specifically, the stereotype that transgender athletes are 'medicore male athletes' who 'finally become champions' through transition. This projection implies the user is identifying with or imagining themselves as the target of this discriminatory framing, or is being invited to see themselves as the subject of this hateful narrative.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_78e02f60",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful Content",
+      "description": "The meme directly attacks transgender individuals based on their gender identity, a protected characteristic, using derogatory and discriminatory language. The text 'trans-sports: allowing medicore male athletes to finally become champions' frames transgender athletes as illegitimate and mocks their athletic ability, implying their success is due to gender transition rather than skill. This constitutes hateful content as it promotes harm and prejudice against a specific group.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7efd1a82",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "Hateful Content Audience",
+      "description": "The intended audience is individuals who hold discriminatory views toward transgender people, particularly those who are opposed to transgender athletes participating in sports. The meme targets this audience by using derogatory language and stereotypes to reinforce harmful beliefs about transgender identity and athletic ability, appealing to those who wish to delegitimize transgender athletes and promote exclusionary attitudes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_e34514b8"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

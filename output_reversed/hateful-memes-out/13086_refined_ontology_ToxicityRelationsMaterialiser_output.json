@@ -1,0 +1,50 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk_1"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "overallintent_instance"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "islamophobia_stereotype"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "american_population_target"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "terrorism_association"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "islamophobia_concept"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "islam_is_peaceful_claim"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :text_chunk_1 .",
+    ":toxicity_1 :hasToxicElement :overallintent_instance .",
+    ":toxicity_1 :hasToxicElement :islamophobia_stereotype .",
+    ":toxicity_1 :hasToxicElement :american_population_target .",
+    ":toxicity_1 :hasToxicElement :terrorism_association .",
+    ":toxicity_1 :hasToxicElement :islamophobia_concept .",
+    ":toxicity_1 :hasToxicElement :islam_is_peaceful_claim ."
+  ],
+  "triples_count": 7
+}

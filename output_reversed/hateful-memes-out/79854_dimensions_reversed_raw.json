@@ -1,0 +1,193 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes a smiling white woman with a man wearing a headband with Arabic text (likely indicating his identity as a Muslim) who is yelling in frustration. The text reads 'you knew that was the wrong hole' and 'you're goddamn right i did!'. The intent is to portray the Muslim man as foolish or incompetent for making a mistake, using his religious identity as a punchline. This is a hateful meme that targets Muslims by associating them with stupidity or ignorance, fitting the 'Islamophobia' category from the provided knowledge base, specifically 'violence/barbarism claims' and 'incompatibility with Western values' through the use of the man's appearance and the context of the joke. The meme relies on the viewer's assumption that the man's religious identity is the reason for his mistake, which is a harmful and stereotypical portrayal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "you knew that was the wrong hole",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "smiling white woman",
+      "description": "A blonde woman with a smiling expression, appearing to be in a neutral or slightly amused state. Her facial expression is calm and composed, contrasting with the man below her. She is positioned in the top half of the image and is the first visual element presented to the viewer.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "juxtaposed_reactions",
+      "label": "juxtaposed_reactions",
+      "description": "A scene depicting a visual contrast between a smiling white woman and a man wearing a headband with Arabic text, who is yelling in frustration. The scene is framed as a meme with text overlays that imply the man made a mistake and is now admitting it. The spatial arrangement places the woman above the man, creating a visual hierarchy that emphasizes the contrast in their expressions and reactions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "isAbove",
+          "to": "man"
+        },
+        {
+          "from": "man",
+          "relation": "yelling_at",
+          "to": "woman"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The meme relies on the stereotype that Muslims are inherently foolish or incompetent, using the man's religious identity (indicated by the Arabic headband) as the punchline for his mistake. This is a harmful and derogatory portrayal that fits within the 'violence/barbarism claims' and 'incompatibility with Western values' categories of Islamophobia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "juxtaposed_reactions",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "arabic_headband_identity",
+      "label": "Arabic Headband as Religious Identity Marker",
+      "description": "The green headband with Arabic text is a visual cue that identifies the man as Muslim. This requires external knowledge to interpret the headband as a religious symbol (specifically, a keffiyeh or similar headwear associated with Muslim identity), which is central to the meme's punchline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "juxtaposed_reactions",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "western_values_context",
+      "label": "Western Values Context",
+      "description": "The meme implies a contrast between the 'Western' woman (smiling, calm) and the 'non-Western' Muslim man (frustrated, yelling), suggesting the man's mistake is incompatible with Western norms or values. This requires understanding of cultural stereotypes about Western superiority and the framing of 'Western values' as a standard.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "juxtaposed_reactions",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny_stereotype",
+      "label": "Misogyny Stereotype",
+      "description": "The meme subtly reinforces the stereotype that women are more composed or intelligent than men, by contrasting the calm, smiling woman with the frustrated, yelling man. This requires external knowledge of gender stereotypes that portray women as emotionally stable and men as prone to anger or incompetence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "juxtaposed_reactions",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "intelligence_mockery",
+      "label": "Intelligence Mockery",
+      "description": "The meme mocks the man's intelligence by implying he made a simple, obvious mistake ('wrong hole') and then admits it with frustration. This requires understanding of the stereotype that certain groups (here, Muslims) are unintelligent or incapable of basic judgment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "juxtaposed_reactions",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "amusement",
+      "label": "the amused expression",
+      "description": "The woman's facial expression conveys a calm, slightly amused or knowing smile, suggesting she is entertained or satisfied by the situation or the man's reaction below her.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man's frustration is mapped onto the text 'you're goddamn right i did!'",
+      "description": "The text 'you're goddamn right i did!' is directly mapped onto the visual entity of the man yelling in frustration. The text serves as a verbalization of his emotional state and reaction, creating an analogical mapping where the textual expression is the verbal counterpart to his visual expression of anger and admission of error.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man's frustrated reaction",
+      "description": "The user is projected onto the man wearing the Arabic headband who is yelling in frustration, as the meme's punchline ('you're goddamn right i did!') is directed at him, implying the user is identifying with his admission of error. The text 'you knew that was the wrong hole' also implicitly addresses the viewer, creating a direct address that projects the user onto the scene of the man's mistake and emotional reaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobia",
+      "description": "The meme targets Muslims by associating them with stupidity or ignorance, using the man's religious identity as a punchline for his mistake. This is a harmful and stereotypical portrayal that fits within the 'violence/barbarism claims' and 'incompatibility with Western values' categories of Islamophobia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience that holds or is exposed to Islamophobic stereotypes, particularly those who perceive Muslims as inherently foolish or incompetent. The target audience likely includes individuals who are familiar with or endorse the 'violence/barbarism claims' and 'incompatibility with Western values' tropes associated with Islamophobia. The meme relies on the viewer's ability to interpret the Arabic headband as a marker of Muslim identity and to accept the stereotype that this identity is linked to stupidity, making the audience members who subscribe to such stereotypes the primary target. The contrast with the 'Western' woman also implies the target audience is familiar with or values Western cultural norms as superior, reinforcing the meme's divisive message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/79854.png",
+    "image_name": "79854.png",
+    "extraction_timestamp": "2025-12-19T13:43:46.857024",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

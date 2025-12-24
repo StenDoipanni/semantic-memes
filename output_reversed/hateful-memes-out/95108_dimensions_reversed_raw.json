@@ -1,0 +1,158 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts a lively, blurred scene of people dancing at a gay club, with the text overlay stating, 'went gay clubbing with some friends turns out out they were expecting something very different.' The scene is energetic and celebratory, with individuals raising their hands and enjoying the atmosphere. There is no visible toxicity, harmful content, or hateful messaging. The meme's intent is to humorously convey a situation where friends had unrealistic expectations about a gay clubbing experience, likely implying that the actual experience was more vibrant or intense than anticipated. The overall intent is lighthearted and comedic, using the juxtaposition of the text with the energetic visual to create a relatable and amusing scenario. No abusive, cyberbullying, harmful, hateful, misogynous, or propaganda elements are present.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "went gay clubbing with some friends turns out out they were expecting something very different",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "people",
+      "label": "individuals dancing at a club",
+      "description": "A group of people, mostly seen from behind or in motion, are dancing energetically with arms raised. One person in the foreground wears a black leather jacket. The scene is blurred due to motion, conveying high energy and movement. The individuals appear to be enjoying themselves in a crowded, vibrant nightclub setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "clubbing_people",
+      "label": "people dancing at a gay club",
+      "description": "A lively, blurred scene of people dancing at a gay club, with individuals raising their hands and enjoying the atmosphere. The scene is energetic and celebratory, with one person in the foreground wearing a black leather jacket. The text overlay states, 'went gay clubbing with some friends turns out out they were expecting something very different.'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gay_clubbing_culture",
+      "label": "Gay Clubbing Culture",
+      "description": "Refers to the social and recreational activity of attending gay nightclubs, often characterized by vibrant music, dancing, and a sense of community. This context is necessary to understand the meme's reference to 'gay clubbing' as a specific social experience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "expectation_vs_reality_meme_trope",
+      "label": "Expectation vs. Reality Meme Trope",
+      "description": "A common internet meme format where the text describes a situation where someone's expectations were not met, often humorously. This trope is essential to interpret the text 'turns out out they were expecting something very different' as a comedic setup.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "clubbing_experience",
+      "label": "Clubbing Experience",
+      "description": "The general concept of going out to a nightclub to dance and socialize, which is the context for the meme's scenario. The image depicts this experience, but understanding the meme requires knowing it's a common social activity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "friend_group_social_context",
+      "label": "Friend Group Social Context",
+      "description": "The idea that friends often go out together and may have shared expectations or assumptions about an outing. This is necessary to understand the social dynamic described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful emotion",
+      "description": "The individuals in the image are dancing energetically with arms raised, suggesting they are enjoying themselves in a lively and celebratory atmosphere. The motion blur and vibrant lighting further convey a sense of excitement and happiness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The text 'went gay clubbing with some friends' is mapped onto the visual scene of people dancing at a gay club.",
+      "description": "The textual description of going 'gay clubbing with some friends' directly corresponds to the visual depiction of a lively, crowded gay club scene with people dancing. The visual material (clubbing_people) serves as the instantiation of the textual scenario (text_chunk).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of gay clubbing",
+      "description": "The user is projected onto the visual scene of people dancing at a gay club, as the meme implies a personal experience ('went gay clubbing with some friends') that the user can relate to. The text 'turns out out they were expecting something very different' invites the user to imagine themselves in the situation, making the scene the focal point of the projection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "gay clubbing community",
+      "description": "The meme is designed for individuals who are part of or familiar with gay clubbing culture, as the visual and textual content directly references this specific social experience. The scene depicts a vibrant, energetic gay club environment, and the text humorously addresses the common social dynamic of friends going out together with differing expectations. This community-specific context makes the meme relatable and humorous for those who have experienced or are aware of gay clubbing culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/95108.png",
+    "image_name": "95108.png",
+    "extraction_timestamp": "2025-12-19T18:24:10.883572",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

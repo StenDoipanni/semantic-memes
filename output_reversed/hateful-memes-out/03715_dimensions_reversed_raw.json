@@ -1,0 +1,179 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: great_at_making_martinis_terrible_at_stealing_tambourines; hasOverallIntent: Harmful; overall-intent-description: The image depicts a washing machine with the text 'great at making martinis' and 'terrible at stealing tambourines'. This is a humorous, absurd juxtaposition that uses a mundane appliance to mock a stereotype about people who are 'great at one thing but terrible at another'. While not targeting any specific protected group, the meme relies on the absurdity of the comparison to create a joke. The intent is to elicit laughter through the illogical and nonsensical nature of the statement, not to harm or attack any group. The humor stems from the incongruity between the appliance's function and the human-like attributes being attributed to it, which is a form of satire rather than targeted hostility. The meme does not contain any abusive, cyberbullying, hateful, misogynistic, or propagandistic elements, but its humor is derived from the absurdity of the metaphor, which could be seen as potentially offensive to those who find such analogies distasteful, though not inherently harmful in the way that targeted hate speech is.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "great at making martinis",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "washing_machine",
+      "label": "dominant object in image",
+      "description": "A white, front-loading washing machine with a circular glass door, visible drum interior, and control panel on top. It is the central visual element and the subject of the meme's text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "washing_machine_meme",
+      "label": "washing_machine_with_text_overlay",
+      "description": "A white front-loading washing machine is the central visual element, overlaid with humorous text that attributes human-like skills to it. The text 'great at making martinis' is positioned at the top, and 'terrible at stealing tambourines' is at the bottom, creating a comedic juxtaposition. The scene is a meme that uses the washing machine as a visual punchline for an absurd comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "washing_machine",
+          "relation": "isSubjectOf",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "martini_making_skill",
+      "label": "Making Martinis",
+      "description": "The skill of making martinis is a human activity, typically associated with bartenders or mixologists, requiring knowledge of cocktail recipes, ingredients, and techniques. It is a specific, culturally recognized skill often linked to social settings and hospitality. The meme humorously attributes this skill to a washing machine, creating absurdity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "tambourine_stealing",
+      "label": "Stealing Tambourines",
+      "description": "Tambourines are musical instruments. 'Stealing tambourines' is a nonsensical, absurd concept that implies a person (or thing) is capable of theft, specifically targeting a musical instrument. This phrase is used in the meme to contrast with the washing machine's 'great' skill, creating a humorous juxtaposition. The act of stealing is a real-world criminal behavior, but the specific targeting of tambourines is arbitrary and comedic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "washing_machine_as_personification",
+      "label": "Personification of Appliances",
+      "description": "The meme relies on the concept of attributing human-like qualities, skills, or behaviors to inanimate objects (appliance personification). This is a common trope in humor and satire, used to create absurd or ironic situations. The washing machine is given the ability to 'make martinis' and 'steal tambourines', which are human activities, making the comparison inherently ridiculous.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "washing_machine_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "absurd_juxtaposition",
+      "label": "Absurd Juxtaposition",
+      "description": "This is a comedic technique where two unrelated or incongruous elements are placed together to create humor through surprise or illogical contrast. In this meme, the mundane function of a washing machine is juxtaposed with the sophisticated skill of making martinis and the criminal act of stealing tambourines, creating a punchline based on the absurdity of the comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "washing_machine_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_incompetence_in_other_areas",
+      "label": "Stereotype of Being Great at One Thing but Terrible at Another",
+      "description": "This is a common cultural trope or stereotype that describes individuals who excel in one specific area but are perceived as incompetent or inept in other areas. The meme uses this concept to create humor by applying it to an inanimate object, thereby mocking the stereotype itself through absurdity. It is not a targeted stereotype against any specific group but a general comedic device.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "washing_machine_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "humor",
+      "label": "the humorous emotion",
+      "description": "The image expresses humor through an absurd and illogical juxtaposition: a washing machine, a mundane household appliance, is humorously attributed with the human skill of making martinis (a sophisticated cocktail-making ability) and the criminal act of stealing tambourines (a nonsensical theft). The humor arises from the incongruity between the appliance's actual function and the human-like attributes being attributed to it, creating a comedic punchline. The tone is lighthearted and satirical, relying on the absurdity of the metaphor rather than any negative or harmful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "washing_machine is great at making martinis",
+      "description": "The top text 'great at making martinis' is mapped onto the washing machine, attributing to it the human skill of making martinis. This is an analogical mapping where the washing machine (visual entity) is projected as being 'great at making martinis' (textual entity), creating a humorous and absurd juxtaposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the washing machine as a metaphor for themselves",
+      "description": "The user is not explicitly projected onto a specific textual or visual element via deictic pronouns like 'me' or 'you'. However, the meme's humor relies on the user identifying with the absurd metaphor: the washing machine as a person who is 'great at making martinis' but 'terrible at stealing tambourines'. This creates an implicit projection where the user sees themselves in the role of the washing machine, using it as a stand-in for their own perceived strengths and weaknesses. The projection is onto the visual material (washing_machine) and the textual material (top_text and bottom_text) collectively, as the user mentally maps their own identity onto the meme's subject and its attributes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet meme audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with absurdist humor, visual puns, and appliance personification. It relies on the universal recognition of a washing machine and the nonsensical juxtaposition of skills (making martinis vs. stealing tambourines) to create humor. The target community includes individuals who appreciate internet culture, meme formats, and satire that mocks stereotypes through absurdity, without targeting any specific protected group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/03715.png",
+    "image_name": "03715.png",
+    "extraction_timestamp": "2025-12-15T11:35:14.071092",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

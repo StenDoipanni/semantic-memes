@@ -1,0 +1,30 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk: text location - fuck banks"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk: text location - fuck indians too"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "man: person"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :text_chunk_text_location_fuck_banks .",
+    ":toxicity_1 :hasToxicElement :text_chunk_text_location_fuck_indians_too .",
+    ":toxicity_1 :hasToxicElement :man_person ."
+  ],
+  "triples_count": 3
+}

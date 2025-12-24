@@ -1,0 +1,47 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "relaxing_humans_and_gorillas",
+      "participants": [
+        {
+          "entity": "man",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "gorilla",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "relaxingIn",
+          "to": "kiddie_pool"
+        },
+        {
+          "from": "gorilla",
+          "relation": "relaxingIn",
+          "to": "natural_outdoor_setting"
+        },
+        {
+          "from": "man",
+          "relation": "juxtaposedWith",
+          "to": "gorilla"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":relaxing_humans_and_gorillas :hasParticipant :man .",
+    ":relaxing_humans_and_gorillas :hasParticipant :gorilla .",
+    ":man :relaxingIn :kiddie_pool .",
+    ":gorilla :relaxingIn :natural_outdoor_setting .",
+    ":man :juxtaposedWith :gorilla ."
+  ],
+  "triples_count": 5
+}

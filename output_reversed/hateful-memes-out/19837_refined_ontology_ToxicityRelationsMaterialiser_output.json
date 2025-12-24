@@ -1,0 +1,30 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "man_taking_selfie"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "Donald_Trump"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_overlay"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :man_taking_selfie .",
+    ":toxicity_1 :hasToxicElement :Donald_Trump .",
+    ":toxicity_1 :hasToxicElement :text_overlay ."
+  ],
+  "triples_count": 3
+}

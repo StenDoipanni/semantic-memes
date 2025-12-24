@@ -1,0 +1,30 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "Barack_Obama"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "Michelle_Obama"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :text_chunk .",
+    ":toxicity_1 :hasToxicElement :Barack_Obama .",
+    ":toxicity_1 :hasToxicElement :Michelle_Obama ."
+  ],
+  "triples_count": 3
+}

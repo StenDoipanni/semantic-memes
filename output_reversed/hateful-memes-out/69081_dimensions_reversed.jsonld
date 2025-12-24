@@ -1,0 +1,216 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa",
+  "@type": "AnalysisDocument",
+  "title": "69081.png - Dimension Analysis",
+  "created": "2025-12-19T10:17:06.158306",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_fdee9ec3",
+    "@type": "Image",
+    "filename": "69081.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/69081.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/69081.png",
+    "image_name": "69081.png",
+    "extraction_timestamp": "2025-12-19T10:15:21.076736",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_40c8eb0c",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts two women, one labeled 'me' and the other 'cis girls,' sharing a joyful moment while holding a baby. The meme uses this visual to imply a contrast or hierarchy between the self-identified person and cisgender women, potentially suggesting that the former feels superior, excluded, or different. While not overtly abusive or hateful, the framing can be harmful by reinforcing binary gender identities and potentially alienating or marginalizing non-cisgender individuals. The intent is to communicate a personal identity or experience related to gender identity, using the visual of a happy family moment to contrast with the label 'cis girls,' which may unintentionally contribute to a sense of exclusion or otherness for those who do not identify as cisgender. The meme's overall intent is to express a personal perspective on gender identity, but the juxtaposition may be perceived as divisive or potentially harmful to the broader LGBTQ+ community by implying a hierarchy or exclusion.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_97da5b38",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "me",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0ebe244f",
+      "@type": "VisualMaterial",
+      "instance_name": "woman_on_left",
+      "label": "person labeled 'me'",
+      "description": "A woman with long dark hair, wearing a sleeveless top, smiling and looking at the other woman. She has a tattoo on her left arm and is labeled 'me' in the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_996b5819",
+      "@type": "Scene",
+      "instance_name": "happy_family_moment",
+      "label": "Two women sharing a joyful moment while holding a baby",
+      "description": "The scene depicts two women, one labeled 'me' and the other 'cis girls', smiling and looking at each other while holding a baby. The spatial arrangement shows them standing close together, suggesting intimacy and connection. The baby is held by the woman labeled 'cis girls'. The overall mood is warm and affectionate, contrasting with the meme's underlying message.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_83c0ca68",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "cisgender_women",
+      "label": "Cisgender women",
+      "description": "The term 'cisgender' refers to individuals whose gender identity aligns with the sex they were assigned at birth. In the meme, 'cis girls' is used to label the woman holding the baby, implying a contrast with the self-identified person ('me'), who may identify as transgender or non-binary. This requires understanding of gender identity terminology and the social construct of gender.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_65013de9",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "gender_identity",
+      "label": "Gender identity",
+      "description": "The meme relies on the concept of gender identity — the internal sense of one's own gender — to create a contrast between the self-identified person ('me') and 'cis girls'. This requires background knowledge of gender theory and the distinction between biological sex and gender identity.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fab449b7",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_identity",
+      "label": "Transgender identity",
+      "description": "The self-identified person ('me') in the meme is implied to be transgender or non-binary, as the label 'cis girls' is used to contrast with them. This requires understanding of transgender identity — a gender identity that differs from the sex assigned at birth — and the social context in which such identities are discussed.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_617ae2ee",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "LGBTQ_community",
+      "label": "LGBTQ+ community",
+      "description": "The meme's underlying message may be perceived as divisive or potentially harmful to the broader LGBTQ+ community by implying a hierarchy or exclusion of non-cisgender individuals. This requires knowledge of the LGBTQ+ community and the social dynamics within it, including the potential for internalized discrimination or exclusionary narratives.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_36a59f21",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "gender_binary",
+      "label": "Gender binary",
+      "description": "The meme implicitly reinforces a gender binary by contrasting 'me' (implied non-cisgender) with 'cis girls', suggesting a binary opposition between cisgender and non-cisgender identities. This requires understanding of the gender binary concept — the traditional view that there are only two genders — and its critique in contemporary gender theory.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_270c501b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "social_exclusion",
+      "label": "Social exclusion",
+      "description": "The meme's framing may unintentionally contribute to a sense of exclusion or otherness for non-cisgender individuals, which requires understanding of social exclusion — the process by which individuals or groups are marginalized or denied access to social resources or opportunities.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b11216e2",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "identity_hierarchy",
+      "label": "Identity hierarchy",
+      "description": "The meme implies a hierarchy or contrast between the self-identified person and 'cis girls', which may suggest that the former feels superior, excluded, or different. This requires knowledge of identity hierarchies — social structures that rank different identities — and how they can be used to create or reinforce social divisions.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e6ba8e7d",
+      "@type": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful emotion",
+      "description": "Both women are smiling broadly and looking at each other with genuine, warm expressions, indicating a shared moment of happiness and affection. The baby is also being held securely and appears calm, contributing to the overall positive emotional atmosphere.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bb790996",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_me_to_person",
+      "label": "The self-identified person ('me') is mapped onto the woman on the left",
+      "description": "The text 'me' is positioned directly over the woman on the left, explicitly labeling her as the speaker's self-identification. This creates an analogical mapping where the textual entity 'me' is projected onto the visual entity 'woman_on_left', indicating that the woman in the image represents the speaker's personal identity.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0ec0aee0",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the self-identified person in the meme",
+      "description": "The user is projecting themselves onto the woman labeled 'me' in the image, who is positioned on the left side. This projection is explicit through the textual label 'me' directly overlaid on her, indicating that she represents the speaker's personal identity. The user identifies with this individual, using the meme to express their own perspective or experience related to gender identity.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_955df652",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme implies a hierarchy or exclusion between the self-identified person ('me') and cisgender women ('cis girls'), potentially alienating or marginalizing non-cisgender individuals within the LGBTQ+ community. While not overtly abusive, the framing reinforces a gender binary and may contribute to social exclusion by suggesting a contrast or superiority based on gender identity.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1f07301e",
+      "@type": "TargetCommunity",
+      "instance_name": "transgender_identity",
+      "label": "Transgender individuals",
+      "description": "The meme is designed for individuals who identify as transgender or non-binary, as the speaker labels themselves 'me' and contrasts their identity with 'cis girls'. The target audience likely includes those who are part of or familiar with the transgender community and may be engaging with the meme to express their identity or relate to the experience of being perceived as different from cisgender women.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3d7cd8fa"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

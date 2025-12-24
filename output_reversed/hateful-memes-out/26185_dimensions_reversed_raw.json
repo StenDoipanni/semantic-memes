@@ -1,0 +1,217 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a person wearing a niqab, with text stating 'when the cops ask to look in your niqab but they legally can't.' This meme uses the visual of a veiled individual to highlight a legal issue regarding religious attire and police searches. While it may appear to be making a factual or neutral point about legal rights, it risks reinforcing harmful stereotypes by associating the niqab with suspicion or illegality, potentially contributing to Islamophobic narratives. The juxtaposition of the veiled face with the legal disclaimer can be interpreted as subtly implying that the wearer is somehow 'hidden' or 'untrustworthy,' which may contribute to the marginalization of Muslim women. The meme's intent is to draw attention to a legal boundary, but its visual framing and potential for misinterpretation can be seen as harmful by promoting a negative association with religious modesty attire, thus falling under the 'Harmful' category as it may contribute to societal prejudice or misunderstanding.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when the cops ask to look",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "individual wearing niqab",
+      "description": "A person with brown eyes, partially obscured by a black niqab that covers the lower half of the face, leaving only the eyes visible. The individual appears to be looking directly at the viewer with a neutral or slightly intense expression. The niqab is made of a textured fabric, and the lighting highlights the eyes and the fabric's weave. The background is a plain, dark gray gradient, focusing attention on the person's face.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "niqab_inspection_scene",
+      "label": "Legal confrontation regarding niqab inspection",
+      "description": "A scene depicting a person wearing a niqab, with overlaid text stating a legal scenario where police ask to inspect the niqab but are legally prohibited from doing so. The visual composition focuses on the person's eyes, conveying intensity or defiance, while the text provides context about legal boundaries. The scene is framed to emphasize the tension between personal religious expression and state authority.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "niqab",
+      "label": "Niqab",
+      "description": "A type of Islamic headscarf that covers the entire face except for the eyes. It is worn by some Muslim women as a form of modesty and religious expression. The legal status of niqab inspections by authorities varies by country and jurisdiction, often sparking debates about religious freedom, national security, and gender equality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "niqab_inspection_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "legal_inspection",
+      "label": "Legal Inspection of Religious Attire",
+      "description": "The concept that law enforcement may or may not be permitted to inspect religious attire, such as the niqab, under specific legal frameworks. This involves constitutional rights, privacy laws, and religious freedom statutes. In some jurisdictions, such inspections may be deemed unconstitutional or illegal if they infringe on personal liberties or religious expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "niqab_inspection_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "Prejudice, fear, or discrimination against Muslims. This stereotype often associates Muslims with terrorism, oppression of women, or incompatibility with Western values. The meme's visual framing of a veiled woman can inadvertently reinforce such stereotypes, even if the intent is to highlight a legal point.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "niqab_inspection_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_freedom",
+      "label": "Religious Freedom",
+      "description": "A fundamental human right that protects individuals' ability to practice their religion without government interference. This concept is central to the legal debate surrounding niqab inspections and is often invoked in legal and political discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "niqab_inspection_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "police_authority",
+      "label": "Police Authority",
+      "description": "The legal power granted to law enforcement to conduct searches, inspections, and investigations. The meme references the police asking to inspect a niqab, which implies a legal boundary between state authority and individual rights.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "niqab_inspection_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "western_values",
+      "label": "Western Values",
+      "description": "A broad term referring to cultural, political, and social norms often associated with Western societies, such as individualism, secularism, and gender equality. The meme implicitly references the tension between religious practices (like wearing a niqab) and perceived Western values, which can be a source of controversy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "niqab_inspection_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "defiance",
+      "label": "defiant emotion",
+      "description": "The person's direct, unblinking gaze through the niqab conveys a sense of resistance or defiance, suggesting a refusal to comply with the police request. The intensity of the eyes, combined with the obscured face, projects a stance of assertiveness against authority.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The person wearing the niqab is mapped as the subject of the legal scenario described in the text.",
+      "description": "The text 'when the cops ask to look in your niqab but they legally can't' explicitly refers to the person in the image as the individual whose niqab is being discussed. The visual of the person wearing the niqab is directly mapped onto the textual subject 'your niqab', establishing that the person is the one being referred to in the legal context. This is a direct analogical mapping where the visual entity (person) is the referent for the textual pronoun 'your' in the phrase 'your niqab'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the person wearing the niqab",
+      "description": "The user is projected onto the visual material of the person wearing the niqab, as indicated by the textual material 'your niqab'. The pronoun 'your' in the text explicitly deictically refers to the person in the image, establishing a direct projection of the user onto that visual entity. The user is positioned as the subject of the legal scenario described, imagining themselves in the role of the person whose niqab is being discussed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme risks reinforcing harmful stereotypes by associating the niqab with suspicion or illegality, potentially contributing to Islamophobic narratives. The juxtaposition of the veiled face with the legal disclaimer can be interpreted as subtly implying that the wearer is somehow 'hidden' or 'untrustworthy,' which may contribute to the marginalization of Muslim women.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who are familiar with or interested in debates surrounding religious freedom, legal rights of Muslim women, and Islamophobia. The meme is designed for an audience that understands the legal context of niqab inspections and may be engaged in discussions about religious expression versus state authority. It likely appeals to those who are politically or socially aware of issues related to Western values, gender equality, and civil liberties, particularly in contexts where such legal boundaries are contested. The visual framing and text suggest the audience is expected to interpret the image as a commentary on legal restrictions, potentially reinforcing or challenging existing stereotypes about Muslim women and their attire.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/26185.png",
+    "image_name": "26185.png",
+    "extraction_timestamp": "2025-12-15T19:34:16.948078",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

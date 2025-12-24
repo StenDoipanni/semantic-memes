@@ -1,0 +1,192 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts two boxers in a ring, with one delivering a punch to the other. The overlaid text reads: \"when your master refuse to feed you a watermelon after you pluck cotton from his field.\" This text maps onto the visual of boxing by using the metaphor of a master-slave relationship, where the enslaved person (implied to be Black) is punished for labor (plucking cotton) by being denied food (watermelon). The phrase \"watermelon and fried chicken\" is a well-known racist stereotype that dehumanizes Black people by reducing them to food preferences and associating them with servitude. The visual of boxing, with one fighter dominating the other, reinforces the idea of racial hierarchy and violence. The meme is hateful because it uses racist imagery and language to demean a specific racial group, portraying them as inferior and deserving of punishment for labor, while also invoking a violent, degrading metaphor. The overall intent is to perpetuate harmful racial stereotypes and to mock or insult Black people through the juxtaposition of violent imagery with racist historical tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when your master refuse to feed you a watermelon after you pluck cotton from his field",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "boxer_1",
+      "label": "muscular boxer delivering a punch",
+      "description": "A shirtless, muscular man with a defined physique, wearing black boxing gloves and black trunks with a white stripe, is in the act of throwing a right-hand punch. His facial expression is focused and aggressive, and he is positioned on the right side of the frame. He appears to be the aggressor in the boxing match.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "boxing_match",
+      "label": "boxing_match",
+      "description": "A scene depicting a boxing match in a ring, where one boxer is delivering a punch to the other. The visual elements include two muscular boxers, a boxing ring with ropes, and overlaid text that provides context. The spatial arrangement shows the aggressor (boxer_1) on the right side of the frame, delivering a punch to the other boxer (boxer_2) who is on the left. The scene is framed to emphasize the action and the dominance of boxer_1 over boxer_2.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "boxer_1",
+          "relation": "punches",
+          "to": "boxer_2"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "watermelon_and_fried_chicken_stereotype",
+      "label": "Watermelon and Fried Chicken Stereotype",
+      "description": "A racist stereotype that dehumanizes Black people by associating them with food preferences and servitude, often implying they are only worthy of such food and are subservient to white masters. This stereotype is used in the meme to imply that Black people are only valued for their labor and are punished for it by being denied basic sustenance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_slavery_in_america",
+      "label": "Historical Slavery in America",
+      "description": "The system of chattel slavery in the United States, where enslaved Africans and their descendants were forced to work on plantations, often under brutal conditions, without compensation or autonomy. The meme references this historical context by invoking the imagery of a 'master' and 'slave' relationship, where the enslaved person is punished for labor (plucking cotton) by being denied food (watermelon).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cotton_plucking_as_labour",
+      "label": "Cotton Plucking as Labour",
+      "description": "The historical and economic practice of harvesting cotton, often performed by enslaved people on Southern plantations in the United States, which was a grueling and physically demanding task. The meme references this specific form of labor to reinforce the idea of exploitation and punishment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "boxing_as_metaphor_for_power_hierarchy",
+      "label": "Boxing as Metaphor for Power Hierarchy",
+      "description": "The visual of boxing, with one fighter dominating the other, is used metaphorically to represent racial hierarchy and violence. The aggressor (boxer_1) symbolizes the dominant power structure, while the recipient of the punch (boxer_2) symbolizes the oppressed group. This metaphor is central to understanding the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "boxing_match",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_hierarchy_and_violence",
+      "label": "Racial Hierarchy and Violence",
+      "description": "The concept that racial hierarchies have historically justified violence and oppression against marginalized groups, particularly Black people in the United States. The meme uses this concept to portray Black people as inferior and deserving of punishment for labor, reinforcing harmful racial stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "boxing_match",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hatefulness",
+      "label": "hateful emotion expression",
+      "description": "The emotion expressed is hateful, conveyed through the violent imagery of one boxer dominating the other, combined with the racist text that references historical slavery and dehumanizing stereotypes. The overall intent is to demean and insult a specific racial group by invoking violent hierarchy and food-based racial tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The 'master' is mapped onto the aggressor boxer",
+      "description": "The text refers to a 'master' who refuses to feed a watermelon. This 'master' is analogically mapped onto boxer_1, who is visually depicted as the aggressor delivering a punch, symbolizing dominance and control over the other boxer. The boxing match metaphorically represents the power dynamic of historical slavery, where the 'master' (boxer_1) holds power over the 'slave' (boxer_2).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material as the enslaved person",
+      "description": "The user is projected onto the textual material (text_chunk) which uses the first-person plural 'you' ('you pluck cotton from his field'), implying the user identifies with the enslaved person being punished by the master. The user sees themselves as the one who performed the labor (plucking cotton) and is now being denied sustenance (watermelon) by the master, who is symbolized by the aggressor boxer (boxer_1).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses racist imagery and language to demean Black people through the metaphor of a master-slave relationship, portraying them as inferior and deserving of punishment for labor, while invoking violent, degrading tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience familiar with or interested in racist stereotypes, particularly those targeting Black people in the United States. The target community includes individuals who may find humor in or be drawn to degrading, historically rooted racial tropes such as the 'watermelon and fried chicken' stereotype and the metaphor of historical slavery. The audience is likely to interpret the boxing imagery as a violent representation of racial hierarchy, and may be engaged by the meme’s hateful intent, which relies on the audience’s understanding of these harmful cultural references.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/36098.png",
+    "image_name": "36098.png",
+    "extraction_timestamp": "2025-12-15T23:18:44.880578",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

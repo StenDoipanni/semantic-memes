@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "handjob_joke_scene",
+      "participants": [
+        {
+          "entity": "X_ray_of_hands",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "explicit_text",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "explicit_text",
+          "relation": "juxtaposedWith",
+          "to": "X_ray_of_hands"
+        },
+        {
+          "from": "X_ray_of_hands",
+          "relation": "illustrates",
+          "to": "explicit_text"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":handjob_joke_scene :hasParticipant :X_ray_of_hands .",
+    ":handjob_joke_scene :hasParticipant :explicit_text .",
+    ":explicit_text :juxtaposedWith :X_ray_of_hands .",
+    ":X_ray_of_hands :illustrates :explicit_text ."
+  ],
+  "triples_count": 4
+}

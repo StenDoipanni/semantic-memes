@@ -1,0 +1,36 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "bikini_woman_at_sea",
+      "participants": [
+        {
+          "entity": "woman",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "sittingOn",
+          "to": "wooden_railing"
+        },
+        {
+          "from": "woman",
+          "relation": "lookingAt",
+          "to": "ocean"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":bikini_woman_at_sea :hasParticipant :woman .",
+    ":woman :sittingOn :wooden_railing .",
+    ":woman :lookingAt :ocean ."
+  ],
+  "triples_count": 3
+}

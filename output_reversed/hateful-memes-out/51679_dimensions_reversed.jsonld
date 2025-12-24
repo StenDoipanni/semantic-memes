@@ -1,0 +1,216 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25",
+  "@type": "AnalysisDocument",
+  "title": "51679.png - Dimension Analysis",
+  "created": "2025-12-16T04:16:01.804776",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_28338e01",
+    "@type": "Image",
+    "filename": "51679.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/51679.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/51679.png",
+    "image_name": "51679.png",
+    "extraction_timestamp": "2025-12-16T04:12:08.607757",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f869338f",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The meme depicts two individuals wearing head coverings with Arabic text that appears to reference a specific militant group (likely associated with the Taliban or similar), juxtaposed with a sarcastic caption implying that a breakup has transformed a 'happy Afghan' into an 'Asad Afghan Taliban spokesman.' This is a harmful and hateful stereotype that reduces a complex political and cultural identity to a comedic, degrading caricature. It relies on the toxic trope of associating Afghan or Taliban identity with emotional instability and violent extremism, mocking the gravity of political and militant roles. The meme targets individuals from Afghanistan and the Taliban, using their identity as a punchline for personal failure (a breakup), which is a form of hate speech and harmful generalization. The use of 'Asad Afghan' (a likely reference to Asad, a figure associated with the Taliban) further weaponizes a specific identity for ridicule, reinforcing negative stereotypes about Afghan men and their supposed propensity for violence or extremism. The overall intent is to provoke laughter through the degradation of a real-world political group and its members, which is inherently hateful and potentially dangerous as it normalizes and trivializes serious geopolitical issues and the suffering of people in conflict zones.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dc3eef31",
+      "@type": "TextualMaterial",
+      "instance_name": "top_caption",
+      "label": "text location",
+      "description": "Text content: 'when you're usually a happy afghan'. Position: top center of the image, white text on a dark background.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f59b6477",
+      "@type": "VisualMaterial",
+      "instance_name": "person_on_left",
+      "label": "man with neutral expression",
+      "description": "A man in the background, partially out of focus, with a neutral or serious facial expression. He is not wearing a head covering and appears to be observing the scene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4c7bda04",
+      "@type": "Scene",
+      "instance_name": "meme_scene",
+      "label": "meme_with_text_and_people",
+      "description": "A meme scene featuring two individuals wearing head coverings with Arabic text, positioned in the foreground, and a third person in the background. The scene is overlaid with two captions: one at the top and one at the bottom, creating a humorous and stereotypical narrative. The individuals in the foreground are the main focus, while the background person is partially out of focus and observing.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0132eda7",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "happy_afghan_stereotype",
+      "label": "Happy Afghan Stereotype",
+      "description": "A derogatory stereotype implying that Afghans are inherently cheerful or carefree, often used to mock their perceived emotional instability or to trivialize their complex cultural and political realities. This stereotype is used in the meme to contrast with the 'Asad Afghan Taliban spokesman' persona, reinforcing a harmful narrative that reduces Afghan identity to emotional or behavioral caricatures.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_28598049",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "asad_afghan_taliban_spokesman_stereotype",
+      "label": "Asad Afghan Taliban Spokesman Stereotype",
+      "description": "A derogatory stereotype implying that Afghans, particularly those associated with the Taliban, are prone to violent extremism or political radicalization, especially in response to personal failures like breakups. The term 'Asad Afghan' likely references a specific figure (possibly a Taliban leader or spokesperson named Asad) used to mock the perceived link between personal emotional distress and political violence. This stereotype weaponizes Afghan identity for comedic effect, reinforcing Islamophobic and misogynistic tropes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c11c6989",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "taliban",
+      "label": "Taliban",
+      "description": "A militant Islamist organization that ruled Afghanistan from 1996 to 2001 and has since maintained a presence in the country. The Taliban is associated with strict interpretations of Islamic law, political violence, and international conflict. The meme references the Taliban as a symbol of extremism, using their identity to mock personal failure, which is a form of hate speech and harmful generalization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3db41dd3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "afghanistan",
+      "label": "Afghanistan",
+      "description": "A country in South Asia with a complex history of conflict, political instability, and cultural diversity. The meme uses 'Afghan' as a racialized and nationalistic label to stereotype individuals from Afghanistan, reducing their identity to a punchline for personal failure. This relies on the harmful trope of associating Afghan identity with emotional instability and violent extremism.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_063935ba",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "The fear, hatred, or prejudice against Muslims, often manifesting as stereotypes that associate Islam with violence, barbarism, or incompatibility with Western values. The meme relies on Islamophobic tropes by linking Afghan identity (often associated with Islam) to extremism and emotional instability, mocking the gravity of political and militant roles.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ab551c15",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "The hatred or prejudice against women, often manifesting as stereotypes that associate women with emotional instability, irrationality, or domestic roles. The meme uses the trope of a 'girl breaking up with you' to trigger a violent or extremist response, reinforcing misogynistic narratives that link emotional distress to aggression and violence.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7143d49e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "hateful_stereotype",
+      "label": "Hateful Stereotype",
+      "description": "A stereotype that is harmful, degrading, or offensive, often used to demean or ridicule a group of people. The meme relies on multiple hateful stereotypes — including those related to Afghan identity, the Taliban, and personal failure — to create a comedic but deeply offensive caricature that trivializes real-world political and cultural issues.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_903a864b",
+      "@type": "EmotionExpression",
+      "instance_name": "mocking_anger",
+      "label": "mocking anger expression",
+      "description": "The meme uses sarcastic and exaggerated text to portray a comical and mocking anger — specifically, the idea that a personal breakup has transformed someone into a militant spokesperson. This is not a genuine emotional expression but a satirical caricature meant to provoke laughter through absurdity and degradation.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_838b8da5",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Happy Afghan stereotype mapped onto the person wearing the red and white checkered head covering",
+      "description": "The top caption 'when you're usually a happy afghan' is mapped onto the person on the left wearing the red and white checkered head covering. This visual entity is being used to represent the 'happy afghan' stereotype, implying that this individual is typically cheerful or carefree, contrasting with the later persona.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5f11dc63",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the 'your girl broke up with you' scenario",
+      "description": "The user is projected onto the scenario described in the bottom caption, 'but your girl broke up with you', which implies personal failure and emotional distress. This projection is onto the textual material that frames the meme's punchline, suggesting the user identifies with the emotional trigger (breakup) that leads to the exaggerated persona. The user is not directly projected onto a specific visual material (like a person) but onto the narrative context created by the text, which is a common feature in memes that use 'you' as a deictic to invite self-identification.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a8d9f91c",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme depicts a harmful and hateful stereotype that reduces Afghan identity and the Taliban to a comedic, degrading caricature, mocking the gravity of political and militant roles. It targets individuals from Afghanistan and the Taliban, using their identity as a punchline for personal failure, which is a form of hate speech and harmful generalization.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_97451430",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience familiar with or interested in internet humor that relies on harmful stereotypes, particularly those targeting Afghan identity, the Taliban, and personal failure as a trigger for extremism. The target audience likely includes individuals who find offensive or degrading caricatures of political or militant groups amusing, and who may be exposed to or engage with memes that weaponize cultural and religious identities for comedic effect. The meme’s use of 'Asad Afghan Taliban spokesman' and 'happy afghan' stereotypes suggests it targets those who understand or are willing to consume content that mocks Afghan men and their association with violence or political radicalization, often through a lens of misogyny and Islamophobia.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3b600c25"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

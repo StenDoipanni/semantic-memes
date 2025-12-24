@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#qa_0f96b687-296a-4ac6-94a6-115055975f11",
+  "@type": "QuestionAnswerPair",
+  "question": "What text appears overlaid on the image?",
+  "answers": [
+    {
+      "text": "our protection plan",
+      "is_correct": false
+    },
+    {
+      "text": "None of the others",
+      "is_correct": false
+    },
+    {
+      "text": "our insurance",
+      "is_correct": true
+    },
+    {
+      "text": "their coverage policy",
+      "is_correct": false
+    }
+  ],
+  "explanation": "The text 'our insurance' is explicitly visible as an overlay in the image.",
+  "dimension": "TextualMaterial",
+  "relatedInstances": [
+    "text_chunk"
+  ],
+  "generationTimestamp": "2025-12-23T19:25:18.272895",
+  "generationMethod": "huggingface_api",
+  "sourceImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_05846",
+    "@type": "Image",
+    "filename": "05846.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/05846.png"
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: trump_meme_2011_2016; hasOverallIntent: Harmful; overall-intent-description: The image depicts Donald Trump speaking, with overlaid text claiming he said in 2011, \"all americans are idiots,\" and that \"in 2016 they proved it.\" This meme is harmful because it falsely attributes a specific, derogatory statement to Trump and then uses the 2016 election outcome as a supposed \"proof\" of its truth. The intent is to discredit Trump by implying his own words were validated by voters, which is a misleading and potentially inflammatory narrative. The meme relies on a false equivalence and misrepresentation of political discourse, potentially inciting division or reinforcing negative stereotypes about voters or political opponents. It does not target specific protected groups but uses a generalized, derogatory statement about 'all Americans' to create a divisive and potentially toxic message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "in 2011 trump said, \"all americans are idiots\"",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Donald_Trump",
+      "label": "person",
+      "description": "A man with blond hair, wearing a dark suit, white shirt, and red-and-blue striped tie, seated and gesturing with his right hand. He appears to be speaking in an official setting, likely the Oval Office, with an American flag visible in the background. He is the central subject of the image and the focus of the overlaid text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "speech_scene",
+      "label": "Donald Trump giving a speech",
+      "description": "Donald Trump is seated and gesturing while speaking, likely in an official setting such as the Oval Office, with an American flag visible in the background. The scene is framed to focus on his expressive gesture and facial expression during what appears to be a public address.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "false_statement_about_trump",
+      "label": "False Attribution of Trump's Statement",
+      "description": "The meme falsely claims that Donald Trump said in 2011, 'all americans are idiots.' This is a fabrication; no credible evidence or record exists of Trump making this specific statement in 2011. The meme uses this false claim to discredit him by implying his own words were validated by voters in 2016, which is a misleading and inflammatory narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "2016_us_presidential_election",
+      "label": "2016 United States Presidential Election",
+      "description": "The meme references the 2016 U.S. presidential election as 'proof' that Trump's alleged statement was true. This election saw Donald Trump win the presidency, which the meme uses to imply that voters 'proved' Trump's claim about Americans being idiots. This is a misrepresentation of political discourse and voter behavior, as the election outcome does not validate a derogatory statement about all Americans.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "derogatory_statement_about_americans",
+      "label": "Derogatory Statement About Americans",
+      "description": "The phrase 'all americans are idiots' is a sweeping, derogatory generalization that attacks the intelligence of an entire nation. This type of statement is inherently inflammatory and divisive, and its use in the meme serves to dehumanize voters and reinforce negative stereotypes about the American public.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_meme",
+      "label": "Political Meme",
+      "description": "The image is a political meme designed to spread misinformation and incite division. It uses a false claim and a misleading interpretation of an event to discredit a political figure. This type of meme relies on emotional manipulation and false equivalence to achieve its harmful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "speech_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misinformation",
+      "label": "Misinformation",
+      "description": "The meme is an example of misinformation, as it presents a false claim (Trump's 2011 statement) as fact. Misinformation can have harmful effects, including eroding trust in public discourse, inciting division, and reinforcing negative stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "divisive_narrative",
+      "label": "Divisive Narrative",
+      "description": "The meme constructs a divisive narrative by implying that Trump's false statement was 'proved' by voters in 2016. This narrative is harmful because it suggests that voters are unintelligent or complicit in their own political defeat, which can incite anger and reinforce negative stereotypes about political opponents.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "derogatory_contempt",
+      "label": "contemptuous emotion toward Americans",
+      "description": "The meme expresses contempt through the false claim that Trump said 'all americans are idiots,' which is a sweeping, derogatory generalization. This is reinforced by the implication that voters 'proved it' in 2016, suggesting a disdainful view of the electorate. The emotion is conveyed through the textual material and the meme's overall intent to dehumanize voters.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "trump_statement_mapping",
+      "label": "Donald Trump is mapped as the speaker of the false statement",
+      "description": "The text 'in 2011 trump said, \"all americans are idiots\"' explicitly attributes a statement to Donald Trump, who is visually depicted in the image as the central subject speaking. The visual material (Donald_Trump) is mapped onto the textual material (text_chunk) to represent him as the source of the alleged statement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material implying shared responsibility or complicity",
+      "description": "The user is implicitly projected onto the textual material 'in 2016 they proved it', which uses the pronoun 'they' to refer to the American voters. This creates a semiotic projection where the viewer is positioned as part of the group 'they'—the voters who allegedly 'proved' Trump's statement by electing him. This projection invites the user to identify with the voters and internalize the meme's narrative that their collective action validated a derogatory claim about themselves, fostering a sense of shared identity or complicity in the meme's divisive message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme falsely attributes a derogatory statement to Donald Trump and uses the 2016 election outcome as 'proof' of its truth, creating a misleading and inflammatory narrative that dehumanizes voters and incites division.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general_political_audience",
+      "description": "The meme targets a general political audience familiar with U.S. presidential elections and Donald Trump's public persona. It relies on the audience's knowledge of the 2016 election and Trump's rhetoric to create a false narrative. The audience is expected to recognize the visual of Trump and the reference to the 2016 election, making it primarily aimed at politically engaged individuals who consume online political content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/47589.png",
+    "image_name": "47589.png",
+    "extraction_timestamp": "2025-12-16T02:46:53.998262",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

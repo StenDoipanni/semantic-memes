@@ -1,0 +1,226 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: apparently_not_erdogan; hasOverallIntent: Hateful; overall-intent-description: The image depicts a grotesque, emaciated humanoid figure resembling a goblin or orc from fantasy media, holding a fish, with the overlaid text 'apparently not erdogan'. The intent is to use a dehumanizing and monstrous visual metaphor to disparage Turkish President Recep Tayyip Erdoğan, implying he is not human or is monstrous. This is a hateful meme that attacks Erdoğan based on his identity as a political figure, using racist and dehumanizing imagery (comparing him to a non-human creature) to convey contempt and ridicule. The visual metaphor maps the grotesque figure onto Erdoğan, suggesting he is 'not human' or 'monstrous', which is a form of hate speech targeting a specific political leader based on his identity and perceived characteristics. The meme is designed to provoke negative sentiment and reinforce prejudice against Erdoğan, fitting the definition of hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "apparently not erdogan",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "goblin_like_figure",
+      "label": "character",
+      "description": "A grotesque, emaciated humanoid figure with large, pale eyes, pointed ears, and wrinkled, pale skin, resembling a goblin or orc from fantasy media. The figure is seated on a rock-like surface, holding a fish in one hand, and appears to be in a crouched, hunched posture. This character is the central visual element and is used as a metaphor in the meme to represent a monstrous or non-human entity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "goblin_figure_holding_fish",
+      "label": "Goblin-like figure holding a fish",
+      "description": "A grotesque, emaciated humanoid figure resembling a goblin or orc from fantasy media is seated on a rock-like surface, holding a fish in one hand. The figure is the central visual element and is used as a metaphor in the meme to represent a monstrous or non-human entity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "goblin_like_figure",
+          "relation": "is_holding",
+          "to": "fish"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "recep_tayyip_erdogan",
+      "label": "Turkish President Recep Tayyip Erdoğan",
+      "description": "The meme targets Recep Tayyip Erdoğan, the current President of Turkey, using dehumanizing imagery to express political contempt. His identity as a political leader and his perceived characteristics are the basis for the metaphorical comparison to a monstrous creature. This requires knowledge of his role as a national and international political figure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dehumanizing_metaphor",
+      "label": "Dehumanizing Metaphor",
+      "description": "The meme uses a grotesque, non-human visual metaphor (a goblin-like creature) to imply that Erdoğan is not human or is monstrous. This rhetorical device is a form of hate speech that reduces a political figure to a caricature, relying on real-world knowledge of how such metaphors are used to incite prejudice and contempt.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "goblin_like_figure",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hate_speech",
+      "label": "Hate Speech",
+      "description": "The meme constitutes hate speech by targeting a specific political leader based on his identity and perceived characteristics. It uses racist and dehumanizing imagery to convey contempt, which is a form of verbal and visual abuse that aims to marginalize and vilify the target. This requires understanding of the concept of hate speech in political discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_rhetoric",
+      "label": "Political Rhetoric",
+      "description": "The meme is an example of political rhetoric that uses inflammatory imagery to attack an opponent. It relies on the real-world context of political campaigns and media where leaders are often portrayed through symbolic or metaphorical means, sometimes to incite strong emotional responses from the public.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_stereotype",
+      "label": "Racist Stereotype",
+      "description": "The meme implicitly relies on racist and dehumanizing stereotypes by portraying Erdoğan as a monstrous, non-human creature. This is a form of racialized imagery that reduces a person to a caricature based on their ethnicity or perceived physical characteristics, which is a known tactic in hate speech and political propaganda.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "goblin_like_figure",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "The meme may be interpreted as an example of Islamophobia, as Erdoğan is a Muslim leader, and the dehumanizing imagery could be seen as targeting Muslims in general. This stereotype associates Muslims with barbarism or monstrosity, which is a common trope in hate speech and political discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_turkish_sentiment",
+      "label": "Anti-Turkish Sentiment",
+      "description": "The meme expresses anti-Turkish sentiment by portraying Erdoğan, a Turkish leader, as monstrous. This requires knowledge of the geopolitical context and the existence of anti-Turkish sentiment in certain political circles, which often manifests in dehumanizing rhetoric.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous emotion",
+      "description": "The grotesque, emaciated goblin-like figure's facial expression—pale, wrinkled skin, large staring eyes, and a hunched posture—combined with the text 'apparently not erdogan' conveys a strong sense of disdain and contempt. The visual metaphor of a monstrous creature is used to express deep disdain for the political figure Erdoğan, portraying him as repulsive and non-human. This contempt is amplified by the dehumanizing imagery and the hateful intent of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_erdogan_to_goblin",
+      "label": "Erdoğan is mapped onto the goblin-like figure",
+      "description": "The text 'apparently not erdogan' explicitly maps the Turkish President Recep Tayyip Erdoğan onto the grotesque, goblin-like visual entity. The meme uses the visual metaphor of a monstrous, non-human creature to represent Erdoğan, implying he is not human or is monstrous. This is a dehumanizing analogical mapping where the textual reference to Erdoğan is projected onto the visual entity (goblin_like_figure) to convey contempt and hatred.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the goblin-like figure",
+      "description": "The user is projected onto the goblin-like figure (goblin_like_figure) as the target of the meme's dehumanizing metaphor. The meme implies the user (or the viewer's perspective) is identifying with or judging Erdoğan as monstrous, by projecting the user's contempt or hatred onto the visual entity. The textual material 'apparently not erdogan' directs the user to interpret the visual entity as Erdoğan, thereby projecting the user's stance onto the figure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses a dehumanizing visual metaphor (a grotesque goblin-like figure) to attack Turkish President Recep Tayyip Erdoğan, implying he is monstrous or not human. This is a direct attack on a political leader based on his identity and perceived characteristics, fitting the definition of hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience consists of individuals who hold anti-Turkish sentiment, are politically aligned against Recep Tayyip Erdoğan, and are familiar with or receptive to dehumanizing political rhetoric. This community may include supporters of opposition parties in Turkey or abroad, individuals with Islamophobic views, and those who engage in hate speech targeting Turkish political leaders. The meme is designed to resonate with audiences who use racist and dehumanizing metaphors to vilify political opponents, particularly those perceived as 'foreign' or 'monstrous'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/86357.png",
+    "image_name": "86357.png",
+    "extraction_timestamp": "2025-12-19T15:52:19.284583",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

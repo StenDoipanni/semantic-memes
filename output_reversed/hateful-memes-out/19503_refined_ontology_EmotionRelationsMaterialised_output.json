@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "concerned emotion",
+      "expressors": [
+        {
+          "entity": "woman",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "emotionalRelationToEntity",
+          "to": "child"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":concerned_emotion :hasExpressor :woman .",
+    ":woman :emotionalRelationToEntity :child ."
+  ],
+  "triples_count": 2
+}

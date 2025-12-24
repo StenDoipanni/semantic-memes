@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_001",
+      "hasMappedEntity": "text_chunk",
+      "hasMappingEntity": "child_with_determined_expression"
+    },
+    {
+      "from": "child_with_determined_expression",
+      "relation": "mappedOnto",
+      "to": "text_chunk"
+    }
+  ],
+  "triples": [
+    ":mapping_001 :hasMappedEntity :text_chunk .",
+    ":mapping_001 :hasMappingEntity :child_with_determined_expression .",
+    ":child_with_determined_expression :mappedOnto :text_chunk ."
+  ],
+  "triples_count": 3
+}

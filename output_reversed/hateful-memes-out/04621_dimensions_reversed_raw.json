@@ -1,0 +1,223 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: you_are_what_you_eat_meanwhile_in_africa; hasOverallIntent: harmful; overall-intent-description: The image depicts five people dressed in colorful fruit costumes (banana, kiwi, carrot, grapes, strawberry) holding hands and walking down a street, with the text 'you are what you eat' at the top and 'meanwhile in africa' at the bottom. The overall intent is to create a humorous or ironic juxtaposition by implying that people in Africa are somehow 'less than' or 'unhealthy' because they supposedly eat different or inferior food compared to the Westernized fruit-eating group. This is a harmful meme because it uses a false equivalence and geographic stereotyping to demean people in Africa, suggesting their diet and therefore their entire being is inferior. It perpetuates a colonialist and racist trope that equates food choices with moral or intellectual superiority, which can contribute to harmful biases and reinforce systemic inequalities. The meme does not target a specific protected characteristic like race or gender directly in its text, but the geographic reference to 'Africa' combined with the implied dietary inferiority is a form of geographic-based stereotyping that is harmful and degrading to the continent and its people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "you are what you eat",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person_in_banana_costume",
+      "label": "person dressed as a banana",
+      "description": "A person wearing a yellow banana costume, holding hands with the person in the kiwi costume, walking on a street. The costume is full-body and includes a banana-shaped headpiece. This person is on the far left of the group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "fruit_costumed_people_walking",
+      "label": "people in fruit costumes walking together",
+      "description": "Five people dressed in full-body fruit costumes (banana, kiwi, carrot, grapes, strawberry) are holding hands and walking down a street. They are arranged in a line, moving from left to right, with the banana-costumed person on the far left and the strawberry-costumed person on the far right. The scene is framed by urban buildings in the background and a paved street beneath their feet.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person_in_banana_costume",
+          "relation": "holds_hand_with",
+          "to": "person_in_kiwi_costume"
+        },
+        {
+          "from": "person_in_kiwi_costume",
+          "relation": "holds_hand_with",
+          "to": "person_in_carrot_costume"
+        },
+        {
+          "from": "person_in_carrot_costume",
+          "relation": "holds_hand_with",
+          "to": "person_in_grapes_costume"
+        },
+        {
+          "from": "person_in_grapes_costume",
+          "relation": "holds_hand_with",
+          "to": "person_in_strawberry_costume"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "geographic_stereotype_of_africa",
+      "label": "Geographic Stereotype of Africa",
+      "description": "The meme uses the phrase 'meanwhile in africa' to imply that people in Africa have inferior diets and therefore inferior lives, which is a harmful and false stereotype. This stereotype is rooted in colonialist and racist narratives that portray Africa as primitive, underdeveloped, and lacking in modern or healthy food choices, ignoring the vast diversity of African diets, cultures, and economies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "fruit_costumed_people_walking",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dietary_superiority_complex",
+      "label": "Dietary Superiority Complex",
+      "description": "The phrase 'you are what you eat' is often used in Western contexts to imply that one's health, morality, or intelligence is determined by their diet. The meme weaponizes this concept to suggest that Western diets (represented by the fruit costumes) are superior to African diets, reinforcing a hierarchy based on food consumption that is both inaccurate and discriminatory.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "fruit_costumed_people_walking",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "colonialist_racist_trope",
+      "label": "Colonialist and Racist Trope",
+      "description": "The meme perpetuates a colonialist and racist trope that equates food choices with moral or intellectual superiority, which can contribute to harmful biases and reinforce systemic inequalities. This trope has historical roots in colonialism, where Western powers often portrayed non-Western societies as inferior based on their food, hygiene, or cultural practices.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "fruit_costumed_people_walking",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "false_equivalence",
+      "label": "False Equivalence",
+      "description": "The meme creates a false equivalence by comparing the dietary habits of people in Africa with those of Westerners, implying that one group is inherently 'better' or 'worse' based on their food choices. This ignores the complex socio-economic, cultural, and environmental factors that influence diet in different regions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "fruit_costumed_people_walking",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "geographic_based_stereotyping",
+      "label": "Geographic-Based Stereotyping",
+      "description": "The meme uses geographic reference to 'Africa' combined with the implied dietary inferiority to demean the continent and its people. This is a form of geographic-based stereotyping that is harmful and degrading, as it reduces a diverse and complex continent to a single, negative stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "fruit_costumed_people_walking",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "derision",
+      "label": "derisive emotion",
+      "description": "The meme expresses derision through its ironic juxtaposition of Western fruit-eating as superior and Africa as inferior, using humor to mock and demean people in Africa based on false dietary stereotypes. The cheerful, carefree expressions of the fruit-costumed people contrast with the implied degradation of the 'meanwhile in africa' text, creating a tone of condescending mockery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Western dietary superiority mapped onto fruit-costumed people",
+      "description": "The top text 'you are what you eat' is mapped onto the visual entity 'fruit_costumed_people_walking', implying that these individuals represent the ideal of dietary and therefore moral/physical superiority. Their fruit costumes symbolize a Western, healthy, and 'civilized' diet, which the text equates with their entire being. This mapping is central to the meme's false equivalence and colonialist trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the fruit-costumed people as the idealized 'you are what you eat' group",
+      "description": "The user is projected onto the visual material of the fruit-costumed people (person_in_banana_costume, person_in_kiwi_costume, etc.) who are depicted as embodying the Western ideal of health and dietary superiority. The text 'you are what you eat' is implicitly directed at the viewer, suggesting that by identifying with or admiring this group, the user is projecting their own identity onto them as the standard of 'being' — a projection that is then contrasted with the 'meanwhile in africa' text. This creates a false equivalence where the user's identity is aligned with the visual group, reinforcing the meme's harmful colonialist trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme perpetuates a harmful stereotype by implying that people in Africa have inferior diets and therefore inferior lives, which is a false equivalence and geographic-based stereotyping rooted in colonialist and racist narratives.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals familiar with Western cultural norms and internet meme formats who may be exposed to or perpetuate colonialist and racist stereotypes. The meme is designed to resonate with audiences who understand the phrase 'you are what you eat' as a Western dietary trope and who may find humor in the juxtaposition of Western fruit-eating with the implied 'inferior' diet of people in Africa. The audience likely includes those who engage with satirical or ironic content online, but the meme's harmful intent targets communities that may unconsciously reinforce geographic-based stereotyping and dietary superiority complexes, particularly those with Western-centric worldviews.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/04621.png",
+    "image_name": "04621.png",
+    "extraction_timestamp": "2025-12-15T11:43:36.653010",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

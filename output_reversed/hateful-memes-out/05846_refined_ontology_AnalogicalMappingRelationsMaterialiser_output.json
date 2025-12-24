@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_001",
+      "hasMappedEntity": "text_chunk",
+      "hasMappingEntity": "four_individuals"
+    },
+    {
+      "from": "four_individuals",
+      "relation": "mappedOnto",
+      "to": "text_chunk"
+    }
+  ],
+  "triples": [
+    ":mapping_001 :hasMappedEntity :text_chunk .",
+    ":mapping_001 :hasMappingEntity :four_individuals .",
+    ":four_individuals :mappedOnto :text_chunk ."
+  ],
+  "triples_count": 3
+}

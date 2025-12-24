@@ -1,0 +1,202 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a group of young men with their faces obscured, raising their hands in a gesture that could be interpreted as celebratory or defiant. The overlaid text reads, 'if this is what they call pride.. then i don't wanna see what they call shame.' This juxtaposition implies a negative judgment of the group's behavior, suggesting that their display of pride is so extreme or inappropriate that it makes the concept of shame seem even more undesirable. The meme uses a sarcastic and dismissive tone to convey contempt for the group's actions or identity, which can be seen as a direct attack based on their appearance or behavior. While the specific target group is not explicitly identified, the visual and textual elements together create a hostile and derogatory message, fitting the definition of a hateful meme as it attacks or devalues a group based on their presentation or actions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text overlay",
+      "description": "if this is what they call pride..",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "group_of_young_men",
+      "label": "people",
+      "description": "A group of six young men standing in a line, all raising their hands in the air. Their faces are obscured by black rectangles. They are dressed in casual clothing such as t-shirts and tank tops. The group appears to be posing for a photo in an indoor setting, possibly a living room or similar space. Their posture and raised hands suggest a celebratory or defiant gesture, which is central to the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "defiant_pose_scene",
+      "label": "Group of young men posing defiantly with raised hands",
+      "description": "A scene depicting six young men standing in a line, all raising their hands in the air in a synchronized gesture. Their faces are obscured by black rectangles. They are dressed in casual clothing such as t-shirts and tank tops. The group appears to be posing for a photo in an indoor setting, possibly a living room or similar space. Their posture and raised hands suggest a celebratory or defiant gesture, which is central to the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_young_men_raising_hands_as_defiant_or_proud",
+      "label": "Stereotype: Young men raising hands as a sign of pride or defiance",
+      "description": "The gesture of raising hands in unison is often culturally coded as a sign of celebration, rebellion, or pride, especially in contexts like sports, protests, or group identity. In memes, this gesture is frequently used to imply a group's collective identity or behavior, which can be interpreted as aggressive, boastful, or overly confident. Understanding this stereotype is necessary to interpret the meme's sarcastic tone and its implied judgment of the group's 'pride'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "defiant_pose_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_young_men_as_unreliable_or_problematic",
+      "label": "Stereotype: Young men as unruly, untrustworthy, or socially undesirable",
+      "description": "The meme's text, 'if this is what they call pride.. then i don't wanna see what they call shame,' relies on a broader cultural stereotype that associates young men (especially in certain social or racial contexts) with negative traits like recklessness, criminality, or lack of responsibility. This stereotype is used to frame the group's 'pride' as so extreme or offensive that it makes 'shame' seem even more undesirable — a rhetorical device that implies the group is so bad that their 'shame' would be worse. This requires external knowledge of how society often stereotypes young men in this way.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "defiant_pose_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_young_men_as_uneducated_or_unskilled",
+      "label": "Stereotype: Young men as uneducated or lacking in social skills",
+      "description": "The meme's tone suggests contempt for the group's perceived lack of sophistication or social awareness. This stereotype is often used to dismiss or belittle groups perceived as 'simple' or 'unrefined'. The phrase 'then i don't wanna see what they call shame' implies that the group's 'pride' is so crude or embarrassing that their 'shame' would be even more so — a rhetorical device that relies on the stereotype that young men (or certain groups) are not capable of nuanced behavior or social decorum.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "defiant_pose_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_young_men_as_untrustworthy_or_unreliable",
+      "label": "Stereotype: Young men as untrustworthy or unreliable",
+      "description": "The meme's sarcastic tone and the phrase 'then i don't wanna see what they call shame' imply that the group's 'pride' is so extreme or inappropriate that it makes 'shame' seem even more undesirable. This relies on the stereotype that young men (or certain groups) are inherently untrustworthy or unreliable, making their 'pride' seem even more dangerous or offensive. This stereotype is often used to justify negative judgments or dismissive attitudes toward certain groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "defiant_pose_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_young_men_as_uneducated_or_unskilled",
+      "label": "Stereotype: Young men as uneducated or lacking in social skills",
+      "description": "The meme's tone suggests contempt for the group's perceived lack of sophistication or social awareness. This stereotype is often used to dismiss or belittle groups perceived as 'simple' or 'unrefined'. The phrase 'then i don't wanna see what they call shame' implies that the group's 'pride' is so crude or embarrassing that their 'shame' would be even more so — a rhetorical device that relies on the stereotype that young men (or certain groups) are not capable of nuanced behavior or social decorum.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "defiant_pose_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous emotion",
+      "description": "The emotion expressed is contempt, conveyed through the sarcastic and dismissive tone of the overlaid text, which implies disdain for the group's behavior and suggests that their 'pride' is so extreme or inappropriate that it makes 'shame' seem even more undesirable. This reflects a judgmental and derogatory attitude toward the group depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The group's defiant pose is mapped as 'pride'",
+      "description": "The text 'if this is what they call pride..' directly maps the visual entity 'group_of_young_men' (specifically their defiant pose) to the concept of 'pride'. The meme uses this mapping to sarcastically imply that the group's display of 'pride' is so extreme or inappropriate that it makes the concept of 'shame' seem even more undesirable.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the defiant pose scene",
+      "description": "The user is projecting themselves onto the scene of the group of young men raising their hands, interpreting the gesture as 'pride' and expressing contempt for it through the text. The rhetorical structure 'if this is what they call pride... then I don't wanna see what they call shame' implies the user is positioning themselves as a moral arbiter, rejecting the group's behavior and implicitly projecting their own values or identity onto the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks or devalues a group based on their appearance or behavior, using a sarcastic and dismissive tone to convey contempt. The text 'if this is what they call pride.. then i don't wanna see what they call shame' implies a negative judgment of the group's actions, fitting the definition of a hateful meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold negative stereotypes or prejudices toward young men, particularly those who perceive them as unruly, untrustworthy, or socially undesirable. The meme is designed to appeal to this audience by using a sarcastic and contemptuous tone to dismiss the group's 'pride' as so extreme or offensive that it makes 'shame' seem even more undesirable. This rhetorical device relies on the stereotype that young men (or certain groups) are inherently untrustworthy or unreliable, making their 'pride' seem dangerous or offensive. The intended audience likely includes those who view young men as uneducated, lacking in social skills, or incapable of nuanced behavior, and who are predisposed to devalue or belittle such groups based on their appearance or behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/14086.png",
+    "image_name": "14086.png",
+    "extraction_timestamp": "2025-12-15T15:29:43.420384",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

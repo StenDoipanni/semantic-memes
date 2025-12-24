@@ -1,0 +1,186 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "dimension_1",
+      "label": "the overallintent",
+      "description": "The image depicts a group of children in striped prison uniforms standing behind barbed wire, which is historically associated with concentration camps during the Holocaust. The overlaid text reads ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "text content and position: 'only 30's kids' located at top center of image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "children",
+      "label": "group of children",
+      "description": "A group of young children, appearing to be in their early teens, are standing behind barbed wire. They are wearing striped prison uniforms, which are historically associated with concentration camps during the Holocaust. Their expressions range from somber to curious, and they are looking toward the camera. The children are clustered together, suggesting a sense of vulnerability or confinement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "children_behind_barbed_wire",
+      "label": "children standing behind barbed wire",
+      "description": "A group of children in striped prison uniforms are standing behind barbed wire, looking toward the camera. Their expressions range from somber to curious, and they are clustered together, suggesting vulnerability or confinement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust",
+      "label": "Holocaust",
+      "description": "The Holocaust was the systematic, state-sponsored persecution and murder of six million Jews by Nazi Germany and its collaborators during World War II. The image depicts children in striped uniforms behind barbed wire, which is a direct visual reference to concentration camps where many Jewish children were imprisoned and killed. Understanding this historical event is essential to interpret the image's gravity and the meme's implied message about historical memory.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "children_behind_barbed_wire",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Concentration_Camps",
+      "label": "Concentration Camps",
+      "description": "Concentration camps were detention centers established by Nazi Germany during the Holocaust to imprison, exploit, and exterminate targeted groups, primarily Jews, Roma, disabled individuals, and others deemed undesirable. The striped uniforms and barbed wire in the image are iconic symbols of these camps, requiring external historical knowledge to fully comprehend the context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "children_behind_barbed_wire",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust_Denial_Minimization",
+      "label": "Holocaust Denial/Minimization",
+      "description": "This is an antisemitic trope that involves downplaying, denying, or distorting the scale and nature of the Holocaust. The meme’s text — 'only 30's kids will remember this' — implicitly references the idea that younger generations may not be aware of or care about this historical atrocity, which is a common theme in Holocaust denial narratives. This stereotype is used to frame the image as a warning about generational amnesia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Generational_Amnesia",
+      "label": "Generational Amnesia",
+      "description": "A sociological concept referring to the fading of collective memory of historical events across generations. The meme’s text implies that only those born in the 1930s (or their children) will remember the Holocaust, suggesting that younger generations are disconnected from this history. This concept is necessary to understand the meme’s underlying message about historical awareness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Antisemitism",
+      "label": "Antisemitism",
+      "description": "A long-standing form of prejudice and discrimination against Jewish people, often rooted in conspiracy theories, stereotypes, and historical scapegoating. The image’s depiction of children in concentration camp attire is a direct reference to antisemitic historical narratives. The meme’s framing of historical memory as fading is also a common antisemitic trope used to minimize the Holocaust’s significance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "children_behind_barbed_wire",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "sadness",
+      "label": "the somber emotion",
+      "description": "The children's facial expressions range from somber to curious, conveying a sense of sorrow, vulnerability, and the trauma of their situation. Their clustered posture and direct gaze toward the camera emphasize their emotional weight and confinement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Text implies the visual material represents a historical atrocity remembered only by a specific generation",
+      "description": "The text 'only 30's kids will remember this' is mapped onto the visual material of children in concentration camp uniforms behind barbed wire. The text implies that the image depicts a historical event (the Holocaust) that is fading from collective memory, and that only those born in the 1930s (or their children) will remember it. This creates an analogical mapping where the visual material (children in striped uniforms behind barbed wire) is understood as representing a historical atrocity whose memory is being minimized or forgotten by younger generations, as stated in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material implying generational amnesia",
+      "description": "The user is projected onto the textual material 'only 30's kids will remember this', which implicitly addresses the viewer as someone who may not belong to the generation that remembers the Holocaust, thereby positioning the user as part of a younger generation potentially disconnected from this historical memory. This projection is not explicit (e.g., no 'you' or 'me'), but is inferred through the rhetorical framing of the text, which creates a sense of shared identity with the viewer as someone who might not remember or care about the event depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme promotes generational amnesia regarding the Holocaust, implying that younger generations may not care or remember this historical atrocity, which can lead to a diminished collective memory and potential societal harm.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "text_chunk",
+      "label": "audience description",
+      "description": "The text 'only 30's kids will remember this' targets individuals born in the 1930s or their children, implying they are the only generation with direct memory of the Holocaust. This demographic cue anchors the meme’s message to a specific age cohort.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/67953.png",
+    "image_name": "67953.png",
+    "extraction_timestamp": "2025-12-16T09:07:53.520058",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

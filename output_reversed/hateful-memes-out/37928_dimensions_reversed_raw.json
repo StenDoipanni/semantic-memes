@@ -1,0 +1,192 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: snake_mouth_meme; hasOverallIntent: Mysogynous; overall-intent-description: The image shows a snake with its mouth open, and the text humorously compares it to a vagina. This comparison is a form of objectification and body part focus, which falls under misogynistic tropes. The intent is to create a crude, sexually suggestive joke by mapping the snake's mouth to a female genitalia, using the visual similarity to provoke a taboo or risqué reaction. This type of content is harmful as it reinforces objectification of women's bodies and can be offensive or demeaning to women, fitting the 'Mysogynous' category.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "this is a snakes mouth",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "snake",
+      "label": "a large snake with its mouth open",
+      "description": "The central visual element is a large snake, likely a python, coiled and with its mouth wide open, revealing its pink interior and teeth. The snake's scales have a pattern of dark and light brown, with some blueish tones visible. The image focuses on the snake's head and open mouth, making it the most salient object.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "snake_mouth_comparison",
+      "label": "snake_mouth_comparison_scene",
+      "description": "A scene depicting a snake with its mouth open, visually compared to a vagina through overlaid text. The snake is the central visual element, and the text provides the interpretive context for the comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "snake",
+          "relation": "isComparedTo",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype",
+      "label": "Misogynous Stereotype",
+      "description": "The meme relies on the stereotype of objectifying female genitalia by comparing it to a snake's mouth, which is a form of body part focus and hypersexualization. This is a misogynistic trope that reduces women to sexual objects and reinforces harmful stereotypes about female bodies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "snake_mouth_comparison",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification",
+      "label": "Objectification",
+      "description": "The meme uses the visual similarity between a snake's open mouth and a vagina to create a crude, sexually suggestive joke. This is a form of objectification, where a body part is reduced to a sexual object for humor, which is a common misogynistic trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "snake_mouth_comparison",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "vagina_comparison",
+      "label": "Vagina Comparison",
+      "description": "The meme explicitly draws a visual analogy between the snake's open mouth and a human female genitalia. This comparison is not visible in the image but is implied by the text and is a key element of the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "snake_mouth_comparison",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexual_joke",
+      "label": "Sexual Joke",
+      "description": "The meme functions as a crude sexual joke by using the visual similarity between the snake's mouth and a vagina to provoke a risqué or taboo reaction. This type of humor is often considered offensive and is rooted in misogynistic tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "snake_mouth_comparison",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "body_part_focus",
+      "label": "Body Part Focus",
+      "description": "The meme focuses on the snake's mouth as a body part and draws a comparison to a human body part (vagina), which is a common tactic in misogynistic content to objectify and sexualize female bodies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "snake_mouth_comparison",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "objectification",
+      "label": "objectifying emotion",
+      "description": "The emotion expressed is one of objectification, where the snake's mouth is visually compared to a vagina, reducing it to a sexual object for humor. This is a misogynistic trope that objectifies female bodies by focusing on genitalia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "snake_mouth_vagina_mapping",
+      "label": "Snake mouth is mapped to vagina",
+      "description": "The top text 'this is a snakes mouth' identifies the visual entity (snake's mouth) as the subject. The bottom text 'it looks like a vagina' explicitly maps the visual entity (snake's mouth) to the textual concept (vagina), creating an analogical mapping where the snake's mouth is visually compared to a human female genitalia. This mapping is central to the meme's intent and is a form of objectification and hypersexualization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the snake's mouth via textual comparison",
+      "description": "The user is projected onto the visual entity of the snake's mouth, as the textual material explicitly maps it to a vagina, creating an implicit identification or focus on this body part. The user is not directly addressed with deictic pronouns like 'you' or 'me', but the projection occurs through the act of perceiving the visual material and interpreting it via the provided textual analogy, which directs attention and potentially identification onto the snake's mouth as the central object of comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme objectifies female genitalia by comparing a snake's open mouth to a vagina, reinforcing harmful stereotypes about women's bodies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "misogynous_stereotype",
+      "label": "Misogynous Stereotype Audience",
+      "description": "The meme targets an audience familiar with or receptive to misogynistic tropes, particularly those that objectify female genitalia through crude visual comparisons. The intended community likely includes individuals who find humor in hypersexualizing or reducing women to body parts, often reinforcing harmful stereotypes about female bodies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/37928.png",
+    "image_name": "37928.png",
+    "extraction_timestamp": "2025-12-16T00:01:17.207399",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

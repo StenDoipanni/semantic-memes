@@ -1,0 +1,436 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e",
+  "@type": "AnalysisDocument",
+  "title": "65207.png - Dimension Analysis",
+  "created": "2025-12-16T08:35:31.810134",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_0b01ce91",
+    "@type": "Image",
+    "filename": "65207.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/65207.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/65207.png",
+    "image_name": "65207.png",
+    "extraction_timestamp": "2025-12-16T08:32:03.647923",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 36,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6005ca50",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: it-cant-be-homicide-if-there-is-no-race; hasOverallIntent: hateful; overall-intent-description: The meme depicts a woman barricading a door against a group of zombie-like figures, with text overlay stating 'it can't be homicide if there is no race.' This juxtaposition uses the visual metaphor of a zombie apocalypse (a common trope for violent, chaotic, and uncontrollable situations) to analogize racial violence or homicide. The intent is to suggest that because 'race' is absent in the scenario (implying the zombies are not racially identifiable), the act of killing them cannot be classified as 'homicide' — a legal term implying the killing of a human being. This is a hateful and toxic framing that attempts to normalize or downplay racially motivated violence by implying that if the victims are not racially defined (e.g., if they are 'non-human' or 'non-racial'), then the act of killing them is not a crime. The meme weaponizes the concept of 'race' as a legal and moral category to justify or minimize violence against people of color, thereby promoting a harmful and racist perspective. It is hateful because it directly attacks the moral and legal significance of race in the context of violence and homicide, and it implicitly equates the killing of people of color with the killing of 'non-racial' entities (zombies), thereby dehumanizing and trivializing racial violence.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_871cc3b6",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text overlay",
+      "description": "it can't be homicide",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b2d23a8a",
+      "@type": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "a woman barricading a door",
+      "description": "A middle-aged woman with short brown hair, wearing a white patterned blouse, is forcefully holding a wooden door shut with both hands. Her facial expression is one of intense fear and determination, with her mouth open as if screaming or yelling. She is positioned in the foreground, making her the central human figure in the image. Her muscular arms and strained posture emphasize her effort to resist the threat.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5d20de41",
+      "@type": "Scene",
+      "instance_name": "door_barricade_scene",
+      "label": "woman barricading door against zombies",
+      "description": "A woman is forcefully holding a wooden door shut with both hands, resisting a group of zombie-like figures pressing against the door from the other side. The scene depicts a tense, defensive struggle between the woman and the attacking figures, with the door serving as the central barrier. The woman is in the foreground, while the zombies are clustered behind the door, creating a clear spatial separation and a sense of imminent threat.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0109abb1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "homicide",
+      "label": "Legal term for unlawful killing of a human being",
+      "description": "The term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1592b39b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "race",
+      "label": "Social construct used to categorize humans based on physical characteristics",
+      "description": "The concept of ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e97fe128",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "zombie_apocalypse",
+      "label": "Cultural trope of a global outbreak of reanimated corpses",
+      "description": "The zombie apocalypse is a popular cultural trope in movies, TV shows, and literature, often used to depict a world in chaos due to a viral outbreak or supernatural event. In the meme, it is used as a visual metaphor to analogize racial violence or homicide, implying that because ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4b7e5fd8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racially_motivated_violence",
+      "label": "Violence directed against individuals or groups based on their race",
+      "description": "Racially motivated violence refers to acts of violence that are directed against individuals or groups based on their race or ethnicity. The meme attempts to normalize or downplay this type of violence by implying that if the victims are not racially defined (e.g., zombies), then the act of killing them cannot be classified as homicide. This requires understanding of the concept of racially motivated violence and its moral/legal implications.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a7910ebf",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "dehumanization",
+      "label": "The process of stripping away the humanity of a person or group",
+      "description": "Dehumanization is the process of stripping away the humanity of a person or group, often to justify violence or discrimination against them. In the meme, the implication that killing zombies (non-human entities) is not homicide is used to dehumanize people of color, thereby trivializing racial violence. This requires understanding of the concept of dehumanization and its role in justifying violence.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ede9bc71",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "hateful_meme",
+      "label": "A meme that promotes hate, bigotry, or harmful stereotypes",
+      "description": "A hateful meme is a meme that promotes hate, bigotry, or harmful stereotypes. The meme in question is hateful because it directly attacks the moral and legal significance of race in the context of violence and homicide, and it implicitly equates the killing of people of color with the killing of ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_259dfbb5",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "toxic_framing",
+      "label": "A harmful or misleading way of presenting an issue",
+      "description": "Toxic framing refers to a harmful or misleading way of presenting an issue, often used to justify or minimize harmful behavior. In the meme, the toxic framing is used to suggest that because ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_25afa929",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racist_perspective",
+      "label": "A perspective that promotes or justifies racial discrimination or hatred",
+      "description": "A racist perspective is a perspective that promotes or justifies racial discrimination or hatred. The meme promotes a racist perspective by implying that if the victims are not racially defined (e.g., zombies), then the act of killing them cannot be classified as homicide, thereby normalizing or downplaying racially motivated violence. This requires understanding of the concept of racist perspectives and their role in promoting harmful ideologies.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f9cccd37",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "legal_classification_of_killing",
+      "label": "The legal process of determining whether a killing is classified as homicide",
+      "description": "The legal classification of killing refers to the legal process of determining whether a killing is classified as homicide, which typically requires the victim to be a human being. In the meme, the implication that killing zombies (non-human entities) is not homicide is used to justify or minimize racially motivated violence. This requires understanding of the legal classification of killing and its application to human life.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9e4769aa",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "zombie_as_metaphor",
+      "label": "The use of zombies as a metaphor for marginalized or dehumanized groups",
+      "description": "Zombies are often used as a metaphor for marginalized or dehumanized groups in popular culture, often to depict their perceived lack of humanity or agency. In the meme, zombies are used as a metaphor for people of color, implying that because they are not racially defined, they are not human and therefore their killing cannot be classified as homicide. This requires understanding of the use of zombies as a metaphor in popular culture and its implications.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_292e2c91",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "minimization_of_racial_violence",
+      "label": "The act of downplaying or justifying racially motivated violence",
+      "description": "Minimization of racial violence refers to the act of downplaying or justifying racially motivated violence, often by implying that it is not a serious issue or that it does not warrant legal or moral condemnation. In the meme, the implication that killing zombies (non-human entities) is not homicide is used to minimize racially motivated violence. This requires understanding of the concept of minimizing racial violence and its role in promoting harmful ideologies.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_22eb0813",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racial_dehumanization",
+      "label": "The process of dehumanizing people based on their race",
+      "description": "Racial dehumanization is the process of dehumanizing people based on their race, often to justify violence or discrimination against them. In the meme, the implication that killing zombies (non-human entities) is not homicide is used to dehumanize people of color, thereby trivializing racial violence. This requires understanding of the concept of racial dehumanization and its role in promoting harmful ideologies.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_be7f585d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "zombie_apocalypse_as_social_commentary",
+      "label": "The use of zombie apocalypse tropes to comment on social or political issues",
+      "description": "Zombie apocalypse tropes are often used in social commentary to depict societal issues such as racial violence, political unrest, or economic inequality. In the meme, the zombie apocalypse is used as a social commentary to depict racial violence, implying that because ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ae4f41b0",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racial_justification_of_violence",
+      "label": "The act of justifying violence based on racial stereotypes or prejudices",
+      "description": "Racial justification of violence refers to the act of justifying violence based on racial stereotypes or prejudices, often by implying that the victims are not human or that their killing is not a serious issue. In the meme, the implication that killing zombies (non-human entities) is not homicide is used to justify racially motivated violence. This requires understanding of the concept of racial justification of violence and its role in promoting harmful ideologies.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_04d997a9",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "zombie_as_non_human_entity",
+      "label": "The concept of zombies as non-human entities in popular culture",
+      "description": "In popular culture, zombies are often depicted as non-human entities, lacking the moral and legal status of human beings. In the meme, the concept of zombies as non-human entities is used to imply that their killing cannot be classified as homicide, thereby justifying or minimizing racially motivated violence. This requires understanding of the concept of zombies as non-human entities in popular culture and its implications.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_988f9d82",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racial_violence_as_crime",
+      "label": "The concept that racially motivated violence is a crime",
+      "description": "Racially motivated violence is often considered a crime, as it violates laws and moral principles that protect human life and dignity. In the meme, the implication that killing zombies (non-human entities) is not homicide is used to downplay or justify racially motivated violence, thereby challenging the concept that racially motivated violence is a crime. This requires understanding of the concept of racial violence as a crime and its moral/legal implications.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_523d8f17",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "zombie_apocalypse_as_inevitable",
+      "label": "The idea that a zombie apocalypse is an inevitable or unstoppable event",
+      "description": "The idea that a zombie apocalypse is an inevitable or unstoppable event is often used in popular culture to depict a world in chaos. In the meme, this idea is used to imply that racially motivated violence is an inevitable or unstoppable event, thereby justifying or minimizing its impact. This requires understanding of the idea of a zombie apocalypse as inevitable and its implications.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_11c3e6f8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racial_inequality",
+      "label": "The systemic and structural disadvantages faced by certain racial groups",
+      "description": "Racial inequality refers to the systemic and structural disadvantages faced by certain racial groups, often resulting in higher rates of violence, poverty, and discrimination. In the meme, the implication that killing zombies (non-human entities) is not homicide is used to downplay or justify racially motivated violence, thereby challenging the concept of racial inequality. This requires understanding of the concept of racial inequality and its implications.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6a89f88b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "zombie_apocalypse_as_social_dystopia",
+      "label": "The use of zombie apocalypse tropes to depict a social dystopia",
+      "description": "Zombie apocalypse tropes are often used to depict a social dystopia, where societal norms and structures have broken down. In the meme, the zombie apocalypse is used to depict a social dystopia where racially motivated violence is rampant, thereby justifying or minimizing its impact. This requires understanding of the use of zombie apocalypse tropes in depicting social dystopias and its implications.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b554e726",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racial_justification_of_homicide",
+      "label": "The act of justifying homicide based on racial stereotypes or prejudices",
+      "description": "Racial justification of homicide refers to the act of justifying homicide based on racial stereotypes or prejudices, often by implying that the victims are not human or that their killing is not a serious issue. In the meme, the implication that killing zombies (non-human entities) is not homicide is used to justify racially motivated homicide. This requires understanding of the concept of racial justification of homicide and its role in promoting harmful ideologies.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7c8ea4f3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "zombie_apocalypse_as_moral_dilemma",
+      "label": "The use of zombie apocalypse tropes to depict a moral dilemma",
+      "description": "Zombie apocalypse tropes are often used to depict a moral dilemma, where characters must make difficult choices between survival and morality. In the meme, the zombie apocalypse is used to depict a moral dilemma where characters must choose between survival and the moral imperative to protect human life. This requires understanding of the use of zombie apocalypse tropes in depicting moral dilemmas and its implications.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a45ec38a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racial_justification_of_death",
+      "label": "The act of justifying death based on racial stereotypes or prejudices",
+      "description": "Racial justification of death refers to the act of justifying death based on racial stereotypes or prejudices, often by implying that the victims are not human or that their death is not a serious issue. In the meme, the implication that killing zombies (non-human entities) is not homicide is used to justify racially motivated death. This requires understanding of the concept of racial justification of death and its role in promoting harmful ideologies.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_88a204e8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "zombie_apocalypse_as_social_commentary_on_racism",
+      "label": "The use of zombie apocalypse tropes to comment on racism",
+      "description": "Zombie apocalypse tropes are often used in social commentary to depict racism, often by implying that certain racial groups are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c53fc37b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racial_justification_of_killing",
+      "label": "The act of justifying killing based on racial stereotypes or prejudices",
+      "description": "Racial justification of killing refers to the act of justifying killing based on racial stereotypes or prejudices, often by implying that the victims are not human or that their killing is not a serious issue. In the meme, the implication that killing zombies (non-human entities) is not homicide is used to justify racially motivated killing. This requires understanding of the concept of racial justification of killing and its role in promoting harmful ideologies.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f9518b4c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "zombie_apocalypse_as_social_commentary_on_hate",
+      "label": "The use of zombie apocalypse tropes to comment on hate",
+      "description": "Zombie apocalypse tropes are often used in social commentary to depict hate, often by implying that certain groups are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_851d79d3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racial_justification_of_death_as_crime",
+      "label": "The act of justifying death as a crime based on racial stereotypes or prejudices",
+      "description": "Racial justification of death as a crime refers to the act of justifying death as a crime based on racial stereotypes or prejudices, often by implying that the victims are not human or that their death is not a serious issue. In the meme, the implication that killing zombies (non-human entities) is not homicide is used to justify racially motivated death as a crime. This requires understanding of the concept of racial justification of death as a crime and its role in promoting harmful ideologies.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_733f43d7",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "zombie_apocalypse_as_social_commentary_on_inequality",
+      "label": "The use of zombie apocalypse tropes to comment on inequality",
+      "description": "Extracted from image analysis",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_552376e7",
+      "@type": "EmotionExpression",
+      "instance_name": "fear",
+      "label": "fearful emotion",
+      "description": "The woman's facial expression, with her mouth open as if screaming and her strained posture, conveys intense fear and desperation as she barricades the door against the zombie-like figures.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_af494493",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "zombies are mapped as non-human entities to justify homicide classification",
+      "description": "The text 'it can't be homicide if there is no race' is mapped onto the visual depiction of zombies. The zombies, being non-human entities in the visual material, are used as an analogy to imply that if victims are not racially defined (i.e., 'non-human'), then their killing cannot be classified as homicide. This creates an analogical mapping where the visual zombies represent dehumanized racial groups (particularly people of color) in the context of racially motivated violence.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5c909f9a",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of the woman barricading the door against zombies",
+      "description": "The user is projected onto the visual scene where the woman is resisting the zombie attack. This projection implies the user is identifying with the woman's defensive struggle, or is being positioned as the one who must confront or interpret the violent scenario depicted. The scene serves as the primary visual anchor for the user's engagement with the meme's message, which is framed through the woman's action and the surrounding chaos.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_be54735d",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses the visual metaphor of zombies (non-human entities) to justify the idea that racially motivated violence cannot be classified as homicide if the victims are not racially defined, thereby promoting a racist perspective that dehumanizes people of color and minimizes racially motivated violence.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ed7be2de",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "racist audience",
+      "description": "The meme is designed for an audience that holds or is sympathetic to racist ideologies, particularly those who seek to justify or minimize racially motivated violence by dehumanizing victims. The target community includes individuals who may benefit from or be attracted to the toxic framing that equates the killing of people of color with the killing of non-human entities (zombies), thereby downplaying the moral and legal significance of race in homicide.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_c975431e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

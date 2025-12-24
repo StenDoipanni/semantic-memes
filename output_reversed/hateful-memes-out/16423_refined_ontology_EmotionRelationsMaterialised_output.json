@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "concerned emotion",
+      "expressors": [
+        {
+          "entity": "man_on_phone",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_on_phone",
+          "relation": "emotionalRelationToEntity",
+          "to": "man_on_ground"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":concerned_emotion :hasExpressor :man_on_phone .",
+    ":man_on_phone :emotionalRelationToEntity :man_on_ground ."
+  ],
+  "triples_count": 2
+}

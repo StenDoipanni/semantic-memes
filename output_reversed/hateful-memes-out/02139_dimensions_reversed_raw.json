@@ -1,0 +1,176 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: no_less_beautiful; hasOverallIntent: non-toxic; overall-intent-description: The image shows a smiling woman in a patterned dress standing in front of a backdrop with the 'Royal Television Society' logo. The text 'no less beautiful' is overlaid in large white letters. The scene is celebratory and positive, likely intended to convey admiration for the woman's appearance or achievement. There are no elements suggesting toxicity, abuse, cyberbullying, harmfulness, hate, misogyny, or propaganda. The intent is to affirm beauty and positivity, using the juxtaposition of the text with the image to reinforce a message of appreciation and confidence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text",
+      "description": "no less",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A smiling woman wearing a white dress with a colorful bird pattern, standing in front of a backdrop with the 'Royal Television Society' logo. She is the central subject of the image and the focus of the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "admiration_scene",
+      "label": "woman_being_admired",
+      "description": "A smiling woman in a patterned dress stands confidently in front of a branded backdrop, with the text 'no less beautiful' overlaid to emphasize admiration for her appearance or achievement. The scene conveys a celebratory and positive message of affirmation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "is_subject_of_admiration",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "no_less_beautiful_meme_concept",
+      "label": "Meme Concept: 'No Less Beautiful'",
+      "description": "This phrase is a common meme format used to express admiration, affirmation, or validation of a person's appearance, achievements, or identity, often in contexts where they are being compared to others or facing criticism. It implies that the person is equally or more beautiful/valuable despite any perceived differences or challenges. The phrase is often used in celebratory or empowering contexts, especially in media, fashion, or social media circles.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "admiration_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "royal_television_society",
+      "label": "Royal Television Society",
+      "description": "An organization in the United Kingdom that recognizes excellence in television and radio broadcasting. It hosts awards ceremonies and events for the television industry. The presence of its logo in the background indicates the photo was taken at an official event, likely an awards ceremony or gala, adding context to the celebratory nature of the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "admiration_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "tilda_swinton",
+      "label": "Tilda Swinton",
+      "description": "The woman in the image is Tilda Swinton, a renowned British actress known for her distinctive appearance and versatile roles in film, television, and theater. Her presence in the image is significant because she is a well-known public figure whose beauty and style are often the subject of public admiration and media commentary. Recognizing her as Tilda Swinton adds context to the meme’s intent — it is not just about any woman, but about a celebrated, iconic figure being affirmed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "admiration_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "celebrity_admiration_trend",
+      "label": "Celebrity Admiration Trend",
+      "description": "The meme format 'no less beautiful' is often used in social media and online culture to celebrate and affirm the beauty or achievements of celebrities, particularly when they are being compared to others or facing criticism. This trend is part of a broader cultural phenomenon where fans and followers express admiration and support for public figures, often using visual and textual media to reinforce positive messages.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "admiration_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "admiration",
+      "label": "admiration emotion",
+      "description": "The emotion of admiration is conveyed through the celebratory context of the image, the text 'no less beautiful' overlaid on the photo, and the woman's confident and smiling demeanor. The scene suggests that her appearance or achievement is being recognized and valued positively, especially in a formal setting like the Royal Television Society event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "no_less_beautiful_mapping",
+      "label": "The woman is mapped as 'no less beautiful'",
+      "description": "The text 'no less beautiful' is overlaid on the image of the woman, creating an analogical mapping where the woman (visual entity) is being identified as 'no less beautiful' (textual entity). This mapping is central to the meme's intent, affirming her beauty and value in a celebratory context. The phrase 'no less beautiful' is a common meme format used to express admiration and validation, and in this case, it is directly projected onto the visual subject, Tilda Swinton, who is the focus of the admiration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman as an object of admiration",
+      "description": "The user is projected onto the visual material of the woman (Tilda Swinton), interpreting her as the subject of the affirmation 'no less beautiful'. The meme format invites the user to identify with the celebratory message directed at the woman, seeing her as a figure worthy of admiration. There are no explicit deictic pronouns like 'me' or 'you', but the implicit projection is onto the woman as the recipient of the affirmation, making her the focal point of the user's projected admiration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "celebrity admirers and media culture enthusiasts",
+      "description": "The target community is fans, followers, and members of the media and entertainment industry who appreciate and celebrate public figures like Tilda Swinton. The meme leverages the 'no less beautiful' format, commonly used in social media to affirm the beauty or achievements of celebrities, especially in contexts of comparison or criticism. The presence of the Royal Television Society backdrop indicates the event is industry-related, further targeting those engaged with television and film culture. The celebratory and positive tone appeals to audiences who enjoy uplifting, affirming content about iconic figures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/02139.png",
+    "image_name": "02139.png",
+    "extraction_timestamp": "2025-12-15T10:53:52.758284",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

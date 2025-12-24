@@ -1,0 +1,204 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts former U.S. President Barack Obama and former Secretary of State Hillary Clinton embracing on stage. The overlaid text reads: \"the only time you'll see a muslim hugging a pig.\" This is a deliberately false and inflammatory statement that attempts to equate Obama, who is Muslim, with a pig — an animal often associated with uncleanliness and taboo in Islamic dietary laws. The meme uses this false equivalence to imply that Obama is somehow 'unclean' or 'unfit' for leadership, leveraging religious stereotypes to attack his character and faith. This is a hateful meme because it targets a specific religious group (Muslims) by associating them with a derogatory and offensive animal metaphor, aiming to delegitimize Obama's political standing and incite prejudice against Muslims. The intent is to spread misinformation and hatred by exploiting religious and cultural stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "the only time you'll see",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Barack_Obama",
+      "label": "Former U.S. President",
+      "description": "A man with dark skin, wearing a dark suit and tie, embracing another person. He is positioned behind the other person, with his arms wrapped around them. His facial expression appears warm and affectionate. He is a recognizable public figure and the subject of the meme's false equivalence claim.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "embrace_scene",
+      "label": "embrace",
+      "description": "Barack Obama is embracing Hillary Clinton on stage. The scene depicts a warm, affectionate interaction between the two individuals, with Obama standing behind Clinton, wrapping his arms around her. The background is a blue stage with stars, suggesting a formal or political event. The meme text falsely equates this embrace with a 'Muslim hugging a pig,' which is a hateful stereotype targeting Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Barack_Obama",
+          "relation": "embraces",
+          "to": "Hillary_Clinton"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype: Muslims are unclean or associated with pigs",
+      "description": "This stereotype is rooted in religious dietary laws in Islam, which prohibit the consumption of pork and consider pigs unclean. The meme falsely equates Barack Obama, a Muslim, with a pig to imply he is 'unclean' or 'unfit' for leadership, leveraging religious prejudice against Muslims. This is a form of Islamophobia that uses religious taboos to delegitimize a political figure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "embrace_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "barack_obama",
+      "label": "Barack Obama",
+      "description": "Former U.S. President and the first African American president of the United States. He is a Muslim by faith. The meme falsely uses his religious identity to imply he is 'unclean' or 'unfit' for leadership, which is a hateful stereotype targeting Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "embrace_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hillary_clinton",
+      "label": "Hillary Clinton",
+      "description": "Former U.S. Secretary of State and Democratic presidential candidate. She is a prominent political figure who ran against Barack Obama in the 2008 and 2016 U.S. presidential elections. The meme uses her embrace with Obama to create a false equivalence with a 'Muslim hugging a pig', which is a hateful stereotype targeting Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "embrace_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_event",
+      "label": "Political Event: Democratic National Convention or similar",
+      "description": "The image depicts Barack Obama and Hillary Clinton embracing on a stage with a blue background and stars, which is characteristic of political events such as the Democratic National Convention. The meme uses this context to imply a false equivalence with a 'Muslim hugging a pig', which is a hateful stereotype targeting Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "embrace_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_meme",
+      "label": "Hateful Meme",
+      "description": "The meme is a deliberately false and inflammatory statement that attempts to equate Barack Obama, who is Muslim, with a pig — an animal often associated with uncleanliness and taboo in Islamic dietary laws. The meme uses this false equivalence to imply that Obama is somehow 'unclean' or 'unfit' for leadership, leveraging religious stereotypes to attack his character and faith. This is a hateful meme because it targets a specific religious group (Muslims) by associating them with a derogatory and offensive animal metaphor, aiming to delegitimize Obama's political standing and incite prejudice against Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "embrace_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_joy",
+      "label": "hateful joy expression",
+      "description": "The image depicts a warm, affectionate embrace between Barack Obama and Hillary Clinton, which is emotionally positive in context. However, the overlaid text falsely equates this moment with a 'Muslim hugging a pig,' which is a hateful stereotype. The emotion expressed is not genuine joy but a maliciously constructed 'joy' that is used to incite prejudice and hatred against Muslims by exploiting a false equivalence. The emotional expression is therefore hateful and distorted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Barack Obama is mapped as a Muslim hugging a pig",
+      "description": "The meme text 'a muslim hugging a pig' is an analogical mapping that falsely equates Barack Obama (the visual entity) with a Muslim hugging a pig. This mapping is hateful and false, using the visual of Obama embracing Hillary Clinton to imply he is 'unclean' or 'unfit' for leadership by associating him with a pig, which is a derogatory stereotype rooted in Islamophobia. The embrace scene is mapped onto the metaphorical concept of 'a muslim hugging a pig'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the top text overlay which reads 'the only time you'll see', creating an implicit 'you' perspective that invites the viewer to imagine themselves as the one who will witness this rare event. This deictic projection makes the viewer feel personally implicated in the meme's false claim.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobia",
+      "description": "The meme falsely equates Barack Obama, a Muslim, with a pig — an animal often associated with uncleanliness and taboo in Islamic dietary laws. This is a form of Islamophobia that uses religious taboos to delegitimize a political figure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold or are susceptible to Islamophobic beliefs, particularly those who may be politically motivated to discredit Barack Obama by leveraging religious stereotypes. The meme is designed to incite prejudice against Muslims by falsely equating Obama’s embrace with Hillary Clinton to a 'Muslim hugging a pig,' which is a derogatory metaphor rooted in Islamophobic tropes. The intended audience likely includes people who are already predisposed to anti-Muslim sentiment, or those who are politically aligned with narratives that delegitimize Obama’s leadership based on his faith. The meme also targets those who may not be aware of the false equivalence, aiming to spread misinformation and hatred by exploiting religious and cultural stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/41387.png",
+    "image_name": "41387.png",
+    "extraction_timestamp": "2025-12-16T00:53:18.029882",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

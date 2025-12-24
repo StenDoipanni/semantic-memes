@@ -1,0 +1,58 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "juxtaposition_of_modern_activist_and_historical_nazi_figures",
+      "participants": [
+        {
+          "entity": "woman_speaking_at_podium",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "woman_sitting_next_to_Hitler",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman_speaking_at_podium",
+          "relation": "claimedAncestorsAre",
+          "to": "Adolf_Hitler"
+        },
+        {
+          "from": "woman_speaking_at_podium",
+          "relation": "claimedAncestorsAre",
+          "to": "woman_sitting_next_to_Hitler"
+        },
+        {
+          "from": "Adolf_Hitler",
+          "relation": "isAncestorOf",
+          "to": "woman_speaking_at_podium"
+        },
+        {
+          "from": "woman_sitting_next_to_Hitler",
+          "relation": "isAncestorOf",
+          "to": "woman_speaking_at_podium"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":juxtaposition_of_modern_activist_and_historical_nazi_figures :hasParticipant :woman_speaking_at_podium .",
+    ":juxtaposition_of_modern_activist_and_historical_nazi_figures :hasParticipant :Adolf_Hitler .",
+    ":juxtaposition_of_modern_activist_and_historical_nazi_figures :hasParticipant :woman_sitting_next_to_Hitler .",
+    ":woman_speaking_at_podium :claimedAncestorsAre :Adolf_Hitler .",
+    ":woman_speaking_at_podium :claimedAncestorsAre :woman_sitting_next_to_Hitler .",
+    ":Adolf_Hitler :isAncestorOf :woman_speaking_at_podium .",
+    ":woman_sitting_next_to_Hitler :isAncestorOf :woman_speaking_at_podium ."
+  ],
+  "triples_count": 7
+}

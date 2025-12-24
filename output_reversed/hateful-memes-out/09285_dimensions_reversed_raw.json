@@ -1,0 +1,262 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: harmful; overall-intent-description: The image depicts a historical photograph of prisoners in striped uniforms, likely from a Nazi concentration camp, with the text overlay \"when the squad is about to get lit..\". This juxtaposition is deeply harmful as it trivializes the suffering and genocide of Holocaust victims by using their image to make a joke about getting intoxicated. The meme equates the horrific historical context with a casual, celebratory social activity, which is a form of historical revisionism and disrespect. It normalizes and mocks the trauma of genocide, potentially desensitizing viewers to the gravity of the Holocaust. The intent is to create dark humor by analogizing the prisoners' situation to a party scenario, which is both offensive and dangerous as it reduces human suffering to a punchline. This meme falls under the 'harmful' category because it has the potential to cause emotional harm to survivors and descendants, and it risks normalizing the dehumanization of victims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when the squad is about to get lit..",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "prisoners",
+      "label": "people in striped uniforms",
+      "description": "A group of individuals wearing striped prison uniforms, characteristic of Nazi concentration camp inmates, standing behind barbed wire. One central figure is gesturing with both hands raised, appearing to be speaking or addressing someone. The group includes men of various ages and physical conditions, some with visible signs of malnutrition or illness. Their expressions range from stoic to slightly amused or defiant. The uniforms are the most salient visual element, immediately signaling the historical context of the Holocaust.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "prisoners_waiting",
+      "label": "prisoners waiting behind barbed wire",
+      "description": "A group of prisoners in striped uniforms are standing behind barbed wire, with one central prisoner gesturing with both hands raised, appearing to be speaking or addressing someone. The group includes men of various ages and physical conditions, some with visible signs of malnutrition or illness. Their expressions range from stoic to slightly amused or defiant. The scene is set outdoors, likely in a concentration camp, with a building visible in the background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "prisoners",
+          "relation": "are positioned behind",
+          "to": "barbed_wire"
+        },
+        {
+          "from": "central_prisoner",
+          "relation": "gestures with hands raised",
+          "to": "prisoners"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust",
+      "label": "Holocaust",
+      "description": "The systematic, state-sponsored persecution and murder of six million Jews by Nazi Germany and its collaborators during World War II. The image depicts prisoners in striped uniforms, characteristic of Nazi concentration camps, which are central to understanding the historical context of the meme. The meme trivializes this genocide by using the image for dark humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "prisoners",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prisoners_waiting",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Nazi_concentration_camps",
+      "label": "Nazi concentration camps",
+      "description": "Prisons established by Nazi Germany during the Holocaust to imprison, torture, and murder millions of people, including Jews, Roma, disabled individuals, and others deemed undesirable. The striped uniforms and barbed wire in the image are iconic symbols of these camps.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "prisoners",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prisoners_waiting",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust_denial_minimization_themes",
+      "label": "Holocaust denial/minimization themes",
+      "description": "The act of downplaying, denying, or trivializing the Holocaust, often by reducing its gravity to a joke or comparing it to trivial events. The meme's text 'when the squad is about to get lit..' directly equates the suffering of Holocaust victims with a party scenario, which is a form of historical minimization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prisoners_waiting",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Dark_humor",
+      "label": "Dark humor",
+      "description": "Humor derived from morbid, tragic, or taboo subjects. The meme uses dark humor to juxtapose the horrific context of the Holocaust with a casual party scenario, which is offensive and disrespectful to victims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prisoners_waiting",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Historical_revisionism",
+      "label": "Historical revisionism",
+      "description": "The act of reinterpreting or rewriting history, often to fit a particular narrative or to downplay its significance. The meme represents historical revisionism by equating the suffering of Holocaust victims with a party, thereby distorting the historical record.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prisoners_waiting",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Dehumanization_of_victims",
+      "label": "Dehumanization of victims",
+      "description": "The process of stripping individuals of their humanity, often to justify violence or suffering. The meme dehumanizes Holocaust victims by using their image for a joke about partying, reducing their suffering to a punchline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "prisoners",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prisoners_waiting",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Stereotype_Squad_as_a_group_of_friends",
+      "label": "Stereotype: 'Squad' as a group of friends",
+      "description": "The term 'squad' is a modern slang term referring to a group of close friends, often used in social media and pop culture to describe a social circle. The meme uses this term to imply a group of friends getting intoxicated, which is a modern social context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Stereotype_Get_lit_as_partying_getting_intoxicated",
+      "label": "Stereotype: 'Get lit' as partying/getting intoxicated",
+      "description": "The phrase 'get lit' is a colloquial expression meaning to become intoxicated or to party. The meme uses this phrase to describe a casual, celebratory social activity, which is contrasted with the horrific context of the Holocaust.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "dark_humor",
+      "label": "dark humor expression",
+      "description": "The image juxtaposes the horrific context of Holocaust victims with a casual party scenario, creating a darkly comedic tone that trivializes the suffering of victims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The prisoners are mapped as 'the squad' about to get lit.",
+      "description": "The text 'when the squad is about to get lit..' is overlaid on an image of prisoners in striped uniforms. This creates an analogical mapping where the group of prisoners (visual entity) is being equated with 'the squad' (textual entity), and their situation is being humorously likened to a group of friends preparing to party and get intoxicated. This mapping is deeply offensive as it trivializes the horrific historical context of the Holocaust by equating it with a casual social activity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of prisoners waiting behind barbed wire",
+      "description": "The user is projected onto the scene of prisoners waiting behind barbed wire, as the meme's text 'when the squad is about to get lit..' implies the user (or their social circle) is about to engage in a party scenario. The visual material of the prisoners is being used as a metaphor for the user's 'squad' preparing to party, creating a semiotic projection where the user identifies with the group of prisoners in the image as their 'squad' about to get lit. This projection is metaphorical and relies on the analogical mapping between the prisoners and the 'squad', without explicit deictic pronouns like 'me' or 'you'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the Holocaust by equating the suffering of prisoners with a casual party scenario, which is deeply offensive and potentially harmful to survivors and descendants.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "text_chunk",
+      "label": "audience description",
+      "description": "The text 'when the squad is about to get lit..' targets an audience familiar with modern slang and party culture, particularly those who use internet memes and social media to share humor, often dark or edgy, about social gatherings and intoxication.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/09285.png",
+    "image_name": "09285.png",
+    "extraction_timestamp": "2025-12-15T13:46:54.464660",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

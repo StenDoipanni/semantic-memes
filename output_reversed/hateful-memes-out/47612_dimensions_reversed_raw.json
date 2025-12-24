@@ -1,0 +1,173 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: i_see_you_nagger; hasOverallIntent: Hateful; overall-intent-description: The image features a photograph of actor and rapper Nelly, overlaid with the text 'i see you' at the top and 'nagger!' at the bottom. The term 'nagger' is a derogatory racial slur historically used against Black people, and its inclusion here constitutes a direct hateful attack based on race. The meme uses the juxtaposition of Nelly's neutral or slightly smug expression with the offensive text to create a confrontational and demeaning message. The overall intent is to target and insult an individual based on his race, fitting the definition of a hateful meme. The visual material (Nelly's image) is mapped onto the textual material ('nagger!') to deliver a racially charged insult, leveraging his public identity to amplify the harm. This meme is not merely humorous or satirical; it is explicitly hostile and promotes racial hatred.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "i see you",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Nelly",
+      "label": "actor and rapper",
+      "description": "The central figure in the image, wearing a brown suede jacket and a cap, with a neutral or slightly smug facial expression. He is the subject of the meme and the target of the hateful text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "hateful_text_overlay",
+      "label": "hateful_text_overlay_scene",
+      "description": "The scene depicts actor and rapper Nelly as the central visual entity, with hateful text overlaid on the image. The text 'i see you' is positioned at the top and 'nagger!' at the bottom, directly targeting Nelly and creating a confrontational, racially charged message. The spatial arrangement places the text as dominant visual elements framing Nelly's image, emphasizing the hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "targets",
+          "to": "Nelly"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_slur_nagger",
+      "label": "racial slur 'nagger'",
+      "description": "The term 'nagger' is a derogatory racial slur historically used against Black people, particularly in the United States. It is not a neutral or descriptive term but a hateful epithet rooted in anti-Black racism. Its use in the meme directly targets the subject, Nelly, based on his race, and is intended to demean and insult him. This slur is part of a broader history of racial epithets used to dehumanize Black individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "hateful_text_overlay",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "anti-Black stereotype",
+      "description": "The meme leverages the racial slur 'nagger' to perpetuate a harmful anti-Black stereotype. This stereotype reduces Black individuals to a demeaning caricature, implying inferiority or undesirability. The use of such a slur in a meme context is not merely offensive; it is a form of racial hate speech that reinforces systemic racism and prejudice against Black people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "hateful_text_overlay",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nelly_as_public_figure",
+      "label": "Nelly as a public figure",
+      "description": "Nelly is a well-known American rapper and actor. His public identity as a Black man in the entertainment industry makes him a recognizable figure. The meme uses his image to deliver a racially charged insult, leveraging his public status to amplify the impact of the hate message. This is a form of targeted harassment based on his race and fame.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_meme_intention",
+      "label": "hateful meme intention",
+      "description": "The overall intent of the meme is to deliver a racially hateful message. The juxtaposition of Nelly's neutral or smug expression with the offensive text 'nagger!' is designed to create a confrontational and demeaning message. This is not satire or humor; it is a direct attack based on race, fitting the definition of a hateful meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "hateful_text_overlay",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous expression",
+      "description": "Nelly's facial expression, characterized by a slight smirk and raised eyebrows, conveys a sense of disdain or superiority. This expression is juxtaposed with the hateful text to amplify the confrontational tone of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_i_see_you_nelly",
+      "label": "The text 'i see you' is mapped onto Nelly as the person being observed.",
+      "description": "The top text 'i see you' is spatially positioned above Nelly's head, creating an analogical mapping where the text implies direct observation or awareness of Nelly. This mapping projects the textual concept of 'seeing' onto Nelly as the visual entity being observed, establishing a direct link between the text and the person in the image. The mapping is reinforced by the confrontational context of the meme, where the text serves to assert dominance or awareness over Nelly.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the hateful text overlay targeting Nelly",
+      "description": "The user is projected onto the textual material 'nagger!' which is directly targeted at Nelly, the visual material. The text 'i see you' at the top projects the user's awareness onto Nelly, while 'nagger!' at the bottom projects the user's hateful intent and identity as the aggressor onto the targeted visual entity. The meme constructs a confrontational scene where the user is implicitly 'you' in the 'i see you' statement and the aggressor delivering the slur, projecting the user's hostile identity onto the scene and the subject.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme delivers a direct racial attack using the slur 'nagger' against Nelly, a Black public figure, constituting hateful content based on race.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with or recognize Nelly as a public figure, particularly those who may be engaged in or supportive of racially charged online discourse. The meme leverages Nelly’s public identity as a Black rapper and actor to deliver a racially hateful message, suggesting the audience is likely to understand the reference and the intent to insult him based on his race. The use of the slur 'nagger' indicates the meme is designed for an audience that either uses or understands such racial epithets, or is willing to engage with content that promotes anti-Black racism. The confrontational tone and visual framing imply the audience is expected to interpret the meme as a direct, hostile statement, possibly within online communities that normalize or enjoy hate speech targeting Black individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/47612.png",
+    "image_name": "47612.png",
+    "extraction_timestamp": "2025-12-16T02:51:19.384663",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

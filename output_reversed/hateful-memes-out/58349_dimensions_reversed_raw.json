@@ -1,0 +1,172 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: nesquick_meme; hasOverallIntent: Harmful; overall-intent-description: The image depicts a chocolate bar splashing into milk on a spoon, with text reading 'when you dont stir the nesquick powder in your milk enough.' This is a humorous, self-deprecating meme that uses an exaggerated visual metaphor to describe the common experience of poorly mixed Nesquik powder. The intent is to evoke relatable humor and mild frustration, not to target or harm any group. The visual is playful and absurd, not abusive, hateful, or propagandistic. The humor stems from the contrast between the realistic milk splash and the unrealistic chocolate bar, which is not a real Nesquik product. There is no toxicity present as it does not involve disparaging any protected group or promoting harm. The meme's purpose is purely comedic and lighthearted, using visual exaggeration to highlight a mundane, everyday mishap.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you dont stir the nesquick powder in your milk enough",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "chocolate_bar",
+      "label": "object",
+      "description": "A rectangular chocolate bar with a hollow center, depicted mid-splash in milk, visually exaggerated to represent poorly mixed Nesquik powder.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "chocolate_in_milk_splash",
+      "label": "chocolate bar splashing into milk",
+      "description": "A chocolate bar is depicted mid-splash in milk on a spoon, creating a dynamic visual effect that symbolizes poorly mixed Nesquik powder. The scene is set against a black background, emphasizing the contrast and motion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "chocolate_bar",
+          "relation": "splashes_into",
+          "to": "milk"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nesquik_powder",
+      "label": "Nesquik Powder",
+      "description": "A brand of chocolate-flavored powdered drink mix, commonly used to make chocolate milk. The meme references the common experience of not stirring the powder enough, leading to clumps or poor mixing, which is humorously exaggerated by depicting a solid chocolate bar splashing into milk.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "chocolate_milk",
+      "label": "Chocolate Milk",
+      "description": "A beverage made by mixing milk with chocolate powder or syrup. The meme humorously depicts the mishap of poorly mixed chocolate powder, which is a common experience with Nesquik or similar products.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "chocolate_in_milk_splash",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "poor_mixing_experience",
+      "label": "Poor Mixing Experience",
+      "description": "A common, relatable, and mildly frustrating experience when preparing powdered drinks like Nesquik, where the powder doesn't dissolve properly and forms clumps. The meme uses visual exaggeration to highlight this mundane mishap.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "chocolate_in_milk_splash",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "visual_exaggeration",
+      "label": "Visual Exaggeration",
+      "description": "A comedic technique where a real-world situation is depicted in an absurd or hyperbolic way to enhance humor. In this meme, a solid chocolate bar is used instead of powder to visually represent the clumping effect of poorly mixed Nesquik.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "chocolate_in_milk_splash",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "humor",
+      "label": "humorous emotion",
+      "description": "The image and text together convey a lighthearted, self-deprecating humor about a common, relatable mishap—poorly mixing Nesquik powder. The visual exaggeration of a chocolate bar splashing into milk instead of powder adds to the comedic absurdity, making the experience seem both funny and slightly frustrating in a playful way.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Poor Mixing Experience is Visually Exaggerated as a Chocolate Bar Splashing in Milk",
+      "description": "The text 'when you dont stir the nesquik powder in your milk enough' describes a common, relatable experience of poorly mixed Nesquik powder. The visual material, a chocolate bar splashing into milk, is an exaggerated metaphor for this experience. The chocolate bar represents the clumped, undissolved powder, and the splash represents the messy, chaotic result of insufficient stirring. This is an analogical mapping where the textual description of a mundane mishap is visually projected onto the absurd image of a solid chocolate bar in milk.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual description of a relatable mishap",
+      "description": "The user is projected onto the text 'when you dont stir the nesquick powder in your milk enough', which uses the deictic pronoun 'you' to directly address the viewer, making them the subject of the experience being described. The user identifies with the common, mildly frustrating experience of poorly mixing Nesquik powder, and the meme humorously exaggerates this personal experience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "Nesquik users",
+      "description": "The target community is individuals who consume or have consumed Nesquik powder, as the meme directly references the brand and the common experience of poorly mixing it into milk.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/58349.png",
+    "image_name": "58349.png",
+    "extraction_timestamp": "2025-12-16T06:04:41.716361",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

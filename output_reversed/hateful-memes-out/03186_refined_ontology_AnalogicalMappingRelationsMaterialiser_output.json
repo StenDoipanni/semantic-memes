@@ -1,0 +1,52 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "text_chunk_1",
+      "hasMappingEntity": "woman_with_polished_nails"
+    },
+    {
+      "mapping": "mapping_1",
+      "from": "woman_with_polished_nails",
+      "relation": "mappedOnto",
+      "to": "text_chunk_1"
+    },
+    {
+      "mapping": "mapping_2",
+      "hasMappedEntity": "text_chunk_3",
+      "hasMappingEntity": "woman_with_polished_nails"
+    },
+    {
+      "mapping": "mapping_2",
+      "from": "woman_with_polished_nails",
+      "relation": "mappedOnto",
+      "to": "text_chunk_3"
+    },
+    {
+      "mapping": "mapping_3",
+      "hasMappedEntity": "text_chunk_4",
+      "hasMappingEntity": "adolf_hitler"
+    },
+    {
+      "mapping": "mapping_3",
+      "from": "adolf_hitler",
+      "relation": "mappedOnto",
+      "to": "text_chunk_4"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :text_chunk_1 .",
+    ":mapping_1 :hasMappingEntity :woman_with_polished_nails .",
+    ":mapping_2 :hasMappedEntity :text_chunk_3 .",
+    ":mapping_2 :hasMappingEntity :woman_with_polished_nails .",
+    ":mapping_3 :hasMappedEntity :text_chunk_4 .",
+    ":mapping_3 :hasMappingEntity :adolf_hitler ."
+  ],
+  "triples_count": 6
+}

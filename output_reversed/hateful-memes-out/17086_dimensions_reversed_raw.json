@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: oh_youre_triggered; hasOverallIntent: Harmful; overall-intent-description: The meme features Gene Wilder smiling while signing a book, juxtaposed with the text 'oh you're triggered?' and 'must be hard being a special snowflake.' The intent is to mock or dismiss individuals who express sensitivity or discomfort with certain topics, using the derogatory term 'special snowflake' to imply they are overly sensitive or fragile. This framing can be harmful as it trivializes legitimate emotional or psychological responses, potentially invalidating the experiences of those who feel triggered, and may contribute to a culture of silencing or ridiculing vulnerable perspectives. The meme does not target specific protected characteristics like race, gender, or religion, but it does use a pejorative metaphor to demean people who advocate for emotional safety or social awareness, which can be psychologically damaging and socially divisive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "oh you're triggered?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Gene_Wilder",
+      "label": "person",
+      "description": "An elderly man with curly white hair, wearing a light blue V-neck sweater over a white turtleneck, smiling broadly while signing a book with a black pen. He is seated at a table, and his expression appears cheerful and engaged. He is the central figure in the image and the subject of the meme's text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "book_signing_scene",
+      "label": "Gene Wilder signing a book",
+      "description": "Gene Wilder is seated at a table, holding a black pen and signing an open book. He is smiling broadly and appears engaged in the activity. The scene is framed as a public or promotional event, indicated by posters in the background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Gene_Wilder",
+          "relation": "signs",
+          "to": "book"
+        },
+        {
+          "from": "Gene_Wilder",
+          "relation": "holds",
+          "to": "pen"
+        },
+        {
+          "from": "Gene_Wilder",
+          "relation": "sits_on",
+          "to": "table"
+        },
+        {
+          "from": "book",
+          "relation": "rests_on",
+          "to": "table"
+        },
+        {
+          "from": "poster",
+          "relation": "is_in_background_of",
+          "to": "Gene_Wilder"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "triggered",
+      "label": "The term 'triggered'",
+      "description": "A psychological and social term referring to a state of emotional or psychological distress caused by exposure to a stimulus that is associated with a traumatic or distressing experience. In contemporary internet culture, it is often used to describe someone who feels emotionally overwhelmed or offended by certain topics, especially in discussions about social justice, politics, or identity. The term is not visible in the image but is central to the meme's text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "special_snowflake",
+      "label": "The derogatory term 'special snowflake'",
+      "description": "A pejorative metaphor used to describe someone who is perceived as overly sensitive, fragile, or easily offended, often implying that their emotional reactions are exaggerated or unwarranted. It is used to dismiss or mock individuals who advocate for emotional safety or social awareness. This term is not visible in the image but is central to the meme's second text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "Ableism",
+      "description": "A form of discrimination or prejudice against people with disabilities, often manifesting as the belief that people with disabilities are less capable, less intelligent, or less worthy. The meme uses the term 'special snowflake' to mock people who are sensitive or emotionally reactive, which can be interpreted as a form of ableism by implying that their sensitivity is a flaw or weakness, rather than a legitimate human experience. This concept is not visible in the image but is implied by the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Gene_Wilder",
+      "label": "Gene Wilder",
+      "description": "An American actor and comedian, best known for his roles in films such as 'Willy Wonka & the Chocolate Factory' and 'The Producers'. He is a cultural icon associated with humor and charm. His image is used in the meme to create a contrast between his cheerful demeanor and the mocking text, which is a common meme technique. This knowledge is not visible in the image but is required to understand the meme's context and intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "book_signing_scene",
+      "label": "Book signing scene",
+      "description": "A common promotional event where authors sign copies of their books for fans. The scene in the image is a book signing, which is a public event that often involves the author interacting with fans. The context of a book signing is not directly visible in the image but is implied by the activity (signing a book) and the posters in the background. This knowledge is required to understand the setting and the nature of the interaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_humor",
+      "label": "mocking and dismissive humor",
+      "description": "The emotion expressed is a mocking and dismissive tone, conveyed through the juxtaposition of Gene Wilder's cheerful, innocent expression with the sarcastic text overlay that ridicules people who are 'triggered' and calls them 'special snowflakes'. The humor is intended to belittle and invalidate emotional sensitivity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Gene Wilder is mapped as a 'special snowflake'",
+      "description": "The text 'must be hard being a special snowflake' is juxtaposed with Gene Wilder's image, implying that he is being mocked as a 'special snowflake'. This is an analogical mapping where the textual concept of 'special snowflake' (a derogatory term for someone overly sensitive) is projected onto Gene Wilder, who is visually depicted as cheerful and engaged in signing a book. The mapping is based on the visual-textual juxtaposition and the meme's intent to ridicule sensitivity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material mocking sensitivity",
+      "description": "The user is projected onto the textual material 'oh you're triggered?' and 'must be hard being a special snowflake', which directly addresses the viewer as the one who is 'triggered' or 'a special snowflake'. This creates an implicit 'you' in the user's experience, making them the target of the meme's mockery. The projection is onto the textual material, which frames the user as the sensitive or overly emotional person being ridiculed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses the derogatory term 'special snowflake' to mock individuals who are emotionally sensitive or triggered, implying their reactions are exaggerated or unwarranted. This trivializes legitimate emotional or psychological responses and can be psychologically damaging and socially divisive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who are familiar with internet slang and cultural references related to social media discourse, particularly those who understand the terms 'triggered' and 'special snowflake' as used in online debates. The meme is designed to resonate with people who either use or recognize these terms in the context of mocking individuals perceived as overly sensitive or emotionally reactive, often in discussions about social justice, politics, or identity. The use of Gene Wilder’s cheerful, iconic image as a contrast to the mocking text suggests the meme targets an audience that appreciates pop culture references and visual humor, and who may identify with or enjoy ridiculing 'emotional sensitivity' as a weakness. The meme’s intent to trivialize legitimate emotional responses implies it is aimed at those who hold or support the view that sensitivity is exaggerated or unwarranted, and who may be part of communities that value emotional resilience or dismissive attitudes toward social awareness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/17086.png",
+    "image_name": "17086.png",
+    "extraction_timestamp": "2025-12-15T16:47:03.770598",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

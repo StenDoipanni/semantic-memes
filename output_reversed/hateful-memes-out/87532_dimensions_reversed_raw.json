@@ -1,0 +1,248 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: not_the_shower_we_deserved_but_the_shower_we_needed; hasOverallIntent: Harmful; overall-intent-description: The image depicts a dimly lit, grimy, and dilapidated underground space resembling a prison or bunker, with a single hanging light bulb and some flowers placed on the floor. The text reads 'not the shower we deserved but the shower we needed.' This juxtaposition uses the visual metaphor of a harsh, unsanitary environment to convey a message of resilience or acceptance of a difficult reality. The overall intent is not to target any specific group with hate or abuse, but rather to express a sentiment of coping with adversity — perhaps in a context of hardship, trauma, or systemic injustice. The 'shower' metaphor is commonly used to refer to cleansing or release, and the meme implies that while the experience was not ideal, it was necessary for survival or healing. The imagery and text together create a somber, reflective tone, potentially resonating with those who have endured difficult circumstances. While the image may evoke discomfort or sadness due to its bleakness, it does not contain explicit hateful, abusive, or discriminatory content against any protected group. The intent is more aligned with conveying a message of endurance and acceptance rather than promoting harm or hate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "not the shower we deserved",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "light_bulb",
+      "label": "hanging light fixture",
+      "description": "A single, exposed, glowing incandescent light bulb hanging from the ceiling, casting a warm, dim light over the scene. It is the primary light source in the otherwise dark environment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "dimly_lit_underground_shower",
+      "label": "dimly lit underground shower scene",
+      "description": "A grimy, dilapidated underground space resembling a prison or bunker, with a single hanging light bulb casting a warm, dim light. The floor has some flowers placed on it, and the walls are rough and stained. The scene is framed by the text 'not the shower we deserved but the shower we needed', creating a somber, reflective tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "light_bulb",
+          "relation": "illuminates",
+          "to": "underground_shower_space"
+        },
+        {
+          "from": "text",
+          "relation": "superimposed_on",
+          "to": "underground_shower_space"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "shower_metaphor",
+      "label": "Shower Metaphor",
+      "description": "The phrase 'shower' is used metaphorically to represent cleansing, release, or emotional/physical purification. In this context, it refers to a necessary but unpleasant experience — often used in discussions of trauma, systemic injustice, or personal hardship. The metaphor is culturally embedded in Western discourse, particularly in contexts of mental health, social commentary, and political resistance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "dimly_lit_underground_shower",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "prison_or_bunker_setting",
+      "label": "Prison or Bunker Setting",
+      "description": "The visual of a grimy, underground, dilapidated space is commonly associated with prisons, concentration camps, or wartime bunkers. This setting evokes historical and cultural associations with suffering, confinement, and systemic oppression. The imagery is used to imply a context of institutionalized hardship or trauma.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dimly_lit_underground_shower",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "resilience_through_adversity",
+      "label": "Resilience Through Adversity",
+      "description": "The meme's core message — accepting a harsh reality as necessary for survival or healing — is a common theme in social commentary, trauma narratives, and political resistance. It draws on cultural understandings of endurance, coping mechanisms, and the psychological process of 'making peace' with difficult circumstances.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "dimly_lit_underground_shower",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_shower_reference",
+      "label": "Historical Shower Reference",
+      "description": "The phrase 'shower' in this context may implicitly reference the 'shower' scenes in historical atrocities, such as the Holocaust, where showers were used as a euphemism for gas chambers. While not explicitly shown, the imagery and metaphor can evoke this dark historical association, making the meme's message more potent and somber.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dimly_lit_underground_shower",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "systemic_injustice",
+      "label": "Systemic Injustice",
+      "description": "The meme resonates with audiences who have experienced or witnessed systemic injustice — such as racial, economic, or political oppression. The phrase 'not the shower we deserved' implies a failure of societal systems to provide justice or dignity, while 'but the shower we needed' suggests a grim necessity born from systemic failure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dimly_lit_underground_shower",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "trauma_and_healing",
+      "label": "Trauma and Healing",
+      "description": "The meme uses the metaphor of a 'shower' to represent the process of trauma and healing — the cleansing of pain, the release of emotional burdens, or the necessary but painful steps toward recovery. This concept is rooted in psychological and therapeutic discourse, particularly in trauma-informed care.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dimly_lit_underground_shower",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "resignation",
+      "label": "resigned emotion",
+      "description": "The emotion of accepting a harsh or unpleasant reality as unavoidable, despite it not being ideal. This is conveyed through the juxtaposition of 'not the shower we deserved' with 'but the shower we needed,' suggesting a weary acceptance of necessary suffering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The grimy underground space is mapped as 'the shower we needed'",
+      "description": "The visual entity 'dimly_lit_underground_shower' is analogically mapped to the textual phrase 'the shower we needed'. The text explicitly uses the metaphor of a 'shower' to represent a necessary but unpleasant cleansing or release, and the visual of the grimy, dilapidated space embodies this metaphor by evoking a harsh, unsanitary environment. This mapping is central to the meme's message of resilience through adversity, where the 'shower' is not ideal but essential for survival or healing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene as the experiencer of the metaphorical 'shower'",
+      "description": "The user is implicitly projected onto the scene (dimly_lit_underground_shower) as the individual who has undergone or is undergoing the metaphorical 'shower' — a necessary but undeserved hardship. The text 'not the shower we deserved but the shower we needed' uses the first-person plural 'we', which creates an inclusive projection where the viewer/user identifies with the collective experience. The scene visually embodies the 'shower' as a grim, necessary cleansing, and the user is projected onto this scene as the one who must endure it. This projection is not explicit with deictic pronouns like 'you' or 'me', but it is implied through the collective 'we' and the universalizing tone of the message, making the user feel personally connected to the experience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a grim, prison-like setting and the metaphor of a 'shower' to evoke trauma and systemic injustice. While not explicitly targeting any group, the imagery and metaphor can be interpreted as referencing historical atrocities (e.g., Holocaust gas chambers) and may cause distress or discomfort to viewers, particularly those who have experienced or are aware of institutionalized suffering. The overall message, while framed as resilience, carries the potential to normalize or trivialize severe suffering, which can be psychologically harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who have experienced or are aware of systemic injustice, trauma, or institutionalized suffering. The meme resonates with audiences familiar with the metaphor of a 'shower' representing cleansing or release in the context of hardship, particularly those who have endured or witnessed oppressive systems. The imagery of a grimy, underground space evokes associations with historical atrocities (e.g., Holocaust gas chambers) and modern-day systemic oppression, making it particularly impactful for communities affected by trauma, social injustice, or political resistance. The message of resilience through adversity — accepting a harsh reality as necessary for survival or healing — appeals to those navigating difficult circumstances, including survivors of abuse, marginalized groups, or individuals coping with mental health challenges. The meme’s somber tone and cultural references to trauma and healing make it relevant to audiences engaged in psychological discourse, social commentary, or political resistance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/87532.png",
+    "image_name": "87532.png",
+    "extraction_timestamp": "2025-12-19T16:35:22.253080",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

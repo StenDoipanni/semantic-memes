@@ -1,0 +1,38 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "humorous expression of relaxation",
+      "expressors": [
+        {
+          "entity": "man",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "gorilla",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "emotionalRelationToEntity",
+          "to": "gorilla"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":humorous_expression_of_relaxation :hasExpressor :man .",
+    ":humorous_expression_of_relaxation :hasExpressor :gorilla .",
+    ":man :emotionalRelationToEntity :gorilla ."
+  ],
+  "triples_count": 3
+}

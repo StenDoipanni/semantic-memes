@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "deceptive_alliance",
+      "participants": [
+        {
+          "entity": "muslims",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "people who aren't retarded",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "muslims",
+          "relation": "engagedInDeceptiveAllianceWith",
+          "to": "people who aren't retarded"
+        },
+        {
+          "from": "people who aren't retarded",
+          "relation": "engagedInDeceptiveAllianceWith",
+          "to": "muslims"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":deceptive_alliance :hasParticipant :muslims .",
+    ":deceptive_alliance :hasParticipant :people_who_aren_t_retarded .",
+    ":muslims :engagedInDeceptiveAllianceWith :people_who_aren_t_retarded .",
+    ":people_who_aren_t_retarded :engagedInDeceptiveAllianceWith :muslims ."
+  ],
+  "triples_count": 4
+}

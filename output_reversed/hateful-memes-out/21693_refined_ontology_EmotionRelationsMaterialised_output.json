@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "cheerful expression",
+      "expressors": [
+        {
+          "entity": "cashier",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "cashier",
+          "relation": "emotionalRelationToEntity",
+          "to": "customer"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":cheerful_expression :hasExpressor :cashier .",
+    ":cashier :emotionalRelationToEntity :customer ."
+  ],
+  "triples_count": 2
+}

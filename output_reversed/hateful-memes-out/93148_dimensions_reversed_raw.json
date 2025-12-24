@@ -1,0 +1,188 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: the_proper_way_to_pop_a_blackhead; hasOverallIntent: Harmful; overall-intent-description: The image depicts a woman gently extracting a blackhead from her face, with text overlaying the image that reads 'the proper way to pop a blackhead.' The scene is presented in a calm, instructional tone, suggesting a methodical and hygienic approach to a common skincare task. There is no visible toxicity or harmful content targeting any specific group based on race, gender, religion, or other protected characteristics. The meme's intent is to humorously or ironically suggest that the depicted action is the 'proper' way to handle blackheads, potentially contrasting it with more extreme or unhygienic methods. The overall intent is not abusive, hateful, or propagandistic, but rather educational or satirical in nature, aiming to provoke thought or laughter about skincare practices. The image does not contain any elements that would be classified as misogynistic, racist, or otherwise harmful to any group. The focus is on the act of popping a blackhead, not on any person's identity or characteristics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "the proper way",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with dark hair tied up in a bun, wearing a white tank top, is looking at her reflection in a mirror while gently extracting a blackhead from her cheek with her fingers. Her expression is calm and focused, suggesting a methodical approach to the task.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "blackhead_extraction",
+      "label": "woman extracting blackhead",
+      "description": "A woman is looking at her reflection in a mirror while gently extracting a blackhead from her cheek with her fingers. The scene is framed to show her focused expression and the action of popping the blackhead, with text overlaying the image that reads 'the proper way to pop a blackhead.'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "extracts",
+          "to": "blackhead"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "blackhead_extraction",
+      "label": "Skincare Practice",
+      "description": "The act of extracting blackheads is a common skincare practice, often done at home or by professionals. It involves removing impurities from pores, and while it can be done safely with proper technique, it is also commonly associated with unhygienic or risky methods. The meme uses this practice to create irony by labeling the depicted method as 'the proper way,' contrasting it with more extreme or unhygienic approaches.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "text_chunk",
+      "label": "Meme Text",
+      "description": "The text 'the proper way to pop a blackhead' is a satirical or ironic statement. It implies that the depicted action is the 'correct' or 'ideal' method, which is often used humorously to contrast with more extreme, unhygienic, or dangerous methods of popping blackheads. This text is central to the meme's humor and requires understanding of common skincare practices and their associated risks.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "The meme may implicitly reference the stereotype that women are overly focused on appearance and beauty rituals, which can be seen as a form of misogyny. The image of a woman performing a skincare task, framed as 'the proper way,' can be interpreted as reinforcing societal expectations that women are primarily concerned with their appearance, which is a common trope in misogynistic stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification",
+      "label": "Objectification",
+      "description": "The meme may implicitly reference the objectification of women's bodies, as the focus is on a specific body part (the face) and the act of manipulating it for aesthetic purposes. This can be seen as reinforcing the idea that women's value is tied to their appearance, which is a form of objectification.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "skincare_trends",
+      "label": "Skincare Trends",
+      "description": "The meme references common skincare trends and practices, such as blackhead extraction, which are often discussed in beauty and skincare communities. Understanding these trends is necessary to appreciate the humor and irony of the meme, as it plays on the idea of 'proper' skincare methods.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "calmness",
+      "label": "calm and focused emotion",
+      "description": "The woman's facial expression is serene and concentrated, indicating she is calmly performing the blackhead extraction with precision and control. Her eyes are slightly narrowed in focus, and her lips are relaxed, suggesting a composed and methodical approach to the task.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'the proper way' is mapped onto the visual depiction of the woman extracting a blackhead.",
+      "description": "The textual phrase 'the proper way to pop a blackhead' is juxtaposed with the visual of a woman performing the action. This creates an analogical mapping where the text labels the visual action as 'the proper way,' implying a methodological or idealized approach to blackhead extraction. The mapping is established through direct textual-visual alignment, where the text serves to define or categorize the visual scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of blackhead extraction",
+      "description": "The user is projected onto the visual scene of the woman extracting a blackhead, as the meme implies that the viewer (user) is being shown 'the proper way' to perform this action. This projection is implicit, not explicit, and is established through the instructional tone of the text and the visual focus on the action. The user is invited to imagine themselves performing the action or to identify with the depicted method.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Misogynous",
+      "description": "The meme may implicitly reference the stereotype that women are overly focused on appearance and beauty rituals, which can be seen as a form of misogyny. The image of a woman performing a skincare task, framed as 'the proper way,' can be interpreted as reinforcing societal expectations that women are primarily concerned with their appearance, which is a common trope in misogynistic stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "woman",
+      "description": "The target community is women who engage in skincare routines, particularly those interested in or concerned with facial acne and blackhead removal. The meme appeals to individuals who are familiar with or curious about skincare practices, beauty trends, and the often humorous or ironic discourse surrounding self-care rituals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/93148.png",
+    "image_name": "93148.png",
+    "extraction_timestamp": "2025-12-19T17:41:54.677217",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

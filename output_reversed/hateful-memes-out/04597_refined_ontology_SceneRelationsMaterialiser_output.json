@@ -1,0 +1,35 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "gun_on_constitution",
+      "participants": [
+        {
+          "entity": "revolver",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "U.S. Constitution",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "revolver",
+          "relation": "placedOn",
+          "to": "U.S. Constitution"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":gun_on_constitution :hasParticipant :revolver .",
+    ":gun_on_constitution :hasParticipant :U_S_Constitution .",
+    ":revolver :placedOn :U_S_Constitution ."
+  ],
+  "triples_count": 3
+}

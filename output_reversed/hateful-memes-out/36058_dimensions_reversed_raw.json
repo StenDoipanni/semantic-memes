@@ -1,0 +1,225 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Propaganda; overall-intent-description: The meme juxtaposes two images: the top image shows two men kissing in a dimly lit, possibly club-like setting, while the bottom image shows two women in wedding attire kissing affectionately. The text 'love is love' is overlaid. The overall intent is to promote the message of LGBTQ+ acceptance and equality by equating the romantic and marital expressions of love between same-sex couples with those of heterosexual couples. This is a form of propaganda aimed at influencing public opinion toward greater acceptance of same-sex relationships and marriage. The meme does not contain any toxic elements such as abusive, cyberbullying, harmful, hateful, misogynous, or ableist content. It is a positive, affirming message intended to normalize and celebrate diverse expressions of love.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "love is love",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "two_women_in_wedding_attire",
+      "label": "central subjects",
+      "description": "Two women, both wearing white wedding dresses and veils, are shown kissing affectionately. Their hair is styled in loose waves, and they are embracing each other. The woman on the left has reddish-brown hair, while the woman on the right has lighter, honey-blonde hair. Their expressions are tender and intimate, suggesting a celebratory or ceremonial context, likely a wedding. They are the focal point of the bottom half of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "wedding_kiss",
+      "label": "Two women in wedding attire kissing affectionately",
+      "description": "The scene depicts two women, both dressed in white wedding dresses and veils, embracing and kissing tenderly. Their hair is styled in loose waves, and their expressions convey intimacy and celebration. The setting appears to be a formal event, likely a wedding, with soft lighting and decorative elements in the background. The women are positioned centrally, facing each other, with their arms wrapped around one another. The scene is emotionally warm and celebratory.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "two_women_in_wedding_attire",
+          "relation": "kissing",
+          "to": "two_women_in_wedding_attire"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "LGBTQ_marriage_equality_movement",
+      "label": "LGBTQ+ Marriage Equality Movement",
+      "description": "The concept of 'love is love' is a slogan and ideological framework used by LGBTQ+ advocates to argue for the equal recognition of same-sex relationships, including marriage, under the law. It is rooted in broader social movements for LGBTQ+ rights and is often used in public discourse to challenge discriminatory laws and societal norms. The meme uses this movement's messaging to equate same-sex marriage with heterosexual marriage, implying moral and legal equivalence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "wedding_kiss",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Same_sex_marriage",
+      "label": "Same-sex Marriage",
+      "description": "The legal and social institution of marriage between two individuals of the same sex. Historically, this was not recognized in many jurisdictions, but has become increasingly accepted and legalized in many countries and U.S. states since the late 20th and early 21st centuries. The image of two women in wedding attire kissing is a visual representation of this institution, which is the central subject of the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "wedding_kiss",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Heteronormativity",
+      "label": "Heteronormativity",
+      "description": "The societal assumption that heterosexuality is the default or 'normal' sexual orientation, and that relationships should be between a man and a woman. The meme implicitly challenges this norm by juxtaposing a same-sex wedding with a heterosexual context (implied by the top image of two men kissing, which may be interpreted as a 'normal' or 'default' romantic scene). The phrase 'love is love' is used to counter heteronormative assumptions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "wedding_kiss",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "LGBTQ_rights_activism",
+      "label": "LGBTQ+ Rights Activism",
+      "description": "The organized effort by LGBTQ+ individuals and allies to secure equal rights, including legal recognition of same-sex relationships, protection from discrimination, and social acceptance. The meme is a form of visual activism, using imagery and text to promote the message of LGBTQ+ rights and challenge societal stigma. The phrase 'love is love' is a common rallying cry in this movement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "wedding_kiss",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Social_media_activism",
+      "label": "Social Media Activism",
+      "description": "The use of social media platforms to promote social and political causes, often through memes, hashtags, and viral content. This meme format is a common tool in social media activism, designed to be shareable, emotionally resonant, and to quickly communicate a message to a broad audience. The juxtaposition of images and the slogan 'love is love' are typical of this style of activism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Cultural_representation_of_same_sex_relationships",
+      "label": "Cultural Representation of Same-Sex Relationships",
+      "description": "The way same-sex relationships are portrayed in media, art, and public life. The image of two women in wedding attire kissing is a positive, celebratory representation that challenges negative or stereotypical portrayals of LGBTQ+ relationships. The meme uses this representation to promote acceptance and normalize same-sex relationships in mainstream culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "wedding_kiss",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Meme_as_a_rhetorical_device",
+      "label": "Meme as a Rhetorical Device",
+      "description": "A meme is a form of communication that uses humor, irony, or juxtaposition to convey a message or argument. In this case, the meme uses the contrast between two images (a casual same-sex kiss and a formal same-sex wedding) to argue that love is inherently equal regardless of gender. The rhetorical device relies on the viewer's understanding of social norms and the symbolic meaning of wedding attire and kissing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "affection",
+      "label": "affectionate emotion",
+      "description": "The two women in wedding attire are shown kissing tenderly while embracing each other, with soft expressions and close physical contact, conveying deep affection and intimacy. Their facial expressions and body language suggest warmth, love, and celebration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "love is love mapping to same-sex wedding kiss",
+      "description": "The text 'love is love' is overlaid on the image of two women in wedding attire kissing. This mapping equates the romantic and marital expression of love depicted in the visual material (same-sex wedding kiss) with the universal concept of love stated in the text. The meme uses this visual to argue that same-sex love is as valid and worthy of celebration as heterosexual love, thereby mapping the textual affirmation 'love is love' onto the visual representation of same-sex marriage.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message affirming equality",
+      "description": "The user is projected onto the text 'love is love', which serves as the central rhetorical anchor of the meme. The user is invited to identify with the universal affirmation stated in the text, which is then visually supported by the image of the same-sex wedding kiss. This projection encourages the user to internalize the message of equality and to see the depicted scene as a valid and worthy expression of love, aligning their own perspective with the meme's ideological stance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "LGBTQ_marriage_equality_movement",
+      "label": "LGBTQ+ Marriage Equality Movement",
+      "description": "The meme is designed for supporters and advocates of the LGBTQ+ Marriage Equality Movement, who use the slogan 'love is love' to promote legal and social recognition of same-sex marriage. The visual of two women in wedding attire kissing directly aligns with the movement's goals of celebrating and normalizing same-sex unions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/36058.png",
+    "image_name": "36058.png",
+    "extraction_timestamp": "2025-12-15T23:15:26.358646",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

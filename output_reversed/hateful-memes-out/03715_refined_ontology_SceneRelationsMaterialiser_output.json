@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "washing_machine_with_text_overlay",
+      "participants": [
+        {
+          "entity": "washing_machine",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "text_overlay",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "washing_machine",
+          "relation": "isSubjectOf",
+          "to": "text_overlay"
+        },
+        {
+          "from": "text_overlay",
+          "relation": "describes",
+          "to": "washing_machine"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":washing_machine_with_text_overlay :hasParticipant :washing_machine .",
+    ":washing_machine_with_text_overlay :hasParticipant :text_overlay .",
+    ":washing_machine :isSubjectOf :text_overlay .",
+    ":text_overlay :describes :washing_machine ."
+  ],
+  "triples_count": 4
+}

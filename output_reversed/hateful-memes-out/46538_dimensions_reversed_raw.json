@@ -1,0 +1,194 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts two women, both wearing hijabs, sharing a joyful moment as one gently touches the pregnant belly of the other. The text overlay reads 'it's a boy,' indicating the announcement of a male child. The scene is warm, celebratory, and centered on maternal joy and female camaraderie. There is no toxicity present in the image. The meme does not contain any disparaging metaphors, stereotypes, or harmful content related to race, religion, gender, or any other protected characteristic. The intent is to convey a positive, personal announcement of a baby's gender, using the visual of two women bonding over the pregnancy. The juxtaposition of the text with the image serves to highlight the happiness and shared experience of the moment, without any propagandistic, hateful, or abusive elements. The meme is celebratory and culturally neutral in its presentation, focusing on universal themes of joy and anticipation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "it's a boy",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_pregnant",
+      "label": "pregnant woman wearing hijab",
+      "description": "A woman in the foreground, visibly pregnant, wearing a gradient-colored hijab (light beige to dark brown) and a green dress. She is smiling broadly, looking upward and to her right, with her hands resting on her belly. Her expression conveys joy and anticipation. She is the central subject of the image and the focus of the text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "celebratory_pregnancy_announcement",
+      "label": "Celebratory pregnancy announcement scene",
+      "description": "A joyful scene where two women, both wearing hijabs, are sharing a moment of happiness as one gently touches the pregnant belly of the other. The text overlay 'it's a boy' confirms the announcement of a male child. The scene is warm, centered on maternal joy and female camaraderie, with the pregnant woman smiling broadly and the other woman looking down at her belly with affection. The spatial arrangement places the pregnant woman slightly to the left and the other woman to her right, with their hands overlapping on the belly, creating a sense of shared intimacy and celebration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman_pregnant",
+          "relation": "isBeingCelebratedBy",
+          "to": "woman_non_pregnant"
+        },
+        {
+          "from": "woman_non_pregnant",
+          "relation": "touchesBellyOf",
+          "to": "woman_pregnant"
+        },
+        {
+          "from": "woman_pregnant",
+          "relation": "smilesAt",
+          "to": "woman_non_pregnant"
+        },
+        {
+          "from": "woman_non_pregnant",
+          "relation": "looksAt",
+          "to": "woman_pregnant"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gender_reveal_celebration",
+      "label": "Gender Reveal Celebration",
+      "description": "The concept of a gender reveal celebration is a modern social trend where expectant parents publicly announce the sex of their unborn child, often through creative and symbolic events. The text 'it's a boy' combined with the visual of a pregnant woman and a friend sharing a joyful moment implies this context. This cultural phenomenon is not visible in the image but is essential to understanding the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hijab_culture",
+      "label": "Hijab Culture",
+      "description": "The hijab is a headscarf worn by Muslim women as a religious and cultural expression of modesty and faith. The presence of two women wearing hijabs in the image implies a cultural context that may be unfamiliar to some viewers. Understanding the significance of the hijab as a symbol of identity, faith, and modesty is background knowledge required to interpret the scene without misrepresentation or stereotyping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "maternal_camaraderie",
+      "label": "Maternal Camaraderie",
+      "description": "The image portrays a moment of shared joy and support between two women, likely friends or family members, centered around pregnancy. This reflects a broader cultural concept of maternal support networks, which are common in many societies. The emotional tone and interaction are culturally specific and require background knowledge about social bonds and support systems in communities to be fully appreciated.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gendered_social_expectations",
+      "label": "Gendered Social Expectations",
+      "description": "The announcement 'it's a boy' carries social weight in many cultures, often tied to traditional gender roles and expectations surrounding male and female children. While not visible, understanding that this announcement may be interpreted differently across cultures or within specific social groups (e.g., societal preference for male children in some regions) is background knowledge necessary to interpret the meme's emotional and cultural context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamic_modesty_practices",
+      "label": "Islamic Modesty Practices",
+      "description": "The hijabs worn by the women are part of Islamic modesty practices, which are rooted in religious teachings. While the image does not depict any religious rituals or texts, understanding that the hijab is a religious garment helps viewers interpret the cultural and religious context of the scene without projecting stereotypes or assumptions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful emotion",
+      "description": "The pregnant woman is smiling broadly with her eyes crinkled, conveying pure joy and excitement. Her upward gaze and relaxed posture suggest contentment and happiness about the gender reveal. The other woman’s gentle touch and affectionate gaze also contribute to the overall joyful atmosphere.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "gender_reveal_mapping",
+      "label": "The text 'it's a boy' is mapped onto the pregnant woman's belly, indicating the gender of the unborn child.",
+      "description": "The text overlay 'it's a boy' directly corresponds to the visual of the pregnant woman's belly, which is the focal point of the announcement. The other woman's hand on the belly reinforces this mapping, as the gesture is directed toward the unborn child. The text explicitly states the gender, and the visual material (the belly) is the subject of that announcement. This is a direct analogical mapping where the textual content identifies the gender of the child represented by the visual entity (the pregnant woman's belly).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the celebratory pregnancy announcement scene",
+      "description": "The user is projected onto the overall scene of the celebratory pregnancy announcement, as the image and text together create an immersive experience of joy and shared anticipation. The user is invited to emotionally engage with the moment, identifying with the happiness and camaraderie depicted. There are no explicit deictic pronouns like 'me' or 'you', but the scene's universal emotional appeal and the text's direct statement ('it's a boy') create an implicit projection where the viewer is positioned as a participant in the joyous announcement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "women wearing hijabs",
+      "description": "The image features two women wearing hijabs, which is a cultural and religious marker. The target audience likely includes individuals who are familiar with or identify with Muslim communities, where the hijab is a common expression of modesty and faith. The scene’s focus on maternal joy and female camaraderie within this context suggests the meme is designed to resonate with Muslim women, particularly those who are pregnant or part of supportive networks within Islamic communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/46538.png",
+    "image_name": "46538.png",
+    "extraction_timestamp": "2025-12-16T02:20:41.876480",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

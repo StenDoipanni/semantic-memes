@@ -1,0 +1,213 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a man in traditional Jewish attire, seemingly in a celebratory or triumphant pose, surrounded by a crowd of similarly dressed individuals, with a long table covered in plastic and bottles. The text overlay reads: 'when the un adds another million to the holocaust death toll.' This meme uses a juxtaposition of the image (which appears to be from a Jewish celebration or gathering) with the text to imply that the United Nations is 'adding' to the death toll of the Holocaust, which is a direct and hateful reference to Holocaust denial or minimization. This is a harmful and hateful trope that trivializes the genocide of six million Jews and other victims of the Holocaust, and it is intended to provoke outrage or mockery by misrepresenting the UN's role in acknowledging historical atrocities. The meme is designed to attack Jewish people and their historical memory by suggesting that the UN is somehow complicit in or responsible for perpetuating the Holocaust's legacy, which is a form of antisemitic propaganda. The overall intent is to spread hate and misinformation by using a distorted visual metaphor to attack Jewish identity and historical trauma.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when the un adds another million",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_in_traditional_attire",
+      "label": "central figure",
+      "description": "A man wearing a black hat and coat, with a long beard, is gesturing triumphantly with his arms outstretched. He appears to be the focal point of the image, surrounded by others in similar attire.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "celebratory_gathering",
+      "label": "Celebratory Gathering",
+      "description": "A scene depicting a man in traditional Jewish attire, seemingly in a triumphant or celebratory pose, surrounded by a crowd of similarly dressed individuals. The setting appears to be an indoor event with a long table covered in plastic and bottles, suggesting a festive or communal meal. The overall atmosphere is one of joy or festivity, contrasted by the hateful text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_in_traditional_attire",
+          "relation": "is_center_of_attention",
+          "to": "people"
+        },
+        {
+          "from": "man_in_traditional_attire",
+          "relation": "gestures_triumphantly",
+          "to": "people"
+        },
+        {
+          "from": "people",
+          "relation": "surrounds",
+          "to": "man_in_traditional_attire"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "holocaust_denial_minimization_theme",
+      "label": "Holocaust Denial/Minimization Theme",
+      "description": "A harmful antisemitic trope that attempts to downplay or deny the scale and horror of the Holocaust, often by suggesting that the number of victims is being artificially inflated or that the event is being used for political purposes. This meme explicitly references this theme by implying the UN is 'adding' to the death toll, which is a distortion of historical fact and a form of Holocaust minimization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "united_nations",
+      "label": "United Nations",
+      "description": "An international organization founded in 1945 to maintain international peace and security, develop friendly relations among nations, and promote social progress, better living standards, and human rights. The meme falsely attributes a sinister role to the UN by suggesting it is 'adding' to the Holocaust death toll, which is a misrepresentation of the UN's function and historical role in acknowledging and commemorating the Holocaust.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_puppet_master_imagery",
+      "label": "Antisemitic 'Puppet Master' Imagery",
+      "description": "A stereotype in antisemitic propaganda that portrays Jews as controlling global events or institutions, often depicted as manipulating world leaders or organizations from behind the scenes. The meme's implication that the UN is 'adding' to the death toll suggests a conspiratorial view of Jewish influence over global institutions, aligning with this antisemitic trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_holocaust_denial",
+      "label": "Antisemitic Holocaust Denial",
+      "description": "A form of antisemitism that denies or minimizes the Holocaust, often by claiming the number of victims is exaggerated or that the event never happened. This meme uses the phrase 'adds another million to the holocaust death toll' to imply that the UN is somehow responsible for increasing the death toll, which is a direct and hateful reference to Holocaust denial.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "jewish_celebratory_gathering",
+      "label": "Jewish Celebratory Gathering",
+      "description": "A cultural or religious event where Jewish communities gather to celebrate, often involving festive meals, music, and communal rituals. The image depicts a scene that resembles such a gathering, which is used in the meme to create a false juxtaposition with the hateful text, implying that Jewish joy is somehow connected to the Holocaust or that the UN is 'adding' to the death toll.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_financial_greed_stereotype",
+      "label": "Antisemitic Financial Greed/Control Stereotype",
+      "description": "A long-standing antisemitic trope that accuses Jews of controlling global finance and economic systems, often used to justify discrimination or hatred. The meme's implication that the UN is 'adding' to the death toll may be interpreted as suggesting that Jewish financial influence is somehow responsible for the Holocaust's legacy, which is a form of this stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_misrepresentation",
+      "label": "hateful misrepresentation emotion",
+      "description": "The image and text together convey a hateful and distorted emotional expression by falsely implying that the United Nations is 'adding' to the Holocaust death toll, which is a direct antisemitic trope designed to provoke outrage and minimize the Holocaust's horror. The celebratory scene is juxtaposed with hateful text to create a false and offensive emotional narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The UN is mapped onto the celebratory gathering",
+      "description": "The text 'when the un adds another million' is juxtaposed with the visual of a Jewish celebratory gathering. The meme implies that the United Nations (UN) is somehow responsible for 'adding' to the Holocaust death toll, thereby mapping the UN onto the celebratory scene as if the gathering represents the UN's actions or presence. This is a hateful misrepresentation that falsely equates the UN with the Holocaust's perpetuation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the hateful textual message",
+      "description": "The user is projected onto the textual material 'when the un adds another million to the holocaust death toll' because the meme's overall intent is to provoke a reaction by making the viewer associate the UN with the Holocaust death toll. The text is the primary vehicle for the hateful message, and the user is implicitly invited to internalize or react to this false equivalence. There are no explicit deictic pronouns like 'you' or 'me', but the framing of the text as a direct statement about the UN's actions creates a projection of responsibility onto the viewer's understanding of the UN's role.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses a hateful antisemitic trope by falsely implying that the United Nations is 'adding' to the Holocaust death toll, which is a direct attack on Jewish people and their historical memory. This is a form of Holocaust denial/minimization and aligns with antisemitic 'puppet master' imagery, suggesting Jewish control over global institutions. The celebratory Jewish gathering is juxtaposed with the hateful text to create a false and offensive emotional narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "antisemitic_holocaust_denial",
+      "description": "The meme is designed to target individuals who hold antisemitic beliefs, particularly those who engage in Holocaust denial or minimization. The hateful text 'when the un adds another million to the holocaust death toll' is crafted to provoke outrage or mockery by misrepresenting the UN's role and implying Jewish control or responsibility for the Holocaust's legacy, which is a core antisemitic trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/30296.png",
+    "image_name": "30296.png",
+    "extraction_timestamp": "2025-12-15T21:14:52.052448",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

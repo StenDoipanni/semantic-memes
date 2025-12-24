@@ -1,0 +1,210 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: hateful; overall-intent-description: The image depicts a dog lying on a bed using a laptop, with overlaid text that reads: 'what do you mean I've got a 30-day ban all i did was call him nigger.' The meme uses the dog as a visual metaphor for an innocent or unaware individual who has been punished for using a racially charged slur. The intent is to mock or trivialize the severity of racial slurs by framing the act as a minor offense deserving only a '30-day ban,' thereby implying that such language is not serious or harmful. This is a hateful meme because it normalizes and minimizes the use of a deeply offensive racial slur ('nigger'), which is a term historically and currently used to demean and dehumanize Black people. The juxtaposition of the dog's innocent appearance with the hateful text creates a false equivalence, suggesting that the offense is trivial, which is a form of indirect attack on Black people and their dignity. The meme's overall intent is to provoke laughter at the expense of racial injustice, thereby perpetuating harmful stereotypes and minimizing the gravity of racial violence and discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "what do you mean I've got a 30-day ban",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "dog",
+      "label": "dog",
+      "description": "A Shiba Inu dog lying on a bed, wearing a red harness, with its head resting on a pillow and paws on a laptop keyboard. The dog appears relaxed and is the central visual focus of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "dog_using_laptop",
+      "label": "dog using laptop",
+      "description": "A Shiba Inu dog is lying on a bed, wearing a red harness, with its head resting on a pillow and paws on a laptop keyboard. The dog appears relaxed and is the central visual focus of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_slur_nigger",
+      "label": "racial slur 'nigger'",
+      "description": "The term 'nigger' is a historically and currently offensive racial slur used to demean and dehumanize Black people. Its use in the meme is central to its hateful intent, as it attempts to trivialize the offense by framing it as a minor '30-day ban'. This slur is deeply rooted in American racial history and is considered a form of racial violence and discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "anti-Black stereotype",
+      "description": "The meme relies on the stereotype that Black people are inherently violent or criminal, which is a common and harmful trope in racist discourse. The implication that calling someone 'nigger' is a minor offense is a direct attack on the dignity and humanity of Black people, reinforcing the idea that racial slurs are not serious or harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_meme",
+      "label": "hateful meme",
+      "description": "This meme is classified as hateful because it normalizes and minimizes the use of a deeply offensive racial slur ('nigger'), which is a term historically and currently used to demean and dehumanize Black people. The juxtaposition of the dog's innocent appearance with the hateful text creates a false equivalence, suggesting that the offense is trivial, which is a form of indirect attack on Black people and their dignity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dog_using_laptop",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dog_as_innocent_metaphor",
+      "label": "dog as innocent metaphor",
+      "description": "The image of a dog, often perceived as innocent and harmless, is used as a visual metaphor for an individual who is unaware or unpenalized for using a racially charged slur. This false equivalence is a key element of the meme's hateful intent, as it suggests that the offense is trivial and that the person is not to blame.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dog_using_laptop",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "minimization_of_racial_offense",
+      "label": "minimization of racial offense",
+      "description": "The meme attempts to minimize the severity of racial slurs by framing the act as a minor offense deserving only a '30-day ban'. This is a form of racial violence and discrimination, as it trivializes the harm caused by such language and suggests that the offense is not serious or harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "innocence",
+      "label": "innocent expression",
+      "description": "The dog's relaxed posture, with its head resting on a pillow and paws on the laptop, conveys a sense of innocence and nonchalance, visually reinforcing the meme's narrative of an unaware or blameless individual.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "dog as innocent individual who committed a minor offense",
+      "description": "The visual entity 'dog' is mapped onto the textual entity 'me' (implied by the text 'what do you mean I've got a 30-day ban all i did was call him nigger'), creating an analogical mapping where the dog represents an innocent or unaware individual who is being punished for using a racial slur. This mapping is central to the meme's false equivalence, suggesting the offense is trivial.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the dog as an innocent individual who committed a minor offense",
+      "description": "The user is projected onto the visual entity 'dog' (a Shiba Inu lying on a bed using a laptop) through the textual material 'what do you mean I've got a 30-day ban all i did was call him nigger'. The text implies 'me' as the speaker, and the dog serves as a visual metaphor for this speaker. The user sees themselves as the dog — an innocent, unaware individual who is being punished for a minor offense (using a racial slur), which is the core of the meme's false equivalence and hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Black people by normalizing and minimizing the use of the racial slur 'nigger', which is a deeply offensive term historically and currently used to demean and dehumanize Black people. The false equivalence created by the dog metaphor suggests the offense is trivial, which is an indirect attack on Black people's dignity and humanity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with internet meme culture, particularly those who understand and appreciate absurdist or ironic humor that relies on false equivalences. The meme is designed to provoke laughter by juxtaposing an innocent-looking dog with a racially charged slur, appealing to an audience that finds humor in minimizing serious social issues. This audience likely includes people who are aware of the historical and cultural weight of the term 'nigger' and may be engaging with the meme to mock or satirize the concept of online bans, often in a context where they perceive such bans as disproportionate or trivial. The meme’s effectiveness depends on the audience’s ability to recognize the dog as a metaphor for an unaware or innocent person, which suggests the target community is familiar with visual metaphors and internet humor tropes. The audience may also include those who hold or are exposed to anti-Black stereotypes, as the meme’s hateful intent relies on the normalization of racial slurs, which may resonate with or be tolerated by communities that perpetuate such views. The meme’s target community is not explicitly defined by a specific demographic but is likely drawn from online communities that engage with edgy, controversial, or offensive humor, often found on platforms like Reddit, Twitter, or meme-sharing websites.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/46271.png",
+    "image_name": "46271.png",
+    "extraction_timestamp": "2025-12-16T02:15:06.823731",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

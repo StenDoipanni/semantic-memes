@@ -1,0 +1,183 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme depicts a young man with a smug expression, juxtaposed with text that humorously portrays a student's reaction to being named in a math problem. The punchline, 'that's right bitches. i bought 60 watermelons,' references a stereotype associated with Black people — the 'watermelon and fried chicken' trope — which is a derogatory racial stereotype. This meme uses a harmful racial stereotype for comedic effect, potentially causing offense or reinforcing negative racial biases. The overall intent is to elicit laughter through the use of a racially insensitive joke, which can be considered harmful due to its reliance on a derogatory racial stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "when my name is in a math problem and all the class stares at me",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "young_man",
+      "label": "person",
+      "description": "A young man with light brown, tousled hair, wearing a dark suit with white stitching, a white collared shirt, and a red plaid tie. He has a smug, self-satisfied expression, looking directly at the camera. He appears to be at a formal event, possibly a red carpet, with blurred background figures and lights.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "smug_student_reaction",
+      "label": "Student reacting smugly to being named in a math problem",
+      "description": "The young man is the central figure, displaying a smug expression while text overlays describe a humorous scenario where he is named in a math problem and responds with a racially stereotypical punchline. The scene is composed of the young man as the main participant, with the text elements framing his reaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "watermelon_and_fried_chicken_stereotype",
+      "label": "Watermelon and Fried Chicken Stereotype",
+      "description": "A derogatory racial stereotype historically used to demean Black people, portraying them as lazy, uneducated, and overly fond of fried chicken and watermelon — often implying they are 'simple' or 'childlike' in their tastes and behavior. This stereotype is rooted in racist caricatures and has been used to justify discrimination and systemic oppression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "Anti-Black Stereotype",
+      "description": "A broad category of derogatory beliefs and tropes targeting Black people, including but not limited to the 'watermelon and fried chicken' stereotype, intelligence-related slurs, criminal behavior associations, and hypersexualization. These stereotypes are used to dehumanize and marginalize Black individuals and communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "math_problem_context",
+      "label": "Math Problem Context",
+      "description": "A common classroom scenario where a student’s name is used as a variable or placeholder in a math problem, often leading to humorous or awkward reactions. This context is used to set up the joke in the meme, implying the student is being singled out or is expected to solve the problem.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "smug_student_expression",
+      "label": "Smug Student Expression",
+      "description": "A facial expression conveying self-satisfaction, arrogance, or smugness, often used humorously to depict someone who is overly confident or believes they are superior to others. In this meme, it is used to contrast the student’s internal confidence with the external pressure of being named in a math problem.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "young_man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "smugness",
+      "label": "the smug expression",
+      "description": "The young man displays a self-satisfied, arrogant facial expression, with a slight smirk and direct gaze, conveying confidence and a sense of superiority. This expression is central to the meme’s humor, contrasting the student’s internal belief in his correctness with the external pressure of being named in a math problem.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The student is mapped as 'me'",
+      "description": "The text 'me:' explicitly maps the young man in the image to the speaker of the punchline. The visual entity (young_man) is being identified as the first-person narrator ('me') in the scenario described by the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the young man as 'me'",
+      "description": "The user is projected onto the young man in the image, who is explicitly identified as 'me' by the text 'me:' in the meme. This deictic pronoun anchors the user's identity to the visual representation of the smug student reacting to being named in a math problem.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a racially insensitive joke based on the 'watermelon and fried chicken' stereotype, which is a derogatory racial stereotype historically used to demean Black people. This stereotype portrays Black individuals as lazy, uneducated, and overly fond of fried chicken and watermelon — often implying they are 'simple' or 'childlike' in their tastes and behavior. The punchline 'that's right bitches. i bought 60 watermelons' relies on this harmful trope for comedic effect, potentially causing offense or reinforcing negative racial biases. The overall intent is to elicit laughter through the use of a racially insensitive joke, which can be considered harmful due to its reliance on a derogatory racial stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who are familiar with and find humor in racially insensitive stereotypes, particularly the 'watermelon and fried chicken' trope associated with Black people. The meme relies on this harmful stereotype for comedic effect, suggesting the intended audience includes those who may not recognize or are desensitized to the offensive nature of the punchline. The context of a math problem and a smug student reaction is a common classroom scenario, so the target audience likely includes students, educators, or anyone familiar with school humor, but the core joke is specifically aimed at those who understand and can appreciate the racially charged punchline, even if it is offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/70658.png",
+    "image_name": "70658.png",
+    "extraction_timestamp": "2025-12-19T10:48:01.477232",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

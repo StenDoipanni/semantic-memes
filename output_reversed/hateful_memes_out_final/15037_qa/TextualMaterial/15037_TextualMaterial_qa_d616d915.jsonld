@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#qa_d616d915-2cc6-436e-8786-f5a9163cd3fe",
+  "@type": "QuestionAnswerPair",
+  "question": "What text labels the top image?",
+  "answers": [
+    {
+      "text": "average white men",
+      "is_correct": false
+    },
+    {
+      "text": "average white men's",
+      "is_correct": false
+    },
+    {
+      "text": "average white \"women\"",
+      "is_correct": true
+    },
+    {
+      "text": "None of the others",
+      "is_correct": false
+    }
+  ],
+  "explanation": "The top image is explicitly labeled 'average white \"women\"' in the meme.",
+  "dimension": "TextualMaterial",
+  "relatedInstances": [
+    "text_chunk_1"
+  ],
+  "generationTimestamp": "2025-12-23T21:20:28.325415",
+  "generationMethod": "huggingface_api",
+  "sourceImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_15037",
+    "@type": "Image",
+    "filename": "15037.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/15037.png"
+  }
+}

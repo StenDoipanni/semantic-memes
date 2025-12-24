@@ -1,0 +1,312 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: donaldtrump_2020; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes a photo of Donald Trump with a photo of Ilhan Omar, placing her in a jail cell while falsely claiming she broke federal tax law by filing jointly with a man she was not legally married to. This visual and textual combination is intended to discredit and demean Ilhan Omar, a Black Muslim woman, by associating her with criminal behavior and using her image in a degrading context. The meme leverages racial and religious stereotypes by implying that her actions are morally or legally questionable, and it uses the imagery of imprisonment to suggest she is a criminal, which is a hateful attack based on her identity as a Black Muslim woman.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "Text content: 'donaldtrump_2020'. Position: top center of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "middle text",
+      "description": "Text content: 'breaking:'. Position: center of the image, overlaying the image of Donald Trump.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_3",
+      "label": "middle text",
+      "description": "Text content: 'rep. Ilhan Omar broke federal tax law'. Position: below 'breaking:', overlaying the image of Donald Trump.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_4",
+      "label": "bottom text",
+      "description": "Text content: 'she filed her taxes jointly with a man to whom she was not legally married.'. Position: bottom of the image, overlaying the image of Ilhan Omar in a jail cell.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Donald_Trump",
+      "label": "Politician",
+      "description": "A man with blond hair, wearing a dark suit and tie, holding a microphone. He is standing in front of American flags and smiling. This image is from his 2020 campaign.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "political_meme_scene",
+      "label": "Political Meme Scene",
+      "description": "A meme scene composed of three vertically stacked visual elements: Donald Trump speaking at a podium, a portrait of Ilhan Omar, and an image of a jail cell. The scene is framed by text overlays that falsely accuse Ilhan Omar of tax fraud and depict her in a prison setting, creating a juxtaposition intended to discredit her. The spatial arrangement is vertical, with each visual element occupying a distinct section of the image, and the text overlays are positioned to directly relate to each visual component.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Donald_Trump",
+          "relation": "is_above",
+          "to": "Ilhan_Omar"
+        },
+        {
+          "from": "Ilhan_Omar",
+          "relation": "is_above",
+          "to": "jail_cell"
+        },
+        {
+          "from": "Donald_Trump",
+          "relation": "is_connected_to_text",
+          "to": "breaking_text"
+        },
+        {
+          "from": "Ilhan_Omar",
+          "relation": "is_connected_to_text",
+          "to": "tax_fraud_text"
+        },
+        {
+          "from": "jail_cell",
+          "relation": "is_connected_to_text",
+          "to": "jail_cell_text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ilhan_omar_background_knowledge",
+      "label": "Ilhan Omar",
+      "description": "Ilhan Omar is a Somali-American politician and the first Somali-American woman elected to the U.S. Congress. She is a member of the Democratic Party and represents Minnesota's 5th congressional district. Her identity as a Black Muslim woman is central to the meme's targeting and the stereotypes it invokes. The meme falsely accuses her of tax fraud, which is a real-world legal issue but is presented in a degrading context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "people",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_3",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "donald_trump_background_knowledge",
+      "label": "Donald Trump",
+      "description": "Donald Trump is an American businessman, television personality, and politician who served as the 45th president of the United States from 2017 to 2021. He is the central figure in the 2020 presidential campaign referenced in the meme. His image is used to imply endorsement or association with the false accusation against Ilhan Omar, leveraging his political persona to amplify the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "people",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "tax_fraud_background_knowledge",
+      "label": "Federal Tax Law Violation",
+      "description": "The meme references a specific legal claim: filing taxes jointly with a person not legally married. This is a real-world tax code violation under U.S. federal law (e.g., IRS rules on joint filing). The meme uses this legal concept to falsely accuse Ilhan Omar, implying criminal behavior. The context of the accusation is not true, but the meme relies on the real-world existence of this legal concept to create its false narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_4",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "jail_cell_background_knowledge",
+      "label": "Jail Cell Imagery",
+      "description": "The image of a jail cell is a powerful visual metaphor used to imply criminality and imprisonment. In the context of this meme, it is used to degrade Ilhan Omar by suggesting she is a criminal. This imagery is not literal but relies on real-world associations with incarceration to convey a message of moral or legal condemnation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_background_knowledge",
+      "label": "Islamophobia",
+      "description": "The meme targets Ilhan Omar as a Muslim woman, using her religious identity to imply she is morally or legally flawed. This is a form of Islamophobia, which involves stereotyping Muslims as terrorists, criminals, or incompatible with Western values. The meme leverages this stereotype to dehumanize her and justify the false accusation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "people",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racism_background_knowledge",
+      "label": "Racism",
+      "description": "The meme targets Ilhan Omar as a Black woman, using her race to imply criminality or moral inferiority. This is a form of racism, specifically anti-Black stereotypes that associate Black people with criminal behavior. The meme relies on this stereotype to dehumanize her and justify the false accusation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "people",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny_background_knowledge",
+      "label": "Misogyny",
+      "description": "The meme targets Ilhan Omar as a woman, using her gender to imply she is morally or legally flawed. This is a form of misogyny, which involves stereotyping women as emotionally unstable or incompetent. The meme leverages this stereotype to dehumanize her and justify the false accusation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "people",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_meme_background_knowledge",
+      "label": "Political Meme",
+      "description": "The meme is a form of political satire or propaganda that uses visual and textual elements to spread misinformation and attack a political opponent. This type of meme is common in political discourse and relies on real-world knowledge of political figures, events, and stereotypes to create its message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "disdain",
+      "label": "disdainful expression",
+      "description": "Ilhan Omar's facial expression, characterized by a slight smirk and averted gaze, conveys a sense of disdain or contempt, possibly directed at the false accusation or the context of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Ilhan Omar is mapped as a criminal",
+      "description": "The text 'rep. Ilhan Omar broke federal tax law' and 'she filed her taxes jointly with a man to whom she was not legally married.' is mapped onto the visual of Ilhan Omar in a jail cell. This mapping implies that she is a criminal, using the jail cell imagery to visually represent the textual accusation of tax fraud. The spatial positioning of the text directly below her image reinforces this direct analogical mapping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene as the one who is 'breaking' the news",
+      "description": "The user is implicitly projected onto the top section of the meme, where the text 'breaking:' is displayed over Donald Trump's image. This creates a framing where the user is positioned as the source or witness of the 'breaking news' narrative, which is a false accusation against Ilhan Omar. The user is not explicitly addressed with 'you' or 'me', but the framing of 'breaking news' implies the user is the one receiving or disseminating this information, thereby projecting the user onto the scene as the active participant in the meme's narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Ilhan Omar based on her identity as a Black Muslim woman, falsely accusing her of tax fraud and depicting her in a jail cell to imply criminality. This is a hateful attack that leverages racial and religious stereotypes to dehumanize her and discredit her political identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who hold racist, Islamophobic, misogynistic, and politically conservative views, particularly those who support Donald Trump and are likely to believe in false accusations against Ilhan Omar. The meme is designed to appeal to this audience by leveraging stereotypes about Black Muslim women, associating them with criminal behavior, and using imagery of imprisonment to dehumanize Ilhan Omar. The inclusion of Donald Trump’s image and the 'breaking:' text format suggests it is aimed at politically motivated viewers who consume and share such content to discredit political opponents.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/50289.png",
+    "image_name": "50289.png",
+    "extraction_timestamp": "2025-12-16T03:41:45.469318",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 20,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

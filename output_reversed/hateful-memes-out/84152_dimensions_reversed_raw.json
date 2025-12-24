@@ -1,0 +1,185 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: when-your-dishwasher-is-done-for-good; hasOverallIntent: Harmful; overall-intent-description: The image depicts a woman lying in a coffin, with the text \"when your dishwasher is done for good\". This is a humorous meme that uses the visual of death to exaggerate the frustration of a broken appliance. The scene is not targeting any specific group or individual based on protected characteristics, and does not contain abusive, cyberbullying, hateful, or misogynistic content. The intent is to convey the emotional impact of appliance failure through dark humor, which may be considered mildly harmful due to its morbid imagery, but it is not inherently toxic or discriminatory. The analogy maps the finality of death onto the perceived finality of a broken dishwasher, using juxtaposition to create comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "when your dishwasher",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with blonde hair, wearing a black top and a pearl necklace, lying in a white coffin. Her expression is one of shock or dismay, with wide eyes and slightly parted lips. She is the central visual element and the subject of the meme's humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "woman_in_coffin",
+      "label": "woman_in_coffin",
+      "description": "A woman is lying inside a white coffin, appearing shocked or dismayed. The scene is framed to emphasize her expression and the coffin as a symbol of finality, juxtaposed with the text about a broken dishwasher.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "is_laying_in",
+          "to": "coffin"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dishwasher_failure_meme_concept",
+      "label": "Concept of appliance failure as a major life event",
+      "description": "The meme uses hyperbole to express the emotional weight of a broken dishwasher by comparing it to death. This relies on the cultural understanding that major household appliances are expensive, long-lasting investments, and their failure can be deeply frustrating and disruptive to daily life. The humor comes from the absurdity of equating appliance failure with mortality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "woman_in_coffin",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cultural_stereotype_of_women_in_kitchen",
+      "label": "Stereotype that women belong in the kitchen",
+      "description": "The image of a woman in a coffin, juxtaposed with a broken dishwasher, implicitly references the stereotype that women are primarily responsible for household chores, including dishwashing. The meme exaggerates the emotional impact of appliance failure on the person who is stereotypically expected to handle it, adding a layer of gendered humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dark_humor_concept",
+      "label": "Use of dark humor to express frustration",
+      "description": "The meme employs dark humor, which uses morbid or taboo subjects (like death) to create comedic effect. This requires background knowledge of how dark humor functions in popular culture to understand why the image of a woman in a coffin is used to express frustration over a broken dishwasher.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman_in_coffin",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "appliance_replacement_cost",
+      "label": "High cost of replacing major appliances",
+      "description": "The meme implies that a broken dishwasher is a significant financial burden. This requires background knowledge about the real-world cost of replacing major household appliances, which adds to the comedic exaggeration of the situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "frustration",
+      "label": "frustrated emotion",
+      "description": "The woman's facial expression, with wide eyes and slightly parted lips, conveys a sense of shock, dismay, and exasperation, reflecting the emotional weight of a broken dishwasher. This is amplified by the dark humor of her being in a coffin, symbolizing the perceived finality of the appliance's failure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The woman in the coffin is mapped as the person experiencing the finality of a broken dishwasher.",
+      "description": "The text 'when your dishwasher is done for good' implies that the dishwasher has reached the end of its functional life. The visual of the woman in a coffin, a symbol of death and finality, is used to analogically represent the perceived finality and emotional weight of the dishwasher's failure. The mapping is established through the juxtaposition of the text and the image, where the woman's shocked expression and the coffin symbolize the user's emotional reaction to the appliance's demise. This is a classic example of dark humor, where the visual material (woman in coffin) is mapped onto the textual concept (dishwasher failure) to exaggerate the emotional impact.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of the woman in the coffin",
+      "description": "The user is projected onto the scene of the woman in the coffin, as the text 'when your dishwasher is done for good' uses the deictic 'your' to directly address the viewer. This implies the user is the person experiencing the frustration of a broken dishwasher, and the visual of the woman in the coffin is used to represent their emotional state. The projection is onto the scene entity 'woman_in_coffin', which serves as the visual embodiment of the user's imagined reaction to appliance failure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses dark humor and morbid imagery (a woman in a coffin) to exaggerate the frustration of a broken dishwasher, which may be considered mildly harmful due to its morbid imagery, even though it is not inherently toxic or discriminatory.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "household appliance users",
+      "description": "The meme targets individuals who own and rely on household appliances, particularly dishwashers, and who experience frustration or emotional distress when these appliances break down. The humor stems from the exaggerated comparison of appliance failure to death, which resonates with anyone who has faced the financial and practical burden of replacing a major appliance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/84152.png",
+    "image_name": "84152.png",
+    "extraction_timestamp": "2025-12-19T14:59:43.094032",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

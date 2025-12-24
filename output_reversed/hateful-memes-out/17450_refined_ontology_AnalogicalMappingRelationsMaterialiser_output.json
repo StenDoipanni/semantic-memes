@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_id_1",
+      "hasMappedEntity": "text_chunk",
+      "hasMappingEntity": "Frankenstein_s_monster_wax_figure"
+    },
+    {
+      "from": "Frankenstein_s_monster_wax_figure",
+      "relation": "mappedOnto",
+      "to": "text_chunk"
+    }
+  ],
+  "triples": [
+    ":mapping_id_1 :hasMappedEntity :text_chunk .",
+    ":mapping_id_1 :hasMappingEntity :Frankenstein_s_monster_wax_figure .",
+    ":Frankenstein_s_monster_wax_figure :mappedOnto :text_chunk ."
+  ],
+  "triples_count": 3
+}

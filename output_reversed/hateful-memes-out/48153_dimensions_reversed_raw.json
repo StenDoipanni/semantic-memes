@@ -1,0 +1,158 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: the_look_you_have_on_monday_morning; hasOverallIntent: Harmful; overall-intent-description: The image depicts a skull symbol, commonly associated with death or danger, juxtaposed with the text 'the look you have on monday morning.' This visual metaphor humorously conveys the universal feeling of dread or exhaustion many people experience at the start of a workweek. The intent is to elicit relatable humor by mapping the negative emotional state of Monday mornings onto the universally recognized symbol of death. While the meme is not targeted at any specific group or community, its use of a skull can be seen as potentially harmful due to its association with death, which may be distressing to some viewers. The meme's intent is not abusive, cyberbullying, hateful, or propagandistic, but its potentially morbid imagery may cause discomfort or be misinterpreted as threatening to those sensitive to death symbolism. The overall intent is to create shared, lighthearted recognition of a common, unpleasant experience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "the look you have on monday morning",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "skull",
+      "label": "graphic",
+      "description": "A stylized, beige-colored skull with large black eye sockets and a triangular nose cavity, set against a dark background. The skull has a simplified, almost cartoonish design with three vertical lines below the nose, resembling a grimace or a stylized jaw. This is a universally recognized symbol associated with death or danger, used here as a visual metaphor for the dread or exhaustion felt on Monday mornings.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "monday_morning_dread",
+      "label": "Skull symbolizing Monday morning dread",
+      "description": "A stylized skull is centrally positioned against a dark background, visually representing the universal feeling of dread or exhaustion associated with Monday mornings. The skull's grimacing design and the accompanying text create a scene of humorous despair.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "skull",
+          "relation": "symbolizes",
+          "to": "monday_morning_dread"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "monday_morning_dread",
+      "label": "Monday morning dread",
+      "description": "A common social phenomenon where individuals experience negative emotions such as exhaustion, reluctance, or anxiety at the start of a workweek, particularly on Mondays. This is a widely recognized cultural trope, often humorously exaggerated in memes and media to express shared workplace fatigue or the psychological resistance to returning to routine after the weekend.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "skull_symbol",
+      "label": "Skull symbol",
+      "description": "A universally recognized icon associated with death, danger, or extreme negativity. In popular culture and memes, it is frequently used as a visual metaphor to convey intense feelings such as despair, exhaustion, or grim resignation. Its use here is not literal but symbolic, mapping the emotional state of Monday morning dread onto the visual language of mortality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "workweek_cultural_tropes",
+      "label": "Workweek cultural tropes",
+      "description": "A set of shared cultural references and humorous expressions that describe the negative feelings associated with the start of a workweek, especially Monday. These include phrases like 'Monday blues,' 'hump day,' or 'the Monday morning dread' meme, which are part of workplace humor and social media discourse. The meme relies on this collective understanding to resonate with its audience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "dread",
+      "label": "the dread expression",
+      "description": "An emotional state of fear, anxiety, or despair, often associated with the anticipation of a difficult or unpleasant situation. In this meme, it is humorously expressed through the visual metaphor of a skull, symbolizing the universal feeling of dread experienced on Monday mornings when people are reluctant to return to work or routine after the weekend.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "monday_morning_dread_skull_mapping",
+      "label": "The skull symbolizes the dread felt on Monday mornings",
+      "description": "The textual material 'the look you have on monday morning' is mapped onto the visual material of the skull. The skull, a universal symbol of death or danger, is used as a visual metaphor to represent the intense dread, exhaustion, or reluctance commonly experienced at the start of the workweek. This mapping creates an analogical relationship where the emotional state described in the text is visually instantiated by the skull's grimacing expression and its association with negativity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of Monday morning dread",
+      "description": "The user is projected onto the scene represented by the skull symbol and the accompanying text, which collectively depict the universal feeling of dread or exhaustion associated with Monday mornings. The text 'the look you have on monday morning' explicitly uses 'you', directly addressing the viewer and projecting the user's own experience onto the visual metaphor of the skull.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The use of a skull symbol, universally associated with death or danger, to represent the emotional state of dread or exhaustion on Monday mornings may be perceived as potentially harmful due to its morbid imagery. While the intent is humorous and not targeted at any specific group, the visual metaphor may cause discomfort or be misinterpreted as threatening to viewers sensitive to death symbolism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "general adult workforce",
+      "description": "The meme targets individuals who experience the common phenomenon of Monday morning dread, particularly those who work during the week and are returning to their routine after the weekend. The skull symbol is used as a humorous exaggeration of the universal exhaustion or reluctance felt by this demographic, making it relatable to a broad audience of working adults.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/48153.png",
+    "image_name": "48153.png",
+    "extraction_timestamp": "2025-12-16T03:11:41.146266",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

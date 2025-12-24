@@ -1,0 +1,196 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: hateful; overall-intent-description: The meme depicts a person whispering a racist stereotype — specifically, the implication that Black people are inherently violent or criminal — as a response to a question about gun control in Japan. The visual of one person whispering a harmful, dehumanizing trope into the ear of another person's back is used to mock or dismiss the original question. This is a hateful meme because it directly targets Black people with a harmful, racist stereotype, using the image to reinforce the toxic association between Blackness and criminality or violence. The intent is to weaponize a racist trope to undermine the legitimacy of the gun control discussion, thereby promoting racial prejudice and misinformation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "text location",
+      "description": "liberals: \"japan has gun control without issues, what makes you think it can't work here in the usa?\"",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_whispering",
+      "label": "person whispering",
+      "description": "A man in a suit and tie, seen from the side, leaning in close to whisper into the ear of another person. His hand is cupped near his mouth to amplify the whisper. His facial expression is partially visible, suggesting he is conveying a secret or confidential information.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "whispering_scene",
+      "label": "whispering_scene",
+      "description": "A scene where one man is whispering confidential information into the ear of another man, who is facing away. The whisperer uses his hand to cup his mouth, indicating secrecy. The text overlay implies the whispered content is a racist stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_whispering",
+          "relation": "whispersTo",
+          "to": "man_whispering_to"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_criminal_behavior",
+      "label": "Anti-Black Stereotype: Criminal Behavior Associations",
+      "description": "The meme relies on the harmful stereotype that Black people are inherently violent or criminal, which is used to dismiss the gun control argument by implying that Japan’s gun control model is inapplicable because of this supposed inherent trait of Black people. This stereotype is a well-documented form of racial prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "whispering_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_aggressive_violent_nature",
+      "label": "Anti-Black Stereotype: Aggressive/Violent Nature Claims",
+      "description": "The meme implicitly references the stereotype that Black people are aggressive or violent by having the whisperer reveal this as the answer to the gun control question. This is a common and harmful racial trope used to dehumanize Black individuals and justify systemic discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "whispering_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gun_control_discussion_in_japan",
+      "label": "Gun Control Discussion in Japan",
+      "description": "The meme references Japan’s gun control system as a point of comparison for the USA. Understanding the context of Japan’s strict gun laws and their societal acceptance is necessary to interpret the premise of the question posed by 'liberals'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gun_control_discussion_in_usa",
+      "label": "Gun Control Discussion in the USA",
+      "description": "The meme centers on the debate about gun control in the USA, which is a highly politicized and contentious issue. The reference to 'liberals' implies a specific political stance on gun control, which is a key context for understanding the meme’s framing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_label_liberals",
+      "label": "Political Label: Liberals",
+      "description": "The term 'liberals' is used to refer to a political group in the USA that generally supports stricter gun control laws. This label is necessary to understand the speaker’s identity and the political context of the question.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_implicit_expression",
+      "label": "hateful implicit expression",
+      "description": "The whispering gesture and the whispered content — 'black people' — convey a hateful, racist stereotype. The visual of whispering into the ear of another person, combined with the text, implies a dehumanizing and prejudiced association, expressing contempt and racial hatred toward Black individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The speaker 'me' is mapped onto the whispering man",
+      "description": "The text 'me: (whispering) black people' explicitly identifies the whispering man in the visual as the speaker 'me'. The act of whispering is visually represented by the man cupping his mouth near the other person's ear, and the text overlays this action to assign the speaker's identity to him.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the whispering man as 'me'",
+      "description": "The user is projected onto the visual material of the whispering man, as explicitly indicated by the text overlay 'me: (whispering) black people'. The user identifies with the whisperer's role and action, using the deictic pronoun 'me' to anchor their identity onto the visual entity 'man_whispering'. This projection is central to the meme's hateful intent, as it frames the user as the one perpetuating the racist stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly targets Black people with a harmful, racist stereotype — specifically, the implication that Black people are inherently violent or criminal — as a response to a question about gun control in Japan. The visual of one person whispering a dehumanizing trope into the ear of another person's back is used to mock or dismiss the original question. This is a hateful meme because it directly targets Black people with a harmful, racist stereotype, using the image to reinforce the toxic association between Blackness and criminality or violence. The intent is to weaponize a racist trope to undermine the legitimacy of the gun control discussion, thereby promoting racial prejudice and misinformation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "anti_black_stereotype_criminal_behavior",
+      "label": "Anti-Black Stereotype: Criminal Behavior Associations",
+      "description": "The meme targets Black people by invoking the harmful stereotype that they are inherently violent or criminal, using this as a dismissive response to a gun control argument. This stereotype is a core element of the meme’s hateful intent and is directly aimed at reinforcing racial prejudice against Black individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/03254.png",
+    "image_name": "03254.png",
+    "extraction_timestamp": "2025-12-15T11:32:54.146044",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

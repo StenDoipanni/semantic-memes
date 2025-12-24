@@ -1,0 +1,197 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: we-should-respect-blacks; hasOverallIntent: Hateful; overall-intent-description: The image juxtaposes the text 'we should respect blacks' with a visual of a blonde wig on a mannequin head, which is a well-known satirical image often used to mock or demean Black people by implying they are not 'real' or are being 'replaced' by white people. The meme is intentionally offensive and perpetuates harmful racial stereotypes by using the visual of a wig to suggest that Black people are not authentic or are being impersonated. This is a hateful meme that targets Black people based on their race and is designed to provoke racial division and hostility.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "we should",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "respect blacks",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "blonde_wig",
+      "label": "object",
+      "description": "A blonde wig displayed on a mannequin head, positioned on a shelf or counter. The wig is the central visual element and is associated with the text 'we should respect blacks', creating a satirical and offensive context. The wig is visibly attached to a mannequin head with a visible label that reads 'LUCK'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "offensive_satire_scene",
+      "label": "offensive satire scene",
+      "description": "A scene depicting a satirical and offensive visual composition where a blonde wig on a mannequin head is juxtaposed with the text 'we should respect blacks', creating a hateful meme that mocks Black people by implying they are not authentic or are being replaced by white people. The scene is intentionally provocative and racially charged.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "juxtaposes",
+          "to": "blonde_wig"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "Anti-Black Stereotype: Black people are not authentic or are being replaced by white people",
+      "description": "This stereotype is implied by the visual of a blonde wig on a mannequin head juxtaposed with the text 'we should respect blacks'. The wig is used as a symbol to suggest that Black people are not 'real' or are being impersonated by white people, which is a racially charged and offensive trope. This stereotype is part of a broader pattern of racial dehumanization and is often used to justify discrimination or hostility toward Black people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "offensive_satire_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_dehumanization",
+      "label": "Racial Dehumanization",
+      "description": "The meme relies on the concept of racial dehumanization, which involves portraying a racial group as less than human or as not authentic. This is achieved by using the blonde wig as a visual metaphor to suggest that Black people are not 'real' or are being replaced by white people. This concept is rooted in historical and systemic racism and is used to justify discrimination and hostility.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "offensive_satire_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_supremacist_ideology",
+      "label": "White Supremacist Ideology",
+      "description": "The meme is rooted in white supremacist ideology, which seeks to maintain white dominance by devaluing or demonizing non-white groups. The text 'we should respect blacks' is used ironically to suggest that Black people are not worthy of respect or are being replaced by white people, which is a core tenet of white supremacist thought. This ideology is often expressed through hate speech and racially charged imagery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "offensive_satire_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_division",
+      "label": "Racial Division",
+      "description": "The meme is designed to provoke racial division and hostility by using offensive imagery and text to target Black people. The juxtaposition of the blonde wig with the text 'we should respect blacks' is intended to create a sense of racial tension and animosity, which is a common tactic used in hate speech and racially charged propaganda.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "offensive_satire_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hate_meme",
+      "label": "Hate Meme",
+      "description": "This is a hate meme, which is a type of internet meme designed to spread hate, bigotry, or racial hatred. The meme uses offensive imagery and text to target a specific racial group (Black people) and is intended to provoke hostility and division. Hate memes are often used to spread misinformation and to incite violence or discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "offensive_satire_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The image expresses a hateful emotion through its offensive and racially charged content, which includes the juxtaposition of a blonde wig on a mannequin head with the text 'we should respect blacks'. This visual and textual combination is designed to mock and demean Black people by implying they are not authentic or are being replaced by white people, which is a core component of white supremacist ideology and racial dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Textual statement mapped onto visual object",
+      "description": "The text 'we should respect blacks' is juxtaposed with the visual of a blonde wig on a mannequin head, creating an analogical mapping where the text implies the wig represents 'blacks' who are not authentic or are being replaced by white people. This mapping is central to the meme's hateful intent, as it uses the visual object to symbolize the group referenced in the text, thereby perpetuating racial dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the offensive satire scene",
+      "description": "The user is projected onto the overall offensive satire scene, which includes the visual of the blonde wig on a mannequin head and the text 'we should respect blacks'. This projection implies the user is being invited to internalize or identify with the hateful message and the racist stereotype it promotes, specifically the notion that Black people are not authentic or are being replaced by white people. The scene functions as a deictic space where the user is expected to see themselves as part of the group that should 'respect blacks' — a phrase that is ironically used to justify dehumanization. The projection is implicit, not explicit, but the entire meme structure directs the user's gaze and interpretation toward this scene as the central object of engagement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme is a direct attack on Black people based on race, using offensive imagery and text to perpetuate harmful stereotypes and racial dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The intended audience is individuals who hold or are exposed to white supremacist ideologies, as the meme is designed to provoke racial division and hostility toward Black people by using offensive imagery and text. The meme relies on racial dehumanization and stereotypes to target Black people, making it primarily aimed at those who support or are sympathetic to white supremacist views, or who are susceptible to racially charged propaganda.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/62357.png",
+    "image_name": "62357.png",
+    "extraction_timestamp": "2025-12-16T07:34:02.249339",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

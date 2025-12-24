@@ -1,0 +1,44 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "happy expression",
+      "expressors": [
+        {
+          "entity": "woman",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "child",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "emotionalRelationToEntity",
+          "to": "child"
+        },
+        {
+          "from": "child",
+          "relation": "emotionalRelationToEntity",
+          "to": "woman"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":happy_expression :hasExpressor :woman .",
+    ":happy_expression :hasExpressor :child .",
+    ":woman :emotionalRelationToEntity :child .",
+    ":child :emotionalRelationToEntity :woman ."
+  ],
+  "triples_count": 4
+}

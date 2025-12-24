@@ -1,0 +1,140 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: dat ass ahmarbkrich d; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes an image of sheep with their rear ends prominently displayed against a man in a headscarf and sunglasses who is screaming in apparent shock or disgust. The text 'dat ass' is overlaid on the sheep image, while 'ahmarbkrich d' (a distorted, likely misspelled or coded term) is overlaid on the man. The visual and textual elements together create a crude, mocking comparison, likely targeting individuals of Middle Eastern or Muslim appearance. This is a clear example of Islamophobia, as it uses a degrading visual metaphor (sheep butts) to mock a person's appearance and religious identity, fitting the category of hateful content. The meme relies on the stereotype of 'backward culture' and 'animal treatment' accusations, and it is designed to provoke negative reactions toward the targeted group. The intent is to demean and insult based on protected characteristics (religion/ethnicity), making it hateful and potentially harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "text location",
+      "description": "dat ass",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_in_headscarf",
+      "label": "man wearing headscarf and sunglasses",
+      "description": "A man in the foreground wearing a green headscarf with Arabic text, sunglasses, and a black-and-white checkered scarf. He is screaming with his hands near his mouth, appearing shocked or disgusted. His attire and appearance suggest he may be perceived as Middle Eastern or Muslim, and he is the central figure in the lower half of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "shock_reaction_scene",
+      "label": "man reacting with shock to sheep image",
+      "description": "The scene depicts a man in a headscarf and sunglasses, screaming with his hands near his mouth, reacting to an image of sheep with their rear ends prominently displayed. The visual juxtaposition and text overlay ('dat ass' and 'ahmarbkrich d') create a mocking and degrading context. The man is positioned in the foreground, while the sheep image is in the background, forming a composition that implies the man is reacting to the sheep image as if it were a shocking or offensive sight.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_in_headscarf",
+          "relation": "reactsTo",
+          "to": "sheep_image"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The meme relies on the stereotype that Muslims or people of Middle Eastern appearance are ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "animal_treatment_accusation",
+      "label": "Animal Treatment Accusation",
+      "description": "The meme uses the visual of sheep butts to imply that the man is ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "distorted_text_term",
+      "label": "Distorted Text Term",
+      "description": "The text ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "disgust",
+      "label": "disgusted emotion",
+      "description": "The man in the headscarf is screaming with his hands near his mouth, a facial expression and gesture commonly associated with disgust or revulsion. His wide-open mouth and intense gaze suggest he is reacting to something offensive or repulsive, as implied by the juxtaposition with the sheep image and the text 'dat ass'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man is mapped as 'dat ass'",
+      "description": "The text 'dat ass' is overlaid on the image of sheep with their rear ends prominently displayed. This creates an analogical mapping where the sheep's butts are being mapped as 'dat ass', and this mapping is then projected onto the man in the headscarf, who is visually positioned as the recipient of this degrading label. The man's shocked expression reinforces the implication that he is being mocked as 'dat ass' through the visual metaphor of the sheep butts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man in headscarf as the target of the degrading metaphor",
+      "description": "The user is projected onto the man in the headscarf (man_in_headscarf) as the recipient of the degrading label 'dat ass', which is visually mapped onto the sheep butts and then analogically transferred to him. The man's shocked expression and the meme's overall intent reinforce that the user is meant to perceive him as the object of mockery. The distorted text 'ahmarbkrich d' further projects the user's identification with the degrading stereotype being applied to him.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses a degrading visual metaphor (sheep butts) and text ('dat ass') to mock a man perceived as Middle Eastern or Muslim, projecting a hateful stereotype that equates him with animal treatment and 'backward culture'. The distorted text 'ahmarbkrich d' further reinforces the dehumanizing projection. This constitutes a direct attack based on protected characteristics (religion/ethnicity).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who hold or are exposed to Islamophobic stereotypes, particularly those who may find humor or satisfaction in mocking people of Middle Eastern or Muslim appearance. The meme is designed to provoke negative reactions toward this group by using degrading visual metaphors (sheep butts) and distorted text ('ahmarbkrich d') to imply that the man in the headscarf is 'dat ass' — a projection rooted in the 'backward culture' and 'animal treatment' accusations commonly used in Islamophobic rhetoric. The intended audience likely includes those who identify with or support such stereotypes, or who are seeking to reinforce or spread them through humor or shock value.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/27635.png",
+    "image_name": "27635.png",
+    "extraction_timestamp": "2025-12-15T20:10:12.672252",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

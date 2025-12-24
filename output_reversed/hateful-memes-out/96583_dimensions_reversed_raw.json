@@ -1,0 +1,278 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Propaganda; overall-intent-description: The image depicts an adult hand gently holding a child's hand, conveying a sense of care and vulnerability. The text overlay states 'for just ten cents a day you can help feed these children,' which is a direct appeal to charitable giving. The overall intent is propagandistic, aiming to influence viewers to donate by associating the act of giving with the emotional appeal of helping underprivileged children. There is no toxicity present in this image; it does not contain abusive, cyberbullying, harmful, hateful, misogynous, or other forms of targeted discrimination. The visual and textual elements are juxtaposed to create an emotional appeal for charity, not to attack or demean any group. The intent is to mobilize compassion and financial support for a humanitarian cause.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "for just ten cents a day",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "adult_hand",
+      "label": "adult hand holding a child's hand",
+      "description": "A large, adult hand with visible skin texture and a bracelet on the wrist is gently holding a small child's hand. The adult hand appears to be providing comfort or support, and the bracelet is a white beaded accessory. This is a central visual element conveying care and protection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "compassionate_holding",
+      "label": "adult holding child's hand with charitable appeal",
+      "description": "The scene depicts an adult hand gently holding a small child's hand, conveying care and protection. The adult hand is positioned in the foreground, while the child's hand rests on top of it. The visual composition is centered on this interaction, with text overlaying the image to appeal for charitable donations to feed children. The spatial relationship is one of support and nurturing, with the adult hand providing a stable base for the child's hand. The scene is framed to evoke emotional response and encourage charitable action.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "adult_hand",
+          "relation": "holds",
+          "to": "child_hand"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "charitable_giving",
+      "label": "Charitable Giving",
+      "description": "The concept of charitable giving refers to the voluntary transfer of resources (money, goods, time) to support causes or individuals in need. In this meme, the appeal for 'ten cents a day' to feed children is a direct call to action rooted in charitable giving, which is a real-world social and economic phenomenon. It relies on the understanding that individuals can contribute financially to humanitarian efforts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "compassionate_holding",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "humanitarian_causes",
+      "label": "Humanitarian Causes",
+      "description": "Humanitarian causes are efforts aimed at alleviating human suffering, often through aid, relief, or advocacy. The meme implicitly references humanitarian causes such as child hunger and malnutrition, which are global issues requiring international and local support. The image and text work together to frame the child’s vulnerability as a reason to support such causes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "compassionate_holding",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "child_hunger",
+      "label": "Child Hunger",
+      "description": "Child hunger refers to the condition where children do not receive adequate nutrition, leading to health and developmental problems. This is a global issue often addressed by NGOs and international aid organizations. The meme uses the visual of a child’s hand and the text 'feed these children' to evoke empathy and awareness of this specific humanitarian crisis.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "compassionate_holding",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "global_aid_organizations",
+      "label": "Global Aid Organizations",
+      "description": "Organizations such as UNICEF, World Food Programme, and local NGOs often run campaigns to feed children in impoverished regions. The meme’s appeal to 'feed these children' assumes the existence of such organizations and their operational models, which are real-world entities that facilitate charitable giving for humanitarian purposes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "compassionate_holding",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "emotional_appeal_in_charity",
+      "label": "Emotional Appeal in Charity",
+      "description": "Charity campaigns often use emotional appeals to motivate donations by evoking feelings of compassion, guilt, or responsibility. The image of an adult hand holding a child’s hand is a classic visual trope used to trigger empathy. The text 'for just ten cents a day' is designed to make the donation seem small and accessible, leveraging the psychological principle of low-barrier giving.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "compassionate_holding",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "low_cost_donation_model",
+      "label": "Low-Cost Donation Model",
+      "description": "The 'ten cents a day' model is a common fundraising tactic used by charities to make donations seem trivial and easy to commit to. This strategy is based on the psychological principle that small, frequent contributions are more likely to be sustained than large, infrequent ones. It relies on the understanding of behavioral economics and donor psychology.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "propaganda_in_charity",
+      "label": "Propaganda in Charity",
+      "description": "Charity campaigns often use propaganda techniques to influence public opinion and behavior. This includes emotional manipulation, selective presentation of facts, and the use of compelling imagery. The meme’s intent to 'mobilize compassion and financial support' is a form of propagandistic messaging, which is a real-world phenomenon in social and political communication.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "compassionate_holding",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "developmental_disability_infantilization",
+      "label": "Developmental Disability Infantilization",
+      "description": "This stereotype involves portraying individuals with developmental disabilities as childlike or incapable of adult responsibilities. While not directly referenced in the image, the visual of a child’s hand being held by an adult could be misinterpreted by some as infantilizing the child, especially if the child is perceived as needing constant care. This is a real-world stereotype that can be invoked in contexts where vulnerability is emphasized.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "compassionate_holding",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "inspiration_porn",
+      "label": "Inspiration Porn",
+      "description": "Inspiration porn is a term used to describe media that portrays people with disabilities or marginalized groups as inspirational simply for existing or surviving, often in a way that reinforces stereotypes of helplessness or dependence. The image of a child’s hand being held by an adult, combined with the charitable appeal, could be seen as an example of inspiration porn if the child is portrayed as inherently dependent and in need of constant care, which is a real-world critique of certain charity campaigns.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "compassionate_holding",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "welfare_dependency_tropes",
+      "label": "Welfare Dependency Tropes",
+      "description": "These are stereotypes that portray individuals, particularly those from marginalized communities, as dependent on government assistance or charity. While the meme does not explicitly reference welfare, the phrase 'feed these children' could be interpreted by some as implying that the children are dependent on charity, which is a real-world trope often used to justify or criticize social welfare programs.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "compassion",
+      "label": "compassionate emotion",
+      "description": "The gentle holding of the child's hand by the adult hand, combined with the charitable appeal text, evokes a strong sense of compassion and care for the vulnerable child. The visual gesture of protection and the textual call to action work together to express deep emotional concern for the child's well-being.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Charitable donation is mapped onto the act of holding a child's hand",
+      "description": "The text 'for just ten cents a day you can help feed these children' is mapped onto the visual of the adult hand holding the child's hand. The visual of the hand holding the child symbolizes care and support, which is analogically mapped to the act of charitable giving (feeding children). The spatial relationship of the hand holding the child is used to represent the nurturing and protective function of charity, implying that giving money is like providing care. This is a classic emotional appeal in charity, where the visual of vulnerability (child's hand) is juxtaposed with the textual call to action to evoke compassion and motivate donation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the charitable appeal text",
+      "description": "The user is projected onto the textual material 'you can help feed these children' which directly addresses the viewer with a first-person imperative, inviting them to take action. This creates a direct semiotic projection where the viewer is positioned as the potential donor or helper, making the appeal personal and immediate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general public",
+      "description": "The meme is designed for the general public, aiming to mobilize compassion and financial support for humanitarian causes through an emotional appeal. The visual of an adult hand holding a child's hand, combined with the text 'for just ten cents a day you can help feed these children,' is intended to evoke empathy and encourage charitable giving from anyone who views the image, regardless of specific demographic or cultural background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/96583.png",
+    "image_name": "96583.png",
+    "extraction_timestamp": "2025-12-19T19:11:51.055365",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 18,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

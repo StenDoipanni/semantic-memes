@@ -1,0 +1,149 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: that's right white crackers; hasOverallIntent: overall-intent_id; overall-intent-description: The image shows a simple white plate with white crackers, overlaid with the text 'that's right white crackers.' The overall intent is to use the visual of plain white crackers to make a pun or joke about 'white' being associated with something bland, generic, or unremarkable. The meme is not inherently toxic or harmful; it relies on a play on words rather than targeting any specific group. The term 'white crackers' is not a racial slur or stereotype in this context, but rather a literal description of the food item. The humor is derived from the juxtaposition of the mundane food item with the phrase 'that's right,' which implies a sarcastic or self-aware acknowledgment of the obviousness or banality of the subject. There is no evidence of abusive, cyberbullying, harmful, hateful, misogynous, or propaganda intent. The meme is a light-hearted, wordplay-based joke without any toxic or harmful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "that's right white crackers",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "white_crackers",
+      "label": "food item",
+      "description": "A pile of rectangular, light golden-brown crackers with perforations, arranged on a white plate. These are visually identifiable as 'white crackers' due to their color and common appearance, and are the central visual element of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "white_crackers_on_plate",
+      "label": "white crackers on a plate",
+      "description": "A pile of rectangular, light golden-brown crackers with perforations is arranged on a white plate. The crackers are the central visual element, and the plate serves as their container. The scene is simple and static, with no movement or interaction between elements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "white_crackers",
+          "relation": "are_on",
+          "to": "white_plate"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_crackers_pun",
+      "label": "Pun on 'white' meaning bland or unremarkable",
+      "description": "The meme relies on a wordplay where 'white crackers' (a literal food item) is juxtaposed with the phrase 'that's right' to imply that the crackers are so plain, generic, or unexciting that it's obvious or even boring. This pun requires understanding of how 'white' can be used metaphorically to describe something bland or lacking in flavor or interest, which is a common cultural reference in humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "generic_food_stereotype",
+      "label": "Stereotype of bland, unremarkable food",
+      "description": "The humor in the meme depends on the cultural understanding that certain foods, especially plain white crackers, are seen as bland, unexciting, or 'basic' — often used as a metaphor for something unremarkable or lacking in depth. This stereotype is part of broader cultural perceptions about food and taste.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "white_crackers",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sarcastic_acknowledgment",
+      "label": "Sarcastic or self-aware acknowledgment",
+      "description": "The phrase 'that's right' is used sarcastically or self-referentially to emphasize the obviousness or banality of the subject — in this case, the crackers. This rhetorical device requires understanding of conversational irony or sarcasm, which is a common social communication pattern.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "sarcastic_irony",
+      "label": "sarcastic acknowledgment of banality",
+      "description": "The phrase 'that's right white crackers' expresses a sarcastic or self-aware acknowledgment that the crackers are so plain and unremarkable that it's obvious or even boring — a humorous exaggeration of the mundane. This emotion is conveyed through the juxtaposition of the literal food item with the rhetorical phrase, implying a mocking or ironic tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Textual acknowledgment mapped onto visual crackers",
+      "description": "The text 'that's right white crackers' is an analogical mapping where the phrase 'white crackers' explicitly identifies and labels the visual entity 'white_crackers'. The text does not merely describe the crackers but asserts their identity as 'white crackers', creating a direct mapping between the textual label and the visual object. This mapping is reinforced by the visual material's appearance (light golden-brown, rectangular, perforated crackers on a white plate) which aligns with the common cultural perception of 'white crackers' as a bland, generic food item, making the textual label both literal and metaphorical in context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material acknowledging the banality of the crackers",
+      "description": "The user is projected onto the textual material 'that's right white crackers', which functions as a sarcastic acknowledgment of the obviousness or banality of the visual material (white crackers). The phrase 'that's right' implies a self-aware or ironic recognition that the subject (the crackers) is so unremarkable that it is 'right' to point it out. This creates a projection where the user is positioned as the one making the sarcastic observation or acknowledging the mundane nature of the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with wordplay and casual humor. It relies on a common cultural understanding of 'white crackers' as bland or unremarkable food, and the sarcastic phrase 'that's right' to create a self-aware joke. No specific demographic, cultural group, or community marker is targeted; the humor is accessible to anyone who understands the pun and the visual of plain crackers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/67219.png",
+    "image_name": "67219.png",
+    "extraction_timestamp": "2025-12-16T08:54:22.038276",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 11,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

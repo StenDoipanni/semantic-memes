@@ -1,0 +1,188 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: the_only_kkk_to_ever_let_black_men_in; hasOverallIntent: Hateful; overall-intent-description: The image depicts three women posing together, with overlaid text that reads 'the only kkk to ever let black men in.' This is a hateful meme that uses a racist stereotype by falsely implying that the Ku Klux Klan (KKK) — a historically white supremacist organization — ever allowed Black men into its ranks. The meme is intentionally misleading and offensive, leveraging the KKK's violent and exclusionary history to create a false equivalence or absurdity. It is designed to provoke, mock, or demean Black people by associating them with a symbol of white supremacy, while simultaneously mocking the KKK's own racist ideology. The meme's intent is to spread hate by distorting historical facts and using the KKK as a tool for racial insult, which falls under the category of hateful content targeting Black individuals based on race.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "the only kkk",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "three_women",
+      "label": "central subjects",
+      "description": "Three women are seated closely together in the foreground, smiling at the camera. They are dressed in formal or semi-formal attire — one in a black top with a quilted skirt, one in a light-colored strapless dress, and one in a teal dress. Their appearance is polished, and they are the focal point of the image, with overlaid text making them the subject of the meme's hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "meme_scene",
+      "label": "Three women posing together with hateful overlaid text",
+      "description": "The scene centers on three women seated closely together in the foreground, smiling at the camera. They are the focal point of the image, with overlaid text that reads 'the only kkk to ever let black men in.' The text is positioned above and below the women, framing them as the subject of the meme's hateful message. The background contains other people seated at tables, but they are out of focus and do not interact with the main subjects. The spatial arrangement places the three women centrally, with the text overlaying the image to create a confrontational and offensive composition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "three_women",
+          "relation": "areSubjectOf",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ku_klux_klan",
+      "label": "Ku Klux Klan",
+      "description": "A historically white supremacist organization in the United States that used violence and intimidation to enforce racial segregation and suppress Black civil rights, particularly in the post-Civil War South. The meme falsely implies that the KKK ever allowed Black men into its ranks, which is factually incorrect and deeply offensive, using the KKK as a tool for racial insult.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_stereotype",
+      "label": "Racist Stereotype",
+      "description": "A false, derogatory, and often dehumanizing generalization about a racial or ethnic group. In this meme, the stereotype is that Black men are somehow associated with or 'allowed' into the KKK, which is a distortion of history and a racist trope used to demean Black people by linking them to a symbol of white supremacy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_meme",
+      "label": "Hateful Meme",
+      "description": "A meme designed to spread hate, provoke, or demean a specific group based on race, ethnicity, or other identity markers. This meme uses false historical claims and offensive imagery to insult Black people by falsely associating them with the Ku Klux Klan, which is a form of racial hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_supremacist_ideology",
+      "label": "White Supremacist Ideology",
+      "description": "A belief system that promotes the superiority of the white race and the inferiority or subjugation of other races. The meme leverages this ideology by falsely implying that the KKK — a white supremacist group — ever allowed Black men in, thereby mocking and distorting its own racist principles to insult Black people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_fact_distortion",
+      "label": "Historical Fact Distortion",
+      "description": "The intentional misrepresentation or falsification of historical events or facts to serve a hateful or misleading purpose. The meme falsely claims that the KKK ever allowed Black men into its ranks, which is a distortion of the KKK's actual history of racial exclusion and violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_meme",
+      "label": "hateful emotion expression",
+      "description": "The meme expresses hate through its false and offensive claim that the Ku Klux Klan ever allowed Black men in, using the KKK as a tool for racial insult and distortion of history.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The three women are mapped as 'the only kkk'",
+      "description": "The overlaid text 'the only kkk' is spatially positioned above the three women, directly mapping them onto the concept of the Ku Klux Klan. This is an analogical mapping where the visual subjects (the three women) are falsely equated with the historical white supremacist organization (KKK) through the text. The mapping is explicit and central to the meme's hateful intent, as it uses the visual material to represent the textual entity 'KKK'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the three women as the 'only kkk'",
+      "description": "The user is projected onto the visual material of the three women, who are falsely equated with the Ku Klux Klan through the overlaid text. The meme's hateful intent relies on the user perceiving the women as embodying the KKK, creating a dehumanizing and offensive projection. There are no explicit deictic pronouns like 'me' or 'you' in the text, but the projection is implicit through the meme's structure: the user is expected to see the women as the subject of the hateful statement, thereby internalizing the racist stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses false historical claims and offensive imagery to insult Black people by falsely associating them with the Ku Klux Klan, which is a form of racial hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who may be exposed to or share racially charged, hate-filled content, particularly those who might find humor or satisfaction in mocking white supremacist ideologies or perpetuating false historical narratives. The meme is designed to provoke, demean, and insult Black people by leveraging the Ku Klux Klan as a tool for racial insult, thus targeting those who either endorse or are indifferent to such hateful tropes. The audience is likely to include people who engage with internet memes that rely on historical distortion and racial stereotypes for comedic or provocative effect, often without regard for the harm caused to marginalized communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/12059.png",
+    "image_name": "12059.png",
+    "extraction_timestamp": "2025-12-15T14:38:36.778341",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

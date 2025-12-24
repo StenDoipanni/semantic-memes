@@ -1,0 +1,253 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: stop_illegal_immigrants_meme; hasOverallIntent: Hateful; overall-intent-description: The image depicts a man holding a firearm next to an American flag, with text that reads 'stop illegal immigrants' and 'they're taking the land we stole.' This juxtaposition uses violent imagery and nationalist rhetoric to dehumanize and demonize immigrants, framing them as thieves and threats to American identity. The meme promotes xenophobic and racist ideologies by suggesting immigrants are stealing land and resources, which is a harmful and hateful stereotype. It aligns with anti-immigrant tropes that portray immigrants as economic and cultural threats, and it implicitly supports the idea that immigrants are undeserving of the land or resources, which can incite hostility and discrimination against immigrant communities. The overall intent is to incite fear and hatred toward immigrants, making it a hateful meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "stop illegal immigrants",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person holding firearm",
+      "description": "A Caucasian man with a beard, wearing a plaid shirt over a white t-shirt, holding an assault rifle. He has a stern, confrontational expression and is positioned centrally in the image, making him the primary human subject and focal point.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "man_with_firearm_and_flag",
+      "label": "man holding firearm next to American flag",
+      "description": "A man holding an assault rifle stands next to an American flag pole, with text overlaid on the image. The man is the central figure, positioned in front of the flag, which is waving in the background. The scene combines visual elements of nationalism (flag), militarism (firearm), and text conveying anti-immigrant sentiment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "stands_next_to",
+          "to": "American_flag"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_immigrant_stereotype",
+      "label": "Anti-Immigrant Stereotype",
+      "description": "The meme relies on the stereotype that immigrants are 'taking the land' and are therefore undeserving or threatening to the native population. This is a common xenophobic trope used to dehumanize and demonize immigrants, often implying they are economic or cultural threats. It is rooted in historical narratives of land ownership and national identity, and is used to incite fear and hostility toward immigrant communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_with_firearm_and_flag",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_supremacist_rhetoric",
+      "label": "White Supremacist Rhetoric",
+      "description": "The phrase 'they're taking the land we stole' is a form of white supremacist rhetoric that frames land ownership as a racial or ethnic inheritance, implying that non-white or non-native groups are illegitimate claimants. This rhetoric is used to justify exclusionary policies and to reinforce racial hierarchies by claiming historical victimhood and entitlement to land.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_with_firearm_and_flag",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "american_flag_symbolism",
+      "label": "American Flag Symbolism",
+      "description": "The American flag in the image is used as a symbol of national identity and patriotism. In this context, it is juxtaposed with the anti-immigrant message to imply that the speaker is defending the nation or its values. The flag is often used in political and social discourse to evoke feelings of loyalty, belonging, and moral authority, even when used to justify exclusionary or hateful ideologies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_with_firearm_and_flag",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "assault_rifle_as_symbol_of_militarism",
+      "label": "Assault Rifle as Symbol of Militarism",
+      "description": "The assault rifle held by the man is a symbol of militarism and aggression. In the context of the meme, it visually reinforces the threat posed by immigrants, suggesting that they are a danger that must be confronted or eliminated. This imagery is often used in political and extremist rhetoric to evoke fear and justify violence or authoritarian control.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_with_firearm_and_flag",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "xenophobia",
+      "label": "Xenophobia",
+      "description": "Xenophobia is the fear or hatred of foreigners or strangers. The meme promotes xenophobic views by portraying immigrants as threats to national identity and resources. This is a widespread social phenomenon that has been used throughout history to justify discrimination, exclusion, and violence against immigrant populations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_with_firearm_and_flag",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racism",
+      "label": "Racism",
+      "description": "The meme implicitly relies on racist ideologies by framing immigrants as 'taking' land and resources, which is a common racist trope used to dehumanize and justify discrimination against people of color. This rhetoric often assumes that certain racial or ethnic groups are inherently less deserving of resources or land, reinforcing racial hierarchies and exclusionary policies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_with_firearm_and_flag",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "land_grabbing_myth",
+      "label": "Land Grabbing Myth",
+      "description": "The 'land grab' myth is a false narrative that claims immigrants are stealing land from native populations. This myth is often used to justify anti-immigrant policies and to incite fear and hostility toward immigrants. It is rooted in historical narratives of colonization and land ownership, and is used to reinforce the idea that immigrants are economic and cultural threats.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nationalism",
+      "label": "Nationalism",
+      "description": "Nationalism is the belief in the importance of one's nation and the promotion of national interests. The meme uses nationalist rhetoric to frame immigrants as threats to national identity and resources. This is a common political ideology that can be used to justify exclusionary policies and to promote xenophobia and racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_with_firearm_and_flag",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hostility",
+      "label": "hostile emotion",
+      "description": "The man's stern, confrontational facial expression, combined with his grip on the assault rifle, conveys a clear sense of hostility and aggression toward the implied target (illegal immigrants). His gaze is direct and intense, suggesting anger or threat.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "anti-immigrant sentiment mapped onto man with firearm",
+      "description": "The text 'stop illegal immigrants' is mapped onto the visual entity of the man holding the firearm, implying that he represents or embodies the stance of stopping illegal immigrants. His confrontational posture and weapon symbolize the aggressive enforcement of this policy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man holding the firearm",
+      "description": "The user is projected onto the visual material of the man holding the firearm, as he embodies the stance of stopping illegal immigrants and represents the aggressive enforcement of anti-immigrant policies. The confrontational posture and weapon symbolize the user's identification with this violent, nationalist stance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme promotes xenophobic and racist ideologies by suggesting immigrants are stealing land and resources, which is a harmful and hateful stereotype. It aligns with anti-immigrant tropes that portray immigrants as economic and cultural threats, and it implicitly supports the idea that immigrants are undeserving of the land or resources, which can incite hostility and discrimination against immigrant communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who identify with or support nationalist, white supremacist, and xenophobic ideologies. This includes those who believe in the myth of land theft by immigrants, who view the American flag as a symbol of racial entitlement, and who perceive immigrants as threats to national identity and resources. The meme is designed to resonate with audiences who embrace militaristic imagery as justification for exclusionary policies and who are influenced by racist tropes that frame immigrants as undeserving or dangerous. The visual and textual elements are tailored to appeal to those who identify with white supremacist rhetoric and who see themselves as the rightful stewards of the land, thereby inciting hostility toward immigrant communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/39867.png",
+    "image_name": "39867.png",
+    "extraction_timestamp": "2025-12-16T00:32:31.312321",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

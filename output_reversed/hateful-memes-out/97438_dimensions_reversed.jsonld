@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda",
+  "@type": "AnalysisDocument",
+  "title": "97438.png - Dimension Analysis",
+  "created": "2025-12-19T19:39:42.102358",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_d7b06956",
+    "@type": "Image",
+    "filename": "97438.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/97438.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/97438.png",
+    "image_name": "97438.png",
+    "extraction_timestamp": "2025-12-19T19:38:06.334826",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_77026f1c",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: buchenwald_concentration_camp_meme; hasOverallIntent: Harmful; overall-intent-description: The image depicts brick ovens in the Buchenwald concentration camp, with text claiming 'bones of anti-Nazi German women still are in the brick ovens on the crematorium.' This is a harmful and misleading statement. It is factually inaccurate — the crematorium at Buchenwald was used for mass murder, not for the cremation of anti-Nazi German women. The claim implies that the bones of these women are still present, which is not true. The image is likely intended to evoke shock or outrage, but it is also potentially misleading and could be used to promote Holocaust denial or minimize the scale of the atrocities. The overall intent is to provoke a reaction by juxtaposing the image of the crematorium with a false claim about the remains of anti-Nazi women, which is both historically inaccurate and potentially harmful by distorting the historical record.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_43e032a8",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text overlay",
+      "description": "buchenwald concentration camp",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_30d5bf84",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "bottom text overlay",
+      "description": "bones of anti-nazi german women still are in the brick ovens on the crematorium",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6c4e58e4",
+      "@type": "VisualMaterial",
+      "instance_name": "brick_ovens",
+      "label": "objects",
+      "description": "Multiple large, arched brick ovens with metal doors, some open, revealing charred remains inside. These are part of a crematorium structure, appearing aged and grim.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2b43850a",
+      "@type": "Scene",
+      "instance_name": "crematorium_oven_scene",
+      "label": "Crematorium Ovens Scene",
+      "description": "A scene depicting multiple brick ovens in a crematorium, with some doors open revealing charred remains inside. The ovens are arranged in a row against a brick wall, with visible structural supports. The scene is framed by text overlays at the top and bottom.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f9cca28a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "buchenwald_concentration_camp",
+      "label": "Buchenwald Concentration Camp",
+      "description": "A Nazi concentration camp located in Weimarer Land, Germany, established in 1937. It was one of the largest and most notorious camps, where hundreds of thousands of prisoners, including Jews, Poles, Soviet prisoners of war, Roma, and others, were murdered. The crematorium at Buchenwald was used for mass murder, not for the cremation of anti-Nazi German women. The camp was liberated by American forces in April 1945.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_70d1b35f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "holocaust_denial",
+      "label": "Holocaust Denial",
+      "description": "The act of denying, minimizing, or distorting the historical facts of the Holocaust — the systematic, state-sponsored persecution and murder of six million Jews by Nazi Germany and its collaborators during World War II. The meme’s false claim about the bones of anti-Nazi German women being in the ovens is an example of Holocaust denial, as it misrepresents the purpose and function of the crematorium and attempts to obscure the true scale of the atrocities committed there.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0f288f2f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_nazi_german_women",
+      "label": "Anti-Nazi German Women",
+      "description": "German women who opposed the Nazi regime during World War II. Many were persecuted, imprisoned, or murdered by the Nazis for their resistance activities. The claim in the meme that their bones are still in the ovens is factually inaccurate and misleading. The crematorium at Buchenwald was used for the mass cremation of murdered prisoners, not for the remains of anti-Nazi women, who were typically executed or died in other ways.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_65dc3a0f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "crematorium",
+      "label": "Crematorium",
+      "description": "A facility designed for the incineration of human remains. In the context of Nazi concentration camps, crematoria were used for mass cremation of murdered prisoners, including Jews, Roma, and others. The image shows a crematorium at Buchenwald, which was used for this purpose during the Holocaust. The claim in the meme that bones of anti-Nazi women are still present is historically inaccurate.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5f78dae5",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_concentration_camp",
+      "label": "Nazi Concentration Camp",
+      "description": "A facility established by Nazi Germany during World War II for the imprisonment, forced labor, and mass murder of millions of people, including Jews, Roma, Poles, Soviet prisoners of war, and others. Buchenwald was one of the largest and most notorious camps. The image depicts a crematorium within such a camp, which was used for the systematic extermination of prisoners.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fc8f1336",
+      "@type": "EmotionExpression",
+      "instance_name": "shock",
+      "label": "shock emotion",
+      "description": "The image and text together aim to evoke a strong emotional reaction of shock or horror by presenting a disturbing historical scene (crematorium ovens) with a misleading claim about the remains of anti-Nazi German women, which is factually inaccurate and potentially inflammatory.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3794b70d",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'bones of anti-nazi german women still are in the brick ovens on the crematorium' is mapped onto the visual material of the brick ovens.",
+      "description": "The bottom text overlay explicitly claims that the bones of anti-Nazi German women are still present in the brick ovens. This text is directly projected onto the visual material of the brick ovens, which are shown in the image. The mapping is established by the juxtaposition of the text and the visual material, where the text attributes a specific, false historical claim to the ovens depicted in the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6743cbcd",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual claim and visual material",
+      "description": "The user is projected onto the false textual claim ('bones of anti-nazi german women still are in the brick ovens on the crematorium') and the visual material of the brick ovens, which together form a misleading historical narrative. The user is implicitly invited to accept or react to this false assertion, which is presented as fact through the juxtaposition of the image and text. There are no explicit deictic pronouns like 'me' or 'you', but the overall intent of the meme is to provoke a reaction from the user by presenting a distorted historical claim.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_651fbaac",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme presents a false and misleading historical claim that the bones of anti-Nazi German women are still in the crematorium ovens at Buchenwald, which is factually inaccurate. This distortion of history is intended to provoke shock and outrage, but it also serves to minimize the scale of the Holocaust atrocities and potentially promote Holocaust denial. The overall intent is harmful as it misrepresents the purpose of the crematorium and distorts the historical record.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f2ac143a",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "Holocaust denial proponents",
+      "description": "The meme is designed to appeal to individuals who deny, minimize, or distort the historical facts of the Holocaust. The false claim that 'bones of anti-Nazi German women still are in the brick ovens' is a direct attempt to misrepresent the purpose of the crematorium and obscure the true scale of the atrocities, which is a hallmark of Holocaust denial. The image's overall intent is to provoke a reaction by leveraging a historically inaccurate statement that aligns with this community's ideological framework.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_81038eda"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

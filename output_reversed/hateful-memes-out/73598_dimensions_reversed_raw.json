@@ -1,0 +1,177 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: that_moment_when_she_realizes; hasOverallIntent: Mysogynous; overall-intent-description: The image depicts a male lion mounting a female lion, with text overlay that reads 'that moment when she realizes those guarana's & tequila weren't free.' The visual metaphor maps the female lion's apparent resignation or acceptance of the male's dominance onto a human female who has been tricked into paying for something she thought was free. The meme uses the animal imagery to imply that the female is being taken advantage of, and the humor derives from the idea that she is now 'paying the price' for her mistake. This is a misogynistic trope that objectifies women by portraying them as passive, easily deceived, and ultimately responsible for their own 'misfortunes' through their choices, even when those choices are framed as innocent or naive. The meme reinforces harmful stereotypes about women's emotional instability and susceptibility to manipulation, fitting within the 'Mysogynous' category as it contains hate against women by implying their perceived weakness and lack of agency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "that moment when she realizes",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "male_lion",
+      "label": "adult male lion",
+      "description": "A large male lion with a prominent mane, positioned on top of a female lion in a mating posture. His mouth is open in a roar or expression of exertion, and his body is angled over the female. He is the dominant figure in the image, visually representing male dominance and aggression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "mating_lions",
+      "label": "mating_lions",
+      "description": "A scene depicting a male lion mounting a female lion in a natural grassland setting, with text overlay that reads 'that moment when she realizes those guarana's & tequila weren't free.' The visual composition centers on the two lions, with the male positioned on top and the female lying beneath him, conveying a narrative of dominance and submission.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "male_lion",
+          "relation": "mounts",
+          "to": "female_lion"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype",
+      "label": "Misogynous Stereotype",
+      "description": "The meme relies on the stereotype that women are emotionally unstable, easily deceived, and ultimately responsible for their own misfortunes through their choices, even when those choices are framed as innocent or naive. This is a harmful trope that objectifies women by portraying them as passive and lacking agency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "mating_lions",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "guarana_and_tequila",
+      "label": "Guarana and Tequila",
+      "description": "Guarana is a plant native to the Amazon basin, known for its caffeine content and often used in energy drinks. Tequila is a distilled spirit made from the blue agave plant, originating in Mexico. The reference to these items implies a common social scenario where someone is tricked into believing a drink or snack is free, only to later realize it was paid for, often through a hidden cost or a deceptive marketing tactic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "male_lion_domination",
+      "label": "Male Lion Domination",
+      "description": "The visual metaphor of the male lion mounting the female lion is used to represent male dominance and female submission. This is a common trope in animal imagery used to symbolize power dynamics, often in a derogatory way toward women, implying they are passive and accepting of male control.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "mating_lions",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "female_lion_resignation",
+      "label": "Female Lion Resignation",
+      "description": "The female lion's expression and posture are interpreted as one of resignation or acceptance, which is used to metaphorically represent a woman who has been tricked into paying for something she thought was free. This reinforces the stereotype that women are emotionally vulnerable and easily manipulated.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "mating_lions",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "resignation",
+      "label": "female lion's resigned emotion",
+      "description": "The female lion's calm, direct gaze and passive posture while being mounted by the male lion convey a sense of resignation or acceptance. This is interpreted metaphorically as a woman who has been tricked into paying for something she thought was free, reinforcing the stereotype of emotional passivity and lack of agency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "female lion as 'she' who realizes the cost",
+      "description": "The text 'that moment when she realizes those guarana's & tequila weren't free' maps the female lion as the subject 'she'. Her passive, resigned posture while being mounted by the male lion is interpreted as her realization of being tricked, metaphorically aligning her emotional state with the human scenario of being deceived into paying for something she thought was free.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the female lion as 'she'",
+      "description": "The user is projected onto the female lion, who is metaphorically identified as 'she' in the text overlay 'that moment when she realizes those guarana's & tequila weren't free.' The user identifies with the female lion's passive, resigned posture and emotional state, interpreting her as the subject experiencing the realization of being deceived. This projection aligns with the misogynistic stereotype that women are emotionally vulnerable and easily manipulated, and the user adopts this perspective to relate to the scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme uses the visual metaphor of a female lion being mounted by a male lion to represent a woman who has been tricked into paying for something she thought was free. This reinforces harmful stereotypes about women's emotional instability, susceptibility to manipulation, and lack of agency, fitting within the 'Mysogynous' category as it contains hate against women by implying their perceived weakness and lack of agency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "target audience",
+      "description": "The meme is designed for an audience familiar with internet humor that relies on misogynistic stereotypes, particularly those portraying women as emotionally unstable, easily deceived, and passive in situations involving deception or manipulation. The target community likely includes individuals who appreciate or engage with memes that use animal imagery (specifically male lion dominance over female lion) as a metaphor for human gender dynamics, often with a cynical or darkly humorous tone. The reference to 'guarana's & tequila' suggests the audience is familiar with social scenarios involving deceptive free drinks or snacks, commonly found in bars or parties, and may relate to experiences of being tricked into paying for something. The meme’s humor derives from the audience’s recognition of the stereotype and the visual metaphor, indicating a community that consumes and shares content that reinforces or satirizes harmful gender norms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/73598.png",
+    "image_name": "73598.png",
+    "extraction_timestamp": "2025-12-19T11:49:32.570630",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,36 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "coffee_spill_scene",
+      "participants": [
+        {
+          "entity": "police_officer",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "police_officer",
+          "relation": "spilling_coffee_from",
+          "to": "white_disposable_cup"
+        },
+        {
+          "from": "police_officer",
+          "relation": "shouting_and_pointing",
+          "to": "air"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":coffee_spill_scene :hasParticipant :police_officer .",
+    ":police_officer :spilling_coffee_from :white_disposable_cup .",
+    ":police_officer :shouting_and_pointing :air ."
+  ],
+  "triples_count": 3
+}

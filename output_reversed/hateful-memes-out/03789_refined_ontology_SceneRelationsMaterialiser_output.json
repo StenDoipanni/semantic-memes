@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "holocaust_minimization_meme",
+      "participants": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "anne frankly i don't care",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Adolf_Hitler",
+          "relation": "isDepictedIn",
+          "to": "holocaust_minimization_meme"
+        },
+        {
+          "from": "anne frankly i don't care",
+          "relation": "isTextualContentOf",
+          "to": "holocaust_minimization_meme"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":holocaust_minimization_meme :hasParticipant :Adolf_Hitler .",
+    ":holocaust_minimization_meme :hasParticipant :anne_frankly_i_don_t_care .",
+    ":Adolf_Hitler :isDepictedIn :holocaust_minimization_meme .",
+    ":anne_frankly_i_don_t_care :isTextualContentOf :holocaust_minimization_meme ."
+  ],
+  "triples_count": 4
+}

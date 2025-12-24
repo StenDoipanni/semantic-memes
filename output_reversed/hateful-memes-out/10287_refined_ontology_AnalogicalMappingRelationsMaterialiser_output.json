@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_id_1",
+      "hasMappedEntity": "text_chunk_1",
+      "hasMappingEntity": "Barack_Obama"
+    },
+    {
+      "from": "Barack_Obama",
+      "relation": "mappedOnto",
+      "to": "text_chunk_1"
+    }
+  ],
+  "triples": [
+    ":mapping_id_1 :hasMappedEntity :text_chunk_1 .",
+    ":mapping_id_1 :hasMappingEntity :Barack_Obama .",
+    ":Barack_Obama :mappedOnto :text_chunk_1 ."
+  ],
+  "triples_count": 3
+}

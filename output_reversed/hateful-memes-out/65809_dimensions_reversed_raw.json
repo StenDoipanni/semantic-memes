@@ -1,0 +1,203 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: jewish_invention; hasOverallIntent: hateful; overall-intent-description: The image juxtaposes the text 'Jewish invention' with a photograph of the World Trade Center during the 9/11 attacks, implying that the 9/11 attacks were a 'Jewish invention.' This is a direct and hateful attack against Jewish people, invoking antisemitic conspiracy theories that falsely blame Jews for global events. The visual of the burning towers is used to associate the Jewish people with a catastrophic event, which is a form of antisemitic hate speech. The meme is designed to incite hatred and spread antisemitic tropes by falsely attributing blame for a major historical tragedy to a specific ethnic group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "jewish invention \" ",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "World_Trade_Center",
+      "label": "twin towers",
+      "description": "The iconic twin towers of the World Trade Center in New York City, with one tower visibly engulfed in smoke and fire, indicating the 9/11 attacks. The towers are the central visual focus of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "jewish_invention_scene",
+      "label": "antisemitic_conspiracy_scene",
+      "description": "A scene depicting the World Trade Center during the 9/11 attacks, juxtaposed with the text 'Jewish invention' to falsely imply Jewish people were responsible for the attacks. This is an antisemitic conspiracy scene that uses visual imagery of destruction to associate Jewish people with a catastrophic event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "accuses",
+          "to": "World_Trade_Center"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "911_attacks",
+      "label": "September 11, 2001 terrorist attacks",
+      "description": "The catastrophic terrorist attacks on the World Trade Center in New York City, carried out by al-Qaeda, which resulted in the deaths of nearly 3,000 people. This event is the central historical reference point for the meme, as the image depicts the moment of destruction. The meme falsely attributes this event to Jewish people, which is a form of antisemitic conspiracy theory.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "World_Trade_Center",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_conspiracy_theory",
+      "label": "Antisemitic conspiracy theory blaming Jews for global events",
+      "description": "A long-standing antisemitic trope that falsely claims Jewish people are responsible for major historical tragedies, such as the Holocaust, economic crises, or terrorist attacks. This theory is used in the meme to incite hatred and spread misinformation by associating Jewish people with the 9/11 attacks.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "jewish_invention_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "jewish_people",
+      "label": "Jewish people",
+      "description": "An ethnic and religious group that is the target of the antisemitic conspiracy theory in the meme. The meme falsely implicates Jewish people in the 9/11 attacks, which is a form of hate speech and a violation of human rights.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "jewish_invention_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitism",
+      "label": "Antisemitism",
+      "description": "A form of racism and prejudice directed against Jewish people. The meme is an example of antisemitism, as it uses a false accusation to dehumanize and blame a specific group for a catastrophic event. This is a serious hate crime and a violation of human rights.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "jewish_invention_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hate_speech",
+      "label": "Hate speech",
+      "description": "Speech that expresses hatred or prejudice against a particular group, often based on race, religion, or ethnicity. The meme is an example of hate speech, as it uses a false accusation to incite hatred and spread misinformation about Jewish people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "jewish_invention_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_stereotype",
+      "label": "Antisemitic stereotype",
+      "description": "A false and harmful belief or image about Jewish people, such as the idea that they control the world's financial system or are responsible for global disasters. The meme relies on this stereotype to spread hatred and misinformation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "jewish_invention_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is hatred, conveyed through the antisemitic conspiracy theory falsely blaming Jewish people for the 9/11 attacks. The juxtaposition of the text 'Jewish invention' with the image of the burning towers is designed to incite hatred and spread antisemitic tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "jewish_invention_mapping",
+      "label": "The text 'Jewish invention' is mapped onto the visual of the burning World Trade Center towers.",
+      "description": "The meme uses the visual of the World Trade Center during the 9/11 attacks to analogically represent the textual claim that the event was a 'Jewish invention.' This mapping falsely attributes the catastrophic event to Jewish people, which is an antisemitic conspiracy theory. The visual material (the burning towers) is mapped onto the textual material ('Jewish invention') to create a false equivalence, implying that the Jewish people are responsible for the destruction depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the antisemitic_conspiracy_scene",
+      "description": "The user is projected onto the scene depicting the World Trade Center during the 9/11 attacks, which is juxtaposed with the text 'Jewish invention' to falsely imply Jewish people were responsible for the attacks. This projection is implicit, as the meme uses the visual of destruction to associate the user (as a viewer) with the hateful narrative, making the viewer complicit in the antisemitic projection by consuming the image. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the framing of the image and text forces the viewer to confront the hateful message, projecting the user onto the scene as an unwitting participant in the antisemitic conspiracy theory.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly and falsely attributes the 9/11 attacks to Jewish people, which is a direct attack on Jewish people based on their ethnicity and religion. This is a form of antisemitic hate speech that incites hatred and spreads harmful conspiracy theories.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "jewish_people",
+      "label": "Jewish people",
+      "description": "The intended target audience of the meme, as it falsely attributes the 9/11 attacks to Jewish people, invoking antisemitic conspiracy theories and hate speech against this community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/65809.png",
+    "image_name": "65809.png",
+    "extraction_timestamp": "2025-12-16T08:40:20.843884",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

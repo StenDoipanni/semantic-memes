@@ -1,0 +1,204 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: just_waterin'_the_dirt; hasOverallIntent: Harmful; overall-intent-description: The image depicts a child watering a dog with a hose, with the text 'just waterin' the dirt' overlaid. The meme's intent is to mock or ridicule the child's action by implying the child is wasting water or being absurdly literal, as if watering the dirt is the only purpose. This is a harmless, lighthearted joke that relies on the absurdity of the situation rather than targeting any individual or group. It does not contain any abusive, cyberbullying, hateful, misogynous, or propagandistic content. The humor stems from the juxtaposition of the child's innocent action with the sarcastic text, which highlights the silliness of the situation without any harmful intent toward any protected group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "just waterin'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "child",
+      "label": "child",
+      "description": "A young child wearing a gray hoodie and blue pants, holding a green garden hose and watering the ground. The child is standing on grass and appears to be focused on the task.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "watering_dog",
+      "label": "child watering dog with hose",
+      "description": "A child is holding a green garden hose and spraying water onto the ground near a dog. The dog is standing nearby and appears to be sniffing or drinking the water. The scene is set outdoors on grass with a moss-covered tree trunk in the background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "waters",
+          "to": "dog"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "absurd_literalism",
+      "label": "Absurd Literalism",
+      "description": "The meme relies on the humor derived from the child's literal interpretation of 'watering' — the child is watering the ground, not the dog, which is a common trope in internet humor to mock overly literal or naive behavior. This concept is not visible in the image but is essential to understanding the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "childhood_innocence",
+      "label": "Childhood Innocence",
+      "description": "The meme plays on the stereotype of children being innocent and naive, often misunderstanding the context or intent of adult actions. This is a common cultural reference point for humor, where the child's actions are seen as endearing or absurd. The image itself does not convey this, but the joke depends on this cultural understanding.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sarcastic_text",
+      "label": "Sarcastic Text",
+      "description": "The phrase 'just waterin' the dirt' is sarcastic, implying the child is wasting water or being absurdly literal. This form of humor relies on the reader understanding sarcasm, which is a real-world linguistic concept not visible in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "watering_hose",
+      "label": "Watering Hose",
+      "description": "The use of a garden hose to water the ground is a common household activity. The meme's humor depends on the viewer recognizing this as a mundane, everyday object and activity, which is a real-world concept not depicted in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dog_behavior",
+      "label": "Dog Behavior",
+      "description": "The dog's behavior — sniffing or drinking the water — is a common canine response to water being sprayed. This is a real-world animal behavior that the meme references implicitly to enhance the absurdity of the situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "watering_dog",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "innocence",
+      "label": "innocent emotional state",
+      "description": "The child is focused on watering the ground, showing a simple, unselfconscious engagement with a mundane task, which reflects an innocent, naive perspective. This is not an emotional expression in the traditional sense but a behavioral state that contributes to the meme's humor by highlighting the child's literal interpretation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "child is watering the dirt",
+      "description": "The text 'just waterin' the dirt' is an analogical mapping that projects the child's action (watering the ground) onto the textual phrase 'the dirt'. The child is visually depicted holding a hose and spraying water onto the ground, which is the literal interpretation of 'watering the dirt'. The text sarcastically implies the child is wasting water or being absurdly literal, creating a humorous contrast between the visual action and the textual commentary.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the child watering the dirt",
+      "description": "The user is projected onto the child (VisualMaterial entity) holding the hose and watering the ground, as the meme's humor relies on the viewer identifying with the child's literal interpretation of 'watering' — the child is watering the dirt, not the dog. The user sees themselves in the child's innocent, naive, or absurdly literal action, which is the core of the joke. The projection is onto the visual material of the child performing the action, not onto any explicit deictic pronoun.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme's humor relies on mocking the child's literal interpretation of 'watering' — the child is watering the ground, not the dog — which is a common trope in internet humor to ridicule overly literal or naive behavior. This is a harmless, lighthearted joke that depends on the absurdity of the situation without any harmful intent toward any protected group. The humor stems from the juxtaposition of the child's innocent action with the sarcastic text, which highlights the silliness of the situation without any harmful intent toward any protected group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with internet humor tropes such as absurd literalism and sarcasm. The humor relies on recognizing the child's innocent, literal interpretation of 'watering' — watering the ground rather than the dog — which is a common comedic device. The target audience includes viewers who understand sarcasm and appreciate lighthearted, harmless jokes that play on childhood innocence and mundane situations. The meme does not target any specific demographic, protected group, or community with harmful intent, making it accessible to a wide range of viewers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/86203.png",
+    "image_name": "86203.png",
+    "extraction_timestamp": "2025-12-19T15:46:54.659388",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

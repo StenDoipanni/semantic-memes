@@ -1,0 +1,68 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "fruit_costumed_people_walking",
+      "participants": [
+        {
+          "entity": "person_in_banana_costume",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "person_in_kiwi_costume",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "person_in_carrot_costume",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "person_in_grapes_costume",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "person_in_strawberry_costume",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "person_in_banana_costume",
+          "relation": "holdingHandsWith",
+          "to": "person_in_kiwi_costume"
+        },
+        {
+          "from": "person_in_kiwi_costume",
+          "relation": "holdingHandsWith",
+          "to": "person_in_carrot_costume"
+        },
+        {
+          "from": "person_in_carrot_costume",
+          "relation": "holdingHandsWith",
+          "to": "person_in_grapes_costume"
+        },
+        {
+          "from": "person_in_grapes_costume",
+          "relation": "holdingHandsWith",
+          "to": "person_in_strawberry_costume"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":fruit_costumed_people_walking :hasParticipant :person_in_banana_costume .",
+    ":fruit_costumed_people_walking :hasParticipant :person_in_kiwi_costume .",
+    ":fruit_costumed_people_walking :hasParticipant :person_in_carrot_costume .",
+    ":fruit_costumed_people_walking :hasParticipant :person_in_grapes_costume .",
+    ":fruit_costumed_people_walking :hasParticipant :person_in_strawberry_costume .",
+    ":person_in_banana_costume :holdingHandsWith :person_in_kiwi_costume .",
+    ":person_in_kiwi_costume :holdingHandsWith :person_in_carrot_costume .",
+    ":person_in_carrot_costume :holdingHandsWith :person_in_grapes_costume .",
+    ":person_in_grapes_costume :holdingHandsWith :person_in_strawberry_costume ."
+  ],
+  "triples_count": 9
+}

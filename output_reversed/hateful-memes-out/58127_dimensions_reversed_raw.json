@@ -1,0 +1,190 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts two women, one visibly pregnant, with text overlay that reads 'is it a boy or a girl' followed by 'it's a bomb'. The visual of a pregnant woman being touched by another woman is juxtaposed with the text 'it's a bomb', which is a crude, violent, and potentially harmful metaphor. This metaphor maps onto the image to create a shocking, darkly humorous effect, implying the baby is dangerous or explosive. While not explicitly targeting a specific protected group, the use of 'bomb' as a metaphor for a child is inherently harmful as it devalues human life and infantile innocence, potentially normalizing violence or danger associated with childbirth or children. The meme's intent is to shock or provoke laughter through this violent analogy, which can be seen as harmful due to its potential to desensitize viewers to violence or to perpetuate negative associations with pregnancy and children.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "is it a boy or a girl",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_pregnant",
+      "label": "pregnant woman wearing hijab",
+      "description": "A woman visibly pregnant, wearing a light-colored hijab and a green top, smiling while being touched on her belly. She is the central subject of the image and the focus of the text overlay 'is it a boy or a girl'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "pregnancy_reveal_scene",
+      "label": "Pregnancy Reveal with Violent Metaphor",
+      "description": "A scene depicting two women, one visibly pregnant, engaged in a moment of anticipation and interaction. The pregnant woman is smiling and being touched on her belly by the other woman. The scene is overlaid with text that poses the question 'is it a boy or a girl' and then delivers a shocking, violent metaphor 'it's a bomb'. The spatial arrangement shows the pregnant woman as the central focus, with the other woman positioned to her side, gently touching her belly. The interaction is intimate and personal, yet the text introduces a jarring, harmful tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman_touching_belly",
+          "relation": "touches_belly_of",
+          "to": "woman_pregnant"
+        },
+        {
+          "from": "woman_pregnant",
+          "relation": "is_being_touched_by",
+          "to": "woman_touching_belly"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "violent_metaphor_for_child",
+      "label": "Violent Metaphor for Child",
+      "description": "The phrase 'it's a bomb' is a crude, violent metaphor used to describe a child, implying danger, destruction, or explosiveness. This metaphor is inherently harmful as it devalues human life and infantile innocence, potentially normalizing violence or danger associated with childbirth or children. It is a form of dark humor that maps onto the image of a pregnant woman to create a shocking effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pregnancy_reveal_cultural_trend",
+      "label": "Pregnancy Reveal Cultural Trend",
+      "description": "The image and text reference the common cultural practice of 'pregnancy reveal' moments, where expectant parents share the gender of their unborn child with friends or family. This is often done with excitement and anticipation, as seen in the smiling pregnant woman. The meme subverts this positive cultural moment with a violent metaphor, creating a jarring contrast.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_association",
+      "label": "Islamophobia Association",
+      "description": "The presence of women wearing hijabs in the image implicitly references the stereotype of Islamophobia, which often associates Muslim women with oppression or backwardness. While the image does not explicitly depict any negative stereotypes, the context of the meme (which uses violent language) can be interpreted as potentially reinforcing harmful associations with Muslim women or communities, especially when combined with the violent metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman_pregnant",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny_association",
+      "label": "Misogyny Association",
+      "description": "The image of a pregnant woman being touched on her belly by another woman, combined with the text 'is it a boy or a girl', can be interpreted as reinforcing the stereotype that women are primarily defined by their reproductive roles. This can be seen as a form of misogyny, as it reduces the woman's identity to her body and the potential for childbirth, potentially limiting her perceived agency or value beyond motherhood.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman_pregnant",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "shock",
+      "label": "shocking emotion",
+      "description": "The emotion expressed is shock, primarily conveyed through the juxtaposition of the joyful, anticipatory pregnancy reveal scene with the violent and unexpected text 'it's a bomb'. The contrast between the tender moment and the crude metaphor creates a jarring, shocking effect intended to provoke strong emotional reaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The unborn child is mapped as a bomb",
+      "description": "The text 'it's a bomb' is an analogical mapping that projects the unborn child (implied by the pregnant woman's belly being touched) onto the metaphorical concept of a bomb. The visual of the pregnant woman's belly, the focal point of the pregnancy reveal, is mapped onto the textual entity 'bomb', creating a shocking and violent analogy. This mapping is central to the meme's dark humor and harmful intent, as it devalues the child by equating it with destruction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the violent metaphor text",
+      "description": "The user is projected onto the textual material 'it's a bomb', as this phrase is the central shocking element of the meme. The user is invited to imagine themselves reacting to or experiencing the dark humor and harmful metaphor presented in the text, which contrasts with the positive visual of the pregnancy reveal. The projection is implicit, not deictic, but the user is expected to identify with the experience of encountering this shocking statement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a violent metaphor ('it's a bomb') to describe a child, which devalues human life and infantile innocence, potentially normalizing violence or danger associated with childbirth or children. This creates a shocking, darkly humorous effect that can be seen as harmful due to its potential to desensitize viewers to violence or to perpetuate negative associations with pregnancy and children.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "General internet audience",
+      "description": "The meme is designed for a broad online audience familiar with internet humor, particularly dark humor and shock-value memes. The target community includes individuals who appreciate crude, exaggerated, or jarring analogies for comedic effect, often found in meme culture. The visual of a pregnancy reveal paired with a violent metaphor is likely intended to provoke laughter through its absurdity and shock, appealing to users who enjoy edgy or offensive humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/58127.png",
+    "image_name": "58127.png",
+    "extraction_timestamp": "2025-12-16T05:54:59.833048",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

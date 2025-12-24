@@ -1,0 +1,202 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: allah_is_watching_you; hasOverallIntent: Harmful; overall-intent-description: The image depicts a woman wearing a hijab, looking upward with a finger pointed to the sky, accompanied by the text 'allah is watching you.' The scene visually maps the textual message onto the woman's gesture, implying divine surveillance. While the message itself is religious and not inherently abusive or hateful toward any specific group, its potential harm lies in its use as a tool for moral policing or intimidation. It can be interpreted as a form of religious coercion, potentially causing discomfort or anxiety for individuals who may feel judged or monitored by the message. The meme's intent is to invoke a sense of accountability or fear of divine judgment, which can be perceived as harmful when used to pressure or shame individuals, particularly in contexts where religious authority is leveraged to enforce social norms. This aligns with the 'Harmful' category as it has the potential to cause psychological distress or reinforce oppressive religious expectations, especially in communities where such messaging is used to control behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "allah is watching you",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman wearing a light blue hijab and a gray sweater, looking upward with her right index finger pointed toward the sky, conveying a sense of reverence or acknowledgment of a higher power.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "divine_surveillance",
+      "label": "woman_pointing_to_sky_with_divine_message",
+      "description": "A woman wearing a light blue hijab and a gray sweater is depicted looking upward with her right index finger pointed toward the sky, conveying reverence or acknowledgment of a higher power. The text 'allah is watching you' is overlaid on the image, visually mapping the message onto her gesture to imply divine surveillance. The scene composition places the woman as the central participant, with her upward gaze and finger pointing symbolically directing attention to the divine.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "points_to",
+          "to": "sky"
+        },
+        {
+          "from": "woman",
+          "relation": "looks_at",
+          "to": "sky"
+        },
+        {
+          "from": "woman",
+          "relation": "conveys",
+          "to": "divine_surveillance_message"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "divine_surveillance_concept",
+      "label": "Divine Surveillance Concept",
+      "description": "The concept that a higher power (in this case, Allah) is constantly observing human actions, often used in religious contexts to encourage moral behavior. This concept is central to understanding the meme's message and the woman's gesture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "allah",
+      "label": "Allah",
+      "description": "The Arabic word for God in Islam, the central deity in the Islamic faith. The text 'allah is watching you' directly references this divine figure, requiring knowledge of Islamic theology to fully understand the meme's religious context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "The fear, dislike, or prejudice against Islam and Muslims. While not explicitly depicted, the meme's message can be interpreted as reinforcing or exploiting religious authority to enforce social norms, which may be perceived as a form of religious coercion or intimidation, potentially causing discomfort or anxiety for some individuals. This stereotype is relevant to understanding the potential harmful intent of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_coercion",
+      "label": "Religious Coercion",
+      "description": "The use of religious doctrine or authority to pressure or control individuals' behavior. The meme's intent to invoke a sense of accountability or fear of divine judgment can be interpreted as a form of religious coercion, which may be perceived as harmful when used to pressure or shame individuals, particularly in contexts where religious authority is leveraged to enforce social norms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "moral_policing",
+      "label": "Moral Policing",
+      "description": "The practice of enforcing moral standards through social or religious authority. The meme's message can be interpreted as a tool for moral policing or intimidation, which may cause discomfort or anxiety for individuals who may feel judged or monitored by the message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "reverence",
+      "label": "reverent emotion",
+      "description": "The woman's upward gaze and finger pointing toward the sky, combined with her serene facial expression, convey a sense of reverence or acknowledgment of a higher power. This gesture is visually aligned with the text 'allah is watching you,' reinforcing the emotional tone of spiritual awe or submission.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Divine Surveillance Mapping",
+      "description": "The text 'allah is watching you' is mapped onto the visual of the woman pointing upward, symbolizing divine surveillance. Her gesture and upward gaze are interpreted as a visual representation of the textual message, creating an analogical mapping where the woman's action embodies the concept of Allah observing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message and visual scene",
+      "description": "The user is projected onto the textual material 'allah is watching you' and the visual scene of the woman pointing upward, as the phrase 'watching you' directly addresses the viewer ('you'), creating a direct semiotic projection where the user is positioned as the subject being observed. The visual scene reinforces this by mapping the gesture to the divine surveillance concept, making the user feel personally addressed and monitored.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme's message, 'allah is watching you,' combined with the visual of a woman pointing upward, invokes a sense of divine surveillance and accountability. While not inherently abusive or hateful toward any specific group, its potential harm lies in its use as a tool for moral policing or intimidation. It can be interpreted as a form of religious coercion, potentially causing discomfort or anxiety for individuals who may feel judged or monitored by the message. This aligns with the 'Harmful' category as it has the potential to cause psychological distress or reinforce oppressive religious expectations, especially in communities where such messaging is used to control behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "woman wearing hijab",
+      "description": "The central visual subject is a woman wearing a hijab, which is a headscarf commonly worn by Muslim women. Her gesture and the text 'allah is watching you' directly reference Islamic theology and divine surveillance, indicating the meme is designed for or at least references a Muslim audience. The hijab is a key cultural and religious marker identifying her as part of the Muslim community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/85346.png",
+    "image_name": "85346.png",
+    "extraction_timestamp": "2025-12-19T15:26:28.553707",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

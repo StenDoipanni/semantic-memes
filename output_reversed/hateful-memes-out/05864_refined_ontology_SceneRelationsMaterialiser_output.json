@@ -1,0 +1,52 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "shouting_camels",
+      "participants": [
+        {
+          "entity": "camel_1",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "camel_2",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "camel_3",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "camel_1",
+          "relation": "shoutingTogetherWith",
+          "to": "camel_2"
+        },
+        {
+          "from": "camel_1",
+          "relation": "shoutingTogetherWith",
+          "to": "camel_3"
+        },
+        {
+          "from": "camel_2",
+          "relation": "shoutingTogetherWith",
+          "to": "camel_3"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":shouting_camels :hasParticipant :camel_1 .",
+    ":shouting_camels :hasParticipant :camel_2 .",
+    ":shouting_camels :hasParticipant :camel_3 .",
+    ":camel_1 :shoutingTogetherWith :camel_2 .",
+    ":camel_1 :shoutingTogetherWith :camel_3 .",
+    ":camel_2 :shoutingTogetherWith :camel_3 ."
+  ],
+  "triples_count": 6
+}

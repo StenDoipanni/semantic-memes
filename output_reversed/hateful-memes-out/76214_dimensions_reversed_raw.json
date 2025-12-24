@@ -1,0 +1,190 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image features a woman with blonde hair and red lipstick, wearing a red dress, standing against a brick wall. The text reads: 'whatever this is.. it's an auburn fan.' The meme uses a visual of a person who appears to be styled in a provocative or glamorous manner, juxtaposed with the text that implies this appearance is somehow associated with being a fan of Auburn University. This creates a stereotype or caricature that reduces the identity of Auburn University fans to a superficial or objectified image. The intent is to mock or demean Auburn University supporters by linking them to a specific aesthetic that may be perceived as inappropriate or exaggerated. This can be harmful as it may contribute to the marginalization or ridicule of a group based on their affiliation, potentially fostering negative attitudes or reinforcing stereotypes. The meme does not directly target protected characteristics like race, gender, or sexual orientation in a hateful way, but it does use a visual stereotype to demean a group, which can be considered harmful and potentially offensive to those associated with Auburn University.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "whatever this is..",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with blonde hair styled in curls, wearing red lipstick and a red dress with black straps, standing against a brick wall. Her expression is neutral to slightly smug, and she is looking directly at the camera. The visual presentation is glamorous and provocative, which is central to the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "provocative_glamour_scene",
+      "label": "provocative_glamour_scene",
+      "description": "A scene depicting a woman styled in a glamorous and provocative manner, standing against a brick wall. The visual presentation is central to the meme's intent, which uses this aesthetic to stereotype or caricature Auburn University fans. The woman's appearance is the focal point, with her styling and expression contributing to the scene's overall tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "auburn_university_fans",
+      "label": "Auburn University Fans",
+      "description": "The meme references Auburn University fans, implying a stereotype that associates them with a specific provocative or glamorous aesthetic. This is a real-world group whose identity is being caricatured and mocked based on their affiliation with the university, which is not visible in the image but is essential to understanding the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "provocative_glamour_stereotype",
+      "label": "Provocative Glamour Stereotype",
+      "description": "The meme uses the visual of a woman styled in a provocative and glamorous manner to represent Auburn University fans. This aesthetic is a stereotype that reduces the identity of the fan group to superficial or objectified imagery, which is a form of cultural caricature. This stereotype is not visible in the image but is essential to understanding the meme's mocking intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification",
+      "label": "Objectification",
+      "description": "The meme relies on the objectification of the woman’s appearance to demean Auburn University fans. This is a social and cultural concept where a person is reduced to their physical attributes, which is not directly visible in the image but is central to the meme’s harmful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_culture",
+      "label": "Meme Culture",
+      "description": "The meme operates within the context of internet meme culture, where images are often used to create humor or mockery through juxtaposition and stereotypes. Understanding that this is a meme format requires knowledge of internet culture, which is not visible in the image but is necessary to interpret the meme’s function.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harmful_stereotype",
+      "label": "Harmful Stereotype",
+      "description": "The meme perpetuates a harmful stereotype by linking Auburn University fans to a specific visual aesthetic that may be perceived as inappropriate or exaggerated. This stereotype is not visible in the image but is essential to understanding the meme’s intent to mock or demean a group based on their affiliation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_contempt",
+      "label": "mocking contempt expression",
+      "description": "The woman’s facial expression, characterized by a slight smirk and direct gaze, conveys a tone of disdain or mockery. This is paired with the text 'whatever this is.. it's an auburn fan,' which reinforces a dismissive and derogatory attitude toward Auburn University fans. The expression is not one of genuine emotion but is used to project superiority or scorn, fitting the meme’s intent to ridicule.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "provocative glamour aesthetic mapped to Auburn University fan",
+      "description": "The text 'it's an auburn fan' explicitly maps the visual presentation of the woman — her glamorous, provocative styling (blonde curls, red lipstick, red dress) — onto the identity of an Auburn University fan. This creates an analogical mapping where the visual aesthetic is equated with the fan group, reducing the fan's identity to a superficial or objectified image. The top text 'whatever this is..' sets up the rhetorical question, implying the viewer should recognize the visual as something associated with Auburn fans, thus completing the mapping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual material of the woman as an Auburn fan",
+      "description": "The user is projected onto the visual material of the woman (the 'provocative_glamour_scene') as a representative of an Auburn University fan. The meme uses the rhetorical setup 'whatever this is..' to imply that the viewer should recognize the visual as something associated with Auburn fans, thereby projecting the user's own identity or perspective onto the visual representation. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the rhetorical framing invites the user to identify with or interpret the visual as a symbol of Auburn fandom, making the user a participant in the meme's projection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful Stereotype",
+      "description": "The meme reduces Auburn University fans to a superficial, objectified visual aesthetic, which can marginalize and demean the group based on their affiliation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "auburn_university_fans",
+      "label": "Auburn University Fans",
+      "description": "The meme is designed to target and mock Auburn University fans by associating them with a provocative and glamorous visual stereotype, reducing their identity to superficial imagery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/76214.png",
+    "image_name": "76214.png",
+    "extraction_timestamp": "2025-12-19T12:52:38.641884",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

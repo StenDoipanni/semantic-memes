@@ -1,0 +1,30 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "police_officer_standing_in_front_of_police_car",
+      "participants": [
+        {
+          "entity": "police_officer",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "police_officer",
+          "relation": "standing_in_front_of",
+          "to": "police_car"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":police_officer_standing_in_front_of_police_car :hasParticipant :police_officer .",
+    ":police_officer :standing_in_front_of :police_car ."
+  ],
+  "triples_count": 2
+}

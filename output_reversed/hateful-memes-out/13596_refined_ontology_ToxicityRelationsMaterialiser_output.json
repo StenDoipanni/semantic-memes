@@ -1,0 +1,40 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "Christian_Bale"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "actor_christian_bale"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "stereotype_christians_horrible_drivers"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "driving_ability_stereotype"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :text_chunk .",
+    ":toxicity_1 :hasToxicElement :Christian_Bale .",
+    ":toxicity_1 :hasToxicElement :actor_christian_bale .",
+    ":toxicity_1 :hasToxicElement :stereotype_christians_horrible_drivers .",
+    ":toxicity_1 :hasToxicElement :driving_ability_stereotype ."
+  ],
+  "triples_count": 5
+}

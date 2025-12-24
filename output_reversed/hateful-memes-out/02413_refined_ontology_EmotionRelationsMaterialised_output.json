@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "the suffering emotion",
+      "expressors": [
+        {
+          "entity": "woman",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "exhibits",
+          "to": "the suffering emotion"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":the_suffering_emotion :hasExpressor :woman .",
+    ":woman :exhibits :the_suffering_emotion ."
+  ],
+  "triples_count": 2
+}

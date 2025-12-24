@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "confrontational emotion",
+      "expressors": [
+        {
+          "entity": "man",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "emotionalRelationToEntity",
+          "to": "white man"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":confrontational_emotion :hasExpressor :man .",
+    ":man :emotionalRelationToEntity :white_man ."
+  ],
+  "triples_count": 2
+}

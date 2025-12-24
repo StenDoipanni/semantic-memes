@@ -1,0 +1,242 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: muslim_strip_club; hasOverallIntent: Hateful; overall-intent-description: The image juxtaposes a person dressed in ornate, culturally-associated attire (suggesting a belly dancer or performer) with the text 'muslim strip club'. This combination is intentionally provocative and reductive, aiming to associate Islam with sexualized, commodified entertainment. It leverages a harmful stereotype by implying that Muslim women are inherently associated with stripping or sexualized performance, which is a direct attack on Muslim women and their cultural and religious identity. This is a hateful meme that uses visual and textual elements to demean and stereotype a specific religious group, fitting the 'Islamophobia' category in the provided knowledge base, particularly the 'Oppression of women claims' and 'Incompatibility with Western values' tropes. The intent is to provoke offense and reinforce negative, false associations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "muslim strip club",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "woman",
+      "description": "A woman dressed in ornate, orange, belly-dancer-style attire with embellishments, posing with arms crossed. Her attire includes a bejeweled bra top, a flowing orange skirt, and a draped fabric. The pose and clothing suggest a performance or dance context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "scene_id",
+      "label": "text_and_person_composition",
+      "description": "The scene is composed of a woman dressed in ornate, orange, belly-dancer-style attire posing with her arms crossed, juxtaposed with the overlaid text 'muslim strip club'. The text is positioned at the top of the image, directly above the woman, creating a confrontational and stereotyping visual composition. The woman is the central visual element, and the text serves as a provocative label that frames her appearance within a hateful, reductive context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "labels",
+          "to": "person"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_oppression_of_women",
+      "label": "Oppression of women claims",
+      "description": "A stereotype that falsely implies Muslim women are oppressed or inherently associated with sexualized, commodified entertainment, often used to demean and stereotype Muslim women and their cultural and religious identity. This is a core component of the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_id",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_incompatibility_with_western_values",
+      "label": "Incompatibility with Western values",
+      "description": "A stereotype that falsely implies Islam is inherently incompatible with Western cultural norms, often used to justify prejudice and reinforce negative associations. This is implicitly referenced in the meme's framing of 'muslim strip club' as an offensive juxtaposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_id",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny_objectification",
+      "label": "Objectification/body part focus",
+      "description": "A misogynistic trope that reduces women to their physical appearance or sexualized roles, often ignoring their agency, intellect, or cultural context. The meme leverages this by using the woman's attire and pose to imply sexual availability, reinforcing harmful stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_id",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny_sexual_availability_assumptions",
+      "label": "Sexual availability assumptions",
+      "description": "A misogynistic stereotype that assumes women are inherently sexually available or designed for male consumption. The meme uses the woman's performance-style attire and the text 'muslim strip club' to imply she is sexually available, reinforcing this harmful assumption.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_id",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_terrorism_associations",
+      "label": "Terrorism associations",
+      "description": "A stereotype that falsely links Islam with terrorism, often used to justify prejudice and fear. While not directly referenced in the image, this broader Islamophobic trope is part of the cultural context that makes the meme's reductive framing more potent and offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_id",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_sharia_law_fearmongering",
+      "label": "Sharia law fearmongering",
+      "description": "A stereotype that falsely implies Sharia law is inherently oppressive or threatening to Western values. This is part of the broader Islamophobic framework that the meme implicitly relies on to create its hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_id",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny_gold_digger_accusations",
+      "label": "Gold digger accusations",
+      "description": "A misogynistic trope that accuses women of seeking financial gain through relationships. While not directly referenced, this stereotype is part of the broader misogynistic context that the meme's framing of 'muslim strip club' may implicitly invoke to demean Muslim women.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_id",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hatefulness",
+      "label": "hateful emotional expression",
+      "description": "The image conveys a hateful emotional expression through the provocative juxtaposition of a woman in ornate, culturally-associated attire with the text 'muslim strip club'. This combination is intentionally reductive and offensive, aiming to demean and stereotype Muslim women by associating them with sexualized, commodified entertainment. The emotional tone is hostile and derogatory, designed to provoke offense and reinforce negative, false associations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'muslim strip club' maps onto the woman in ornate attire",
+      "description": "The text 'muslim strip club' is overlaid on the image of a woman dressed in belly-dancer-style attire. This creates an analogical mapping where the woman is being labeled or identified as part of a 'muslim strip club'. The mapping is reductive and hateful, projecting a false and offensive stereotype onto the visual subject. The woman's appearance (ornate, performance-style clothing) is used to visually support the text's implication, even though her attire is culturally associated with dance, not necessarily stripping or sexualized commodification. The mapping is spatially direct, with the text positioned above her, framing her identity through the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual label as the source of the stereotype",
+      "description": "The user is not explicitly projected onto a specific visual or textual element via deictic pronouns like 'me' or 'you'. However, the meme's structure inherently projects the user's perspective onto the text 'muslim strip club' as the primary interpretive lens. The user is expected to read the text and then project its hateful, reductive meaning onto the visual of the woman, thereby internalizing the stereotype. The text acts as the dominant semiotic anchor that frames the entire scene, making the user's interpretation contingent on accepting the text's premise. The user is thus projected onto the text_chunk as the origin point of the hateful projection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Muslim women by associating them with sexualized, commodified entertainment through the text 'muslim strip club' overlaid on a woman in ornate, culturally-associated attire. This is a hateful stereotype that dehumanizes and demeans a specific religious group, fitting the 'Islamophobia' category, particularly 'Oppression of women claims' and 'Incompatibility with Western values' tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed to target individuals who hold or are exposed to Islamophobic and misogynistic stereotypes, particularly those who may be influenced by or reinforce harmful narratives about Muslim women and Islam's compatibility with Western values. The target audience likely includes people who are predisposed to or seek to perpetuate stereotypes that associate Islam with sexualized, commodified entertainment, or who are susceptible to anti-Muslim rhetoric that frames Muslim women as oppressed or inherently linked to sexualized performance. The meme’s hateful intent suggests it is crafted to provoke offense and reinforce prejudice among those who already harbor such biases.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/56921.png",
+    "image_name": "56921.png",
+    "extraction_timestamp": "2025-12-16T05:28:01.237553",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

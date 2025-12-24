@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "优越感情绪",
+      "expressors": [
+        {
+          "entity": "the individual with an 80-point IQ",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "the individual with an 80-point IQ",
+          "relation": "emotionalRelationToEntity",
+          "to": "the village community"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":_优越感情绪 :hasExpressor :the_individual_with_an_80_point_IQ .",
+    ":the_individual_with_an_80_point_IQ :emotionalRelationToEntity :the_village_community ."
+  ],
+  "triples_count": 2
+}

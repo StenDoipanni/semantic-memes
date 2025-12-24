@@ -1,0 +1,182 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme uses a juxtaposition of a smiling man and a serious-looking man to deliver a pun: 'because stressed spelled backwards is desserts.' The intent is to humorously explain why people eat sweets when stressed, playing on the word 'desserts' as a backronym. While the joke is lighthearted and not inherently abusive or hateful, it relies on a linguistic trick that could be seen as trivializing stress or implying that eating sweets is a rational or satisfying solution to emotional distress. The humor is based on wordplay rather than targeting any specific group, but the message could potentially normalize unhealthy coping mechanisms, which may have indirect harmful effects by suggesting that emotional problems can be easily solved by indulgence. The image does not contain any toxic elements such as racism, sexism, ableism, or hate speech, but the underlying message may encourage unhealthy behaviors, making it mildly harmful in context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "when you're stressed, you eat ice cream, cake, chocolate & sweets, why?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with curly brown hair, wearing a dark suit jacket over a blue collared shirt. He appears in two states: top panel shows him smiling broadly, bottom panel shows him with a serious, unsmiling expression. The man is the central visual element and is used to contrast emotional states to deliver the meme's punchline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "stress_vs_desserts_pun",
+      "label": "man_explaining_pun_through_expression_change",
+      "description": "A scene composed of two panels showing the same man in contrasting emotional states to deliver a wordplay joke. The top panel shows him smiling, representing a happy or carefree state, while the bottom panel shows him with a serious, unsmiling expression, representing the 'mind = blown' reaction to the punchline. The text overlays explain the joke: 'when you're stressed, you eat ice cream, cake, chocolate & sweets, why?' followed by 'because stressed spelled backwards is desserts mind = blown.' The scene uses the man's facial expressions as visual cues to enhance the comedic effect of the pun.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "expresses_reaction_to",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "wordplay_pun",
+      "label": "Wordplay Pun: 'Stressed' spelled backwards is 'desserts'",
+      "description": "The meme relies on a linguistic pun where the word 'stressed' is reversed to form 'desserts', creating a humorous explanation for why people eat sweets when stressed. This requires understanding of English spelling and wordplay as a comedic device.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stress_coping_mechanism",
+      "label": "Stress Coping Mechanism: Eating sweets as a response to stress",
+      "description": "The meme references a common psychological and behavioral phenomenon where individuals use food, particularly sweets, as a coping mechanism during periods of stress. This is a real-world concept in psychology and behavioral science.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mind_blown_expression",
+      "label": "Mind Blown Expression: A cultural reaction to something surprising or absurd",
+      "description": "The phrase 'mind = blown' is a popular internet meme and cultural expression used to convey that something is so surprising, funny, or absurd that it has left the observer in a state of disbelief or awe. It is not visible in the image but is essential to understanding the punchline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "actor_will_ferrell",
+      "label": "Actor Will Ferrell",
+      "description": "The man in the image is Will Ferrell, a well-known American actor and comedian. His recognizable face and expression are used to enhance the comedic effect of the meme. His identity as a public figure is background knowledge needed to understand the visual context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "the smiling expression",
+      "description": "The man in the top panel is displaying a broad, toothy smile with crinkled eyes, conveying a state of joy or amusement. This expression is used to represent the carefree or happy state associated with enjoying sweets.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_stressed_to_desserts",
+      "label": "The man's serious expression maps to the punchline 'because stressed spelled backwards is desserts'",
+      "description": "The bottom panel of the image, showing the man with a serious, unsmiling expression, visually represents the 'mind = blown' reaction to the punchline. The text 'because stressed spelled backwards is desserts mind = blown.' is mapped onto this visual state, where the man's expression serves as the visual embodiment of the absurdity and surprise conveyed by the wordplay pun. The visual material (the man's serious face) is mapped onto the textual material (the punchline) to convey the comedic effect of the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material explaining the wordplay pun",
+      "description": "The user is projected onto the bottom textual material ('because stressed spelled backwards is desserts mind = blown.') as the recipient of the joke. The user is expected to understand the pun and experience the 'mind = blown' reaction, which is visually represented by the man's serious expression. The text directly addresses the user by implying 'you' are the one who would find this explanation surprising or funny.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_2",
+      "label": "User projected onto the visual material of the man's serious expression",
+      "description": "The user is projected onto the bottom panel of the image, where the man has a serious, unsmiling expression. This visual state is used to represent the 'mind = blown' reaction to the punchline. The user is expected to identify with this expression as the emotional response to the absurdity of the wordplay, making the visual material a direct projection point for the user's imagined reaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme's punchline trivializes stress by equating it with eating desserts, potentially normalizing unhealthy coping mechanisms. While not explicitly abusive or hateful, the message may encourage avoidance of emotional distress through indulgence, which can have indirect harmful effects on mental health.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "General internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with internet humor, wordplay, and the 'mind = blown' reaction. The use of a recognizable actor (Will Ferrell) and common cultural references (stress coping mechanisms, dessert consumption, wordplay puns) makes it accessible to a wide demographic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/27914.png",
+    "image_name": "27914.png",
+    "extraction_timestamp": "2025-12-15T20:19:20.233590",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

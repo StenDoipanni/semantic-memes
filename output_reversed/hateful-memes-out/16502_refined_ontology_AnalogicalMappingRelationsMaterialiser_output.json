@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "admins_are_mapped_onto_the_crying_baby",
+      "hasMappedEntity": "text_chunk_1",
+      "hasMappingEntity": "baby"
+    },
+    {
+      "from": "baby",
+      "relation": "mappedOnto",
+      "to": "text_chunk_1"
+    }
+  ],
+  "triples": [
+    ":admins_are_mapped_onto_the_crying_baby :hasMappedEntity :text_chunk_1 .",
+    ":admins_are_mapped_onto_the_crying_baby :hasMappingEntity :baby .",
+    ":baby :mappedOnto :text_chunk_1 ."
+  ],
+  "triples_count": 3
+}

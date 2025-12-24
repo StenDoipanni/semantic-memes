@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "dramatic alarm expression",
+      "expressors": [
+        {
+          "entity": "police_officer",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "police_officer",
+          "relation": "emotionalRelationToEntity",
+          "to": "coffee_spill_scene"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":dramatic_alarm_expression :hasExpressor :police_officer .",
+    ":police_officer :emotionalRelationToEntity :coffee_spill_scene ."
+  ],
+  "triples_count": 2
+}

@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_001",
+      "hasMappedEntity": "text_chunk: text location - this is what happens when you don't spank your kids...",
+      "hasMappingEntity": "car: damaged sedan"
+    },
+    {
+      "from": "car: damaged sedan",
+      "relation": "mappedOnto",
+      "to": "text_chunk: text location - this is what happens when you don't spank your kids..."
+    }
+  ],
+  "triples": [
+    ":mapping_001 :hasMappedEntity :text_chunk_text_location_this_is_what_happens_when_you_don_t_spank_your_kids .",
+    ":mapping_001 :hasMappingEntity :car_damaged_sedan .",
+    ":car_damaged_sedan :mappedOnto :text_chunk_text_location_this_is_what_happens_when_you_don_t_spank_your_kids ."
+  ],
+  "triples_count": 3
+}

@@ -1,0 +1,45 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hate",
+      "expressors": [
+        {
+          "entity": "meme_image",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "woman_speaking_at_podium"
+        },
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "Adolf_Hitler"
+        },
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "woman_sitting_next_to_Hitler"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hate :hasExpressor :meme_image .",
+    ":meme_image :emotionalRelationToEntity :woman_speaking_at_podium .",
+    ":meme_image :emotionalRelationToEntity :Adolf_Hitler .",
+    ":meme_image :emotionalRelationToEntity :woman_sitting_next_to_Hitler ."
+  ],
+  "triples_count": 4
+}

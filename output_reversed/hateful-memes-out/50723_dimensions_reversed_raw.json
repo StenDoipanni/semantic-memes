@@ -1,0 +1,248 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image displays a photograph of Kamala Harris with overlaid text containing extreme, false, and inflammatory statements including accusations of sexual misconduct, support for illegal immigration, and endorsement of infanticide. These claims are not only factually incorrect but also designed to incite fear, hatred, and division. The juxtaposition of Harris’s smiling expression with the grotesque text creates a deliberately misleading and harmful caricature intended to delegitimize her and provoke negative sentiment toward her. The meme falls under 'Harmful' intent as it promotes misinformation that can cause psychological distress, damage public discourse, and contribute to political polarization. It does not directly target protected characteristics like race, gender, or religion in a discriminatory way, but its content is malicious and intended to smear a political figure through absurd and violent rhetoric, which can incite real-world harm by normalizing hate speech and misinformation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "i will lie. i will sleep with anyone. i will attack sexual perverts like joe biden in my own party to get ahead! i will let illegals murder americans. i will let newborns be comfortable and executed  i want to be your president!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Kamala_Harris",
+      "label": "person",
+      "description": "A woman with long brown hair, smiling broadly with her mouth open, showing teeth. She is wearing a dark-colored top or suit jacket. The image is a close-up portrait, focusing on her face and upper shoulders. Her expression appears cheerful or amused, contrasting with the inflammatory text overlaid on the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "smiling_person_with_inflammatory_text",
+      "label": "A person smiling while overlaid with extreme and false statements",
+      "description": "The scene features Kamala_Harris, who is smiling broadly, with inflammatory and false text overlaid on the image. The text contains extreme, false, and inflammatory statements including accusations of sexual misconduct, support for illegal immigration, and endorsement of infanticide. The juxtaposition of Harris’s smiling expression with the grotesque text creates a deliberately misleading and harmful caricature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Kamala_Harris",
+          "relation": "isDisplayedWith",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Kamala_Harris",
+      "label": "Kamala Harris",
+      "description": "Kamala Harris is the Vice President of the United States and a prominent political figure. The meme uses her image to associate her with extreme, false, and inflammatory claims, which are not based on reality. Her public persona and political role are central to understanding the meme’s intent to smear her through absurd and violent rhetoric.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Joe_Biden",
+      "label": "Joe Biden",
+      "description": "Joe Biden is the 46th President of the United States. The text in the meme falsely accuses him of being a 'sexual pervert' and implies that Kamala Harris would attack him within her own party. This reference relies on real-world knowledge of Biden as a political figure and the context of political rivalry between him and Harris.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "illegal_immigration",
+      "label": "Illegal Immigration",
+      "description": "The text claims 'I will let illegals murder Americans,' which relies on the real-world concept of illegal immigration and the political discourse surrounding it. This stereotype is often used in political rhetoric to incite fear and division, and it is a key element in understanding the meme’s inflammatory nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "infanticide",
+      "label": "Infanticide",
+      "description": "The text claims 'I will let newborns be comfortable and executed,' which is a reference to the concept of infanticide — the killing of infants. This is a horrific and false claim that relies on real-world knowledge of the term and its moral and legal implications to create a grotesque caricature of the candidate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_rivalry",
+      "label": "Political Rivalry",
+      "description": "The meme implies a rivalry between Kamala Harris and Joe Biden, which is a real-world political dynamic. The text suggests Harris would attack Biden within her own party, which relies on knowledge of political party dynamics and the real-world context of their relationship as political opponents.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misinformation",
+      "label": "Misinformation",
+      "description": "The meme is designed to spread false and inflammatory information. Understanding that this is a form of misinformation — deliberately false information intended to mislead — is essential to interpreting the meme’s harmful intent and its role in inciting fear and division.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harmful_caricature",
+      "label": "Harmful Caricature",
+      "description": "The meme uses a harmful caricature by juxtaposing Kamala Harris’s smiling expression with grotesque and false text. This relies on the real-world concept of caricature — a distorted representation — and its use in political satire or smear campaigns to delegitimize a figure through absurdity and violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_polarization",
+      "label": "Political Polarization",
+      "description": "The meme is designed to contribute to political polarization by promoting extreme and false claims. Understanding that this is a tactic used to deepen divisions between political groups is essential to interpreting the meme’s overall intent and impact.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "smear_campaign",
+      "label": "Smear Campaign",
+      "description": "The meme is part of a smear campaign — a coordinated effort to damage the reputation of a person or group. This relies on real-world knowledge of smear campaigns and their use in political discourse to delegitimize opponents through false and inflammatory claims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "cheerful or amused emotion",
+      "description": "Kamala Harris is depicted with a broad, open-mouthed smile, showing her teeth, and looking upward with crinkled eyes, conveying a strong expression of joy or amusement. This facial expression is visually prominent and contrasts sharply with the inflammatory text overlaid on the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'I want to be your president!' is mapped onto Kamala Harris as the candidate.",
+      "description": "The inflammatory text explicitly states 'I want to be your president!', which directly maps the textual entity 'presidential_candidate' (implied by the phrase) onto the visual entity Kamala Harris, who is a real-world political figure and the Vice President of the United States. The meme uses her image to represent the persona of the 'presidential_candidate' described in the text, creating an analogical mapping where the text's speaker is projected onto her visual form.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the text_chunk, which contains the phrase 'I want to be your president!'. This phrase uses the deictic pronoun 'your', directly addressing the viewer ('you') and projecting the user's identity onto the role of the presidential candidate as described in the text. The user is thus positioned as the recipient of the candidate's appeal, creating an implicit identification with the viewer's perspective.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme contains extreme, false, and inflammatory statements including accusations of sexual misconduct, support for illegal immigration, and endorsement of infanticide. These claims are not only factually incorrect but also designed to incite fear, hatred, and division. The juxtaposition of Harris’s smiling expression with the grotesque text creates a deliberately misleading and harmful caricature intended to delegitimize her and provoke negative sentiment toward her.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who are politically engaged, particularly those aligned with right-wing or conservative political ideologies in the United States. The meme leverages inflammatory and false claims about Kamala Harris — including accusations of sexual misconduct, support for illegal immigration, and endorsement of infanticide — which are commonly used in conservative political discourse to incite fear, hatred, and division. The meme’s intent to smear Harris through absurd and violent rhetoric is designed to resonate with audiences who are already predisposed to distrust or oppose her, often due to existing political polarization. The use of extreme, false statements and the juxtaposition of Harris’s smiling expression with grotesque text creates a harmful caricature that appeals to those who seek to delegitimize political opponents through misinformation and emotional manipulation. The reference to Joe Biden as a 'sexual pervert' and the implication of political rivalry within the Democratic Party further target audiences familiar with partisan political dynamics and the culture of political attacks common in conservative media and online communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/50723.png",
+    "image_name": "50723.png",
+    "extraction_timestamp": "2025-12-16T03:51:58.275520",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 18,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

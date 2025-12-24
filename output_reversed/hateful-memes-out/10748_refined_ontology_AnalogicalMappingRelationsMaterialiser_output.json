@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_id_1",
+      "hasMappedEntity": "text_chunk",
+      "hasMappingEntity": "elderly_woman"
+    },
+    {
+      "from": "elderly_woman",
+      "relation": "mappedOnto",
+      "to": "text_chunk"
+    }
+  ],
+  "triples": [
+    ":mapping_id_1 :hasMappedEntity :text_chunk .",
+    ":mapping_id_1 :hasMappingEntity :elderly_woman .",
+    ":elderly_woman :mappedOnto :text_chunk ."
+  ],
+  "triples_count": 3
+}

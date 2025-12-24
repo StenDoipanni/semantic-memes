@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The meme depicts a Black man (Samuel L. Jackson) in a context that mocks Alzheimer's patients by portraying him as irate and confused, using his recognizable expression to deliver a profane, aggressive retort to a nurse's announcement about mashed potatoes. This juxtaposition of a well-known Black actor with a stereotype of cognitive impairment is inherently harmful and degrading. It leverages the actor's identity to perpetuate a harmful stereotype about Black people being 'angry' or 'unruly' when confused, which aligns with anti-Black stereotypes such as 'aggressive/violent nature claims' and 'intelligence-related slurs' (by implying he is 'not smart' for not remembering). The meme's intent is to provoke laughter through the absurdity of the situation, but it does so by weaponizing a racialized stereotype, making it hateful toward Black individuals. The image is not abusive or cyberbullying in the sense of targeting a specific individual, but it is hateful because it relies on a harmful racialized caricature of Black people as inherently angry or irrational when confused, which is a form of systemic racism. The meme's overall intent is to entertain by exploiting a harmful racial stereotype, thereby normalizing and reinforcing prejudice against Black people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "nurse: yes sir, we are having mashed potatoes today",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Samuel_L_Jackson",
+      "label": "actor",
+      "description": "A Black man with a mustache and goatee, wearing a black beanie, a black-and-white striped polo shirt under a plaid vest, and a black zip-up hoodie. He has a surprised or angry expression, with his mouth open and his right hand raised in a gesture of exasperation or disbelief. He is the central figure in the image and is being used in the meme to portray an Alzheimer's patient reacting to a nurse's announcement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "alzheimer_patient_reaction",
+      "label": "Alzheimer's patient reacting to nurse announcement",
+      "description": "Samuel_L_Jackson, portrayed as an Alzheimer's patient, is shown with a surprised and angry expression, gesturing with his right hand, in response to a nurse's announcement about mashed potatoes. The scene is framed to emphasize his emotional outburst and the absurdity of his reaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Samuel_L_Jackson",
+          "relation": "reactsTo",
+          "to": "nurse_announcement"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_aggressive_violent_nature",
+      "label": "Anti-Black Stereotype: Aggressive/Violent Nature Claims",
+      "description": "This stereotype portrays Black individuals as inherently angry, irritable, or prone to violence, especially when confused or frustrated. The meme leverages Samuel L. Jackson’s recognizable persona — often associated with intense, authoritative, or angry expressions — to reinforce this harmful stereotype by depicting him as irate in response to a mundane announcement, thereby implying that his reaction is 'typical' for Black people with Alzheimer’s. This is a form of racialized caricature that weaponizes his identity to perpetuate prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Samuel_L_Jackson",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "alzheimer_patient_reaction",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "alzheimer_patient_stereotype",
+      "label": "Stereotype: Alzheimer's Patients as Confused or Irrational",
+      "description": "The meme relies on the stereotype that Alzheimer’s patients are often confused, forgetful, or unable to process simple information — and that their confusion can lead to irrational or aggressive outbursts. The text 'i don't remember asking you a god-damn thing' is a hyperbolic exaggeration of this stereotype, implying that the patient’s confusion is so profound it leads to profanity and anger. This stereotype is used to justify the character’s outburst as 'normal' or 'expected' for someone with dementia, ignoring the dignity and individuality of the patient.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "alzheimer_patient_reaction",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mashed_potatoes_food_stereotype",
+      "label": "Food Stereotype: 'Watermelon and Fried Chicken' for Black People",
+      "description": "While not explicitly shown, the mention of 'mashed potatoes' in the context of an Alzheimer’s patient — particularly one portrayed by a Black actor — implicitly references the broader racialized food stereotype that Black people are associated with specific, often stereotyped, comfort foods like fried chicken and watermelon. The meme’s absurdity is heightened by the juxtaposition of a mundane food item with a racially charged context, reinforcing the idea that Black people are 'only' associated with certain foods, which is a form of cultural erasure and stereotyping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Samuel_L_Jackson",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "samuel_l_jackson_actor_identity",
+      "label": "Actor Identity: Samuel L. Jackson as a Cultural Icon of Anger",
+      "description": "Samuel L. Jackson is widely known for his roles portraying authoritative, intense, or angry characters — such as in 'Pulp Fiction', 'The Matrix', or 'The Avengers'. His public persona is often associated with 'angry' or 'intense' expressions. The meme exploits this identity to portray the Alzheimer’s patient as 'angry' or 'irritable', thereby linking the character’s confusion to a racialized stereotype of Black people being inherently aggressive or volatile — a form of racialized caricature that uses his fame to reinforce prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Samuel_L_Jackson",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "alzheimer_patient_reaction",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "alzheimer_patient_as_incompetent",
+      "label": "Stereotype: Alzheimer's Patients as Incompetent or Unreliable",
+      "description": "The meme implies that Alzheimer’s patients are incapable of remembering basic things — such as asking for food — and that their confusion is so severe it leads to profanity and anger. This stereotype reduces the patient to a caricature of incompetence, ignoring the complexity of dementia and the individual’s dignity. The text 'i don't remember asking you a god-damn thing' is a hyperbolic exaggeration of this stereotype, used to justify the character’s outburst as 'normal' or 'expected' for someone with dementia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "alzheimer_patient_reaction",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "anger",
+      "label": "angry emotion expression",
+      "description": "The actor, Samuel L. Jackson, displays an angry facial expression with his mouth open as if shouting, and his right hand is raised in a gesture of exasperation or disbelief, conveying strong irritation and frustration. This is reinforced by the text 'i don't remember asking you a god-damn thing', which expresses rage and indignation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Alzheimer's patient is mapped onto Samuel L. Jackson",
+      "description": "The text 'alzheimer's patient:' explicitly labels the visual entity Samuel_L_Jackson as the subject of the scene. This creates an analogical mapping where the textual label 'alzheimer's patient' is projected onto the visual representation of Samuel L. Jackson, who is portrayed in the image as reacting to the nurse's announcement. The mapping is direct and explicit through the text positioning.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the Alzheimer's patient scene",
+      "description": "The user is projected onto the scene of the Alzheimer's patient (Samuel L. Jackson) reacting to the nurse's announcement. The meme's humor and intent rely on the viewer imagining themselves in the role of the patient or identifying with the patient's exaggerated reaction, which is framed as a common, albeit absurd, experience for someone with dementia. The text 'i don't remember asking you a god-damn thing' is a hyperbolic expression that invites the user to project their own experience of confusion or frustration onto the character, even if the context is clearly satirical and harmful. The user is not explicitly addressed with 'you' or 'me' in the text, but the scene and the character's reaction create an implicit identification or projection where the viewer sees themselves as the confused patient.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme depicts a Black man (Samuel L. Jackson) in a context that mocks Alzheimer's patients by portraying him as irate and confused, using his recognizable expression to deliver a profane, aggressive retort to a nurse's announcement about mashed potatoes. This juxtaposition of a well-known Black actor with a stereotype of cognitive impairment is inherently harmful and degrading. It leverages the actor's identity to perpetuate a harmful stereotype about Black people being 'angry' or 'unruly' when confused, which aligns with anti-Black stereotypes such as 'aggressive/violent nature claims' and 'intelligence-related slurs' (by implying he is 'not smart' for not remembering). The meme's intent is to provoke laughter through the absurdity of the situation, but it does so by weaponizing a racialized stereotype, making it hateful toward Black individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who are familiar with Samuel L. Jackson’s public persona and his frequent portrayal of intense, angry, or authoritative characters. The meme relies on this recognition to create humor by juxtaposing his iconic expression with a stereotype of Alzheimer’s patients being confused or irritable. The intended audience likely includes internet users who appreciate absurdist humor that exploits racialized stereotypes, particularly those who are aware of the 'aggressive/violent nature claims' anti-Black stereotype and find it amusing to see it applied to a Black actor in a context that also mocks dementia patients. The meme’s humor is derived from the absurdity of the situation and the actor’s recognizable expression, making it appealing to viewers who enjoy memes that use cultural icons to reinforce or parody harmful stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/74013.png",
+    "image_name": "74013.png",
+    "extraction_timestamp": "2025-12-19T11:54:22.189419",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

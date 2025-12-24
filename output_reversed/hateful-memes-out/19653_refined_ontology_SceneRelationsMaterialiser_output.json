@@ -1,0 +1,30 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "hateful_text_juxtaposition",
+      "participants": [
+        {
+          "entity": "Pope_Francis",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Pope_Francis",
+          "relation": "isJuxtaposedWith",
+          "to": "hateful_text_juxtaposition"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_text_juxtaposition :hasParticipant :Pope_Francis .",
+    ":Pope_Francis :isJuxtaposedWith :hateful_text_juxtaposition ."
+  ],
+  "triples_count": 2
+}

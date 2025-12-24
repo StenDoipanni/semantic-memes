@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "earnest concern emotion",
+      "expressors": [
+        {
+          "entity": "woman_on_left",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman_on_left",
+          "relation": "emotionalRelationToEntity",
+          "to": "woman_on_right"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":earnest_concern_emotion :hasExpressor :woman_on_left .",
+    ":woman_on_left :emotionalRelationToEntity :woman_on_right ."
+  ],
+  "triples_count": 2
+}

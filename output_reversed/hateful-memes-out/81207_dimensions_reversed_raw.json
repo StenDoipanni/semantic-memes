@@ -1,0 +1,292 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: years_ago_slaves_would_be_used_for_farming; hasOverallIntent: Hateful; overall-intent-description: The image depicts a historical illustration of enslaved people being forced to work under the supervision of a white overseer, overlaid with the text 'years ago slaves would be used for farming.' The overall intent is to evoke a hateful and dehumanizing portrayal of Black people by reifying the historical trauma of slavery and reducing their humanity to a labor-based stereotype. The visual of enslaved individuals being physically restrained and controlled by a white figure, combined with the text, serves to reinforce racist tropes by implicitly suggesting that Black people are inherently suited only for manual labor and are historically and biologically inferior. This is a harmful and hateful representation that perpetuates anti-Black racism by using historical imagery to justify present-day racial hierarchies and stereotypes. The meme does not merely inform but seeks to normalize and legitimize the dehumanization of Black people through the lens of historical oppression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "years ago slaves would be used",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "enslaved_person_1",
+      "label": "enslaved person being physically restrained",
+      "description": "A Black person in a green shirt and blue pants, with their arms raised and bound by ropes, being forced to work under supervision. Their posture indicates physical coercion and subjugation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "forced_labor_scene",
+      "label": "Enslaved people being forced to work under supervision",
+      "description": "A scene depicting enslaved individuals being physically restrained and coerced into labor under the watch of a white overseer. The spatial arrangement shows the enslaved people in a line, bound and struggling, while the overseer stands at the rear, directing them. The scene conveys a hierarchy of power and control, with the overseer positioned to dominate and the enslaved people positioned as subjugated laborers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "overseer",
+          "relation": "supervises",
+          "to": "enslaved_person_1"
+        },
+        {
+          "from": "enslaved_person_1",
+          "relation": "is restrained by",
+          "to": "overseer"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_1",
+      "label": "Enslaved people as inherently suited only for manual labor",
+      "description": "This stereotype reduces the humanity of Black people to their labor capacity, implying they are biologically or inherently suited only for physical work, which is a racist trope used to justify racial hierarchies and dehumanization. This is implicitly referenced in the meme's text and visual portrayal of enslaved people being forced to farm.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "forced_labor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_2",
+      "label": "Historical trauma of slavery as a justification for present-day racial hierarchies",
+      "description": "The meme implicitly uses the historical trauma of slavery to reinforce present-day racist beliefs by suggesting that the historical oppression of Black people is a permanent or inherent condition, thereby legitimizing racial stereotypes and hierarchies. This requires external knowledge of how historical racism is weaponized in contemporary discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "forced_labor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_3",
+      "label": "Dehumanization of Black people through historical imagery",
+      "description": "The meme relies on the use of historical imagery of enslaved people to dehumanize Black individuals by reducing them to a historical stereotype, implying they are not capable of other roles or are inherently inferior. This requires understanding how historical imagery is used to perpetuate racist ideologies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "forced_labor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_4",
+      "label": "Racist trope of Black people as biologically inferior",
+      "description": "The meme implicitly suggests that Black people are biologically inferior and suited only for manual labor, which is a harmful and false stereotype rooted in pseudoscientific racism. This requires external knowledge of how such racist pseudoscience has been used historically to justify slavery and segregation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "forced_labor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_5",
+      "label": "Racist trope of Black people as inherently lazy or unproductive outside of manual labor",
+      "description": "The meme implies that Black people are only productive or useful in manual labor roles, which is a racist stereotype that denies their full humanity and capabilities. This requires understanding how such stereotypes are used to limit opportunities and reinforce racial hierarchies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "forced_labor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_6",
+      "label": "Racist trope of Black people as inherently violent or aggressive",
+      "description": "While not explicitly shown, the visual of enslaved people being physically restrained and forced to work under threat can be interpreted as reinforcing the stereotype that Black people are inherently violent or require control, which is a harmful and false trope used to justify oppression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "forced_labor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_7",
+      "label": "Racist trope of Black people as inherently criminal or dangerous",
+      "description": "The image of enslaved people being controlled and forced to work under threat can be interpreted as reinforcing the stereotype that Black people are inherently criminal or dangerous, which is a harmful and false trope used to justify oppression and racial profiling.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "forced_labor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_8",
+      "label": "Racist trope of Black people as inherently dependent on welfare or government support",
+      "description": "The meme implies that Black people are only useful for manual labor and are not capable of other roles, which can be interpreted as reinforcing the stereotype that they are inherently dependent on welfare or government support, which is a harmful and false trope used to justify racial discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "forced_labor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_9",
+      "label": "Racist trope of Black people as inherently hypersexualized",
+      "description": "While not explicitly shown, the visual of enslaved people being controlled and forced to work under threat can be interpreted as reinforcing the stereotype that Black people are inherently hypersexualized, which is a harmful and false trope used to justify oppression and racial profiling.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "forced_labor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_10",
+      "label": "Racist trope of Black people as inherently lazy or unproductive",
+      "description": "The meme implies that Black people are only useful for manual labor and are not capable of other roles, which can be interpreted as reinforcing the stereotype that they are inherently lazy or unproductive, which is a harmful and false trope used to justify racial discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "forced_labor_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The image and text together convey a hateful sentiment by depicting the dehumanizing historical trauma of slavery and reinforcing racist stereotypes about Black people being inherently suited only for manual labor. The visual of enslaved individuals being physically restrained and controlled by a white overseer, combined with the text, serves to legitimize racial hierarchies and perpetuate anti-Black racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Textual description of historical slavery mapped onto visual depiction of enslaved labor",
+      "description": "The text 'years ago slaves would be used for farming' is directly mapped onto the visual scene of enslaved people being forced to work under an overseer. The text explicitly labels the visual content as depicting a historical practice of slavery for agricultural labor, thereby anchoring the entire visual narrative within the context of the text. This mapping establishes that the visual material is being interpreted as an illustration of the textual claim, reinforcing the stereotype that Black people were historically and inherently suited only for manual labor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the historical scene of enslaved labor",
+      "description": "The user is projected onto the visual scene of forced labor, where the viewer is implicitly positioned as an observer of historical oppression. The meme does not use explicit deictic pronouns like 'you' or 'me', but the framing of the image and the text 'years ago slaves would be used for farming' invites the user to mentally inhabit the perspective of someone who is either perpetuating or reflecting on this historical narrative. The user is thus projected onto the 'forced_labor_scene' as a passive witness or participant in the dehumanizing portrayal of Black people as inherently suited for manual labor. This projection reinforces the racist stereotypes embedded in the visual and textual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme depicts a hateful portrayal of Black people by reifying the historical trauma of slavery and reducing their humanity to a labor-based stereotype. The visual of enslaved individuals being physically restrained and controlled by a white figure, combined with the text, serves to reinforce racist tropes by implicitly suggesting that Black people are inherently suited only for manual labor and are historically and biologically inferior. This is a harmful and hateful representation that perpetuates anti-Black racism by using historical imagery to justify present-day racial hierarchies and stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold or are exposed to anti-Black racist ideologies, particularly those who may benefit from or reinforce racist tropes by using historical imagery of slavery to justify present-day racial hierarchies. The meme is designed to appeal to communities that normalize or perpetuate anti-Black stereotypes, such as the belief that Black people are inherently suited only for manual labor or are biologically inferior. It targets those who may interpret the visual and textual content as a legitimate or historical justification for racialized labor assumptions, thereby reinforcing systemic racism. The audience is likely to be individuals who engage with or share content that weaponizes historical trauma to legitimize contemporary racial stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/81207.png",
+    "image_name": "81207.png",
+    "extraction_timestamp": "2025-12-19T14:09:41.720110",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 19,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

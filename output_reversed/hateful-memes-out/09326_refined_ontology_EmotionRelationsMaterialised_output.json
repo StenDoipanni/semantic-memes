@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "frustrated emotion",
+      "expressors": [
+        {
+          "entity": "meme_image",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "Mike Rowe"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":frustrated_emotion :hasExpressor :meme_image .",
+    ":meme_image :emotionalRelationToEntity :Mike_Rowe ."
+  ],
+  "triples_count": 2
+}

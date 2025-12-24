@@ -1,0 +1,181 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: when-did-you-have-lunch; hasOverallIntent: Harmful; overall-intent-description: The image depicts three men, likely from an African pastoralist group (such as the Maasai), standing in a savanna-like environment. The text overlay asks, 'when did you have lunch?'. The meme's intent is to create a humorous or absurd juxtaposition by implying that these individuals, who appear to be in a remote, arid environment with no visible food or modern amenities, are somehow 'starving' or 'neglecting' basic needs like eating. This is a form of cultural stereotyping that reduces a group to a simplistic, humorous trope about hunger or lack of modern conveniences. While not overtly abusive or hateful toward a specific protected group, it relies on a potentially harmful and reductive stereotype that portrays people from certain cultures as primitive or incapable of managing basic needs, which can perpetuate negative perceptions and reinforce harmful tropes about 'developing' or 'traditional' societies. The meme's humor is derived from the incongruity between the image and the question, but this incongruity is built on a potentially offensive and reductive assumption about the subjects' daily lives and capabilities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when did you have lunch?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "three_men",
+      "label": "people",
+      "description": "Three men, likely from an African pastoralist group such as the Maasai, are shown from behind, standing in a savanna-like environment. They are shirtless, wearing red and white patterned cloth wrapped around their waists, and holding long sticks or spears. Their posture suggests they are observing or interacting with a tree.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "observation_under_tree",
+      "label": "Three men observing a tree",
+      "description": "Three men, likely from an African pastoralist group, are standing in a savanna-like environment. They are positioned around a tree, with one man reaching up toward it, another holding a stick or spear, and the third standing with hands on hips. Their posture suggests they are observing or interacting with the tree.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "three_men",
+          "relation": "are_observing",
+          "to": "tree"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cultural_stereotype_of_african_pastoralists_as_primitive_or_starving",
+      "label": "Cultural Stereotype: African Pastoralists as Primitive or Starving",
+      "description": "The meme relies on a harmful stereotype that portrays people from African pastoralist communities (like the Maasai) as primitive, incapable of managing basic needs such as eating, or as being perpetually starving. This stereotype reduces their complex culture, self-sufficiency, and traditional food practices to a simplistic, humorous trope about hunger or lack of modern conveniences. The humor is derived from the incongruity between the image and the question, but this incongruity is built on a potentially offensive and reductive assumption about the subjects' daily lives and capabilities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "three_men",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "maasai_culture",
+      "label": "Maasai Culture",
+      "description": "The individuals in the image are likely Maasai, a semi-nomadic pastoralist ethnic group native to Kenya and Tanzania. Their traditional attire (red and white cloth wrapped around the waist) and lifestyle (herding cattle, living in arid savannas) are culturally specific. The meme misrepresents their culture by implying they are 'starving' or 'neglecting' basic needs, which is a distortion of their actual subsistence practices and food security.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "three_men",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "savanna_environment",
+      "label": "Savanna Environment",
+      "description": "The setting is a savanna, a grassland biome with scattered trees, typical of East Africa. This environment is not inherently indicative of starvation or lack of food; it is a natural habitat for pastoralist communities who have adapted to it. The meme uses this setting to imply that the environment is barren or hostile to food, which is a misrepresentation of the ecological and cultural context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "observation_under_tree",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "juxtaposition_meme_structure",
+      "label": "Juxtaposition Meme Structure",
+      "description": "The meme uses a juxtaposition structure: a serious or culturally specific image (three men in a savanna) paired with an absurd or incongruous question ('when did you have lunch?'). This structure is common in internet memes to create humor through contrast, but in this case, the contrast is built on a reductive and potentially offensive stereotype about the subjects' daily lives and capabilities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "three_men",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_contempt",
+      "label": "mocking contempt emotion",
+      "description": "The emotion expressed is mocking contempt, conveyed through the absurd juxtaposition of the image with the text 'when did you have lunch?'. The meme implies that the subjects, likely Maasai pastoralists, are primitive or starving, which is a reductive and offensive stereotype. The humor is derived from this contemptuous framing, suggesting the subjects are incapable of managing basic needs like eating, thereby mocking their cultural practices and self-sufficiency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The question 'when did you have lunch?' is mapped onto the three men in the savanna.",
+      "description": "The text 'when did you have lunch?' is juxtaposed with the visual of three men (likely Maasai pastoralists) standing in a savanna environment. The mapping implies that these men are the subjects of the question — they are being asked when they last ate. This creates an analogical mapping where the textual entity (the question) is projected onto the visual entity (the men), suggesting they are the ones who 'have lunch' or who are being interrogated about their mealtime. The humor and stereotype derive from the incongruity: the men appear self-sufficient and culturally adapted to their environment, yet the text frames them as if they are primitive or starving, incapable of managing basic needs like eating. This mapping is central to the meme's structure and intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material asking a question",
+      "description": "The user is projected onto the text 'when did you have lunch?' which is presented as a direct question addressed to the viewer. The use of 'you' in the text creates a direct address, making the user feel personally implicated in the question. This projection is onto the textual material, which is the primary source of the meme's interrogative and confrontational tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful Stereotype",
+      "description": "The meme relies on a harmful stereotype that portrays African pastoralist communities (like the Maasai) as primitive, incapable of managing basic needs such as eating, or as being perpetually starving. This stereotype reduces their complex culture, self-sufficiency, and traditional food practices to a simplistic, humorous trope about hunger or lack of modern conveniences, which can perpetuate negative perceptions and reinforce harmful tropes about 'developing' or 'traditional' societies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is likely internet users familiar with or interested in cultural stereotypes, particularly those related to African pastoralist communities. The meme's humor relies on the audience's recognition of the visual cues (Maasai attire, savanna setting) and the absurd juxtaposition with the question 'when did you have lunch?', which implies a stereotype about these communities being primitive or starving. The audience is expected to understand the cultural reference and find the incongruity humorous, even if the underlying stereotype is harmful. This audience may include individuals who engage with internet memes that rely on cultural misrepresentation for comedic effect, often without critical awareness of the potential harm.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/24576.png",
+    "image_name": "24576.png",
+    "extraction_timestamp": "2025-12-15T18:54:42.836861",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

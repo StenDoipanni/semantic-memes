@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#qa_bd97eea3-8c0f-4ec4-8675-9cabdd8f6424",
+  "@type": "QuestionAnswerPair",
+  "question": "What text is overlaid on the image?",
+  "answers": [
+    {
+      "text": "None of the others",
+      "is_correct": false
+    },
+    {
+      "text": "Why do white people smell like bologna?",
+      "is_correct": true
+    },
+    {
+      "text": "Who won the Grammy awards?",
+      "is_correct": false
+    },
+    {
+      "text": "What color is the dress?",
+      "is_correct": false
+    }
+  ],
+  "explanation": "The overlaid text directly matches the instance 'text_chunk' which is 'why do white people smell like bologna?'",
+  "dimension": "TextualMaterial",
+  "relatedInstances": [
+    "text_chunk"
+  ],
+  "generationTimestamp": "2025-12-23T20:00:52.137355",
+  "generationMethod": "huggingface_api",
+  "sourceImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_08719",
+    "@type": "Image",
+    "filename": "08719.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/08719.png"
+  }
+}

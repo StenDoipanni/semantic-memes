@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful anger expressed through text",
+      "expressors": [
+        {
+          "entity": "text_chunk: text location",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "text_chunk: text location",
+          "relation": "emotionalRelationToEntity",
+          "to": "woman: Black woman"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_anger_expressed_through_text :hasExpressor :text_chunk_text_location .",
+    ":text_chunk_text_location :emotionalRelationToEntity :woman_Black_woman ."
+  ],
+  "triples_count": 2
+}

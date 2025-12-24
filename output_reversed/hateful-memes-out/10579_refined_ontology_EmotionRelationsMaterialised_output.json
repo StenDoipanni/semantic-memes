@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "accusatory emotion",
+      "expressors": [
+        {
+          "entity": "meme",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme",
+          "relation": "emotionalRelationToEntity",
+          "to": "white race"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":accusatory_emotion :hasExpressor :meme .",
+    ":meme :emotionalRelationToEntity :white_race ."
+  ],
+  "triples_count": 2
+}

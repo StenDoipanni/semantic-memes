@@ -1,0 +1,39 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_jew_jerky_to_crucifixion",
+      "hasMappedEntity": "text_chunk_1",
+      "hasMappingEntity": "person"
+    },
+    {
+      "mapping": "mapping_jew_jerky_to_crucifixion",
+      "hasMappedEntity": "text_chunk_2",
+      "hasMappingEntity": "person"
+    },
+    {
+      "from": "person",
+      "relation": "mappedOnto",
+      "to": "text_chunk_1"
+    },
+    {
+      "from": "person",
+      "relation": "mappedOnto",
+      "to": "text_chunk_2"
+    }
+  ],
+  "triples": [
+    ":mapping_jew_jerky_to_crucifixion :hasMappedEntity :text_chunk_1 .",
+    ":mapping_jew_jerky_to_crucifixion :hasMappingEntity :person .",
+    ":mapping_jew_jerky_to_crucifixion :hasMappedEntity :text_chunk_2 .",
+    ":mapping_jew_jerky_to_crucifixion :hasMappingEntity :person .",
+    ":person :mappedOnto :text_chunk_1 .",
+    ":person :mappedOnto :text_chunk_2 ."
+  ],
+  "triples_count": 6
+}

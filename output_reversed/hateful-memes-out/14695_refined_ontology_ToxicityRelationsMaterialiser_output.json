@@ -1,0 +1,30 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "textual_material_top_text"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "visual_material_child"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "scene_child_sitting_on_floor"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :textual_material_top_text .",
+    ":toxicity_1 :hasToxicElement :visual_material_child .",
+    ":toxicity_1 :hasToxicElement :scene_child_sitting_on_floor ."
+  ],
+  "triples_count": 3
+}

@@ -1,0 +1,30 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "cultural_dance_scene",
+      "participants": [
+        {
+          "entity": "group_of_men",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "group_of_men",
+          "relation": "performing",
+          "to": "cultural_dance_scene"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":cultural_dance_scene :hasParticipant :group_of_men .",
+    ":group_of_men :performing :cultural_dance_scene ."
+  ],
+  "triples_count": 2
+}

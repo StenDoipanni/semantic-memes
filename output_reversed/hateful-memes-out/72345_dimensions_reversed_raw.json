@@ -1,0 +1,213 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: i_hate_when_i_see_a_black_out_in_my_neighborhood_but_i_still_offer_my_neighbors_a_candle; hasOverallIntent: hateful; overall-intent-description: The meme depicts a man in a Ku Klux Klan-style robe and hood, juxtaposed with text that expresses hatred toward Black people ('I hate when I see a black out in my neighborhood') while simultaneously offering a 'candle' — a symbol of appeasement or passive tolerance. The visual of the KKK imagery directly maps onto the hateful sentiment expressed in the text, creating an analogical link between the wearer's identity and the racist message. The meme is designed to convey and reinforce anti-Black racism by using the KKK as a symbol of white supremacist hate, while the 'offering a candle' is a sarcastic or ironic gesture that implies a false sense of moral superiority or reconciliation. This is a hateful meme because it directly targets Black people through racist stereotypes and imagery, and it promotes a hostile, exclusionary worldview. The overall intent is to normalize or justify racial hatred under the guise of 'offering help,' which is a form of hate speech and harmful propaganda.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "i hate when i see a black out in my neighborhood",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_in_kkk_robe",
+      "label": "person wearing Ku Klux Klan-style attire",
+      "description": "A man is depicted wearing a white hooded robe with a blue cape and white gloves. The robe features two circular patches: one green with a red cross and another red with a white cross. The hood covers his hair and ears, leaving only his face visible. He has a neutral to slightly smug facial expression. The attire is clearly identifiable as a Ku Klux Klan costume, symbolizing white supremacist hate groups. This is the central and most salient visual element in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "racist_hate_scene",
+      "label": "racist_hate_scene",
+      "description": "A scene depicting a man in a Ku Klux Klan-style robe and hood, juxtaposed with text that expresses hatred toward Black people ('I hate when I see a black out in my neighborhood') while simultaneously offering a 'candle' — a symbol of appeasement or passive tolerance. The visual of the KKK imagery directly maps onto the hateful sentiment expressed in the text, creating an analogical link between the wearer's identity and the racist message. The scene is designed to convey and reinforce anti-Black racism by using the KKK as a symbol of white supremacist hate, while the 'offering a candle' is a sarcastic or ironic gesture that implies a false sense of moral superiority or reconciliation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_in_kkk_robe",
+          "relation": "embodies",
+          "to": "racist_hate_scene"
+        },
+        {
+          "from": "text",
+          "relation": "conveys",
+          "to": "racist_hate_scene"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_racism_stereotype",
+      "label": "Anti-Black Racism Stereotype",
+      "description": "The meme relies on the stereotype that Black people are inherently associated with criminality, violence, or social disorder, which is reflected in the text 'I hate when I see a black out in my neighborhood' — a phrase that implies fear or hatred toward Black people. This stereotype is a core component of the meme's hateful message and is not visible in the image but is required to understand the context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "racist_hate_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ku_klux_klan_symbolism",
+      "label": "Ku Klux Klan Symbolism",
+      "description": "The visual of the man in the KKK robe and hood is a direct reference to the Ku Klux Klan, a white supremacist hate group in the United States. The imagery is not just costume but a potent symbol of racial hatred and intimidation. Understanding this symbolism is essential to interpret the meme's message of racial hatred.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_in_kkk_robe",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "racist_hate_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "candle_as_appeasement_symbol",
+      "label": "Candle as Appeasement Symbol",
+      "description": "The phrase 'but I still offer my neighbors a candle' is a sarcastic or ironic gesture implying a false sense of moral superiority or reconciliation. This trope is rooted in real-world rhetoric where a 'candle' is offered as a token of goodwill or peace, even while harboring hatred. This concept is not visible in the image but is required to understand the meme's ironic or hypocritical tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "racist_hate_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "black_out_as_racial_slur",
+      "label": "Black Out as Racial Slur",
+      "description": "The phrase 'black out' in the text is a racial slur used to demean Black people, implying they are 'black' in a derogatory way. This is not a literal blackout but a coded term for Black people, which is a form of racial stereotyping and hate speech. This knowledge is required to understand the hateful intent of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "racist_hate_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_supremacist_hate",
+      "label": "White Supremacist Hate",
+      "description": "The meme is designed to convey and reinforce white supremacist hate by using the KKK as a symbol of white supremacist hate. This is a real-world concept and ideology that is not visible in the image but is essential to understand the meme's overall hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_in_kkk_robe",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "racist_hate_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_smugness",
+      "label": "hateful smug expression",
+      "description": "The man in the KKK robe displays a neutral to slightly smug facial expression, which conveys a sense of self-satisfied contempt or superiority. This expression aligns with the hateful message of the text, suggesting a condescending or dismissive attitude toward the targeted group. The smugness is not overtly aggressive but implies a false moral high ground, reinforcing the meme's ironic and hateful tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man in the KKK robe is mapped as the speaker of the hateful text",
+      "description": "The visual of the man in the Ku Klux Klan-style robe and hood is directly mapped onto the textual message 'i hate when i see a black out in my neighborhood' and 'but i still offer my neighbors a candle'. The man's identity and attire symbolize the hateful sentiment expressed in the text, creating an analogical link where the wearer's persona (the KKK member) is the agent of the racist message. The smug expression reinforces the hateful tone. This mapping is central to the meme's intent, as the visual entity (man_in_kkk_robe) embodies the hateful speaker described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man in the KKK robe as the speaker of the hateful text",
+      "description": "The user is projected onto the visual entity 'man_in_kkk_robe' because the meme uses the man's attire and persona as the direct embodiment of the hateful message in the text. The text 'i hate when i see a black out in my neighborhood' and 'but i still offer my neighbors a candle' is presented as if spoken by the man in the robe, making the user identify with or project themselves onto this hateful speaker. The visual material of the man in the KKK robe is the focal point onto which the user's perspective is projected, as the meme's intent is to make the viewer see themselves as the agent of the racist sentiment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly targets Black people through racist stereotypes and imagery, promoting a hostile, exclusionary worldview. The visual of the Ku Klux Klan robe and the text 'I hate when I see a black out in my neighborhood' constitute a direct attack on a protected characteristic (race).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "white supremacist audience",
+      "description": "The meme is designed for an audience that identifies with or sympathizes with white supremacist ideologies, as evidenced by the use of Ku Klux Klan imagery and the hateful anti-Black message. The visual of the man in the KKK robe directly targets and appeals to individuals who associate with or are influenced by white supremacist hate groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/72345.png",
+    "image_name": "72345.png",
+    "extraction_timestamp": "2025-12-19T11:21:30.838936",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,190 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: why_yes_i_m_part_indian; hasOverallIntent: Harmful; overall-intent-description: The meme uses a well-known celebrity, Cher, in a context that mocks Indigenous peoples by inventing a fictional 'Smackahoe tribe' as a humorous excuse for her partial Indian heritage. This is a form of cultural appropriation and stereotyping, reducing a complex and historically oppressed group to a joke. The intent is to elicit laughter through absurdity, but it trivializes Indigenous identity and perpetuates harmful stereotypes by implying that being 'part Indian' is something to be joked about rather than respected. The meme's harmfulness lies in its potential to normalize and spread disrespect toward Indigenous communities, even if the creator does not intend direct malice, the content can be deeply offensive and damaging to those who identify as Native American or Indigenous.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "why yes i'm part indian",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Cher",
+      "label": "celebrity",
+      "description": "The central figure in the image is Cher, the American singer, actress, and businesswoman, recognizable by her long black hair, distinctive makeup, and glamorous attire. She is depicted with a subtle smile, wearing a sparkling purple outfit and a choker necklace, suggesting a red carpet or formal event setting. Her appearance is iconic and widely recognized, making her the primary visual entity in the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "celebrity_self_deprecating_meme",
+      "label": "Cher making a humorous self-deprecating statement about her heritage",
+      "description": "The scene centers on Cher, who is the sole visual entity, positioned centrally in the frame. She is depicted with a subtle smile, wearing a sparkling purple outfit and a choker necklace, suggesting a formal event. The scene is defined by the overlaid text, which frames her as making a joke about being 'part Indian' and belonging to a fictional 'Smackahoe tribe'. The spatial arrangement is simple: Cher occupies the entire visual field, with the text positioned at the top and bottom of the image, framing her expression and reinforcing the humorous, self-deprecating intent. There are no other participants or objects in the scene, making Cher the sole focal point and the only entity involved in the interaction with the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "smackahoe_tribe",
+      "label": "fictional tribe name",
+      "description": "A fabricated, derogatory term invented in the meme to mock Indigenous peoples by implying that being 'part Indian' is something to be joked about, reducing a complex and historically oppressed group to a joke. The term 'Smackahoe' is not a real tribe and is used to perpetuate harmful stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "indigenous_peoples",
+      "label": "Indigenous peoples of the Americas",
+      "description": "The meme references 'part Indian' heritage, which refers to people with ancestry from Native American tribes. This group has a rich, diverse, and historically oppressed identity, and the meme trivializes their culture and experiences by inventing a fictional tribe and using it as a punchline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cultural_appropriation",
+      "label": "Cultural appropriation",
+      "description": "The meme uses a well-known celebrity, Cher, to make a joke about her partial Indian heritage, which is a form of cultural appropriation. It reduces a complex and historically oppressed group to a joke, implying that being 'part Indian' is something to be mocked rather than respected.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotyping",
+      "label": "Stereotyping",
+      "description": "The meme perpetuates harmful stereotypes by implying that being 'part Indian' is something to be joked about, reducing a complex and historically oppressed group to a joke. This trivializes Indigenous identity and can be deeply offensive to those who identify as Native American or Indigenous.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harmful_intent",
+      "label": "Harmful intent",
+      "description": "The meme's intent is to elicit laughter through absurdity, but it trivializes Indigenous identity and perpetuates harmful stereotypes by implying that being 'part Indian' is something to be joked about rather than respected. The harmfulness lies in its potential to normalize and spread disrespect toward Indigenous communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_humor",
+      "label": "mocking humor expression",
+      "description": "The emotion expressed is a form of mocking humor, conveyed through Cher's subtle, self-deprecating smile and the overlaid text that invents a fictional 'Smackahoe tribe' to joke about her partial Indian heritage. This humor is intentionally absurd and trivializing, aiming to elicit laughter while perpetuating harmful stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Cher is mapped as 'part Indian' belonging to the 'Smackahoe tribe'",
+      "description": "The top text 'why yes i'm part indian' and the bottom text 'i'm from the smackahoe tribe' together create an analogical mapping where Cher, as the visual entity, is being projected as the speaker of these statements. The meme implies that Cher is the 'part Indian' individual who belongs to the fictional 'Smackahoe tribe'. This mapping is established through the juxtaposition of her image with the text, which frames her as making a self-deprecating, humorous claim about her heritage. The visual material (Cher) is mapped onto the textual material (the claim of being 'part Indian' and belonging to the 'Smackahoe tribe'), creating a direct analogical relationship where the celebrity is the entity being described by the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual material of Cher making a self-deprecating claim",
+      "description": "The user is projected onto the visual material of Cher, who is depicted as the speaker of the meme's text. The text 'why yes i'm part indian' and 'i'm from the smackahoe tribe' frames Cher as the entity making the humorous, self-deprecating statement about her heritage. The user sees Cher as the 'part Indian' individual belonging to the fictional 'Smackahoe tribe', projecting themselves onto her as the subject of the joke. This projection is implicit, as the meme uses Cher's image to represent the speaker of the text, and the user identifies with the persona being portrayed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes Indigenous identity and perpetuates harmful stereotypes by inventing a fictional 'Smackahoe tribe' as a punchline for Cher's partial Indian heritage, reducing a historically oppressed group to a joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience familiar with celebrity culture, internet humor, and pop culture references. It relies on the recognition of Cher as a public figure and the absurdity of the fictional 'Smackahoe tribe' to elicit laughter. The target audience likely includes viewers who appreciate self-deprecating celebrity memes and are comfortable with culturally insensitive humor, even if it trivializes Indigenous identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/30914.png",
+    "image_name": "30914.png",
+    "extraction_timestamp": "2025-12-15T21:33:55.078991",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

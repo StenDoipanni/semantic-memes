@@ -1,0 +1,30 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "pug"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk: text location - will you tell the cat"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk: text location - bullying is not okay?"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :pug .",
+    ":toxicity_1 :hasToxicElement :text_chunk_text_location_will_you_tell_the_cat .",
+    ":toxicity_1 :hasToxicElement :text_chunk_text_location_bullying_is_not_okay ."
+  ],
+  "triples_count": 3
+}

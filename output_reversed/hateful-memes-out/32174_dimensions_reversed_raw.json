@@ -1,0 +1,225 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: jewber_uber_for_jews; hasOverallIntent: Hateful; overall-intent-description: The image depicts a young girl holding an Israeli flag while sitting in a car, with the text overlay 'jewber: uber for jews'. This meme uses a derogatory and mocking term ('jewber') to imply that Jews are a group that should be served by a service specifically for them, suggesting a form of exclusion or segregation. The term 'jewber' is a pejorative, combining 'Jew' with 'Uber', which is a service for transportation. This is a form of antisemitic stereotyping, as it implies Jews are a separate, self-contained group that requires a special service, reinforcing the idea of Jewish people as a distinct and potentially problematic group that needs to be isolated or catered to separately. The meme is hateful as it targets Jews based on their ethnicity and religion, using a mocking and derogatory tone to demean them. The visual of a young girl holding the Israeli flag adds to the stereotype, implying that Jewish identity is tied to a specific national or ethnic group, which is a common antisemitic trope. The overall intent is to mock and demean Jews by suggesting they are a group that needs a special service, which is a form of antisemitic stereotyping and hate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "jewber: uber for jews",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "girl",
+      "label": "child",
+      "description": "A young girl with dark hair, wearing a white sleeveless top, smiling and looking toward the camera while sitting in a car.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "girl_holding_flag_in_car",
+      "label": "Girl holding Israeli flag while sitting in car",
+      "description": "A young girl with dark hair, wearing a white sleeveless top, is seated inside a white car, holding an Israeli flag in her hand. She is smiling and looking toward the camera. The car window is partially open, and the background shows outdoor scenery with trees.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "girl",
+          "relation": "is_sitting_in",
+          "to": "car"
+        },
+        {
+          "from": "girl",
+          "relation": "is_holding",
+          "to": "flag"
+        },
+        {
+          "from": "girl",
+          "relation": "is_looking_at",
+          "to": "camera"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "jewber",
+      "label": "Derogatory term combining 'Jew' and 'Uber'",
+      "description": "The term 'jewber' is a pejorative, constructed by combining 'Jew' with 'Uber', implying a service specifically for Jews. This is a form of antisemitic stereotyping, suggesting Jews are a separate, self-contained group that requires a special service, reinforcing exclusion or segregation. It is not a real-world entity but a coined term used in hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Uber",
+      "label": "Ride-hailing service company",
+      "description": "Uber is a global ride-hailing platform that provides transportation services. The meme uses 'Uber' as a reference point to imply a service tailored specifically for Jews, which is a mocking and derogatory concept. This requires real-world knowledge of Uber as a widely recognized service.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitism",
+      "label": "Systemic prejudice and discrimination against Jews",
+      "description": "The meme relies on antisemitic stereotypes, such as the idea that Jews are a distinct group requiring special services or segregation. This is a form of hate speech rooted in historical and ongoing antisemitic tropes, including the notion of Jewish people as a separate, self-contained group that needs to be isolated or catered to separately.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Israeli_flag",
+      "label": "National flag of Israel",
+      "description": "The Israeli flag is a national symbol representing the State of Israel. Its presence in the image, combined with the text 'jewber: uber for jews', is used to implicitly link Jewish identity with the Israeli state, reinforcing the antisemitic trope that Jewish identity is tied to a specific national or ethnic group, which is a common antisemitic stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Jewish_identity",
+      "label": "Concept of Jewish ethnicity and religion",
+      "description": "The meme targets Jewish people based on their ethnicity and religion. The visual of a young girl holding the Israeli flag is used to imply that Jewish identity is tied to a specific national or ethnic group, which is a common antisemitic trope. This requires understanding of Jewish identity as a complex, multifaceted concept that is often misrepresented in hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_stereotype",
+      "label": "Stereotype that Jews are a separate, self-contained group",
+      "description": "This stereotype is central to the meme's hateful intent. It suggests that Jews are a group that needs a special service, implying they are isolated or different from the rest of society. This is a form of antisemitic stereotyping that reinforces the idea of Jewish people as a distinct and potentially problematic group that needs to be segregated or catered to separately.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "the happy expression",
+      "description": "The girl is smiling broadly and looking directly at the camera, conveying a sense of joy and contentment. Her facial expression is cheerful and innocent, which contrasts with the hateful and derogatory text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "jewber_mapping",
+      "label": "The girl holding the Israeli flag is mapped as 'jewber: uber for jews'",
+      "description": "The text 'jewber: uber for jews' is an analogical mapping that projects the visual entity 'girl_holding_flag_in_car' onto the concept of 'jewber'. The girl, visually represented as a Jewish child (implied by holding the Israeli flag), is being mapped to the derogatory term 'jewber', which is a coined term combining 'Jew' and 'Uber'. This mapping implies that the girl represents the stereotyped 'Jew' who is the target of the service 'jewber', which is a mocking and antisemitic concept. The visual material (the girl with the flag) is thus mapped to the textual concept (jewber) to create a hateful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the text 'jewber: uber for jews', which serves as the central hateful concept of the meme. The text explicitly constructs a derogatory stereotype ('jewber') and frames it as a service for Jews, which the user is implicitly invited to internalize or identify with as the target of the joke. The projection is onto the textual material because the meme's hateful message is conveyed through this text, and the user is expected to engage with the concept presented in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses the derogatory term 'jewber' to imply that Jews are a separate, self-contained group that requires a special service, reinforcing antisemitic stereotypes and targeting Jews based on their ethnicity and religion. The visual of a young girl holding the Israeli flag is used to imply that Jewish identity is tied to a specific national or ethnic group, which is a common antisemitic trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "text_chunk",
+      "label": "derogatory term targeting Jews",
+      "description": "The text 'jewber: uber for jews' is a coined, pejorative term that directly targets Jewish people by implying they are a separate, self-contained group requiring a special service, which is a form of antisemitic stereotyping. This text is the primary indicator of the target community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/32174.png",
+    "image_name": "32174.png",
+    "extraction_timestamp": "2025-12-15T22:19:42.644158",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

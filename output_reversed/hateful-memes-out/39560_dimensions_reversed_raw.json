@@ -1,0 +1,250 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image features a photograph of Maxine Waters, a Black U.S. politician, speaking at a podium with an American flag in the background. The overlaid text quotes her saying, 'if you see anybody from trump's cabinet in a restaurant, in a department store, at a gasoline station... you create a crowd and push back and tell them they're not welcome anywhere.' The meme is dated June 24, 2018. The overall intent is to present her statement as a call to action against members of Donald Trump's administration, using her authoritative image to lend weight to the message. The meme is not inherently abusive, cyberbullying, harmful, hateful, misogynistic, or propagandistic in the sense of targeting protected characteristics or inciting violence. It is a political meme that aims to mobilize public sentiment against Trump's cabinet members by invoking a form of collective resistance. The intent is to amplify her rhetoric and encourage viewers to take a stand against perceived political opponents, using her image and the dramatic tone of her speech to create a sense of urgency and moral clarity. The visual material (her expressive face, pointing gesture, and formal setting) is juxtaposed with the text to emphasize the seriousness and immediacy of her call to action. There is no toxicity present in the form of stereotypes or hate speech against any group based on race, gender, religion, or other protected characteristics. The meme's purpose is to influence political opinion and action by framing the issue as one of public accountability and resistance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "if you see anybody from trump's cabinet in a restaurant, in a department store, at a gasoline station... you create a crowd and push back and tell them they're not welcome anywhere\"",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Maxine_Waters",
+      "label": "person",
+      "description": "A Black U.S. politician, shown speaking at a podium with an American flag in the background. She is wearing glasses, a green blazer, and a pearl necklace, and is gesturing emphatically with her right hand while speaking into a microphone. Her expression is intense and authoritative, conveying strong emotion and conviction. She is the central visual focus of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "public_speech",
+      "label": "Maxine Waters delivering a public speech",
+      "description": "Maxine Waters is standing at a podium, speaking into a microphone with an American flag in the background. She is gesturing emphatically with her right hand, conveying strong emotion and conviction. The scene is formal and political, with her expression and posture indicating she is addressing an audience or delivering a powerful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Maxine_Waters",
+          "relation": "speaks_into",
+          "to": "microphone"
+        },
+        {
+          "from": "Maxine_Waters",
+          "relation": "gestures_with",
+          "to": "right_hand"
+        },
+        {
+          "from": "Maxine_Waters",
+          "relation": "stands_in_front_of",
+          "to": "American_flag"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Donald_Trump",
+      "label": "Donald Trump",
+      "description": "The 45th President of the United States, whose cabinet members are the subject of Maxine Waters' quoted statement. His administration was a central political figure during the 2018 period referenced in the meme, making his identity essential context for understanding the political nature of the call to action.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Trump_Cabinet",
+      "label": "Trump Cabinet",
+      "description": "The collective group of high-ranking officials appointed by Donald Trump to serve in his administration. The meme references this group as the target of public resistance, requiring knowledge of U.S. political structure and the specific context of Trump's presidency to be understood.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "U_S_Political_Polarization",
+      "label": "U.S. Political Polarization",
+      "description": "The deepening divide between political parties and ideologies in the United States during the 2010s, particularly under Trump's presidency. This context explains why a statement calling for public resistance against cabinet members would be framed as a form of political mobilization rather than mere personal opinion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Public_Resistance_Movement",
+      "label": "Public Resistance Movement",
+      "description": "A social and political phenomenon where citizens organize to oppose perceived injustices or unpopular policies. The meme invokes this concept by encouraging viewers to 'create a crowd and push back,' which is a form of collective action rooted in political protest traditions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "June_24_2018",
+      "label": "June 24, 2018",
+      "description": "The specific date the quote is attributed to, which places the statement within the context of the 2018 U.S. political climate. This date is critical for understanding the timing of the statement, which occurred during heightened tensions surrounding Trump's administration and the midterm elections.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Political_Meme",
+      "label": "Political Meme",
+      "description": "A form of internet content that uses humor, irony, or exaggeration to convey political messages. This meme is a classic example, using Maxine Waters' image and a dramatic quote to amplify a political stance, requiring knowledge of internet culture and meme formats to be fully understood.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Maxine_Waters_Political_Stance",
+      "label": "Maxine Waters' Political Stance",
+      "description": "Maxine Waters is a long-standing progressive Democrat known for her vocal opposition to Donald Trump and his policies. Her reputation as a fierce critic of the Trump administration provides context for why her statement would be interpreted as a serious political call to action, not just a casual remark.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "U_S_Congressional_Leadership",
+      "label": "U.S. Congressional Leadership",
+      "description": "The role and influence of members of the U.S. Congress, particularly in shaping public opinion and policy. Maxine Waters, as a U.S. Representative, represents this institution, and her statement is framed as a form of congressional leadership addressing public sentiment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "anger",
+      "label": "angry emotion",
+      "description": "Maxine Waters is depicted with an intense facial expression, her mouth open as if shouting or speaking forcefully, and her right hand pointing emphatically. This combination of facial features and gesture conveys strong anger or outrage, consistent with her vocal opposition to Trump's cabinet. The emotion is directed at the political subject matter, reflecting her passionate stance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Maxine Waters is mapped as the speaker of the quoted text",
+      "description": "The text chunk quotes Maxine Waters, and the visual material shows her speaking at a podium. The juxtaposition maps the textual entity (the quote) onto the visual entity (Maxine Waters), implying that she is the source of the statement. This is a direct analogical mapping where the person in the image is identified as the speaker of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the text_chunk",
+      "description": "The user is projected onto the textual material, specifically the quote 'if you see anybody from trump's cabinet in a restaurant, in a department store, at a gasoline station... you create a crowd and push back and tell them they're not welcome anywhere'. The use of 'you' in the text directly addresses the viewer, inviting them to take action. This creates a direct semiotic projection where the user is positioned as the agent of the call to action, embodying the 'you' in the imperative statement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "U_S_Political_Polarization",
+      "label": "U.S. Political Polarization",
+      "description": "The meme is designed for audiences engaged in or aware of the deep political divisions in the United States during the 2010s, particularly those who identify with or are mobilized by progressive Democratic politics. The call to action against Trump's cabinet members is framed as a form of collective resistance, appealing to individuals who see the Trump administration as a source of political and social conflict and who are motivated to take public stands against it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/39560.png",
+    "image_name": "39560.png",
+    "extraction_timestamp": "2025-12-16T00:26:29.936162",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

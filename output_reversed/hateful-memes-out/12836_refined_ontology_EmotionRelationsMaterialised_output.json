@@ -1,0 +1,39 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "ironic_disdain_emotion",
+      "expressors": [
+        {
+          "entity": "meme_creator",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme_creator",
+          "relation": "emotionalRelationToEntity",
+          "to": "texas_churches_low_attendance_stereotype"
+        },
+        {
+          "from": "meme_creator",
+          "relation": "emotionalRelationToEntity",
+          "to": "religious_community_mockery"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":ironic_disdain_emotion :hasExpressor :meme_creator .",
+    ":meme_creator :emotionalRelationToEntity :texas_churches_low_attendance_stereotype .",
+    ":meme_creator :emotionalRelationToEntity :religious_community_mockery ."
+  ],
+  "triples_count": 3
+}

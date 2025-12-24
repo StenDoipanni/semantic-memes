@@ -1,0 +1,218 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: i_win_again_parkinsons_game_center; hasOverallIntent: Harmful; overall-intent-description: The image depicts two people playing a game with wooden blocks, with the text 'I win again!' and 'Parkinson's disease game center' below. The bottom half shows a stylized brain with a highlighted area. The overall intent is to present a lighthearted or humorous take on Parkinson's disease, possibly implying that the game is a form of therapy or recreation for those with the condition. However, the meme is potentially harmful because it reduces a serious neurological disorder to a simple game, which can trivialize the challenges faced by individuals with Parkinson's. The juxtaposition of the game with the disease name may unintentionally convey that the condition is easily managed or 'won' through play, which can be misleading and insensitive to those living with the disease. The meme does not contain overtly abusive, cyberbullying, hateful, misogynistic, or propagandistic content, but its potential harm lies in its oversimplification and possible lack of empathy for the lived experience of Parkinson's disease.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "I win again!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "man playing game",
+      "description": "A bald man wearing a dark suit and a lanyard, leaning over a table and interacting with wooden blocks. He appears to be actively engaged in the game, with his hands on the blocks and a focused expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "game_play_scene",
+      "label": "Game Play Scene",
+      "description": "A scene depicting two people engaged in a game involving wooden blocks. The man is actively interacting with the blocks on a table, while the woman stands behind him, observing. The scene is framed by text that references Parkinson's disease and a stylized brain illustration below, suggesting a thematic context related to therapy or recreation for Parkinson's patients.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "plays_with",
+          "to": "wooden_blocks"
+        },
+        {
+          "from": "woman",
+          "relation": "observes",
+          "to": "man"
+        },
+        {
+          "from": "man",
+          "relation": "leans_over",
+          "to": "table"
+        },
+        {
+          "from": "woman",
+          "relation": "stands_behind",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Parkinson_s_disease",
+      "label": "Parkinson's disease",
+      "description": "A progressive neurological disorder that affects movement, often causing tremors, stiffness, and difficulty with balance. It is not a game or a condition that can be 'won' through simple activities. The meme's reference to a 'game center' for Parkinson's disease is misleading and potentially harmful as it trivializes the serious medical condition and the daily challenges faced by those living with it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Therapeutic_recreation_for_Parkinson_s_disease",
+      "label": "Therapeutic recreation for Parkinson's disease",
+      "description": "Activities such as puzzles, games, and physical exercises are sometimes used in occupational or physical therapy for Parkinson's patients to improve motor skills, cognitive function, and quality of life. However, these are not 'games' that can be 'won' or trivialized as such. The meme misrepresents the purpose and seriousness of such therapeutic activities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Inspiration_porn",
+      "label": "Inspiration porn",
+      "description": "A term used to describe media that portrays people with disabilities as inspirational or heroic for simply performing everyday tasks, often ignoring the challenges they face. The meme's framing of a Parkinson's patient 'winning' a game can be seen as a form of inspiration porn, which can be patronizing and reduce the lived experience of disability to a simplistic, uplifting narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Stereotype_of_Parkinson_s_disease_as_a_game_or_fun_challenge",
+      "label": "Stereotype of Parkinson's disease as a 'game' or 'fun challenge'",
+      "description": "This is a harmful stereotype that trivializes the condition by implying it can be easily managed or 'won' through simple activities. It ignores the progressive, debilitating nature of Parkinson's disease and can be deeply insensitive to those living with it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Trivialization_of_neurological_disorders",
+      "label": "Trivialization of neurological disorders",
+      "description": "The act of reducing serious medical conditions to simple, lighthearted activities or games. This can be offensive and misleading, as it fails to acknowledge the complexity and severity of the conditions and can contribute to stigma or misunderstanding.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Meme_culture_and_its_potential_for_harm",
+      "label": "Meme culture and its potential for harm",
+      "description": "Memes are often used to convey humor or commentary, but they can also perpetuate harmful stereotypes or misinformation. This meme, while seemingly lighthearted, can be harmful by trivializing a serious medical condition and potentially causing offense or misunderstanding to those affected.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "triumph",
+      "label": "triumphant emotion",
+      "description": "The text 'I win again!' expresses a sense of triumph or victory, suggesting the man is celebrating his success in the game. This emotion is conveyed through the textual overlay, which is a direct expression of achievement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man is mapped as the winner of a game related to Parkinson's disease",
+      "description": "The text 'I win again!' is directly overlaid on the image of the man playing the game, creating an analogical mapping where the man is identified as the 'winner' of the game. This mapping is reinforced by the context provided by the text 'Parkinson's disease game center' below, which frames the game as being related to Parkinson's disease. The man's triumphant posture and the text together create a direct association between the visual entity (the man) and the textual entity (the winner of a game).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man as the winner of the game",
+      "description": "The user is projected onto the man playing the game, as the text 'I win again!' is directly overlaid on his image, creating an implicit identification of the user with the man as the winner. This projection is reinforced by the context of the 'Parkinson's disease game center' text, which frames the game as a therapeutic activity related to the condition. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the first-person plural 'I' in the text creates a direct identification with the man's action, leading to a semiotic projection where the user sees themselves as the winner or participant in this context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes Parkinson's disease by framing it as a game that can be 'won,' which can be misleading and insensitive to those living with the condition. This reduces a serious neurological disorder to a simple game, potentially causing harm by ignoring the progressive and debilitating nature of the disease.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "individuals with Parkinson's disease or their caregivers",
+      "description": "The meme references 'Parkinson's disease game center' and depicts a game scene, suggesting it is aimed at or about people living with Parkinson's disease or those involved in their care. The framing implies the game is therapeutic or recreational for this community, even though the meme's intent is potentially harmful by trivializing the condition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/82156.png",
+    "image_name": "82156.png",
+    "extraction_timestamp": "2025-12-19T14:23:06.705587",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

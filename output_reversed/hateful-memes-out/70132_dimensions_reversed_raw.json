@@ -1,0 +1,205 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "dimension_1",
+      "label": "the overallintent",
+      "description": "The image depicts a man with a beard and green cap, raising his finger in a gesture often associated with religious or political fervor, set against a backdrop of a crowd. The overlaid text reads: \\",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "i am peaceful! don't believe me?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_with_beard",
+      "label": "central figure",
+      "description": "A man with a prominent beard and wearing a green cap, raising his right index finger upward in a gesture often associated with religious or political fervor. He is the focal point of the image, positioned in the foreground with an expressive, open-mouthed facial expression. He is wearing a black shirt with a visible green and white graphic design on the chest.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "protest_scene",
+      "label": "man_with_beard addressing crowd",
+      "description": "A man with a beard and green cap, raising his right index finger upward, is the central figure in a protest or rally setting. He is positioned in the foreground, facing forward, with a large crowd of people in the background. The scene is framed to emphasize his gesture and expression, suggesting he is addressing or rallying the crowd. The text overlay adds a confrontational tone to the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_with_beard",
+          "relation": "addresses",
+          "to": "crowd"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "The meme relies on the stereotype that Muslims are inherently violent or terrorist-associated, which is a common form of Islamophobia. The juxtaposition of the man's peaceful declaration with the threat to blow up the viewer plays on this stereotype, implying that his outward peacefulness is a facade for violent intent, a trope often used to delegitimize or fear Muslim individuals or groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_with_beard",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "protest_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism_associations",
+      "label": "Terrorism Associations",
+      "description": "The phrase 'then I will blow you up' directly invokes the association between Islam and terrorism, which is a widely circulated and harmful stereotype. This background knowledge is necessary to understand the meme's punchline and its underlying message of fear or distrust.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_with_beard",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "protest_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sharia_law_fearmongering",
+      "label": "Sharia Law Fearmongering",
+      "description": "The meme implicitly references the fear of Sharia law, which is often used in Western discourse to portray Islam as incompatible with modern, secular values. The threat to 'blow you up' can be interpreted as a metaphor for the perceived threat of Sharia law to Western society, a common theme in Islamophobic rhetoric.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_with_beard",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "protest_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "violence_barbarism_claims",
+      "label": "Violence/Barbarism Claims",
+      "description": "The meme plays on the stereotype that Muslims are barbaric and violent, which is a common form of Islamophobia. The juxtaposition of the man's peaceful declaration with the threat to blow up the viewer plays on this stereotype, implying that his outward peacefulness is a facade for violent intent, a trope often used to delegitimize or fear Muslim individuals or groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_with_beard",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "protest_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "threatening_anger",
+      "label": "threatening anger expression",
+      "description": "The man's facial expression, with an open mouth as if shouting and intense eyes, combined with the raised finger gesture, conveys a confrontational and aggressive emotion. This is amplified by the text overlay which explicitly threatens violence, creating a sense of imminent danger and hostility.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Peaceful declaration mapped onto the man with beard",
+      "description": "The top text 'i am peaceful! don't believe me?' is an analogical mapping where the speaker (the man with beard) is projected as the entity claiming to be peaceful. The visual of the man, with his intense expression and raised finger, is juxtaposed with the text to create a contrast between his claimed peacefulness and his apparent confrontational demeanor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material via deictic pronouns",
+      "description": "The user is projected onto the textual material through the use of deictic pronouns 'me' and 'you' in the text overlays. The phrase 'i am peaceful! don't believe me?' directly addresses the viewer ('me'), and 'then i will blow you up' directly addresses the viewer ('you'), creating a direct projection of the user onto the text. This projection is reinforced by the visual material of the man with the beard, who is the speaker of the text, making the user feel addressed and implicated in the meme's confrontational narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobia",
+      "description": "The meme relies on the harmful stereotype that Muslims are inherently violent or terrorist-associated, which is a common form of Islamophobia. The juxtaposition of the man's peaceful declaration with the threat to blow up the viewer plays on this stereotype, implying that his outward peacefulness is a facade for violent intent, a trope often used to delegitimize or fear Muslim individuals or groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience familiar with or exposed to Islamophobic stereotypes, particularly those who associate Muslims with terrorism or violence. The target community likely includes individuals who hold or are influenced by prejudiced views toward Muslims, or who are seeking to reinforce such stereotypes through humor or satire. The meme’s effectiveness relies on the audience’s recognition of the visual cues (beard, green cap, protest setting) and the textual punchline as a reinforcement of harmful tropes. The audience is expected to interpret the man’s peaceful declaration as ironic or deceptive, thereby validating the stereotype that Muslims are inherently violent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/70132.png",
+    "image_name": "70132.png",
+    "extraction_timestamp": "2025-12-19T10:35:58.478802",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,38 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "humorous expression",
+      "expressors": [
+        {
+          "entity": "Goku cosplayer",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "Luffy cosplayer",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Goku cosplayer",
+          "relation": "emotionalRelationToEntity",
+          "to": "Luffy cosplayer"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":humorous_expression :hasExpressor :Goku_cosplayer .",
+    ":humorous_expression :hasExpressor :Luffy_cosplayer .",
+    ":Goku_cosplayer :emotionalRelationToEntity :Luffy_cosplayer ."
+  ],
+  "triples_count": 3
+}

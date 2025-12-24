@@ -1,0 +1,75 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "ironic_contempt_emotion",
+      "expressors": [
+        {
+          "entity": "meme_image",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "highly_motivated_person"
+        },
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "mountain_climbing_risk"
+        },
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "everest_corpses"
+        },
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "futility_of_extreme_ambition"
+        },
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "motivation_and_resilience"
+        },
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "tragic_death_in_extreme_sports"
+        },
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "ironic_advice"
+        },
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "social_trend_of_trivializing_sacrifice"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":ironic_contempt_emotion :hasExpressor :meme_image .",
+    ":meme_image :emotionalRelationToEntity :highly_motivated_person .",
+    ":meme_image :emotionalRelationToEntity :mountain_climbing_risk .",
+    ":meme_image :emotionalRelationToEntity :everest_corpses .",
+    ":meme_image :emotionalRelationToEntity :futility_of_extreme_ambition .",
+    ":meme_image :emotionalRelationToEntity :motivation_and_resilience .",
+    ":meme_image :emotionalRelationToEntity :tragic_death_in_extreme_sports .",
+    ":meme_image :emotionalRelationToEntity :ironic_advice .",
+    ":meme_image :emotionalRelationToEntity :social_trend_of_trivializing_sacrifice ."
+  ],
+  "triples_count": 9
+}

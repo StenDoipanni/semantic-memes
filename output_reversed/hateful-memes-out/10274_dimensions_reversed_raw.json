@@ -1,0 +1,152 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "dimension_1",
+      "label": "the overallintent",
+      "description": "The image shows a goat lying down next to a wooden structure, with the text ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "The text '(laughs in goat fucker)' is located at the bottom of the image, spanning the entire width. It is written in white, bold, sans-serif font with a black outline, making it stand out against the background. The text is enclosed in parentheses and is positioned directly below the goat, appearing as a caption or meme overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "goat",
+      "label": "animal",
+      "description": "A light brown goat is lying down on sandy ground, looking directly at the camera with a slightly open mouth, appearing relaxed or amused. It is positioned next to a wooden structure with a metal grate on top.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "goat_laughing_scene",
+      "label": "goat_laughing_scene",
+      "description": "A light brown goat is lying down on sandy ground next to a wooden structure with a metal grate, looking directly at the camera with a slightly open mouth, appearing relaxed or amused. The scene is accompanied by text that reads '(laughs in goat fucker)', suggesting a humorous or mocking context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "goat_fucker_stereotype",
+      "label": "Goat as a derogatory term for a person",
+      "description": "The phrase 'goat fucker' is a derogatory slang term used to refer to a person who is perceived as foolish, incompetent, or lacking in intelligence. It is often used in internet culture to mock or belittle someone, especially in contexts where the person is seen as being out of their depth or making a foolish mistake. The term 'goat' itself is sometimes used as a euphemism for 'greatest of all time' (GOAT) in sports, but in this context, it is being used in a negative, mocking way.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "laughs_in_stereotype",
+      "label": "The 'laughs in [X]' meme format",
+      "description": "This is a popular internet meme format where a person or character is shown laughing while another person or entity is being mocked or ridiculed. The phrase 'laughs in [X]' is used to indicate that the person in the image is amused or smugly confident in the face of the mockery. It is often used to convey a sense of superiority or detachment from the situation being mocked.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "goat_as_animal",
+      "label": "Goat as an animal",
+      "description": "Goats are domesticated animals known for their agility, curiosity, and sometimes mischievous behavior. They are often used in memes and internet culture as symbols of foolishness or stupidity, especially when paired with the phrase 'goat fucker'. The image of a goat lying down and looking relaxed or amused is used to visually represent the 'laughs in' part of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "goat",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_smugness",
+      "label": "mocking and smug emotional expression",
+      "description": "The goat's relaxed posture and slightly open mouth, combined with direct eye contact, convey an expression of amusement or smugness, as if it is laughing at something foolish or incompetent. This is reinforced by the text overlay, which explicitly frames the goat as the one 'laughing in goat fucker'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "goat is laughing in goat fucker",
+      "description": "The text '(laughs in goat fucker)' is mapped onto the visual entity 'goat'. The goat's relaxed posture and direct gaze are interpreted as embodying the 'laughs in' part of the meme, while the term 'goat fucker' is a derogatory stereotype being mocked. The visual material (the goat) is thus mapped onto the textual concept of the 'laughs in [X]' format, where 'X' is 'goat fucker'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the goat as the 'laughs in' entity",
+      "description": "The user is projected onto the visual material of the goat, interpreting the goat's relaxed and amused expression as embodying the 'laughs in' part of the meme. The user identifies with the goat's smug or detached attitude in the face of the derogatory term 'goat fucker'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a derogatory slang term 'goat fucker' to mock or belittle someone perceived as foolish or incompetent. While not targeting a specific protected group, the term is offensive and potentially harmful by demeaning an individual's intelligence or competence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "internet meme culture",
+      "description": "The meme targets individuals familiar with internet humor, particularly those who recognize and use the 'laughs in [X]' meme format and understand the derogatory slang term 'goat fucker'. The audience is likely online communities that engage with edgy, self-deprecating, or mocking humor, where such phrases are used to express superiority or amusement at perceived incompetence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/10274.png",
+    "image_name": "10274.png",
+    "extraction_timestamp": "2025-12-15T14:02:56.878994",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

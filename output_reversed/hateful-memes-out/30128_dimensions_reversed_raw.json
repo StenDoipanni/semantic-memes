@@ -1,0 +1,176 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Mysogynous; overall-intent-description: The image depicts a woman with red hair being held by another woman in a suggestive, aggressive manner, with text overlay reading 'when your girl is crazy and she finds your side chick.' This visual and textual combination uses the trope of a 'crazy girl' to imply irrational, violent, or possessive behavior toward a partner's other romantic interest. The meme relies on harmful stereotypes that portray women as emotionally unstable, irrational, and dangerous when they discover infidelity, which aligns with misogynistic tropes that devalue women's emotional intelligence and agency. The intent is to humorously or cynically justify or dramatize the perceived 'crazy' behavior of a woman in a relationship context, reinforcing harmful gender norms and potentially normalizing the idea that women are inherently unstable or violent in such situations. The overall intent is to entertain through the projection of exaggerated, negative stereotypes about women's behavior, which is a form of misogynistic content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "white bold text reading 'when your girl is crazy' positioned at the top of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_with_red_hair",
+      "label": "person",
+      "description": "A woman with short, bright red hair, wearing dark clothing, is depicted in a vulnerable position, with her head tilted back and eyes closed, appearing to be restrained or held by another person. Her expression suggests distress or submission. She is the central focus of the visual narrative in the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "dominant_control_scene",
+      "label": "dominant_control_scene",
+      "description": "A scene depicting a woman with dark hair and a leather jacket exerting physical control over a woman with red hair, who is restrained and appears vulnerable. The spatial arrangement shows the dark-haired woman positioned behind and above the red-haired woman, with her hand gripping the red-haired woman's neck and the other hand holding her wrist against a wall. The scene conveys a power imbalance and aggressive dominance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman_with_dark_hair",
+          "relation": "holds",
+          "to": "woman_with_red_hair"
+        },
+        {
+          "from": "woman_with_dark_hair",
+          "relation": "grabs_wrist",
+          "to": "woman_with_red_hair"
+        },
+        {
+          "from": "woman_with_red_hair",
+          "relation": "is_restrained_by",
+          "to": "woman_with_dark_hair"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_crazy_woman",
+      "label": "Misogynous Stereotype: 'Crazy' or 'Hysterical' Woman",
+      "description": "This stereotype portrays women as emotionally unstable, irrational, and prone to violent or possessive behavior when confronted with infidelity or perceived betrayal. It is a harmful trope used to devalue women's emotional intelligence and agency, often justifying or dramatizing their behavior in a negative light. The meme relies on this stereotype to frame the 'girl' as dangerous and irrational when she discovers her partner's 'side chick'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "side_chick_concept",
+      "label": "Concept of 'Side Chick'",
+      "description": "A term used in popular culture and dating discourse to describe a woman who is romantically or sexually involved with a man who is already in a committed relationship with another woman. The term often carries negative connotations, implying that the 'side chick' is less valued or less legitimate than the primary partner. The meme uses this concept to set up the scenario where the 'girl' reacts to the discovery of such an arrangement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dominant_control_scene",
+      "label": "Dominant Control Scene",
+      "description": "The visual depiction of one woman physically controlling another, often used metaphorically or literally to represent power dynamics, jealousy, or possessiveness. In this meme, the scene is used to visually reinforce the textual claim that the 'girl' is 'crazy' and violent in her reaction to discovering the 'side chick'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "possessive_anger",
+      "label": "possessive and angry emotion",
+      "description": "The woman with dark hair and leather jacket is depicted exerting physical control over the other woman, gripping her neck and wrist, conveying a sense of possessiveness, aggression, and anger. Her facial expression, though partially obscured, suggests intensity and dominance. This emotion is visually expressed through her physical actions and posture, which dominate the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The 'girl' is mapped onto the woman with dark hair exerting control",
+      "description": "The top text 'when your girl is crazy' maps the concept of 'your girl' (the partner) onto the woman with dark hair and leather jacket who is physically dominating the other woman. This mapping is established by the textual reference to 'your girl' and the visual depiction of her as the dominant, controlling figure in the scene. The visual entity represents the 'girl' as described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the 'girl' in the meme",
+      "description": "The user is projected onto the 'girl' (the partner) as described in the text 'when your girl is crazy'. The user identifies with the perspective of the person whose partner is reacting violently or possessively to discovering a 'side chick'. The visual entity 'woman_with_red_hair' is the object of the girl's aggression, and the user is positioned as the 'you' in 'your girl'. The projection is onto the dominant figure (the woman with dark hair and leather jacket) who embodies the 'girl' in the scenario, as mapped by the text. The user sees themselves as the person whose partner is 'crazy' and is reacting to the 'side chick'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme relies on harmful stereotypes that portray women as emotionally unstable, irrational, and dangerous when they discover infidelity, which aligns with misogynistic tropes that devalue women's emotional intelligence and agency. The intent is to entertain through the projection of exaggerated, negative stereotypes about women's behavior, which is a form of misogynistic content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who engage with or consume internet humor that relies on misogynistic stereotypes, particularly those who find amusement in portraying women as emotionally unstable, irrational, or violent in response to relationship betrayals. The meme appeals to an audience familiar with and possibly desensitized to harmful gender norms, using the trope of the 'crazy girl' to frame a scenario involving a 'side chick' in a way that reinforces toxic masculinity and devalues women's emotional intelligence and agency. The visual and textual elements are designed to resonate with users who enjoy or identify with the exaggerated, negative stereotypes about women's behavior in romantic contexts, often found in online communities that normalize or celebrate such tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/30128.png",
+    "image_name": "30128.png",
+    "extraction_timestamp": "2025-12-15T21:11:06.833689",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

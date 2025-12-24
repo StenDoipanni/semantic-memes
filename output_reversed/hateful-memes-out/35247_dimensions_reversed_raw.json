@@ -1,0 +1,188 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a group of men in what appears to be a celebratory or communal embrace, possibly in a Middle Eastern or Islamic context, given the attire and setting. The overlaid text is a vulgar, misogynistic, and Islamophobic joke that falsely claims a woman’s genital area smells like a goat, implying both sexual degradation and a crude association with animal odor. This text is intentionally offensive and targets Muslim women by combining hypersexualization (\"pussy smells like the neighbors goat\") with a degrading stereotype about hygiene and religious practice (\"from the mosque\"). The meme uses the juxtaposition of the image of men in a positive, communal embrace with the grotesque, degrading text to create a shocking, offensive, and hateful message. The intent is to provoke disgust and ridicule, targeting Muslim women through misogynistic and Islamophobic tropes, and is therefore classified as hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when your fifth wife comes home from the mosque showing a lot of ankle so you take her to the bedroom but her pussy smells like the neighbors goat",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "men",
+      "label": "group of men",
+      "description": "A group of men, likely of Middle Eastern or South Asian descent, are gathered outdoors in what appears to be a celebratory or communal embrace. One man in a white turtleneck is being hugged by another man in a red and white striped shirt. Other men are visible in the background, some partially obscured. Their attire includes casual clothing like t-shirts and jeans, and the setting appears to be an open, possibly dusty or sandy area under bright daylight.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "communal_embrace",
+      "label": "communal_embrace",
+      "description": "A scene depicting a group of men in a celebratory or communal embrace, with one man in a white turtleneck being hugged by another man in a red and white striped shirt. Other men are visible in the background, partially obscured, in an outdoor, possibly dusty or sandy area under bright daylight.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "men",
+          "relation": "engaged_in_embrace",
+          "to": "men"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_hygiene_stereotype",
+      "label": "Hygiene Stereotype Against Muslims",
+      "description": "The meme relies on the stereotype that Muslim women are unclean or have poor hygiene, particularly by associating their genital area with the smell of a goat. This is a common Islamophobic trope used to demean Muslim women and imply they are dirty or animalistic, which is not grounded in reality and is a form of religious discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny_hypersexualization",
+      "label": "Hypersexualization of Women",
+      "description": "The text focuses on the woman’s genital area and uses vulgar language ('pussy smells like the neighbors goat') to objectify and degrade her. This is a misogynistic trope that reduces women to their bodies and sexualizes them in a degrading way, often to provoke disgust or ridicule.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_religious_practice_mockery",
+      "label": "Mockery of Religious Practice",
+      "description": "The meme references the woman coming 'from the mosque,' which is used to imply that her religious practice (or the act of attending the mosque) is somehow connected to the offensive smell. This is a form of Islamophobic mockery, suggesting that religious observance is linked to uncleanliness or inappropriate behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_animal_treatment_accusations",
+      "label": "Animal Treatment Accusations Against Muslims",
+      "description": "The phrase 'her pussy smells like the neighbors goat' is a crude and offensive stereotype that links Muslim women to animal odor, implying they are 'unclean' or 'animalistic.' This is a form of Islamophobic trope that degrades Muslim women by associating them with animals, which is a common form of religious discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_oppression_of_women",
+      "label": "Oppression of Women Claim",
+      "description": "The meme implies that Muslim women are oppressed or controlled by their husbands, as it portrays the husband taking his wife to the bedroom after she returns from the mosque. This is a common Islamophobic trope that falsely portrays Muslim women as submissive or oppressed, which is not accurate and is used to demean Muslim women.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hatefulness",
+      "label": "hateful emotion expression",
+      "description": "The emotion expressed is hateful, stemming from the offensive and degrading text overlaid on the image. The text uses misogynistic and Islamophobic tropes to insult and demean Muslim women, implying they are unclean and hypersexualized. This hateful intent is conveyed through the juxtaposition of the image of men in a positive communal embrace with the grotesque, degrading text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Textual entity 'wife' mapped onto visual entity 'woman'",
+      "description": "The text refers to 'your fifth wife', which is an explicit textual entity. However, no woman is visually present in the image. Therefore, there is no direct visual entity to which the textual entity 'wife' can be mapped. The meme relies on the absence of a visual representation of the 'wife' to create a contrast with the visual of men embracing, which amplifies the offensive nature of the text. The mapping is therefore non-existent in the visual material, as the text refers to a non-present entity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the textual material because the text uses second-person deictic pronouns ('you', 'your') which directly address the viewer, making the viewer feel personally implicated in the scenario described. The text 'when your fifth wife...' creates an implicit 'you' that the user is expected to identify with, projecting the user's perspective onto the offensive narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme contains hateful content targeting Muslim women through misogynistic and Islamophobic tropes, including hypersexualization and hygiene stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed to target individuals who may hold or be exposed to Islamophobic, misogynistic, and culturally insensitive stereotypes, particularly those who might find humor in degrading portrayals of Muslim women. The intended audience likely includes people who are familiar with or sympathetic to anti-Muslim tropes, misogynistic humor, or who enjoy shock-value content that relies on offensive stereotypes. The meme’s visual context (men in a communal embrace in a Middle Eastern/South Asian setting) and textual content (mockery of religious practice, hygiene, and hypersexualization) are crafted to provoke disgust or ridicule among those who either endorse or are indifferent to such stereotypes, thereby reinforcing or spreading hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/35247.png",
+    "image_name": "35247.png",
+    "extraction_timestamp": "2025-12-15T22:56:17.450323",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,224 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: hateful; overall-intent-description: The image depicts Adolf Hitler, a historical figure responsible for the Holocaust and genocide, in a propagandistic pose. The overlaid text reads: 'i could have killed all of them. but i let some of them survive so you know why i killed them.' This is a grotesque, fictionalized, and deeply hateful fabrication that falsely attributes a twisted justification to Hitler, implying he spared some victims to 'explain' his atrocities. This is not only historically inaccurate but also intentionally inflammatory and offensive. It uses Hitler's image to convey a message of moral relativism and justification for mass murder, which is inherently hateful and designed to provoke outrage or normalize horrific acts. The meme's intent is to shock, provoke, and potentially glorify or trivialize genocide through dark humor or irony, which is a form of hate speech targeting victims of the Holocaust and perpetuating antisemitic tropes by invoking Hitler's legacy. The overall intent is to spread hateful content by leveraging the historical trauma associated with Hitler to create a disturbing and offensive message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "i could have killed all of them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Adolf_Hitler",
+      "label": "historical figure",
+      "description": "A man in a military-style uniform with a raised right fist, standing in front of a microphone. He is depicted in a propagandistic pose, looking upward and to the side with an intense expression. This is a well-known historical photograph of Adolf Hitler, the leader of Nazi Germany, who orchestrated the Holocaust and genocide. The image is used here in a meme context with overlaid text that falsely attributes a twisted justification to him, making it deeply offensive and hateful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "propaganda_oration",
+      "label": "Hitler delivering a propagandistic speech",
+      "description": "Adolf_Hitler is depicted in a well-known propagandistic pose, raising his right fist while standing in front of a microphone, suggesting he is addressing an audience. The scene is framed to emphasize his authoritative and intimidating presence, typical of Nazi-era rallies. The overlaid text adds a fictional and hateful narrative to the image, but the visual composition itself remains that of a public oration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Adolf_Hitler",
+          "relation": "speaksTo",
+          "to": "audience"
+        },
+        {
+          "from": "Adolf_Hitler",
+          "relation": "raisesFist",
+          "to": "microphone"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust",
+      "label": "Holocaust",
+      "description": "The systematic, state-sponsored persecution and murder of six million Jews by Nazi Germany and its collaborators during World War II. The meme falsely attributes a twisted justification to Hitler, implying he spared some victims to 'explain' his atrocities, which is historically inaccurate and deeply offensive. This requires background knowledge of the Holocaust to understand the gravity and falsity of the meme's claim.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Nazi_Germany",
+      "label": "Nazi Germany",
+      "description": "The totalitarian regime led by Adolf Hitler from 1933 to 1945, characterized by extreme nationalism, anti-Semitism, and the implementation of the Holocaust. The image of Hitler in a propagandistic pose is iconic of this regime, and the meme leverages this historical context to convey a hateful message. Understanding the political and social context of Nazi Germany is essential to comprehend the meme's offensive nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "propaganda_oration",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust_denial_minimization",
+      "label": "Holocaust denial/minimization themes",
+      "description": "The false or distorted portrayal of the Holocaust as less severe, or the attempt to justify or rationalize the genocide. The meme's text 'i let some of them survive so you know why i killed them' is a grotesque example of this, implying a twisted moral justification for mass murder. This background knowledge is necessary to understand the meme's hateful intent and its attempt to trivialize historical atrocities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitism",
+      "label": "Antisemitism",
+      "description": "Discrimination, prejudice, or hostility directed against Jewish people. The meme uses Hitler's image to evoke the historical context of antisemitism and the Holocaust, which is a core component of its hateful message. Understanding antisemitism is crucial to grasp the offensive nature of the meme and the stereotypes it invokes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "propaganda",
+      "label": "Propaganda",
+      "description": "The deliberate, often biased dissemination of information to influence public opinion. The image of Hitler raising his fist is a classic example of Nazi propaganda, used to project strength and unity. The meme leverages this visual trope to create a false narrative, which requires understanding the historical use of propaganda to be fully comprehended.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "propaganda_oration",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "genocide",
+      "label": "Genocide",
+      "description": "The deliberate and systematic destruction of a racial, political, or cultural group. The Holocaust is the most infamous example of genocide. The meme's text falsely attributes a justification for genocide to Hitler, which requires background knowledge of the term and its historical application to understand the meme's offensive content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is one of profound hatred, conveyed through the combination of Hitler's propagandistic pose and the overlaid text that falsely justifies genocide. The text implies a twisted moral justification for mass murder, which is inherently hateful and offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Hitler is mapped as the speaker of the hateful justification",
+      "description": "The text 'i could have killed all of them. but i let some of them survive so you know why i killed them.' is overlaid on the image of Adolf Hitler delivering a propagandistic speech. The visual material (Adolf_Hitler in a propagandistic pose) is mapped onto the textual material (the hateful justification) to imply that Hitler is the one who is speaking this fabricated justification. This is an analogical mapping where the visual entity (Adolf_Hitler) is projected as the entity performing the action described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material via deictic pronouns",
+      "description": "The meme's text contains the deictic pronouns 'i' and 'you', which directly address the viewer/user. The user is projected onto the textual material (text_chunk_1) as the implied recipient of the message. The text 'i could have killed all of them. but i let some of them survive so you know why i killed them.' uses 'i' to attribute the action to Hitler (as visually projected) and 'you' to address the viewer, making the user the target of the hateful justification. This creates a direct semiotic projection where the user is positioned as the one being addressed by the fictionalized narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme falsely attributes a twisted moral justification for genocide to Adolf Hitler, invoking the Holocaust and antisemitism to convey a message of moral relativism and justification for mass murder. This is inherently hateful and designed to provoke outrage or normalize horrific acts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who are familiar with or have an interest in historical figures like Adolf Hitler, Nazi Germany, and the Holocaust, and who may be exposed to or engage with dark humor, ironic, or satirical content that uses historical trauma for shock value. The meme is designed to provoke outrage or shock by leveraging the extreme historical context of genocide and antisemitism, likely targeting those who are either unaware of the historical inaccuracies or who are drawn to provocative, hate-filled content that challenges moral boundaries. It may also target communities that engage with internet memes that use historical figures in a distorted or fictionalized manner, often for the purpose of dark comedy or commentary, though this specific meme is inherently hateful and offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/86417.png",
+    "image_name": "86417.png",
+    "extraction_timestamp": "2025-12-19T15:54:14.133652",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

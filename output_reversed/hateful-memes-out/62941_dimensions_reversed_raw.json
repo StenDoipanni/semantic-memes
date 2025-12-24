@@ -1,0 +1,158 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: brace_yourself_disappointment_is_coming; hasOverallIntent: Harmful; overall-intent-description: The image features a man with a smug, self-satisfied expression, overlaid with the text 'brace yourself' and 'disappointment is coming.' This is a common meme format used to signal that something negative or unpleasant is about to occur, often in a humorous or ironic context. The visual of the man's expression is juxtaposed with the text to create a sense of impending doom or letdown. While not inherently abusive, cyberbullying, or hateful toward any specific group, the meme can be harmful in contexts where it is used to mock or undermine someone's expectations or efforts, potentially causing emotional distress. The intent is to create a humorous or ironic effect by contrasting the person's confident demeanor with the impending negative outcome, but it can be misused to diminish or belittle others.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "brace yourself",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A middle-aged man with a smug, self-satisfied expression, wearing a dark suit jacket over a gray collared shirt. His hair is neatly combed back, and he has a short, graying beard. The background appears to be a dark event backdrop with partial white lettering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "smug_expression_with_text",
+      "label": "man displaying smug expression with overlaid text",
+      "description": "A middle-aged man with a smug, self-satisfied expression is the central visual element. Overlaid on the image are two lines of white text: 'brace yourself' at the top and 'disappointment is coming' at the bottom. The man's expression and the text work together to create a scene of impending letdown or irony. The man is positioned centrally, and the text is superimposed directly on his face and torso, creating a direct visual and conceptual relationship.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "isAssociatedWith",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_format_brace_yourself_disappointment_is_coming",
+      "label": "Meme Format: 'Brace Yourself, Disappointment is Coming'",
+      "description": "This is a widely recognized internet meme format that uses a person's smug or overly confident expression juxtaposed with the text 'brace yourself' and 'disappointment is coming' to signal that something negative or ironic is about to happen. The format relies on the contrast between the person's demeanor and the impending letdown to create humor or irony. It is often used in contexts where someone's confidence is about to be undermined or when a negative outcome is anticipated.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "smug_expression_with_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "actor_roy_bishop",
+      "label": "Actor Roy Bishop",
+      "description": "The man in the image is actor Roy Bishop, known for his roles in television and film. His appearance and expression in this photo are often used in memes due to his characteristic smug or self-satisfied look, which fits the 'brace yourself, disappointment is coming' meme format. His identity as a public figure adds context to why his image is frequently repurposed in internet culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "event_backdrop_with_logo",
+      "label": "Event Backdrop with Logo",
+      "description": "The background in the image appears to be from a formal event, likely a red carpet or awards ceremony, indicated by the dark backdrop with partial white lettering (possibly 'DRAMA' or similar). This context helps understand the setting and the person's attire, which is formal. The backdrop is not directly relevant to the meme's meaning but provides situational context for the person's appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "smugness",
+      "label": "the smug expression",
+      "description": "The man's facial expression, characterized by a slight, self-satisfied smile, raised eyebrows, and a confident gaze, conveys a sense of self-assuredness or smugness. This expression is juxtaposed with the text to create irony or foreshadow a negative outcome.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_brace_yourself_smug_expression",
+      "label": "The text 'brace yourself' maps onto the man's smug expression",
+      "description": "The top text overlay 'brace yourself' is juxtaposed with the man's smug, self-satisfied facial expression. This creates an analogical mapping where the text instructs the viewer to prepare for something, and the visual material (the man's expression) embodies that state of confident anticipation. The mapping is direct: the text 'brace yourself' is mapped onto the visual entity of the man's smug expression, implying that his demeanor is the thing one must brace for.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of impending disappointment",
+      "description": "The user is projected onto the overall scene created by the man's smug expression and the overlaid text 'brace yourself' and 'disappointment is coming'. The meme format directly addresses the viewer by implying that the viewer must brace for disappointment, which is embodied in the visual of the man's confident demeanor. The projection is onto the scene (smug_expression_with_text) which combines both visual and textual elements to create a direct address to the user.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme format 'brace yourself, disappointment is coming' juxtaposes a smug expression with the promise of a negative outcome, which can be harmful when used to mock or undermine someone's expectations or efforts, potentially causing emotional distress.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad general internet audience familiar with internet meme formats and humor. The target community includes users who recognize the 'brace yourself, disappointment is coming' format and appreciate ironic or humorous juxtapositions. The use of a recognizable actor (Roy Bishop) and a common meme template makes it accessible to a wide demographic, particularly those active on social media platforms where such memes circulate. The visual and textual elements are designed to be universally understandable, relying on the contrast between smug confidence and impending letdown, which appeals to users who enjoy self-deprecating or ironic humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/62941.png",
+    "image_name": "62941.png",
+    "extraction_timestamp": "2025-12-16T07:45:04.895209",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,191 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: transwoman_yelling_at_me_about_the_meme_i_made; hasOverallIntent: Hateful; overall-intent-description: The meme depicts a transwoman yelling in anger, juxtaposed with a cat hiding behind a chair, with text reading 'me wondering what this dude's problem is.' The intent is to mock or dismiss criticism directed at the creator of the meme, particularly from a transwoman, by portraying the critic as irrational or overreacting. This framing can be harmful and hateful as it targets trans individuals by implying their criticism is unreasonable or exaggerated, potentially reinforcing negative stereotypes about trans people being 'overly emotional' or 'hypersensitive.' The meme uses the transwoman's identity as a punchline, which can be seen as a direct attack on trans individuals based on their gender identity, fitting the 'Hateful' category as it targets a protected characteristic (gender identity) with a dismissive and potentially demeaning tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "transwoman yelling at me about the meme i made",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "transwoman",
+      "label": "person",
+      "description": "A person with a visible gender presentation that is typically associated with being a transwoman, depicted in the top panel of the meme with an angry, yelling expression. This individual is the subject of the meme's text, which frames her as reacting to the creator's meme. The depiction is used to represent a transwoman in a context that implies her reaction is irrational or overreacting, which aligns with the meme's hateful intent as described in the context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "yelling_transwoman_scene",
+      "label": "transwoman_yelling_at_me",
+      "description": "A scene depicting a transwoman yelling in anger, as indicated by the text 'transwoman yelling at me about the meme i made'. The transwoman is positioned in the top panel, with her mouth open wide in an expression of rage or frustration. The scene is framed to emphasize her emotional reaction, which is the central focus of the top panel.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "transwoman_stereotype",
+      "label": "Stereotype: Transwomen are overly emotional or hysterical",
+      "description": "The meme relies on the stereotype that transwomen are prone to being 'overly emotional' or 'hysterical,' which is used to dismiss their criticism as irrational. This stereotype is a form of gender-based discrimination and is often used to invalidate the experiences of trans individuals. The meme's intent to portray the transwoman as irrational is rooted in this harmful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "transwoman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "yelling_transwoman_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_format",
+      "label": "Meme format: 'Yelling at me' + 'Cat hiding behind chair'",
+      "description": "The meme format uses a visual juxtaposition of a person yelling (often used to represent anger or outrage) and a cat hiding behind a chair (often used to represent someone who is confused, annoyed, or dismissive of the yelling). This format is commonly used in internet culture to express a sense of being unfairly targeted or to mock someone's reaction. The format itself is a cultural phenomenon that relies on shared internet knowledge.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "yelling_transwoman_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "online_meme_culture",
+      "label": "Online meme culture and its role in amplifying hate speech",
+      "description": "The meme is part of a broader online culture where memes are often used to spread hate speech, ridicule, or dismiss criticism. This culture often relies on stereotypes and can be harmful, especially when targeting marginalized groups like the LGBTQ+ community. Understanding the context of online meme culture is necessary to interpret the meme's intent and impact.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "yelling_transwoman_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "LGBTQ_discrimination_stereotype",
+      "label": "LGBTQ+ discrimination stereotype: 'Trans people are hypersensitive or overreacting'",
+      "description": "This stereotype is explicitly referenced in the meme's intent. It is a form of LGBTQ+ discrimination that frames trans individuals as being overly emotional or hypersensitive, which is used to invalidate their experiences and criticism. This stereotype is part of a broader pattern of discrimination against the LGBTQ+ community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "transwoman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "yelling_transwoman_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "anger",
+      "label": "the angry expression",
+      "description": "The transwoman is depicted with her mouth wide open, eyes squeezed shut, and facial muscles tensed, conveying a strong emotion of anger or rage. This expression is amplified by the text overlay 'transwoman yelling at me about the meme i made', which frames her as emotionally reactive and confrontational.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The text 'me' is mapped onto the cat hiding behind the chair",
+      "description": "The bottom text 'me wondering what this dude's problem is' explicitly uses the pronoun 'me' to refer to the observer or creator of the meme. This 'me' is visually represented by the cat hiding behind the chair, which is a common meme trope symbolizing someone who is confused, annoyed, or dismissive of the yelling. The mapping is established by the juxtaposition of the text and the visual, where the cat serves as the visual embodiment of the speaker's perspective.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the cat hiding behind the chair",
+      "description": "The user (the meme creator) is explicitly projected onto the cat hiding behind the chair in the bottom panel. This projection is established by the text 'me wondering what this dude's problem is', where 'me' directly refers to the user. The cat visually embodies this 'me' as a figure of confusion or dismissiveness, creating a semiotic link between the textual deictic and the visual material. The user is thus projected onto the visual entity of the cat.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly targets trans individuals based on their gender identity, portraying their criticism as irrational or exaggerated, which is a form of hate speech against a protected characteristic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with internet meme culture, particularly those who engage in or enjoy memes that use the 'yelling at me' format and the 'cat hiding behind chair' trope. This audience likely includes people who find humor in mocking or dismissing criticism, especially when it comes from marginalized groups like trans individuals. The meme is designed to resonate with those who identify with the perspective of the 'me' in the bottom panel — someone who perceives the transwoman's reaction as irrational or overreacting — and who may hold or be exposed to the stereotype that trans people are 'overly emotional' or 'hypersensitive'. The audience is likely to be part of online communities where such memes circulate, and where the intent to dismiss or ridicule criticism is culturally accepted or even encouraged.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/34206.png",
+    "image_name": "34206.png",
+    "extraction_timestamp": "2025-12-15T22:41:16.348633",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

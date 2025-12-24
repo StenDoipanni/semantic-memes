@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "gender_swap_joke_scene",
+      "participants": [
+        {
+          "entity": "woman_on_left",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "woman_on_right",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman_on_left",
+          "relation": "isAskedBy",
+          "to": "woman_on_right"
+        },
+        {
+          "from": "woman_on_right",
+          "relation": "isAnsweredBy",
+          "to": "woman_on_left"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":gender_swap_joke_scene :hasParticipant :woman_on_left .",
+    ":gender_swap_joke_scene :hasParticipant :woman_on_right .",
+    ":woman_on_left :isAskedBy :woman_on_right .",
+    ":woman_on_right :isAnsweredBy :woman_on_left ."
+  ],
+  "triples_count": 4
+}

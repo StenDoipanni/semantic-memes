@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#qa_2fbcbd28-62e1-4f18-a61a-f7d9bad2cfa2",
+  "@type": "QuestionAnswerPair",
+  "question": "Who is the caller in this 911 scenario?",
+  "answers": [
+    {
+      "text": "None of the others",
+      "is_correct": false
+    },
+    {
+      "text": "The person lying on the ground",
+      "is_correct": false
+    },
+    {
+      "text": "The man holding the phone",
+      "is_correct": true
+    },
+    {
+      "text": "The 911 operator on the other end",
+      "is_correct": false
+    }
+  ],
+  "explanation": "The man holding the phone is mapped as the caller, as implied by the 911 prompt and his concerned expression.",
+  "dimension": "AnalogicalMapping",
+  "relatedInstances": [
+    "mapping_1"
+  ],
+  "generationTimestamp": "2025-12-23T21:41:11.971295",
+  "generationMethod": "huggingface_api",
+  "sourceImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_16423",
+    "@type": "Image",
+    "filename": "16423.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/16423.png"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "erasing_abortion",
+      "participants": [
+        {
+          "entity": "hand",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "hand",
+          "relation": "erasing",
+          "to": "Abortion"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":erasing_abortion :hasParticipant :hand .",
+    ":hand :erasing :Abortion ."
+  ],
+  "triples_count": 2
+}

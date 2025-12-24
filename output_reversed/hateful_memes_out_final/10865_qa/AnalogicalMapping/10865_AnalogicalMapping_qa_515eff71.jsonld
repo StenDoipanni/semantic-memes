@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#qa_515eff71-f96d-4fac-8f58-5ad563f08531",
+  "@type": "QuestionAnswerPair",
+  "question": "What does 'this movie sucks' refer to in the image?",
+  "answers": [
+    {
+      "text": "The director's personal opinion",
+      "is_correct": false
+    },
+    {
+      "text": "None of the others",
+      "is_correct": false
+    },
+    {
+      "text": "The actor's costume design",
+      "is_correct": false
+    },
+    {
+      "text": "The film being shot on set",
+      "is_correct": true
+    }
+  ],
+  "explanation": "The text 'this movie sucks' is mapped onto the film production scene, meaning the entire set and crew represent the movie being criticized.",
+  "dimension": "AnalogicalMapping",
+  "relatedInstances": [
+    "mapping_1"
+  ],
+  "generationTimestamp": "2025-12-23T20:33:05.117063",
+  "generationMethod": "huggingface_api",
+  "sourceImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_10865",
+    "@type": "Image",
+    "filename": "10865.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/10865.png"
+  }
+}

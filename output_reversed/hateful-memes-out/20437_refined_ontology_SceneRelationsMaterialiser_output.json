@@ -1,0 +1,74 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "thanksgiving_dinner_scene",
+      "participants": [
+        {
+          "entity": "person_with_blue_denim_sleeve",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "person_with_gray_long_sleeve",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "person_with_orange_juice",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "person_with_salad_plate",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "person_with_turkey_plate",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "person_with_blue_denim_sleeve",
+          "relation": "isEating",
+          "to": "thanksgiving_dinner_scene"
+        },
+        {
+          "from": "person_with_gray_long_sleeve",
+          "relation": "isEating",
+          "to": "thanksgiving_dinner_scene"
+        },
+        {
+          "from": "person_with_orange_juice",
+          "relation": "isEating",
+          "to": "thanksgiving_dinner_scene"
+        },
+        {
+          "from": "person_with_salad_plate",
+          "relation": "isEating",
+          "to": "thanksgiving_dinner_scene"
+        },
+        {
+          "from": "person_with_turkey_plate",
+          "relation": "isEating",
+          "to": "thanksgiving_dinner_scene"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":thanksgiving_dinner_scene :hasParticipant :person_with_blue_denim_sleeve .",
+    ":thanksgiving_dinner_scene :hasParticipant :person_with_gray_long_sleeve .",
+    ":thanksgiving_dinner_scene :hasParticipant :person_with_orange_juice .",
+    ":thanksgiving_dinner_scene :hasParticipant :person_with_salad_plate .",
+    ":thanksgiving_dinner_scene :hasParticipant :person_with_turkey_plate .",
+    ":person_with_blue_denim_sleeve :isEating :thanksgiving_dinner_scene .",
+    ":person_with_gray_long_sleeve :isEating :thanksgiving_dinner_scene .",
+    ":person_with_orange_juice :isEating :thanksgiving_dinner_scene .",
+    ":person_with_salad_plate :isEating :thanksgiving_dinner_scene .",
+    ":person_with_turkey_plate :isEating :thanksgiving_dinner_scene ."
+  ],
+  "triples_count": 10
+}

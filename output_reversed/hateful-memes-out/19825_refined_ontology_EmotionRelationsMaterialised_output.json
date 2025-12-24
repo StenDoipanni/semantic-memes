@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "ironic humor expression",
+      "expressors": [
+        {
+          "entity": "meme",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme",
+          "relation": "expressesEmotion",
+          "to": "ironic humor expression"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":ironic_humor_expression :hasExpressor :meme .",
+    ":meme :expressesEmotion :ironic_humor_expression ."
+  ],
+  "triples_count": 2
+}

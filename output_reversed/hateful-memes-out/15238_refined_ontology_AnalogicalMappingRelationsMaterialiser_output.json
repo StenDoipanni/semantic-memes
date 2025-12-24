@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_honor_vs_respect",
+      "hasMappedEntity": "being buried with honor",
+      "hasMappingEntity": "honorable_burial_scene"
+    },
+    {
+      "from": "honorable_burial_scene",
+      "relation": "mappedOnto",
+      "to": "being buried with honor"
+    }
+  ],
+  "triples": [
+    ":mapping_honor_vs_respect :hasMappedEntity :being_buried_with_honor .",
+    ":mapping_honor_vs_respect :hasMappingEntity :honorable_burial_scene .",
+    ":honorable_burial_scene :mappedOnto :being_buried_with_honor ."
+  ],
+  "triples_count": 3
+}

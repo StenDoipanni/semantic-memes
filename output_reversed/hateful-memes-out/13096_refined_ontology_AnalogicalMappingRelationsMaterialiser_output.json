@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_id_1",
+      "hasMappedEntity": "virgin sheep",
+      "hasMappingEntity": "sheep"
+    },
+    {
+      "from": "sheep",
+      "relation": "mappedOnto",
+      "to": "virgin sheep"
+    }
+  ],
+  "triples": [
+    ":mapping_id_1 :hasMappedEntity :virgin_sheep .",
+    ":mapping_id_1 :hasMappingEntity :sheep .",
+    ":sheep :mappedOnto :virgin_sheep ."
+  ],
+  "triples_count": 3
+}

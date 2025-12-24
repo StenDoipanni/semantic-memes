@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_4abb017a",
+  "@type": "AnalysisDocument",
+  "title": "70132.png - Dimension Analysis",
+  "created": "2025-12-19T10:39:29.159151",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_45950172",
+    "@type": "Image",
+    "filename": "70132.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/70132.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/70132.png",
+    "image_name": "70132.png",
+    "extraction_timestamp": "2025-12-19T10:35:58.478802",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e7a6647e",
+      "@type": "OverallIntent",
+      "instance_name": "dimension_1",
+      "label": "the overallintent",
+      "description": "The image depicts a man with a beard and green cap, raising his finger in a gesture often associated with religious or political fervor, set against a backdrop of a crowd. The overlaid text reads: \\",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4abb017a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_be9dbf1e",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "i am peaceful! don't believe me?",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4abb017a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_28742717",
+      "@type": "VisualMaterial",
+      "instance_name": "man_with_beard",
+      "label": "central figure",
+      "description": "A man with a prominent beard and wearing a green cap, raising his right index finger upward in a gesture often associated with religious or political fervor. He is the focal point of the image, positioned in the foreground with an expressive, open-mouthed facial expression. He is wearing a black shirt with a visible green and white graphic design on the chest.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4abb017a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c3b189d8",
+      "@type": "Scene",
+      "instance_name": "protest_scene",
+      "label": "man_with_beard addressing crowd",
+      "description": "A man with a beard and green cap, raising his right index finger upward, is the central figure in a protest or rally setting. He is positioned in the foreground, facing forward, with a large crowd of people in the background. The scene is framed to emphasize his gesture and expression, suggesting he is addressing or rallying the crowd. The text overlay adds a confrontational tone to the scene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4abb017a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a5e50876",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "The meme relies on the stereotype that Muslims are inherently violent or terrorist-associated, which is a common form of Islamophobia. The juxtaposition of the man's peaceful declaration with the threat to blow up the viewer plays on this stereotype, implying that his outward peacefulness is a facade for violent intent, a trope often used to delegitimize or fear Muslim individuals or groups.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4abb017a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0d6de059",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "terrorism_associations",
+      "label": "Terrorism Associations",
+      "description": "The phrase 'then I will blow you up' directly invokes the association between Islam and terrorism, which is a widely circulated and harmful stereotype. This background knowledge is necessary to understand the meme's punchline and its underlying message of fear or distrust.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4abb017a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_83911e05",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "sharia_law_fearmongering",
+      "label": "Sharia Law Fearmongering",
+      "description": "The meme implicitly references the fear of Sharia law, which is often used in Western discourse to portray Islam as incompatible with modern, secular values. The threat to 'blow you up' can be interpreted as a metaphor for the perceived threat of Sharia law to Western society, a common theme in Islamophobic rhetoric.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4abb017a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a675ebc1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "violence_barbarism_claims",
+      "label": "Violence/Barbarism Claims",
+      "description": "The meme plays on the stereotype that Muslims are barbaric and violent, which is a common form of Islamophobia. The juxtaposition of the man's peaceful declaration with the threat to blow up the viewer plays on this stereotype, implying that his outward peacefulness is a facade for violent intent, a trope often used to delegitimize or fear Muslim individuals or groups.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4abb017a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bd57b38c",
+      "@type": "EmotionExpression",
+      "instance_name": "threatening_anger",
+      "label": "threatening anger expression",
+      "description": "The man's facial expression, with an open mouth as if shouting and intense eyes, combined with the raised finger gesture, conveys a confrontational and aggressive emotion. This is amplified by the text overlay which explicitly threatens violence, creating a sense of imminent danger and hostility.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4abb017a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_367bebd1",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Peaceful declaration mapped onto the man with beard",
+      "description": "The top text 'i am peaceful! don't believe me?' is an analogical mapping where the speaker (the man with beard) is projected as the entity claiming to be peaceful. The visual of the man, with his intense expression and raised finger, is juxtaposed with the text to create a contrast between his claimed peacefulness and his apparent confrontational demeanor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4abb017a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_36cd4536",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material via deictic pronouns",
+      "description": "The user is projected onto the textual material through the use of deictic pronouns 'me' and 'you' in the text overlays. The phrase 'i am peaceful! don't believe me?' directly addresses the viewer ('me'), and 'then i will blow you up' directly addresses the viewer ('you'), creating a direct projection of the user onto the text. This projection is reinforced by the visual material of the man with the beard, who is the speaker of the text, making the user feel addressed and implicated in the meme's confrontational narrative.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4abb017a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_28dd6ce6",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobia",
+      "description": "The meme relies on the harmful stereotype that Muslims are inherently violent or terrorist-associated, which is a common form of Islamophobia. The juxtaposition of the man's peaceful declaration with the threat to blow up the viewer plays on this stereotype, implying that his outward peacefulness is a facade for violent intent, a trope often used to delegitimize or fear Muslim individuals or groups.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4abb017a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dfe09153",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience familiar with or exposed to Islamophobic stereotypes, particularly those who associate Muslims with terrorism or violence. The target community likely includes individuals who hold or are influenced by prejudiced views toward Muslims, or who are seeking to reinforce such stereotypes through humor or satire. The meme’s effectiveness relies on the audience’s recognition of the visual cues (beard, green cap, protest setting) and the textual punchline as a reinforcement of harmful tropes. The audience is expected to interpret the man’s peaceful declaration as ironic or deceptive, thereby validating the stereotype that Muslims are inherently violent.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4abb017a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

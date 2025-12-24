@@ -1,0 +1,248 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts a man with a retro appearance (curly hair, glasses, 80s-style clothing) sitting at a desk with an old beige computer, holding a mug and smiling. The text overlay reads: 'when you max out intelligence and put nothing on agility.' The overall intent is to humorously stereotype a person who is highly intelligent but lacks physical agility or athleticism. This is a lighthearted, self-deprecating or satirical meme that uses a visual of a 'nerdy' or 'geeky' figure to represent someone who prioritizes intellectual prowess over physical prowess. The meme does not target any specific protected group or community with harmful intent. It is a general, non-toxic joke about perceived personality traits, using a common trope of contrasting intelligence with physical ability. The humor is derived from the juxtaposition of the image (a person who appears studious or bookish) with the text (a commentary on prioritizing intelligence over agility). There is no abusive, cyberbullying, harmful, hateful, misogynous, or propaganda content. The intent is purely comedic and satirical, playing on a common cultural stereotype without targeting any specific group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you max out intelligence and put nothing on agility",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with curly brown hair and glasses, wearing an 80s-style beige sweater with brown shoulders, sitting at a desk. He is smiling broadly and holding a white mug in his left hand while his right hand rests on a beige computer. His appearance and attire evoke a 'nerdy' or 'geeky' stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "nerdy_computer_user",
+      "label": "man_using_old_computer",
+      "description": "A man with curly hair and glasses, dressed in 80s-style clothing, is seated at a wooden desk and interacting with a beige computer. He is holding a mug and smiling, suggesting a relaxed, studious, or 'nerdy' demeanor. The scene is set against a wood-paneled wall, evoking a retro office or home computer environment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "sittingOn",
+          "to": "chair"
+        },
+        {
+          "from": "man",
+          "relation": "holding",
+          "to": "mug"
+        },
+        {
+          "from": "man",
+          "relation": "restingHandOn",
+          "to": "computer"
+        },
+        {
+          "from": "man",
+          "relation": "sittingAt",
+          "to": "desk"
+        },
+        {
+          "from": "computer",
+          "relation": "placedOn",
+          "to": "desk"
+        },
+        {
+          "from": "chair",
+          "relation": "placedAt",
+          "to": "desk"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nerdy_stereotype",
+      "label": "Nerdy Stereotype",
+      "description": "A cultural stereotype portraying individuals as highly intelligent, bookish, or academically inclined, often associated with being socially awkward, lacking physical prowess, or being overly focused on intellectual pursuits. This stereotype is commonly used humorously or satirically to describe people who prioritize knowledge over physical activity or athleticism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "nerdy_computer_user",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "intellectual_vs_physical_prowess",
+      "label": "Intellectual vs. Physical Prowess",
+      "description": "A cultural concept or trope that contrasts intellectual ability with physical agility or athleticism. It is often used humorously to describe individuals who are perceived as 'smart' but not 'athletic' or physically capable, and is frequently used in memes and jokes to highlight perceived imbalances in personal traits.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "nerdy_computer_user",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "80s_computer_culture",
+      "label": "1980s Computer Culture",
+      "description": "A period in computing history characterized by the rise of personal computers, home computing, and early software development. The visual of a beige computer and retro clothing evokes this era, which is culturally associated with early tech enthusiasts, 'geeks', and the 'nerdy' archetype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "nerdy_computer_user",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "geek_culture",
+      "label": "Geek Culture",
+      "description": "A subculture that celebrates intellectual pursuits, technology, science fiction, and niche interests. It often overlaps with the 'nerdy' stereotype and is frequently portrayed in media and memes as a group that prioritizes knowledge and logic over physical activity or social norms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "nerdy_computer_user",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "self_deprecating_joke",
+      "label": "Self-Deprecating Joke",
+      "description": "A humorous statement or situation in which a person makes fun of themselves, often to deflect criticism or to appear relatable. This type of humor is common in memes and is used here to create a lighthearted, non-harmful commentary on perceived personal traits.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "agility_stereotype",
+      "label": "Agility Stereotype",
+      "description": "A cultural trope that associates physical agility with athleticism, sports ability, or general physical competence. In contrast to the 'nerdy' stereotype, this trope is often used humorously to imply that someone lacking agility is 'unfit' or 'unathletic', which is the punchline of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "nerdy_computer_user",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful expression",
+      "description": "The man in the image is smiling broadly, with his mouth open and eyes crinkled, conveying a clear expression of happiness or amusement. His relaxed posture and the act of holding a mug while interacting with the computer further suggest contentment and enjoyment in his current activity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The man is mapped as the person who maxes out intelligence and puts nothing on agility",
+      "description": "The text 'when you max out intelligence and put nothing on agility' is mapped onto the visual entity 'man'. The man's appearance (curly hair, glasses, 80s-style clothing, sitting at a desk with an old computer, holding a mug) visually embodies the 'nerdy' or 'geeky' stereotype, which is humorously contrasted with the lack of physical agility. The mapping is established by the meme's overall intent to use the visual of a stereotypical intellectual to represent someone who prioritizes intelligence over physical prowess.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the nerdy_computer_user scene",
+      "description": "The user is projected onto the visual entity 'man' (nerdy_computer_user) as the person who 'maxes out intelligence and puts nothing on agility'. This projection is implied through the self-deprecating humor of the meme, where the viewer is invited to identify with the stereotypical 'nerdy' figure as a representation of themselves, especially in contexts where they perceive their intellectual strengths contrast with physical limitations. The text 'when you max out intelligence...' directly addresses the user ('you'), creating an implicit deictic projection onto the visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a stereotype to portray individuals who prioritize intelligence over physical agility in a potentially demeaning way, which may cause harm to those who identify with or are perceived to fit this stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "nerdy_stereotype",
+      "label": "Nerdy Stereotype",
+      "description": "The meme targets individuals who identify with or are perceived to fit the 'nerdy' or 'geeky' stereotype, characterized by high intelligence, academic focus, and often a perceived lack of physical agility or athleticism. The visual of the man with curly hair, glasses, and 80s-style clothing, along with the beige computer, is a classic representation of this archetype, making it relatable to those who recognize themselves in this portrayal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/38164.png",
+    "image_name": "38164.png",
+    "extraction_timestamp": "2025-12-16T00:08:47.326841",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

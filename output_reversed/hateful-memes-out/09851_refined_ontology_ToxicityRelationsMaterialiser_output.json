@@ -1,0 +1,30 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "racial_slur_cracker"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "anti_black_stereotype"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "food_stereotype"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :racial_slur_cracker .",
+    ":toxicity_1 :hasToxicElement :anti_black_stereotype .",
+    ":toxicity_1 :hasToxicElement :food_stereotype ."
+  ],
+  "triples_count": 3
+}

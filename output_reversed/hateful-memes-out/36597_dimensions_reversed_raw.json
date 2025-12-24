@@ -1,0 +1,306 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: white_people_after_10_shots_black_people_after_10_shots; hasOverallIntent: hateful; overall-intent-description: The meme juxtaposes two images: the top image shows two white men drinking shots in a bar with a wild, uninhibited expression, labeled 'white people after 10 shots,' while the bottom image shows a Black man in formal attire smiling and holding a glass of what appears to be whiskey, labeled 'black people after 10 shots.' The intent is to imply that Black people are more composed, restrained, or 'professional' even after consuming alcohol, while white people are depicted as wild or out of control. This is a harmful and hateful stereotype that reinforces racist tropes by suggesting inherent behavioral differences based on race, portraying Black people as overly composed or 'too good' to be wild, while white people are depicted as naturally rowdy. The meme uses racial categorization to make a derogatory comparison, which is a form of racialized stereotyping and can be interpreted as a subtle form of racial hierarchy. The overall intent is to perpetuate a harmful racial stereotype by implying that Black people are more 'in control' or 'professional' than white people in social situations, which is a form of racialized stereotyping and can be interpreted as a subtle form of racial hierarchy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "white people after 10 shots",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "bottom text overlay",
+      "description": "black people after 10 shots",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "white_people_after_10_shots",
+      "label": "two white men drinking shots",
+      "description": "In the top image, two white men are shown drinking shots in a bar. The man in the foreground is wearing a blue button-up shirt over a black t-shirt and is actively drinking from a shot glass. The man behind him, wearing glasses and a dark shirt, is also drinking. The background features bright, colorful lights, suggesting a lively bar atmosphere. The text overlay reads 'white people after 10 shots,' implying they are wild or uninhibited.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "black_people_after_10_shots",
+      "label": "a Black man in formal attire holding a glass",
+      "description": "In the bottom image, a Black man is shown smiling and holding a glass of whiskey. He is dressed in a white dress shirt, a striped tie, and pinstripe trousers, with a watch on his wrist. He appears composed and professional. The background shows a bar with bottles on shelves. The text overlay reads 'black people after 10 shots,' implying he is calm and restrained despite having consumed alcohol.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "bar_environment",
+      "label": "bar setting with lighting and shelves",
+      "description": "The top image shows a bar with bright, colorful lights in the background, creating a lively and energetic atmosphere. The bottom image shows a more subdued bar setting with shelves displaying bottles of alcohol, suggesting a more formal or upscale environment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "shot_glasses",
+      "label": "shot glasses being consumed",
+      "description": "In the top image, both men are holding and drinking from shot glasses. In the bottom image, the Black man is holding a glass that appears to contain whiskey, though it is not explicitly a shot glass.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "text_overlay",
+      "label": "text labels for each image",
+      "description": "The top image has the text 'white people after 10 shots' overlaid, while the bottom image has the text 'black people after 10 shots.' These labels are used to create a comparative and stereotypical narrative about racial behavior after consuming alcohol.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "white_people_after_10_shots_scene",
+      "label": "White people drinking shots in a bar",
+      "description": "A scene depicting two white men drinking shots in a lively bar environment with colorful lights. The man in the foreground is actively drinking from a shot glass, while the man behind him, wearing glasses, is also drinking. The scene is labeled 'white people after 10 shots', implying wild or uninhibited behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "white_people_after_10_shots",
+          "relation": "drinking",
+          "to": "shot_glasses"
+        },
+        {
+          "from": "white_people_after_10_shots",
+          "relation": "locatedIn",
+          "to": "bar_environment"
+        },
+        {
+          "from": "text_overlay",
+          "relation": "labels",
+          "to": "white_people_after_10_shots"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_stereotype_of_black_people_as_composed",
+      "label": "Racial Stereotype: Black People as Composed/Professional",
+      "description": "The meme relies on the stereotype that Black people are inherently more composed, restrained, or 'professional' in social situations, even after consuming alcohol, which is a harmful racial trope. This stereotype is used to imply that Black people are 'too good' to be wild or uninhibited, contrasting with the portrayal of white people as naturally rowdy. This is a form of racialized stereotyping that reinforces a racial hierarchy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "black_people_after_10_shots",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "white_people_after_10_shots_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_stereotype_of_white_people_as_rowdy",
+      "label": "Racial Stereotype: White People as Rowdy/Uninhibited",
+      "description": "The meme relies on the stereotype that white people are inherently wild, uninhibited, or 'out of control' after consuming alcohol, which is a harmful racial trope. This stereotype is used to contrast with the portrayal of Black people as composed, reinforcing a racial hierarchy by implying inherent behavioral differences based on race.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "white_people_after_10_shots",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "white_people_after_10_shots_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harmful_racial_hierarchy_concept",
+      "label": "Harmful Racial Hierarchy Concept",
+      "description": "The meme implicitly references the concept of racial hierarchy, where one racial group is portrayed as superior or more 'in control' than another. In this case, Black people are depicted as more composed, while white people are depicted as wild, suggesting a racialized power dynamic. This is a form of systemic racism that perpetuates negative stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "white_people_after_10_shots_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "black_people_after_10_shots",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "alcohol_consumption_stereotype",
+      "label": "Alcohol Consumption Stereotype",
+      "description": "The meme uses the trope of alcohol consumption to imply behavioral differences based on race. The idea that 'after 10 shots' people will behave differently is a common trope in media and humor, but when applied to racial categories, it becomes a harmful stereotype. The meme implies that race dictates how one behaves under the influence of alcohol.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "white_people_after_10_shots",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "black_people_after_10_shots",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_of_composure",
+      "label": "Anti-Black Stereotype: Composure as a Marker of Superiority",
+      "description": "This stereotype suggests that Black people are inherently more composed or professional, which is used to imply they are 'too good' to be wild or uninhibited. This is a harmful trope that reinforces racial hierarchies by suggesting that Black people are naturally more restrained, which is not true and is used to demean or stereotype them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "black_people_after_10_shots",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_white_stereotype_of_rowdiness",
+      "label": "Anti-White Stereotype: Rowdiness as a Marker of 'Natural' Behavior",
+      "description": "This stereotype suggests that white people are inherently wild or uninhibited, especially after consuming alcohol. This is a harmful trope that reinforces racial hierarchies by implying that white people are naturally rowdy, which is not true and is used to demean or stereotype them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "white_people_after_10_shots",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "uninhibited_exuberance",
+      "label": "wild and uninhibited behavior",
+      "description": "The two white men in the top image are actively drinking shots with open mouths and engaged postures, suggesting a state of uninhibited exuberance and revelry. Their facial expressions and body language convey excitement and a lack of restraint, fitting the stereotype implied by the text 'white people after 10 shots'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_white_people_after_10_shots",
+      "label": "white people after 10 shots mapped to two white men drinking shots",
+      "description": "The text 'white people after 10 shots' is directly mapped onto the visual of two white men drinking shots in a bar, implying that their behavior (wild, uninhibited) represents the stereotypical 'white people after 10 shots' persona. This mapping is explicit through the text overlay and the visual content's alignment with the stereotype described.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the comparative racial stereotype presented in the meme",
+      "description": "The user is projected onto the meme's overall intent, which frames the viewer as someone who understands and internalizes the racialized comparison being made between 'white people after 10 shots' and 'black people after 10 shots'. The user is not explicitly directed to a specific visual or textual element with deictic pronouns like 'you' or 'me', but the entire meme structure invites the user to adopt the perspective of the stereotype being presented — viewing the top image as 'wild' and the bottom as 'composed' — thereby projecting themselves into the interpretive framework of the meme's racial hierarchy. The projection is onto the conceptual scene and textual material that together construct the harmful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks and dehumanizes Black people by portraying them as inherently more composed and restrained under the influence of alcohol, reinforcing a harmful racial hierarchy. This is a hateful stereotype that implies Black people are 'too good' to be wild, which is a form of racialized stereotyping and systemic racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who are familiar with or perpetuate racial stereotypes, particularly those who may find humor in or endorse the idea of inherent racial behavioral differences. The meme is designed to appeal to an audience that accepts or enjoys racially charged humor, often rooted in the 'model minority' or 'composed Black person' tropes, and may be circulated within online communities that normalize or celebrate such stereotypes. The audience is likely to include people who are unaware of the harmful nature of the content or who find the comparison amusing, despite its racist undertones.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/36597.png",
+    "image_name": "36597.png",
+    "extraction_timestamp": "2025-12-15T23:28:50.997218",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 20,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

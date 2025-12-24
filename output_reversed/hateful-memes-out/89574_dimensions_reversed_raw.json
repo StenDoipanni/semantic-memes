@@ -1,0 +1,205 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: i'm cute; hasOverallIntent: Harmful; overall-intent-description: The image depicts a person with visible developmental disabilities, overlaid with the text 'i'm cute.' This juxtaposition maps the visual representation of a person with a disability onto a phrase that infantilizes and reduces their identity to a superficial, childlike aesthetic. The intent is not to celebrate or affirm the person's dignity but to frame their existence through the lens of 'cuteness,' which is a form of ableist infantilization. This trope is harmful because it diminishes the person's autonomy, competence, and full humanity by equating their worth with aesthetic appeal rather than their individuality, capabilities, or lived experience. It reinforces the 'inspiration porn' and 'pity narrative' stereotypes that are central to ableism, potentially causing emotional harm to the individual and perpetuating societal devaluation of people with disabilities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "i'm cute",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "individual with developmental disability",
+      "description": "A woman with visible developmental disability, characterized by distinct facial features and a calm, direct gaze. She is wearing a blue collared shirt and has dark hair pulled back. Her expression is neutral to slightly smiling, and she is looking directly at the camera. The image is a close-up portrait, focusing on her face and upper torso.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "self_portrait_with_text",
+      "label": "Person posing with overlaid text",
+      "description": "A close-up portrait of a person with developmental disability, looking directly at the camera with a neutral to slightly smiling expression. The image is overlaid with the text 'i'm cute' positioned at the top center, creating a direct visual and conceptual juxtaposition between the subject and the infantilizing phrase.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person",
+          "relation": "isDisplayedWith",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "ableism",
+      "description": "The meme relies on the concept of ableism, specifically the infantilization of people with developmental disabilities. The phrase 'i'm cute' is used to reduce the person's identity to a superficial, childlike aesthetic, which is a form of ableist infantilization. This trope is harmful because it diminishes the person's autonomy, competence, and full humanity by equating their worth with aesthetic appeal rather than their individuality, capabilities, or lived experience. It reinforces the 'inspiration porn' and 'pity narrative' stereotypes that are central to ableism, potentially causing emotional harm to the individual and perpetuating societal devaluation of people with disabilities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "self_portrait_with_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "inspiration_porn",
+      "label": "inspiration porn",
+      "description": "A term used to describe media portrayals that depict people with disabilities as inspirational or heroic, often in a way that reinforces pity or infantilization rather than celebrating their autonomy and capabilities. The meme's text 'i'm cute' fits into this trope by reducing the person's identity to a superficial, childlike aesthetic, which is a form of ableist infantilization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "self_portrait_with_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pity_narrative",
+      "label": "pity narrative",
+      "description": "A stereotype that frames people with disabilities as objects of pity or charity, often portraying them as helpless or in need of rescue. The meme's text 'i'm cute' reinforces this narrative by reducing the person's identity to a superficial, childlike aesthetic, which is a form of ableist infantilization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "self_portrait_with_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "developmental_disability_infantilization",
+      "label": "developmental disability infantilization",
+      "description": "A form of ableism that involves reducing people with developmental disabilities to childlike or infantile roles, often by using terms like 'cute' or 'adorable' to describe them. This trope is harmful because it diminishes the person's autonomy, competence, and full humanity by equating their worth with aesthetic appeal rather than their individuality, capabilities, or lived experience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "self_portrait_with_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "infantilization",
+      "label": "infantilizing emotion expression",
+      "description": "The emotion expression is conveyed through the juxtaposition of the person's dignified, neutral-to-slightly-smiling facial expression with the overlaid text 'i'm cute,' which infantilizes her by reducing her identity to a superficial, childlike aesthetic. This creates an emotional tone of devaluation and objectification, rooted in ableist infantilization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The person is mapped as 'cute' by the text",
+      "description": "The text 'i'm cute' is overlaid on the image of the person with developmental disability, creating an analogical mapping where the person is being represented as 'cute'. This mapping infantilizes the person by reducing her identity to a superficial, childlike aesthetic, which is a form of ableist infantilization. The text explicitly assigns the attribute 'cute' to the visual entity, thereby projecting the textual concept onto the person's visual representation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the textual material 'i'm cute' because the text explicitly assigns an infantilizing attribute to the visual subject. The phrase 'i'm cute' functions as a direct projection of the user's perspective onto the text, which then becomes the vehicle for the ableist infantilization of the person depicted. The user is not directly addressed by deictic pronouns like 'you' or 'me', but the text's assertion of 'cute' is a projection of the user's (or meme's) framing onto the subject, making the text the focal point of the semiotic projection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme manifests harmful ableist infantilization by reducing a person with developmental disability to a superficial, childlike aesthetic through the text 'i'm cute.' This diminishes the person's autonomy, competence, and full humanity, reinforcing 'inspiration porn' and 'pity narrative' stereotypes that devalue people with disabilities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who may be familiar with or perpetuate ableist stereotypes, particularly those who find humor or aesthetic appeal in infantilizing people with developmental disabilities. The meme is designed to resonate with viewers who understand or enjoy the 'cute' trope applied to people with disabilities, often as a form of 'inspiration porn' or 'pity narrative' humor. This audience may include internet users who engage with memes that rely on reducing human dignity to superficial aesthetics, and who may not recognize the harm in such portrayals. The meme's appeal is likely to those who are not directly affected by ableism but who consume media that reinforces harmful stereotypes without critical reflection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/89574.png",
+    "image_name": "89574.png",
+    "extraction_timestamp": "2025-12-19T16:53:26.125004",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,242 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: why_are_liberals_so_angry; hasOverallIntent: Harmful; overall-intent-description: The meme uses a photo of actor Jim Parsons as the character Sheldon Cooper from 'The Big Bang Theory' to visually represent a stereotype about liberals being 'angry.' The text juxtaposes this with a false and historically offensive claim: 'its not like republicans can take their slaves away again...' This is a harmful and misleading analogy that invokes the racist historical institution of slavery to mock political opponents. The meme is designed to provoke a reaction by using a false equivalence and a deeply offensive historical reference, which can cause harm by reinforcing racist tropes and dehumanizing political opponents. The intent is to discredit liberals by associating them with anger and implying their political stance is irrational or rooted in a false historical grievance, thereby influencing viewers to view liberals negatively.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "why are liberals so angry?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Jim_Parsons",
+      "label": "actor",
+      "description": "The central figure in the image, portraying the character Sheldon Cooper from the TV show 'The Big Bang Theory'. He is shown seated, wearing a dark jacket over a light blue checkered shirt and a dark red tie, with a microphone clipped to his shirt. His expression is one of mild annoyance or exasperation, which is commonly used in memes to convey a sarcastic or dismissive reaction. His presence is the primary visual anchor of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "sarcastic_reaction_scene",
+      "label": "sarcastic_reaction_scene",
+      "description": "A scene depicting Jim Parsons portraying Sheldon Cooper, seated and displaying a mild annoyance or exasperation, which is used to convey a sarcastic or dismissive reaction to the overlaid text. The scene is framed to emphasize his facial expression and body language as a visual anchor for the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "liberals",
+      "label": "Political Ideology Group",
+      "description": "Refers to individuals who identify with or support liberal political beliefs, typically associated with progressive social policies, support for individual rights, and often opposition to conservative policies. In the meme, it is used as a target of stereotyping and mockery, implying that liberals are 'angry' in a derogatory way.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "republicans",
+      "label": "Political Ideology Group",
+      "description": "Refers to individuals who identify with or support Republican political beliefs, typically associated with conservative social policies, support for traditional values, and often opposition to liberal policies. In the meme, it is used as a contrast to 'liberals' and is falsely associated with the historical institution of slavery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "slavery",
+      "label": "Historical Institution",
+      "description": "The system of forced labor and human bondage that existed in the United States and other countries, primarily in the 17th to 19th centuries. The meme falsely implies that Republicans can 'take their slaves away again,' which is a racist and historically offensive reference to the institution of slavery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "The_Big_Bang_Theory",
+      "label": "Television Show",
+      "description": "A popular American sitcom that aired from 2007 to 2019, featuring the character Sheldon Cooper, portrayed by actor Jim Parsons. The meme uses the image of Sheldon Cooper to visually represent a stereotype about liberals being 'angry,' leveraging his character's known persona of being sarcastic and dismissive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Jim_Parsons",
+      "label": "Actor",
+      "description": "The actor who portrays the character Sheldon Cooper in 'The Big Bang Theory.' His image is used in the meme to visually represent a stereotype about liberals being 'angry,' leveraging his character's known persona of being sarcastic and dismissive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sarcastic_reaction_scene",
+      "label": "Visual Scene",
+      "description": "A scene depicting Jim Parsons portraying Sheldon Cooper, seated and displaying a mild annoyance or exasperation, which is used to convey a sarcastic or dismissive reaction to the overlaid text. The scene is framed to emphasize his facial expression and body language as a visual anchor for the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "false_equivalence",
+      "label": "Logical Fallacy",
+      "description": "A rhetorical device that draws an invalid comparison between two things to make an argument. In the meme, it is used to falsely equate the political grievances of liberals with the historical institution of slavery, which is a deeply offensive and misleading analogy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_tropes",
+      "label": "Stereotype",
+      "description": "Deeply offensive and historically rooted stereotypes that dehumanize and mock specific groups, often based on race or ethnicity. The meme invokes racist tropes by using the false equivalence of slavery to mock political opponents, which can cause harm by reinforcing racist narratives.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harmful_meme",
+      "label": "Meme Category",
+      "description": "A meme that is designed to provoke a reaction by using false equivalences and offensive historical references, which can cause harm by reinforcing racist tropes and dehumanizing political opponents. The meme is intended to discredit liberals by associating them with anger and implying their political stance is irrational or rooted in a false historical grievance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "annoyance",
+      "label": "the annoyed expression",
+      "description": "Jim Parsons, portraying Sheldon Cooper, displays a facial expression of mild annoyance or exasperation, characterized by a slightly furrowed brow, a neutral to slightly downturned mouth, and a dismissive gaze. This expression is commonly used in memes to convey sarcasm or a dismissive reaction to a question or statement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Liberals are mapped onto Sheldon Cooper",
+      "description": "The top text 'why are liberals so angry?' is mapped onto the visual of Jim Parsons as Sheldon Cooper. The meme uses Sheldon's sarcastic and annoyed expression to visually represent the stereotype that liberals are 'angry,' implying that the character (and by extension, the group he represents) is the source of the anger being questioned. This is an analogical mapping where the textual entity 'liberals' is projected onto the visual entity 'Sheldon Cooper' through the character's demeanor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the sarcastic reaction scene",
+      "description": "The user is projected onto the visual scene of Jim Parsons as Sheldon Cooper, who is depicted with a sarcastic and annoyed expression. This expression is used to represent the stereotype that liberals are 'angry,' and the user is implicitly identifying with or projecting their own perception of this stereotype onto the character's demeanor. The meme's structure invites the user to see themselves as the one questioning or reacting to the 'angry liberals' stereotype, thereby projecting their own viewpoint onto the visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a false equivalence by comparing political grievances to the historical institution of slavery, which is a deeply offensive and misleading analogy that can cause harm by reinforcing racist tropes and dehumanizing political opponents.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are politically aware and engaged in partisan debates, particularly those who identify with or support conservative political ideologies (republicans). The meme is designed to resonate with this group by using a sarcastic visual of Sheldon Cooper to mock liberals, implying that their political anger is irrational or rooted in a false historical grievance. The false equivalence to slavery is intended to provoke a reaction among conservatives who may find the comparison offensive or humorous, thereby reinforcing their own political identity and potentially alienating liberals. The meme leverages cultural references to 'The Big Bang Theory' and the character Sheldon Cooper, who is widely recognized, to appeal to viewers familiar with the show and its comedic tone. The use of Jim Parsons as the visual anchor further targets audiences who recognize the actor and his portrayal of a character known for sarcasm and dismissiveness, which aligns with the meme's tone. The meme's harmful intent and racist tropes are directed at liberals, but the primary audience for the meme's message is likely conservative viewers who are familiar with the political caricature and the historical reference to slavery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/67810.png",
+    "image_name": "67810.png",
+    "extraction_timestamp": "2025-12-16T08:59:00.693666",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 18,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,63 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "film_set_scene",
+      "participants": [
+        {
+          "entity": "woman",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "crew_member_1",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "crew_member_2",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "crew_member_3",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "center_of_attention",
+          "to": "film_set_scene"
+        },
+        {
+          "from": "crew_member_1",
+          "relation": "working_around",
+          "to": "woman"
+        },
+        {
+          "from": "crew_member_2",
+          "relation": "working_around",
+          "to": "woman"
+        },
+        {
+          "from": "crew_member_3",
+          "relation": "working_around",
+          "to": "woman"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":film_set_scene :hasParticipant :woman .",
+    ":film_set_scene :hasParticipant :crew_member_1 .",
+    ":film_set_scene :hasParticipant :crew_member_2 .",
+    ":film_set_scene :hasParticipant :crew_member_3 .",
+    ":woman :center_of_attention :film_set_scene .",
+    ":crew_member_1 :working_around :woman .",
+    ":crew_member_2 :working_around :woman .",
+    ":crew_member_3 :working_around :woman ."
+  ],
+  "triples_count": 8
+}

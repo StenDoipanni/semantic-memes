@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: obama_vote_for_me_kfc_koolaid_watermelon; hasOverallIntent: harmful; overall-intent-description: The image features a smiling Barack Obama with overlaid text that reads 'vote for me' and 'free kfc, grape kool aid, & watermelon.' This juxtaposition maps the image of a respected political figure onto a set of racially coded food stereotypes historically associated with Black Americans — particularly the 'watermelon and fried chicken' trope. This trope is a harmful and derogatory stereotype rooted in racist caricatures that reduce Black people to their consumption of specific foods, implying laziness, dependency, or cultural inferiority. The meme's intent is to mock or trivialize Obama's political campaign by invoking these offensive stereotypes, thereby potentially inciting racial resentment or reinforcing harmful biases. While not overtly abusive or hateful toward a specific individual, it leverages racist imagery to undermine the legitimacy of his candidacy or to entertain through a demeaning lens, making it a harmful meme that perpetuates racial stereotypes and can contribute to a hostile environment for Black individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "vote for me",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Barack_Obama",
+      "label": "political figure",
+      "description": "A smiling man with short graying hair, wearing a dark suit, light blue shirt, and dark tie. He is positioned centrally in the frame, looking slightly upward and to his right, with a wide, toothy grin. His expression conveys enthusiasm or joy. He is the primary subject of the image and the focal point of the meme's visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "campaign_promotion",
+      "label": "campaign_promotion",
+      "description": "A scene depicting Barack Obama in a campaign setting, smiling broadly while text overlays promote a fictional policy of 'free kfc, grape kool aid, & watermelon' as a political incentive to 'vote for me'. The scene combines the visual of a political figure with satirical, racially coded text to create a meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Barack_Obama",
+          "relation": "isSubjectOf",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "overlays",
+          "to": "Barack_Obama"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "watermelon_and_fried_chicken_stereotype",
+      "label": "Watermelon and Fried Chicken Stereotype",
+      "description": "A racist caricature historically used to depict Black Americans as lazy, dependent, or culturally inferior, often associating them with consumption of watermelon and fried chicken. This stereotype is rooted in minstrelsy and has been used to justify systemic racism and economic exploitation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "barack_obama",
+      "label": "Barack Obama",
+      "description": "The 44th President of the United States, elected in 2008 and re-elected in 2012. His campaign and presidency were historic, representing the first African American president. The meme uses his image to invoke racial stereotypes, which is contextually significant.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "kfc",
+      "label": "KFC (Kentucky Fried Chicken)",
+      "description": "A global fast-food chain known for fried chicken. In the context of the meme, it is used as part of a racially coded food stereotype associated with Black Americans, implying dependency or laziness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "grape_kool_aid",
+      "label": "Grape Kool-Aid",
+      "description": "A flavored drink historically associated with the 'watermelon and fried chicken' stereotype. Its inclusion in the meme reinforces the racially coded imagery, implying a simplistic or stereotypical view of Black culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "campaign_promotion",
+      "label": "Campaign Promotion",
+      "description": "The act of promoting a political candidate or policy to gain votes. The meme uses this concept to juxtapose a serious political figure with a satirical, racially coded offer, undermining the legitimacy of the campaign through mockery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_stereotype",
+      "label": "Racial Stereotype",
+      "description": "A widely held but fixed and oversimplified belief about a particular group of people. The meme relies on racial stereotypes to create its harmful effect, specifically targeting Black Americans through food-based caricatures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "enthusiastic joy",
+      "description": "Barack Obama is depicted with a wide, toothy grin and crinkled eyes, conveying genuine enthusiasm or joy. His upward gaze and open expression suggest excitement or satisfaction, likely in the context of a campaign event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Barack Obama is mapped as the candidate offering free food",
+      "description": "The top text 'vote for me' directly maps Barack Obama (the visual entity) as the political candidate making a campaign promise. The visual of Obama smiling and looking upward, combined with the text, creates an analogical mapping where the political figure is projected as the entity soliciting votes through the offer of 'free kfc, grape kool aid, & watermelon'. This mapping is reinforced by the campaign setting and the juxtaposition of his image with the satirical, racially coded text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the campaign promotion scene",
+      "description": "The user is projected onto the scene of Barack Obama's campaign promotion, where the visual of Obama smiling and the text 'vote for me' and 'free kfc, grape kool aid, & watermelon' create an implicit invitation for the user to imagine themselves as the voter being targeted by this satirical offer. The meme's structure invites the user to mentally inhabit the role of the recipient of the 'free food' promise, thereby projecting the user onto the campaign promotion scene as the potential beneficiary or target of the political message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme leverages a racially coded food stereotype — 'watermelon and fried chicken' — historically used to depict Black Americans as lazy, dependent, or culturally inferior. By mapping this stereotype onto Barack Obama, the meme trivializes his political campaign and reinforces harmful racial biases, potentially inciting racial resentment and contributing to a hostile environment for Black individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with or recognize the racial stereotype of Black Americans being associated with 'watermelon and fried chicken,' and who may find humor in the juxtaposition of a respected political figure with racially coded, satirical campaign promises. This audience likely includes people who are aware of the historical context of the stereotype and may be drawn to the meme for its provocative, racially charged humor, even if it is harmful. The meme is designed to resonate with those who understand the cultural reference and may be entertained by the mockery of Obama's campaign through the lens of offensive stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/06714.png",
+    "image_name": "06714.png",
+    "extraction_timestamp": "2025-12-15T12:50:50.921924",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

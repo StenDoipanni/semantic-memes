@@ -1,0 +1,186 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts a solemn funeral scene with uniformed officers carrying a casket draped in the Nigerian flag. The overlaid text reads, 'those who die in blue, are remembered forever.' The phrase 'die in blue' is a common tribute to law enforcement officers who sacrifice their lives in the line of duty, and the Nigerian flag signifies national pride and mourning. The overall intent is to honor fallen officers and evoke a sense of respect, remembrance, and patriotism. There is no toxicity present in this meme; it does not contain abusive, cyberbullying, harmful, hateful, misogynous, or propagandistic content. The intent is commemorative and respectful, using the visual of a state funeral and the symbolic flag to convey a message of enduring memory for those who serve and protect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "those who die in blue, are remembered forever",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "uniformed_officers",
+      "label": "people",
+      "description": "Multiple uniformed officers, likely law enforcement or military personnel, are visible. They are wearing dark blue uniforms with badges, epaulets, and caps. Some are carrying a casket, while others stand in formation around it. Their expressions are solemn, indicating a formal, respectful occasion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "funeral_ceremony",
+      "label": "funeral_ceremony",
+      "description": "A solemn funeral scene where uniformed officers are carrying a casket draped in the Nigerian flag. The officers are arranged in formation around the casket, indicating a formal and respectful occasion. The overlaid text 'those who die in blue, are remembered forever' reinforces the commemorative nature of the scene, honoring fallen law enforcement officers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "uniformed_officers",
+          "relation": "carry",
+          "to": "casket"
+        },
+        {
+          "from": "uniformed_officers",
+          "relation": "stand_around",
+          "to": "casket"
+        },
+        {
+          "from": "text",
+          "relation": "overlay_on",
+          "to": "funeral_ceremony"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "concept_die_in_blue",
+      "label": "Concept: 'Die in Blue'",
+      "description": "A phrase used to honor law enforcement officers who die while serving in the line of duty. The term 'blue' refers to the color of police uniforms, symbolizing their service and sacrifice. This concept is widely recognized in policing communities and public discourse as a tribute to fallen officers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "funeral_ceremony",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nigerian_flag",
+      "label": "Nigerian National Flag",
+      "description": "The flag of Nigeria, featuring green, white, and green vertical stripes, symbolizes the country's natural wealth, peace, and unity. Its use in a funeral context signifies national mourning and respect for the deceased, who is likely a Nigerian national or public servant.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "funeral_ceremony",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "law_enforcement_officers",
+      "label": "Law Enforcement Officers",
+      "description": "Public servants who maintain order and protect citizens. The term 'die in blue' specifically refers to their sacrifice in the line of duty. Their uniforms and solemn demeanor in the image are culturally recognized symbols of service and honor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "uniformed_officers",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "national_pride_and_mourning",
+      "label": "National Pride and Mourning",
+      "description": "The act of honoring a fallen officer with national symbols like the flag, combined with formal military or police honors, reflects a cultural and national response to loss. It conveys collective grief and respect for service to the nation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "funeral_ceremony",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "nigerian_flag",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "solemnity",
+      "label": "solemn emotional expression",
+      "description": "The uniformed officers display serious, respectful, and somber facial expressions, indicating deep mourning and reverence for the deceased. Their focused gazes and formal posture reinforce the gravity of the occasion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Fallen officers are remembered forever",
+      "description": "The text 'those who die in blue, are remembered forever' is mapped onto the visual of uniformed officers carrying a casket draped in the Nigerian flag. The phrase 'die in blue' refers to law enforcement officers who sacrifice their lives in the line of duty, and the visual of the officers in uniform, solemnly carrying the casket, represents those fallen officers. The text explicitly identifies the officers in the image as the subjects of the phrase 'those who die in blue', creating an analogical mapping between the textual concept and the visual representation of law enforcement officers in a funeral context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User is projected onto the textual message as a collective observer of remembrance",
+      "description": "The user is not explicitly projected onto any specific visual material or scene via deictic pronouns like 'me', 'you', or 'your'. However, the textual material 'those who die in blue, are remembered forever' functions as a direct address to the viewer, inviting them to identify with the sentiment of remembrance and honor. The user is projected onto the text_chunk as the implied recipient of the commemorative message, making the text the focal point of the semiotic projection. The solemn visual scene reinforces this projection by grounding the abstract text in a tangible, emotionally resonant context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is law enforcement officers and their families, as well as the general public in Nigeria who recognize and honor fallen officers. The phrase 'die in blue' is a widely understood tribute to police officers who sacrifice their lives in the line of duty, and the Nigerian flag indicates national mourning, making the message relevant to both the policing community and the broader Nigerian populace. The solemn funeral scene with uniformed officers carrying a casket reinforces the commemorative intent for those who serve and protect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/53182.png",
+    "image_name": "53182.png",
+    "extraction_timestamp": "2025-12-16T04:51:23.273706",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

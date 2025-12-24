@@ -1,0 +1,189 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: jokes-dont-kill-people-meme; hasOverallIntent: Harmful; overall-intent-description: The meme uses a close-up image of a mosquito biting human skin, juxtaposed with the text 'jokes don't kill people' at the top and 'they kill people' at the bottom. The visual metaphor implies that while jokes are harmless, mosquitoes (which transmit deadly diseases) are the real killers — suggesting that jokes are not dangerous, but the act of biting (or the disease it spreads) is. The intent is to humorously downplay the perceived danger of jokes by contrasting them with a biological threat. While not overtly toxic or hateful, the meme's 'harmful' intent stems from its potential to trivialize serious issues (like disease transmission) or to be misused to justify harmful behavior (e.g., dismissing the seriousness of jokes in sensitive contexts). The meme does not contain any abusive, cyberbullying, misogynistic, or propagandistic elements, nor does it target any specific protected group. Its humor is based on a literal visual analogy, not on stereotypes or harmful tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "jokes don't kill people",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "mosquito",
+      "label": "insect",
+      "description": "A close-up of a mosquito, likely a female, perched on human skin. It is shown in the act of biting, with its proboscis inserted into the skin. The mosquito has a dark, segmented body, long slender legs, and transparent wings. Its presence is the central visual element and serves as the metaphorical 'killer' in the meme's text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "mosquito_biting_scene",
+      "label": "mosquito biting human skin",
+      "description": "A close-up scene showing a mosquito perched on human skin, actively biting. The mosquito is the central visual element, positioned directly on the skin, with its proboscis inserted. The scene is framed to emphasize the act of biting, and the text overlay provides a humorous contrast by implying the mosquito is the 'killer' while jokes are not.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "mosquito",
+          "relation": "biting",
+          "to": "human_skin"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mosquito_disease_transmission",
+      "label": "Mosquitoes transmit deadly diseases",
+      "description": "The meme relies on the real-world knowledge that mosquitoes, particularly female mosquitoes, are vectors for deadly diseases such as malaria, dengue fever, Zika virus, and West Nile virus. This knowledge is essential to understand the metaphor: the mosquito is portrayed as the 'killer' because it spreads disease, contrasting with the harmless nature of jokes. Without this background knowledge, the visual metaphor would not convey its intended humorous or ironic message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "mosquito",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "mosquito_biting_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "joke_harmlessness_stereotype",
+      "label": "Stereotype that jokes are harmless",
+      "description": "The meme plays on the common cultural stereotype that jokes are harmless and cannot cause physical harm or death. This is the implicit background knowledge that allows the contrast with the mosquito to be humorous — the joke is 'safe' while the mosquito is 'dangerous.' This stereotype is widely understood in popular culture, making the meme relatable and funny to many viewers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "joke_trivialization_concept",
+      "label": "Concept of trivializing serious issues through humor",
+      "description": "The meme's 'harmful' intent, as noted in the overall intent, stems from its potential to trivialize serious issues — such as disease transmission or public health — by comparing them to jokes. This requires background knowledge about how humor can be used to downplay or dismiss real-world dangers, which is a common social phenomenon. Understanding this concept is necessary to interpret the meme's deeper implications.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "mosquito_biting_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mosquito_as_metaphor",
+      "label": "Mosquito as a metaphor for danger or threat",
+      "description": "The meme uses the mosquito as a visual metaphor for something that appears small or insignificant but is actually dangerous. This metaphorical use requires background knowledge about how metaphors function in language and culture — that is, how a small insect can symbolize a larger, more serious threat. This is a common rhetorical device in humor and satire.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "mosquito",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "mosquito_biting_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "humor",
+      "label": "humorous emotion",
+      "description": "The emotion expressed through the meme's juxtaposition of a harmless joke with a deadly mosquito, creating a comedic contrast that relies on the audience's understanding of both the literal danger of mosquitoes and the cultural stereotype of jokes being harmless.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "joke_mosquito_mapping",
+      "label": "jokes are mapped onto the mosquito",
+      "description": "The top text 'jokes don't kill people' is juxtaposed with the visual of a mosquito biting human skin. The meme creates an analogical mapping where the mosquito (a known vector of deadly disease) is metaphorically mapped onto 'jokes' as the 'killer' — implying that while jokes are harmless, the mosquito (representing disease transmission) is the real danger. This mapping is based on the visual metaphor: the mosquito is the 'killer' in the meme's logic, contrasting with the textual claim that jokes are not killers. The mapping is formalized by projecting the textual concept 'jokes' onto the visual entity 'mosquito' to create the humorous contrast.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the mosquito as the metaphorical 'killer'",
+      "description": "The user is projected onto the visual material of the mosquito, which serves as the central metaphorical entity in the meme. The user, as the viewer, is implicitly positioned as the one who understands the joke and the visual metaphor — that the mosquito (representing disease transmission) is the 'killer' while jokes are not. This projection occurs through the visual material and the textual contrast, where the user must interpret the mosquito as the 'killer' to grasp the meme's humor. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the projection is implicit in the act of viewing and interpreting the visual metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme's intent to humorously downplay the perceived danger of jokes by contrasting them with a biological threat (mosquitoes that transmit deadly diseases) has the potential to trivialize serious public health issues. While not overtly abusive or hateful, the meme's 'harmful' intent stems from its potential to be misused to justify harmful behavior (e.g., dismissing the seriousness of jokes in sensitive contexts) or to downplay real-world dangers through a comedic analogy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with common humor tropes, visual metaphors, and the cultural stereotype that jokes are harmless. It relies on widely understood background knowledge about mosquitoes transmitting disease and the humorous contrast between harmless jokes and deadly biological threats. The target community includes individuals who appreciate absurdist or ironic humor, particularly those who understand the meme’s visual analogy and can interpret the juxtaposition of text and image. The meme does not target any specific demographic, protected group, or subculture, making it broadly accessible to anyone with basic literacy and cultural awareness of internet humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/96153.png",
+    "image_name": "96153.png",
+    "extraction_timestamp": "2025-12-19T18:58:07.814666",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

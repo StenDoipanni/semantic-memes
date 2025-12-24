@@ -1,0 +1,224 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: come_to_the_dark_side_we_have_weed; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes Snoop Dogg, a Black cultural icon associated with cannabis, with Darth Vader and Stormtroopers from Star Wars, using the text 'come to the dark side, we have weed.' The intent is to humorously suggest that the 'dark side' (a symbol of evil and authoritarianism) is more appealing because it offers weed. While not overtly abusive or hateful toward any specific group, it relies on the association of Black culture with marijuana, which can perpetuate harmful stereotypes about Black people being inherently linked to drug use. This can be seen as a form of cultural appropriation or reinforcement of a stereotype that may be offensive to some, making the meme potentially harmful by reinforcing a negative and reductive association. The humor is derived from the contrast between the dark side's villainy and the 'benefit' of weed, which may trivialize serious issues around drug use and racial stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "come to the dark side",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Snoop_Dogg",
+      "label": "Person",
+      "description": "A Black man with dreadlocks, wearing sunglasses and a black-and-white Adidas tracksuit with a Darth Vader graphic on the front. He is the central figure on the left side of the image, looking toward the right with a serious expression. His presence is salient due to his prominence, recognizable appearance, and cultural association with cannabis.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "dark_side_recruitment",
+      "label": "Darth Vader recruiting Snoop Dogg to the dark side",
+      "description": "A scene where Darth Vader, representing the dark side, is positioned to the right of Snoop Dogg, who is looking toward him. The text 'come to the dark side' and 'we have weed' frames the interaction as a humorous recruitment pitch. Snoop Dogg's attire, featuring a Darth Vader graphic, reinforces the thematic connection between the two figures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Snoop_Dogg",
+          "relation": "isBeingRecruitedBy",
+          "to": "Darth_Vader"
+        },
+        {
+          "from": "Darth_Vader",
+          "relation": "offers",
+          "to": "Snoop_Dogg"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_cannabis",
+      "label": "Anti-Black Stereotype: Cannabis Use",
+      "description": "The meme relies on the stereotype that Black people are inherently associated with marijuana use, which is a harmful and reductive stereotype. This stereotype is not visible in the image but is implied by the juxtaposition of Snoop Dogg (a Black cultural icon) with the 'dark side' offering 'weed'. This association perpetuates a negative and racially charged trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Snoop_Dogg",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "dark_side_recruitment",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "star_wars_dark_side",
+      "label": "Star Wars: The Dark Side",
+      "description": "The 'dark side' is a fictional concept from the Star Wars universe, representing evil, authoritarianism, and moral corruption. The meme uses this concept as a humorous contrast to the 'benefit' of weed, implying that the dark side is more appealing because it offers weed. This requires knowledge of Star Wars lore to understand the irony and the juxtaposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dark_side_recruitment",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "star_wars_darth_vader",
+      "label": "Star Wars: Darth Vader",
+      "description": "Darth Vader is a fictional character from Star Wars, the primary antagonist of the original trilogy, symbolizing evil and authoritarian power. His presence in the meme as the recruiter for the 'dark side' is a direct reference to his role in the Star Wars universe, which is not visible in the image but is essential to understanding the meme's setup.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dark_side_recruitment",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "star_wars_stormtroopers",
+      "label": "Star Wars: Stormtroopers",
+      "description": "Stormtroopers are fictional soldiers from the Star Wars universe, known for their loyalty to the Galactic Empire and their association with the dark side. Their presence in the background reinforces the 'dark side' theme of the meme, requiring knowledge of Star Wars to fully comprehend the context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dark_side_recruitment",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cannabis_use",
+      "label": "Cannabis Use",
+      "description": "The phrase 'we have weed' refers to marijuana, a psychoactive drug. The meme uses this reference to imply that the dark side offers a 'benefit' (weed) to entice Snoop Dogg. This requires real-world knowledge of cannabis as a drug and its cultural associations, particularly with Black communities, to understand the meme's humor and its underlying problematic stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dark_side_recruitment",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "snoop_dogg_cultural_icon",
+      "label": "Snoop Dogg as a Cultural Icon",
+      "description": "Snoop Dogg is a real-world cultural icon known for his association with cannabis, hip-hop music, and his distinctive style. His presence in the meme is not just visual but symbolic, representing the 'weed' culture. This requires knowledge of his public persona and cultural significance to understand the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Snoop_Dogg",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "dark_side_recruitment",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_condescension",
+      "label": "mocking and condescending tone",
+      "description": "The meme uses the juxtaposition of Darth Vader, a symbol of evil and authoritarianism, offering 'weed' to Snoop Dogg, a Black cultural icon associated with cannabis, to create a humorous and mocking tone. The text 'come to the dark side, we have weed' implies that the dark side is more appealing because it offers weed, which is a sarcastic and condescending framing of the situation. This tone is conveyed through the visual contrast and the text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The dark side is represented by Darth Vader and Stormtroopers",
+      "description": "The text 'come to the dark side' is mapped onto the visual entities of Darth Vader and the Stormtroopers, who are iconic representations of the dark side in Star Wars. The visual presence of Darth Vader as the recruiter and Stormtroopers as his loyal followers directly embodies the textual concept of 'the dark side'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the recruitment scene",
+      "description": "The user is projected onto the scene where Darth Vader is recruiting Snoop Dogg to the dark side, with the text 'come to the dark side, we have weed.' The humor and intent of the meme invite the user to imagine themselves in Snoop Dogg's position, being offered a choice by the dark side. The user is implicitly positioned as the potential recruit, making the scene a direct projection of the user's perspective.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme perpetuates a harmful stereotype by associating Black people with cannabis use, which can reinforce negative and reductive racial tropes. The humor derived from this juxtaposition may trivialize serious issues around drug use and racial stereotypes, making it potentially harmful to the Black community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The meme is designed for an audience familiar with both Star Wars culture and hip-hop music, particularly those who recognize Snoop Dogg as a cultural icon associated with cannabis. The humor relies on the juxtaposition of Darth Vader’s dark side recruitment with the offer of weed, which is culturally linked to Snoop Dogg. This requires knowledge of Star Wars lore (Darth Vader, Stormtroopers, the dark side) and awareness of Snoop Dogg’s public persona and association with marijuana. The target audience likely includes fans of pop culture, internet meme culture, and those who appreciate ironic or absurdist humor that plays on racial stereotypes, even if unintentionally. The meme’s appeal is rooted in its ability to combine recognizable fictional characters with real-world cultural figures, making it accessible to a broad audience with a general knowledge of both domains.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/32579.png",
+    "image_name": "32579.png",
+    "extraction_timestamp": "2025-12-15T22:28:03.845533",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

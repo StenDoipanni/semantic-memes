@@ -1,0 +1,210 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "dimension_1",
+      "label": "the overallintent",
+      "description": "The image depicts U.S. soldiers observing bodies in a crematorium oven, with text overlay claiming to show ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "the horrors of the holocaust three u.s. soldiers look at bodies",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "U_S_soldier",
+      "label": "person",
+      "description": "A U.S. soldier wearing a helmet and uniform, bending over to look into an oven. He is one of three soldiers depicted in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "observing_bodies_in_crematorium",
+      "label": "U.S. soldiers observing bodies in a crematorium oven",
+      "description": "A scene depicting U.S. soldiers examining human remains inside a crematorium oven. The soldiers are positioned around the oven, with one bending over to look inside and another standing nearby. The oven is built into a brick wall and contains charred bodies. The scene is framed by text overlays describing the context as 'the horrors of the Holocaust' and 'bodies stuffed into an oven in a crematorium'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "U_S_soldier",
+          "relation": "looks_at",
+          "to": "bodies_in_oven"
+        },
+        {
+          "from": "U_S_soldier",
+          "relation": "stands_near",
+          "to": "oven"
+        },
+        {
+          "from": "U_S_soldier",
+          "relation": "bends_over",
+          "to": "oven"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "holocaust",
+      "label": "The Holocaust",
+      "description": "A genocide during World War II in which Nazi Germany and its collaborators systematically murdered approximately six million Jews, along with millions of others including Roma, disabled individuals, Poles, Soviet prisoners of war, and others. The crematoriums depicted in the image were part of the Nazi death camps (e.g., Auschwitz-Birkenau) where bodies were incinerated to hide evidence of mass murder. Understanding this historical event is essential to interpret the text overlay's reference to 'the horrors of the Holocaust'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "crematorium",
+      "label": "Crematorium",
+      "description": "A facility designed for the incineration of human remains. In the context of the Holocaust, crematoria were part of Nazi death camps and were used to dispose of the bodies of victims on a massive scale. The image shows a crematorium oven, which is a key piece of infrastructure in the genocide. Knowledge of its function and historical context is necessary to understand the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_semitism",
+      "label": "Anti-Semitism",
+      "description": "A long-standing prejudice and discrimination against Jewish people, often rooted in religious, cultural, and racial stereotypes. The Holocaust was the culmination of centuries of anti-Semitic persecution in Europe. The meme's reference to 'the horrors of the Holocaust' implicitly invokes this historical and ideological context, which is central to understanding the gravity of the event depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "holocaust_denial_minimization",
+      "label": "Holocaust Denial/Minimization",
+      "description": "The act of denying, downplaying, or trivializing the Holocaust and its atrocities. The text overlay in the image, which states 'the horrors of the holocaust', is a direct counter to such denial. Understanding this concept is necessary to recognize that the image is meant to convey the gravity of the event, not to be dismissed or minimized.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "us_soldier",
+      "label": "U.S. Soldier",
+      "description": "A member of the United States Armed Forces. The image shows U.S. soldiers observing the aftermath of the Holocaust. Their presence is significant as they were part of the Allied forces that liberated the camps. Knowledge of their role in WWII and the liberation of concentration camps is necessary to understand the context of their actions in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "horror",
+      "label": "horror emotion",
+      "description": "The soldiers' expressions and posture convey shock and revulsion at the sight of human remains in the crematorium oven, reflecting the profound horror of witnessing the aftermath of mass murder.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "U.S. soldiers observing bodies in a crematorium are mapped as witnesses to the horrors of the Holocaust",
+      "description": "The top text overlay 'the horrors of the holocaust three u.s. soldiers look at bodies' explicitly identifies the U.S. soldiers in the image as observers of the Holocaust's atrocities. The visual material of the soldiers looking into the crematorium oven is directly mapped onto this textual description, establishing that the soldiers are the subjects of the horror narrative described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of U.S. soldiers observing bodies in a crematorium",
+      "description": "The user is projected onto the scene 'observing_bodies_in_crematorium' where U.S. soldiers are depicted looking at bodies in a crematorium oven. This projection is implicit, as the user is invited to identify with the witnessing role, viewing the historical horror through the lens of the soldiers' perspective. The text overlay 'the horrors of the holocaust three u.s. soldiers look at bodies' frames the scene as a collective witness experience, which the user is expected to mentally inhabit.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Holocaust Denial/Minimization",
+      "description": "The text overlay 'the horrors of the holocaust three u.s. soldiers look at bodies' is a direct counter to Holocaust denial/minimization themes. The image, depicting U.S. soldiers observing bodies in a crematorium, is meant to convey the gravity of the event, not to be dismissed or minimized. The meme manifests toxicity by potentially trivializing or misrepresenting the Holocaust through its framing, which could be interpreted as minimizing the scale or horror of the genocide.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general public",
+      "description": "The meme is designed for a broad general public audience, likely aiming to evoke emotional responses related to historical atrocities. The imagery and text are intended to be universally recognizable as depicting the Holocaust, targeting viewers with general historical awareness or education about WWII and the Holocaust.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/72850.png",
+    "image_name": "72850.png",
+    "extraction_timestamp": "2025-12-19T11:32:02.196995",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

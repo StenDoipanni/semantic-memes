@@ -1,0 +1,179 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: white_kids_be_like_i_have_had_enough; hasOverallIntent: Hateful; overall-intent-description: The image depicts a person with a distressed expression, covering their face with their hands, overlaid with the text 'white kids be like \"i have had enough\"'. The overall intent is to portray white children as emotionally overwhelmed or exhausted, likely in a context of social or political frustration. This meme uses a visual of apparent distress to imply that white children are overwhelmed by societal pressures or systemic issues. While the text is framed as a humorous or exaggerated statement, the use of 'white kids' as a target group, combined with the visual of emotional distress, can be interpreted as a form of racial stereotyping or coded commentary that may be perceived as harmful or offensive. The meme does not directly target individuals but uses a racialized group as a subject for a generalized emotional state, which can be seen as a form of hateful content due to its potential to reinforce negative stereotypes or provoke division based on race. The intent is to evoke a reaction through the juxtaposition of the image and text, suggesting that white children are emotionally burdened by societal expectations or systemic issues, which may be perceived as a form of racialized commentary.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "white kids be like \"i have had enough\"",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "human individual",
+      "description": "A person with dark hair and red nail polish, partially covering their face with their hands, showing one eye with visible tears, conveying distress or emotional overwhelm. The person appears to be female based on visible features and nail polish style, but gender is not definitively determinable from the image alone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "emotional_overwhelm_scene",
+      "label": "person_experiencing_emotional_overwhelm",
+      "description": "A person with dark hair and red nail polish is covering their face with their hands, showing one eye with visible tears, conveying distress or emotional overwhelm. The scene is overlaid with the text 'white kids be like \"i have had enough\"', suggesting the person is representing a group feeling emotionally exhausted or overwhelmed by societal pressures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_stereotype_targeting_white_kids",
+      "label": "Racial Stereotype Targeting White Kids",
+      "description": "The meme uses the phrase 'white kids be like' to imply that white children are emotionally overwhelmed or exhausted, likely in a context of social or political frustration. This is a racialized commentary that targets a specific racial group (white kids) as a subject for a generalized emotional state, which can be interpreted as a form of racial stereotyping or coded commentary. The meme does not directly target individuals but uses a racialized group as a subject for a generalized emotional state, which can be seen as a form of hateful content due to its potential to reinforce negative stereotypes or provoke division based on race.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "emotional_overwhelm_as_stereotype",
+      "label": "Emotional Overwhelm as Stereotype",
+      "description": "The visual of a person with a distressed expression, covering their face with their hands, is used to imply that white children are overwhelmed by societal pressures or systemic issues. This visual metaphor is not directly visible in the image but is implicitly referenced in the meme's text and intent. The use of this visual to represent a racialized group's emotional state is a form of stereotyping that relies on real-world knowledge about how emotional distress is culturally interpreted and associated with specific groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_kids_as_social_group",
+      "label": "White Kids as Social Group",
+      "description": "The term 'white kids' refers to a racialized social group in the context of the meme. This group is implicitly referenced in the text and is not directly visible in the image. The meme uses this group as a subject for a generalized emotional state, which relies on real-world knowledge about racial categorization and social groupings in contemporary discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_content_context",
+      "label": "Hateful Content Context",
+      "description": "The meme is interpreted as hateful content due to its potential to reinforce negative stereotypes or provoke division based on race. This interpretation relies on real-world knowledge about how memes and internet culture can be used to spread harmful or divisive messages, particularly when targeting racialized groups. The overall intent of the meme is to evoke a reaction through the juxtaposition of the image and text, suggesting that white children are emotionally burdened by societal expectations or systemic issues, which may be perceived as a form of racialized commentary.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "emotional_overwhelm",
+      "label": "emotional overwhelm expression",
+      "description": "The person is covering their face with their hands, with one eye visible and tear-streaked, conveying a state of distress, exhaustion, or being emotionally overwhelmed. This is a strong visual cue of emotional burden or fatigue.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "white kids are mapped onto the distressed person",
+      "description": "The text 'white kids be like \"i have had enough\"' explicitly maps the social group 'white kids' onto the visual entity 'person' who is depicted in a state of emotional overwhelm. The person's distressed expression and body language (covering face, tear-streaked eye) are used as a visual metaphor to represent the supposed emotional state of 'white kids' as described in the text. This is an analogical mapping where the textual entity 'white kids' is projected onto the visual entity 'person' to convey a stereotype or commentary about that group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual representation of emotional overwhelm",
+      "description": "The user is projected onto the visual material of the person covering their face with hands and showing a distressed eye, as this visual is used to represent the emotional state described in the text 'white kids be like \"i have had enough\"'. The user sees themselves or identifies with the emotional state being portrayed, even though the text targets a specific racialized group. The projection is onto the visual material (person) which serves as a metaphor for the group's supposed emotional burden.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme targets a racialized group ('white kids') by attributing a generalized emotional state (emotional overwhelm) to them, using a visual of distress as a metaphor. This is interpreted as hateful content due to its potential to reinforce negative racial stereotypes or provoke division based on race.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "white_kids_as_social_group",
+      "label": "White Kids as Social Group",
+      "description": "The meme targets white children as a racialized social group, using the phrase 'white kids be like' to imply they are emotionally overwhelmed or exhausted by societal pressures. This group is implicitly referenced in the text and is not directly visible in the image, but is central to the meme's intent and interpretation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/41782.png",
+    "image_name": "41782.png",
+    "extraction_timestamp": "2025-12-16T01:04:57.459720",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

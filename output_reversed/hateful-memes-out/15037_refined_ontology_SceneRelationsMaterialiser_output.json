@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "Stereotypical Comparison Scene",
+      "participants": [
+        {
+          "entity": "woman_in_top_panel",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "woman_in_bottom_panel",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman_in_top_panel",
+          "relation": "portrayed_as_hysterical",
+          "to": "woman_in_bottom_panel"
+        },
+        {
+          "from": "woman_in_bottom_panel",
+          "relation": "portrayed_as_composed",
+          "to": "woman_in_top_panel"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":Stereotypical_Comparison_Scene :hasParticipant :woman_in_top_panel .",
+    ":Stereotypical_Comparison_Scene :hasParticipant :woman_in_bottom_panel .",
+    ":woman_in_top_panel :portrayed_as_hysterical :woman_in_bottom_panel .",
+    ":woman_in_bottom_panel :portrayed_as_composed :woman_in_top_panel ."
+  ],
+  "triples_count": 4
+}

@@ -1,0 +1,36 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "book_signing_scene",
+      "participants": [
+        {
+          "entity": "Gene_Wilder",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Gene_Wilder",
+          "relation": "isSigning",
+          "to": "book"
+        },
+        {
+          "from": "Gene_Wilder",
+          "relation": "isSeatedAt",
+          "to": "table"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":book_signing_scene :hasParticipant :Gene_Wilder .",
+    ":Gene_Wilder :isSigning :book .",
+    ":Gene_Wilder :isSeatedAt :table ."
+  ],
+  "triples_count": 3
+}

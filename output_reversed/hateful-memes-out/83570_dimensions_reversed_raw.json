@@ -1,0 +1,196 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: the_loudest_one_in_the_room; hasOverallIntent: Harmful; overall-intent-description: The image features actor Denzel Washington in a formal suit, with overlaid text stating, 'the loudest one in the room.. is the weakest one in the room.' The meme uses Washington's authoritative and respected public persona to deliver a message about social dynamics, implying that those who are most vocal are often the least capable. While the message itself is a general social commentary, the use of a Black man in a position of power and respect to convey a potentially negative stereotype about vocal individuals could be interpreted as subtly reinforcing harmful tropes. The meme does not directly target a specific group with hate or abuse, but its implication that vocalness equates to weakness may contribute to a broader cultural narrative that devalues assertiveness or outspokenness, particularly in contexts where such traits are associated with marginalized groups. The overall intent is to provoke thought about social behavior, but the framing risks reinforcing a harmful stereotype by associating vocalness with weakness, which could be perceived as a subtle form of ableism or social hierarchy commentary that may be harmful to those who are vocal in their advocacy or expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "the loudest one in the room..",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Denzel_Washington",
+      "label": "actor",
+      "description": "A Black man with short, dark hair, wearing a black tuxedo with a bow tie and a white shirt. He is looking slightly to his left with a subtle, knowing expression, possibly conveying sarcasm or wisdom. He is positioned in the foreground against a blue background with a partial white logo visible.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "meme_scene",
+      "label": "meme_with_text_and_actor",
+      "description": "A scene composed of actor Denzel_Washington and overlaid text, arranged to convey a social commentary message. The actor is positioned in the foreground, and the text is superimposed on the image to form a complete meme. The spatial relationship is that the text is layered over the actor's image, creating a visual composition that delivers a message about social dynamics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Denzel_Washington",
+          "relation": "isSubjectOf",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_vocalness_weakness",
+      "label": "Stereotype: Vocalness equates to weakness",
+      "description": "The meme implies that being loud or outspoken is a sign of weakness, which is a social stereotype that can be harmful. This stereotype may be particularly damaging when applied to marginalized groups, as it can devalue assertiveness or advocacy. The meme's message is not explicitly targeted at a specific group, but the framing risks reinforcing a broader cultural narrative that devalues vocalness, especially in contexts where such traits are associated with marginalized communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "denzel_washington_public_personality",
+      "label": "Denzel Washington's public persona as authoritative and respected",
+      "description": "Denzel Washington is widely recognized as a powerful, respected, and authoritative figure in Hollywood, often portrayed as a serious, stoic, and commanding presence. His public image is leveraged in the meme to contrast with the message about vocalness and weakness, creating a juxtaposition that may be interpreted as ironic or sarcastic. The use of his persona to deliver a potentially negative stereotype about vocal individuals is a key element of the meme's impact.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Denzel_Washington",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_hierarchy_commentary",
+      "label": "Social hierarchy commentary",
+      "description": "The meme implicitly references social dynamics and hierarchies, suggesting that in certain contexts, those who are most vocal may be perceived as the least capable or powerful. This commentary on social behavior is a common theme in internet memes, but the framing here may be interpreted as subtly reinforcing a hierarchy that devalues assertiveness or outspokenness, particularly in contexts where such traits are associated with marginalized groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism_concept",
+      "label": "Ableism concept: Denial of competence based on vocalness",
+      "description": "The meme's message can be interpreted as an example of ableism, where being vocal is equated with weakness or incompetence. This is a form of social stigma that can be harmful to individuals who are vocal in their advocacy or expression, particularly if they are perceived as 'too loud' or 'too assertive'. The meme may contribute to a broader cultural narrative that devalues assertiveness or outspokenness, which can be seen as a form of ableism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_formatting_convention",
+      "label": "Meme formatting convention: Text overlay on actor image",
+      "description": "The meme follows a common internet meme format where a well-known actor or public figure is used as a visual anchor for a text-based message. This format relies on the viewer's recognition of the actor and their public persona to deliver the message. The use of Denzel Washington in this format is a key element of the meme's effectiveness, as his authoritative image contrasts with the message about vocalness and weakness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Denzel_Washington",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "sarcasm",
+      "label": "sarcasm expression",
+      "description": "Denzel Washington's subtle, knowing expression, combined with the ironic message about vocalness equating to weakness, conveys a tone of sarcasm. His slight smirk and direct gaze suggest he is mocking or ridiculing the idea that being loud is a sign of weakness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The loudest one in the room is mapped onto Denzel Washington",
+      "description": "The text 'the loudest one in the room..' is juxtaposed with Denzel Washington's image, implying that he embodies this role. His authoritative and respected public persona is used to represent the concept of being 'the loudest one in the room', creating an analogical mapping where the textual concept is projected onto the visual entity. This mapping is reinforced by his subtle, knowing expression, which conveys sarcasm or wisdom, suggesting he is commenting on or embodying the idea.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message about vocalness and weakness",
+      "description": "The user is projected onto the textual material (text_chunk_1) which states 'the loudest one in the room.. is the weakest one in the room.' This projection occurs because the meme invites the viewer to identify with the message's implied social commentary — that being loud or outspoken equates to weakness — and to see themselves or others as potentially embodying this dynamic. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the meme's framing creates an implicit identification with the concept being described, making the user a subject of the projection onto the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme implies that being loud or outspoken equates to weakness, which can be harmful by devaluing assertiveness or advocacy, particularly when applied to marginalized groups. The use of Denzel Washington's authoritative persona to deliver this message risks reinforcing a harmful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "General internet audience familiar with Denzel Washington",
+      "description": "The meme targets a broad online audience that recognizes Denzel Washington as a respected, authoritative figure in Hollywood. The use of his image leverages his public persona to deliver a social commentary message, making it accessible to viewers who are familiar with his work and image. The meme’s format relies on this recognition to create a contrast between his commanding presence and the message about vocalness equating to weakness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/83570.png",
+    "image_name": "83570.png",
+    "extraction_timestamp": "2025-12-19T14:42:11.886685",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

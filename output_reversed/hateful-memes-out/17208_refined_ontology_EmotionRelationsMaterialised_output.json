@@ -1,0 +1,45 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "emotion of minimizing historical responsibility",
+      "expressors": [
+        {
+          "entity": "meme_image",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "Adolf_Hitler"
+        },
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "Nazi_Society"
+        },
+        {
+          "from": "meme_image",
+          "relation": "emotionalRelationToEntity",
+          "to": "German_Population_During_Holocaust"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":emotion_of_minimizing_historical_responsibility :hasExpressor :meme_image .",
+    ":meme_image :emotionalRelationToEntity :Adolf_Hitler .",
+    ":meme_image :emotionalRelationToEntity :Nazi_Society .",
+    ":meme_image :emotionalRelationToEntity :German_Population_During_Holocaust ."
+  ],
+  "triples_count": 4
+}

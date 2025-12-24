@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_96285d85",
+  "@type": "AnalysisDocument",
+  "title": "64708.png - Dimension Analysis",
+  "created": "2025-12-16T08:17:48.485186",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_cda43e29",
+    "@type": "Image",
+    "filename": "64708.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/64708.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/64708.png",
+    "image_name": "64708.png",
+    "extraction_timestamp": "2025-12-16T08:16:18.215069",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3d355931",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: spending_quality_time_with_dad; hasOverallIntent: Hateful; overall-intent-description: The image depicts a Black man standing in front of a police height chart, styled as a mugshot, with the text 'spending quality time with dad.' This juxtaposition uses a criminalized visual trope (mugshot) to mock or demean the subject, implying he is a criminal or morally suspect simply for being with his father. The use of a mugshot format, which is inherently associated with law enforcement and criminality, combined with the racialized subject, constitutes a hateful stereotype that associates Black men with criminal behavior. This is a direct attack based on race and gender, fitting the 'Criminal behavior associations' anti-Black stereotype from the provided knowledge base. The meme's intent is to ridicule the man and his familial relationship through a degrading, racially charged visual metaphor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_96285d85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2812ae2c",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "spending quality time with dad",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_96285d85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_30fc04eb",
+      "@type": "VisualMaterial",
+      "instance_name": "man",
+      "label": "Black man",
+      "description": "A Black man with short dark hair and a light beard, wearing a black zip-up hoodie over a red t-shirt, standing in front of a police height chart. His expression is neutral to slightly stern, looking directly at the camera. He is the central subject of the image and is styled as if in a mugshot.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_96285d85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bd14078a",
+      "@type": "Scene",
+      "instance_name": "mugshot_scene",
+      "label": "mugshot",
+      "description": "A Black man is positioned in front of a police height chart, styled as a mugshot, with the text 'spending quality time with dad' overlaid. The scene uses the mugshot format to imply criminality or moral suspicion related to the subject's familial relationship.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_96285d85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0f19c013",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "criminal_behavior_associations",
+      "label": "Criminal behavior associations",
+      "description": "A stereotype that links Black men with criminality, often used in media and public discourse to dehumanize or marginalize them. This stereotype is central to understanding the hateful intent of the meme, which uses a mugshot format to imply the man is a criminal simply for being with his father.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_96285d85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_caea10ae",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "mugshot",
+      "label": "Mugshot",
+      "description": "A formal police photograph taken during arrest or booking, used to document a suspect's appearance. In memes, it is often used to imply criminality or moral suspicion. The use of a mugshot format here is a visual trope that frames the subject as a suspect or criminal.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_96285d85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a4109f7d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "father_daughter_relationship",
+      "label": "Father-daughter relationship",
+      "description": "The text 'spending quality time with dad' references a familial relationship. In the context of the meme, this relationship is juxtaposed with the mugshot format to create a humorous or mocking contrast, implying that being with one's father is somehow suspect or criminal.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_96285d85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_95005895",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racial_stereotype",
+      "label": "Racial stereotype",
+      "description": "The meme relies on racial stereotypes that associate Black men with criminal behavior. This is a form of racialized dehumanization that uses visual tropes (like mugshots) to reinforce negative perceptions about a racial group.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_96285d85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_173ab03b",
+      "@type": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous expression",
+      "description": "The man's facial expression is neutral to slightly stern, with a direct gaze and a closed mouth, conveying a sense of disdain or disapproval, which is amplified by the mugshot context and the ironic text.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_96285d85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_539ea07d",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The man is mapped as 'dad' in the context of 'spending quality time with dad'",
+      "description": "The text 'spending quality time with dad' explicitly refers to the man as 'dad'. The visual material (the man) is thus mapped onto the textual role of 'dad'. This mapping is direct and explicit, as the text directly assigns the role of 'dad' to the person depicted. The mugshot format adds a layer of irony or mockery to this mapping, implying that being 'dad' is somehow criminal or suspect.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_96285d85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2e06dec4",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man as 'dad'",
+      "description": "The user is projected onto the visual material of the Black man, who is explicitly labeled as 'dad' by the textual material 'spending quality time with dad'. The user identifies with or imagines themselves in the role of 'dad' as depicted, even though the meme uses a mugshot format to mock this familial role. The projection is implicit, not deictic, but the user is invited to see themselves as the 'dad' in the scene, making the man a stand-in for the user's own father or self-identification as a father.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_96285d85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e694acbe",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses a mugshot format to imply criminality or moral suspicion related to the subject's familial relationship, associating Black men with criminal behavior through a racially charged visual metaphor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_96285d85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8d3f44c3",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with or enjoy racially charged, hate-filled memes that use mugshot tropes to mock Black men, particularly in the context of familial relationships. This audience likely derives humor or satisfaction from the dehumanizing stereotype that links Black men with criminal behavior, and may appreciate the irony or shock value of juxtaposing a mundane familial activity ('spending quality time with dad') with a criminalized visual format. The meme is designed to resonate with those who perpetuate or find amusement in anti-Black racial stereotypes, particularly the 'criminal behavior associations' trope.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_96285d85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

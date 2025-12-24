@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "mocking emotion",
+      "expressors": [
+        {
+          "entity": "John Malkovich",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "John Malkovich",
+          "relation": "emotionalRelationToEntity",
+          "to": "man carrying cross"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":mocking_emotion :hasExpressor :John_Malkovich .",
+    ":John_Malkovich :emotionalRelationToEntity :man_carrying_cross ."
+  ],
+  "triples_count": 2
+}

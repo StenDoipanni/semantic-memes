@@ -1,0 +1,171 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "dimension_1",
+      "label": "the overallintent",
+      "description": "The image shows a group of seven older white men, some holding books, standing together in a black-and-white photo. The overlaid text reads: \\",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "terrorism is one of the only areas where they do most of the work and none of them get the credit",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "seven_older_white_men",
+      "label": "people",
+      "description": "A group of seven older white men standing together in a black-and-white photograph, some holding books. They are dressed in casual to semi-formal attire, and their expressions range from smiling to serious. The image appears to be a posed group photo, possibly from a public event or book promotion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "group_photo",
+      "label": "group_photo",
+      "description": "A black-and-white group photo of seven older white men standing together, some holding books. The men are dressed in casual to semi-formal attire, and their expressions vary from smiling to serious. The image appears to be a posed photograph, possibly from a public event or book promotion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism_associations",
+      "label": "Terrorism Associations",
+      "description": "The text references 'terrorism' as an area where 'they' do most of the work but get no credit. This implicitly references the stereotype that Muslims are associated with terrorism, which is a common element of Islamophobia. Understanding this stereotype is necessary to interpret the meme's underlying message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "The meme relies on the implicit association between the group of men (who are white and appear to be older) and the stereotype that Muslims are terrorists. This is a core element of Islamophobia, which involves linking terrorism to Muslims. The meme uses this stereotype to imply that the group being referenced (likely white men) are doing the work of fighting terrorism without receiving credit, which is a satirical or ironic commentary on the stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_men_stereotype",
+      "label": "White Men Stereotype",
+      "description": "The image shows a group of older white men, and the text implies they are the ones doing the work. This implicitly references the stereotype that white men are the primary actors in many societal roles, including military, political, and security roles. The meme uses this to satirize the idea that these men are doing the work without recognition, which is a commentary on gender and racial stereotypes in power structures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "seven_older_white_men",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism",
+      "label": "Terrorism",
+      "description": "The text explicitly mentions 'terrorism' as an area where 'they' do most of the work. This requires background knowledge about terrorism as a global security issue and the common association of terrorism with specific groups (e.g., Muslims). Understanding terrorism as a real-world concept is necessary to interpret the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "irony",
+      "label": "ironic emotion",
+      "description": "The image conveys irony through the juxtaposition of the smiling, posed group of men holding books with the text claiming they do most of the work in terrorism without credit. The contrast between their calm, almost celebratory demeanor and the serious, accusatory nature of the text creates an ironic tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The group of men are mapped as 'they' who do most of the work in terrorism without credit",
+      "description": "The text 'terrorism is one of the only areas where they do most of the work and none of them get the credit' implicitly maps the visual entity 'seven_older_white_men' onto the pronoun 'they'. The meme uses this mapping to satirize the stereotype that white men are the primary actors in fighting terrorism without recognition, which is a commentary on gender and racial stereotypes in power structures. The irony arises from the contrast between the calm, posed demeanor of the men and the serious, accusatory nature of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the text_chunk",
+      "description": "The user is projected onto the textual material, as the meme's message is directed at the viewer to interpret the irony or satire regarding the group of men and their implied role in terrorism. There are no explicit deictic pronouns like 'you' or 'me', but the text implicitly invites the user to recognize the stereotype and the satirical commentary, making the user the recipient of the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobia",
+      "description": "The meme implicitly links the group of older white men to the stereotype that Muslims are associated with terrorism, which is a core element of Islamophobia. The text 'terrorism is one of the only areas where they do most of the work and none of them get the credit' relies on this association to create a satirical commentary, but the underlying stereotype is harmful and perpetuates Islamophobic tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals familiar with or interested in political satire, conspiracy theories, or critiques of power structures, particularly those who recognize the stereotype linking white men to terrorism and the irony in the meme's message. The meme is designed to resonate with audiences who understand the historical and cultural context of Islamophobia and gender/racial stereotypes in security and political discourse, and who appreciate dark humor or ironic commentary on these topics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/58467.png",
+    "image_name": "58467.png",
+    "extraction_timestamp": "2025-12-16T06:08:09.565837",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

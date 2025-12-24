@@ -1,0 +1,177 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image features a smiling man with a shaved head, wearing a dark jacket over a blue shirt, set against a plain background. The text overlay reads, 'when you don't need a squad be you are the squad.' This meme uses the visual of a confident, self-assured individual to convey the message that one can be their own support system or 'squad' without needing others. The overall intent is to promote self-reliance and self-sufficiency in a lighthearted, motivational way. There is no toxicity present in this meme; it does not contain abusive, cyberbullying, harmful, hateful, misogynous, or propaganda elements. The intent is to encourage personal empowerment and independence through the analogical mapping of the individual's confident demeanor to the idea of being one's own support group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you don't need a squad be you are the squad",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "a smiling man with a shaved head",
+      "description": "The central visual material is a man with a closely shaved head, blue eyes, and a warm smile. He is wearing a dark jacket over a blue collared shirt. His confident and self-assured expression is the primary visual element used to convey the meme's message of self-reliance. The man appears to be in a formal or semi-formal setting, possibly at an event, given the plain background and his attire.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "self_reliance_meme",
+      "label": "self_reliance_meme",
+      "description": "A scene depicting a confident man with a shaved head, smiling and wearing a dark jacket over a blue shirt, symbolizing self-reliance. The text overlay reinforces the message that one can be their own 'squad' without needing others. The scene is composed of the man as the central visual element, with the text serving as a complementary narrative component.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "embodies",
+          "to": "self_reliance_meme"
+        },
+        {
+          "from": "text",
+          "relation": "conveys_message",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "self_reliance_concept",
+      "label": "Self-reliance concept",
+      "description": "The idea that individuals can be self-sufficient and do not need external support or groups to function effectively. This is a cultural and philosophical concept often promoted in motivational and personal development contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "self_reliance_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "squad_culture",
+      "label": "Squad culture",
+      "description": "A social trend, especially popular on social media, where groups of friends or followers are referred to as a 'squad' — often implying mutual support, loyalty, and shared identity. The term 'squad' is used colloquially to describe a close-knit group, often for emotional or social support.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "self_reliance_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "motivational_meme",
+      "label": "Motivational meme",
+      "description": "A type of internet meme designed to inspire, encourage, or promote positive self-image and personal growth. These memes often use relatable imagery and text to convey messages of empowerment, resilience, or self-confidence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "self_reliance_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "actor_詹姆斯_麦卡沃伊",
+      "label": "Actor James McAvoy",
+      "description": "The man in the image is James McAvoy, a well-known British actor. His appearance (shaved head, blue eyes, confident smile) is used to visually represent the self-reliant, self-assured persona central to the meme’s message. Recognizing him as a public figure adds context to the meme’s visual appeal and relatability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "self_reliance_meme",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "self_confidence",
+      "label": "self-assured emotion",
+      "description": "The man's warm, broad smile, direct gaze, and clean-shaven head convey a sense of self-assurance and inner strength. His relaxed yet confident posture reinforces the idea of being self-reliant and capable without needing external validation or support.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The man is mapped as 'the squad'",
+      "description": "The text 'when you don't need a squad be you are the squad' establishes an analogical mapping where the visual entity 'man' (specifically, James McAvoy) is being identified as 'the squad'. This mapping is based on the meme's core message: the individual's self-reliance and confidence are equated with being their own support group or 'squad'. The man's confident demeanor and self-assured expression visually embody this concept, making him the visual representation of 'the squad' as described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual material of the confident man",
+      "description": "The user is projected onto the visual material of the man (James McAvoy) as 'the squad'. The text 'when you don't need a squad be you are the squad' uses 'you' to directly address the viewer, prompting them to identify with the man's self-reliant and confident demeanor. The user is thus projected onto the man as the embodiment of self-sufficiency and personal empowerment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "motivational meme audience",
+      "description": "The target community is individuals seeking personal empowerment, self-reliance, and motivational content, particularly those engaged with social media trends around 'squad' culture and self-confidence. The meme appeals to a broad demographic interested in positive affirmations and self-improvement, using relatable imagery (James McAvoy as a confident figure) and colloquial language ('squad') to resonate with users who value independence and emotional resilience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/59041.png",
+    "image_name": "59041.png",
+    "extraction_timestamp": "2025-12-16T06:20:54.051897",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

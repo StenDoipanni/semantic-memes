@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful contempt expressed through mocking text and racial stereotyping",
+      "expressors": [
+        {
+          "entity": "text_overlay",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "text_overlay",
+          "relation": "emotionalRelationToEntity",
+          "to": "black_man_in_tuxedo"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_contempt_expressed_through_mocking_text_and_racial_stereotyping :hasExpressor :text_overlay .",
+    ":text_overlay :emotionalRelationToEntity :black_man_in_tuxedo ."
+  ],
+  "triples_count": 2
+}

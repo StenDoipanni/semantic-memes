@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "mocking emotion",
+      "expressors": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "text_chunk_1",
+          "relation": "emotionalRelationToEntity",
+          "to": "muslim_brotherhood"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":mocking_emotion :hasExpressor :text_chunk_1 .",
+    ":text_chunk_1 :emotionalRelationToEntity :muslim_brotherhood ."
+  ],
+  "triples_count": 2
+}

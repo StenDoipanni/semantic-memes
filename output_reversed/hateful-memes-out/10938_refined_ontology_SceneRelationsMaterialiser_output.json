@@ -1,0 +1,47 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "boxing_day_pun_scene",
+      "participants": [
+        {
+          "entity": "boxing_gloves",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "gift_box",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "boxing_gloves",
+          "relation": "restingOn",
+          "to": "snow"
+        },
+        {
+          "from": "gift_box",
+          "relation": "restingOn",
+          "to": "snow"
+        },
+        {
+          "from": "boxing_gloves",
+          "relation": "positionedInFrontOf",
+          "to": "gift_box"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":boxing_day_pun_scene :hasParticipant :boxing_gloves .",
+    ":boxing_day_pun_scene :hasParticipant :gift_box .",
+    ":boxing_gloves :restingOn :snow .",
+    ":gift_box :restingOn :snow .",
+    ":boxing_gloves :positionedInFrontOf :gift_box ."
+  ],
+  "triples_count": 5
+}

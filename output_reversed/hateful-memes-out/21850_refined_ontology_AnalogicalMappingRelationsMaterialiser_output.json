@@ -1,0 +1,52 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "text_chunk_1",
+      "hasMappingEntity": "female_gender_symbol"
+    },
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "text_chunk_2",
+      "hasMappingEntity": "female_gender_symbol"
+    },
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "text_chunk_3",
+      "hasMappingEntity": "female_gender_symbol"
+    },
+    {
+      "from": "female_gender_symbol",
+      "relation": "mappedOnto",
+      "to": "text_chunk_1"
+    },
+    {
+      "from": "female_gender_symbol",
+      "relation": "mappedOnto",
+      "to": "text_chunk_2"
+    },
+    {
+      "from": "female_gender_symbol",
+      "relation": "mappedOnto",
+      "to": "text_chunk_3"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :text_chunk_1 .",
+    ":mapping_1 :hasMappingEntity :female_gender_symbol .",
+    ":mapping_1 :hasMappedEntity :text_chunk_2 .",
+    ":mapping_1 :hasMappingEntity :female_gender_symbol .",
+    ":mapping_1 :hasMappedEntity :text_chunk_3 .",
+    ":mapping_1 :hasMappingEntity :female_gender_symbol .",
+    ":female_gender_symbol :mappedOnto :text_chunk_1 .",
+    ":female_gender_symbol :mappedOnto :text_chunk_2 .",
+    ":female_gender_symbol :mappedOnto :text_chunk_3 ."
+  ],
+  "triples_count": 9
+}

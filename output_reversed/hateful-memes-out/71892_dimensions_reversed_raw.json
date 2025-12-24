@@ -1,0 +1,201 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image shows a man with a frost-covered beard and face, suggesting he is in extremely cold weather. The text reads: 'note to self. if she is a squirter wait till it warms up outside.' The meme uses the visual of extreme cold to humorously imply a delay in sexual activity until conditions improve. The term 'squirter' is a vulgar slang term for someone who ejaculates prematurely during sex. The overall intent is to create a crude, sexually suggestive joke using the metaphor of waiting for weather to warm up as a reason to delay sexual activity. This meme contains misogynistic content by objectifying and degrading women based on their sexual performance, and it uses vulgar language to mock female sexuality. The intent is to provoke laughter through crude humor, but it does so at the expense of women's dignity and sexual autonomy, fitting under the 'Mysogynous' toxicity category.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "note to self. if she is a squirter",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with a frost-covered beard and face, wearing a hooded jacket and beanie, suggesting he is in extremely cold weather. His facial hair and skin are visibly coated with ice crystals, and icicles are dripping from his mouth, indicating prolonged exposure to freezing temperatures. The man is looking directly at the camera with a neutral to slightly amused expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "frosty_outdoor_scene",
+      "label": "man in extreme cold weather",
+      "description": "A man with a frost-covered beard and face, wearing a hooded jacket and beanie, is exposed to freezing temperatures. Ice crystals coat his facial hair and skin, and icicles are dripping from his mouth, indicating prolonged exposure to cold. The background shows a clear blue sky and distant snow-covered trees, suggesting a winter outdoor setting. The man is looking directly at the camera with a neutral to slightly amused expression. The text overlay humorously suggests waiting for warmer weather before engaging in sexual activity, using the visual of extreme cold as a metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "squirter",
+      "label": "vulgar slang term for premature ejaculation",
+      "description": "The term 'squirter' is a vulgar slang term used to describe a woman who ejaculates prematurely during sexual activity. This term is offensive and degrading, and its use in the meme is part of the crude, misogynistic humor. It relies on real-world knowledge of sexual slang and its derogatory connotations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_content",
+      "label": "content that degrades or objectifies women",
+      "description": "The meme contains misogynistic content by objectifying and degrading women based on their sexual performance. The humor is derived from mocking female sexuality using vulgar language and crude metaphors, which relies on societal knowledge about gender-based stereotypes and sexual double standards.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexual_double_standards",
+      "label": "societal expectation that men and women are held to different standards in sexual behavior",
+      "description": "The meme implicitly references the sexual double standard, where men are often praised for sexual performance while women are mocked or judged harshly for similar behaviors. This stereotype is part of the broader cultural context needed to understand the joke's offensive nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "crude_humor",
+      "label": "humor that relies on vulgar language or offensive content",
+      "description": "The meme uses crude humor to provoke laughter through vulgar language and sexual innuendo. This type of humor is culturally specific and relies on the audience's familiarity with taboo subjects and offensive language to be effective.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification",
+      "label": "treating a person as an object for the purpose of sexual gratification",
+      "description": "The meme objectifies women by reducing their worth to their sexual performance, using the term 'squirter' as a derogatory label. This concept is part of the broader societal issue of sexual objectification, which is necessary to understand the meme's offensive intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "toxic_meme_category",
+      "label": "meme that promotes harmful or offensive content",
+      "description": "The meme falls under the 'Mysogynous' toxicity category, which refers to content that promotes or reinforces harmful gender stereotypes and degrades women. This classification is based on real-world knowledge of internet meme toxicity and its impact on social discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "amusement",
+      "label": "amused expression",
+      "description": "The man's facial expression, though partially obscured by frost, appears neutral to slightly amused, suggesting he is not distressed by the extreme cold but rather finds the situation humorous or endearing, possibly in self-deprecating or ironic fashion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The man in extreme cold is mapped as 'self' in the note",
+      "description": "The top text 'note to self' explicitly maps the visual entity 'man' as the speaker or subject of the note. The man's frost-covered face and beard visually represent the 'self' who is making this note, creating an analogical mapping where the person in the image is identified as the 'self' referenced in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man in the image as 'self'",
+      "description": "The text overlay 'note to self' explicitly projects the user (viewer) onto the man depicted in the image, identifying him as the 'self' making the note. This creates a direct analogical mapping where the visual entity 'man' is understood as the speaker or subject of the note, allowing the user to identify with or imagine themselves as this person. The projection is explicit through the deictic 'self' in the text, which anchors the user's perspective onto the visual material of the man.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme degrades women by using the vulgar slang term 'squirter' to mock female sexual performance, objectifying women and reducing their worth to sexual behavior. This aligns with misogynistic content that reinforces harmful gender stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "man in extreme cold",
+      "description": "The visual entity of a man with a frost-covered beard and face, wearing a hooded jacket and beanie, is central to the meme. He is depicted as the 'self' making the note, serving as the anchor for the audience's identification with the speaker of the crude, sexually suggestive joke. His appearance in extreme cold visually reinforces the metaphor of waiting for 'warmer weather' before engaging in sexual activity, which is the core of the meme's humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/71892.png",
+    "image_name": "71892.png",
+    "extraction_timestamp": "2025-12-19T11:12:29.494563",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

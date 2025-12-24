@@ -1,0 +1,219 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts three children with traditional tribal adornments, likely from an African ethnic group, juxtaposed with the text 'when you have 3 choco puffs left in your cereal bowl.' This creates a harmful and demeaning stereotype by equating the children with a childish, impoverished, or primitive state, implying they are 'leftover' or 'waste' like the last few cereal pieces. The visual of the children, who are presented with dignity and cultural pride, is used to mock a mundane, everyday situation, reducing their humanity to a joke. This is a form of racial stereotyping that dehumanizes and infantilizes Black children, fitting under the 'Hateful' category as it is a direct attack on a specific racial group based on protected characteristics. The meme's intent is to provoke laughter through a degrading comparison, which is inherently harmful and offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "when you have 3 choco puffs",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "three_children",
+      "label": "children with traditional tribal adornments",
+      "description": "Three young children, likely from an African ethnic group, are prominently featured in the foreground. They are adorned with traditional cultural markings on their faces and bodies, including white paint patterns, and wear necklaces made of beads and shells. Their expressions are joyful and confident, and they are posing together with arms around each other, suggesting a sense of community and pride. Their attire consists of simple, natural-looking garments, and they stand barefoot on a dirt path.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "children_posing_together",
+      "label": "Children posing together with cultural adornments",
+      "description": "Three children adorned with traditional tribal markings and necklaces are standing close together, with arms around each other, smiling and looking at the camera. They are positioned in the foreground, with a natural landscape and a dirt path behind them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "three_children",
+          "relation": "arePosingTogether",
+          "to": "three_children"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "Anti-Black Stereotype: Infantilization and Dehumanization",
+      "description": "The meme relies on the harmful stereotype that Black children are primitive, childish, or 'leftover' like the last few cereal pieces, reducing their humanity to a joke. This is a form of racial stereotyping that dehumanizes and infantilizes Black children, fitting under the 'Hateful' category as it is a direct attack on a specific racial group based on protected characteristics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "three_children",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "choco_puffs_cereal",
+      "label": "Choco Puffs Cereal",
+      "description": "A specific brand of cereal (likely Kellogg's Choco Puffs) that is commonly consumed in Western countries, particularly by children. The reference to '3 choco puffs left in your cereal bowl' is a mundane, everyday situation that is used to contrast with the image of the children, implying they are 'leftover' or 'waste'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cereal_bowl",
+      "label": "Cereal Bowl",
+      "description": "A common household item used for eating cereal. The reference to 'your cereal bowl' is a mundane, everyday situation that is used to contrast with the image of the children, implying they are 'leftover' or 'waste'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_stereotyping",
+      "label": "Racial Stereotyping",
+      "description": "The meme uses racial stereotyping to equate Black children with a childish, impoverished, or primitive state, implying they are 'leftover' or 'waste' like the last few cereal pieces. This is a form of racial stereotyping that dehumanizes and infantilizes Black children, fitting under the 'Hateful' category as it is a direct attack on a specific racial group based on protected characteristics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "three_children",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dehumanization",
+      "label": "Dehumanization",
+      "description": "The meme dehumanizes Black children by reducing their humanity to a joke, equating them with a childish, impoverished, or primitive state, implying they are 'leftover' or 'waste' like the last few cereal pieces. This is a form of racial stereotyping that dehumanizes and infantilizes Black children, fitting under the 'Hateful' category as it is a direct attack on a specific racial group based on protected characteristics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "three_children",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "infantilization",
+      "label": "Infantilization",
+      "description": "The meme infantilizes Black children by equating them with a childish, impoverished, or primitive state, implying they are 'leftover' or 'waste' like the last few cereal pieces. This is a form of racial stereotyping that dehumanizes and infantilizes Black children, fitting under the 'Hateful' category as it is a direct attack on a specific racial group based on protected characteristics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "three_children",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "joy",
+      "label": "joyful expression",
+      "description": "The three children are smiling broadly and confidently, with their arms around each other, conveying a sense of happiness, pride, and camaraderie. Their facial expressions are cheerful and engaging, suggesting contentment and community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Children are mapped as 'leftover cereal pieces'",
+      "description": "The text 'when you have 3 choco puffs left in your cereal bowl' is mapped onto the visual of the three children. The meme equates the children with the last three cereal pieces, implying they are 'leftover' or 'waste'. This is a dehumanizing analogy that infantilizes and racializes the children, reducing their humanity to a mundane, childish object. The visual of the children, who are presented with dignity and cultural pride, is used to mock a mundane situation, creating a harmful and offensive mapping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the textual material 'when you have 3 choco puffs left in your cereal bowl' because the text uses the second-person pronoun 'you', directly addressing the viewer and inviting them to identify with the scenario. This creates a personal connection, making the user feel as if they are the one experiencing the situation of having three cereal pieces left, thereby anchoring their identity to the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme equates Black children with 'leftover cereal pieces,' dehumanizing them and reducing their humanity to a childish, wasteful object. This is a direct attack on a specific racial group based on protected characteristics, fitting under the 'Hateful' category.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with or find humor in racially stereotyping Black children as primitive, childish, or 'leftover' like the last few cereal pieces. This audience likely includes people who consume internet memes that rely on dehumanizing analogies and who may not recognize the harmful racial implications of such content. The meme is designed to provoke laughter through offensive comparisons, targeting those who find such infantilizing and racially charged humor amusing or relatable, despite its deeply offensive nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/43162.png",
+    "image_name": "43162.png",
+    "extraction_timestamp": "2025-12-16T01:35:05.538260",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

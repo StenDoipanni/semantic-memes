@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "mocking_disgust",
+      "expressors": [
+        {
+          "entity": "Kevin_Hart",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Kevin_Hart",
+          "relation": "emotionalRelationToEntity",
+          "to": "people_with_physical_disabilities"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":mocking_disgust :hasExpressor :Kevin_Hart .",
+    ":Kevin_Hart :emotionalRelationToEntity :people_with_physical_disabilities ."
+  ],
+  "triples_count": 2
+}

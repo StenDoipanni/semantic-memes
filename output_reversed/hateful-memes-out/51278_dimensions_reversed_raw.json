@@ -1,0 +1,207 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: overall-intent-description; overall-intent-description: The scene depicts a person in a flowing white garment, appearing angelic or ethereal, floating amidst clouds and falling petals, evoking a sense of peace, purity, or divine reward. The text overlay reads 'when you haven't stolen anything in a week.' The overall intent is to humorously and ironically suggest that abstaining from theft for a week is so virtuous or rare that it merits angelic status. This is a self-deprecating or satirical meme that uses the juxtaposition of a heavenly image with a mundane, morally ambiguous act (theft) to create comedic contrast. There is no toxicity present; the meme does not target any specific group or individual based on protected characteristics, nor does it contain abusive, cyberbullying, harmful, hateful, misogynous, or propagandistic content. The intent is purely comedic and relies on the absurdity of equating a short period of non-theft with angelic reward, without any harmful or discriminatory implications.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you haven't stolen anything in a week",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "a woman",
+      "description": "A woman with light brown hair, wearing a flowing white garment, appears to be floating or dancing in the air. Her posture is graceful and ethereal, with one arm extended and the other holding the fabric of her dress. She is the central focus of the image, positioned against a backdrop of clouds and falling white petals, evoking an angelic or divine presence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "angelic_reward_scene",
+      "label": "angelic_reward_scene",
+      "description": "A scene depicting a woman in a flowing white garment, appearing angelic or ethereal, floating amidst clouds and falling petals, evoking a sense of peace, purity, or divine reward. The text overlay reads 'when you haven't stolen anything in a week.' The scene humorously suggests that abstaining from theft for a week is so virtuous or rare that it merits angelic status.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person",
+          "relation": "isDepictedIn",
+          "to": "angelic_reward_scene"
+        },
+        {
+          "from": "text",
+          "relation": "describes",
+          "to": "angelic_reward_scene"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "theft",
+      "label": "theft",
+      "description": "The concept of theft refers to the unlawful taking of another person's property without their consent. In the context of the meme, it is implicitly referenced as a morally ambiguous or negative act that is contrasted with the angelic reward depicted. The humor arises from the absurdity of equating a short period of non-theft with divine reward, which requires understanding theft as a socially and legally defined crime.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "angelic_reward",
+      "label": "angelic_reward",
+      "description": "The concept of angelic reward refers to the idea that virtuous or morally exemplary behavior can lead to divine or heavenly recompense. This is a common theme in religious and cultural narratives, particularly in Judeo-Christian traditions, where angels are often depicted as messengers of God or beings of purity and grace. The meme uses this concept ironically to suggest that abstaining from theft for a week is so virtuous it merits angelic status, which requires understanding the cultural and religious symbolism of angels and divine reward.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "moral_virtue",
+      "label": "moral_virtue",
+      "description": "Moral virtue refers to the quality of being morally good or righteous, often associated with ethical behavior, self-discipline, and adherence to moral principles. In the meme, the idea that abstaining from theft for a week is a form of moral virtue is central to the humor. The juxtaposition of this mundane act with the divine imagery of an angel requires understanding the concept of moral virtue as a culturally recognized value.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "irony",
+      "label": "irony",
+      "description": "Irony is a rhetorical device where the intended meaning is the opposite of the literal meaning, often used for humorous or emphatic effect. The meme relies on irony to create its comedic effect by juxtaposing the serious, sacred concept of angelic reward with the trivial, mundane act of not stealing for a week. Understanding irony as a literary and comedic device is essential to appreciating the meme's humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "self_deprecating_humor",
+      "label": "self_deprecating_humor",
+      "description": "Self-deprecating humor is a form of humor in which the subject makes fun of themselves or their own shortcomings. The meme uses self-deprecating humor to suggest that the act of not stealing for a week is so rare or virtuous that it deserves angelic status, which is an exaggerated and humorous way to acknowledge the difficulty of resisting temptation. This requires understanding the concept of self-deprecating humor as a comedic technique.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "absurdity",
+      "label": "absurdity",
+      "description": "Absurdity refers to something that is illogical, unreasonable, or out of place. The meme relies on absurdity to create its comedic effect by equating a short period of non-theft with angelic reward, which is an illogical and exaggerated comparison. Understanding absurdity as a comedic device is essential to appreciating the meme's humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "pride",
+      "label": "pride in moral virtue",
+      "description": "The emotion of pride is implied through the angelic imagery and the text, suggesting that the person feels a sense of accomplishment or self-satisfaction for abstaining from theft for a week. The ethereal, divine setting reinforces this feeling of personal achievement being worthy of heavenly reward.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The person is mapped as an angelic reward for not stealing",
+      "description": "The text 'when you haven't stolen anything in a week' is mapped onto the visual entity 'person' (the woman in the angelic scene). The meme humorously equates the act of abstaining from theft for a week with receiving an angelic reward, implying that the person depicted is the recipient of this divine status. This mapping is based on the ironic juxtaposition of the mundane act (not stealing) with the divine imagery (angelic reward), where the visual material represents the consequence or reward described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the person as the recipient of angelic reward for not stealing",
+      "description": "The user is projected onto the visual entity 'person' (the woman in the angelic scene) because the text 'when you haven't stolen anything in a week' uses the second-person pronoun 'you', directly addressing the viewer. The user identifies with the 'you' in the text, imagining themselves as the person who has abstained from theft and thus is deserving of the angelic reward depicted. The projection is onto the VisualMaterial entity 'person', who is symbolically the recipient of the reward described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with internet humor, irony, and self-deprecating comedy. It relies on the universal understanding of theft as a negative act and the cultural symbolism of angels as divine reward, making it accessible to people across demographics who understand the absurdity of equating a short period of non-theft with angelic status. The target community includes individuals who engage with memes, appreciate visual humor, and are comfortable with self-referential or satirical content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/51278.png",
+    "image_name": "51278.png",
+    "extraction_timestamp": "2025-12-16T04:03:24.202164",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

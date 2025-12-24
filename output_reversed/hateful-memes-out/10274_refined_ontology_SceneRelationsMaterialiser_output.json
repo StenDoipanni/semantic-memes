@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "goat_laughing_scene",
+      "participants": [
+        {
+          "entity": "goat",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "wooden_structure",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "goat",
+          "relation": "isNextTo",
+          "to": "wooden_structure"
+        },
+        {
+          "from": "goat",
+          "relation": "isOn",
+          "to": "sandy_ground"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":goat_laughing_scene :hasParticipant :goat .",
+    ":goat_laughing_scene :hasParticipant :wooden_structure .",
+    ":goat :isNextTo :wooden_structure .",
+    ":goat :isOn :sandy_ground ."
+  ],
+  "triples_count": 4
+}

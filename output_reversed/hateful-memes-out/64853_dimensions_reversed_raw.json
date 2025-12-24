@@ -1,0 +1,247 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: the_black_ranger_meme; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes a photo of Power Rangers with text questioning the Black Ranger's costume, followed by a smiling Black man and then a green-skinned, ape-like figure. This visual and textual combination is a racist trope that equates Black people with primates, which is a harmful and hateful stereotype. The intent is to demean and dehumanize Black individuals by associating them with animalistic imagery, thereby reinforcing racist ideologies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "the black ranger do you really think they were just talking about his costume? your argument",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "middle text overlay",
+      "description": "it's completely valid!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Power_Rangers",
+      "label": "Costumed characters",
+      "description": "Three individuals dressed in full Power Ranger costumes: Green Ranger, Yellow Ranger, and Black Ranger. They are standing together in what appears to be a public or event setting. The costumes are detailed and colorful, with the Black Ranger's costume being the focus of the meme's text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Black_man",
+      "label": "Smiling man with arms crossed",
+      "description": "A Black man wearing a plain black t-shirt, standing with his arms crossed and smiling. He has visible tattoos on his left arm. His expression and posture suggest confidence or agreement, which contrasts with the meme's context of racial stereotyping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Green_skinned_ape_like_figure",
+      "label": "Dehumanizing racial stereotype",
+      "description": "A figure with green skin, resembling a primate or ape, with exaggerated facial features and an open mouth. This image is used in the meme to reinforce the racist trope of equating Black people with animals, which is a harmful and dehumanizing stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Text_overlay",
+      "label": "Meme text",
+      "description": "White text with black outline is overlaid on the images. The text reads: 'the black ranger do you really think they were just talking about his costume? your argument it's completely valid!' This text is used to set up a false equivalence and then deliver a racist punchline by implying that the Black Ranger's costume is being compared to a primate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "racist_trope_scene",
+      "label": "Racist Trope Scene",
+      "description": "The meme constructs a scene that juxtaposes the Power Rangers, a Black man, and a green-skinned ape-like figure to perpetuate a racist trope. The text sets up a false equivalence, implying that the Black Ranger's costume is being compared to the ape-like figure, thereby dehumanizing Black people. The Black man's confident posture and smile are used to falsely validate this racist comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Text_overlay",
+          "relation": "sets_up_false_equivalence",
+          "to": "Green_skinned_ape_like_figure"
+        },
+        {
+          "from": "Black_man",
+          "relation": "is_used_to_validate",
+          "to": "Text_overlay"
+        },
+        {
+          "from": "Power_Rangers",
+          "relation": "is_subject_of_comparison",
+          "to": "Green_skinned_ape_like_figure"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_comparing_to_primates",
+      "label": "Anti-Black Stereotype: Comparing Black People to Primates",
+      "description": "This is a well-documented racist trope that dehumanizes Black individuals by equating them with apes or monkeys. It is used to justify discrimination, reinforce racial hierarchies, and perpetuate harmful stereotypes. The meme uses the green-skinned ape-like figure to visually represent this stereotype, which is not directly visible in the image but is essential to understanding the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "green_skinned_ape_like_figure",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "power_rangers_culture",
+      "label": "Power Rangers Culture",
+      "description": "The Power Rangers are a popular American media franchise featuring costumed heroes. The Black Ranger is a character within this franchise. The meme references the Black Ranger's costume as a point of comparison, which requires knowledge of the franchise to understand the context of the joke. The meme's text implies a false equivalence between the costume and the ape-like figure, which is only meaningful if one understands the Power Rangers as a fictional, heroic context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Power_Rangers",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_of_validating_hate",
+      "label": "Racist Trope: Validating a Hate-Based Argument",
+      "description": "The meme uses the phrase 'your argument it's completely valid!' to falsely validate a racist comparison. This is a rhetorical device used to mock or reinforce harmful stereotypes by pretending to agree with them. The Black man's confident smile and crossed arms are used to imply agreement, which requires understanding of how such visual cues are often weaponized in racist discourse to make the stereotype seem 'reasonable' or 'normal'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Black_man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_happiness",
+      "label": "mocking happiness expression",
+      "description": "The Black man is smiling broadly with arms crossed, conveying a false sense of agreement or validation. This expression is used to mockingly endorse a racist comparison, making the hateful stereotype seem 'valid' or 'reasonable'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The Black Ranger is mapped to the Black man",
+      "description": "The text 'the black ranger' in the top panel is mapped onto the visual entity 'Black_man' in the middle panel. The meme uses the Black man's image to represent the Black Ranger, creating a false equivalence that implies the Black Ranger's costume is being compared to the ape-like figure, thereby dehumanizing Black people. The text 'your argument it's completely valid!' further reinforces this by falsely validating the racist comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_2",
+      "label": "The Black Ranger's costume is mapped to the green-skinned ape-like figure",
+      "description": "The text 'do you really think they were just talking about his costume?' in the top panel sets up a false equivalence, implying that the Black Ranger's costume is being compared to the green-skinned ape-like figure in the bottom panel. The meme uses the ape-like figure to visually represent the racist trope of equating Black people with primates, which is the core of the hateful analogy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_3",
+      "label": "The Black man's validation is mapped to the green-skinned ape-like figure",
+      "description": "The text 'it's completely valid!' in the middle panel is mapped onto the visual entity 'Green_skinned_ape_like_figure' in the bottom panel. The meme uses the Black man's confident smile and crossed arms to falsely validate the racist comparison, implying that the ape-like figure is a 'valid' representation of the Black Ranger, thereby reinforcing the dehumanizing stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the Black man's image and the validating text",
+      "description": "The user is projected onto the Black man in the middle panel, who is depicted with a confident smile and crossed arms, and onto the textual material 'your argument it's completely valid!' which falsely validates the racist comparison. This projection implies the user is agreeing with or identifying with the racist trope being presented.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_2",
+      "label": "User projected onto the validating text",
+      "description": "The user is projected onto the textual material 'your argument it's completely valid!' which is overlaid on the image of the Black man. This projection suggests the user is being invited to accept or endorse the racist argument being made, even though it is clearly false and hateful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme perpetuates a racist trope by equating Black people with primates, using the image of a green-skinned ape-like figure to dehumanize Black individuals. The text falsely validates this comparison, reinforcing harmful stereotypes and ideologies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who are familiar with the Power Rangers franchise and who may be exposed to or propagate racist tropes, particularly those who engage with internet humor that relies on dehumanizing stereotypes. The meme is designed to appeal to an audience that understands the Power Rangers context and can interpret the false equivalence between the Black Ranger’s costume and the green-skinned ape-like figure, thereby reinforcing anti-Black racism. The confident Black man’s image is used to falsely validate the racist comparison, which targets audiences who may be conditioned to accept or mock such stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/64853.png",
+    "image_name": "64853.png",
+    "extraction_timestamp": "2025-12-16T08:22:34.051837",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 19,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

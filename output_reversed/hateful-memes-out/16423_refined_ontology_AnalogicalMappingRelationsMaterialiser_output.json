@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "top_text",
+      "hasMappingEntity": "man_on_phone"
+    },
+    {
+      "from": "man_on_phone",
+      "relation": "mappedOnto",
+      "to": "top_text"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :top_text .",
+    ":mapping_1 :hasMappingEntity :man_on_phone .",
+    ":man_on_phone :mappedOnto :top_text ."
+  ],
+  "triples_count": 3
+}

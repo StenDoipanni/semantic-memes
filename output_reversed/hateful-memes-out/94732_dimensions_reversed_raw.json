@@ -1,0 +1,166 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: the_name's_todd..._retodd; hasOverallIntent: Harmful; overall-intent-description: The image features a man with Down syndrome smiling broadly, with the text overlay \"the name's todd... retodd\". The joke relies on the phonetic similarity between \"Todd\" and \"retodd\" (a play on \"retard\"), which is a derogatory and offensive term historically used to demean people with intellectual or developmental disabilities. This type of humor is harmful because it perpetuates ableist stereotypes by mocking the individual's condition and reducing them to a punchline. The intent is to elicit laughter through a crude, insensitive pun that targets a vulnerable group, potentially causing emotional harm and reinforcing negative societal attitudes toward people with disabilities. The meme's overall intent is to spread humor at the expense of a marginalized community, which is harmful and offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "the name's todd... retodd",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person with Down syndrome",
+      "description": "A smiling man with Down syndrome, wearing a dark blue polo shirt, is the central subject of the image. His expression is cheerful and engaging, and he is looking directly at the camera. The text overlay \"the name's todd... retodd\" is superimposed on the image, creating a meme that relies on a phonetic pun involving a derogatory term related to developmental disabilities, which is considered harmful and offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "meme_with_text_overlay",
+      "label": "man_with_text_overlay",
+      "description": "A man with Down syndrome is centrally positioned in the image, smiling broadly and looking directly at the camera. A text overlay reading 'the name's todd... retodd' is superimposed at the bottom of the image, creating a meme that relies on a phonetic pun involving a derogatory term related to developmental disabilities. The background is blurred, showing an indistinct indoor setting with other people faintly visible.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "isSubjectOf",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism_stereotype",
+      "label": "ableism stereotype",
+      "description": "The meme relies on the derogatory phonetic pun 'retodd' which is a crude, offensive play on the word 'retard', historically used to demean people with intellectual or developmental disabilities. This is an example of ableist stereotyping that reduces individuals to a punchline and perpetuates harmful societal attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "developmental_disability_slur",
+      "label": "developmental disability slur",
+      "description": "The term 'retard' (or its phonetic variant 'retodd') is a slur historically used to demean people with intellectual or developmental disabilities. Its use in the meme is offensive and perpetuates ableist stereotypes by mocking the individual's condition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "ableism",
+      "description": "The broader social concept of ableism, which involves discrimination and prejudice against people with disabilities, is implicitly referenced. The meme's humor is rooted in ableist stereotypes that portray people with disabilities as inferior or comical, which is a form of systemic discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "cheerful and engaging expression",
+      "description": "The man in the image is smiling broadly and looking directly at the camera, conveying a cheerful and engaging emotional state. His facial expression appears genuine and positive, suggesting happiness or contentment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'the name's todd... retodd' maps to the man with Down syndrome in the image.",
+      "description": "The textual element 'the name's todd... retodd' is overlaid on the image of a man with Down syndrome. The text creates an analogical mapping by identifying the man as 'Todd' (with a phonetic pun 'retodd' that is a derogatory slur). This mapping projects the textual identity ('Todd') onto the visual entity (the man), establishing a direct link between the text and the person depicted. The mapping is explicit through the text's content and its spatial placement over the man's image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man with Down syndrome via the textual identity",
+      "description": "The user is projected onto the visual material of the man with Down syndrome, as the text 'the name's todd... retodd' explicitly assigns an identity ('Todd') to him. This creates a direct semiotic projection where the user perceives themselves as identifying with or being represented by the man through the textual label, even though the label contains a derogatory pun. The projection is onto the VisualMaterial entity 'man' via the TextualMaterial 'text_chunk'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme relies on a derogatory phonetic pun 'retodd' which is a crude, offensive play on the word 'retard', historically used to demean people with intellectual or developmental disabilities. This is an example of ableist stereotyping that reduces individuals to a punchline and perpetuates harmful societal attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who may find crude, offensive humor based on ableist stereotypes amusing or acceptable, particularly those who are unaware of or indifferent to the harmful nature of the slur 'retard' and its phonetic variant 'retodd' used in the meme. The meme is designed to elicit laughter through a derogatory pun targeting people with developmental disabilities, which implies the audience is likely to be members of a broader online or social media community that engages with edgy, insensitive humor without considering its impact on marginalized groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/94732.png",
+    "image_name": "94732.png",
+    "extraction_timestamp": "2025-12-19T18:20:01.887255",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

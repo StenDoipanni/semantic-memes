@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful emotion expression",
+      "expressors": [
+        {
+          "entity": "why_do_white_people_smell_like_bologna",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "why_do_white_people_smell_like_bologna",
+          "relation": "targets",
+          "to": "white_people"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_emotion_expression :hasExpressor :why_do_white_people_smell_like_bologna .",
+    ":why_do_white_people_smell_like_bologna :targets :white_people ."
+  ],
+  "triples_count": 2
+}

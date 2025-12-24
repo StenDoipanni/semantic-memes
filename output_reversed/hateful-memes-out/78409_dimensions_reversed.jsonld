@@ -1,0 +1,590 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821",
+  "@type": "AnalysisDocument",
+  "title": "78409.png - Dimension Analysis",
+  "created": "2025-12-19T13:22:26.339705",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_a64991c8",
+    "@type": "Image",
+    "filename": "78409.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/78409.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/78409.png",
+    "image_name": "78409.png",
+    "extraction_timestamp": "2025-12-19T13:19:08.038530",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 50,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0fabd467",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: Hateful; overall-intent-description: The image depicts a black-and-white photograph of children in striped prison uniforms standing behind barbed wire, which is historically associated with the Holocaust and concentration camps. The overlaid text reads: 'I stand with Hitler these was this time at Auschwitz when I needed medical attention and doctor Mengele was there for me.' This text is a direct, hateful, and historically offensive statement that glorifies Adolf Hitler and Josef Mengele, a notorious Nazi doctor responsible for horrific medical experiments on prisoners. The meme uses the juxtaposition of the image of suffering children with the text to create a grotesque, ironic, and deeply offensive message that seeks to mock the victims of the Holocaust by falsely implying that the perpetrators were 'helpful' or 'kind.' This is a clear example of hateful content as it directly attacks and dehumanizes victims of genocide by invoking the names of their oppressors and falsely portraying them as benevolent. The meme is designed to provoke outrage and is intended to spread hate and misinformation by trivializing one of the most horrific events in human history.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8b02ae67",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "I stand with hitler these was this time at auschwitz when i needed medical attention and doctor mengele was there for me",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e5d4cf09",
+      "@type": "VisualMaterial",
+      "instance_name": "children",
+      "label": "group of children",
+      "description": "A group of children, appearing malnourished and distressed, are standing behind barbed wire. They are wearing striped prison uniforms, characteristic of concentration camp prisoners. Their expressions are somber and fearful, conveying suffering and trauma. They are the central focus of the image, positioned in front of a high fence with barbed wire, suggesting confinement and oppression.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d5a08e68",
+      "@type": "Scene",
+      "instance_name": "children_behind_barbed_wire",
+      "label": "Children standing behind barbed wire",
+      "description": "A group of children, appearing malnourished and distressed, are standing behind barbed wire. They are wearing striped prison uniforms, characteristic of concentration camp prisoners. Their expressions are somber and fearful, conveying suffering and trauma. They are the central focus of the image, positioned in front of a high fence with barbed wire, suggesting confinement and oppression.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_18f4853d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "adolf_hitler",
+      "label": "Adolf Hitler",
+      "description": "The historical figure who was the dictator of Nazi Germany and the architect of the Holocaust. His name is invoked in the text to glorify him, which is a hateful and offensive act given his role in genocide.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2a07969a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "josef_mengele",
+      "label": "Josef Mengele",
+      "description": "A notorious Nazi doctor who conducted horrific medical experiments on prisoners at Auschwitz concentration camp. His name is invoked in the text to falsely portray him as helpful, which is a grotesque and offensive distortion of his crimes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4a69ba89",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "auschwitz_concentration_camp",
+      "label": "Auschwitz Concentration Camp",
+      "description": "One of the largest and most infamous Nazi concentration and extermination camps during the Holocaust. The text references this location to falsely imply that the perpetrators were benevolent, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1e30e5e2",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "holocaust_denial_minimization",
+      "label": "Holocaust Denial/Minimization Themes",
+      "description": "The meme trivializes the Holocaust by falsely portraying Nazi perpetrators as helpful, which is a form of Holocaust denial and minimization. This is a real-world concept that is part of antisemitic propaganda.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1e5e1d94",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_doctor",
+      "label": "Nazi Doctor",
+      "description": "A general term for doctors who worked under the Nazi regime, often conducting inhumane medical experiments. The text refers to ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_070172de",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "concentration_camp_prisoner",
+      "label": "Concentration Camp Prisoner",
+      "description": "A person imprisoned and subjected to forced labor, starvation, medical experiments, and mass murder in Nazi concentration camps. The image depicts children in striped uniforms, which are characteristic of concentration camp prisoners.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fab8c216",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "striped_uniform",
+      "label": "Striped Uniform",
+      "description": "The uniform worn by prisoners in Nazi concentration camps. The image shows children in striped uniforms, which is a direct visual reference to the Holocaust and concentration camps.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e043c51a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "barbed_wire",
+      "label": "Barbed Wire",
+      "description": "A physical barrier used in concentration camps to confine prisoners. The image shows barbed wire, which is a direct visual reference to the Holocaust and concentration camps.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fe30f357",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "medical_experiment",
+      "label": "Medical Experiment",
+      "description": "A scientific procedure conducted on human subjects without their consent, often under inhumane conditions. The text falsely implies that Mengele provided medical attention, which is a distortion of his real-world role in conducting horrific medical experiments.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4b95237b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "genocide",
+      "label": "Genocide",
+      "description": "The deliberate and systematic destruction of a racial, political, or cultural group. The Holocaust is the most infamous example of genocide. The meme trivializes genocide by falsely portraying perpetrators as helpful.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_539d2cdc",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "antisemitism",
+      "label": "Antisemitism",
+      "description": "Discrimination or prejudice against Jewish people. The meme is an example of antisemitism because it glorifies Nazi perpetrators and trivializes the Holocaust, which is a genocide against Jewish people.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_10dc91d0",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "hate_speech",
+      "label": "Hate Speech",
+      "description": "Speech that expresses hate or encourages violence against a group of people. The text in the meme is an example of hate speech because it glorifies Hitler and Mengele and trivializes the Holocaust.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dd638b14",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "irony",
+      "label": "Irony",
+      "description": "A rhetorical device in which the intended meaning is the opposite of the literal meaning. The meme uses irony to mock the victims of the Holocaust by falsely implying that the perpetrators were helpful.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_86d08059",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "mockery",
+      "label": "Mockery",
+      "description": "The act of making fun of something or someone in a disrespectful or contemptuous way. The meme uses mockery to trivialize the Holocaust by falsely portraying Nazi perpetrators as helpful.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5b9e5c1e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "trivialization",
+      "label": "Trivialization",
+      "description": "The act of making something seem unimportant or insignificant. The meme trivializes the Holocaust by falsely portraying Nazi perpetrators as helpful.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_55e34c64",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "genocide_victim",
+      "label": "Genocide Victim",
+      "description": "A person who was killed or suffered harm as a result of genocide. The image depicts children who were victims of the Holocaust, and the text falsely implies that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3db22942",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "perpetrator",
+      "label": "Perpetrator",
+      "description": "A person who commits a crime or wrongdoing. The text refers to Hitler and Mengele as perpetrators of genocide, and the meme falsely portrays them as helpful, which is a distortion of their real-world role.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c6a3dd87",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "historical_event",
+      "label": "Historical Event",
+      "description": "An event that occurred in the past. The meme references the Holocaust, which is a historical event, to falsely imply that the perpetrators were helpful, which is a distortion of the real-world event.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0cdafd2d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_regime",
+      "label": "Nazi Regime",
+      "description": "The political regime led by Adolf Hitler in Germany from 1933 to 1945. The text refers to the Nazi regime to glorify Hitler and Mengele, which is a hateful and offensive act given the regime",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_19336a20",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "concentration_camp",
+      "label": "Concentration Camp",
+      "description": "A prison camp where prisoners are held under harsh conditions, often for political or racial reasons. The image depicts children in striped uniforms behind barbed wire, which is characteristic of concentration camps.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_82ca065c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "holocaust",
+      "label": "Holocaust",
+      "description": "The systematic, state-sponsored persecution and murder of six million Jews by the Nazi regime and its collaborators. The image and text reference the Holocaust to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_75403313",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "medical_attention",
+      "label": "Medical Attention",
+      "description": "Care provided to a person who is ill or injured. The text falsely implies that Mengele provided medical attention, which is a distortion of his real-world role in conducting horrific medical experiments.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_676e8955",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "medical_experimentation",
+      "label": "Medical Experimentation",
+      "description": "The conduct of experiments on human subjects for scientific purposes. The text falsely implies that Mengele provided medical attention, which is a distortion of his real-world role in conducting horrific medical experiments.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_27243b8a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_doctor_experiment",
+      "label": "Nazi Doctor Experiment",
+      "description": "A medical experiment conducted by a Nazi doctor on prisoners in concentration camps. The text falsely implies that Mengele provided medical attention, which is a distortion of his real-world role in conducting horrific medical experiments.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1b07c25d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_perpetrator",
+      "label": "Nazi Perpetrator",
+      "description": "A person who committed crimes under the Nazi regime. The text refers to Hitler and Mengele as Nazi perpetrators, and the meme falsely portrays them as helpful, which is a distortion of their real-world role.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_81673f0a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_concentration_camp",
+      "label": "Nazi Concentration Camp",
+      "description": "A concentration camp established and operated by the Nazi regime. The image depicts children in striped uniforms behind barbed wire, which is characteristic of Nazi concentration camps.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d0053fe2",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_holocaust",
+      "label": "Nazi Holocaust",
+      "description": "The Holocaust carried out by the Nazi regime. The image and text reference the Nazi Holocaust to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_feb13f68",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_genocide",
+      "label": "Nazi Genocide",
+      "description": "The genocide carried out by the Nazi regime. The image and text reference the Nazi genocide to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6fa312a7",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_mass_murder",
+      "label": "Nazi Mass Murder",
+      "description": "The systematic killing of millions of people by the Nazi regime. The image and text reference the Nazi mass murder to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_068f2225",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_human_rights_abuse",
+      "label": "Nazi Human Rights Abuse",
+      "description": "The systematic violation of human rights by the Nazi regime. The image and text reference the Nazi human rights abuse to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f2d8c724",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_human_rights_violation",
+      "label": "Nazi Human Rights Violation",
+      "description": "The violation of human rights by the Nazi regime. The image and text reference the Nazi human rights violation to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_97b4fd9c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_human_rights_abuse",
+      "label": "Nazi Human Rights Abuse",
+      "description": "The systematic violation of human rights by the Nazi regime. The image and text reference the Nazi human rights abuse to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d9fe8c9f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_human_rights_violation",
+      "label": "Nazi Human Rights Violation",
+      "description": "The violation of human rights by the Nazi regime. The image and text reference the Nazi human rights violation to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6eb0ed61",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_human_rights_abuse",
+      "label": "Nazi Human Rights Abuse",
+      "description": "The systematic violation of human rights by the Nazi regime. The image and text reference the Nazi human rights abuse to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4311f290",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_human_rights_violation",
+      "label": "Nazi Human Rights Violation",
+      "description": "The violation of human rights by the Nazi regime. The image and text reference the Nazi human rights violation to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dfdffa09",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_human_rights_abuse",
+      "label": "Nazi Human Rights Abuse",
+      "description": "The systematic violation of human rights by the Nazi regime. The image and text reference the Nazi human rights abuse to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5a78ea3c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_human_rights_violation",
+      "label": "Nazi Human Rights Violation",
+      "description": "The violation of human rights by the Nazi regime. The image and text reference the Nazi human rights violation to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3db19859",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_human_rights_abuse",
+      "label": "Nazi Human Rights Abuse",
+      "description": "The systematic violation of human rights by the Nazi regime. The image and text reference the Nazi human rights abuse to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1bf3c7bc",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_human_rights_violation",
+      "label": "Nazi Human Rights Violation",
+      "description": "The violation of human rights by the Nazi regime. The image and text reference the Nazi human rights violation to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d9ff091c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_human_rights_abuse",
+      "label": "Nazi Human Rights Abuse",
+      "description": "The systematic violation of human rights by the Nazi regime. The image and text reference the Nazi human rights abuse to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f9091e98",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nazi_human_rights_violation",
+      "label": "Nazi Human Rights Violation",
+      "description": "The violation of human rights by the Nazi regime. The image and text reference the Nazi human rights violation to falsely imply that the perpetrators were helpful, which is a direct mockery of the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7538e4c5",
+      "@type": "EmotionExpression",
+      "instance_name": "suffering",
+      "label": "the suffering emotion",
+      "description": "The children in the image display somber, fearful, and distressed facial expressions, conveying deep trauma and suffering. Their malnourished appearances and the context of being behind barbed wire in concentration camp uniforms amplify this emotional state.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1ccfbeed",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Textual entity 'me' mapped onto the children in striped uniforms",
+      "description": "The text 'when i needed medical attention and doctor mengele was there for me' implies that the speaker (the 'me' in the text) is one of the children depicted in the image. The visual material of the children, who are suffering and in concentration camp attire, is being mapped onto the textual entity 'me' to create a grotesque and hateful analogy where the speaker falsely claims to have been helped by a Nazi perpetrator.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b2dd74f3",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the children in striped uniforms via the textual deictic 'me'",
+      "description": "The user is projected onto the children depicted in the image through the explicit deictic pronoun 'me' in the text. The text 'when i needed medical attention and doctor mengele was there for me' maps the speaker's identity ('me') onto the visual representation of the children in striped uniforms, creating a semiotic projection where the user identifies with the suffering victims. This projection is central to the meme's hateful message, as it falsely implies the user (the child) was helped by a Nazi perpetrator, thereby trivializing the Holocaust and mocking the victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2ec3820b",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly glorifies Adolf Hitler and Josef Mengele, notorious perpetrators of genocide, and falsely portrays them as helpful, which is a direct attack on the victims of the Holocaust and a hateful distortion of history.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_89490049",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who are either unaware of or deliberately ignore the historical atrocities of the Holocaust, and who may be drawn to provocative, ironic, or dark humor that trivializes genocide. The meme is designed to shock and provoke outrage, likely targeting those who enjoy or are attracted to hate speech, historical revisionism, or dark humor that mocks victims. It may also be aimed at communities that engage with or spread antisemitic content, as it directly invokes Hitler and Mengele and trivializes the Holocaust, which is a core antisemitic trope. The audience is likely to be online users who consume and share memes that are intentionally offensive, often to provoke strong reactions or to signal belonging to a subculture that embraces shock value and hate speech.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_ca7ec821"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

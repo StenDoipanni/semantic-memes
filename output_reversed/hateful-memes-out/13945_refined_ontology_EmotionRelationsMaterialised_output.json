@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "sarcastic and ironic tone",
+      "expressors": [
+        {
+          "entity": "text_overlay",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "text_overlay",
+          "relation": "emotionalRelationToEntity",
+          "to": "audience"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":sarcastic_and_ironic_tone :hasExpressor :text_overlay .",
+    ":text_overlay :emotionalRelationToEntity :audience ."
+  ],
+  "triples_count": 2
+}

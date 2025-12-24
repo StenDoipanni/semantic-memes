@@ -1,0 +1,188 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a violent, bloody scene of men engaged in physical conflict, with the overlaid text \"i forgot what are we fighting over again?\". The overall intent is to evoke a sense of absurdity or futility by juxtaposing extreme violence with a question about the purpose or justification of the conflict. While not explicitly targeting a specific group with hate or abuse, the imagery of widespread violence and bloodshed is inherently harmful as it normalizes or sensationalizes extreme aggression. The meme's intent is to provoke reflection on the irrationality of conflict, but its visual content carries the potential to cause psychological harm or desensitization to violence, and may be interpreted as glorifying or trivializing violent confrontation. It does not contain direct hate speech or targeted discrimination against any protected group, but its depiction of violence is harmful in its potential to normalize or sensationalize aggression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "i forgot what are we fighting over again?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "men",
+      "label": "people",
+      "description": "A group of men, mostly middle-aged, are engaged in a violent physical altercation. Many are covered in blood, with visible injuries and expressions of aggression or pain. Their clothing is mostly white or light-colored shirts, stained with blood. The scene is chaotic and intense, suggesting a mob or riot setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "violent_altercation",
+      "label": "violent_altercation",
+      "description": "A chaotic scene of men engaged in a violent physical altercation, covered in blood, with expressions of aggression or pain. The scene suggests a mob or riot setting, with participants in close physical contact and intense emotional states.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "men",
+          "relation": "fighting_with",
+          "to": "men"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Iranian_Protests_of_2022",
+      "label": "Iranian Protests of 2022",
+      "description": "The image is widely recognized as depicting scenes from the Iranian protests of 2022, specifically the Mahsa Amini protests, which erupted following the death of Mahsa Amini, a 22-year-old Iranian woman, in police custody. The image captures the intense, violent, and chaotic nature of the demonstrations, where protesters clashed with security forces. The bloodied men in the image are often interpreted as protesters or bystanders caught in the violence. The meme uses this real-world event to comment on the futility or absurdity of the conflict, with the text 'i forgot what are we fighting over again?' serving as a sarcastic or ironic commentary on the ongoing political unrest and the loss of life. Understanding the historical and political context of the Iranian protests is essential to interpret the meme's reference to 'fighting' and the underlying social tensions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "violent_altercation",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Protest_Violence",
+      "label": "Protest Violence",
+      "description": "The image depicts a scene of protest violence, a phenomenon that occurs when demonstrations escalate into physical confrontations between protesters and authorities or between different factions within the protest movement. This type of violence is often characterized by chaos, bloodshed, and emotional intensity, as seen in the image. The meme's text, 'i forgot what are we fighting over again?', implicitly references the broader context of protest violence, which is often fueled by deep-seated grievances, political repression, or social injustice. Understanding the concept of protest violence is necessary to interpret the meme's juxtaposition of extreme physical conflict with a question about the purpose of the struggle.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "violent_altercation",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Mahsa_Amini",
+      "label": "Mahsa Amini",
+      "description": "Mahsa Amini was a 22-year-old Iranian woman who died in police custody in September 2022 after being arrested for allegedly violating Iran's mandatory hijab laws. Her death sparked nationwide protests across Iran, which quickly turned violent as protesters clashed with security forces. The image is often associated with these protests and is used to symbolize the human cost of political repression and the escalation of civil unrest. The meme's text, 'i forgot what are we fighting over again?', can be interpreted as a commentary on the loss of focus or the cyclical nature of political conflict, referencing the broader context of Mahsa Amini's death and the subsequent protests.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "violent_altercation",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Iranian_Government",
+      "label": "Iranian Government",
+      "description": "The Iranian government, led by the Islamic Republic, is the political authority that governs Iran. The protests depicted in the image are often framed as a response to the government's policies, particularly its enforcement of strict social and religious laws, such as the mandatory hijab. The government's role in the protests is central to understanding the 'fighting' referenced in the meme's text. The image, therefore, implicitly references the Iranian government as the entity against which protesters are demonstrating, and the meme's question 'what are we fighting over again?' can be interpreted as a critique of the government's policies or the cyclical nature of political conflict in Iran.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "violent_altercation",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Iranian_Protests",
+      "label": "Iranian Protests",
+      "description": "The Iranian protests refer to a series of demonstrations that have occurred in Iran since 2022, primarily in response to the death of Mahsa Amini. These protests have been marked by widespread civil unrest, violence, and international attention. The image is a visual representation of the violence that has characterized these protests, and the meme's text, 'i forgot what are we fighting over again?', is a commentary on the ongoing nature of the conflict and the loss of life. Understanding the broader context of Iranian protests is essential to interpret the meme's reference to 'fighting' and the underlying social and political tensions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "violent_altercation",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "futility",
+      "label": "emotional expression of futility",
+      "description": "The emotion of futility is conveyed through the juxtaposition of extreme violence and the sarcastic question 'i forgot what are we fighting over again?'. The chaotic, bloodied scene of men engaged in physical conflict visually represents the senselessness and absurdity of the struggle, while the text explicitly expresses a feeling of having lost sight of the original purpose or justification for the conflict. This emotion arises from the contrast between the intensity of the violence and the trivializing question, evoking a sense of despair or irony about the ongoing struggle.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'i forgot what are we fighting over again?' is mapped onto the violent altercation scene.",
+      "description": "The textual element 'i forgot what are we fighting over again?' is juxtaposed with the visual material of a violent altercation to create an analogical mapping. The text sarcastically questions the purpose or justification of the ongoing conflict, which is visually represented by the chaotic, bloodied scene of men fighting. This mapping implies that the visual material (the violent altercation) is the 'fighting' referenced in the text, and the text serves as a commentary on the futility or loss of focus in such conflicts. The mapping is established through the direct contrast between the extreme violence and the trivializing question, creating a frame where the visual scene is understood as the 'fighting' being questioned.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material questioning the purpose of the conflict",
+      "description": "The user is projected onto the text_chunk 'i forgot what are we fighting over again?' as the speaker or observer of the absurdity. The text functions as a deictic device that invites the user to identify with the sentiment of forgetting the cause of the violence, thereby projecting the user's own perspective onto the rhetorical question. The user is not explicitly addressed with 'you' or 'me', but the question is posed in a first-person interrogative form that creates an implicit identification with the speaker, making the user the implied subject of the query.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The image depicts a violent, bloody scene of men engaged in physical conflict, which is inherently harmful as it normalizes or sensationalizes extreme aggression. The meme's intent to provoke reflection on the irrationality of conflict carries the potential to cause psychological harm or desensitization to violence, and may be interpreted as glorifying or trivializing violent confrontation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals familiar with or interested in global political movements, particularly those following the Iranian Protests of 2022 (Mahsa Amini protests). The meme is designed to resonate with audiences who understand the context of protest violence and the socio-political tensions in Iran, using the image of bloodied protesters to comment on the futility or cyclical nature of such conflicts. The text 'i forgot what are we fighting over again?' serves as a sarcastic or ironic commentary that appeals to viewers who have followed the unfolding events and are reflecting on the broader implications of the unrest, including the loss of life and the perceived lack of clear resolution or purpose. The meme's effectiveness relies on the audience's recognition of the historical and political context, making it most relevant to those engaged with or aware of Iranian civil society, human rights discourse, or global protest movements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/52394.png",
+    "image_name": "52394.png",
+    "extraction_timestamp": "2025-12-16T04:36:04.188569",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

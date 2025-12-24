@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_62384b5a",
+  "@type": "AnalysisDocument",
+  "title": "47530.png - Dimension Analysis",
+  "created": "2025-12-16T02:46:48.925872",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_c4f72583",
+    "@type": "Image",
+    "filename": "47530.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/47530.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/47530.png",
+    "image_name": "47530.png",
+    "extraction_timestamp": "2025-12-16T02:43:25.662102",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e629e240",
+      "@type": "OverallIntent",
+      "instance_name": "dimension_1",
+      "label": "the overallintent",
+      "description": "The image shows four children holding hands, with text overlaying the image that reads ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62384b5a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_afbd5ced",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text",
+      "description": "which one will be a single mom?",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62384b5a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e0df8530",
+      "@type": "VisualMaterial",
+      "instance_name": "child_on_left",
+      "label": "boy",
+      "description": "A young boy with light skin and short blond hair, wearing a blue jacket, smiling at the camera while holding hands with the others.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62384b5a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_39787f33",
+      "@type": "Scene",
+      "instance_name": "children_holding_hands",
+      "label": "children holding hands",
+      "description": "Four children are standing in a line, holding hands in a circle, smiling at the camera. The child on the far left is a boy with light skin and short blond hair wearing a blue jacket. Next to him is a girl with light skin and brown hair wearing a dark blue shirt with pink hearts. Next is a boy with dark skin wearing a white shirt. On the far right is a girl with light skin and long brown hair wearing a pink shirt. The text overlay reads 'which one will be a single mom?' and 'the one on the right'.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62384b5a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_cd053cad",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "single_mom_stereotype",
+      "label": "Single Mom Stereotype",
+      "description": "The meme relies on the stereotype that women, particularly young women or girls, are destined to become single mothers, often implying a lack of agency or a predetermined life path. This stereotype is rooted in societal expectations and gender roles that historically assign women primary responsibility for child-rearing and domestic duties, often at the expense of their personal or professional ambitions. The punchline 'the one on the right' implies that the girl on the far right is the 'future single mom' based on her gender and perhaps perceived 'feminine' traits, which is a reductive and sexist assumption.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62384b5a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_602b646a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "The meme implicitly relies on misogynistic tropes that limit women's roles to motherhood and domesticity. It reinforces the idea that a woman's primary value or future is tied to her reproductive capacity and her role as a caregiver, which is a form of gender-based discrimination. The punchline 'the one on the right' is a sexist joke that assumes the girl will inevitably become a single mother, ignoring her potential for independence, career, or other life paths.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62384b5a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_daab2be1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "gender_role_stereotypes",
+      "label": "Gender Role Stereotypes",
+      "description": "The meme plays on traditional gender role stereotypes that assign specific roles to men and women. It assumes that the girl on the right, due to her gender, is more likely to be a single mother, while the boys are not. This reflects a societal bias that women are more likely to be caregivers and less likely to be financially independent or to choose not to have children, which is a harmful and outdated stereotype.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62384b5a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8e9b91f8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "single_mother_stereotype",
+      "label": "Single Mother Stereotype",
+      "description": "The meme relies on the stereotype that single mothers are often perceived as less capable, less successful, or more financially struggling than married mothers. This stereotype is rooted in societal biases and often leads to discrimination against single mothers. The punchline 'the one on the right' implies that the girl will become a single mother, which is a negative assumption based on her gender and appearance.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62384b5a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_27f1fd41",
+      "@type": "EmotionExpression",
+      "instance_name": "misogynistic_joke",
+      "label": "misogynistic humor",
+      "description": "The meme uses a sexist punchline to imply that the girl on the right will become a single mother, reinforcing harmful gender stereotypes that limit women's potential and agency.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62384b5a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_79d2f86f",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The girl on the right is mapped as the 'single mom' according to the text.",
+      "description": "The top text 'which one will be a single mom?' and the bottom text 'the one on the right' together create an analogical mapping where the visual entity 'child_on_right' (the girl on the far right) is explicitly identified by the text as the future single mother. This mapping relies on gender stereotypes and misogynistic assumptions, projecting a predetermined life path onto the girl based solely on her gender and appearance.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62384b5a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_787a02b6",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the girl on the right as the future single mom",
+      "description": "The user is projected onto the girl on the right (child_on_right) through the meme's text, which explicitly identifies her as 'the one on the right' who will be a single mom. This projection is based on the meme's reliance on gender stereotypes and misogynistic assumptions, implying the user (or the viewer) is expected to recognize and accept this predetermined role for the girl based on her gender and appearance.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62384b5a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fcf8262f",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Misogynous",
+      "description": "The meme relies on the stereotype that women, particularly young women or girls, are destined to become single mothers, often implying a lack of agency or a predetermined life path. This stereotype is rooted in societal expectations and gender roles that historically assign women primary responsibility for child-rearing and domestic duties, often at the expense of their personal or professional ambitions. The punchline 'the one on the right' implies that the girl on the far right is the 'future single mom' based on her gender and perhaps perceived 'feminine' traits, which is a reductive and sexist assumption.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62384b5a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d46c66a1",
+      "@type": "TargetCommunity",
+      "instance_name": "text_chunk",
+      "label": "audience description",
+      "description": "The text overlay 'which one will be a single mom?' and 'the one on the right' targets an audience familiar with gender stereotypes and misogynistic tropes that assume women's future roles are predetermined by their gender, particularly in relation to motherhood.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_62384b5a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

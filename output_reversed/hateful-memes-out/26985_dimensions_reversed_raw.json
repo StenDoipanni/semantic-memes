@@ -1,0 +1,229 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts a man running outdoors with a mountainous background and a cityscape below. The text overlay reads, 'i just heard my girlfriend is pregnant.' The overall intent of the meme is to humorously convey the man's reaction to the news — likely portraying him as running away or fleeing from the situation, implying shock, disbelief, or avoidance. The visual metaphor of running is juxtaposed with the text to suggest an exaggerated, comedic response to the news of pregnancy. There is no toxicity present in this meme. The humor is situational and does not target any protected group or individual based on race, gender, religion, sexual orientation, or any other characteristic. The meme relies on relatable, non-harmful exaggeration to create a comedic effect, and does not contain abusive, cyberbullying, harmful, hateful, misogynous, or propagandistic content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "i just heard my girlfriend is pregnant",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man in athletic attire running outdoors, wearing a blue t-shirt, black shorts, and headphones. He appears to be in motion, with one leg forward and arms swinging, suggesting he is jogging or running. His expression is focused, and he is looking ahead. The man is the central subject of the image and is positioned in the foreground.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "man_running_away",
+      "label": "man running away from a situation",
+      "description": "A man in athletic attire is running outdoors on a paved path with a mountainous background and a cityscape below. The text overlay reads, 'i just heard my girlfriend is pregnant,' implying the man is running away from the news. The scene uses the visual metaphor of running to humorously convey shock, disbelief, or avoidance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "running_away_from",
+          "to": "pregnancy_news"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pregnancy_news_reaction_meme",
+      "label": "Pregnancy News Reaction Meme",
+      "description": "A meme format that uses the visual metaphor of a person running away to humorously depict an exaggerated, often comedic, reaction to the news of pregnancy — typically portraying shock, disbelief, or avoidance. This meme relies on the cultural understanding that pregnancy is a significant life event that can elicit strong emotional or practical responses, and the act of 'running away' is a hyperbolic expression of that reaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_running_away",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "shock_and_disbelief",
+      "label": "Shock and Disbelief",
+      "description": "An emotional state characterized by sudden surprise, often accompanied by a sense of being overwhelmed or unable to process information. In the context of this meme, it is the emotional response the man is humorously depicted as having to the news of his girlfriend's pregnancy, which is often portrayed as unexpected or unwanted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_running_away",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "avoidance_behavior",
+      "label": "Avoidance Behavior",
+      "description": "A psychological and behavioral response to stress or discomfort, where an individual attempts to escape or avoid a situation or stimulus. In this meme, the man’s running is a visual metaphor for avoidance — he is fleeing from the emotional or practical implications of the pregnancy news.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_running_away",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gender_role_stereotype",
+      "label": "Gender Role Stereotype",
+      "description": "The societal expectation that men should be the primary breadwinners and that women should be primarily responsible for childbearing and childrearing. This stereotype is implicitly referenced in the meme, as the man’s reaction to his girlfriend’s pregnancy is framed as a personal, emotional, or practical burden — a trope that often reinforces traditional gender roles in relationships.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_running_away",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "maternal_role",
+      "label": "Maternal Role",
+      "description": "The social and cultural expectation that women are primarily responsible for bearing and raising children. This concept is central to the meme’s context — the news of pregnancy directly relates to the woman’s role as a mother, and the man’s reaction is framed around his perceived responsibility or discomfort with this new role.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_norms_of_pregnancy",
+      "label": "Social Norms of Pregnancy",
+      "description": "The societal expectations and norms surrounding pregnancy, including the assumption that it is a life-changing event that requires significant adjustment, financial planning, and emotional support. The meme’s humor relies on the audience’s understanding that pregnancy is a major life event, and the man’s exaggerated reaction is a comedic deviation from the expected supportive or excited response.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_running_away",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hyperbolic_exaggeration",
+      "label": "Hyperbolic Exaggeration",
+      "description": "A rhetorical device used to emphasize a point by exaggerating it to an extreme degree. In this meme, the man’s running away is a hyperbolic representation of his shock or discomfort, which is not a literal response but a comedic exaggeration to highlight the absurdity or intensity of the situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_running_away",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "shock_and_disbelief",
+      "label": "shocked and disbelieving emotion",
+      "description": "The man’s focused facial expression and running posture, combined with the text 'i just heard my girlfriend is pregnant,' convey an exaggerated emotional state of shock and disbelief. The humor stems from the absurdity of running away from such news, implying he is overwhelmed or unable to process the information.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Man running away from pregnancy news",
+      "description": "The text 'i just heard my girlfriend is pregnant' is mapped onto the visual of the man running away, implying that the man represents the speaker ('i') who is reacting to the news by running away. This is a classic analogical mapping in memes where the visual subject is identified as the textual subject ('me').",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man running away",
+      "description": "The user is projected onto the visual material of the man running, as the text 'i just heard my girlfriend is pregnant' uses the first-person pronoun 'i', indicating that the man in the image represents the speaker. The user identifies with the man's reaction, seeing themselves in his exaggerated, fleeing behavior. This projection is reinforced by the analogical mapping where the man is identified as 'me' in the meme context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "General adult audience",
+      "description": "The meme is designed for a general adult audience familiar with internet humor and relatable life situations. The target community includes individuals who understand the cultural context of pregnancy news reactions and the hyperbolic exaggeration used in memes. The visual of a man running away is a widely recognized comedic trope for shock or avoidance, making it accessible to a broad demographic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/26985.png",
+    "image_name": "26985.png",
+    "extraction_timestamp": "2025-12-15T19:57:24.414064",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

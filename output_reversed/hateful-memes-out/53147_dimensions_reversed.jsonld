@@ -1,0 +1,249 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242",
+  "@type": "AnalysisDocument",
+  "title": "53147.png - Dimension Analysis",
+  "created": "2025-12-16T04:51:18.192309",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_cce093c6",
+    "@type": "Image",
+    "filename": "53147.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/53147.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/53147.png",
+    "image_name": "53147.png",
+    "extraction_timestamp": "2025-12-16T04:48:38.695084",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 19,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_64be8966",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: immigrants_vs_illegal_aliens_meme; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes two images: the top image shows a diverse group of people, many holding American flags, labeled 'immigrants,' implying they are welcomed or integrated members of society. The bottom image shows children and adults walking across a desert near a border fence, labeled 'illegal aliens,' implying they are unauthorized and undesirable. The intent is to create a false dichotomy by equating all immigrants with 'illegal aliens,' which is a harmful and inaccurate stereotype. This is hateful because it dehumanizes and vilifies a specific group (immigrants) by associating them with criminality and illegality, and it promotes xenophobic and anti-immigrant sentiment by implying that all immigrants are 'illegal aliens' — a term that is legally and morally loaded. The meme uses visual contrast to reinforce a prejudiced narrative that conflates legal immigration with illegal immigration, which is a form of hate speech targeting immigrants and promoting discriminatory attitudes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7b2f8363",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "The word 'immigrants' is written in bold, white, sans-serif font with a black outline, centered horizontally across the top of the upper image panel. It is positioned above a crowd of people holding American flags.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ddbf3487",
+      "@type": "VisualMaterial",
+      "instance_name": "people",
+      "label": "diverse group of individuals",
+      "description": "In the top image, a large crowd of people, including men, women, and children of various ethnicities, are visible. Many are smiling and holding American flags. In the bottom image, a group of children and adults are walking across a desert landscape near a border fence. The people in both images are the central visual material and are labeled with contrasting terms ('immigrants' and 'illegal aliens'), which is the core of the meme's message.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a4f4ffde",
+      "@type": "Scene",
+      "instance_name": "immigrants_celebrating",
+      "label": "Immigrants celebrating with American flags",
+      "description": "A large crowd of diverse people, including men, women, and children, are gathered indoors, smiling and waving American flags. They appear joyful and integrated, with the label ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_faadd637",
+      "@type": "Scene",
+      "instance_name": "illegal_aliens_crossing_border",
+      "label": "Illegal aliens crossing a desert border",
+      "description": "A group of children and adults are walking across a barren desert landscape near a tall border fence. The scene is labeled ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_eea991b8",
+      "@type": "Scene",
+      "instance_name": "meme_juxtaposition",
+      "label": "Juxtaposition of two contrasting scenes",
+      "description": "The meme presents two distinct scenes stacked vertically: the top scene shows immigrants celebrating with American flags, while the bottom scene shows people crossing a desert border. The contrast is emphasized by the labels ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_30657a8c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "immigrant_status_dichotomy",
+      "label": "Immigrant Status Dichotomy",
+      "description": "The meme relies on the false dichotomy that equates all immigrants with 'illegal aliens,' ignoring the legal distinction between lawful and unlawful immigration. This is a harmful stereotype that conflates two distinct categories of people, promoting xenophobia and anti-immigrant sentiment.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_98c13e82",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "illegal_alien_stereotype",
+      "label": "Illegal Alien Stereotype",
+      "description": "The term 'illegal alien' is a disparaging and legally inaccurate label used to dehumanize individuals who enter a country without authorization. It is often associated with negative stereotypes such as criminality, danger, and being an economic burden, which the meme reinforces by pairing it with imagery of people crossing a desert border.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2d5d3757",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "border_fence_as_symbol",
+      "label": "Border Fence as Symbol",
+      "description": "The border fence in the bottom image is not just a physical barrier but a symbol of national sovereignty and immigration control. Its presence, combined with the desert setting, reinforces the stereotype that 'illegal aliens' are crossing into the country unlawfully, which is a common narrative in anti-immigrant rhetoric.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_74b09b32",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "american_flag_as_symbol_of_citizenship",
+      "label": "American Flag as Symbol of Citizenship",
+      "description": "The American flags held by the people in the top image are used to symbolize patriotism, integration, and acceptance as citizens or legal residents. This contrasts with the bottom image, where the absence of flags and the desert setting imply exclusion and illegality, reinforcing the meme's false dichotomy.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9dd0c2af",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_immigrant_sentiment",
+      "label": "Anti-Immigrant Sentiment",
+      "description": "The meme is rooted in anti-immigrant sentiment, which is a form of xenophobia that portrays immigrants as a threat to national identity, security, and economic stability. This sentiment is often fueled by misinformation and fear-mongering, and the meme uses visual contrast to promote this harmful narrative.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d53e554a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "xenophobia",
+      "label": "Xenophobia",
+      "description": "Xenophobia is the fear or hatred of foreigners or strangers. The meme promotes xenophobic attitudes by portraying immigrants as 'illegal aliens' and associating them with negative stereotypes, which is a form of hate speech targeting immigrants and promoting discriminatory attitudes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a7deabea",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "false_dichotomy",
+      "label": "False Dichotomy",
+      "description": "The meme presents a false dichotomy by equating all immigrants with 'illegal aliens,' ignoring the legal distinction between lawful and unlawful immigration. This is a logical fallacy that promotes prejudice and discrimination by oversimplifying a complex issue.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8bfc4d07",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "hate_speech",
+      "label": "Hate Speech",
+      "description": "The meme constitutes hate speech by dehumanizing and vilifying a specific group (immigrants) by associating them with criminality and illegality. It promotes xenophobic and anti-immigrant sentiment by implying that all immigrants are 'illegal aliens,' which is a form of hate speech targeting immigrants.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7d059928",
+      "@type": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful emotion",
+      "description": "The people in the top image are smiling broadly and waving American flags, conveying a sense of joy, pride, and celebration. Their expressions suggest contentment and integration.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_388ab978",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_immigrants_celebrating",
+      "label": "Immigrants are mapped as celebratory citizens",
+      "description": "The text 'immigrants' is positioned directly above the top image, which shows a diverse crowd of people joyfully holding American flags. This creates an analogical mapping where the textual label 'immigrants' is projected onto the visual entity 'immigrants_celebrating', implying that the people in the image are 'immigrants' and are being portrayed as happy, patriotic, and integrated members of society.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f38fc714",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the contrasting scenes of the meme",
+      "description": "The user is not explicitly projected onto any single element via deictic pronouns like 'me' or 'you'. However, the meme's structure and intent create an implicit projection where the user is positioned as a viewer who is expected to interpret and align with the binary narrative presented — viewing the top scene as 'immigrants' (positive, integrated) and the bottom scene as 'illegal aliens' (negative, undesirable). This projection is onto the overall juxtaposition of scenes, which frames the user as someone who must make a judgment or take a side within the false dichotomy presented. The user is thus projected onto the 'meme_juxtaposition' scene, which is the central visual and conceptual unit of the meme.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d564f13b",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme dehumanizes and vilifies immigrants by equating all immigrants with 'illegal aliens,' promoting xenophobic and anti-immigrant sentiment. It uses visual contrast to reinforce a prejudiced narrative that conflates legal immigration with illegal immigration, which is a form of hate speech targeting immigrants.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3b55fa91",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "anti-immigrant sentiment audience",
+      "description": "The target community is individuals who hold or are influenced by anti-immigrant sentiment, xenophobic attitudes, and who may be receptive to the false dichotomy that equates all immigrants with 'illegal aliens'. This audience is likely to be politically or culturally aligned with narratives that portray immigrants as a threat to national identity, security, or economic stability, and who may support restrictive immigration policies. The meme is designed to reinforce these prejudiced views by visually contrasting 'immigrants' (as lawful, patriotic citizens) with 'illegal aliens' (as unauthorized, dangerous, and undesirable), thereby appealing to those who fear or distrust immigration.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_86f82242"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "surprised emotion",
+      "expressors": [
+        {
+          "entity": "child",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "emotionalRelationToEntity",
+          "to": "text_chunk_1"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":surprised_emotion :hasExpressor :child .",
+    ":child :emotionalRelationToEntity :text_chunk_1 ."
+  ],
+  "triples_count": 2
+}

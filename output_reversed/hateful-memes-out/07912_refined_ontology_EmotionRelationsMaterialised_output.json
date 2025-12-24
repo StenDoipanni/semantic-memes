@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "apocalyptic fear emotion",
+      "expressors": [
+        {
+          "entity": "european rats in the 15th century",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "european rats in the 15th century",
+          "relation": "emotionalRelationToEntity",
+          "to": "man"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":apocalyptic_fear_emotion :hasExpressor :european_rats_in_the_15th_century .",
+    ":european_rats_in_the_15th_century :emotionalRelationToEntity :man ."
+  ],
+  "triples_count": 2
+}

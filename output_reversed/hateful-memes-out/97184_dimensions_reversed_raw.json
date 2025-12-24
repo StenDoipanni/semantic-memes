@@ -1,0 +1,179 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: i_want_it_now_is_a_good_time; hasOverallIntent: Overall Intent; overall-intent-description: The image depicts a young Black boy with a determined, almost aggressive expression, raising his fist in a gesture of insistence or demand. The text overlay reads \"i want it\" and \"now is a good time,\" conveying a strong, impulsive desire for something immediately. The scene is a common meme format used to express urgent, unyielding desire or impatience. There is no evidence of toxicity, harmful content, or disparaging stereotypes in this image. The intent is purely to humorously or emphatically communicate a sense of urgency or insistence, often used to describe situations where someone is impatiently demanding something right now. The meme is not targeted at any specific group or community and does not contain any abusive, cyberbullying, hateful, misogynous, or propagandistic elements. The visual and textual elements are juxtaposed to create a relatable, exaggerated expression of wanting something immediately, without any harmful or discriminatory undertones.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "i want it",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "child",
+      "label": "young boy",
+      "description": "A young Black boy with a determined, almost aggressive expression, raising his fist in a gesture of insistence or demand. He is wearing a gray long-sleeved shirt and has a shaved head. His facial expression includes a grimace with teeth showing, conveying strong desire or impatience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "insistence_scene",
+      "label": "child demanding something urgently",
+      "description": "The scene depicts a young boy with a determined, almost aggressive expression, raising his fist in a gesture of insistence or demand. The text overlay reads \"i want it\" and \"now is a good time,\" conveying a strong, impulsive desire for something immediately. The child is the central participant, and the text elements are integral to conveying the scene's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "demands",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_template",
+      "label": "Meme Template: 'I Want It Now Is a Good Time'",
+      "description": "This is a widely circulated internet meme format that uses a specific image of a young boy with a determined expression and raised fist to convey impatience or urgent desire. The template is often used humorously or emphatically to express a strong, immediate want for something, regardless of context. The image and text combination is culturally recognized as a shorthand for demanding something right now.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "insistence_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "impatience_stereotype",
+      "label": "Stereotype: Impatience as a Character Trait",
+      "description": "The meme relies on the cultural understanding that impatience or urgency is a relatable human emotion, often exaggerated for comedic or emphatic effect. The visual of the child's aggressive expression and raised fist is used to symbolize this trait, which is universally understood as a form of insistence or demand.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "insistence_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "childhood_demanding_behavior",
+      "label": "Concept: Childhood Demand for Immediate Gratification",
+      "description": "The meme draws on the common real-world observation that young children often exhibit strong, impulsive desires and demand immediate satisfaction. This behavior is a well-known aspect of child development and is used here as a humorous analogy for adult impatience or urgency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "insistence_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "fist_gesture",
+      "label": "Symbol: Raised Fist as a Gesture of Demand or Insistence",
+      "description": "The raised fist is a globally recognized gesture that can signify power, solidarity, or demand. In this context, it is used to visually reinforce the textual message of wanting something immediately, adding to the meme's impact.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "insistence_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "textual_emphasis",
+      "label": "Textual Device: Emphasis through Repetition and Directness",
+      "description": "The text 'i want it' and 'now is a good time' uses direct, imperative language to create a sense of urgency. This rhetorical device is common in advertising, marketing, and persuasive communication, and is understood by viewers as a call to action or a statement of strong desire.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "impatience",
+      "label": "urgent desire for immediate gratification",
+      "description": "The child's facial expression—grimacing with teeth showing—and raised fist gesture, combined with the text 'i want it' and 'now is a good time', collectively express a strong, impulsive, and urgent desire for something to be obtained immediately. This emotion is conveyed through both visual and textual elements, emphasizing a sense of insistence and lack of patience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The child is mapped as the embodiment of urgent desire",
+      "description": "The textual phrase 'i want it' is directly mapped onto the visual entity 'child', who is depicted with a determined, almost aggressive expression and a raised fist, symbolizing the impulsive, urgent desire for something. The child's visual behavior (grimace, fist) is used to represent the textual sentiment of wanting something immediately, creating an analogical mapping where the child becomes the visual representation of the desire expressed in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the child as embodying urgent desire",
+      "description": "The user is projected onto the visual entity 'child' (the young boy) because the meme uses the child's determined expression and raised fist to symbolize the user's own impatience or urgent desire for something. The child becomes a stand-in for the viewer, who is imagining themselves in the role of the demanding child. This projection is implicit, not explicit, but it is a core function of the meme format — the viewer identifies with the child's behavior and emotion. The textual elements 'i want it' and 'now is a good time' reinforce this projection by directly stating the desire, which the user then maps onto themselves via the child's visual representation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience with no specific demographic, cultural, or community targeting. It relies on universally understood concepts such as childhood impatience, the raised fist as a gesture of demand, and direct imperative language to convey urgency. The visual and textual elements are culturally recognized as a shorthand for demanding something immediately, making it relatable across different communities without requiring specific cultural or demographic knowledge. The absence of any disparaging stereotypes or community-specific markers confirms its universal intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/97184.png",
+    "image_name": "97184.png",
+    "extraction_timestamp": "2025-12-19T19:31:40.598890",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

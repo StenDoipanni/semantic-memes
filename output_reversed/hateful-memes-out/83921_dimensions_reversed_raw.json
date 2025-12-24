@@ -1,0 +1,339 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes a woman with a neutral expression and the text 'this faceapp stuff is incredible!' with an image of Osama bin Laden. The intent is to mock or ridicule the use of AI face-swapping technology by implying that it can generate absurd or inappropriate results, such as transforming a woman into a figure associated with terrorism. This is harmful because it trivializes terrorism and potentially normalizes the use of such technology to create offensive or dangerous imagery. The meme may also be seen as promoting the idea that AI can be used to create misleading or inflammatory content, which can contribute to misinformation and desensitization to real-world violence. The overall intent is to provoke a reaction through shock value and humor, but it does so at the expense of a real-world figure associated with global terrorism, which can be seen as disrespectful and potentially dangerous.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "this faceapp stuff is incredible!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman wearing a white turban and a gray sweater, with her hand on her chin, looking upward and to the side with a thoughtful or slightly amused expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Osama_bin_Laden",
+      "label": "person",
+      "description": "A man with a long beard and a white turban, wearing a light-colored traditional garment, looking directly at the camera with a slight smile.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "text",
+      "label": "graphic",
+      "description": "White text overlaid on the image that reads: 'this faceapp stuff is incredible!'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "background",
+      "label": "scene",
+      "description": "The background consists of a plain gray wall in the top half and a plain yellowish wall in the bottom half, with a vertical black stripe on the right side of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "faceapp_comparison_scene",
+      "label": "FaceApp comparison scene",
+      "description": "A scene depicting a woman expressing amazement at the capabilities of FaceApp, juxtaposed with an image of Osama bin Laden, implying the AI technology can generate absurd or inappropriate results. The woman is positioned above the image of Osama bin Laden, with text overlaid on the image expressing her amazement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "expresses_amazement_at",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "refers_to",
+          "to": "Osama_bin_Laden"
+        },
+        {
+          "from": "woman",
+          "relation": "looks_at",
+          "to": "Osama_bin_Laden"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Osama_bin_Laden",
+      "label": "Osama bin Laden",
+      "description": "Osama bin Laden was the founder and leader of the terrorist organization al-Qaeda. He was responsible for orchestrating the September 11, 2001 attacks on the United States, which killed nearly 3,000 people. He was widely regarded as one of the most wanted terrorists in history and was killed in a U.S. military operation in Pakistan in 2011. His image is globally recognized and associated with terrorism, extremism, and global conflict.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "faceapp_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "FaceApp",
+      "label": "FaceApp",
+      "description": "FaceApp is a mobile application that uses artificial intelligence to alter facial features in photos, including aging, gender-swapping, and applying filters. It gained widespread popularity for its ability to generate humorous or surreal images, but has also been criticized for enabling the creation of misleading or offensive content, such as generating images of real people with altered appearances or creating deepfake images of public figures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "faceapp_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Terrorism_associations",
+      "label": "Terrorism associations",
+      "description": "A stereotype that links certain religious or ethnic groups, particularly Muslims, with terrorism and violent extremism. This association is often used to justify political actions, discriminatory policies, or social prejudice against Muslim communities. It is a form of Islamophobia that oversimplifies complex geopolitical issues and ignores the diversity within Muslim populations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Osama_bin_Laden",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "faceapp_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Islamophobia",
+      "label": "Islamophobia",
+      "description": "A fear or prejudice against Islam and Muslims, often manifesting as stereotypes, discrimination, or hostility. It can include the belief that Islam is inherently violent or incompatible with Western values, or that Muslims are more likely to engage in terrorism. This is a form of systemic discrimination that can lead to social exclusion, hate crimes, and policy discrimination against Muslim communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Osama_bin_Laden",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "faceapp_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "AI_face_swapping_technology",
+      "label": "AI face-swapping technology",
+      "description": "A technology that uses artificial intelligence to digitally alter or swap faces in images or videos. This technology has been used for creative purposes, but also for malicious purposes such as creating deepfakes, which can be used to spread misinformation, impersonate individuals, or generate offensive or harmful content. The meme references the potential for this technology to produce absurd or inappropriate results.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "faceapp_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Deepfake",
+      "label": "Deepfake",
+      "description": "A type of synthetic media in which a person's likeness is digitally manipulated using artificial intelligence to create realistic but false images or videos. Deepfakes can be used to impersonate individuals, spread misinformation, or create offensive content. The meme implies that FaceApp technology can generate deepfake-like images, which is a real-world concern about AI-generated media.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "AI_face_swapping_technology",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "faceapp_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Misinformation",
+      "label": "Misinformation",
+      "description": "False or inaccurate information that is spread, often unintentionally, without the intent to deceive. In the context of AI face-swapping technology, misinformation can be generated when manipulated images are shared as authentic, leading to confusion, harm, or damage to reputations. The meme implies that such technology can be used to create misleading content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "AI_face_swapping_technology",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "faceapp_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Harmful_content",
+      "label": "Harmful content",
+      "description": "Content that is intended to cause harm, distress, or offense to individuals or groups. This can include offensive imagery, hate speech, or content that promotes violence or discrimination. The meme is considered harmful because it trivializes terrorism by using AI technology to generate an image of Osama bin Laden, which can be seen as disrespectful and potentially dangerous.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "faceapp_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "amazement",
+      "label": "amazed emotion",
+      "description": "The woman's upward gaze and thoughtful expression with her hand on her chin convey a sense of amazement or wonder at the capabilities of FaceApp.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'this faceapp stuff is incredible!' is mapped onto the visual entity of the woman expressing amazement.",
+      "description": "The text 'this faceapp stuff is incredible!' is overlaid on the image of the woman, who is depicted with an expression of amazement or wonder. This creates an analogical mapping where the woman's emotional state (amazement) is being projected as the reaction to the FaceApp technology mentioned in the text. The woman visually represents the 'user' or 'observer' who is amazed by the capabilities of FaceApp, which is the subject of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_2",
+      "label": "The text 'this faceapp stuff is incredible!' is mapped onto the visual entity of Osama bin Laden.",
+      "description": "The text 'this faceapp stuff is incredible!' is juxtaposed with the image of Osama bin Laden, implying that the AI technology (FaceApp) is capable of generating such an image. This creates an analogical mapping where the image of Osama bin Laden is being presented as a result or example of the 'incredible' capabilities of FaceApp. The visual entity (Osama bin Laden) is mapped onto the textual claim that the technology can produce 'incredible' results, even if those results are absurd or inappropriate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman expressing amazement",
+      "description": "The user is projected onto the visual material of the woman (person) who is depicted with an expression of amazement or wonder. This projection is implied by the text 'this faceapp stuff is incredible!' which is overlaid on her image, suggesting that the user (the viewer) is identifying with her reaction to the FaceApp technology. The woman visually represents the 'user' or 'observer' who is amazed by the capabilities of FaceApp, which is the subject of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes terrorism by using AI face-swapping technology to generate an image of Osama bin Laden, which can be seen as disrespectful and potentially dangerous.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet users",
+      "description": "The meme is designed for a broad online audience familiar with social media trends, AI face-swapping applications like FaceApp, and internet humor that relies on shock value and absurd juxtapositions. The target community includes users who engage with viral content, appreciate meme culture, and are aware of the capabilities and controversies surrounding AI-generated imagery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "tech-savvy users",
+      "description": "The meme targets individuals who are familiar with or curious about AI technologies such as FaceApp and deepfake technology. These users are likely to understand the technical capabilities of the software and may find the meme’s commentary on the potential for misuse or absurd results amusing or thought-provoking.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "users interested in political or social commentary",
+      "description": "The meme appeals to audiences who enjoy memes that make political or social statements, particularly those that critique or satirize the use of technology in relation to sensitive topics like terrorism. The juxtaposition of a neutral image with a globally recognized terrorist figure is likely to resonate with users who appreciate irony or dark humor in political contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "users familiar with Osama bin Laden",
+      "description": "The meme targets individuals who recognize Osama bin Laden and understand his historical significance as a terrorist leader. The use of his image as a result of AI face-swapping is likely to be understood by those with knowledge of global politics or current events, and may provoke reactions based on their views on terrorism, extremism, or the use of AI in media.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "users who engage with internet memes for shock value",
+      "description": "The meme is designed for an audience that enjoys content that is provocative, controversial, or intentionally offensive for comedic effect. The juxtaposition of a woman’s amazement with an image of a terrorist leader is likely to appeal to users who seek out memes that generate strong emotional reactions or challenge social norms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/83921.png",
+    "image_name": "83921.png",
+    "extraction_timestamp": "2025-12-19T14:50:27.830781",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 25,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

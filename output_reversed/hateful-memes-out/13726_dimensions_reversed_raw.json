@@ -1,0 +1,220 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: democrats_giving_rights_to_those_who_have_no_right_to_be_here_while_taking_rights_from_those_who_do; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes an image of migrants crossing a border with an image of a fetus, using text to claim that Democrats are granting rights to those who 'have no right to be here' while simultaneously 'taking rights from those who do.' This analogy is intentionally misleading and inflammatory, as it equates the legal status of undocumented immigrants with the moral or legal status of a fetus, which is a contentious and often harmful political argument. The meme is designed to provoke strong emotional reactions and to frame immigration policy as a zero-sum game, which can contribute to xenophobic and anti-immigrant sentiment. The use of the fetus image is particularly loaded, as it invokes debates around abortion rights and reproductive autonomy, potentially conflating two distinct and complex social issues. The overall intent is to polarize viewers and to delegitimize immigration policies by suggesting that they are inherently unfair or unjust, which can lead to harmful consequences for immigrant communities and contribute to a broader culture of hostility toward immigrants.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "democrats giving rights to those who have no",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_holding_child",
+      "label": "adult female",
+      "description": "A woman with dark hair, wearing a black jacket, is holding a small child in a red jacket. She appears to be climbing or being assisted over a border fence. Her expression is intense, possibly conveying determination or distress.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "border_crossing_scene",
+      "label": "migrants crossing a border fence",
+      "description": "A group of people, including a woman holding a child, are climbing or being assisted over a border fence. The scene is set outdoors on a dirt path with a fence and hills in the background. The participants are engaged in a collective effort to cross the border, with some individuals helping others. The text overlay suggests a political commentary about granting rights to those who have no right to be there.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 5
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "fetus_scene",
+      "label": "fetus in utero",
+      "description": "A close-up image of a fetus in the womb, shown in a curled position. The scene is dark with a warm, focused light on the fetus. The text overlay suggests a political commentary about taking rights from those who do have rights. The fetus is the sole visual element in this scene.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 5
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "democrats",
+      "label": "Political Party",
+      "description": "The Democratic Party of the United States, a major political party that has historically advocated for immigration reform, including pathways to citizenship for undocumented immigrants. The meme uses this term to frame a political stance, implying that the party is granting rights to those without legal status, which is a contentious political claim.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "border_crossing_scene",
+      "label": "Immigration Policy Context",
+      "description": "The image of migrants crossing a border is a common visual trope in political discourse, often used to represent illegal immigration. The meme uses this scene to imply that the migrants have 'no right to be here,' which is a politically charged claim that requires understanding of U.S. immigration law and policy debates.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "fetus_scene",
+      "label": "Abortion Rights Context",
+      "description": "The image of a fetus is used to invoke debates around abortion rights and reproductive autonomy. The meme equates the legal status of undocumented immigrants with the moral or legal status of a fetus, which is a contentious and often harmful political argument that conflates two distinct social issues.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anchor_baby_rhetoric",
+      "label": "Anti-Immigrant Stereotype",
+      "description": "The term 'anchor baby' refers to a child born to undocumented immigrants in the U.S., which is often used in anti-immigrant rhetoric to suggest that such children grant citizenship to their parents, thereby 'anchoring' them in the country. This stereotype is used in the meme to imply that granting rights to immigrants is unfair to those who 'do have rights,' which is a misleading and inflammatory claim.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "zero_sum_game",
+      "label": "Political Framing",
+      "description": "The meme frames immigration policy as a 'zero-sum game,' implying that granting rights to one group inherently takes rights from another. This is a misleading political framing that ignores the complexities of immigration policy and can contribute to xenophobic sentiment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_immigrant_sentiment",
+      "label": "Social Attitude",
+      "description": "The meme is designed to provoke strong emotional reactions and to frame immigration policy as inherently unfair or unjust, which can lead to harmful consequences for immigrant communities and contribute to a broader culture of hostility toward immigrants. This is a common social attitude that the meme exploits.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "fetus_rights",
+      "label": "Abortion Rights Debate",
+      "description": "The use of the fetus image to represent 'those who do have rights' is a loaded reference to the abortion rights debate. It implies that the fetus has rights that are being 'taken' by granting rights to immigrants, which is a misleading and inflammatory comparison that conflates two distinct social issues.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "determination",
+      "label": "determined emotion",
+      "description": "The woman holding the child displays an intense facial expression, suggesting determination as she climbs or is assisted over the border fence. Her focused gaze and physical effort convey a strong resolve to cross the border.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Democrats granting rights to migrants is mapped onto the border-crossing scene",
+      "description": "The top text 'democrats giving rights to those who have no right to be here' is analogically mapped onto the visual scene of migrants crossing a border fence. The meme equates the political action of granting rights to undocumented immigrants with the visual depiction of people physically crossing a border, implying that this action is somehow 'granting' them a right to be there, despite the text's claim that they 'have no right to be here'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the border-crossing scene as the target of political action",
+      "description": "The user is implicitly projected onto the border-crossing scene (border_crossing_scene) as the recipient of the political framing presented in the text. The meme positions the viewer as someone who perceives the migrants as 'those who have no right to be here,' and thus the user is aligned with the perspective that Democrats are 'giving rights' to them, which is framed as a negative or unfair action. The user is not explicitly addressed with 'you' or 'me', but the emotional and political framing of the scene and text invites the user to identify with the viewpoint that immigration policy is a zero-sum game, making the user a passive recipient of this projection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme equates the legal status of undocumented immigrants with the moral or legal status of a fetus, which is a contentious and often harmful political argument that conflates two distinct social issues. This analogy is intentionally misleading and inflammatory, designed to provoke strong emotional reactions and to frame immigration policy as a zero-sum game, which can contribute to xenophobic and anti-immigrant sentiment and potentially harm immigrant communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold anti-immigrant sentiments and are politically aligned with or sympathetic to conservative or right-wing ideologies in the United States, particularly those who oppose immigration reform and view the Democratic Party as overly permissive toward undocumented immigrants. The meme is designed to resonate with viewers who perceive immigration policy as a zero-sum game and who are likely to be influenced by inflammatory rhetoric that equates granting rights to undocumented immigrants with 'taking rights' from citizens, using the fetus image as a loaded symbol to provoke emotional reactions and reinforce anti-immigrant narratives.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/13726.png",
+    "image_name": "13726.png",
+    "extraction_timestamp": "2025-12-15T15:11:23.416173",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

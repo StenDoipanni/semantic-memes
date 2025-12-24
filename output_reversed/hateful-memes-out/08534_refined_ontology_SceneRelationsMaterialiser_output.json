@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "two women engaged in a serious conversation",
+      "participants": [
+        {
+          "entity": "woman_on_left",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "woman_on_right",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman_on_left",
+          "relation": "speakingTo",
+          "to": "woman_on_right"
+        },
+        {
+          "from": "woman_on_right",
+          "relation": "listeningTo",
+          "to": "woman_on_left"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":two_women_engaged_in_a_serious_conversation :hasParticipant :woman_on_left .",
+    ":two_women_engaged_in_a_serious_conversation :hasParticipant :woman_on_right .",
+    ":woman_on_left :speakingTo :woman_on_right .",
+    ":woman_on_right :listeningTo :woman_on_left ."
+  ],
+  "triples_count": 4
+}

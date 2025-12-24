@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "disgusted emotion",
+      "expressors": [
+        {
+          "entity": "the speaker",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "the speaker",
+          "relation": "emotionalRelationToEntity",
+          "to": "the described sexual encounter"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":disgusted_emotion :hasExpressor :the_speaker .",
+    ":the_speaker :emotionalRelationToEntity :the_described_sexual_encounter ."
+  ],
+  "triples_count": 2
+}

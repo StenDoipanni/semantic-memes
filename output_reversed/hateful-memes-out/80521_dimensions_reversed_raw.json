@@ -1,0 +1,212 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme depicts a robotic arm harvesting tomatoes in a greenhouse, with overlaid text creating a humorous dialogue: 'him: the dishwasher is acting weird', 'her: what's it doing?', 'him: chopping fucking vegetables'. The intent is to use absurd juxtaposition — a dishwasher (a household appliance) being humorously equated with a robot harvesting vegetables — to create a comedic effect. The language is crude ('fucking vegetables'), which adds to the humor but may be offensive to some. While the meme does not contain explicit hate speech or target any protected group, its crude language and absurd premise could be considered potentially harmful or offensive to viewers sensitive to vulgar content. The overall intent is to provoke laughter through surreal and exaggerated analogies, not to promote harm or attack any group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "him: the dishwasher is acting weird",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "robotic_arm",
+      "label": "robotic arm",
+      "description": "A white and black robotic arm with a gripper, positioned in a greenhouse, is shown holding a ripe red tomato. It is the central visual element and is being used to harvest the tomato, which is part of the meme's humorous dialogue about a dishwasher acting weird.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "robotic_arm_harvesting_tomatoes",
+      "label": "robotic arm harvesting tomatoes",
+      "description": "A robotic arm is positioned in a greenhouse, holding a ripe red tomato. The scene is set in a tomato field with multiple tomatoes on vines in the background. The robotic arm is the central visual element, and its action of harvesting the tomato is part of the meme's humorous dialogue about a dishwasher acting weird.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dishwasher",
+      "label": "dishwasher",
+      "description": "A household appliance designed to clean dishes automatically. The meme humorously misrepresents it as performing an unrelated task (chopping vegetables), creating absurdity. This requires background knowledge of what a dishwasher is and its typical function.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "robotic_arm_harvesting_tomatoes",
+      "label": "robotic_arm_harvesting_tomatoes",
+      "description": "The visual of a robotic arm harvesting tomatoes in a greenhouse is used as a metaphor for the dishwasher's 'weird' behavior. This requires background knowledge of agricultural robotics and the concept of automation in farming to understand the absurd analogy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "chopping_vegetables",
+      "label": "chopping_vegetables",
+      "description": "The act of cutting vegetables, typically done manually or with kitchen tools. The meme uses this as a punchline to contrast with the dishwasher's function, requiring knowledge of kitchen appliances and food preparation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "absurd_juxtaposition",
+      "label": "absurd_juxtaposition",
+      "description": "A comedic technique involving the placement of unrelated or incongruous elements to create humor. The meme relies on this by pairing a household appliance (dishwasher) with a farming robot, requiring knowledge of comedic devices.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "crude_language",
+      "label": "crude_language",
+      "description": "The use of vulgar or offensive language (e.g., 'fucking vegetables') to enhance humor or shock value. This requires background knowledge of linguistic norms and the cultural context of swearing in humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "household_appliances",
+      "label": "household_appliances",
+      "description": "Common devices used in domestic settings, such as dishwashers, refrigerators, and washing machines. The meme's humor depends on the viewer's familiarity with these items and their expected functions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "agricultural_automation",
+      "label": "agricultural_automation",
+      "description": "The use of robots and technology in farming to perform tasks like harvesting. This background knowledge helps understand the visual of the robotic arm and its relevance to the meme's analogy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "robotic_arm_harvesting_tomatoes",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "amusement",
+      "label": "amused emotion",
+      "description": "The emotion expressed through the absurd and exaggerated dialogue, where a dishwasher is humorously compared to a robot harvesting vegetables, creating a comedic and surreal effect. The crude language ('fucking vegetables') enhances the humor and shock value, contributing to the overall amused reaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "dishwasher is mapped to robotic_arm_harvesting_tomatoes",
+      "description": "The text 'him: the dishwasher is acting weird' maps the dishwasher (a household appliance) onto the visual of the robotic arm harvesting tomatoes. The absurdity of the meme arises from equating the function of a dishwasher with the action of a farming robot, creating a humorous analogy through juxtaposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the robotic arm harvesting tomatoes",
+      "description": "The user is projected onto the visual of the robotic arm harvesting tomatoes, as the meme's humor relies on the viewer imagining themselves as the 'him' character observing the absurd situation. The robotic arm's action is central to the joke, and the user is implicitly positioned as the observer of this surreal scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses crude language ('fucking vegetables') and absurd juxtaposition to create humor, which may be offensive or harmful to viewers sensitive to vulgar content. While not targeting any protected group, the language and surreal premise can provoke discomfort or be considered potentially harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet meme audience",
+      "description": "The meme is designed for a broad, internet-savvy audience familiar with modern humor, absurd juxtaposition, and crude language in memes. The target community includes viewers who understand the visual metaphor of a robotic arm harvesting tomatoes being humorously equated with a dishwasher, and who appreciate the comedic effect of the punchline 'chopping fucking vegetables'. The meme relies on common knowledge of household appliances, agricultural automation, and the comedic device of absurd analogies, making it accessible to a general online audience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/80521.png",
+    "image_name": "80521.png",
+    "extraction_timestamp": "2025-12-19T13:52:07.422336",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

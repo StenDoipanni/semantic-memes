@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "dehumanizing emotion",
+      "expressors": [
+        {
+          "entity": "man_in_blue_shirt",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_in_blue_shirt",
+          "relation": "emotionalRelationToEntity",
+          "to": "crowd_interaction"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":dehumanizing_emotion :hasExpressor :man_in_blue_shirt .",
+    ":man_in_blue_shirt :emotionalRelationToEntity :crowd_interaction ."
+  ],
+  "triples_count": 2
+}

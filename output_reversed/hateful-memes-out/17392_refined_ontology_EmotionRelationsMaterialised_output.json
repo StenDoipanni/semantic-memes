@@ -1,0 +1,38 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "mocking humor expression",
+      "expressors": [
+        {
+          "entity": "man holding a tiger cub",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "woman holding a tiger cub",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man holding a tiger cub",
+          "relation": "emotionalRelationToEntity",
+          "to": "woman holding a tiger cub"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":mocking_humor_expression :hasExpressor :man_holding_a_tiger_cub .",
+    ":mocking_humor_expression :hasExpressor :woman_holding_a_tiger_cub .",
+    ":man_holding_a_tiger_cub :emotionalRelationToEntity :woman_holding_a_tiger_cub ."
+  ],
+  "triples_count": 3
+}

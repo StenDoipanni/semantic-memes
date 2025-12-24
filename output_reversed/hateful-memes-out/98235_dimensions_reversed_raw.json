@@ -1,0 +1,199 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: fashion_forward; hasOverallIntent: positive; overall-intent-description: The image depicts a woman wearing a hijab, sunglasses, a Nike sweatshirt, leather jacket, and studded gloves, leaning against a railing in an urban setting. The text overlay \"fashion forward!\" is used to celebrate her style and confidence. There is no toxicity present in the image. The intent is to showcase modern, stylish fashion that embraces cultural identity (hijab) and personal expression. The meme does not target any specific group with harmful stereotypes or discriminatory language. It is a positive affirmation of individual style and empowerment, aligning with the visual presentation of the subject as fashionable and self-assured.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "fashion forward !",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman wearing a black hijab, sunglasses, a black Nike sweatshirt, a black leather jacket, and studded gloves, leaning against a metal railing in an urban setting. She appears confident and stylish.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "fashionable_woman_leaning",
+      "label": "woman leaning against railing",
+      "description": "A woman wearing a hijab, sunglasses, a Nike sweatshirt, leather jacket, and studded gloves is leaning against a metal railing in an urban setting. She appears confident and stylish, with the text 'fashion forward!' overlaid on the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "leans_on",
+          "to": "railing"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "fashion_forward_meme_concept",
+      "label": "Fashion Forward Meme Concept",
+      "description": "The phrase 'fashion forward' is a cultural and media term used to describe someone who is trendy, innovative, and ahead of the curve in style. It implies confidence, self-expression, and a willingness to break norms. This concept is often used in fashion media, social media, and advertising to celebrate individuality and modern aesthetics. The meme uses this term to affirm the woman’s style, which includes a hijab, sunglasses, Nike apparel, leather jacket, and studded gloves — all elements that can be interpreted as bold, contemporary, and assertive fashion choices.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hijab_as_fashion_statement",
+      "label": "Hijab as Fashion Statement",
+      "description": "The hijab, while a religious head covering for Muslim women, has increasingly become a global fashion accessory. In contemporary fashion, it is often styled in creative, modern ways to express personal identity, cultural pride, and individuality. The meme implicitly references this trend, where the hijab is not seen as a religious symbol alone but as part of a broader, fashionable, and empowering aesthetic. This requires background knowledge of the evolving role of the hijab in global fashion and identity politics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The stereotype that Muslim women are oppressed or that hijab-wearing women are not modern or fashionable is a common form of Islamophobia. The meme directly counters this by presenting a confident, stylish Muslim woman, thereby challenging the stereotype that hijab = modesty = outdated. The background knowledge required to understand the meme’s intent is the existence of this stereotype and the cultural resistance to it. The image uses fashion as a tool to subvert negative perceptions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nike_brand_cultural_significance",
+      "label": "Nike Brand Cultural Significance",
+      "description": "Nike is a global sportswear brand that has become a cultural icon, often associated with athleticism, streetwear, and youth culture. Wearing a Nike logo, especially in a bold, oversized way as seen in the image, can signal a connection to global fashion trends and urban style. The background knowledge needed to understand the meme is that Nike is not just a clothing brand but a symbol of modern, accessible, and aspirational fashion, often embraced by diverse communities including Muslim women who are redefining style through global brands.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "leather_jacket_and_studded_gloves_as_edgy_fashion",
+      "label": "Leather Jacket and Studded Gloves as Edgy Fashion",
+      "description": "Leather jackets and studded gloves are fashion items often associated with rebellion, toughness, and edginess — typically linked to punk, rock, or streetwear subcultures. Their inclusion in the image, paired with a hijab and Nike sweatshirt, creates a juxtaposition that challenges traditional gender and cultural norms. The background knowledge required is the cultural meaning of these items — they are not just clothing but symbols of attitude and defiance, which the meme uses to reinforce the woman’s confidence and modernity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "confidence",
+      "label": "confident emotion",
+      "description": "The woman’s posture, direct gaze, and stylish attire convey a strong sense of self-assurance and poise. Her stance leaning against the railing, combined with her bold fashion choices (hijab, sunglasses, leather jacket, studded gloves), projects an aura of empowerment and modernity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "fashion_forward_mapping",
+      "label": "The woman is mapped as 'fashion forward'",
+      "description": "The text 'fashion forward!' is overlaid on the image of the woman, explicitly labeling her as embodying the concept of being trendy, innovative, and stylish. This creates an analogical mapping where the textual concept 'fashion forward' is projected onto the visual entity (the woman), affirming her style and confidence as fashionable and modern. The mapping is supported by her attire (hijab, Nike sweatshirt, leather jacket, studded gloves) and posture, which align with the cultural meaning of 'fashion forward' as a celebration of bold, contemporary self-expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the fashionable woman",
+      "description": "The user is projected onto the visual material of the woman, as the meme uses her as the embodiment of the 'fashion forward!' concept. The text explicitly labels her as such, and her confident, stylish appearance invites the user to identify with or admire her fashion choices. There are no explicit deictic pronouns like 'me' or 'you', but the framing of the image and the text creates an implicit projection where the viewer sees themselves in her confidence and style.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "fashion-forward Muslim woman",
+      "description": "The target community is individuals who identify with or admire modern, confident Muslim women who express their identity through contemporary fashion, including the hijab as a stylish accessory. This includes Muslim women, fashion-conscious individuals interested in inclusive and diverse style, and supporters of cultural representation in mainstream fashion. The meme appeals to those who value self-expression, empowerment, and the subversion of stereotypes about hijab-wearing women being outdated or unfashionable.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/98235.png",
+    "image_name": "98235.png",
+    "extraction_timestamp": "2025-12-19T20:02:50.422541",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

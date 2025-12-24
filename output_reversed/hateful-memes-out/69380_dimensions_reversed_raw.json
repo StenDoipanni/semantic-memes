@@ -1,0 +1,218 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: adding_coolant; hasOverallIntent: Hateful; overall-intent-description: The image depicts a Black child holding a metal cup while an adult pours coolant from a bottle into it, with text overlay reading 'adding coolant when the farm equipment overheats.' This juxtaposition maps the child's appearance and actions onto the metaphor of 'farm equipment,' implying the child is a primitive, subservient, and replaceable tool. The meme relies on dehumanizing Black people by equating them with malfunctioning machinery, reinforcing harmful stereotypes of Black people as inferior, unthinking, and only useful for labor or maintenance tasks. This is a hateful depiction that targets Black people through racist tropes, specifically the 'primitive' and 'tool' stereotypes, and is intended to demean and dehumanize.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "adding coolant",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "child",
+      "label": "a young Black child",
+      "description": "A small, bald Black child is holding a metal cup, looking up toward the camera. The child's expression is neutral to curious. This child is the central human subject and is visually juxtaposed with the adult and the coolant bottle, forming the core of the meme's dehumanizing metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "coolant_adding_scene",
+      "label": "child_adding_coolant",
+      "description": "A scene where a child is holding a metal cup while an adult pours coolant from a bottle into it, visually representing the metaphor of 'adding coolant when the farm equipment overheats'. The child is positioned centrally, looking up, while the adult's hand and the coolant bottle are above, indicating an act of maintenance or servicing. The scene is framed to emphasize the child's role as a tool or object being used for a mechanical task.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "holds",
+          "to": "metal_cup"
+        },
+        {
+          "from": "adult_hand",
+          "relation": "pours",
+          "to": "metal_cup"
+        },
+        {
+          "from": "child",
+          "relation": "looks_up_at",
+          "to": "adult_hand"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_primitive_tool",
+      "label": "Anti-Black Stereotype: Primitive Tool",
+      "description": "The meme relies on the racist trope of equating Black people with malfunctioning farm equipment, implying they are inferior, unthinking, and only useful for labor or maintenance tasks. This stereotype dehumanizes Black individuals by reducing them to objects or tools that require constant 'cooling' or repair.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_dehumanizing_mechanism",
+      "label": "Anti-Black Stereotype: Dehumanizing Mechanism",
+      "description": "The meme uses the metaphor of 'adding coolant' to a 'farm equipment' to imply that Black people are replaceable, subservient, and only valuable when performing manual labor. This is a dehumanizing mechanism that reduces human beings to mechanical parts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_inferiority_complex",
+      "label": "Anti-Black Stereotype: Inferiority Complex",
+      "description": "The meme reinforces the harmful stereotype that Black people are inherently inferior and incapable of independent thought or function, requiring external intervention (like coolant) to 'operate' properly. This perpetuates a systemic belief in Black inferiority.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "farm_equipment_metaphor",
+      "label": "Farm Equipment Metaphor",
+      "description": "The phrase 'farm equipment overheats' is a metaphor for machinery that breaks down and requires maintenance. In the meme, this metaphor is applied to Black people, suggesting they are broken, in need of constant repair, and only useful when functioning as tools.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "coolant_as_maintenance",
+      "label": "Coolant as Maintenance",
+      "description": "Coolant is a real-world substance used to regulate temperature in machinery. In the meme, its use is metaphorically extended to imply that Black people are 'maintained' or 'cooled down' by others, reinforcing their role as passive recipients of care or control.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "curiosity",
+      "label": "curious expression",
+      "description": "The child is looking up toward the camera with a neutral to curious facial expression, indicating interest or engagement with the activity or the observer.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "child is mapped as farm equipment",
+      "description": "The text 'adding coolant when the farm equipment overheats' explicitly maps the visual entity 'child' onto the metaphorical entity 'farm equipment'. The child's role in the scene—being held, having coolant poured into a cup they are holding—is visually analogous to servicing machinery. This mapping is central to the meme's hateful intent, reducing the child to a tool that requires maintenance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the child as a primitive tool requiring maintenance",
+      "description": "The user is projected onto the visual material of the child, who is metaphorically equated with 'farm equipment' that overheats and requires coolant. This projection implies the user identifies with or is meant to see themselves as the child — a passive, replaceable, and inferior tool needing external intervention to function. The meme's hateful intent relies on this projection to dehumanize Black people by forcing the viewer to internalize the metaphor of being a broken machine.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Black people by equating them with malfunctioning farm equipment that requires coolant, reinforcing harmful stereotypes of inferiority and dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "anti_black_stereotype_primitive_tool",
+      "label": "Anti-Black Stereotype: Primitive Tool",
+      "description": "The meme targets individuals who perpetuate or consume racist tropes that equate Black people with malfunctioning farm equipment, implying they are inferior, unthinking, and only useful for labor or maintenance tasks. This stereotype dehumanizes Black individuals by reducing them to objects or tools that require constant 'cooling' or repair.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/69380.png",
+    "image_name": "69380.png",
+    "extraction_timestamp": "2025-12-19T10:26:58.564389",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

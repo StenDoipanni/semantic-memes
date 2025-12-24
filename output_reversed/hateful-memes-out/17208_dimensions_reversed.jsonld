@@ -1,0 +1,546 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4",
+  "@type": "AnalysisDocument",
+  "title": "17208.png - Dimension Analysis",
+  "created": "2025-12-15T16:52:31.624835",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_8b9b0e6d",
+    "@type": "Image",
+    "filename": "17208.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/17208.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/17208.png",
+    "image_name": "17208.png",
+    "extraction_timestamp": "2025-12-15T16:49:09.822201",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 46,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d82317f9",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a historical scene of Nazi Germany with Adolf Hitler in a car, surrounded by Nazi supporters and crowds saluting. The overlaid text reads: 'it didn't happen because of the actions of one man' and 'it happened because of people who were 'just doing their jobs''. The overall intent is to shift blame for historical atrocities away from individual leaders and onto ordinary people who allegedly 'just followed orders' or 'did their jobs'. This is a harmful meme because it minimizes the moral responsibility of individuals, promotes a dangerous justification for complicity in genocide and totalitarianism, and can be used to downplay the role of leadership in enabling mass atrocities. It is not abusive or cyberbullying toward specific individuals or communities, but it is harmful as it normalizes and rationalizes participation in systemic evil, potentially encouraging passive acceptance of injustice or authoritarianism. The meme uses historical imagery to make an argument that is historically inaccurate and ethically dangerous, as it ignores the willful choices and moral failures of those who participated in the Holocaust and Nazi regime.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ce55edbc",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "it didn't happen because of the actions of one man",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_97e23242",
+      "@type": "VisualMaterial",
+      "instance_name": "Adolf_Hitler",
+      "label": "man in uniform",
+      "description": "A man with a mustache, wearing a military-style uniform and cap, standing in the open-top car, raising his right hand in a salute. He is the central figure in the image, positioned prominently in the foreground.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9c73b3aa",
+      "@type": "Scene",
+      "instance_name": "nazi_parade",
+      "label": "Nazi parade scene",
+      "description": "A scene depicting Adolf Hitler in a car during a Nazi parade, surrounded by Nazi supporters and crowds saluting. The scene includes visual elements such as the car, the crowd, and Nazi flags and banners. The overlaid text suggests a commentary on historical responsibility.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9469e376",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Germany",
+      "label": "Nazi Germany",
+      "description": "The historical regime led by Adolf Hitler from 1933 to 1945, characterized by totalitarianism, anti-Semitism, and the Holocaust. The image depicts a scene from this period, and understanding the context of the regime is essential to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_07e4a102",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Adolf_Hitler",
+      "label": "Adolf Hitler",
+      "description": "The dictator of Nazi Germany, the central figure in the image. His role as the leader of the regime is critical to understanding the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_12e1fdff",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Holocaust",
+      "label": "Holocaust",
+      "description": "The systematic, state-sponsored persecution and murder of six million Jews by Nazi Germany and its collaborators during World War II. The meme references this genocide as the historical event being discussed, and understanding its scale and nature is necessary to grasp the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4449f5fd",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nuremberg_Law",
+      "label": "Nuremberg Laws",
+      "description": "A series of anti-Jewish laws enacted in Nazi Germany in 1935 that stripped Jews of their citizenship and prohibited marriage and sexual relations between Jews and Germans. These laws are part of the broader context of Nazi racial policy that the meme implicitly references.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f48aa1c7",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Salute",
+      "label": "Nazi Salute",
+      "description": "The right-hand salute used by members of the Nazi Party and the German armed forces. The image shows people performing this salute, which is a key visual symbol of Nazi ideology and complicity. Understanding its meaning is necessary to interpret the crowd",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_efd10995",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Holocaust_Minimization",
+      "label": "Holocaust Minimization",
+      "description": "The act of downplaying or denying the scale and moral responsibility for the Holocaust. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_94391670",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Obedience_and_Compliance",
+      "label": "Obedience and Compliance",
+      "description": "The psychological and social phenomenon where individuals follow orders or conform to authority, even when it leads to morally reprehensible actions. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6f6ca6b9",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nuremberg_Trials",
+      "label": "Nuremberg Trials",
+      "description": "The series of military tribunals held after World War II to prosecute Nazi leaders for war crimes and crimes against humanity. The trials established the legal precedent that individuals could be held accountable for their actions, directly contradicting the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a5dd6c93",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "German_Population_During_Holocaust",
+      "label": "German Population During Holocaust",
+      "description": "The civilian population of Germany, including bureaucrats, police, and ordinary citizens, who were complicit in the Holocaust through their roles in the Nazi state. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_24bb8423",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Symbolism",
+      "label": "Nazi Symbolism",
+      "description": "The visual and ideological symbols of the Nazi Party, including the swastika, the eagle, and the salute. These symbols are present in the image and are essential to understanding the context of the scene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_49ee7ebc",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "World_War_II",
+      "label": "World War II",
+      "description": "The global conflict from 1939 to 1945 in which Nazi Germany was a central aggressor. The Holocaust occurred during this war, and the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_234a4eae",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Party",
+      "label": "Nazi Party",
+      "description": "The political party led by Adolf Hitler that came to power in Germany in 1933. The image depicts a scene from the party",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8f3479da",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Armies",
+      "label": "Nazi Armies",
+      "description": "The military forces of Nazi Germany, including the Wehrmacht and Waffen-SS, which carried out many of the atrocities of the Holocaust. The image shows soldiers in uniform, and understanding their role is key to interpreting the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b8009c8c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Collaborators",
+      "label": "Nazi Collaborators",
+      "description": "Individuals from various countries and backgrounds who assisted the Nazi regime in its crimes. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_68bcda8c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Propaganda",
+      "label": "Nazi Propaganda",
+      "description": "The systematic effort by the Nazi regime to control information and shape public opinion. The image is a product of Nazi propaganda, and understanding its purpose is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_35af8870",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Era",
+      "label": "Nazi Era",
+      "description": "The period of history from 1933 to 1945 when Nazi Germany was in power. The image depicts a scene from this era, and understanding the broader historical context is essential to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9dc77dd1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Leadership",
+      "label": "Nazi Leadership",
+      "description": "The leadership structure of the Nazi Party and state, including Hitler, Goebbels, Himmler, and others. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_79890930",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Crimes",
+      "label": "Nazi Crimes",
+      "description": "The systematic crimes committed by the Nazi regime, including genocide, forced labor, and persecution of various groups. The meme references these crimes as the historical event being discussed, and understanding their nature is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9761dd90",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Justice",
+      "label": "Nazi Justice",
+      "description": "The legal system and judicial practices of Nazi Germany, which were used to legitimize the regime",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7a87fcd8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Economy",
+      "label": "Nazi Economy",
+      "description": "The economic policies and practices of Nazi Germany, including the use of forced labor and the exploitation of conquered territories. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7c66da4d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Society",
+      "label": "Nazi Society",
+      "description": "The social structure and norms of Nazi Germany, including the promotion of racial purity and the suppression of dissent. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_27b52e2f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Culture",
+      "label": "Nazi Culture",
+      "description": "The cultural products and practices of Nazi Germany, including art, literature, and media. The image is a product of Nazi culture, and understanding its cultural context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fc84cfac",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Education",
+      "label": "Nazi Education",
+      "description": "The educational system of Nazi Germany, which was used to indoctrinate children with Nazi ideology. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2c2bba7b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Media",
+      "label": "Nazi Media",
+      "description": "The media outlets and propaganda tools of Nazi Germany, including newspapers, radio, and film. The image is a product of Nazi media, and understanding its media context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ae2ba3b8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Art",
+      "label": "Nazi Art",
+      "description": "The art produced and promoted by Nazi Germany, which was used to glorify the regime and promote Nazi ideology. The image is a product of Nazi art, and understanding its artistic context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b3b5d38e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Literature",
+      "label": "Nazi Literature",
+      "description": "The literature produced and promoted by Nazi Germany, which was used to glorify the regime and promote Nazi ideology. The image is a product of Nazi literature, and understanding its literary context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_00578885",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Music",
+      "label": "Nazi Music",
+      "description": "The music produced and promoted by Nazi Germany, which was used to glorify the regime and promote Nazi ideology. The image is a product of Nazi music, and understanding its musical context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_cbd2e1c6",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Dance",
+      "label": "Nazi Dance",
+      "description": "The dance forms and performances promoted by Nazi Germany, which were used to glorify the regime and promote Nazi ideology. The image is a product of Nazi dance, and understanding its dance context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_beb7d6c3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Drama",
+      "label": "Nazi Drama",
+      "description": "The drama and theater productions promoted by Nazi Germany, which were used to glorify the regime and promote Nazi ideology. The image is a product of Nazi drama, and understanding its dramatic context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b7d2789e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Film",
+      "label": "Nazi Film",
+      "description": "The film industry and productions promoted by Nazi Germany, which were used to glorify the regime and promote Nazi ideology. The image is a product of Nazi film, and understanding its cinematic context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6c415f8c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Photography",
+      "label": "Nazi Photography",
+      "description": "The photographic practices and images produced by Nazi Germany, which were used to glorify the regime and promote Nazi ideology. The image is a product of Nazi photography, and understanding its photographic context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b94be98b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Painting",
+      "label": "Nazi Painting",
+      "description": "The painting and visual art produced by Nazi Germany, which was used to glorify the regime and promote Nazi ideology. The image is a product of Nazi painting, and understanding its artistic context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_853e767b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Sculpture",
+      "label": "Nazi Sculpture",
+      "description": "The sculpture and three-dimensional art produced by Nazi Germany, which was used to glorify the regime and promote Nazi ideology. The image is a product of Nazi sculpture, and understanding its artistic context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a90443b3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Ceramics",
+      "label": "Nazi Ceramics",
+      "description": "The ceramic art and pottery produced by Nazi Germany, which was used to glorify the regime and promote Nazi ideology. The image is a product of Nazi ceramics, and understanding its artistic context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0c86b6b1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Jewelry",
+      "label": "Nazi Jewelry",
+      "description": "The jewelry and decorative arts produced by Nazi Germany, which was used to glorify the regime and promote Nazi ideology. The image is a product of Nazi jewelry, and understanding its artistic context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b38ee2a2",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Textiles",
+      "label": "Nazi Textiles",
+      "description": "The textile arts and fabrics produced by Nazi Germany, which were used to glorify the regime and promote Nazi ideology. The image is a product of Nazi textiles, and understanding its artistic context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1b035d15",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "Nazi_Fashion",
+      "label": "Nazi Fashion",
+      "description": "The fashion and clothing styles promoted by Nazi Germany, which were used to glorify the regime and promote Nazi ideology. The image is a product of Nazi fashion, and understanding its fashion context is necessary to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0b5fdedc",
+      "@type": "EmotionExpression",
+      "instance_name": "historical_minimization",
+      "label": "emotion of minimizing historical responsibility",
+      "description": "The overlaid text expresses a morally dangerous emotion by shifting blame from individual leaders to ordinary people, suggesting that atrocities were the result of 'just doing their jobs' rather than willful, evil choices. This emotion is conveyed through the text and the historical imagery, promoting a dangerous justification for complicity in genocide.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e08e2f93",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Textual blame shift mapped onto visual leader",
+      "description": "The top text 'it didn't happen because of the actions of one man' is mapped onto the visual entity Adolf_Hitler, implying that the historical atrocities were not solely due to Hitler's actions but due to the collective actions of others. This mapping uses the visual prominence of Hitler to represent the 'one man' being blamed, while the text argues that responsibility lies elsewhere.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_cbcf77d5",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message as a moral agent",
+      "description": "The user is implicitly projected onto the textual message, which frames the viewer as someone who must confront the moral responsibility implied by the text. The text 'it happened because of people who were 'just doing their jobs'' invites the user to identify with the collective of ordinary people who followed orders, suggesting a passive or complicit stance. This projection is not deictic (e.g., 'you') but is implied through the rhetorical structure that positions the viewer as part of the 'people' being discussed, encouraging self-reflection on complicity.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_66e7e403",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme promotes a dangerous justification for complicity in genocide and totalitarianism by minimizing the moral responsibility of individuals and promoting the idea that atrocities were the result of 'just doing their jobs'. This is harmful as it normalizes and rationalizes participation in systemic evil, potentially encouraging passive acceptance of injustice or authoritarianism.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c217c7d8",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who may be sympathetic to or interested in historical revisionism, particularly those who believe in minimizing individual moral responsibility for mass atrocities. The meme appeals to audiences who might be drawn to the idea that historical crimes were the result of systemic obedience rather than the willful actions of leaders, potentially including those who are skeptical of the Nuremberg Trials or who hold views that downplay the role of Nazi leadership. The meme is designed to resonate with people who are familiar with the historical context of Nazi Germany and who may be seeking to reinterpret or justify the actions of ordinary citizens during that era. It targets those who might be influenced by the 'just following orders' defense, and who may be looking for a way to rationalize or normalize complicity in evil systems. The meme's use of historical imagery and its framing of the Holocaust as a collective failure rather than a moral catastrophe is intended to provoke thought or debate among those who are already engaged with historical discourse, particularly those who are critical of the concept of individual accountability in the face of state-sponsored atrocities.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7a6a1ff4"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

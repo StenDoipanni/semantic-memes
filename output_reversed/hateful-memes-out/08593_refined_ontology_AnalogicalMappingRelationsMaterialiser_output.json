@@ -1,0 +1,32 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_001",
+      "hasMappedEntity": "child_held_by_horse",
+      "hasMappingEntity": "person_in_ocean"
+    },
+    {
+      "from": "child_held_by_horse",
+      "relation": "mappedOnto",
+      "to": "18 years later"
+    },
+    {
+      "from": "person_in_ocean",
+      "relation": "mappedOnto",
+      "to": "18 years later"
+    }
+  ],
+  "triples": [
+    ":mapping_001 :hasMappedEntity :child_held_by_horse .",
+    ":mapping_001 :hasMappingEntity :person_in_ocean .",
+    ":child_held_by_horse :mappedOnto :_18_years_later .",
+    ":person_in_ocean :mappedOnto :_18_years_later ."
+  ],
+  "triples_count": 4
+}

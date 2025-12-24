@@ -1,0 +1,197 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: ahmed_mohamed_reminds_us; hasOverallIntent: Harmful; overall-intent-description: The image depicts a young child in a lab coat and goggles, surrounded by scientific equipment, with text that reads 'ahmed mohamed reminds us to set our bombs 1 hour ahead this weekend.' This juxtaposition of a child engaged in scientific experimentation with a violent, bomb-related message is intentionally misleading and harmful. The meme uses the name 'Ahmed Mohamed' — a real person who was falsely accused of bringing a bomb to school — to create a dark, satirical, and potentially dangerous implication. The intent is to provoke fear or discomfort by associating the name with terrorism or violence, which is a harmful and misleading use of a real individual's identity. This is not merely a joke but a potentially harmful meme that could incite fear, spread misinformation, and contribute to a hostile environment for individuals with the name 'Ahmed Mohamed' or those perceived to be associated with Muslim communities, given the historical context of Islamophobia and terrorism associations. The meme's overall intent is to cause harm by exploiting a real-life incident for dark humor, which can lead to real-world consequences such as increased discrimination or harassment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "ahmed mohamed reminds us",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "child",
+      "label": "a young boy",
+      "description": "A young boy with light-colored hair, wearing goggles pushed up on his head and a red plaid shirt, is focused on manipulating wires or components in a complex setup of scientific or mechanical equipment. He appears to be engaged in hands-on experimentation or tinkering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "child_tinkering_with_science_equipment",
+      "label": "child tinkering with science equipment",
+      "description": "A young boy is focused on manipulating wires or components in a complex setup of scientific or mechanical equipment. He appears to be engaged in hands-on experimentation or tinkering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ahmed_mohamed",
+      "label": "Ahmed Mohamed",
+      "description": "Ahmed Mohamed is a real person who was falsely accused of bringing a bomb to school in 2015 in Texas, USA. The meme uses his name to create a dark, satirical, and potentially dangerous implication, associating him with terrorism or violence. This is a harmful and misleading use of a real individual's identity, exploiting a real-life incident for dark humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism_associations",
+      "label": "Terrorism Associations",
+      "description": "This is a stereotype often used in Islamophobia to associate Muslims or people with Muslim-sounding names with terrorism. The meme leverages this stereotype by implying that Ahmed Mohamed, whose name is common among Muslims, is connected to bomb-making, which is a dangerous and false association.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "A form of prejudice or discrimination against Muslims, often manifesting as fear, hatred, or stereotyping. The meme exploits Islamophobic stereotypes by linking the name 'Ahmed Mohamed' — which is commonly associated with Muslim communities — to violent acts like bomb-making, thereby contributing to a hostile environment for Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dark_humor",
+      "label": "Dark Humor",
+      "description": "Humor that derives from morbid, taboo, or distressing subjects. The meme uses dark humor to create a jarring and potentially harmful juxtaposition — a child tinkering with science equipment is presented as if he is preparing bombs — which is intended to provoke fear or discomfort.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misinformation",
+      "label": "Misinformation",
+      "description": "False or inaccurate information that is spread, often unintentionally. The meme spreads misinformation by falsely implying that Ahmed Mohamed is involved in terrorism, which is not true. This can lead to real-world consequences such as increased discrimination or harassment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harmful_meme",
+      "label": "Harmful Meme",
+      "description": "A meme that is intended to cause harm, provoke fear, or spread misinformation. This meme is harmful because it uses the name of a real person to create a dangerous association with terrorism, which can incite fear, spread misinformation, and contribute to a hostile environment for individuals with the name 'Ahmed Mohamed' or those perceived to be associated with Muslim communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "fear",
+      "label": "fear induced by the meme's message",
+      "description": "The emotion of fear is expressed through the dark, satirical, and potentially dangerous implication created by the text overlay, which falsely associates Ahmed Mohamed with bomb-making. This fear is intended to provoke discomfort and is a direct result of the meme's harmful intent and the exploitation of a real-life incident for dark humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Ahmed Mohamed is mapped onto the child tinkering with science equipment",
+      "description": "The text 'ahmed mohamed reminds us' is juxtaposed with the visual of a child tinkering with scientific equipment. This creates an analogical mapping where the child is implicitly identified as 'Ahmed Mohamed', and the act of tinkering is falsely mapped onto the context of bomb-making, as suggested by the text. The mapping is harmful and misleading, exploiting the real-life incident involving Ahmed Mohamed to associate him with terrorism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message",
+      "description": "The user is projected onto the textual material 'ahmed mohamed reminds us to set our bombs 1 hour ahead this weekend', which directly addresses the viewer with an imperative ('reminds us') and a call to action ('set our bombs'). This creates an implicit 'you' projection, where the viewer is positioned as the one who must heed the warning, thereby making the user an active participant in the meme's harmful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses the name 'Ahmed Mohamed' — a real person falsely accused of bringing a bomb to school — to create a dark, satirical, and potentially dangerous implication, associating him with terrorism or violence. This is a harmful and misleading use of a real individual's identity, exploiting a real-life incident for dark humor, which can lead to real-world consequences such as increased discrimination or harassment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience familiar with or interested in internet humor, particularly dark humor, that exploits real-world events or public figures for shock value. The target audience likely includes individuals who are aware of the 2015 incident involving Ahmed Mohamed and may be familiar with the name's association with Islamophobia. The meme appeals to those who find provocative or controversial content amusing, even if it is harmful or misleading. The audience may also include those who are indifferent to the real-world consequences of such memes, or who are drawn to the meme for its satirical or ironic tone, regardless of its harmful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/94251.png",
+    "image_name": "94251.png",
+    "extraction_timestamp": "2025-12-19T18:08:34.936885",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

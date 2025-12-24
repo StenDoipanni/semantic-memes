@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2",
+  "@type": "AnalysisDocument",
+  "title": "12054.png - Dimension Analysis",
+  "created": "2025-12-15T14:38:07.687070",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_f59e2404",
+    "@type": "Image",
+    "filename": "12054.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/12054.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/12054.png",
+    "image_name": "12054.png",
+    "extraction_timestamp": "2025-12-15T14:36:36.974182",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1b965b05",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image features a vintage blue Chevrolet truck in a field with people around it, and overlaid text reads: 'what do chevy trucks have in common with their owners? they've both blown a tranny.' This is a pun-based meme that uses the word 'tranny' (a slang term for transmission) to imply that both the truck and its owner have 'blown a tranny' (i.e., experienced a transmission failure). While the joke is technically about car mechanics, the term 'tranny' is also a derogatory slur for transgender people. The meme's intent is to create humor through wordplay, but it risks being harmful due to the potential for offense or harm to transgender individuals, as it uses a slur in a casual, non-contextual way. The overall intent is to elicit laughter through a pun, but the use of the slur introduces a harmful element that could be perceived as mocking or degrading a marginalized group. The scene is neutral in terms of visual toxicity, but the textual content carries the potential for harm due to the slur.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8edfa92e",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "what do chevy trucks have in common with their owners? they've both blown a tranny.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9464d0f6",
+      "@type": "VisualMaterial",
+      "instance_name": "vintage_blue_Chevrolet_truck",
+      "label": "vehicle",
+      "description": "A classic, light blue Chevrolet pickup truck with visible rust and wear, parked in an outdoor field. It is the central visual focus of the image, positioned prominently in the foreground. The truck's design suggests it is from the 1950s or 1960s, with a distinctive rounded cab and chrome accents. Its condition implies it may be a restored or unrestored classic vehicle, possibly being showcased or worked on.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4166ebeb",
+      "@type": "Scene",
+      "instance_name": "truck_inspection_scene",
+      "label": "truck_inspection_scene",
+      "description": "A vintage blue Chevrolet truck is the central focus, with a person crouching beside it, seemingly inspecting or working on it. Another person is standing in the background near other vehicles, suggesting a gathering or event involving classic cars.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2b91e38f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transmission_failure_joke",
+      "label": "Transmission Failure Joke",
+      "description": "The meme uses a pun on the word 'tranny' which is slang for 'transmission' in automotive contexts. The joke implies that both the truck and its owner have experienced a transmission failure. This requires understanding of automotive terminology and the common use of 'tranny' as a colloquial term for transmission.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_cce56420",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "slur_for_transgender_people",
+      "label": "Slur for Transgender People",
+      "description": "The word 'tranny' is also a derogatory slur used to refer to transgender people. The meme's humor relies on this double meaning, which can be offensive or harmful to transgender individuals. Understanding this slur is necessary to interpret the meme's potential toxicity and social implications.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_be5bce0f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "transgender_community",
+      "label": "Transgender Community",
+      "description": "The meme references the transgender community through the use of the slur 'tranny'. Understanding the identity and experiences of transgender people is necessary to recognize the potential harm or offense caused by the meme's use of this term.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b1952888",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "automotive_culture",
+      "label": "Automotive Culture",
+      "description": "The meme is rooted in automotive culture, particularly among classic car enthusiasts. The reference to 'blown a tranny' is a common phrase in car enthusiast circles to describe a failed transmission. This cultural context helps explain the humor and the target audience of the meme.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c60c6058",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "classic_car_show",
+      "label": "Classic Car Show",
+      "description": "The scene depicted in the image, with multiple vintage vehicles and people inspecting them, suggests a classic car show or gathering. This context helps understand the setting and the likely audience for the meme, which may be car enthusiasts.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7593eff2",
+      "@type": "EmotionExpression",
+      "instance_name": "derision",
+      "label": "derisive emotion",
+      "description": "The emotion expressed is derision, conveyed through the use of a derogatory slur ('tranny') in a joke that mocks transgender people by equating them with mechanical failure. The humor is intended to be offensive and degrading, targeting a marginalized group.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5878386d",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Chevy truck mapped as 'owner' in the joke",
+      "description": "The textual joke 'what do chevy trucks have in common with their owners? they've both blown a tranny.' creates an analogical mapping where the vintage_blue_Chevrolet_truck is implicitly mapped as the 'owner' in the pun. The joke equates the truck (a vehicle) with its owner, suggesting both have experienced a transmission failure. This mapping is established through the pun's structure, where the truck is personified as if it were an owner, creating a humorous analogy between the mechanical failure of the truck and the implied failure of the owner (via the slur 'tranny').",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b74ee3c6",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual joke as the implied 'owner'",
+      "description": "The user is projected onto the textual material (text_chunk) through the pun 'they've both blown a tranny.' The joke implicitly equates the user (as the owner) with the vintage_blue_Chevrolet_truck, suggesting the user is the 'owner' who has 'blown a tranny.' This projection is not explicit with deictic pronouns like 'you' or 'me,' but is inferred through the rhetorical structure of the joke, where the user is positioned as the 'owner' in the analogy. The user is thus projected onto the text_chunk, which frames them as the subject of the implied comparison.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b5f0b359",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses the term 'tranny' as a derogatory slur for transgender people in a joke about car transmissions, which can be offensive or harmful to transgender individuals.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ed8ac7de",
+      "@type": "TargetCommunity",
+      "instance_name": "automotive_culture",
+      "label": "Classic Car Enthusiasts",
+      "description": "The meme is rooted in automotive culture, particularly among classic car enthusiasts. The reference to 'blown a tranny' is a common phrase in car enthusiast circles to describe a failed transmission, indicating the humor is tailored for those familiar with automotive terminology and classic vehicle culture.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_1b481df2"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

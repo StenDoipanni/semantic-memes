@@ -1,0 +1,180 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: this_faceapp_stuff_is_incredible; hasOverallIntent: non-toxic_positive_reaction; overall-intent-description: The image shows a child holding a stuffed animal with a face that has been digitally altered to resemble the child's face using a face-swapping app. The text overlay reads 'this faceapp stuff is incredible!' The scene is lighthearted and playful, with no indication of toxicity, harm, or hateful content. The meme's intent is to express amazement and delight at the capabilities of face-swapping technology, using the child's innocent and joyful expression to reinforce the positive reaction. There are no disparaging metaphors, stereotypes, or harmful elements present in the image or text. The overall intent is to celebrate technological innovation in a fun, non-threatening context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "this faceapp stuff",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "child",
+      "label": "a young girl",
+      "description": "A young girl with light brown hair, wearing a gray sweater with a yellow collar, is holding a stuffed animal. Her face is partially obscured by a plush lion head that has been digitally altered to resemble her face using a face-swapping app. She is smiling and looking at the camera, conveying a sense of joy and innocence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "face_swap_demo",
+      "label": "child holding digitally altered stuffed animal",
+      "description": "A child is holding a stuffed animal whose face has been digitally altered to resemble her face using a face-swapping app. The child's own face is partially obscured by the plush lion head. The scene is playful and lighthearted, with the child smiling and looking at the camera. The text overlay 'this faceapp stuff is incredible!' reinforces the theme of technological amazement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "holds",
+          "to": "stuffed_animal"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "faceapp",
+      "label": "FaceApp",
+      "description": "FaceApp is a popular mobile application that uses artificial intelligence to apply various digital filters and effects to photos, including face-swapping, aging, and gender transformation. The meme references this app as the tool used to digitally alter the stuffed animal's face to resemble the child's face, which is a common and widely recognized use of the app. Understanding that FaceApp is a real-world technology and its specific function (face-swapping) is essential to interpret the meme's content and the text overlay 'this faceapp stuff is incredible!'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "face_swap_technology",
+      "label": "Face-Swapping Technology",
+      "description": "The meme relies on the understanding of face-swapping technology, which involves digitally replacing one person's face with another's in a photo or video. This technology, often powered by AI, is used in apps like FaceApp, Snapchat filters, and other digital editing tools. The child's joyful reaction and the text 'is incredible!' are meant to express amazement at this technological capability, which requires background knowledge of how such apps function and their cultural prevalence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "digital_photo_editing",
+      "label": "Digital Photo Editing",
+      "description": "The meme implicitly references the broader concept of digital photo editing, which includes tools and software that allow users to manipulate images. This background knowledge is necessary to understand that the altered face on the stuffed animal is not a physical alteration but a digital one, and that such editing is a common and accessible activity in modern digital culture, often used for fun, creativity, or social media sharing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_media_trend",
+      "label": "Social Media Trend",
+      "description": "The meme taps into the cultural phenomenon of social media trends, where users share and react to viral content, often involving humorous or impressive digital manipulations. The phrase 'this faceapp stuff is incredible!' reflects a common social media reaction to new or impressive digital tools. Understanding that this is part of a broader trend of sharing and celebrating digital creativity on platforms like Instagram, TikTok, or Facebook is essential to grasp the meme's context and intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "amazement",
+      "label": "amazed emotion",
+      "description": "The child's wide-eyed, smiling expression, combined with the text overlay 'this faceapp stuff is incredible!', conveys a sense of wonder and delight at the technological effect of the face-swapping app. The overall lighthearted and playful scene reinforces this emotion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The child's joyful reaction is mapped onto the text 'this faceapp stuff is incredible!'",
+      "description": "The text 'this faceapp stuff is incredible!' is an expression of amazement and delight at the face-swapping technology demonstrated in the image. The visual material, specifically the child's smiling and innocent expression while holding the digitally altered stuffed animal, serves as the source of this emotion. The mapping is that the child's reaction (visual) is being interpreted as the reaction to the technology (textual). The child's face, partially obscured by the altered plush, is the visual entity whose emotional state is being projected onto the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the child's joyful reaction",
+      "description": "The user is projecting their own sense of amazement and delight onto the child's visual expression. The child's smiling face, partially obscured by the digitally altered stuffed animal, serves as the visual anchor for the user's emotional projection. This projection is reinforced by the text 'this faceapp stuff is incredible!', which explicitly states the user's reaction to the technology demonstrated in the scene. The user is not directly addressed by deictic pronouns like 'you' or 'me', but the emotional state conveyed by the child's expression is being interpreted as representative of the user's own experience with the technology.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "social media users familiar with face-swapping apps",
+      "description": "The meme targets individuals who are active on social media platforms and are familiar with digital photo editing tools like FaceApp. The reference to 'this faceapp stuff' and the expression of amazement ('is incredible!') are tailored to an audience that appreciates and engages with viral digital trends, particularly those involving AI-powered face-swapping technology. The lighthearted, playful context (a child reacting to a digitally altered stuffed animal) is designed to resonate with users who enjoy sharing and celebrating creative, humorous, or impressive digital manipulations online.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/54261.png",
+    "image_name": "54261.png",
+    "extraction_timestamp": "2025-12-16T04:59:13.192364",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

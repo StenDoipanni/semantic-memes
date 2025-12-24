@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: will_you_tell_the_cat_bullying_is_not_okay; hasOverallIntent: Harmful; overall-intent-description: The image depicts a pug with a pink bandage on its forehead, looking sad or injured, with text that reads 'will you tell the cat bullying is not okay?'. The scene uses the visual of a dog (pug) with an injury to symbolize a victim of bullying, and the text implies that the dog is asking someone to intervene with a cat (often used as a metaphor for a bully or aggressor). The overall intent is to raise awareness about bullying and encourage intervention. While the meme is not explicitly abusive, hateful, or propagandistic, it may be considered harmful because it uses a vulnerable animal to evoke empathy and highlight the seriousness of bullying. The use of animals in this context is not inherently toxic, but the meme's message about bullying can be sensitive and potentially triggering for individuals who have experienced bullying or who are concerned about the well-being of others. The intent is to promote a message of compassion and intervention, but the use of animals as symbols may be seen as trivializing the issue if not handled with care.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "will you tell the cat",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "pug",
+      "label": "dog",
+      "description": "A pug with a pink bandage on its forehead, looking sad or injured, is the central visual element. The pug's facial expression and the bandage are salient, symbolizing a victim of bullying in the meme's context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "pug_with_bandage_requesting_intervention",
+      "label": "A pug with a bandage on its forehead is requesting intervention regarding bullying",
+      "description": "The pug, appearing sad or injured with a pink bandage on its forehead, is the central visual element. The text overlay asks if the viewer will tell a cat (implied as a bully) that bullying is not okay. The scene interprets the pug as a victim of bullying, and the text as a plea for intervention. The spatial arrangement places the pug centrally, with text positioned above and below its head, creating a direct visual and textual relationship.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "pug",
+          "relation": "isRequestingInterventionFrom",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "bullying",
+      "label": "bullying",
+      "description": "The concept of bullying as a social issue involving repeated aggressive behavior towards a perceived weaker individual or group. This is a real-world social phenomenon that the meme references to convey its message. The meme uses the metaphor of a dog (pug) being bullied by a cat to represent real-life bullying dynamics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "pug_with_bandage_requesting_intervention",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cat_as_bully",
+      "label": "cat as bully",
+      "description": "The implicit reference to a cat as a symbol of a bully or aggressor in the context of animal behavior and human social dynamics. Cats are often stereotyped in popular culture as aloof, territorial, or aggressive, which makes them a fitting (though metaphorical) symbol for a bully in this meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "pug_with_bandage_requesting_intervention",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "animal_metaphor_for_social_issues",
+      "label": "animal metaphor for social issues",
+      "description": "The use of animals to represent human social dynamics and problems, such as bullying, is a common trope in memes and cartoons. This background knowledge is necessary to understand that the pug and cat are not literal animals but symbolic representations of victim and aggressor in a social context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "pug_with_bandage_requesting_intervention",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "intervention_request",
+      "label": "intervention request",
+      "description": "The concept of asking for intervention in a conflict or harmful situation. This is a real-world social behavior that the meme references. The pug’s plea to 'tell the cat bullying is not okay' is a metaphor for asking others to step in and stop harmful behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "pug_with_bandage_requesting_intervention",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "vulnerability_and_empathy",
+      "label": "vulnerability and empathy",
+      "description": "The emotional appeal in the meme relies on the viewer’s empathy for the injured pug, which is a real-world social and psychological phenomenon. The image uses the pug’s sad expression and injury to evoke sympathy and encourage the viewer to act as an advocate for the victim.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "pug_with_bandage_requesting_intervention",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "sadness",
+      "label": "sad emotional expression",
+      "description": "The pug's facial expression, characterized by droopy eyes, a downturned mouth, and a wrinkled brow, conveys a sense of sadness or distress. This is further emphasized by the pink bandage on its forehead, symbolizing injury or suffering, which intensifies the emotional impact.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The pug is mapped as the victim of bullying",
+      "description": "The text 'will you tell the cat bullying is not okay?' implies that the pug is the victim of bullying, and the cat is the aggressor. The visual of the pug with a bandage and a sad expression directly maps onto this textual role, establishing the pug as the bullied entity. The spatial positioning of the text around the pug reinforces this mapping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the intervention request scene",
+      "description": "The user is projected onto the scene where the pug is requesting intervention regarding bullying. The text 'will you tell the cat bullying is not okay?' directly addresses the viewer with 'you', making the user the implied agent who is being asked to take action. The user is projected onto the scene of the pug's plea, which is the central interactive element of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a vulnerable animal (pug) as a symbol for a bullying victim to evoke empathy and encourage intervention. While not explicitly abusive or hateful, the use of animals in this context may be seen as trivializing the serious issue of bullying, potentially triggering individuals who have experienced bullying or are concerned about the well-being of others. The overall intent is to promote compassion, but the metaphorical framing can be perceived as insensitive or minimizing the gravity of real-world bullying.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience familiar with internet meme culture, animal-based humor, and social commentary. It leverages widely understood visual tropes (injured animal + text overlay) and metaphorical animal dynamics (dog vs. cat) to convey a message about bullying. The target community includes individuals who engage with social media, understand the use of animal metaphors for human social issues, and are likely to respond to emotionally evocative imagery (e.g., the sad pug) paired with a call to action (intervention request).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/07389.png",
+    "image_name": "07389.png",
+    "extraction_timestamp": "2025-12-15T13:00:17.706199",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

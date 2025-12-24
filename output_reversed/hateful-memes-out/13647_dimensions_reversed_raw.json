@@ -1,0 +1,163 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: she_said_girls_run_the_world; hasOverallIntent: mysogynous; overall-intent-description: The image depicts two men walking and laughing, with overlaid text that reads: 'she said girls run the world... so i told her get back in the kitchen.' This text directly invokes a misogynistic stereotype that reduces women's roles to domestic labor, implying that women are only suited for the kitchen and not for positions of power or influence in society. The visual of two men enjoying themselves reinforces the idea that men are the ones who 'correct' or 'reclaim' societal roles for women, which is a common trope in misogynistic humor. The meme uses juxtaposition to map the idea of women being 'in charge' onto the absurd and demeaning notion of women being confined to the kitchen, thereby perpetuating harmful gender norms. The intent is to mock and belittle women's capabilities and societal roles, which falls under the category of misogynous content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "she said girls run the world...",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_on_left",
+      "label": "man with beard and plaid shirt",
+      "description": "A man with a beard, wearing a blue and white plaid shirt over a gray t-shirt, smiling while walking. He has sunglasses hanging from his shirt collar. His expression is cheerful and relaxed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "walking_friends",
+      "label": "two men walking and laughing together",
+      "description": "The scene depicts two men walking side by side on a street, both smiling and appearing to enjoy each other's company. The man on the right has his arm around the shoulder of the man on the left, indicating camaraderie. The background shows an urban street with a parked truck and utility poles, suggesting a casual, everyday setting. The overall mood is lighthearted and friendly.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_on_right",
+          "relation": "has_arm_on",
+          "to": "man_on_left"
+        },
+        {
+          "from": "man_on_left",
+          "relation": "is_walking_with",
+          "to": "man_on_right"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype",
+      "label": "Misogynous Stereotype: 'Women Belong in the Kitchen'",
+      "description": "This stereotype implies that women's appropriate and natural place is in domestic roles, particularly cooking and cleaning, and not in positions of power, leadership, or public influence. It is a historically rooted and harmful belief that reduces women's capabilities and societal roles to domestic labor, often used to demean or belittle women's achievements and ambitions. The meme explicitly invokes this stereotype by suggesting that women 'running the world' is absurd and should be corrected by sending them 'back in the kitchen'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_humor",
+      "label": "Misogynous Humor",
+      "description": "A form of humor that relies on sexist or misogynistic stereotypes to entertain, often at the expense of women. It perpetuates harmful gender norms by mocking women's competence, intelligence, or societal roles. The meme uses this type of humor to mock the idea of women having power by suggesting it's absurd and should be corrected by returning women to domestic roles.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gender_role_stereotype",
+      "label": "Gender Role Stereotype",
+      "description": "A societal belief that assigns specific roles, behaviors, and expectations to individuals based on their gender. These stereotypes often dictate that men should be the breadwinners and leaders, while women should be caregivers and homemakers. The meme reinforces this by implying that women's 'running the world' is a deviation from their 'natural' role in the kitchen.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_humor",
+      "label": "mocking and belittling emotion",
+      "description": "The emotion expressed is one of mocking and belittling, conveyed through the juxtaposition of the cheerful, lighthearted visual of two men laughing together and the overlaid text that promotes a misogynistic stereotype. The humor is not genuine or celebratory but rather sarcastic and demeaning, aimed at undermining the idea of women having power by suggesting they should be confined to the kitchen. This emotion is rooted in the misogynous stereotype and the misogynous humor trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Textual entity 'girls' mapped onto visual entity 'women' in the stereotype",
+      "description": "The text 'she said girls run the world...' is mapped onto the visual representation of two men, who are the subjects of the joke. The meme uses the visual of two men laughing together to represent the 'correcting' or 'reclaiming' of societal roles for women, implying that men are the ones who 'correct' or 'reclaim' societal roles for women, which is a common trope in misogynistic humor. The visual of the two men reinforces the idea that men are the ones who 'correct' or 'reclaim' societal roles for women, which is a common trope in misogynistic humor. The text 'she said girls run the world...' is mapped onto the visual of the two men, who are the subjects of the joke, and the text 'so i told her get back in the kitchen' is mapped onto the visual of the two men, who are the subjects of the joke. The visual of the two men is mapped onto the textual entity 'girls' in the stereotype 'Women Belong in the Kitchen'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material as the speaker of the joke",
+      "description": "The user is projected onto the textual material (text_chunk_1 and text_chunk_2) because the meme presents a first-person narrative ('she said... so I told her...'), inviting the viewer to identify with the speaker who is making the misogynistic statement. The user is not explicitly deictic (e.g., 'me' or 'you'), but the framing of the joke as a personal retort creates an implicit projection of the user as the one who 'told her' to get back in the kitchen, thereby aligning the user with the speaker of the misogynistic sentiment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme promotes a harmful stereotype that reduces women's roles to domestic labor, implying they are only suited for the kitchen and not for positions of power or influence in society.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who are familiar with and may find humor in misogynistic stereotypes, particularly those who endorse or are comfortable with traditional gender role expectations that confine women to domestic roles. The meme appeals to an audience that finds amusement in reinforcing the 'women belong in the kitchen' trope, often used in misogynistic humor to belittle women's capabilities and societal roles. The visual of two men laughing together reinforces the idea that the 'correcting' of women's roles is a male-centric or male-validated perspective, which may resonate with audiences who identify with or support patriarchal norms. The meme's intent to mock and demean women's achievements and ambitions suggests it is designed for an audience that either does not challenge or actively reinforces these harmful gender norms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/13647.png",
+    "image_name": "13647.png",
+    "extraction_timestamp": "2025-12-15T15:05:05.454758",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

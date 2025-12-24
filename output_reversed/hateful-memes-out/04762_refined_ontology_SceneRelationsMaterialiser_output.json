@@ -1,0 +1,63 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "hospital_ward",
+      "participants": [
+        {
+          "entity": "patient_in_foreground",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "caregiver",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "older_woman",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "patient_in_background",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "patient_in_foreground",
+          "relation": "isBeingCaredForBy",
+          "to": "caregiver"
+        },
+        {
+          "from": "caregiver",
+          "relation": "isCaringFor",
+          "to": "patient_in_foreground"
+        },
+        {
+          "from": "older_woman",
+          "relation": "isSeatedNear",
+          "to": "patient_in_foreground"
+        },
+        {
+          "from": "patient_in_background",
+          "relation": "isLocatedIn",
+          "to": "hospital_ward"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hospital_ward :hasParticipant :patient_in_foreground .",
+    ":hospital_ward :hasParticipant :caregiver .",
+    ":hospital_ward :hasParticipant :older_woman .",
+    ":hospital_ward :hasParticipant :patient_in_background .",
+    ":patient_in_foreground :isBeingCaredForBy :caregiver .",
+    ":caregiver :isCaringFor :patient_in_foreground .",
+    ":older_woman :isSeatedNear :patient_in_foreground .",
+    ":patient_in_background :isLocatedIn :hospital_ward ."
+  ],
+  "triples_count": 8
+}

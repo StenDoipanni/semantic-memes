@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "dehumanizing emotion",
+      "expressors": [
+        {
+          "entity": "person",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "person",
+          "relation": "emotionalRelationToEntity",
+          "to": "lion"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":dehumanizing_emotion :hasExpressor :person .",
+    ":person :emotionalRelationToEntity :lion ."
+  ],
+  "triples_count": 2
+}

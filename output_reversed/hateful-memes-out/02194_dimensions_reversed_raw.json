@@ -1,0 +1,175 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a man holding a small, seemingly healthy animal, with text overlay that reads 'when you're a good farmer who raises healthy animals.' The scene appears to be in a rural or semi-urban setting with other people and animals in the background. The overall intent of the meme is to create a humorous or ironic contrast by juxtaposing the image of a farmer holding an animal with the text, implying that the farmer is so good at his job that he raises healthy animals. However, the meme may be considered harmful because it potentially perpetuates stereotypes about farmers or rural communities, particularly if it implies that being a good farmer is somehow exceptional or superior. The image does not contain explicit abusive, cyberbullying, misogynistic, or propagandistic content, but the underlying message could be interpreted as dismissive or condescending toward the everyday labor of farmers, which may be seen as demeaning or harmful to those in the agricultural sector. The meme does not target any specific protected group based on race, gender, religion, or sexual orientation, but its potential harm lies in its generalization and possible reinforcement of rural stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you're a good farmer",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_holding_animal",
+      "label": "central figure",
+      "description": "A man wearing a white traditional outfit and a white cap, holding a small, seemingly healthy animal (possibly a goat or lamb) in his arms. He is the focal point of the image and the subject of the meme's text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "farmer_holding_animal",
+      "label": "Farmer holding healthy animal",
+      "description": "A scene centered on a man in traditional attire holding a small, healthy-looking animal, likely a goat or lamb, in a rural or semi-urban setting. The scene is framed by other people and animals in the background, suggesting a communal or market-like environment. The text overlay implies the farmer's skill and success in animal husbandry.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_holding_animal",
+          "relation": "holds",
+          "to": "animal"
+        },
+        {
+          "from": "man_holding_animal",
+          "relation": "isInSceneWith",
+          "to": "background_people"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_animal_treatment_stereotype",
+      "label": "Islamophobia: Animal Treatment Stereotype",
+      "description": "The meme implicitly references a common Islamophobic stereotype that Muslims are not good at treating animals, often portrayed as cruel or barbaric. This stereotype is used to create an ironic or mocking contrast with the text 'when you're a good farmer who raises healthy animals,' implying that the farmer's success is somehow unusual or exceptional for someone from a Muslim background. This stereotype is not visible in the image but is required to understand the potential underlying message or intent of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_holding_animal",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "rural_farmers_stereotype",
+      "label": "Rural Farmers Stereotype",
+      "description": "The meme relies on the stereotype that farmers, especially those in rural or developing regions, are either primitive, uneducated, or not capable of raising healthy animals. The text 'when you're a good farmer' implies that such success is rare or exceptional, which may be interpreted as condescending or dismissive of the everyday labor of farmers. This stereotype is not visible in the image but is required to understand the potential underlying message or intent of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "agricultural_success_stereotype",
+      "label": "Agricultural Success Stereotype",
+      "description": "The meme implies that raising healthy animals is a sign of exceptional skill or success, which may be interpreted as a stereotype that only certain people (e.g., those in developed countries or with access to advanced technology) can achieve. This stereotype is not visible in the image but is required to understand the potential underlying message or intent of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "pride",
+      "label": "pride in farming success",
+      "description": "The man holding the animal has a composed, neutral-to-slightly-smiling facial expression that conveys quiet confidence and satisfaction, suggesting pride in his work as a farmer who successfully raises healthy animals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The farmer is mapped as 'a good farmer who raises healthy animals'",
+      "description": "The text 'when you're a good farmer who raises healthy animals' is directly mapped onto the visual entity 'man_holding_animal'. The man, dressed in traditional attire and holding a healthy-looking animal, visually represents the textual description of a successful farmer. This mapping is explicit through the juxtaposition of the text and the image, where the visual subject embodies the textual role.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the farmer as a good farmer who raises healthy animals",
+      "description": "The user is projected onto the visual entity 'man_holding_animal' through the textual material 'when you're a good farmer who raises healthy animals'. The text uses 'you' to directly address the viewer, inviting them to identify with the role of a successful farmer. The user is thus projected onto the scene and visual material where the man embodies this idealized role.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobia",
+      "description": "The meme implicitly references a common Islamophobic stereotype that Muslims are not good at treating animals, often portrayed as cruel or barbaric. This stereotype is used to create an ironic or mocking contrast with the text 'when you're a good farmer who raises healthy animals,' implying that the farmer's success is somehow unusual or exceptional for someone from a Muslim background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience familiar with internet humor, stereotypes, and visual memes. It relies on the audience's recognition of the visual and textual juxtaposition to create irony or satire, particularly around the implied Islamophobic stereotype regarding animal treatment. The target audience likely includes users who understand and engage with memes that play on cultural or religious stereotypes, even if unintentionally or critically.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/02194.png",
+    "image_name": "02194.png",
+    "extraction_timestamp": "2025-12-15T10:57:18.992384",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

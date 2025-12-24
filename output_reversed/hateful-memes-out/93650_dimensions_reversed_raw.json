@@ -1,0 +1,222 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image features a close-up of Lord Voldemort from the Harry Potter series, with a caption that reads, 'i got kicked out of hogwarts for using black magic.' The scene depicts Voldemort with an intense, angry expression, his mouth open as if shouting or screaming. The background is blurred, showing indistinct figures, likely other characters from the film, contributing to a sense of chaos or confrontation. The meme uses the juxtaposition of Voldemort's menacing appearance with the text to create a humorous or ironic effect, implying that the character's actions (using dark magic) were so extreme that they led to his expulsion from Hogwarts. The overall intent is to satirize or mock the idea of being expelled for using 'black magic,' which is a fictional concept in the Harry Potter universe. The meme does not contain any toxic content such as abusive, cyberbullying, harmful, hateful, misogynous, or propaganda elements. The humor is derived from the absurdity of the situation and the contrast between the character's villainous nature and the mundane consequence of expulsion. The meme is intended to entertain and provoke laughter through its ironic and exaggerated premise, without targeting any specific group or individual based on protected characteristics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "i got kicked out of hogwarts for using black magic",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Lord_Voldemort",
+      "label": "fictional character",
+      "description": "A bald, pale-skinned man with sharp facial features, red eyes, and a menacing expression, wearing dark clothing. He is the central figure in the image, shown in a close-up with his mouth open as if screaming or shouting, conveying intense anger or rage. This is the character from the Harry Potter series, portrayed by actor Ralph Fiennes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "angry_voldemort_scene",
+      "label": "Voldemort shouting in anger",
+      "description": "A close-up scene of Lord Voldemort with an intense, angry expression, his mouth open as if screaming or shouting. The background is blurred, showing indistinct figures, likely other characters from the film, contributing to a sense of chaos or confrontation. The scene is framed to focus on Voldemort's face and upper body, emphasizing his rage.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Lord_Voldemort",
+          "relation": "shouting_at",
+          "to": "background_people"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Harry_Potter_universe",
+      "label": "Harry Potter universe",
+      "description": "The meme references the fictional world of Harry Potter, where Hogwarts is a magical school and 'black magic' is a specific type of dark, forbidden magic. Understanding that this is a fictional setting is essential to comprehend the humor, as expulsion for using black magic is not a real-world consequence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Lord_Voldemort",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "angry_voldemort_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Lord_Voldemort_character",
+      "label": "Lord Voldemort character",
+      "description": "Lord Voldemort is the primary antagonist of the Harry Potter series, known for his use of dark magic and his ultimate goal of pure-blood supremacy. His expulsion from Hogwarts is a fictional event, and understanding his character as a villain is necessary to interpret the meme's irony.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Lord_Voldemort",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "angry_voldemort_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Black_magic_in_Harry_Potter",
+      "label": "Black magic in Harry Potter",
+      "description": "In the Harry Potter universe, 'black magic' refers to dark, dangerous, and often morally reprehensible magic that is forbidden by the Ministry of Magic and Hogwarts. The concept is central to the series' plot and character development, and understanding this term's specific meaning in the context of the series is crucial to the meme's joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "angry_voldemort_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Expulsion_from_Hogwarts",
+      "label": "Expulsion from Hogwarts",
+      "description": "Hogwarts is a fictional school for witches and wizards. Expulsion from Hogwarts is a serious disciplinary action within the Harry Potter universe, typically reserved for severe violations of school rules or magical laws. The meme's humor relies on the absurdity of Voldemort being expelled for using black magic, which is a core part of his character.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "angry_voldemort_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Ralph_Fiennes",
+      "label": "Ralph Fiennes",
+      "description": "Ralph Fiennes is the real-world actor who portrays Lord Voldemort in the Harry Potter film series. While his name is not visible in the image, recognizing him as the actor helps contextualize the image as a film still, which is important for understanding the source material and the meme's visual reference.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Lord_Voldemort",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Meme_format",
+      "label": "Meme format",
+      "description": "The meme format involves juxtaposing a dramatic or intense image with ironic or absurd text to create humor. Understanding this format is necessary to interpret the meme's intent, which is to mock the idea of being expelled for using 'black magic' by using a character known for using it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "angry_voldemort_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "rage",
+      "label": "intense anger expression",
+      "description": "Lord Voldemort's face is contorted in a scream, with bared teeth, wide eyes, and a tense jaw, conveying extreme rage and fury. His open mouth and aggressive posture suggest he is shouting or yelling in anger.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Voldemort is mapped as someone expelled from Hogwarts for using black magic",
+      "description": "The text 'i got kicked out of hogwarts for using black magic' is juxtaposed with the visual of Lord Voldemort, who is known in the Harry Potter universe for using black magic. The meme humorously maps the character's identity and actions (using black magic) onto the textual claim of being expelled for that very reason, creating an ironic and absurd situation. The visual of Voldemort's rage reinforces the comedic contrast between his villainous nature and the mundane consequence of expulsion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the text 'i got kicked out of hogwarts for using black magic' as if this statement is being made by the user, creating an ironic self-referential projection. The text uses first-person pronouns ('i', 'my') which directly anchor the projection onto the user.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "Harry Potter fans",
+      "description": "The meme is designed for fans of the Harry Potter franchise who are familiar with the characters, settings, and lore. The humor relies on inside knowledge of Lord Voldemort's character, his use of dark magic, and the fictional context of Hogwarts and its disciplinary system. The audience understands the absurdity of the premise, which is central to the meme's comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/93650.png",
+    "image_name": "93650.png",
+    "extraction_timestamp": "2025-12-19T17:59:48.701576",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

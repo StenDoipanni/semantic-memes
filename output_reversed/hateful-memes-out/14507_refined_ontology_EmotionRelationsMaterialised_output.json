@@ -1,0 +1,38 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "emotional_distress",
+      "expressors": [
+        {
+          "entity": "man",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "woman",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "emotionalRelationToEntity",
+          "to": "woman"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":emotional_distress :hasExpressor :man .",
+    ":emotional_distress :hasExpressor :woman .",
+    ":man :emotionalRelationToEntity :woman ."
+  ],
+  "triples_count": 3
+}

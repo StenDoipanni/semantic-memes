@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "women_rights_propaganda",
+      "participants": [
+        {
+          "entity": "female_gender_symbol",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "text_message",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "female_gender_symbol",
+          "relation": "symbolizes",
+          "to": "women_rights_propaganda"
+        },
+        {
+          "from": "text_message",
+          "relation": "conveys",
+          "to": "women_rights_propaganda"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":women_rights_propaganda :hasParticipant :female_gender_symbol .",
+    ":women_rights_propaganda :hasParticipant :text_message .",
+    ":female_gender_symbol :symbolizes :women_rights_propaganda .",
+    ":text_message :conveys :women_rights_propaganda ."
+  ],
+  "triples_count": 4
+}

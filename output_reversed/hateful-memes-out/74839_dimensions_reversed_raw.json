@@ -1,0 +1,217 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts King Charles III with overlaid text that reads: 'when you've waited 40 years to be king, but your mother refuses to die.' This meme uses a juxtaposition of the king's solemn expression and the text to imply frustration or impatience with the Queen's prolonged life, which is framed as an obstacle to his ascension. While not explicitly targeting a protected group with hate, the meme is harmful because it trivializes the gravity of royal succession, the personal grief of the monarch, and the cultural significance of the monarchy. It also potentially undermines the dignity of the late Queen Elizabeth II by suggesting her continued life was an inconvenience to her son. The meme's intent is to provoke humor through a cynical, almost sarcastic commentary on royal protocol and personal timing, which can be seen as disrespectful and insensitive to the institution and its history. The tone is mocking and could be perceived as undermining the legitimacy or emotional weight of the monarchy, thus carrying potential harm to public perception and respect for the institution.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "when you've waited 40 years to be king,",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "King_Charles_III",
+      "label": "a man in a suit and tie",
+      "description": "An older man with white hair and blue eyes, wearing a blue pinstripe suit, a light blue shirt, and a blue patterned tie. He has a solemn, slightly frustrated or impatient expression. He is the central subject of the image and the focus of the meme's text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "king_waiting_scene",
+      "label": "King Charles III waiting for his coronation",
+      "description": "The scene depicts King Charles III, who has waited 40 years to become king, but his mother refuses to die. The text overlays the image to convey this narrative. The king's solemn expression and the text together create a scene of impatience and frustration with the delay caused by his mother's prolonged life.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "royal_succession",
+      "label": "Royal Succession",
+      "description": "The process by which a monarch inherits the throne, governed by laws and traditions such as the Act of Settlement 1701 and the Succession to the Crown Act 2013. In the UK, the monarch is succeeded by their eldest child, and the line of succession is strictly defined. This background knowledge is necessary to understand why Charles III waited 40 years to become king — because he was the heir apparent to Queen Elizabeth II, who reigned for 70 years and died in 2022, making Charles the next in line.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "king_waiting_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "queen_elizabeth_ii",
+      "label": "Queen Elizabeth II",
+      "description": "The monarch of the United Kingdom and other Commonwealth realms from 1952 until her death in 2022. She was the mother of King Charles III and reigned for 70 years. Her prolonged life, as referenced in the meme, is the central obstacle to Charles’s ascension, which is why the meme implies frustration. This knowledge is essential to understand the meme’s context — Charles waited 40 years for his mother to die so he could become king.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "king_waiting_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "monarchy",
+      "label": "The British Monarchy",
+      "description": "A constitutional monarchy with a long history and deep cultural significance in the UK and Commonwealth. The institution is characterized by ceremonial duties, historical continuity, and public reverence. The meme’s humor and potential harm stem from its implication that the monarchy’s protocol is a source of personal frustration, which is disrespectful to the institution’s gravity and the personal grief of the monarch. Understanding the cultural weight of the monarchy is necessary to interpret the meme’s tone and intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "king_waiting_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "impatience_stereotype",
+      "label": "Impatience Stereotype",
+      "description": "A social stereotype that portrays individuals as frustrated or annoyed when things take longer than expected. The meme uses this stereotype to imply that King Charles III is impatient with his mother’s prolonged life, which is framed as an obstacle to his ascension. This stereotype is not directly visible in the image but is essential to understand the meme’s humorous and cynical tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "king_waiting_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "grief_and_loss",
+      "label": "Grief and Loss",
+      "description": "The emotional response to the death of a loved one. The meme trivializes the personal grief of King Charles III, who lost his mother, Queen Elizabeth II, in 2022. The humor in the meme is derived from mocking the idea that grief is an inconvenience, which is insensitive to the emotional weight of royal succession and the personal loss experienced by the monarch. Understanding grief is necessary to interpret the meme’s potential harm.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "king_waiting_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cynical_humor",
+      "label": "Cynical Humor",
+      "description": "A style of humor that is sarcastic, mocking, or pessimistic, often used to critique or ridicule a situation. The meme uses cynical humor to comment on royal protocol and personal timing, implying that Charles’s wait for his mother’s death is an inconvenience. This style of humor is not visible in the image but is essential to understand the meme’s intent and tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "impatience",
+      "label": "impatient emotion",
+      "description": "The king's solemn and slightly frustrated facial expression, combined with the text overlay, conveys a sense of impatience with the delay caused by his mother's prolonged life.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "King Charles III is mapped as 'the one who waited 40 years to be king'",
+      "description": "The top text 'when you've waited 40 years to be king,' is directly mapped onto King Charles III. The visual of him, with his solemn and slightly impatient expression, is used to represent the person who has endured a 40-year wait for his coronation. The text explicitly identifies him as the subject of this prolonged waiting period, creating an analogical mapping where the visual entity (King_Charles_III) is the embodiment of the textual description.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material expressing impatience",
+      "description": "The user is projected onto the text 'but your mother refuses to die', which uses the deictic 'your' to imply the user is the one who has waited 40 years to be king and is frustrated by their mother's prolonged life. This creates a direct identification of the user with the subject of the meme's narrative, making the user feel personally implicated in the scenario described.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the gravity of royal succession, the personal grief of the monarch, and the cultural significance of the monarchy. It also potentially undermines the dignity of the late Queen Elizabeth II by suggesting her continued life was an inconvenience to her son. The tone is mocking and could be perceived as disrespectful and insensitive to the institution and its history, thus carrying potential harm to public perception and respect for the institution.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The meme is designed for an audience familiar with British royal history and the institution of the monarchy, particularly those who understand the succession process and the personal significance of Queen Elizabeth II’s reign and death. The humor relies on cultural knowledge of the monarchy’s ceremonial duties, the long wait for Charles III’s ascension, and the public perception of royal grief. The target audience likely includes individuals who are politically or culturally engaged with the UK or Commonwealth, or who follow royal news, and who may appreciate cynical or sarcastic commentary on institutional norms. The meme’s intent to provoke humor through a mocking lens suggests it targets an audience that finds irony in the personal timing of royal succession, potentially including those who view monarchy as outdated or overly formal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/74839.png",
+    "image_name": "74839.png",
+    "extraction_timestamp": "2025-12-19T12:23:55.676719",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

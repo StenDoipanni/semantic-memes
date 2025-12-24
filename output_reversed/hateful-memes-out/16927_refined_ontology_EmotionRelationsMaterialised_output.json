@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "disdainful expression",
+      "expressors": [
+        {
+          "entity": "elderly_man",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "elderly_man",
+          "relation": "emotionalRelationToEntity",
+          "to": "text_chunk_1"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":disdainful_expression :hasExpressor :elderly_man .",
+    ":elderly_man :emotionalRelationToEntity :text_chunk_1 ."
+  ],
+  "triples_count": 2
+}

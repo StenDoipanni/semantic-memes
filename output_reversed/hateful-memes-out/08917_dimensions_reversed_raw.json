@@ -1,0 +1,160 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: what_are_you_doing_there_youre_a_cat_not_a_jew; hasOverallIntent: Hateful; overall-intent-description: The image depicts a cat sitting in a grand, ornate historical building, likely a church or mosque, with sunlight streaming through a window. The overlaid text reads, \"what are you doing there? you're a cat, not a jew.\" This juxtaposition is a hateful and antisemitic trope, using a cat as a stand-in for Jewish people, implying that Jews are unwelcome or inappropriate in certain sacred spaces. The meme relies on a long-standing antisemitic stereotype that equates Jews with cats, which is a form of hate speech and harmful content. The intent is to provoke discomfort or ridicule by invoking a deeply offensive and historically rooted antisemitic metaphor, thereby targeting Jewish people based on their religion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "what are you doing there? you're a cat, not a jew",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "cat",
+      "label": "dominant subject",
+      "description": "A tabby cat with green eyes is sitting upright in the center of the frame, looking directly at the camera. It is the focal point of the image and the subject of the overlaid text. The cat's presence in the grand architectural setting creates a stark contrast, enhancing the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "cat_in_historical_building",
+      "label": "cat_sitting_in_grand_architectural_space",
+      "description": "A tabby cat with green eyes is sitting upright in the center of a grand, ornate historical building, likely a church or mosque, with sunlight streaming through a window. The cat is the focal point, positioned directly under the light beam, creating a stark contrast with the grandeur of the architecture. The overlaid text reads, \"what are you doing there? you're a cat, not a jew,\" which frames the scene as a hateful antisemitic trope using the cat as a stand-in for Jewish people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_stereotype_equating_jews_with_cats",
+      "label": "Antisemitic Stereotype Equating Jews with Cats",
+      "description": "A long-standing antisemitic trope that caricatures Jewish people as cats, often used to imply Jewish people are unwelcome, inappropriate, or inherently associated with certain negative traits in sacred or public spaces. This stereotype is rooted in centuries of antisemitic propaganda and is a form of hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "cat_in_historical_building",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_trope_of_unwelcome_in_sacred_spaces",
+      "label": "Antisemitic Trope of Jews Being Unwelcome in Sacred Spaces",
+      "description": "A recurring antisemitic trope suggesting that Jewish people are not permitted or are unwelcome in certain religious or historical buildings, such as churches or mosques, often used to incite hatred or exclusion. This trope is historically linked to antisemitic conspiracy theories and religious persecution.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "cat_in_historical_building",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_context_of_antisemitism_in_architectural_spaces",
+      "label": "Historical Context of Antisemitism in Architectural Spaces",
+      "description": "The use of grand architectural spaces (like churches or mosques) in antisemitic imagery to imply Jewish people are intruders or unwelcome in places of worship or historical significance. This reflects historical antisemitic narratives that sought to exclude Jews from sacred or public spaces.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "cat_in_historical_building",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is hate, conveyed through the antisemitic text overlay that equates a cat (a harmless animal) with Jewish people, implying unwelcome presence in sacred spaces. This is a hateful trope rooted in historical antisemitism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "antisemitic_cat_mapping",
+      "label": "Cat is mapped as a Jew",
+      "description": "The text 'you're a cat, not a jew' explicitly maps the visual entity 'cat' onto the textual entity 'Jew', using the cat as a stand-in for Jewish people in an antisemitic stereotype. This is a direct analogical mapping where the visual subject (cat) is equated with a targeted group (Jews) through the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the cat as a stand-in for a Jew",
+      "description": "The user is projected onto the cat, which is visually depicted as a stand-in for a Jew according to the antisemitic stereotype embedded in the meme. The text 'you're a cat, not a jew' directly addresses the viewer, implying that the viewer (user) is being told to recognize the cat as a Jew, thereby projecting the user's identity onto the cat as the target of the antisemitic trope. The user is thus projected onto the visual material (the cat) through the textual material's deictic address.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses an antisemitic stereotype equating Jews with cats to imply unwelcome presence in sacred spaces, which is a direct attack on Jewish people based on their religion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "antisemitic_stereotype_equating_jews_with_cats",
+      "label": "Target Community",
+      "description": "The meme is designed to target Jewish people by invoking the antisemitic stereotype that equates Jews with cats, using the cat as a stand-in for Jewish individuals in a hateful context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/08917.png",
+    "image_name": "08917.png",
+    "extraction_timestamp": "2025-12-15T13:38:14.001842",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,213 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: all_races_unite_against_islam; hasOverallIntent: hateful; overall-intent-description: The image depicts two hands clasped together in a gesture of unity, juxtaposed with the text 'all races unite against islam!' This visual metaphor is used to promote division and hostility toward Muslims, framing them as an enemy to be opposed by all racial groups. The meme is explicitly hateful as it targets a specific religious group with a call to collective action against them, which is a direct attack on Muslims based on their religion. It promotes xenophobia and Islamophobia by encouraging unity against a religious minority, which can incite prejudice and violence. The use of the phrase 'all races unite' ironically contrasts with the divisive message, highlighting the meme's intent to weaponize solidarity for hateful purposes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "all races unite",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "two_hands_clasped_together",
+      "label": "human body part",
+      "description": "The central visual element is two hands clasped in a gesture of unity or solidarity, with one hand gripping the wrist of the other. The image is in black and white, emphasizing the texture of skin and the form of the hands. This gesture is commonly associated with cooperation, support, or collective action. The hands appear to belong to different individuals, suggesting inter-racial or inter-cultural unity, which contrasts with the hateful message in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "unity_gesture_scene",
+      "label": "unity_gesture_scene",
+      "description": "A scene depicting two hands clasped together in a gesture of unity or solidarity, juxtaposed with text that promotes division against a specific religious group. The visual metaphor of unity is contrasted with the hateful message, creating a scene of ironic or deceptive solidarity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "two_hands_clasped_together",
+          "relation": "symbolizes",
+          "to": "unity"
+        },
+        {
+          "from": "text",
+          "relation": "contradicts",
+          "to": "two_hands_clasped_together"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "The meme promotes hostility toward Muslims by calling for 'all races' to unite against 'islam'. This implicitly references the real-world stereotype that Muslims are inherently violent or incompatible with Western values, which is a core component of Islamophobia. The phrase 'against islam!' frames the entire religious group as a monolithic enemy, ignoring diversity within Islam and promoting fear and division.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "unity_gesture_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism_associations",
+      "label": "Terrorism Associations",
+      "description": "The meme implicitly relies on the real-world stereotype that Muslims are associated with terrorism. This is a common and harmful trope used to justify prejudice and hostility toward Muslims. The phrase 'against islam!' leverages this association to incite fear and unity against a religious group based on a false and dangerous generalization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "unity_gesture_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sharia_law_fearmongering",
+      "label": "Sharia Law Fearmongering",
+      "description": "The meme implicitly references the stereotype that Sharia law is incompatible with Western values and is inherently oppressive or barbaric. This fearmongering is used to justify hostility toward Muslims, portraying them as a threat to societal norms. The phrase 'against islam!' leverages this fear to promote division.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "unity_gesture_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "incompatibility_with_western_values",
+      "label": "Incompatibility with Western Values",
+      "description": "The meme implicitly references the stereotype that Islam is fundamentally incompatible with Western values, such as democracy, freedom, or secularism. This is a common justification for anti-Muslim sentiment and is used here to frame Muslims as an 'enemy' to be united against by all races.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "unity_gesture_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_islam_stereotype",
+      "label": "Anti-Islam Stereotype",
+      "description": "The meme relies on the real-world stereotype that Islam is inherently violent, oppressive, or incompatible with modern society. This stereotype is used to justify the call for unity against 'islam', which is a direct attack on Muslims based on their religion. The phrase 'against islam!' is a clear invocation of this harmful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "unity_gesture_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is hatred, directed toward Muslims, as conveyed by the text 'all races unite against islam!'. This is a hateful message that promotes division and hostility toward a specific religious group, leveraging the visual metaphor of unity to mask its divisive intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Unity gesture mapped to call for racial unity",
+      "description": "The visual of two hands clasped together, symbolizing unity and solidarity, is mapped onto the textual phrase 'all races unite'. The image visually represents the concept of collective action across racial lines, which the text explicitly invokes, creating an analogical mapping where the gesture stands for the textual message of unity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message calling for unity against Islam",
+      "description": "The user is implicitly projected onto the textual material 'all races unite against islam!' as the intended recipient or actor of the call to action. The meme frames the user as part of the collective 'all races' being urged to unite against 'islam', making the user a direct participant in the hateful message. There are no explicit deictics like 'you' or 'me', but the imperative nature of the text ('unite', 'against') and the visual of hands clasped (implying collective action) create an implicit projection of the user onto the call to action.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme explicitly calls for 'all races' to unite against 'islam', which is a direct attack on Muslims based on their religion. This promotes division and hostility toward a specific religious group, leveraging the visual metaphor of unity to mask its divisive intent. It is a hateful message that incites prejudice and violence against Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The target community is individuals who hold or are susceptible to Islamophobic beliefs, particularly those who may be influenced by stereotypes associating Islam with terrorism, incompatibility with Western values, or Sharia law fearmongering. The meme is designed to appeal to people who perceive Muslims as an external threat and who are motivated by divisive rhetoric to unite across racial lines against this perceived threat. The visual of clasped hands, typically a symbol of unity, is used ironically to suggest that the audience should unite against Islam, thereby targeting those who are receptive to this hateful framing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/78132.png",
+    "image_name": "78132.png",
+    "extraction_timestamp": "2025-12-19T13:10:51.345829",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

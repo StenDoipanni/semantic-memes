@@ -1,0 +1,513 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48",
+  "@type": "AnalysisDocument",
+  "title": "19364.png - Dimension Analysis",
+  "created": "2025-12-15T17:33:42.015547",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_f482ff59",
+    "@type": "Image",
+    "filename": "19364.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/19364.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/19364.png",
+    "image_name": "19364.png",
+    "extraction_timestamp": "2025-12-15T17:30:34.222035",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 43,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b79f8c93",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: hateful; overall-intent-description: The image depicts a Black man with a menacing expression, juxtaposed with text that reads 'i found jesus in prison' and 'i raped that mexican hard.' This combination is intentionally provocative and hateful, leveraging racial stereotypes (associating Blackness with criminality and violence) and anti-Latino stereotypes (implying Mexican women are targets of sexual violence). The meme uses the visual of a Black man to imply he is a violent criminal, while the text explicitly promotes racist and misogynistic violence against a Latino person. The overall intent is to spread hate and reinforce harmful racial and ethnic stereotypes through shock value and violent imagery.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_093fb2a9",
+      "@type": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "i found jesus in prison",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6b85d865",
+      "@type": "VisualMaterial",
+      "instance_name": "person",
+      "label": "Black man",
+      "description": "A Black man with a shaved head, dark skin, and a menacing, intense facial expression, looking slightly to the side. His eyes are wide and focused, conveying a sense of aggression or threat. The lighting is high-contrast, emphasizing his facial features against a plain white background. This visual is central to the meme's intent, leveraging racial stereotypes associated with Blackness and criminality.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_351876f9",
+      "@type": "Scene",
+      "instance_name": "menacing_expression_scene",
+      "label": "a scene of a menacing expression",
+      "description": "The scene centers on a Black man with a shaved head, dark skin, and a menacing, intense facial expression, looking slightly to the side. His eyes are wide and focused, conveying a sense of aggression or threat. The lighting is high-contrast, emphasizing his facial features against a plain white background. This visual is central to the meme's intent, leveraging racial stereotypes associated with Blackness and criminality. The text overlays 'i found jesus in prison' and 'i raped that mexican hard' are positioned at the top and bottom of the image, framing the visual and reinforcing the hateful message.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ca5cf44d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_criminality",
+      "label": "Anti-Black Stereotype: Criminal Behavior Associations",
+      "description": "The meme leverages the stereotype that Black people are inherently criminal or violent, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual of the Black man is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_04b6f298",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_latino_stereotype_criminality",
+      "label": "Anti-Latino Stereotype: Criminality Associations",
+      "description": "The text ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ba848fe8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_latino_stereotype_sexual_violence",
+      "label": "Anti-Latino Stereotype: Sexual Violence Against Women",
+      "description": "The phrase ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_42bf2f35",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_aggression",
+      "label": "Anti-Black Stereotype: Aggressive/Violent Nature Claims",
+      "description": "The menacing expression of the Black man in the image is used to reinforce the stereotype that Black people are inherently aggressive or violent. This stereotype is not visible in the image but is essential to understanding the visual",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bd12296c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_hypersexualization",
+      "label": "Anti-Black Stereotype: Hypersexualization",
+      "description": "The meme uses the visual of a Black man to imply hypersexualization, which is a common racist trope that links Black men to sexual violence and aggression. This stereotype is not visible in the image but is essential to understanding the visual",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a89e967e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_latino_stereotype_immigration_status",
+      "label": "Anti-Latino Stereotype: Immigration Status Assumptions",
+      "description": "The phrase ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ee6bc24c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_welfare_dependency",
+      "label": "Anti-Black Stereotype: Welfare Dependency Tropes",
+      "description": "The phrase ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c3fa59e2",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_athletic_ability",
+      "label": "Anti-Black Stereotype: Athletic Ability as Sole Competency",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are only competent in athletics or violence, reinforcing the stereotype that their value is limited to physical prowess. This stereotype is not visible in the image but is essential to understanding the visual",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_229d2487",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_intelligence",
+      "label": "Anti-Black Stereotype: Intelligence-Related Slurs",
+      "description": "The meme uses the visual of a Black man to imply that he is unintelligent or morally corrupt, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_eb7f6f60",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_lazy_unemployed",
+      "label": "Anti-Black Stereotype: Lazy/Unemployed Characterizations",
+      "description": "The phrase ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_730d1c77",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_primate_comparison",
+      "label": "Anti-Black Stereotype: Comparing Black People to Primates",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5d55c52e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_swimming_ability",
+      "label": "Anti-Black Stereotype: Swimming Ability Stereotypes",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_60d5ec83",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_food_stereotypes",
+      "label": "Anti-Black Stereotype: Watermelon and Fried Chicken Food Stereotypes",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7a4a7e12",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_physical_appearance",
+      "label": "Anti-Black Stereotype: Physical Appearance Stereotypes",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_98a755c0",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_education",
+      "label": "Anti-Black Stereotype: Intelligence/education mockery",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3a5b451f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_employment",
+      "label": "Anti-Black Stereotype: Lazy/siesta tropes",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_be67f662",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_family_size",
+      "label": "Anti-Black Stereotype: Large family size mockery",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d5e6d482",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_language",
+      "label": "Anti-Black Stereotype: Language-based mockery",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0460a5ac",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_drug_trafficking",
+      "label": "Anti-Black Stereotype: Drug trafficking associations",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a9cba8cf",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_religious_practice",
+      "label": "Anti-Black Stereotype: Religious practice mockery",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_655969d5",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_physical_features",
+      "label": "Anti-Black Stereotype: Physical feature caricatures",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_96eeceb5",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_media_control",
+      "label": "Anti-Black Stereotype: Media control claims",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d2352055",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_financial_greed",
+      "label": "Anti-Black Stereotype: Financial greed/control stereotypes",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b48c0d02",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_global_conspiracy",
+      "label": "Anti-Black Stereotype: Global conspiracy theories",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_290da1ee",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_dual_loyalty",
+      "label": "Anti-Black Stereotype: Dual loyalty accusations",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d4e92b22",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_blood_libel",
+      "label": "Anti-Black Stereotype: Blood libel variations",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a9761eec",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_holocaust_denial",
+      "label": "Anti-Black Stereotype: Holocaust denial/minimization themes",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_827248db",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_puppet_master",
+      "label": "Anti-Black Stereotype: ",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_44e292f0",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_cheapness",
+      "label": "Anti-Black Stereotype: Cheapness/penny-pinching",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_37bb5f27",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_media_control",
+      "label": "Anti-Black Stereotype: Media control claims",
+      "description": "The image of a Black man with a menacing expression is often used to imply that Black people are inferior or animal-like, which is a common racist trope used to justify discrimination and reinforce racial hierarchies. This stereotype is not visible in the image but is essential to understanding why the visual is used to imply criminality and menace.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_baa6bc67",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_financial_greed",
+      "label": "Anti-Black Stereotype: Financial greed/control stereotypes",
+      "description": "Extracted from image analysis",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_68172803",
+      "@type": "EmotionExpression",
+      "instance_name": "menace",
+      "label": "menacing emotion",
+      "description": "The person's facial expression, characterized by a wide, intense gaze and a stern, aggressive look, conveys a sense of threat and intimidation. This expression is central to the meme's intent, visually reinforcing the hateful stereotypes associated with the subject.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_61ee428c",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The menacing Black man is mapped as the perpetrator of the crime described in the text.",
+      "description": "The visual of the Black man with a menacing expression is used to represent the person who committed the violent act described in the text 'i raped that mexican hard'. The visual material (the person) is mapped onto the textual material (the crime) to imply that the Black man is the criminal. This mapping leverages the anti-Black stereotype of criminality and aggression.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7a2296c4",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual of the Black man as the perpetrator",
+      "description": "The user is projected onto the visual material of the Black man (person), interpreting him as the subject of the violent act described in the text. The menacing expression and the racialized visual are used to imply the user (or the viewer) is identifying with or projecting the role of the criminal perpetrator onto this figure. This projection is reinforced by the text 'i raped that mexican hard', which uses first-person pronouns ('i') to directly involve the viewer in the act, making the user the implied perpetrator. The visual material (person) is the entity onto which the user is projected, as the user sees themselves as the one who committed the crime described.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f19c17b7",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks and dehumanizes Black individuals and Mexican individuals through racist and misogynistic stereotypes, promoting violence and hate.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6ccc2ff3",
+      "@type": "TargetCommunity",
+      "instance_name": "person",
+      "label": "Black man",
+      "description": "The visual of a Black man with a menacing expression is used to target and stereotype Black individuals, associating them with criminality and violence.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2f74d3b5",
+      "@type": "TargetCommunity",
+      "instance_name": "text_chunk",
+      "label": "i found jesus in prison",
+      "description": "This text targets Black individuals by implying they are criminals who found religion in prison, reinforcing anti-Black stereotypes of criminal behavior and moral corruption.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_776d889e",
+      "@type": "TargetCommunity",
+      "instance_name": "text_chunk",
+      "label": "i raped that mexican hard",
+      "description": "This text targets Mexican individuals by promoting sexual violence against them, reinforcing anti-Latino stereotypes of criminality and sexual violence.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a66a54d5",
+      "@type": "TargetCommunity",
+      "instance_name": "scene_1",
+      "label": "menacing_expression_scene",
+      "description": "The scene of a menacing Black man is designed to evoke fear and reinforce racial stereotypes, targeting audiences who may be influenced by or perpetuate anti-Black and anti-Latino tropes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_4775fd48"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

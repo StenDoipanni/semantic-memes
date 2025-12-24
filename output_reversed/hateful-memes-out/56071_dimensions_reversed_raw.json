@@ -1,0 +1,175 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts two men in a mosque, one kneeling in prayer and the other bowing. The text overlay reads: \"when you can smell shit but you're not sure if it's his arse or your hands.\" This meme uses a crude, bodily humor analogy to mock religious practice, specifically prayer, by implying that the act of prayer might involve unpleasant bodily odors. The humor is derived from the juxtaposition of sacred religious activity with vulgar, bodily functions. This type of content is harmful because it trivializes and mocks religious devotion, potentially offending adherents of the faith and contributing to Islamophobic stereotypes by associating religious practice with uncleanliness or bodily dysfunction. The meme's intent is to provoke laughter through shock value and crude humor, but it does so at the expense of religious sensitivity and dignity, which can be deeply offensive and contribute to a hostile environment for Muslim communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you can smell shit",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_kneeling_in_prayer",
+      "label": "man kneeling in prayer",
+      "description": "A man wearing a white cap and a dark sweater, kneeling on a red and beige patterned carpet in a mosque. He is in a posture of prayer, with his hands raised and palms facing upward. His facial expression appears focused and reverent. This is the central figure in the foreground of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "prayer_scene",
+      "label": "prayer_scene",
+      "description": "A scene depicting two men in a mosque, one kneeling in prayer and the other bowing. The kneeling man is in the foreground, focused on his prayer, while the other man is in the background, bowing. The scene is set in a mosque with patterned carpets and architectural details. The text overlay adds a humorous, crude context about smelling something unpleasant during prayer.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_kneeling_in_prayer",
+          "relation": "praying",
+          "to": "man_bowing"
+        },
+        {
+          "from": "man_kneeling_in_prayer",
+          "relation": "in_front_of",
+          "to": "man_bowing"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_hygiene_stereotype",
+      "label": "Hygiene Stereotype Against Muslims",
+      "description": "The meme relies on the stereotype that Muslims are unclean or have poor hygiene, which is a common element of Islamophobia. This stereotype is used to mock the act of prayer by implying that the smell during prayer is due to bodily functions, thereby trivializing religious devotion and associating it with uncleanliness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_religious_practice_mockery",
+      "label": "Mockery of Religious Practice",
+      "description": "The meme uses crude humor to mock the act of religious prayer, implying that it involves unpleasant bodily odors. This is a form of religious mockery that is often used in Islamophobic contexts to portray religious practices as absurd or unhygienic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_body_function_stereotype",
+      "label": "Body Function Stereotype in Islamophobic Contexts",
+      "description": "The meme references the idea that religious practice might involve unpleasant bodily functions, which is a stereotype often used in Islamophobic discourse to portray Muslims as unclean or barbaric. This stereotype is not visible in the image but is essential to understanding the meme's offensive intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "derision",
+      "label": "derisive emotion",
+      "description": "The emotion expressed is derision, conveyed through the crude and mocking text overlay that humorously suggests a foul odor during prayer, implying the act of prayer is associated with bodily functions and uncleanliness. This is intended to provoke laughter through shock value and crude humor, but at the expense of religious sensitivity and dignity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'when you can smell shit' is mapped onto the visual scene of prayer",
+      "description": "The text overlay 'when you can smell shit' is juxtaposed with the visual of a man in prayer, creating an analogical mapping where the unpleasant sensory experience (smelling shit) is projected onto the context of religious practice. This implies that the act of prayer is associated with an unclean or foul odor, which is a stereotype used to mock religious devotion. The mapping is established through the spatial and contextual relationship between the text and the visual material, where the text describes a condition that is humorously attributed to the scene depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material describing a bodily sensory experience",
+      "description": "The user is projected onto the textual material 'when you can smell shit but you're not sure if it's his arse or your hands' because the text uses second-person perspective ('you') to create an immersive, personal experience. The user is invited to imagine themselves in the situation described, experiencing the ambiguity and discomfort of the smell, thereby projecting themselves onto the text. This projection is reinforced by the visual scene of prayer, which provides context for the text's implied scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobic Stereotype",
+      "description": "The meme relies on the harmful stereotype that Muslims are unclean or have poor hygiene, which is a common element of Islamophobia. This stereotype is used to mock the act of prayer by implying that the smell during prayer is due to bodily functions, thereby trivializing religious devotion and associating it with uncleanliness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who are familiar with or interested in internet humor that relies on crude, bodily humor and religious mockery, particularly targeting Muslim communities. The meme is designed to provoke laughter through shock value and vulgar analogies, appealing to an audience that finds offensive or taboo content humorous. The use of the mosque setting and the depiction of prayer, combined with the crude text overlay, suggests the meme is intended for viewers who may not be Muslim but are aware of or indifferent to religious sensitivities, and who enjoy or are drawn to Islamophobic stereotypes. The humor is derived from the juxtaposition of sacred religious activity with vulgar bodily functions, which is a form of religious mockery that is often used in Islamophobic contexts. The target audience likely includes those who are not Muslim and may hold or be exposed to Islamophobic views, as the meme relies on harmful stereotypes about Muslim hygiene and religious practice. The meme's intent is to offend and mock religious devotion, which suggests the audience is not necessarily Muslim but may be part of a broader online community that engages with or creates content that is offensive to religious groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/56071.png",
+    "image_name": "56071.png",
+    "extraction_timestamp": "2025-12-16T05:14:16.938798",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

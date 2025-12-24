@@ -1,0 +1,191 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: teacher-alright-class-take-out-your-calculators-mohammed; hasOverallIntent: Harmful; overall-intent-description: The image depicts a person holding a homemade-looking bomb with a digital timer counting down from 00:03, in response to a teacher's instruction for students to take out their calculators. The juxtaposition of the innocent classroom instruction with the dangerous, explosive device creates a darkly humorous and potentially harmful meme. The intent is to mock or satirize a student named 'Mohammed' for having an unusually 'explosive' or 'dangerous' response to a mundane school task. While not explicitly targeting a specific protected group, the meme relies on the shock value of violence and danger to create humor, which can be perceived as threatening or alarming. The use of a bomb, a symbol of extreme violence and destruction, in a context of academic instruction, is inherently harmful as it normalizes or trivializes dangerous behavior, potentially causing distress or fear in viewers, especially if the name 'Mohammed' is associated with real-world terrorism or violence in the viewer's context. The meme's humor is derived from the absurdity and danger, but its potential to cause harm lies in its association of a specific name with violence, which can be seen as a form of indirect attack or stereotype, even if not explicitly hateful. The overall intent is to shock and elicit laughter through the juxtaposition of mundane and dangerous elements, but this comes at the cost of potentially causing harm through fear or reinforcing negative associations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top-left text overlay",
+      "description": "teacher: alright class take out your calculators",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "middle-left text overlay",
+      "description": "mohammed:",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "digital timer display",
+      "description": "00:03",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "hand holding an object",
+      "description": "A person's hand, wearing a light-colored, buttoned shirt sleeve, is holding a homemade-looking bomb. The hand is the only visible part of the person, and it is positioned centrally in the lower half of the image, gripping the bomb firmly. The hand appears to be of a light skin tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "holding_bomb",
+      "label": "person holding a bomb",
+      "description": "A person's hand, wearing a light-colored, buttoned shirt sleeve, is holding a homemade-looking bomb with a digital timer counting down from 00:03. The hand is positioned centrally in the lower half of the image, gripping the bomb firmly.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person_hand_holding_an_object",
+          "relation": "is_holding",
+          "to": "bomb_with_timer"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "The meme implicitly references the name 'Mohammed', which is a common Muslim name, and associates it with a bomb. This leverages the real-world stereotype that links Muslims or people with Muslim-sounding names to terrorism and violence, which is a core component of Islamophobia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism_associations",
+      "label": "Terrorism Associations",
+      "description": "The image uses a bomb as a symbol of extreme violence and destruction. When paired with the name 'Mohammed', it implicitly invokes the real-world association between certain Muslim names and terrorism, which is a harmful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "holding_bomb",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "name_mohammed",
+      "label": "Name Mohammed",
+      "description": "The name 'Mohammed' is a very common name in the Muslim world. The meme's humor and potential harm stem from the implicit association of this name with violence, which is a form of stereotyping based on religious identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "school_classroom_context",
+      "label": "School Classroom Context",
+      "description": "The teacher's instruction to 'take out your calculators' is a mundane, everyday classroom activity. The contrast with the bomb is the source of the meme's absurdity and shock value, which relies on the viewer understanding the normalcy of the classroom setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "shock",
+      "label": "shocked emotion",
+      "description": "The emotion expressed is shock, stemming from the absurd and dangerous juxtaposition of a mundane classroom instruction with a bomb. The viewer is startled by the unexpected and violent response to a simple request.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Mohammed is the person holding the bomb",
+      "description": "The text 'mohammed:' explicitly labels the person holding the bomb in the visual material. This creates an analogical mapping where the textual entity 'mohammed' is mapped onto the visual entity 'person holding a bomb'. The mapping is direct and explicit through the text overlay, indicating that the person in the image is being identified as 'Mohammed'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the person holding the bomb",
+      "description": "The user is projected onto the visual material of the person holding the bomb, as the meme implicitly invites the viewer to imagine themselves in the role of 'Mohammed' or to identify with the absurd, dangerous response to a mundane classroom instruction. The textual label 'mohammed:' directly maps the user's perception onto the visual entity, creating a projection where the viewer sees themselves as the subject of the joke — the student who 'responded' with a bomb. This projection is reinforced by the contrast between the normal classroom context and the violent visual, making the viewer feel implicated in the absurdity or the danger.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobia",
+      "description": "The meme associates the name 'Mohammed', which is a common Muslim name, with a bomb, leveraging the real-world stereotype that links Muslims or people with Muslim-sounding names to terrorism and violence. This is a core component of Islamophobia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for a general internet audience familiar with school humor, memes, and the name 'Mohammed' as a common Muslim name. The humor relies on the shock value of juxtaposing a mundane classroom instruction with a bomb, which is likely to resonate with viewers who understand the absurdity and find dark humor in the contrast. The target audience may include individuals who are aware of the stereotype linking the name 'Mohammed' to terrorism, and who find the meme's absurdity amusing, even if they recognize its potential harm. The meme's effectiveness depends on the viewer's cultural context and their familiarity with the name 'Mohammed' and its association with violence in popular discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/07516.png",
+    "image_name": "07516.png",
+    "extraction_timestamp": "2025-12-15T13:08:35.575457",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

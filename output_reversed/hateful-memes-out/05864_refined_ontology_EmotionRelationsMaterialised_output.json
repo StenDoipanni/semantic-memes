@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful_anger",
+      "expressors": [
+        {
+          "entity": "camel_meme",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "camel_meme",
+          "relation": "emotionalRelationToEntity",
+          "to": "OverallIntent"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_anger :hasExpressor :camel_meme .",
+    ":camel_meme :emotionalRelationToEntity :OverallIntent ."
+  ],
+  "triples_count": 2
+}

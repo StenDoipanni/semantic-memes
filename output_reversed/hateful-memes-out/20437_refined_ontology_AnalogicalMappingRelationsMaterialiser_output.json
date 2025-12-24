@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_001",
+      "hasMappedEntity": "thanksgiving_in_china",
+      "hasMappingEntity": "thanksgiving_dinner_scene"
+    },
+    {
+      "from": "thanksgiving_dinner_scene",
+      "relation": "mappedOnto",
+      "to": "thanksgiving_in_china"
+    }
+  ],
+  "triples": [
+    ":mapping_001 :hasMappedEntity :thanksgiving_in_china .",
+    ":mapping_001 :hasMappingEntity :thanksgiving_dinner_scene .",
+    ":thanksgiving_dinner_scene :mappedOnto :thanksgiving_in_china ."
+  ],
+  "triples_count": 3
+}

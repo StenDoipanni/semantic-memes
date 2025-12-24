@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_540c2d0b",
+  "@type": "AnalysisDocument",
+  "title": "05264.png - Dimension Analysis",
+  "created": "2025-12-15T12:16:06.157961",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_d4eb948c",
+    "@type": "Image",
+    "filename": "05264.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/05264.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/05264.png",
+    "image_name": "05264.png",
+    "extraction_timestamp": "2025-12-15T12:14:29.512766",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_488558a2",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: hateful; overall-intent-description: The image depicts goats eating trash near water, with overlaid text reading 'trust me' and 'the muslims won't rape you now.' This juxtaposition uses a visual metaphor of animals scavenging in filth to imply that Muslims are 'uncivilized' or 'dangerous,' while the text explicitly references a violent stereotype. The meme is designed to incite fear and hatred toward Muslims by associating them with sexual violence and suggesting they are no longer a threat — a dangerous and false narrative. This is a clear example of Islamophobic hate speech, as it relies on the harmful stereotype of Muslim men as rapists, which is used to dehumanize and demonize an entire religious group. The overall intent is to spread prejudice and hostility toward Muslims by leveraging a false and violent association.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_540c2d0b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_51d529dc",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "trust me",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_540c2d0b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3d090477",
+      "@type": "VisualMaterial",
+      "instance_name": "goats",
+      "label": "animals",
+      "description": "Several goats of varying colors (black, gray, brown, white) are gathered on a trash-strewn shore, actively eating garbage. They are the central visual focus and are positioned in the foreground and midground.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_540c2d0b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_172c2429",
+      "@type": "Scene",
+      "instance_name": "scavenging_goats",
+      "label": "goats scavenging trash near water",
+      "description": "Several goats of varying colors (black, gray, brown, white) are gathered on a trash-strewn shore, actively eating garbage. They are positioned in the foreground and midground, with a body of water and greenery in the background. The scene is framed by overlaid text that adds a hateful context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_540c2d0b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_de0bf43e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "islamophobic_stereotype",
+      "label": "Islamophobic Stereotype: Muslims as rapists",
+      "description": "This stereotype falsely and dangerously associates all Muslims with sexual violence, particularly rape. It is a core component of Islamophobic hate speech and is used to dehumanize and demonize Muslims. The meme explicitly invokes this stereotype in its text, making it essential background knowledge to understand the hateful intent.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_540c2d0b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4fbf1f89",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "scavenging_animal_metaphor",
+      "label": "Scavenging Animal Metaphor",
+      "description": "The image of goats eating trash is used as a visual metaphor to imply that Muslims are 'uncivilized,' 'dirty,' or 'dangerous.' This metaphor relies on the real-world association of scavenging animals with filth and disorder, which is then applied to a human group to dehumanize them. This is a common tactic in hate speech.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_540c2d0b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d60dd84c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "false_safety_claim",
+      "label": "False Safety Claim",
+      "description": "The text 'the muslims won't rape you now' implies a false sense of security or a 'new normal' where Muslims are no longer a threat. This is a dangerous and misleading narrative that plays on fear and misinformation, suggesting that the threat has been eliminated or reduced, which is not true. This requires understanding of the real-world context of Islamophobic fearmongering.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_540c2d0b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8ac80f94",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "hate_speech_context",
+      "label": "Hate Speech Context",
+      "description": "The meme is an example of hate speech targeting Muslims. Understanding that this is hate speech requires knowledge of social and political discourse, where such messages are used to incite prejudice, fear, and hostility toward a specific group. The overall intent is to spread hatred, which is a key background knowledge element.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_540c2d0b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d9233017",
+      "@type": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is hatred, conveyed through the hateful stereotype and false safety claim in the text, which dehumanizes Muslims and incites fear and hostility toward them.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_540c2d0b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bb9c4eb8",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Goats are mapped as Muslims",
+      "description": "The visual material of scavenging goats is mapped onto the textual entity 'the muslims' in the phrase 'the muslims won't rape you now'. This is an analogical mapping where the image of dirty, scavenging animals is used to represent Muslims as 'uncivilized' or 'dangerous', aligning with the islamophobic stereotype of Muslims as rapists and 'backwards culture'. The goats' behavior (eating trash) is metaphorically equated with the perceived 'uncleanliness' or 'danger' of Muslims, creating a dehumanizing visual association.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_540c2d0b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5c2f798d",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual claim addressing 'you'",
+      "description": "The user is projected onto the textual material 'the muslims won't rape you now', which directly addresses 'you' as the recipient of the false safety claim. This creates a direct semiotic projection where the viewer is positioned as the 'you' being addressed by the meme's message, making them the target of the implied threat and the recipient of the false reassurance. The projection is explicit through the deictic pronoun 'you' in the text.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_540c2d0b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_439e8836",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Muslims by invoking the harmful stereotype that they are rapists, using a dehumanizing visual metaphor of scavenging goats to imply they are 'uncivilized' or 'dangerous'. This is a clear example of Islamophobic hate speech.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_540c2d0b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3926c969",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The target community is individuals who hold or are susceptible to Islamophobic beliefs, particularly those who may be influenced by or spread harmful stereotypes about Muslims, such as associating them with sexual violence or 'uncivilized' behavior. The meme is designed to appeal to or reinforce prejudice against Muslims by leveraging a dehumanizing visual metaphor (scavenging goats) and a false safety claim ('the muslims won't rape you now'), which are potent tools in hate speech targeting this group.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_540c2d0b"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

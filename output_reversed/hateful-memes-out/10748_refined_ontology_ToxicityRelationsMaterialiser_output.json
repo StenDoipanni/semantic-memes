@@ -1,0 +1,40 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "elderly_woman"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "stereotype_of_romanians_as_thieves"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "nationalistic_hate_speech"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "xenophobia"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :text_chunk .",
+    ":toxicity_1 :hasToxicElement :elderly_woman .",
+    ":toxicity_1 :hasToxicElement :stereotype_of_romanians_as_thieves .",
+    ":toxicity_1 :hasToxicElement :nationalistic_hate_speech .",
+    ":toxicity_1 :hasToxicElement :xenophobia ."
+  ],
+  "triples_count": 5
+}

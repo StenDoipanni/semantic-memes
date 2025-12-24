@@ -1,0 +1,181 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: clint-eastwood-and-michelle-obama; hasOverallIntent: hateful; overall-intent-description: The image depicts a man with a monkey holding a bottle, overlaid with the text 'clint eastwood and michelle obama'. This juxtaposition is a racist trope that equates Black individuals with primates, a harmful and degrading stereotype historically used to demean and dehumanize Black people. The meme uses the visual of a monkey to mock Michelle Obama, who is Black, by implying she is 'animal-like' or 'less than human'. This is a direct attack based on race, fitting the definition of hateful content. The inclusion of Clint Eastwood, a white man, in the same text may serve to imply a contrast or to further emphasize the racialized comparison, reinforcing the harmful message. The overall intent is to demean Michelle Obama through racist imagery and text, making it a hateful meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "clint eastwood and michelle obama",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "human male",
+      "description": "A man with short dark hair and a beard, wearing a light-colored shirt, is shown holding a monkey. His eyes are closed and his head is tilted down, appearing to be in a moment of affection or comfort. He is the central human figure in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "man_holding_monkey",
+      "label": "man holding monkey",
+      "description": "A man is holding a monkey that is drinking from a bottle. The man appears to be in a moment of affection or comfort, with his eyes closed and head tilted down.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "is_holding",
+          "to": "monkey"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_primate_comparison",
+      "label": "Anti-Black Stereotype: Comparing Black People to Primates",
+      "description": "This stereotype dehumanizes Black individuals by equating them with animals, particularly monkeys, implying inferiority, lack of intelligence, or bestiality. It is a historically rooted racist trope used to justify oppression and discrimination against Black people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_holding_monkey",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "clint_eastwood",
+      "label": "Clint Eastwood",
+      "description": "Clint Eastwood is a renowned American actor, director, and producer. He is often associated with tough, stoic, or rugged male archetypes in film. His inclusion in the meme text is likely to contrast him with Michelle Obama, implying a racialized hierarchy or to emphasize the absurdity of the comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "michelle_obama",
+      "label": "Michelle Obama",
+      "description": "Michelle Obama is the former First Lady of the United States and a prominent public figure, known for her advocacy, intelligence, and grace. The meme attempts to demean her by associating her with a monkey, which is a racist trope targeting Black women.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_meme_context",
+      "label": "Racist Meme Context",
+      "description": "The meme operates within a context of racial hate and dehumanization. It uses the visual of a monkey and the names of two prominent public figures to perpetuate a harmful stereotype. The overall intent is to demean Michelle Obama through racist imagery and text, making it a hateful meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_holding_monkey",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "dehumanization",
+      "label": "dehumanizing emotion",
+      "description": "The emotion expressed is one of dehumanization, conveyed through the visual of a monkey being held affectionately by a man, juxtaposed with the text identifying the monkey as representing Michelle Obama. This creates a harmful emotional cue that equates a Black woman with an animal, stripping her of humanity and dignity. The man’s affectionate expression is ironically contrasted with the racist message, amplifying the emotional impact of the dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Michelle Obama is mapped onto the monkey",
+      "description": "The text 'clint eastwood and michelle obama' explicitly names Michelle Obama, who is a Black woman. The visual material shows a monkey being held by a man. The meme uses this juxtaposition to map Michelle Obama onto the monkey, invoking the racist stereotype of equating Black people with primates. This mapping is central to the meme's hateful intent, as it dehumanizes Michelle Obama by associating her with an animal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the racist stereotype being enacted in the meme",
+      "description": "The user is not explicitly projected onto a specific visual, textual, or scene element via deictic pronouns like 'me' or 'you'. However, the meme's hateful intent and the user's engagement with it imply a projection of the user's own perspective onto the dehumanizing act of mapping Michelle Obama onto the monkey. The user is implicitly projected onto the act of consuming and perpetuating this racist trope, which is embodied in the visual material (man holding monkey) and textual material (text_chunk: 'clint eastwood and michelle obama'). The projection is onto the entire hateful scene, where the user is positioned as a participant in the racist narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Michelle Obama based on her race by equating her with a monkey, a historically racist trope used to dehumanize Black people. The inclusion of Clint Eastwood reinforces a racialized hierarchy, making this a hateful meme targeting a specific individual and community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "racist meme audience",
+      "description": "The target audience consists of individuals who are familiar with or propagate racist stereotypes, particularly those who engage with or create content that dehumanizes Black people by equating them with primates. This audience may include users of internet platforms who consume and share hateful memes, often targeting prominent Black public figures like Michelle Obama. The meme’s intent to demean Michelle Obama through racist imagery and text is designed to resonate with those who hold or reinforce anti-Black racist beliefs, using the juxtaposition of Clint Eastwood (a white male icon) and Michelle Obama (a Black female public figure) to reinforce racial hierarchies. The audience is likely to be drawn to the meme’s provocative and offensive nature, which appeals to those who enjoy or are entertained by racially charged, degrading content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/37425.png",
+    "image_name": "37425.png",
+    "extraction_timestamp": "2025-12-15T23:51:07.522924",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

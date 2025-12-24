@@ -1,0 +1,224 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: feminism_meme; hasOverallIntent: Hateful; overall-intent-description: The meme depicts two women holding pro-choice signs at a protest, juxtaposed with the text 'feminism: because bitter, ugly lesbian need attention too!'. This text is intentionally derogatory, using the pejorative terms 'bitter' and 'ugly' to demean and stereotype lesbians, implying they are attention-seeking and undesirable. This constitutes a hateful attack against a specific subgroup within the feminist movement (lesbians), using degrading language to undermine their legitimacy and worth. The meme's intent is to discredit and insult, fitting the definition of hateful content as it targets individuals based on their sexual orientation and appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "Text content: 'feminism:'; Position: top center of the image, large white bold text with black outline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_on_left",
+      "label": "woman holding cardboard sign",
+      "description": "A woman with short dark hair, wearing glasses and a blue patterned shirt, is holding a handmade cardboard sign that reads 'FREE Safe LEGAL'. She is smiling and raising her right arm. Her appearance is described as 'bitter, ugly lesbian' in the meme's text, which is a derogatory stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "protest_scene",
+      "label": "protest_with_signs",
+      "description": "A protest scene featuring two women holding signs advocating for reproductive rights, with additional people in the background. The scene is framed by text that derogatorily labels one participant as a 'bitter, ugly lesbian'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman_on_left",
+          "relation": "holds",
+          "to": "cardboard_sign"
+        },
+        {
+          "from": "woman_on_right",
+          "relation": "holds",
+          "to": "pink_sign"
+        },
+        {
+          "from": "woman_on_left",
+          "relation": "stands_next_to",
+          "to": "woman_on_right"
+        },
+        {
+          "from": "woman_on_left",
+          "relation": "faces_towards",
+          "to": "woman_on_right"
+        },
+        {
+          "from": "woman_on_right",
+          "relation": "faces_towards",
+          "to": "woman_on_left"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lesbian_stereotype",
+      "label": "Lesbian Stereotype",
+      "description": "The meme uses derogatory terms 'bitter' and 'ugly' to stereotype lesbians as undesirable, attention-seeking, and unattractive. This is a form of LGBTQ+ discrimination that relies on negative societal perceptions of lesbian identity and appearance, which are not visible in the image but are understood through cultural context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman_on_left",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "feminism",
+      "label": "Feminism",
+      "description": "The meme references feminism as a broad social movement advocating for gender equality, particularly in reproductive rights (as shown by the signs 'FREE Safe LEGAL' and 'My Body, My Choice'). The derogatory text implies that certain groups within feminism (lesbians) are being unfairly targeted or dismissed, which requires understanding of feminist ideology and its internal diversity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "reproductive_rights_protest",
+      "label": "Reproductive Rights Protest",
+      "description": "The protest scene with signs advocating for abortion rights ('My Body, My Choice') is a real-world social movement. The meme's hateful text is juxtaposed against this legitimate activism, requiring background knowledge of the historical and political context of reproductive rights in the U.S. and globally.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "attention_seeking_stereotype",
+      "label": "Attention-Seeking Stereotype",
+      "description": "The phrase 'need attention too!' implies that lesbians are being portrayed as attention-seeking, which is a common stereotype used to discredit or marginalize LGBTQ+ individuals. This stereotype is not visible in the image but is understood through cultural and social discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "woman_on_left",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lgbtq_plus_discrimination",
+      "label": "LGBTQ+ Discrimination",
+      "description": "The meme's use of derogatory language and stereotypes against lesbians falls under the broader category of LGBTQ+ discrimination, which includes framing LGBTQ+ identities as 'lifestyle choices' or 'attention-seeking'. This requires understanding of societal prejudices against LGBTQ+ individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman_on_left",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "derogatory_contempt",
+      "label": "derogatory contempt expressed through text",
+      "description": "The text overlay 'feminism: because bitter, ugly lesbian need attention too!' expresses contempt and disdain toward lesbians, using pejorative language to demean and stereotype them. This is not an emotion expressed by any person in the image but is an emotional tone imposed by the meme's text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_feminism_to_protest_scene",
+      "label": "feminism is mapped onto the protest scene",
+      "description": "The text 'feminism:' at the top of the image is juxtaposed with the visual of a protest scene featuring women holding signs advocating for reproductive rights. This creates an analogical mapping where the broad social movement of feminism is visually represented by the protest scene, even though the protest itself is specifically about reproductive rights, which is a subset of feminist issues. The mapping is established by the direct textual label 'feminism:' placed over the image of the protest.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the derogatory textual message",
+      "description": "The user is projected onto the text 'because bitter, ugly lesbian need attention too!' which is the core hateful message of the meme. This text is not visually depicted as belonging to any specific person in the image but is presented as a direct address to the viewer, implying that the user is being asked to consider or accept this degrading stereotype about lesbians. The projection is onto the textual material, which frames the entire protest scene through a lens of prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks lesbians by labeling them as 'bitter, ugly' and 'attention seeking', which is a hateful attack based on sexual orientation and appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed to target and provoke members of the general public who may hold prejudiced views toward lesbians, particularly those who are unfamiliar with or dismissive of LGBTQ+ communities. The hateful text 'because bitter, ugly lesbian need attention too!' is intended to elicit a reaction from viewers who might find the stereotype offensive or relatable, thereby reinforcing negative perceptions of lesbians. The target audience likely includes individuals who are not part of the feminist or LGBTQ+ communities, or who hold conservative or heteronormative views, as the meme uses derogatory language to attack a specific subgroup within feminism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/85012.png",
+    "image_name": "85012.png",
+    "extraction_timestamp": "2025-12-19T15:12:51.961263",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

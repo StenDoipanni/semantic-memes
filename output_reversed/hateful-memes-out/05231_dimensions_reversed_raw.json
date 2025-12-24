@@ -1,0 +1,221 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: the_name_s_bob_bob; hasOverallIntent: ableism; overall-intent-description: The image features a man with Down syndrome smiling broadly, with the text overlay \"the name's bob... bob\". The overall intent is to portray him as a simple, childlike, or comically repetitive character, reinforcing a stereotype that individuals with developmental disabilities are intellectually limited or incapable of complex thought. This aligns with ableist tropes that infantilize or reduce people with disabilities to simplistic, humorous, or pitiable figures, often ignoring their full humanity and capacity for nuanced expression. The repetition of his name in the text emphasizes the perceived 'sameness' or lack of individuality, which is a common harmful trope in ableism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "the name's bob... bob",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person with Down syndrome",
+      "description": "A smiling man with Down syndrome, wearing a dark blue polo shirt, is the central subject of the image. His expression is cheerful and engaging, and he is looking directly at the camera. The text overlay \"the name's bob... bob\" reinforces the stereotype of infantilization and perceived simplicity associated with ableism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "infantilized_self_introduction",
+      "label": "man introducing himself with infantilizing text",
+      "description": "The scene depicts a man with Down syndrome smiling at the camera, with a text overlay that reads 'the name's bob... bob', which infantilizes him by reducing his identity to a repetitive, childlike self-introduction. This creates a scene of self-presentation that reinforces ableist stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "isSubjectOf",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "infantilizes",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism_infantilization_stereotype",
+      "label": "Ableism Infantilization Stereotype",
+      "description": "The stereotype that individuals with developmental disabilities are intellectually limited, childlike, or incapable of complex thought, often leading to infantilizing portrayals in media and society. This is reinforced by the text 'the name's bob... bob', which reduces the person to a repetitive, simplistic self-introduction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "infantilized_self_introduction",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "developmental_disability_reduced_identity",
+      "label": "Developmental Disability Reduced Identity Stereotype",
+      "description": "The trope that people with developmental disabilities are perceived as lacking individuality or complexity, often portrayed as having names or identities that are repetitive, simplistic, or easily categorized (e.g., 'Bob'). This stereotype reduces their humanity and ignores their capacity for nuanced expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "infantilized_self_introduction",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "repetition_as_simple_identity",
+      "label": "Repetition as Simple Identity",
+      "description": "The use of repetition in self-introduction ('bob... bob') to imply simplicity or lack of depth, which is a common trope in ableist humor and media portrayals. This reinforces the idea that individuals with developmental disabilities are incapable of complex or unique self-expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "infantilized_self_introduction",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism_insurance_pity_narrative",
+      "label": "Ableism Insurance Pity Narrative",
+      "description": "The trope of portraying individuals with disabilities as pitiable or in need of pity, often used to elicit sympathy or to justify societal exclusion. This is implicitly referenced by the infantilizing and simplistic portrayal in the meme, which may be intended to evoke pity rather than respect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "infantilized_self_introduction",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism_insurance_pity_narrative",
+      "label": "Ableism Insurance Pity Narrative",
+      "description": "The trope of portraying individuals with disabilities as pitiable or in need of pity, often used to elicit sympathy or to justify societal exclusion. This is implicitly referenced by the infantilizing and simplistic portrayal in the meme, which may be intended to evoke pity rather than respect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "infantilized_self_introduction",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "cheerful and engaging expression",
+      "description": "The man is smiling broadly with an open-mouthed, joyful expression, looking directly at the camera, conveying a sense of happiness and approachability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Self-identification through infantilizing text",
+      "description": "The text 'the name's bob... bob' is mapped onto the visual entity of the man with Down syndrome, creating an analogical mapping where the man is portrayed as a simple, repetitive self-introduction, reinforcing the stereotype of infantilization associated with ableism. The text explicitly labels the visual subject as 'bob', reducing his identity to a simplistic, repetitive name, which is a key element of the ableist trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the infantilizing self-introduction scene",
+      "description": "The user is projected onto the scene where the man with Down syndrome is depicted with the text overlay 'the name's bob... bob', which infantilizes him and reduces his identity to a simplistic, repetitive self-introduction. This creates a semiotic projection where the viewer is implicitly invited to see themselves in the role of the person being infantilized or to perceive the scene as a humorous, simplistic portrayal of disability. The projection is not explicit (e.g., no 'you' or 'me' text), but the framing and the stereotype reinforce a user identification with the infantilized subject or the ableist perspective.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "ableism infantilization stereotype",
+      "description": "The meme manifests toxicity through the infantilization of a person with Down syndrome, reducing his identity to a simplistic, repetitive self-introduction ('the name's bob... bob'), which reinforces harmful ableist stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who may be familiar with or perpetuate ableist stereotypes, particularly those who find humor in infantilizing portrayals of people with developmental disabilities. The meme is designed to appeal to viewers who enjoy simplistic, repetitive, or pitiable depictions of people with Down syndrome, often reinforcing the trope that such individuals are intellectually limited or incapable of complex self-expression. The humor derives from the perceived 'sameness' or lack of individuality implied by the repeated name 'bob,' which targets an audience that may not recognize or challenge the harmful nature of this stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/05231.png",
+    "image_name": "05231.png",
+    "extraction_timestamp": "2025-12-15T11:50:28.376714",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

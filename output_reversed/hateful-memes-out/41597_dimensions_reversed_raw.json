@@ -1,0 +1,213 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: farm_equipment_and_livestock_don_t_mix; hasOverallIntent: Harmful; overall-intent-description: The image depicts a smiling interracial couple in a romantic embrace, juxtaposed with the text 'farm equipment and livestock don't mix.' This creates a false analogy that implies the couple is inappropriate or mismatched, potentially mocking interracial relationships. While not explicitly abusive or hateful toward a specific protected group, the meme uses a crude, degrading metaphor to suggest that interracial relationships are unnatural or unsuitable, which can be harmful by reinforcing negative stereotypes and contributing to social stigma. The intent is to provoke a reaction through humor that relies on a crude, potentially offensive comparison, which may be perceived as demeaning to the couple or to interracial relationships in general.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "farm equipment and livestock don't mix",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "Black man",
+      "description": "A Black man with glasses, wearing a plaid shirt over a white t-shirt, smiling and looking at the camera. He is positioned on the left side of the image, embracing a woman.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "romantic_embrace",
+      "label": "romantic_embrace",
+      "description": "A romantic embrace between a Black man and a white woman, both smiling and looking at the camera. The man is on the left, wearing glasses and a plaid shirt, while the woman is on the right, with curly hair and a white top, hugging the man from behind.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "embraces",
+          "to": "woman"
+        },
+        {
+          "from": "woman",
+          "relation": "hugging",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "interracial_relationship_stereotype",
+      "label": "Interracial Relationship Stereotype",
+      "description": "The meme uses the phrase 'farm equipment and livestock don't mix' as a crude metaphor to imply that interracial relationships are unnatural or unsuitable. This relies on the real-world stereotype that interracial unions are inappropriate or mismatched, which is a harmful and outdated notion often used to reinforce racial segregation and social stigma.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "Anti-Black Stereotype",
+      "description": "The meme implicitly references the stereotype that Black people are inherently incompatible with other racial groups, which is a form of racial prejudice. This stereotype is part of a broader history of anti-Black racism that includes claims of hypersexualization, criminality, and 'otherness' that dehumanize Black individuals and reinforce systemic discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_supremacist_ideology",
+      "label": "White Supremacist Ideology",
+      "description": "The meme's underlying message aligns with white supremacist ideologies that promote racial hierarchy and the belief that interracial relationships are unnatural or inferior. This ideology has historically been used to justify segregation, slavery, and systemic racism, and continues to influence harmful social attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_metaphor",
+      "label": "Racist Metaphor",
+      "description": "The phrase 'farm equipment and livestock don't mix' is a racist metaphor that equates interracial relationships with the unnatural pairing of incompatible species. This metaphor is used to demean and dehumanize interracial couples by implying they are biologically or socially unsuitable, which is a form of racialized dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_stigma",
+      "label": "Social Stigma",
+      "description": "The meme relies on the concept of social stigma, which is the negative perception or disapproval of a group or individual based on societal norms. In this case, the stigma is directed at interracial relationships, which are often subject to judgment and ridicule in racially divided societies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful romantic expression",
+      "description": "The couple is smiling broadly and embracing each other affectionately, conveying a sense of happiness, love, and contentment in their relationship.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Interracial couple mapped as 'farm equipment and livestock'",
+      "description": "The text 'farm equipment and livestock don't mix' is used as a crude metaphor to imply that the interracial couple (Black man and white woman) is an unnatural or unsuitable pairing. This creates an analogical mapping where the couple is projected onto the metaphorical entities 'farm equipment' and 'livestock', suggesting biological or social incompatibility.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual metaphor implying racial incompatibility",
+      "description": "The user is projected onto the textual material 'farm equipment and livestock don't mix', which functions as a deictic metaphor that directs the viewer to interpret the visual scene (the interracial couple) through the lens of racial incompatibility. The meme implicitly invites the user to see the couple as an unnatural or unsuitable pairing, aligning with the user's own social or cultural biases regarding interracial relationships. There are no explicit deictic pronouns like 'you' or 'me', but the metaphorical framing projects the user's potential judgment or societal norms onto the couple.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a crude, degrading metaphor to suggest that interracial relationships are unnatural or unsuitable, which can be harmful by reinforcing negative stereotypes and contributing to social stigma.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience that may find crude, racially charged humor offensive or provocative, particularly those who are unaware of or insensitive to the harmful stereotypes it perpetuates. The target audience likely includes individuals who are familiar with or enjoy internet memes that rely on shock value, crude analogies, or social commentary that may be offensive to marginalized groups. The meme’s intent to provoke a reaction through a degrading metaphor suggests it is aimed at viewers who are comfortable with or indifferent to racialized humor and social stigma.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/41597.png",
+    "image_name": "41597.png",
+    "extraction_timestamp": "2025-12-16T01:00:19.018311",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

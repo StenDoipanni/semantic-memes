@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#qa_b48f45db-5416-43f9-865e-112e5a0926db",
+  "@type": "QuestionAnswerPair",
+  "question": "What phrase is displayed in the image?",
+  "answers": [
+    {
+      "text": "None of the others",
+      "is_correct": false
+    },
+    {
+      "text": "i love peanut butter on toast",
+      "is_correct": false
+    },
+    {
+      "text": "my mom makes the best sandwiches",
+      "is_correct": true
+    },
+    {
+      "text": "my dad bakes the best cookies",
+      "is_correct": false
+    }
+  ],
+  "explanation": "The text 'my mom makes the best sandwiches' is directly visible as the textual material in the image.",
+  "dimension": "TextualMaterial",
+  "relatedInstances": [
+    "text_chunk"
+  ],
+  "generationTimestamp": "2025-12-23T20:47:44.370151",
+  "generationMethod": "huggingface_api",
+  "sourceImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_13492",
+    "@type": "Image",
+    "filename": "13492.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/13492.png"
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: weed_man_meme; hasOverallIntent: Hateful; overall-intent-description: The meme uses a photo of a Black man, likely intended to be associated with a stereotype of being a 'weed man' (a slang term for someone who deals or uses marijuana), and juxtaposes it with the text 'when the weed man throw in a little extra.' This implies a stereotype that Black people are dishonest or greedy, particularly in the context of drug dealing. The image and text together create a harmful and hateful caricature that reinforces negative racial stereotypes, specifically targeting Black individuals with a derogatory association to criminal behavior and greed. The meme's intent is to demean and stereotype a racial group based on a false and offensive assumption.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "when the weed man",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "An elderly Black man wearing a dark suit, white shirt, and red tie, with a subtle, knowing smirk on his face. He is the central subject of the image and is being used in a meme context to represent a stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "weed_man_meme_scene",
+      "label": "man_with_text_meme",
+      "description": "A scene depicting an elderly Black man in a suit and tie, with text overlaid that reads 'when the weed man' at the top and 'throw in a little extra' at the bottom. The man's subtle smirk and the text together create a meme that implies a stereotype of dishonesty or greed associated with Black people in the context of drug dealing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "isRepresentedBy",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_criminal_behavior",
+      "label": "Anti-Black Stereotype: Criminal Behavior Associations",
+      "description": "The meme relies on the stereotype that Black people are inherently associated with criminal behavior, particularly drug dealing, which is a longstanding and harmful racial trope. This stereotype is used to imply that the man in the image (a Black man) is dishonest or greedy when 'throwing in a little extra' in the context of drug dealing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "weed_man_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_greed",
+      "label": "Anti-Black Stereotype: Greed",
+      "description": "The meme implies that Black people are greedy or dishonest, particularly in the context of transactions involving drugs. This is a derogatory stereotype that links Blackness with financial dishonesty or exploitation, which is not supported by evidence and is rooted in historical racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "weed_man_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "weed_man_slang",
+      "label": "Slang Term: 'Weed Man'",
+      "description": "The term 'weed man' is a slang term used to refer to someone who deals or uses marijuana. In this meme, it is used to label the man as a drug dealer, which is a derogatory and stereotypical association. This term is not a formal or respectful descriptor and is used here to reinforce a negative racial stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "weed_man_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_context_drug_dealing",
+      "label": "Meme Context: Drug Dealing",
+      "description": "The meme's context is rooted in the criminalization and stigmatization of drug dealing, particularly in relation to Black communities. The phrase 'throw in a little extra' is used to imply dishonesty or greed in a transaction, which is a common trope in racist memes that associate Black people with criminal behavior and moral corruption.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "weed_man_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_stereotype_demeaning",
+      "label": "Racial Stereotype: Demeaning",
+      "description": "The meme uses the man's appearance and the text to create a demeaning caricature of Black people, implying they are dishonest or greedy. This is a form of racial stereotyping that reduces a group to a negative, simplistic, and offensive characterization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "weed_man_meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "sly_smirk",
+      "label": "the sly smirk expression",
+      "description": "The man's subtle, knowing smirk conveys a sense of hidden satisfaction or mischievousness, implying he is secretly pleased or amused by something — in this case, the implied act of 'throwing in a little extra' with a deceptive or greedy intent. This expression is used to reinforce the stereotype of dishonesty or greed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "weed_man_mapping",
+      "label": "The man is mapped as 'the weed man'",
+      "description": "The text 'when the weed man' at the top of the image explicitly labels the visual entity (the man) as 'the weed man'. This is an analogical mapping where the textual entity 'weed_man' is projected onto the visual entity 'man'. The term 'weed man' is a slang term for someone who deals or uses marijuana, and in this context, it is used to stereotype the man as a drug dealer, reinforcing a harmful racial trope. The mapping is established through direct textual labeling and contextual juxtaposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual material of the man",
+      "description": "The user is projected onto the visual material of the elderly Black man in the image. The meme's overall intent and textual content ('when the weed man throw in a little extra') create an implicit identification where the viewer is encouraged to imagine themselves as the 'weed man' or as someone who would react to the scenario described. This projection is not explicit with deictic pronouns like 'you' or 'me', but it is implied through the meme's structure: the viewer is positioned as the recipient of the 'extra' or as the person who is being stereotyped as dishonest or greedy in the context of drug dealing. The visual material (the man) is the focal point onto which the user's identity is projected as the subject of the stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses a photo of a Black man, likely intended to be associated with a stereotype of being a 'weed man' (a slang term for someone who deals or uses marijuana), and juxtaposes it with the text 'when the weed man throw in a little extra.' This implies a stereotype that Black people are dishonest or greedy, particularly in the context of drug dealing. The image and text together create a harmful and hateful caricature that reinforces negative racial stereotypes, specifically targeting Black individuals with a derogatory association to criminal behavior and greed. The meme's intent is to demean and stereotype a racial group based on a false and offensive assumption.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who are familiar with or perpetuate anti-Black racial stereotypes, particularly those who engage with or enjoy memes that rely on harmful caricatures linking Black people to criminal behavior and greed. This includes audiences who find humor in derogatory racial tropes, such as the 'weed man' stereotype, and who may be exposed to or actively consume content that reinforces these stereotypes. The meme is designed to resonate with those who accept or enjoy the dehumanizing and demeaning portrayal of Black individuals, often rooted in historical racism and systemic bias.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/74368.png",
+    "image_name": "74368.png",
+    "extraction_timestamp": "2025-12-19T12:09:19.090326",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

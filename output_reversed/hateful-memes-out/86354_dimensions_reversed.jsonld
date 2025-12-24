@@ -1,0 +1,73 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_d42f424d",
+  "@type": "AnalysisDocument",
+  "title": "86354.png - Dimension Analysis",
+  "created": "2025-12-19T15:52:13.285791",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_97ea0443",
+    "@type": "Image",
+    "filename": "86354.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/86354.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/86354.png",
+    "image_name": "86354.png",
+    "extraction_timestamp": "2025-12-19T15:51:48.741341",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 3,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_13f4c881",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: officer_down; hasOverallIntent: Harmful; overall-intent-description: The image displays a lightning bolt icon with the text 'officer down' above it. This is a common meme format used to indicate that a police officer has been killed or incapacitated, often in a humorous or ironic context. The lightning bolt symbolizes suddenness or a dramatic event. While not inherently abusive or hateful, the meme can be harmful when used to trivialize or mock real-life incidents of police violence or officer deaths, potentially desensitizing viewers to the gravity of such events. The intent is to create a visual shorthand for a serious situation, but its use can be contextually inappropriate or insensitive, especially if deployed without regard for the real-world consequences of police violence or the loss of life.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d42f424d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8ed2c338",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "officer down",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d42f424d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dbfde260",
+      "@type": "VisualMaterial",
+      "instance_name": "lightning_bolt",
+      "label": "graphic symbol",
+      "description": "A stylized yellow lightning bolt with a black outline and white inner highlight, casting a subtle shadow. It is centrally positioned and serves as a visual shorthand for suddenness or a dramatic event, commonly used in memes to indicate an 'officer down' scenario.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d42f424d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

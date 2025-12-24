@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "contemptuous expression",
+      "expressors": [
+        {
+          "entity": "man dressed as a wizard",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man dressed as a wizard",
+          "relation": "emotionalRelationToEntity",
+          "to": "political opponents"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":contemptuous_expression :hasExpressor :man_dressed_as_a_wizard .",
+    ":man_dressed_as_a_wizard :emotionalRelationToEntity :political_opponents ."
+  ],
+  "triples_count": 2
+}

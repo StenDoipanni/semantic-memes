@@ -1,0 +1,44 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "fearful emotion",
+      "expressors": [
+        {
+          "entity": "child1",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "child2",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "child1",
+          "relation": "emotionalRelationToEntity",
+          "to": "adult_female"
+        },
+        {
+          "from": "child2",
+          "relation": "emotionalRelationToEntity",
+          "to": "adult_female"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":fearful_emotion :hasExpressor :child1 .",
+    ":fearful_emotion :hasExpressor :child2 .",
+    ":child1 :emotionalRelationToEntity :adult_female .",
+    ":child2 :emotionalRelationToEntity :adult_female ."
+  ],
+  "triples_count": 4
+}

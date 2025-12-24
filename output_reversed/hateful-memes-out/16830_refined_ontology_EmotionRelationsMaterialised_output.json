@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "trivializing emotion",
+      "expressors": [
+        {
+          "entity": "the holocaust is a sad moment in history",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "the holocaust is a sad moment in history",
+          "relation": "emotionalRelationToEntity",
+          "to": "Adolf Hitler"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":trivializing_emotion :hasExpressor :the_holocaust_is_a_sad_moment_in_history .",
+    ":the_holocaust_is_a_sad_moment_in_history :emotionalRelationToEntity :Adolf_Hitler ."
+  ],
+  "triples_count": 2
+}

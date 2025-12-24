@@ -1,0 +1,25 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk_1"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "legroom_of_a_pinto"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :text_chunk_1 .",
+    ":toxicity_1 :hasToxicElement :legroom_of_a_pinto ."
+  ],
+  "triples_count": 2
+}

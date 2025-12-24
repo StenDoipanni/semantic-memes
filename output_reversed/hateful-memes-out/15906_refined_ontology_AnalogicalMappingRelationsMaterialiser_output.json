@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "obedience_mapping",
+      "hasMappedEntity": "top_text",
+      "hasMappingEntity": "Kevin_Hart"
+    },
+    {
+      "from": "Kevin_Hart",
+      "relation": "mappedOnto",
+      "to": "top_text"
+    }
+  ],
+  "triples": [
+    ":obedience_mapping :hasMappedEntity :top_text .",
+    ":obedience_mapping :hasMappingEntity :Kevin_Hart .",
+    ":Kevin_Hart :mappedOnto :top_text ."
+  ],
+  "triples_count": 3
+}

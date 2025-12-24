@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "cashier_processing_payment",
+      "participants": [
+        {
+          "entity": "cashier",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "customer",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "cashier",
+          "relation": "processingPaymentFor",
+          "to": "customer"
+        },
+        {
+          "from": "customer",
+          "relation": "payingAt",
+          "to": "cashier"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":cashier_processing_payment :hasParticipant :cashier .",
+    ":cashier_processing_payment :hasParticipant :customer .",
+    ":cashier :processingPaymentFor :customer .",
+    ":customer :payingAt :cashier ."
+  ],
+  "triples_count": 4
+}

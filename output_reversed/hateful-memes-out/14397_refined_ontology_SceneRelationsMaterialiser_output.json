@@ -1,0 +1,53 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "juxtaposition_of_goat_and_woman",
+      "participants": [
+        {
+          "entity": "goat",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "woman",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "goat",
+          "relation": "isDepictedInTopPanel",
+          "to": "juxtaposition_of_goat_and_woman"
+        },
+        {
+          "from": "woman",
+          "relation": "isDepictedInBottomPanel",
+          "to": "juxtaposition_of_goat_and_woman"
+        },
+        {
+          "from": "goat",
+          "relation": "isReferencedInText",
+          "to": "lol she thinks she's a goat"
+        },
+        {
+          "from": "woman",
+          "relation": "isReferencedInText",
+          "to": "a goat"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":juxtaposition_of_goat_and_woman :hasParticipant :goat .",
+    ":juxtaposition_of_goat_and_woman :hasParticipant :woman .",
+    ":goat :isDepictedInTopPanel :juxtaposition_of_goat_and_woman .",
+    ":woman :isDepictedInBottomPanel :juxtaposition_of_goat_and_woman .",
+    ":goat :isReferencedInText :lol_she_thinks_she_s_a_goat .",
+    ":woman :isReferencedInText :a_goat ."
+  ],
+  "triples_count": 6
+}

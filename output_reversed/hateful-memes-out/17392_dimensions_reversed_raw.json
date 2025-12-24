@@ -1,0 +1,202 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image juxtaposes a black-and-white photo of a smiling man and woman holding a tiger cub with the text 'we are all apart of god's plan. christ will come to us.' The visual of a tiger cub, an animal often associated with wildness and danger, is used in a religious context to create a jarring, ironic, or absurd contrast with the message of divine plan and Christ's return. This juxtaposition is likely intended to mock or satirize religious claims, particularly those related to prophecy or divine intervention, by presenting them alongside something that appears chaotic or out of place. The meme's intent is to provoke thought or laughter through absurdity, but it can be perceived as harmful because it trivializes or mocks religious beliefs, potentially offending believers. The overall intent is not abusive or cyberbullying toward a specific group, but it does carry a tone of irreverent mockery that may be considered disrespectful or blasphemous to some viewers, thus falling under the 'Harmful' category due to its potential to cause offense or undermine religious sentiment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "we are all apart of god's plan.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "man holding a tiger cub",
+      "description": "A smiling man with short hair, wearing a dark suit, holding a tiger cub. He appears to be in a public or staged setting, possibly from the 1960s or 1970s, based on his attire and the black-and-white photo style. His expression is cheerful and he is looking slightly upward, suggesting he is posing for the photo.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "holding_tiger_cub",
+      "label": "man and woman holding a tiger cub",
+      "description": "A black-and-white photo showing a man and a woman standing side by side, smiling, with the man holding a tiger cub. The woman is wearing a pearl necklace and a light-colored coat, while the man is in a dark suit. The tiger cub is positioned in front of the man, looking toward the camera. The scene appears staged and cheerful, likely from the 1960s or 1970s.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "isHolding",
+          "to": "tiger_cub"
+        },
+        {
+          "from": "woman",
+          "relation": "standsBeside",
+          "to": "man"
+        },
+        {
+          "from": "tiger_cub",
+          "relation": "isBeingHeldBy",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_prophecy_mockery",
+      "label": "Religious Prophecy Mockery",
+      "description": "The meme uses the phrase 'Christ will come to us' in conjunction with the image of a tiger cub to satirize or mock religious prophecies about divine intervention or the Second Coming. This requires background knowledge of Christian eschatology and the cultural perception of such prophecies as serious, apocalyptic, or divinely ordained events. The juxtaposition of a wild animal with a message of divine salvation creates absurdity, implying that such prophecies are as arbitrary or chaotic as the image suggests.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "tiger_cub_as_wildness_symbol",
+      "label": "Tiger Cub as Symbol of Wildness",
+      "description": "The tiger cub is used as a visual metaphor for wildness, unpredictability, or danger, which contrasts with the calm, divine message in the text. This requires background knowledge of how animals, particularly big cats, are culturally associated with danger, untamed nature, or primal instincts. The meme relies on this association to create irony or absurdity when paired with religious text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "divine_plan_concept",
+      "label": "Divine Plan Concept",
+      "description": "The phrase 'we are all apart of god's plan' refers to a theological concept in Christianity (and other religions) that suggests all events are part of a divine, preordained purpose. Understanding this phrase requires background knowledge of religious doctrine, particularly Christian theology, and the cultural weight attached to the idea of a 'plan' or 'will' of God. The meme's humor or critique depends on this concept being taken seriously in the real world.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "1960s_cultural_context",
+      "label": "1960s Cultural Context",
+      "description": "The black-and-white photo style, clothing (pearl necklace, suit), and the staged nature of the photo suggest a 1960s or 1970s setting. This requires background knowledge of mid-20th century fashion, photography, and social norms to understand the visual tone and potential historical context. The meme may be referencing a specific era's aesthetic or cultural attitudes toward religion, animals, or public displays of wealth or exoticism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_belief_trivialization",
+      "label": "Religious Belief Trivialization",
+      "description": "The meme's intent to mock or satirize religious beliefs requires background knowledge of how religious beliefs are perceived in society — particularly how they are often treated with reverence, seriousness, or fear. The meme's 'harmful' intent stems from the assumption that religious beliefs are not to be mocked, and the juxtaposition of a wild animal with a sacred message is meant to undermine the gravity of the religious text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_humor",
+      "label": "mocking humor expression",
+      "description": "The overall emotional tone conveyed by the juxtaposition of the serene, smiling couple holding a tiger cub with the text 'we are all apart of god's plan. christ will come to us' is one of ironic mockery. The absurdity of equating divine prophecy with the image of a wild animal creates a humorous, satirical effect intended to undermine the seriousness of religious claims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Divine Plan Mocked by Wildness",
+      "description": "The text 'we are all apart of god's plan' is mapped onto the visual of the man and woman holding a tiger cub, implying that the divine plan is as chaotic or unpredictable as the wild animal. The tiger cub, symbolizing wildness and danger, is used to satirize the idea of a divine, orderly plan, creating an absurd contrast.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message and visual scene as a recipient of the meme's ironic commentary",
+      "description": "The user is not explicitly projected onto a specific deictic pronoun like 'me' or 'you' in the text. However, the meme's structure implies that the user is the intended recipient of the ironic or satirical message. The user is projected onto the entire scene — the visual of the man and woman holding the tiger cub combined with the text — as the audience being addressed by the meme's commentary on religious prophecy. The user is expected to interpret the juxtaposition and understand the implied mockery of divine plans being as chaotic as a wild tiger cub. This projection is onto the Scene entity 'holding_tiger_cub' and the TextualMaterial entities 'top_text' and the implied bottom text 'christ will come to us', as the user is meant to engage with the entire meme as a whole to grasp the satirical intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Religious Prophecy Mockery",
+      "description": "The meme uses the juxtaposition of a tiger cub (symbolizing wildness and chaos) with the text 'we are all apart of god's plan. christ will come to us' to satirize or mock religious prophecies about divine intervention or the Second Coming. This is considered harmful as it trivializes or undermines religious beliefs, which are often held with reverence and seriousness by believers, potentially causing offense or disrespect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with Christian eschatology and religious prophecy, particularly those who hold beliefs about divine intervention or the Second Coming. The meme is designed to provoke laughter or critical thought by juxtaposing a sacred theological concept with an absurd visual (a tiger cub), and thus appeals to viewers who understand the gravity of religious claims and can appreciate irony or satire in this context. The meme's intent to mock religious belief suggests it targets those who either hold such beliefs or are aware of their cultural weight, potentially including secular or atheist audiences who find religious claims amusing or absurd.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/17392.png",
+    "image_name": "17392.png",
+    "extraction_timestamp": "2025-12-15T16:57:29.419705",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,175 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: kids_enjoying_some_underwater_diving; hasOverallIntent: Harmful; overall-intent-description: The image shows two young Black girls smiling and enjoying themselves in the ocean. The overlaid text reads 'kids enjoying some underwater diving,' which is factually misleading since they are clearly in shallow water, not engaged in actual diving. The intent is to create a humorous or ironic effect by misrepresenting the activity. While not overtly abusive, hateful, or propagandistic, the meme's harmfulness stems from its potential to reinforce harmful stereotypes about Black people's swimming abilities by implying they are 'underwater divers' — a phrase that could be interpreted as mocking or exoticizing their engagement with water. This aligns with the stereotype that Black people are 'natural swimmers' or 'water people,' which, while not inherently abusive, can be part of a broader pattern of racialized assumptions about physical competence in water. The meme's overall intent is to generate amusement through a false or exaggerated claim, but the underlying implication of racialized physical ability makes it potentially harmful in context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "kids enjoying some underwater diving",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "two_young_Black_girls",
+      "label": "people",
+      "description": "Two young Black girls are visible in the image, smiling and enjoying themselves in shallow ocean water. They are the central focus of the visual material and are depicted as happy and playful. Their presence is salient and directly relates to the meme's text, which falsely claims they are 'underwater diving.'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "girls_in_water",
+      "label": "girls enjoying themselves in shallow ocean water",
+      "description": "Two young Black girls are smiling and floating in shallow ocean water near the shore. They are the central focus of the scene, positioned side by side in the water, with waves gently breaking around them. The scene conveys a sense of joy and playfulness, contrasted with the misleading text overlay that falsely claims they are 'underwater diving.'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "two_young_Black_girls",
+          "relation": "are_in",
+          "to": "water"
+        },
+        {
+          "from": "two_young_Black_girls",
+          "relation": "are_near",
+          "to": "shore"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_black_people_swimming_ability",
+      "label": "Stereotype: Black people are natural swimmers or 'water people'",
+      "description": "This stereotype, often used in a racially charged context, implies that Black people have an innate or superior ability to swim or interact with water. The meme's text 'kids enjoying some underwater diving' misrepresents the girls' activity and implicitly reinforces this stereotype, potentially exoticizing or mocking their engagement with water. This stereotype is part of a broader pattern of racialized assumptions about physical competence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "two_young_Black_girls",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "concept_underwater_diving",
+      "label": "Concept: Underwater diving as a specific activity",
+      "description": "Underwater diving is a structured, often technical activity requiring specialized equipment (like scuba gear) and training. The meme falsely equates casual swimming or playing in shallow water with 'underwater diving,' which is a key element of the meme's irony and misleading intent. This conceptual mismatch is central to understanding the meme's humor and its potential harmful implications.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "girls_in_water",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_racialized_physical_competence",
+      "label": "Stereotype: Racialized assumptions about physical ability",
+      "description": "The meme's implication that Black people are 'underwater divers' taps into a broader societal pattern of racialized assumptions about physical competence, particularly in water. This stereotype can be part of a larger narrative that exoticizes or mocks Black people's physical abilities, which is considered harmful in context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "two_young_Black_girls",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful expression",
+      "description": "The two young Black girls are smiling broadly and appear to be enjoying themselves in the ocean, conveying a clear emotional state of happiness and playfulness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Textual description mapped onto visual subjects",
+      "description": "The text 'kids enjoying some underwater diving' is overlaid on the image of two young Black girls in shallow water. The text falsely maps the visual subjects (the girls) onto the concept of 'underwater diving,' which is not what they are doing. This creates an analogical mapping where the girls are implicitly equated with 'underwater divers' — a term that, in context, reinforces racialized stereotypes about Black people's swimming abilities. The mapping is direct: the text labels the visual entities as engaging in a specific activity (underwater diving) that they are not actually performing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual material of the two young Black girls",
+      "description": "The user is not explicitly projected onto any deictic element (like 'me', 'you') in the text or visual material. However, the meme's structure invites the user to project themselves onto the scene by identifying with the subjects — the two young Black girls enjoying themselves — as the 'kids' referenced in the text. The user is implicitly invited to see themselves as part of the group being described, even though the text misrepresents their activity. This projection occurs onto the visual material (two_young_Black_girls) and the scene (girls_in_water), which are the central focus of the meme. The user is not directly addressed, but the framing of the image and text encourages identification with the subjects.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme's text falsely claims the girls are 'underwater diving,' which misrepresents their activity and implicitly reinforces the stereotype that Black people are 'natural swimmers' or 'water people.' This stereotype, while not overtly abusive, can be part of a broader pattern of racialized assumptions about physical competence, making the meme potentially harmful in context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience familiar with internet humor and meme culture, particularly those who understand irony and visual puns. The target community likely includes users who appreciate absurdist humor, enjoy pointing out factual inaccuracies for comedic effect, and may be exposed to or aware of racialized stereotypes about Black people's physical abilities in water. The meme’s appeal relies on its visual contrast and the ironic misrepresentation, which resonates with audiences who find humor in exaggeration or false claims, even if the underlying stereotype is harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/91845.png",
+    "image_name": "91845.png",
+    "extraction_timestamp": "2025-12-19T17:23:20.398003",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

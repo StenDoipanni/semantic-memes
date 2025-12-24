@@ -1,0 +1,254 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes two individuals with the text 'when nobody knew who you were until you got on your knees.' This phrase is commonly used to mock or belittle someone who gains popularity or recognition only after performing a humiliating or submissive act, often implying they are only valued for their physical appearance or sexual appeal. The visual pairing of a woman and a man, with the woman appearing to be in a more traditionally 'feminine' or 'approachable' role and the man in a more 'masculine' or 'assertive' role, reinforces a gendered dynamic where the woman is portrayed as the 'object' of attention and the man as the 'subject' who 'gets' the attention. The meme's intent is to ridicule the individuals for their perceived lack of prior recognition or status, and to imply that their value is derived solely from their physical appearance or sexual appeal. This can be harmful as it perpetuates objectification and reinforces harmful stereotypes about gender roles and the value of individuals based on their appearance or sexual appeal. The meme does not contain explicit hate or abuse towards specific protected characteristics, but it does contain harmful content that can be damaging to individuals' self-esteem and perpetuates negative stereotypes about gender and appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text overlay",
+      "description": "Text content: 'when nobody knew who you were until you got on'. Position: top of the image, spanning the width above the woman's photo.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "bottom text overlay",
+      "description": "Text content: 'your knees.'. Position: bottom of the image, spanning the width below the man's photo.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "woman",
+      "description": "A woman with long dark hair, wearing a black velvet jacket and ornate earrings, smiling at the camera. She appears to be at a public event or red carpet, with a backdrop that includes the word 'BEST'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "man",
+      "description": "A man with braided hair and a beard, wearing a black shirt with a patterned collar, smiling at the camera. He appears to be at a public event or red carpet, with a purple backdrop.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "text",
+      "label": "text",
+      "description": "The text 'when nobody knew who you were until you got on your knees.' is overlaid on the image. The top line is above the woman, and the bottom line is below the man. The text is white with a black outline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "background",
+      "label": "background",
+      "description": "The background consists of two different settings: a white backdrop with partial text 'BEST' behind the woman, and a purple backdrop with a logo behind the man. Both appear to be event backdrops.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "juxtaposed_individuals",
+      "label": "juxtaposed_individuals",
+      "description": "A scene composed of two individuals, a woman and a man, positioned vertically one above the other, with text overlaid on the image. The woman is at the top, and the man is at the bottom, creating a visual contrast. The text 'when nobody knew who you were until you got on your knees.' is split across the top and bottom, framing each individual. The scene implies a comparison or commentary on their public recognition or perceived value.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "positionedAbove",
+          "to": "man"
+        },
+        {
+          "from": "text",
+          "relation": "frames",
+          "to": "woman"
+        },
+        {
+          "from": "text",
+          "relation": "frames",
+          "to": "man"
+        },
+        {
+          "from": "background",
+          "relation": "servesAsSettingFor",
+          "to": "woman"
+        },
+        {
+          "from": "background",
+          "relation": "servesAsSettingFor",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_phrase",
+      "label": "Meme Phrase: 'when nobody knew who you were until you got on your knees'",
+      "description": "This phrase is a common internet meme used to mock or belittle individuals who gain popularity or recognition only after performing a humiliating or submissive act, often implying their value is derived solely from their physical appearance or sexual appeal. It is a form of objectification and reinforces harmful stereotypes about gender roles and the value of individuals based on appearance or sexual appeal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification_stereotype",
+      "label": "Objectification Stereotype",
+      "description": "The meme relies on the stereotype that individuals are only valued for their physical appearance or sexual appeal, and that their worth is contingent on performing a submissive or humiliating act. This is a form of misogyny and reinforces the idea that women (and sometimes men) are objects to be consumed or admired based on their looks rather than their character or achievements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gendered_dynamic_stereotype",
+      "label": "Gendered Dynamic Stereotype",
+      "description": "The meme reinforces a gendered dynamic where the woman is portrayed as the 'object' of attention and the man as the 'subject' who 'gets' the attention. This reflects and perpetuates harmful stereotypes about gender roles, where women are seen as passive and men as assertive or dominant, and where a woman's value is tied to her physicality and sexual availability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harmful_content",
+      "label": "Harmful Content",
+      "description": "The meme contains harmful content that can be damaging to individuals' self-esteem and perpetuates negative stereotypes about gender and appearance. It is considered harmful because it promotes objectification and reinforces stereotypes that devalue individuals based on their appearance or sexual appeal, rather than their character or achievements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_contempt",
+      "label": "mocking contempt emotion",
+      "description": "The emotion expressed is mocking contempt, conveyed through the juxtaposition of the two individuals and the meme phrase. The phrase 'when nobody knew who you were until you got on your knees' implies that the individuals are only valued for their physical appearance or sexual appeal, and that their worth is contingent on performing a humiliating or submissive act. This is a form of objectification and reinforces harmful stereotypes about gender roles and the value of individuals based on appearance or sexual appeal. The visual pairing of the woman and the man, with the woman appearing to be in a more traditionally 'feminine' or 'approachable' role and the man in a more 'masculine' or 'assertive' role, reinforces a gendered dynamic where the woman is portrayed as the 'object' of attention and the man as the 'subject' who 'gets' the attention. The overall intent is to ridicule the individuals for their perceived lack of prior recognition or status, and to imply that their value is derived solely from their physical appearance or sexual appeal. This can be harmful as it perpetuates objectification and reinforces harmful stereotypes about gender roles and the value of individuals based on their appearance or sexual appeal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The woman is mapped as 'who you were' before gaining recognition",
+      "description": "The top text 'when nobody knew who you were until you got on' is spatially positioned above the woman's image, implying that she represents the 'you' who was unknown before gaining attention. The visual material of the woman is mapped onto the textual concept of 'who you were' in the phrase.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_2",
+      "label": "The man is mapped as 'your knees' after gaining recognition",
+      "description": "The bottom text 'your knees.' is spatially positioned below the man's image, implying that he represents the 'knees' — the submissive or humiliating act that led to his recognition. The visual material of the man is mapped onto the textual concept of 'your knees' in the phrase.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual phrase and the visual representation of the individuals",
+      "description": "The user is projected onto the meme's textual phrase 'when nobody knew who you were until you got on your knees.' The phrase uses 'you' and 'your knees', which are deictic pronouns directing the user to imagine themselves as the subject of the action. The visual material of the woman is mapped onto 'who you were' (the unknown state), and the visual material of the man is mapped onto 'your knees' (the act that led to recognition). The user is thus projected onto the entire scene, imagining themselves as the person who gained recognition through a humiliating act, with the woman representing their past self and the man representing the act or the person who 'got' them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme contains harmful content that can be damaging to individuals' self-esteem and perpetuates negative stereotypes about gender and appearance. It promotes objectification and reinforces stereotypes that devalue individuals based on their appearance or sexual appeal, rather than their character or achievements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who are familiar with internet meme culture, particularly those who understand and engage with the phrase 'when nobody knew who you were until you got on your knees.' This includes online audiences who appreciate or consume humor that relies on objectification, gendered stereotypes, and the mocking of public figures for perceived lack of prior recognition or status. The meme is designed to resonate with users who find humor in the idea that someone's value is derived solely from their physical appearance or sexual appeal, and who are comfortable with or perpetuate harmful stereotypes about gender roles and objectification.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/51037.png",
+    "image_name": "51037.png",
+    "extraction_timestamp": "2025-12-16T03:59:39.875018",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 18,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "fear_of_parental_failure",
+      "expressors": [
+        {
+          "entity": "parent",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "parent",
+          "relation": "emotionalRelationToEntity",
+          "to": "damaged_car_scene"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":fear_of_parental_failure :hasExpressor :parent .",
+    ":parent :emotionalRelationToEntity :damaged_car_scene ."
+  ],
+  "triples_count": 2
+}

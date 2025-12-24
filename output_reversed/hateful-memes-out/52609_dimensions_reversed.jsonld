@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_83ad588c",
+  "@type": "AnalysisDocument",
+  "title": "52609.png - Dimension Analysis",
+  "created": "2025-12-16T04:39:17.398932",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_773476e9",
+    "@type": "Image",
+    "filename": "52609.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/52609.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/52609.png",
+    "image_name": "52609.png",
+    "extraction_timestamp": "2025-12-16T04:37:54.565745",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_538e3927",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a roasted turkey on a holiday table with a Christmas tree in the background. The text overlay reads \"see? i fuckin told you!\" and \"little foil on top keeps them jewsy.\" This juxtaposition of a festive, culturally significant meal (turkey) with a derogatory, antisemitic stereotype (\"keeps them jewsy\") is intended to mock or demean Jewish people by associating them with a specific food item. The phrase \"keeps them jewsy\" is a crude, offensive trope that implies Jewish people are somehow 'kept' or 'controlled' by the presence of foil on top of the turkey, which is a false and harmful stereotype. This meme uses visual material (the turkey) mapped onto textual material (the antisemitic phrase) to deliver a hateful message targeting Jewish people based on their religion, which falls under the category of antisemitism as defined in the provided knowledge base. The intent is to provoke, offend, and spread harmful stereotypes against Jewish individuals and communities.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_83ad588c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_74b2cdee",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "see? i fuckin told you!",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_83ad588c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_630bf83e",
+      "@type": "VisualMaterial",
+      "instance_name": "roasted_turkey",
+      "label": "food item",
+      "description": "A whole roasted turkey with golden-brown skin and herbs, placed on a silver platter on a wooden table. It is the central visual focus of the image and is associated with holiday meals, particularly Thanksgiving or Christmas.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_83ad588c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6a541dcf",
+      "@type": "Scene",
+      "instance_name": "holiday_dinner_scene",
+      "label": "holiday_dinner_scene",
+      "description": "A festive holiday dinner scene featuring a roasted turkey as the central visual element, placed on a wooden table with a Christmas tree in the background, suggesting a Thanksgiving or Christmas celebration. The scene is overlaid with text that delivers a hateful antisemitic message, creating a juxtaposition between the celebratory visual and the offensive textual content.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_83ad588c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_38ba1785",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "antisemitic_stereotype",
+      "label": "Antisemitic Stereotype: 'Jews are controlled by foil on turkey'",
+      "description": "This is a derogatory antisemitic stereotype that falsely implies Jewish people are somehow 'kept' or 'controlled' by the presence of foil on top of a roasted turkey, which is a common practice in holiday cooking. This stereotype is offensive, false, and rooted in antisemitic tropes that associate Jewish people with financial control, conspiracy, or manipulation. It is not visible in the image but is essential to understanding the hateful message conveyed by the text overlay.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_83ad588c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3d8b214e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "holiday_dinner_scene",
+      "label": "Holiday Dinner Scene Context",
+      "description": "The image depicts a festive holiday dinner scene with a roasted turkey and a Christmas tree, which are culturally associated with Thanksgiving and Christmas. This context is necessary to understand the visual material and the juxtaposition with the antisemitic text. The scene implies a celebratory, family-oriented setting, which contrasts with the hateful message, making the stereotype more jarring and offensive.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_83ad588c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fffde3f5",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "antisemitism",
+      "label": "Antisemitism as a Historical and Social Phenomenon",
+      "description": "Antisemitism is a long-standing form of prejudice and discrimination against Jewish people, often rooted in conspiracy theories, stereotypes, and false accusations. The meme relies on this historical and social phenomenon to deliver its hateful message. Understanding antisemitism is essential to recognizing the offensive nature of the stereotype and the intent behind the meme.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_83ad588c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_846cb27e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "foil_on_turkey",
+      "label": "Culinary Practice: Foil on Turkey",
+      "description": "The use of foil on top of a roasted turkey is a common culinary practice to prevent the skin from burning and to retain moisture. This is a real-world cooking technique that is not inherently offensive. However, in the context of the meme, it is weaponized to perpetuate a harmful stereotype, making the background knowledge of this culinary practice essential to understanding the meme's intent.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_83ad588c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f17bb784",
+      "@type": "EmotionExpression",
+      "instance_name": "hateful_antisemitism",
+      "label": "hateful antisemitic emotion",
+      "description": "The emotion expressed is hateful and antisemitic, conveyed through the offensive text overlay that uses a derogatory stereotype to demean Jewish people. The juxtaposition of a festive holiday scene with the hateful message intensifies the emotional impact, aiming to provoke offense and spread harmful stereotypes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_83ad588c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c6a2e3d5",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "antisemitic stereotype mapped onto roasted turkey",
+      "description": "The text 'little foil on top keeps them jewsy' is an antisemitic stereotype that is explicitly mapped onto the visual entity 'roasted_turkey'. The meme uses the visual of the turkey (a common holiday food) to represent or symbolize the stereotype, which falsely implies Jewish people are controlled or 'kept' by the foil used in cooking the turkey. This is a direct analogical mapping where the textual stereotype is projected onto the visual food item.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_83ad588c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c4ca866b",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message",
+      "description": "The user is projected onto the text overlay 'see? i fuckin told you!' which uses the first-person perspective ('i') to directly address the viewer, creating an intimate and confrontational tone. This deictic pronoun 'i' projects the user as the speaker of the statement, making them feel personally implicated in the meme's narrative. The user is also implicitly projected onto the scene and the visual material as the recipient of the message, but the most direct projection is onto the textual material due to the explicit 'i' and 'you' addressing.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_83ad588c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_92adfef7",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme explicitly uses antisemitic stereotypes to demean Jewish people, associating them with a culinary practice (foil on turkey) in a derogatory and false manner. This constitutes a direct attack on a protected characteristic (religion), falling under the 'Hateful' toxicity category.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_83ad588c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6a1edcf8",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The target community is individuals who are familiar with antisemitic stereotypes, particularly those who may find humor in or be drawn to offensive, hateful content. The meme is designed to provoke and offend, likely targeting an audience that either enjoys or is desensitized to antisemitic tropes, or who may be seeking to shock or mock Jewish people through the use of derogatory stereotypes. The visual context of a holiday dinner (turkey, Christmas tree) is used to contrast with the hateful text, which may appeal to an audience that finds irony or dark humor in juxtaposing festive imagery with offensive messages. The use of crude language ('i fuckin told you!') suggests the target audience may include those who appreciate or are accustomed to vulgar, confrontational humor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_83ad588c"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

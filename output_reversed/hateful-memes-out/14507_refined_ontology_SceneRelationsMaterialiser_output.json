@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "distressed_people",
+      "participants": [
+        {
+          "entity": "man",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "woman",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "sittingNextTo",
+          "to": "woman"
+        },
+        {
+          "from": "woman",
+          "relation": "sittingNextTo",
+          "to": "man"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":distressed_people :hasParticipant :man .",
+    ":distressed_people :hasParticipant :woman .",
+    ":man :sittingNextTo :woman .",
+    ":woman :sittingNextTo :man ."
+  ],
+  "triples_count": 4
+}

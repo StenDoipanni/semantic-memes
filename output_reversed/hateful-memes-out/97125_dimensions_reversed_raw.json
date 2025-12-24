@@ -1,0 +1,198 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a black-and-white photograph of two men in military uniforms standing near a brick oven, one of whom is leaning over the oven while the other stands beside it. The text overlaid on the image reads: \"see? i fuckin told you!\" and \"little foil on top keeps them jewsy.\" The visual material is juxtaposed with the text to create a hateful and antisemitic message. The phrase \"keeps them jewsy\" is a derogatory and offensive stereotype that implies Jews are somehow 'kept' or preserved by foil, which is a direct attack on Jewish people based on their ethnicity and religion. This is a clear example of antisemitic hate speech, as it uses a historical and horrific context (the Holocaust) to perpetuate harmful stereotypes and dehumanize Jewish people. The overall intent is to spread hate and misinformation by invoking the Holocaust in a trivializing and offensive manner, which is a form of hateful content targeting a protected characteristic (Jewish identity).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "see? i fuckin told you!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "two_men_in_military_uniforms",
+      "label": "people",
+      "description": "Two men dressed in military uniforms are present in the image. One man is standing upright with his hands in his pockets, while the other is leaning over a brick oven. Both appear to be wearing combat gear, including helmets and boots, suggesting a wartime or military context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "military_oven_scene",
+      "label": "men_interacting_with_oven",
+      "description": "A scene depicting two men in military uniforms interacting with a brick oven. One man is leaning over the oven, appearing to inspect or manipulate something inside, while the other stands upright beside the oven, observing. The oven is centrally located and appears to be a large, industrial brick structure. The spatial arrangement suggests a moment of inspection or operation within a military or wartime setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "two_men_in_military_uniforms",
+          "relation": "interactWith",
+          "to": "brick_oven"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "holocaust_denial_minimization_theme",
+      "label": "Holocaust Denial/Minimization Theme",
+      "description": "The meme uses the visual of a brick oven, historically associated with Nazi gas chambers during the Holocaust, to trivialize and distort the atrocity. The phrase 'little foil on top keeps them jewsy' is a grotesque, antisemitic stereotype that attempts to mock the Holocaust by implying Jews are somehow 'preserved' or 'kept' by foil, which is a direct attack on Jewish people based on their ethnicity and religion. This is a form of Holocaust denial/minimization, as it uses the horrific context to perpetuate harmful stereotypes and dehumanize Jewish people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "military_oven_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_stereotype_jewsy",
+      "label": "Antisemitic Stereotype: 'Jewsy'",
+      "description": "The term 'jewsy' is a derogatory and offensive stereotype used to demean Jewish people. It is often used to imply that Jews are somehow 'kept' or preserved by foil, which is a direct attack on Jewish people based on their ethnicity and religion. This is a form of antisemitic hate speech, as it uses a historical and horrific context (the Holocaust) to perpetuate harmful stereotypes and dehumanize Jewish people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_stereotype_foil",
+      "label": "Antisemitic Stereotype: 'Foil Keeps Them Jewsy'",
+      "description": "The phrase 'little foil on top keeps them jewsy' is a grotesque, antisemitic stereotype that attempts to mock the Holocaust by implying Jews are somehow 'preserved' or 'kept' by foil, which is a direct attack on Jewish people based on their ethnicity and religion. This is a form of antisemitic hate speech, as it uses a historical and horrific context (the Holocaust) to perpetuate harmful stereotypes and dehumanize Jewish people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_hate_speech",
+      "label": "Antisemitic Hate Speech",
+      "description": "The meme is a clear example of antisemitic hate speech, as it uses a historical and horrific context (the Holocaust) to perpetuate harmful stereotypes and dehumanize Jewish people. The phrase 'keeps them jewsy' is a derogatory and offensive stereotype that implies Jews are somehow 'kept' or preserved by foil, which is a direct attack on Jewish people based on their ethnicity and religion. This is a form of hateful content targeting a protected characteristic (Jewish identity).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "military_oven_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_anger",
+      "label": "hateful anger expressed through text and imagery",
+      "description": "The emotion is conveyed through the aggressive, profane text 'see? i fuckin told you!' and the grotesque antisemitic stereotype 'little foil on top keeps them jewsy', which uses the Holocaust imagery to express hatred and dehumanization toward Jewish people. The visual of the brick oven, historically associated with genocide, amplifies the hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Textual claim mapped onto visual scene",
+      "description": "The text 'little foil on top keeps them jewsy' is mapped onto the visual scene of the brick oven, implying that the contents inside (presumably human remains) are being 'kept' or preserved by foil, which is a grotesque antisemitic stereotype. This mapping uses the visual of the oven to represent the Holocaust and the foil to symbolize a false, dehumanizing explanation for Jewish identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_2",
+      "label": "Textual assertion mapped onto visual actors",
+      "description": "The text 'see? i fuckin told you!' is mapped onto the visual material of the two men in military uniforms, suggesting that one of them (or the speaker) is asserting a claim based on the scene they are observing. The visual of the men interacting with the oven serves as the evidence for the textual assertion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual assertion and visual scene",
+      "description": "The user is projected onto the textual material 'see? i fuckin told you!' and the visual scene of the two men interacting with the oven. The phrase 'see?' directly addresses the viewer, inviting them to witness and validate the claim being made. The visual scene of the men with the oven serves as the evidence for the textual assertion, creating a direct projection of the user as the one who is supposed to 'see' and understand the implied message. The user is also implicitly projected onto the scene as the one who is being told 'you were right' or 'you should have believed me' by the speaker (one of the men).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme is a clear example of antisemitic hate speech, as it uses a historical and horrific context (the Holocaust) to perpetuate harmful stereotypes and dehumanize Jewish people. The phrase 'keeps them jewsy' is a derogatory and offensive stereotype that implies Jews are somehow 'kept' or preserved by foil, which is a direct attack on Jewish people based on their ethnicity and religion. This is a form of hateful content targeting a protected characteristic (Jewish identity).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "antisemitic_hate_speech",
+      "label": "Target Audience: Individuals who consume and share antisemitic hate speech",
+      "description": "The meme is designed for an audience that either knowingly or unknowingly engages with antisemitic content, particularly those who may be drawn to or reinforce hateful stereotypes about Jewish people. The target community includes individuals who find humor or validation in trivializing the Holocaust, those who perpetuate the 'Jewsy' stereotype, and those who are exposed to or spread Holocaust denial/minimization themes. The meme appeals to a community that uses offensive, dehumanizing language and imagery to mock Jewish identity, often under the guise of 'dark humor' or 'edgy' commentary.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/97125.png",
+    "image_name": "97125.png",
+    "extraction_timestamp": "2025-12-19T19:22:56.266296",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

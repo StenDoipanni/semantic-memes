@@ -1,0 +1,201 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Propaganda; overall-intent-description: The image depicts an older woman holding a protest sign that reads 'we demand more sanctuary cities for refugees!' with the text 'you would want the same for yourself!' overlaid. The visual of an elderly woman, often associated with traditional values or conservative viewpoints, is juxtaposed with a progressive political message to create an emotional appeal. The intent is to frame the issue of sanctuary cities as a moral imperative that anyone would support for themselves, thereby attempting to sway public opinion by invoking empathy and personal identification. This is a form of propaganda designed to influence attitudes toward immigration policy by leveraging emotional appeal and moral equivalence. The meme does not contain overtly abusive, cyberbullying, harmful, hateful, or misogynistic content, but it does use a rhetorical strategy to pressure viewers into aligning with a specific political stance, which qualifies it as propaganda.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "we demand more sanctuary cities for refugees!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "elderly woman holding protest sign",
+      "description": "An older Caucasian woman with short, light-colored hair, wearing a brown coat over a blue collared shirt and a beaded necklace. She is holding a wooden-handled protest sign with white text, and her mouth is open as if shouting or speaking passionately. Her expression is intense and emotive, suggesting she is actively engaged in a protest or demonstration. She is the central and most salient visual entity in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "protest_scene",
+      "label": "protest_scene",
+      "description": "An elderly woman is actively participating in a protest, holding a sign and shouting passionately. The scene is framed to emphasize her emotional engagement and the political message she is conveying. The background suggests an outdoor public setting, likely a demonstration or rally. The text overlays reinforce the protest's message about sanctuary cities for refugees and invoke a moral appeal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "holds",
+          "to": "protest_sign"
+        },
+        {
+          "from": "woman",
+          "relation": "shouts",
+          "to": "audience"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sanctuary_cities",
+      "label": "Sanctuary Cities",
+      "description": "A policy or legal designation in certain U.S. jurisdictions that limits cooperation with federal immigration enforcement, often to protect undocumented immigrants. The concept is politically contentious and frequently debated in American politics, with supporters viewing it as a moral imperative for protecting vulnerable populations, and opponents viewing it as undermining federal law enforcement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "refugees",
+      "label": "Refugees",
+      "description": "Individuals who have been forced to flee their home countries due to persecution, war, or violence, and are seeking safety and protection in another country. The term is legally defined under international law (e.g., the 1951 Refugee Convention) and is central to global humanitarian discourse and immigration policy debates.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "moral_equivalence_rhetoric",
+      "label": "Moral Equivalence Rhetoric",
+      "description": "A rhetorical strategy used in political discourse to frame an issue as universally just or morally imperative, often by invoking personal identification or empathy. In this meme, the phrase 'you would want the same for yourself!' is a classic example, attempting to pressure the audience into aligning with a position by appealing to their own self-interest or moral compass.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "elderly_woman_stereotype",
+      "label": "Elderly Woman Stereotype",
+      "description": "A common visual trope in media and political imagery that associates older women with traditional values, conservative viewpoints, or moral authority. In this meme, the image of an elderly woman is juxtaposed with a progressive political message to create an emotional appeal, leveraging the stereotype to frame the issue as a moral imperative that anyone would support for themselves.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "protest_scene",
+      "label": "Protest Scene",
+      "description": "A public demonstration or rally where individuals gather to express political, social, or moral views. The context of a protest is essential to understanding the image, as it frames the woman’s actions as part of a larger social movement, and the text overlays reinforce the political message being conveyed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "passionate_demand",
+      "label": "passionate demand emotion",
+      "description": "The woman's facial expression—intense, mouth open wide as if shouting, eyes wide and focused—conveys a strong, urgent, and emotionally charged demand. This is reinforced by her holding a protest sign and the context of a public demonstration, indicating a fervent commitment to the cause of sanctuary cities for refugees.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The elderly woman is mapped as the speaker of the moral appeal",
+      "description": "The text 'you would want the same for yourself!' is an analogical mapping that projects the viewer (implied 'you') onto the visual entity of the elderly woman. The woman, as the visual entity, is the one making the passionate demand, and the text rhetorically positions the viewer as the one who would want the same for themselves, thereby creating an emotional and moral identification. This mapping is central to the meme's propaganda intent, leveraging the visual of the elderly woman to represent the moral imperative being invoked.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the elderly woman via moral equivalence rhetoric",
+      "description": "The user is projected onto the elderly woman as the moral agent making the demand, through the rhetorical device 'you would want the same for yourself!'. This projection leverages the visual of the elderly woman to invoke personal identification and moral obligation in the viewer, aligning the viewer's self-interest with the political message. The projection is explicit through the deictic 'you' in the text overlay, directing the viewer to imagine themselves in the position of the speaker or the beneficiary of the policy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Propaganda",
+      "description": "The meme uses moral equivalence rhetoric to pressure viewers into aligning with a specific political stance, leveraging the visual of an elderly woman to frame the issue as a moral imperative. This is a form of propaganda designed to influence attitudes toward immigration policy by invoking empathy and personal identification.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are politically engaged or interested in immigration policy debates, particularly those who may be skeptical of sanctuary cities. The meme leverages the visual stereotype of an elderly woman to appeal to viewers who associate older generations with traditional values or moral authority, attempting to frame the issue as a universal moral imperative. The rhetorical strategy of 'you would want the same for yourself!' is designed to pressure viewers into aligning with the progressive stance on sanctuary cities by invoking personal identification and empathy, thereby targeting those who might be swayed by emotional appeals or moral equivalence arguments.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/59346.png",
+    "image_name": "59346.png",
+    "extraction_timestamp": "2025-12-16T06:26:23.453289",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

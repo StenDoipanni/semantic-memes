@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "innocent expression",
+      "expressors": [
+        {
+          "entity": "young_woman",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "young_woman",
+          "relation": "emotionalRelationToEntity",
+          "to": "guitar_playing_young_woman"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":innocent_expression :hasExpressor :young_woman .",
+    ":young_woman :emotionalRelationToEntity :guitar_playing_young_woman ."
+  ],
+  "triples_count": 2
+}

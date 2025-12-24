@@ -1,0 +1,210 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: they_did_not_even_leave_dogs; hasOverallIntent: Harmful; overall-intent-description: The image depicts a historical scene where a person is seated at a counter, and a dog is lying nearby. The text overlay reads 'they did not even leave dogs.' This meme uses the dog as a metaphor for people who are considered undesirable or unworthy, implying that even animals are treated poorly or excluded. The overall intent is to convey a message of exclusion or dehumanization, suggesting that certain groups are so marginalized that they are not even afforded basic dignity or consideration. The meme is harmful because it reinforces negative stereotypes and can contribute to the marginalization of vulnerable groups by equating them with animals, which is a degrading and demeaning comparison. The use of the dog as a symbol for the marginalized is a form of analogical mapping, where the image of the dog is juxtaposed with the text to create a powerful and potentially offensive message. The meme does not target a specific protected characteristic such as race, gender, or sexual orientation, but it does use a harmful metaphor that can be interpreted as dehumanizing and exclusionary. The intent is to provoke a reaction or to highlight a perceived injustice, but the method of doing so is through a harmful and potentially offensive metaphor that can contribute to the marginalization of vulnerable groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "they did not",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "seated individual",
+      "description": "A person wearing historical clothing, seated at a counter or table, with a calm or indifferent expression. The attire suggests a setting from a past era, possibly medieval or early modern. The person is the central human figure in the scene, positioned behind a counter, and appears to be the focus of the interaction or the scene's narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "person_and_dog_interaction",
+      "label": "person_and_dog_interaction",
+      "description": "A scene depicting a person seated at a counter, with a dog lying on the ground nearby. The person appears to be in a historical setting, possibly a shop or inn, and the dog is positioned in front of the counter, looking up at the person. The text overlay suggests a metaphorical context where the dog represents marginalized or undesirable individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person_seated_individual",
+          "relation": "seated_behind_counter",
+          "to": "counter"
+        },
+        {
+          "from": "dog",
+          "relation": "lying_near_counter",
+          "to": "counter"
+        },
+        {
+          "from": "dog",
+          "relation": "looking_up_at",
+          "to": "person_seated_individual"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dehumanizing_animal_metaphor",
+      "label": "Dehumanizing Animal Metaphor",
+      "description": "The meme uses the dog as a metaphor for marginalized or undesirable people, implying they are treated with less dignity or are considered unworthy. This is a harmful stereotype that reduces human beings to animals, which is a form of dehumanization and can be used to justify exclusion or mistreatment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person_and_dog_interaction",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "animal_treatment_stereotype",
+      "label": "Animal Treatment Stereotype",
+      "description": "The meme implicitly references the stereotype that certain groups are so marginalized or despised that they are not even afforded basic dignity, such as being left to fend for themselves or being treated like animals. This is a form of social exclusion and dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person_and_dog_interaction",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dog_as_marginalized_group_symbol",
+      "label": "Dog as Symbol for Marginalized Group",
+      "description": "The dog in the image is used as a symbolic representation of a group of people who are considered undesirable or unworthy. This is a common trope in harmful memes and rhetoric, where animals are used to demean or dehumanize certain populations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person_and_dog_interaction",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_context_of_dog_in_human_society",
+      "label": "Historical Context of Dog in Human Society",
+      "description": "In historical contexts, dogs were often associated with servitude, loyalty, or low status, depending on the culture. The image may be referencing this historical association to imply that the person is treating the dog (and by extension, marginalized people) as an object or servant rather than an equal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person_and_dog_interaction",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_structure_of_exclusion",
+      "label": "Meme Structure of Exclusion",
+      "description": "The meme follows a structure where a group is excluded or denied basic rights, and the text 'they did not even leave dogs' implies that even animals are not treated with dignity. This structure is used to highlight perceived injustices or to justify exclusionary behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "dehumanization",
+      "label": "dehumanizing emotion",
+      "description": "The emotion expressed is dehumanization, conveyed through the metaphorical use of the dog to represent marginalized individuals, implying they are treated as less than human or unworthy of basic dignity. This is reinforced by the text 'they did not even leave dogs', which suggests exclusion and degradation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "dog as marginalized group symbol",
+      "description": "The text 'they did not even leave dogs' is mapped onto the visual entity 'dog' to represent marginalized or undesirable people. The dog is used as a symbolic representation of a group that is considered unworthy or excluded from basic dignity, creating a dehumanizing metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the dog as a symbol of marginalized group",
+      "description": "The user is projected onto the dog in the image, which is being used as a metaphor for marginalized or undesirable people. The meme's text 'they did not even leave dogs' implies that the user (or the viewer) is identifying with the dog as a representation of a group that is excluded or dehumanized. This projection is implicit, as there are no explicit deictic pronouns like 'me' or 'you', but the user is invited to see themselves in the role of the marginalized group symbolized by the dog.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a dehumanizing animal metaphor to imply that marginalized groups are so unworthy that they are not even afforded basic dignity, which can contribute to their marginalization and reinforce negative stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "intended audience",
+      "description": "The meme targets individuals who are familiar with or perpetuate dehumanizing stereotypes, particularly those who may engage in or support exclusionary rhetoric. The intended audience includes people who understand the metaphorical use of the dog to represent marginalized groups and who may find the meme's message provocative or relatable within contexts of social commentary or political discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/75068.png",
+    "image_name": "75068.png",
+    "extraction_timestamp": "2025-12-19T12:27:19.063088",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,211 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: found_bigfoot_married_her_obama; hasOverallIntent: Harmful; overall-intent-description: The image depicts former U.S. President Barack Obama with a somber expression, overlaid with the text 'found bigfoot' and 'married her.' This meme uses a juxtaposition of a serious political figure with absurd, fictional content to create humor. While not explicitly targeting a protected group with hate or abuse, the meme is harmful because it trivializes the office of the presidency and the dignity of the individual by associating him with a mythical creature and implying a bizarre, non-consensual narrative. The intent is satirical or absurdist humor, but the use of a real political leader in such a context can be seen as disrespectful and potentially damaging to public perception of the office, especially if it is used to mock or undermine his credibility. The meme does not contain direct hate or abuse, but its potential to cause harm lies in its disrespectful portrayal of a national leader, which can contribute to a culture of ridicule and disrespect toward public figures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "found bigfoot",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Barack_Obama",
+      "label": "former U.S. President",
+      "description": "A close-up of Barack Obama, former President of the United States, shown with a somber, downward-looking expression. He is wearing a dark suit, white shirt, and striped tie, suggesting a formal or official setting. His facial expression conveys seriousness or disappointment, which contrasts with the absurd text overlay. This visual is central to the meme's intent, using his recognizable public persona to juxtapose with fictional, humorous content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "absurd_juxtaposition_scene",
+      "label": "absurd_juxtaposition_scene",
+      "description": "A scene where a formal, somber-looking former U.S. President is visually juxtaposed with absurd, fictional text overlay that implies a bizarre narrative involving Bigfoot, creating a satirical and disrespectful contrast.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Barack_Obama",
+          "relation": "is_juxtaposed_with",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "bigfoot",
+      "label": "Bigfoot",
+      "description": "A mythical cryptid, often described as a large, hairy, bipedal hominid said to inhabit forests in North America. It is a fictional creature with no scientific evidence of existence, used here for absurd humor in the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "barack_obama",
+      "label": "Barack Obama",
+      "description": "Former President of the United States (2009–2017), a prominent political figure whose public image and office are central to the meme's satirical juxtaposition with absurd content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "absurd_juxtaposition_scene",
+      "label": "Absurd Juxtaposition Scene",
+      "description": "A meme technique that combines a serious, recognizable public figure with ridiculous or fictional text to create humor through contrast. This technique relies on the viewer's understanding of the figure's real-world context and the absurdity of the overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "satirical_humor",
+      "label": "Satirical Humor",
+      "description": "A form of humor that uses irony, exaggeration, or ridicule to criticize or mock individuals, institutions, or societal norms. The meme uses this to mock the dignity of the presidency by pairing it with a fictional, bizarre narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "presidential_office",
+      "label": "Presidential Office",
+      "description": "The formal position and institution of the President of the United States, which carries significant weight and dignity. The meme trivializes this office by associating it with a fictional creature and a non-consensual narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "barack_obama",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "non_consensual_narrative",
+      "label": "Non-Consensual Narrative",
+      "description": "A narrative that implies an action or event occurred without the subject's consent. In this meme, the phrase 'married her' implies a forced or inappropriate union, adding to the disrespectful and absurd tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "disappointment",
+      "label": "disappointed emotion",
+      "description": "Barack Obama's facial expression, characterized by a downturned mouth, furrowed brow, and downward gaze, conveys a sense of disappointment or resignation. This expression is juxtaposed with the absurd text to enhance the satirical tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Barack Obama is mapped as 'found bigfoot'",
+      "description": "The top text overlay 'found bigfoot' is mapped onto Barack Obama, implying that he is the one who discovered Bigfoot. This creates an analogical mapping where the visual entity (Barack Obama) is projected as the subject of the action described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the absurd juxtaposition scene",
+      "description": "The user is projected onto the overall absurd juxtaposition scene, where the serious, formal image of Barack Obama is contrasted with the fictional, humorous text 'found bigfoot' and 'married her.' This projection implies the user is imagining themselves or others engaging in the absurd narrative, or at least identifying with the satirical framing of the meme. There are no explicit deictic pronouns like 'me' or 'you,' but the meme's structure invites the user to mentally inhabit the scenario, projecting their own perspective onto the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the office of the presidency and the dignity of former President Barack Obama by associating him with a mythical creature and implying a bizarre, non-consensual narrative. While not explicitly targeting a protected group with hate or abuse, the disrespectful portrayal of a national leader can be seen as harmful to public perception of the office and contribute to a culture of ridicule and disrespect toward public figures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is internet users familiar with satirical and absurdist humor, particularly those who engage with political memes and are aware of former U.S. President Barack Obama's public persona. The meme relies on the audience's recognition of Obama as a serious political figure and their understanding of the absurdity of pairing him with Bigfoot and a non-consensual narrative. The humor is derived from the juxtaposition of a dignified office with fictional, ridiculous content, appealing to viewers who appreciate irony and mockery of public figures. The audience is likely to include politically aware individuals, meme culture enthusiasts, and those who find humor in the trivialization of authority figures, especially in a context where the presidency is being satirized through absurdity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/10287.png",
+    "image_name": "10287.png",
+    "extraction_timestamp": "2025-12-15T14:06:23.482622",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

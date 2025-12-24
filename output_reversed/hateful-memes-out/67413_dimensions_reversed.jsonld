@@ -1,0 +1,612 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a",
+  "@type": "AnalysisDocument",
+  "title": "67413.png - Dimension Analysis",
+  "created": "2025-12-16T08:58:55.497352",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_322932f9",
+    "@type": "Image",
+    "filename": "67413.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/67413.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/67413.png",
+    "image_name": "67413.png",
+    "extraction_timestamp": "2025-12-16T08:55:28.752339",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 52,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_005d8e4a",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts soldiers in combat gear with rifles, set against a war-torn landscape with helicopters in the background. The overlaid text reads: 'when you find a shooter the same day you plan a bombing, so you team up.' This juxtaposition of military imagery with the text creates a darkly humorous or ironic tone, implying a bizarre or absurd scenario where opposing forces (shooter and bomber) unexpectedly collaborate. The intent is not to target any specific group with hate or abuse, but rather to use a provocative and potentially misleading analogy to comment on real-world events or situations involving violence and conflict. The meme's harmfulness stems from its potential to trivialize or sensationalize serious acts of violence, such as shootings and bombings, by framing them as absurd coincidences or opportunities for collaboration. This can normalize or downplay the gravity of such events, potentially causing emotional distress or misunderstanding among viewers, especially if they are affected by such violence. The meme does not contain explicit hate speech or discriminatory content, but its dark humor and implication of collaboration between violent actors can be seen as harmful due to its potential to desensitize viewers to the seriousness of violence and its consequences.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c4bbec35",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you find a shooter the same day you plan a bombing, so you team up",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_00372eb7",
+      "@type": "VisualMaterial",
+      "instance_name": "soldier_in_foreground",
+      "label": "soldier wearing sunglasses and tactical gear",
+      "description": "A soldier in the foreground wearing sunglasses, a helmet with goggles, and camouflage uniform, holding a rifle. He is looking directly at the camera with a serious expression. This is the most prominent visual element in the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_08585a2d",
+      "@type": "Scene",
+      "instance_name": "military_combat_scene",
+      "label": "military combat scene",
+      "description": "A scene depicting soldiers in combat gear, positioned in a war-torn environment with helicopters in the background. The soldiers are arranged in a tactical formation, with one in the foreground looking directly at the camera, another behind him aiming a rifle, and a third in the background. The scene conveys a sense of readiness and tension, enhanced by the desert landscape and military equipment.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c81bf4f4",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "shooter",
+      "label": "Shooter",
+      "description": "A person who commits acts of violence, often in the context of mass shootings or targeted attacks. In the meme, ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3dbfef8e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "bombing",
+      "label": "Bombing",
+      "description": "An act of violence involving the use of explosives to cause destruction and casualties. This is a real-world event often associated with terrorism, warfare, or criminal acts.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7f01ba99",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "team_up",
+      "label": "Team Up",
+      "description": "The act of collaborating or joining forces with another party, often for a common goal. In the meme, it implies an absurd or ironic collaboration between two opposing violent actors.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_25d38024",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_combat_scene",
+      "label": "Military Combat Scene",
+      "description": "A scene depicting soldiers in combat gear, positioned in a war-torn environment with helicopters in the background. This visual context is used to imply a setting of violence and conflict, which is necessary to understand the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_82d9c0eb",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "dark_humor",
+      "label": "Dark Humor",
+      "description": "Humor that derives from morbid, taboo, or distressing subjects. The meme uses dark humor to frame a violent scenario as absurd or ironic, which requires understanding of this cultural phenomenon.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f70641b7",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "violence",
+      "label": "Violence",
+      "description": "The use of physical force to harm or kill. The meme references violence in the form of shootings and bombings, which are real-world concepts that must be understood to interpret the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_82207ad8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "absurdity",
+      "label": "Absurdity",
+      "description": "A situation that is illogical, ridiculous, or contrary to reason. The meme relies on the concept of absurdity to create its ironic tone, implying that the collaboration between a shooter and a bomber is illogical or ridiculous.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_02d1ecd1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "collaboration",
+      "label": "Collaboration",
+      "description": "The act of working together with others to achieve a common goal. In the meme, it is used ironically to describe the joining of forces between two opposing violent actors, which requires understanding of this concept.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_87b3c53d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "meme",
+      "label": "Meme",
+      "description": "A cultural phenomenon involving the sharing of images, videos, or text with humorous or satirical content. The meme format itself is a real-world concept that must be understood to interpret the image",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6b229c33",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "harmful_content",
+      "label": "Harmful Content",
+      "description": "Content that may cause emotional distress, desensitization, or misunderstanding. The meme is considered harmful due to its potential to trivialize or sensationalize serious acts of violence, which requires understanding of this concept.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_70e5af8b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "real_world_events",
+      "label": "Real World Events",
+      "description": "Actual events that occur in society, such as shootings and bombings. The meme references these real-world events, which are necessary to understand the context and implications of the text.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8381ab48",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "irony",
+      "label": "Irony",
+      "description": "A rhetorical device in which the intended meaning is the opposite of the literal meaning. The meme uses irony to create a darkly humorous effect, which requires understanding of this literary device.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d09091b3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military",
+      "label": "Military",
+      "description": "An organized armed force, typically of a nation, used to enforce laws, defend territory, and conduct warfare. The image depicts soldiers in military gear, which is necessary to understand the context of the scene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d1ac0820",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "helicopter",
+      "label": "Helicopter",
+      "description": "A powered aircraft with rotating blades, often used in military operations. The presence of helicopters in the background is a visual cue that reinforces the military context of the scene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_85d98527",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "desert_landscape",
+      "label": "Desert Landscape",
+      "description": "A dry, arid environment with little vegetation. The desert landscape in the background is a visual element that contributes to the setting of the military combat scene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_36159cbf",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "tactical_formation",
+      "label": "Tactical Formation",
+      "description": "A specific arrangement of soldiers for combat or defense. The soldiers in the image are arranged in a tactical formation, which is necessary to understand the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_cda4e493",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "camouflage_uniform",
+      "label": "Camouflage Uniform",
+      "description": "A type of military uniform designed to blend in with the environment. The soldiers in the image are wearing camouflage uniforms, which is a visual element that reinforces the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_14a81ff5",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "rifle",
+      "label": "Rifle",
+      "description": "A long firearm designed for shooting at targets at a distance. The soldiers in the image are holding rifles, which is a visual element that reinforces the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7d0099b2",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "sunglasses",
+      "label": "Sunglasses",
+      "description": "Eyewear designed to reduce glare and protect the eyes from sunlight. The soldier in the foreground is wearing sunglasses, which is a visual element that contributes to the overall appearance of the scene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f8797b09",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "helmet_with_goggles",
+      "label": "Helmet with Goggles",
+      "description": "A type of protective headgear with goggles attached, often used in military or combat situations. The soldier in the foreground is wearing a helmet with goggles, which is a visual element that reinforces the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_59af7e97",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "serious_expression",
+      "label": "Serious Expression",
+      "description": "A facial expression indicating concentration, determination, or gravity. The soldier in the foreground has a serious expression, which is a visual element that contributes to the overall tone of the scene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a8d692bf",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "direct_gaze",
+      "label": "Direct Gaze",
+      "description": "The act of looking directly at the viewer or camera. The soldier in the foreground is looking directly at the camera, which is a visual element that creates a sense of engagement with the viewer.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a8e6573d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "war_torn_environment",
+      "label": "War-Torn Environment",
+      "description": "An area that has been damaged or destroyed by war. The environment in the background is war-torn, which is a visual element that reinforces the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9b32406a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "tactical_equipment",
+      "label": "Tactical Equipment",
+      "description": "Specialized gear used by military personnel for combat or other operations. The soldiers in the image are equipped with tactical gear, which is a visual element that reinforces the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_14f7cbb1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_tactics",
+      "label": "Military Tactics",
+      "description": "Strategies and techniques used by military forces to achieve objectives. The soldiers in the image are positioned in a tactical formation, which implies the use of military tactics.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1aa43b3e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "combat_readiness",
+      "label": "Combat Readiness",
+      "description": "The state of being prepared for combat. The soldiers in the image are in a state of combat readiness, which is a visual element that reinforces the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2eab602a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "tension",
+      "label": "Tension",
+      "description": "A state of suspense or strain, often associated with danger or conflict. The scene conveys a sense of tension, which is a visual element that contributes to the overall mood of the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2ce00bae",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_operations",
+      "label": "Military Operations",
+      "description": "Organized activities conducted by military forces to achieve strategic objectives. The scene depicts soldiers in a military combat scene, which implies the context of military operations.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_34f7129e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_hierarchy",
+      "label": "Military Hierarchy",
+      "description": "The structured ranking system within a military organization. The soldiers in the image are arranged in a tactical formation, which may imply a military hierarchy.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_573c142f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_rank",
+      "label": "Military Rank",
+      "description": "A system of hierarchical positions within a military organization. The soldiers in the image may be of different ranks, which is a visual element that contributes to the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a628dec8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_training",
+      "label": "Military Training",
+      "description": "The process of preparing soldiers for combat or other military duties. The soldiers in the image are in a combat-ready state, which implies they have undergone military training.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_23d40564",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_equipment",
+      "label": "Military Equipment",
+      "description": "Tools and gear used by military personnel for combat or other operations. The soldiers in the image are equipped with military equipment, which is a visual element that reinforces the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1c423654",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_strategy",
+      "label": "Military Strategy",
+      "description": "A plan or method for achieving military objectives. The soldiers in the image are positioned in a tactical formation, which may imply the use of military strategy.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c1203d59",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_communication",
+      "label": "Military Communication",
+      "description": "The exchange of information between military personnel. The soldiers in the image may be communicating, which is a visual element that contributes to the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_de5ca219",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_command",
+      "label": "Military Command",
+      "description": "The authority to direct military operations. The soldiers in the image may be under the command of a superior officer, which is a visual element that contributes to the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7a793780",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_logistics",
+      "label": "Military Logistics",
+      "description": "The planning and execution of the movement and supply of military forces. The soldiers in the image may be part of a larger military operation, which implies the use of military logistics.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e2964874",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_intelligence",
+      "label": "Military Intelligence",
+      "description": "The collection and analysis of information for military purposes. The soldiers in the image may be involved in military intelligence operations, which is a visual element that contributes to the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_49986b88",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_security",
+      "label": "Military Security",
+      "description": "The protection of military assets and personnel. The soldiers in the image may be involved in military security operations, which is a visual element that contributes to the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3a38ac31",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_surveillance",
+      "label": "Military Surveillance",
+      "description": "The observation and monitoring of military or civilian targets. The soldiers in the image may be involved in military surveillance operations, which is a visual element that contributes to the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0da2108b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_espionage",
+      "label": "Military Espionage",
+      "description": "The practice of gathering secret information for military purposes. The soldiers in the image may be involved in military espionage operations, which is a visual element that contributes to the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4299781a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_counterterrorism",
+      "label": "Military Counterterrorism",
+      "description": "Military operations aimed at preventing or responding to terrorist attacks. The soldiers in the image may be involved in military counterterrorism operations, which is a visual element that contributes to the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b28abb6e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_counterinsurgency",
+      "label": "Military Counterinsurgency",
+      "description": "Military operations aimed at defeating insurgent groups. The soldiers in the image may be involved in military counterinsurgency operations, which is a visual element that contributes to the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_29a6c6a6",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "military_counterintelligence",
+      "label": "Military Counterintelligence",
+      "description": "The practice of protecting military information from espionage. The soldiers in the image may be involved in military counterintelligence operations, which is a visual element that contributes to the military context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_76d7c8dc",
+      "@type": "EmotionExpression",
+      "instance_name": "seriousness",
+      "label": "serious emotional expression",
+      "description": "The soldier in the foreground displays a focused and grave facial expression, indicating concentration, determination, or gravity in a high-stakes combat environment. This seriousness is reinforced by his direct gaze at the camera and the overall tense military scene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_aae86dfd",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "shooter is mapped to soldier_in_foreground",
+      "description": "The text 'shooter' in the meme is analogically mapped to the soldier_in_foreground visual entity. The soldier's combat gear, serious expression, and rifle visually represent a shooter, even though the text implies a collaboration between a shooter and a bomber, which is an absurd or ironic scenario. The soldier's appearance and context (military combat scene) are used to symbolize the concept of a shooter.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5ef94f3a",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the soldier in the foreground",
+      "description": "The user is projected onto the soldier_in_foreground visual entity. The soldier's direct gaze and serious expression create an implicit identification with the viewer, making the user feel as if they are the one in the scene, embodying the role of the 'shooter' or the 'bomber' mentioned in the text. This projection is reinforced by the meme's dark humor and irony, which invites the user to imagine themselves in the absurd scenario described.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b6a3378e",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes serious acts of violence (shootings and bombings) by framing them as absurd coincidences or opportunities for collaboration, which can desensitize viewers to the gravity of such events and potentially cause emotional distress or misunderstanding.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b977c5ea",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience familiar with internet humor, particularly dark humor and meme culture. It targets viewers who understand the concept of absurdity and irony in juxtaposing violent scenarios with comedic or surreal outcomes. The visual elements (military scene, soldiers, helicopters) and the text are crafted to be immediately recognizable to those who consume internet memes, especially those who engage with political or satirical content that comments on real-world violence in a provocative or darkly humorous way.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_aca25e6a"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

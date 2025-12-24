@@ -1,0 +1,147 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: let's_end_racism_meme; hasOverallIntent: Harmful; overall-intent-description: The image depicts a human hand holding an orangutan's hand, with the text 'let's end racism'. While the message appears to be a call for racial equality, the visual metaphor of comparing humans to primates is inherently problematic and historically used as a racist trope to dehumanize Black people. This juxtaposition, even if intended as a positive message, risks reinforcing harmful stereotypes by visually equating human beings with non-human primates, which can be perceived as demeaning and offensive to Black communities. The meme's overall intent is to promote anti-racism, but its visual execution carries the potential to cause harm by invoking a long-standing racist stereotype, thereby undermining its message and potentially alienating or offending its intended audience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "let's end",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "human_hand",
+      "label": "human hand",
+      "description": "A human hand is shown gripping the hand of an orangutan, appearing to hold it firmly. The hand is light-skinned and occupies the central focus of the image, symbolizing human action or intervention.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "hand_holding",
+      "label": "human hand holding orangutan hand",
+      "description": "A human hand is gripping the hand of an orangutan, symbolizing a connection or intervention. The human hand is light-skinned and centrally positioned, while the orangutan's hand is covered in fur and appears to be held firmly. This visual metaphor is used in the context of a meme calling for the end of racism, though the imagery invokes problematic racial stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "human_hand",
+          "relation": "holds",
+          "to": "orangutan_hand"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_primate_comparison",
+      "label": "Anti-Black Stereotype: Comparing Black People to Primates",
+      "description": "This stereotype dehumanizes Black people by equating them with non-human primates, historically used to justify slavery, segregation, and systemic racism. The meme's visual metaphor of a human hand holding an orangutan's hand invokes this harmful trope, even if the intent is to promote anti-racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "hand_holding",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racism",
+      "label": "Racism",
+      "description": "A system of oppression based on race, historically and currently used to justify discrimination, violence, and inequality against marginalized groups, particularly Black people. The meme attempts to address this issue but risks reinforcing harmful stereotypes through its imagery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "anti_black_stereotype_emotion",
+      "label": "anti-Black stereotype emotion",
+      "description": "The image expresses a harmful emotional undertone by invoking a long-standing racist stereotype that dehumanizes Black people by comparing them to primates. This visual metaphor, even if intended to promote anti-racism, carries an emotionally charged and offensive connotation rooted in historical racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Human hand is mapped as 'let's end racism' metaphor",
+      "description": "The text 'let's end racism' is juxtaposed with the visual of a human hand holding an orangutan's hand. This creates an analogical mapping where the human hand (a symbol of human agency) is implicitly mapped onto the concept of 'ending racism', while the orangutan hand (a symbol of non-human primates) is mapped onto the concept of 'racism' itself. This mapping is problematic as it invokes the harmful anti-Black stereotype of comparing Black people to primates, thereby equating racism with non-human primates. The visual metaphor is used to represent the act of ending racism, but the imagery reinforces a dehumanizing trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the human hand as an agent of change",
+      "description": "The user is projected onto the human hand (visual material) as the active agent who is 'letting's end racism'. The hand is the focal point of human intervention and agency in the meme, symbolizing the user's role in taking action against racism. The user is implicitly positioned as the 'we' or 'I' in the call to action, making the hand the embodied projection of the user's intent to end racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The visual metaphor of a human hand holding an orangutan's hand, used to represent 'let's end racism', invokes a long-standing racist trope that dehumanizes Black people by equating them with non-human primates. This imagery, even if intended to promote anti-racism, carries the potential to cause harm by reinforcing harmful stereotypes and potentially alienating or offending its intended audience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general anti-racism advocates",
+      "description": "The meme is designed for a broad audience interested in anti-racism and social justice, aiming to mobilize support for ending racism through a visual metaphor. However, the imagery risks alienating or offending Black communities due to its invocation of a harmful anti-Black stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/06378.png",
+    "image_name": "06378.png",
+    "extraction_timestamp": "2025-12-15T12:45:23.817802",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 11,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "shock emotion",
+      "expressors": [
+        {
+          "entity": "silver_sedan",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "silver_sedan",
+          "relation": "emotionalRelationToEntity",
+          "to": "text_chunk"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":shock_emotion :hasExpressor :silver_sedan .",
+    ":silver_sedan :emotionalRelationToEntity :text_chunk ."
+  ],
+  "triples_count": 2
+}

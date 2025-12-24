@@ -1,0 +1,218 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: lucifer_is_hot_let_s_kill_all_non_catholics_antichrist_sun_worship; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes a smiling Pope Francis with text that falsely equates him with the devil (Lucifer) and calls for violence against non-Catholics, labeling him an 'antichrist' and associating him with 'sun worship'. This is a hateful and false portrayal that attacks a religious leader and promotes religious hatred and violence against non-Catholics, which falls under the category of hateful content. The intent is to provoke outrage, spread misinformation, and incite religious intolerance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "lucifer is hot! let's kill all non-catholics",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Pope_Francis",
+      "label": "religious leader",
+      "description": "A smiling man in white papal attire, wearing a white zucchetto and pectoral cross, waving to the crowd. He is the central and most salient figure in the image, positioned in the foreground. His joyful expression is juxtaposed with the hateful text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "hateful_text_juxtaposition",
+      "label": "hateful_text_juxtaposition",
+      "description": "A scene where a smiling Pope Francis is visually juxtaposed with hateful text overlays that falsely equate him with Lucifer, call for violence against non-Catholics, and label him an 'antichrist' and 'sun worshipper'. The text is superimposed over the image, creating a confrontational and misleading composition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Pope_Francis",
+          "relation": "isJuxtaposedWith",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lucifer",
+      "label": "Lucifer (Christian demon)",
+      "description": "Lucifer is a figure from Christian theology, often depicted as the fallen angel who rebelled against God and became Satan. He is associated with evil, temptation, and the devil. The meme falsely equates Pope Francis with Lucifer, which is a religiously charged and hateful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antichrist",
+      "label": "Antichrist (Christian theological concept)",
+      "description": "The Antichrist is a figure in Christian eschatology who is expected to appear before the end of the world, opposing Christ and leading a false religion. Labeling someone an 'antichrist' is a theological accusation of being the ultimate enemy of God and Christianity. The meme uses this term to falsely accuse Pope Francis, which is a religiously motivated hate label.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sun_worship",
+      "label": "Sun worship (pagan religious practice)",
+      "description": "Sun worship refers to the practice of venerating the sun as a deity, common in ancient pagan religions such as those of the Egyptians, Greeks, and Aztecs. The meme falsely associates Pope Francis with 'sun worship', which is a misrepresentation of Catholicism and an attempt to discredit him by linking him to pagan practices.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "catholicism",
+      "label": "Catholicism (Christian denomination)",
+      "description": "Catholicism is one of the largest Christian denominations, with a global following and a distinct set of doctrines, traditions, and practices. The meme uses the term 'non-Catholics' to create a false binary and incite hatred against those who do not belong to this specific denomination, which is a form of religious intolerance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_hate",
+      "label": "Religious hate (hate based on religion)",
+      "description": "Religious hate refers to prejudice, discrimination, or violence directed against individuals or groups based on their religious beliefs or practices. The meme promotes religious hate by calling for violence against 'non-Catholics' and labeling Pope Francis as an 'antichrist', which is a form of religious persecution and incitement to violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pope_francis",
+      "label": "Pope Francis (religious leader)",
+      "description": "Pope Francis is the current Pope of the Roman Catholic Church, elected in 2013. He is a globally recognized religious leader known for his humility, compassion, and advocacy for social justice. The meme falsely portrays him as the devil and an 'antichrist', which is a deliberate misrepresentation intended to incite hatred and misinformation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_text_juxtaposition",
+      "label": "Hateful text juxtaposition (meme technique)",
+      "description": "This is a meme technique where a benign or positive image is paired with hateful or false text to create a misleading or provocative message. The meme uses this technique to juxtapose a smiling Pope Francis with hateful text, creating a false and offensive narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_joy",
+      "label": "hateful joy expression",
+      "description": "The Pope Francis is depicted with a broad, joyful smile and a waving gesture, which is juxtaposed with hateful text that falsely equates him with Lucifer and calls for violence against non-Catholics. This creates a dissonant emotional expression where the benign facial expression is used to mask or contrast with the hateful message, potentially evoking a sense of ironic or malicious amusement from the meme's creator or viewer.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Pope Francis is mapped as Lucifer",
+      "description": "The top text 'lucifer is hot!' explicitly maps the visual entity Pope Francis onto the textual entity 'lucifer'. This is a direct analogical mapping where the visual subject (Pope Francis) is falsely equated with the textual concept (Lucifer, the Christian demon).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the hateful text juxtaposition scene",
+      "description": "The user is projected onto the overall hateful text juxtaposition scene, where the visual of Pope Francis is combined with the hateful text overlays. The user is implicitly invited to identify with or internalize the hateful message, which falsely equates Pope Francis with Lucifer and calls for violence against non-Catholics. This projection is not explicit with deictic pronouns like 'you' or 'me', but the meme's confrontational structure and the user's engagement with it create an implicit projection onto the scene as a whole.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme falsely equates Pope Francis with Lucifer and calls for violence against non-Catholics, labeling him an 'antichrist' and 'sun worshipper'. This is a direct attack on a religious leader based on his faith and identity, promoting religious hatred and incitement to violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold or are influenced by anti-Catholic sentiment, religious extremism, or hate groups that promote religious intolerance. The meme is designed to provoke outrage and incite hatred against non-Catholics by falsely equating Pope Francis with Lucifer and labeling him an 'antichrist' and 'sun worshipper'. This content is likely intended for communities that are already predisposed to religious hatred, particularly those with anti-Catholic or anti-Christian ideologies, and may be shared to radicalize or mobilize such groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/19653.png",
+    "image_name": "19653.png",
+    "extraction_timestamp": "2025-12-15T17:50:56.601230",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

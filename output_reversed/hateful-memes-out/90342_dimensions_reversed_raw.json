@@ -1,0 +1,226 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes a photo of a Black woman speaking about interracial marriage with a photo of a man in a suit, using the text 'hold my hookah pipe!' to imply that she is being 'held' or controlled by the man's perspective. The meme is hateful because it uses a racialized stereotype to mock and demean Black women by implying they are not 'marrying their own kind' and are therefore 'not good enough' or 'not desirable' for interracial unions. This is a direct attack on Black women based on their race and gender, fitting the 'Hateful' category as it targets a protected characteristic (race and gender) with derogatory and degrading implications. The meme also contains misogynous elements by suggesting that Black women are not 'marrying their own kind' and are therefore 'not good enough' or 'not desirable' for interracial unions, which is a harmful stereotype that reinforces racial and gender-based discrimination. The meme is also propagandistic as it seeks to influence opinions about interracial marriage and Black women's choices, and it is harmful as it can cause harm to Black women and their communities by reinforcing negative stereotypes and promoting racial and gender-based discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top_text",
+      "description": "hold my hookah pipe!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "middle_text",
+      "label": "middle_text",
+      "description": "when it comes to interracial marriage",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "bottom_text",
+      "label": "bottom_text",
+      "description": "too many of our brothers are not marrying our sisters",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_in_suit",
+      "label": "man in suit",
+      "description": "A man wearing a light gray suit and tie, standing behind microphones with both hands raised, smiling broadly. He appears to be speaking or performing. The image is overlaid with the text 'hold my hookah pipe!'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "juxtaposed_meme_scene",
+      "label": "juxtaposed meme scene",
+      "description": "A meme scene composed of two distinct visual panels: the top panel features a man in a suit with raised hands and the text 'hold my hookah pipe!', while the bottom panel features a Black woman wearing a headscarf, smiling, with the text 'when it comes to interracial marriage' and 'too many of our brothers are not marrying our sisters'. The scene is structured as a meme with contrasting images and text to convey a hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_in_suit",
+          "relation": "juxtaposed_with",
+          "to": "woman_in_headscarf"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_hypersexualization",
+      "label": "Anti-Black Stereotype: Hypersexualization",
+      "description": "The meme uses the phrase 'hold my hookah pipe!' in conjunction with the image of a Black woman discussing interracial marriage, implying that she is being 'held' or controlled by a male perspective. This is a form of hypersexualization, as it reduces her to an object of male desire or control, reinforcing the stereotype that Black women are sexually available or must be 'held' by men. This stereotype is part of a broader pattern of racialized sexual objectification of Black women.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_interracial_marriage",
+      "label": "Anti-Black Stereotype: Interracial Marriage",
+      "description": "The meme references the idea that 'too many of our brothers are not marrying our sisters,' which is a racially coded statement implying that Black women are not desirable or 'good enough' for interracial unions. This stereotype suggests that Black women are inferior or less desirable when compared to white women, and that their value is diminished if they do not marry within their own race. This is a form of racial discrimination that targets Black women specifically.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_gold_digger",
+      "label": "Misogynous Stereotype: Gold Digger",
+      "description": "The meme implies that Black women are not marrying 'their own kind' because they are 'not good enough' or 'not desirable' for interracial unions, which is a misogynous stereotype that suggests Black women are only valuable if they marry within their own race. This is a form of 'gold digger' accusation, where Black women are portrayed as being only interested in marrying for financial gain or social status, rather than for love or compatibility. This stereotype is used to demean Black women and reinforce racial and gender-based discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_objectification",
+      "label": "Misogynous Stereotype: Objectification",
+      "description": "The meme uses the phrase 'hold my hookah pipe!' to imply that the Black woman is being 'held' or controlled by a male perspective, which is a form of objectification. This stereotype reduces her to an object of male desire or control, rather than recognizing her as a person with agency and autonomy. This is a form of misogynous objectification that reinforces the idea that Black women are only valuable if they are controlled or dominated by men.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_aggressive_violent_nature",
+      "label": "Anti-Black Stereotype: Aggressive/Violent Nature",
+      "description": "The meme uses the phrase 'hold my hookah pipe!' to imply that the Black woman is being 'held' or controlled by a male perspective, which is a form of racialized stereotype that suggests Black women are aggressive or violent. This stereotype is used to demean Black women and reinforce racial and gender-based discrimination. This is a form of racialized aggression stereotype that suggests Black women are only valuable if they are controlled or dominated by men.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "derision",
+      "label": "derisive emotion",
+      "description": "The meme expresses derision toward Black women by implying they are not 'marrying their own kind' and are therefore 'not good enough' or 'not desirable' for interracial unions, using the phrase 'hold my hookah pipe!' to suggest they are being controlled or objectified by a male perspective. This is a mocking and demeaning emotional tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The Black woman is mapped as the object being 'held' by the man's perspective",
+      "description": "The text 'hold my hookah pipe!' is mapped onto the visual of the Black woman, implying she is being controlled or objectified by the male perspective represented by the man in the suit. This creates an analogical mapping where the woman is the entity being 'held' or controlled, as per the text's metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the Black woman as the object being 'held' by the male perspective",
+      "description": "The user is projected onto the Black woman in the bottom panel, who is visually and textually framed as the object being 'held' by the male perspective represented by the man in the suit. The phrase 'hold my hookah pipe!' is mapped onto her, implying she is being controlled or objectified by the male viewpoint. This projection is reinforced by the textual material 'too many of our brothers are not marrying our sisters', which positions her as the subject of the male gaze and judgment. The user sees themselves as the one who is 'holding' or controlling the situation, or as the one who is being 'held' by the stereotype, depending on the viewer's interpretation, but the meme's structure forces the viewer to identify with the woman as the object of the male stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Black women based on race and gender by implying they are not 'marrying their own kind' and are therefore 'not good enough' or 'not desirable' for interracial unions, fitting the 'Hateful' category as it targets protected characteristics with derogatory and degrading implications.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold racist and misogynistic views, particularly those who believe in racial hierarchies and who view interracial marriage as a threat or as a justification for degrading Black women. The meme is designed to appeal to people who use stereotypes about Black women's sexual availability and racial inferiority to mock or demean them, often within a context of racialized gendered power dynamics. The audience is likely to be those who consume and share content that reinforces anti-Black stereotypes, misogynistic tropes, and racially coded narratives about marriage and desirability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/90342.png",
+    "image_name": "90342.png",
+    "extraction_timestamp": "2025-12-19T17:07:55.675534",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

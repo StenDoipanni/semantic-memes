@@ -1,0 +1,193 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: the_first_rule_of_deaf_club; hasOverallIntent: Harmful; overall-intent-description: The image depicts a woman using American Sign Language (ASL) while a man gestures with his hands, with text overlaying the scene. The top text reads \"the first rule of deaf club..\" and the bottom text reads \"nyou nu not nalk amout nef-glub\" (a misspelling of \"you do not talk about deaf club\"). This is a play on the well-known \"Rule of the Club\" trope, where members are forbidden from discussing the club's existence or rules. The meme's intent is to humorously suggest that deaf people are so secretive or exclusive that they don't discuss their own community. While the joke is based on a common trope, it can be considered harmful because it reinforces a stereotype that deaf people are secretive or isolated, which is not accurate. It also potentially trivializes the experience of being deaf by reducing it to a joke about secrecy. The meme does not contain direct abusive, cyberbullying, or hateful content, but it does contain harmful stereotypes that can be offensive to the deaf community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "the first rule of deaf club..",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with blonde hair wearing a red turtleneck sweater, actively using American Sign Language (ASL) with both hands. She is seated and appears to be communicating with someone across from her.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "sign_language_communication",
+      "label": "sign_language_communication",
+      "description": "A scene depicting a woman using American Sign Language (ASL) to communicate with a man who is gesturing with his hands. The woman is seated and actively signing, while the man is facing her, partially visible. The scene is overlaid with text that reads 'the first rule of deaf club..' and 'nyou nu not nalk amout nef-glub', referencing a humorous trope about secrecy within the deaf community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "signsTo",
+          "to": "man"
+        },
+        {
+          "from": "man",
+          "relation": "gesturesTo",
+          "to": "woman"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "deaf_community_secrecy_stereotype",
+      "label": "Deaf Community Secrecy Stereotype",
+      "description": "The meme plays on the trope that members of a club or group are secretive about their existence or rules, often humorously referred to as 'the first rule of [club name]... you do not talk about [club name]'. This trope is used here to imply that deaf people are secretive about their community, which is a harmful stereotype as it misrepresents the openness and visibility of the deaf community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "american_sign_language",
+      "label": "American Sign Language (ASL)",
+      "description": "The woman in the image is using American Sign Language, a visual language used by many deaf and hard-of-hearing individuals in the United States. Understanding that ASL is a legitimate and complex language is essential to interpreting the communication happening in the image and the joke's context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "rule_of_the_club_trope",
+      "label": "Rule of the Club Trope",
+      "description": "A common comedic trope in popular culture where a club or group has a secret rule that members must not discuss the club or its rules. This trope is referenced in the meme's text ('the first rule of deaf club...') to create humor, but it is used here in a way that can be seen as offensive to the deaf community by implying secrecy or exclusivity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "Ableism",
+      "description": "The meme's humor is rooted in ableist stereotypes that portray deaf people as secretive or isolated, which is a form of ableism. Ableism is the discrimination or social disadvantage faced by people with disabilities, and this meme reinforces harmful stereotypes that can be offensive to the deaf community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "deaf_community",
+      "label": "Deaf Community",
+      "description": "The meme references the deaf community, which is a cultural and linguistic group of people who are deaf or hard of hearing and often communicate using sign languages like ASL. Understanding the identity and culture of the deaf community is necessary to interpret the meme's reference to 'deaf club' and the stereotype it perpetuates.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking",
+      "label": "mocking emotion",
+      "description": "The emotion expressed is mocking, conveyed through the humorous and stereotypical text overlay that plays on the 'Rule of the Club' trope, implying that deaf people are secretive about their community. This is a form of ableist humor that mocks the deaf community by suggesting they are secretive or exclusive, which is a harmful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The text 'the first rule of deaf club..' is mapped onto the scene of sign language communication.",
+      "description": "The top text 'the first rule of deaf club..' is juxtaposed with the visual of a woman using American Sign Language (ASL) to communicate. This creates an analogical mapping where the text refers to a rule governing the 'deaf club' (the deaf community), and the visual material (the woman signing) represents a member of that club actively engaging in its communication method. The mapping implies that the visual scene is an instance of the 'rule' being enacted or referenced.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material conveying the rule of the deaf club",
+      "description": "The user is projected onto the bottom text 'nyou nu not nalk amout nef-glub', which directly addresses the viewer with a deictic imperative ('nyou' meaning 'you') instructing them not to talk about the deaf club. This creates a direct address to the user, making them the subject of the rule being enforced. The top text 'the first rule of deaf club..' sets up the context, but the bottom text explicitly engages the user as 'you'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful Stereotype",
+      "description": "The meme perpetuates a harmful stereotype that the deaf community is secretive or exclusive, which misrepresents the openness and visibility of the deaf community. This stereotype can be offensive and potentially harmful to members of the deaf community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "deaf_community",
+      "label": "deaf community",
+      "description": "The intended audience is members of the deaf community, as the meme references American Sign Language (ASL) and plays on stereotypes about secrecy within the deaf community, which is a cultural and linguistic group using sign languages like ASL.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/90826.png",
+    "image_name": "90826.png",
+    "extraction_timestamp": "2025-12-19T17:13:38.848568",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

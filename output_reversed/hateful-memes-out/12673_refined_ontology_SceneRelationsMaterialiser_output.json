@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "audience_watching_event",
+      "participants": [
+        {
+          "entity": "man_in_yellow_shirt",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "audience_watching_event",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_in_yellow_shirt",
+          "relation": "isCentralFigureIn",
+          "to": "audience_watching_event"
+        },
+        {
+          "from": "man_in_yellow_shirt",
+          "relation": "isRepresenting",
+          "to": "overallintent_instance"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":audience_watching_event :hasParticipant :man_in_yellow_shirt .",
+    ":audience_watching_event :hasParticipant :audience_watching_event .",
+    ":man_in_yellow_shirt :isCentralFigureIn :audience_watching_event .",
+    ":man_in_yellow_shirt :isRepresenting :overallintent_instance ."
+  ],
+  "triples_count": 4
+}

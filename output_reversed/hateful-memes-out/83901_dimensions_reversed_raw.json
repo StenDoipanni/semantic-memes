@@ -1,0 +1,173 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image features a black woman in a vintage-style dress, sitting on the floor with a skeptical, questioning expression, accompanied by text that reads 'am i gonna wish you happy birthday?' and 'dafuq else im'a do'. The overall intent is to humorously express exasperation or sarcasm about a mundane social obligation — wishing someone a happy birthday — by implying that it's the only thing one can possibly do in that context. The meme uses the woman's facial expression and posture to convey a sense of weary resignation or mock confusion. There is no toxicity present in this meme. The image and text are juxtaposed to create a relatable, comedic scenario about social expectations, not to target or demean any group. The meme is intended for lighthearted, self-deprecating humor, not to promote hate, abuse, or harmful stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "am i gonna wish you happy birthday?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A Black woman sitting on the floor, wearing a vintage-style dress with a textured pattern and a prominent necklace. She has a skeptical, questioning expression, with one hand resting on the floor and the other raised slightly, as if gesturing or emphasizing a point. Her posture and facial expression convey weary resignation or mock confusion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "skeptical_question_scene",
+      "label": "woman_expressing_skepticism",
+      "description": "A scene where a Black woman, sitting on the floor with a skeptical and questioning expression, is visually juxtaposed with text that reads 'am i gonna wish you happy birthday?' and 'dafuq else im'a do', conveying a humorous, weary resignation about social obligations. The woman's posture and facial expression are central to the scene's comedic intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_context",
+      "label": "Meme Context: Social Obligation Humor",
+      "description": "The meme relies on the real-world understanding that wishing someone a happy birthday is a common, expected social ritual. The humor stems from the exaggerated, weary resignation implied by the text and the woman's expression, suggesting that this is the only socially acceptable or logical thing to do in that context. This requires knowledge of social norms around birthday greetings.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "skeptical_question_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "textual_expression",
+      "label": "Textual Expression: 'dafuq else im'a do'",
+      "description": "The phrase 'dafuq else im'a do' is a colloquial, informal expression using African American Vernacular English (AAVE) and internet slang. 'Dafuq' is a phonetic spelling of 'what the fuck', and 'im'a do' is a contraction of 'I'm a do'. This requires knowledge of contemporary internet slang and AAVE to fully understand the tone of exasperated resignation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "visual_expression",
+      "label": "Visual Expression: Skeptical, Questioning Expression",
+      "description": "The woman's facial expression and posture are used to convey a sense of weary resignation or mock confusion. This visual cue is culturally understood as a form of non-verbal communication that complements the text. The meme's effectiveness relies on the viewer recognizing this expression as a common way to express exasperation or sarcasm in social contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cultural_reference",
+      "label": "Cultural Reference: 'Happy Birthday' Social Norm",
+      "description": "The meme references the universal social norm of wishing someone a happy birthday as a gesture of goodwill and acknowledgment. This is a deeply ingrained cultural practice in many societies, and the meme's humor arises from the exaggerated implication that this is the only possible response to the situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "skeptical_question_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_structure",
+      "label": "Meme Structure: Text-Image Juxtaposition",
+      "description": "The meme uses a common internet meme format where a visual image (in this case, a woman with a skeptical expression) is paired with text to create a humorous or ironic message. Understanding this structure requires knowledge of internet meme culture and how visual and textual elements are combined for comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "skeptical_question_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "exasperation",
+      "label": "exasperated emotion",
+      "description": "The woman's skeptical, questioning facial expression, combined with her weary posture and the text 'dafuq else im'a do', conveys a strong sense of exasperation. This emotion arises from the humorous implication that wishing someone a happy birthday is the only socially acceptable or logical action in that context, reflecting a feeling of being overwhelmed by a mundane social obligation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The woman is mapped as the speaker of the text",
+      "description": "The text 'am i gonna wish you happy birthday?' and 'dafuq else im'a do' is presented as if spoken by the woman in the image. Her skeptical, questioning expression and posture visually represent the speaker's exasperated, weary resignation, creating an analogical mapping where the visual entity (the woman) embodies the textual entity (the speaker of the dialogue).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the skeptical woman as the speaker of the text",
+      "description": "The user is projected onto the visual material of the woman, who is depicted as the speaker of the text 'am i gonna wish you happy birthday?' and 'dafuq else im'a do'. The meme uses the woman's skeptical expression and posture to embody the speaker's exasperated, weary resignation, creating an analogical mapping where the user identifies with the speaker's perspective. The text 'am i gonna wish you happy birthday?' is a direct address to the user, implying the user is the recipient of the birthday wish, and the speaker is questioning whether they should do it, which projects the user onto the role of the recipient. The phrase 'dafuq else im'a do' reinforces this projection by implying the speaker (and by extension, the user) is limited to this social obligation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "Black woman expressing weary resignation",
+      "description": "The image features a Black woman with a skeptical, questioning expression, sitting on the floor in a vintage-style dress. Her posture and facial expression convey weary resignation or mock confusion, which is central to the meme's humor. This visual representation is used to embody the speaker of the text, creating an analogical mapping where the woman's demeanor reflects the exasperated tone of the dialogue. The meme relies on the viewer recognizing this expression as a common form of non-verbal communication for sarcasm or resignation in social contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/83901.png",
+    "image_name": "83901.png",
+    "extraction_timestamp": "2025-12-19T14:47:06.702492",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

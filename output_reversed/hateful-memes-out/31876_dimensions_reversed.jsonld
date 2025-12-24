@@ -1,0 +1,172 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_3a567066",
+  "@type": "AnalysisDocument",
+  "title": "31876.png - Dimension Analysis",
+  "created": "2025-12-15T22:13:15.756334",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_8ac34449",
+    "@type": "Image",
+    "filename": "31876.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/31876.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/31876.png",
+    "image_name": "31876.png",
+    "extraction_timestamp": "2025-12-15T22:11:38.458933",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8a18d993",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image shows a woman with Down syndrome smiling while holding a wooden spoon over a white bowl, with the text overlay 'got a new slow cooker today.' The overall intent is to portray her as someone who is confined to domestic, kitchen-related tasks, reinforcing the harmful stereotype that people with developmental disabilities are only suited for or should be limited to 'belonging in the kitchen.' This is a form of ableism, specifically infantilization and competence denial, by implying her primary or only appropriate role is cooking. The meme uses the juxtaposition of her joyful expression with the mundane task to subtly suggest she is 'just' a cook, ignoring her full range of abilities, interests, and potential beyond domestic labor. This perpetuates a harmful societal narrative that people with disabilities are incapable of engaging in broader life roles, which can contribute to social exclusion and reduced opportunities. The intent is not to threaten or abuse, but to reinforce a limiting stereotype through visual and textual framing.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3a567066"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9ab02ec1",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "got a new slow cooker today",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3a567066"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3ec6e12a",
+      "@type": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person with Down syndrome",
+      "description": "A woman with Down syndrome, wearing glasses and a yellow long-sleeved shirt, is smiling while holding a wooden spoon over a white bowl. Her expression is joyful and engaged, suggesting she is happily involved in cooking. She is the central subject of the image and the focus of the meme's intent.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3a567066"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_375b303e",
+      "@type": "Scene",
+      "instance_name": "kitchen_cooking_scene",
+      "label": "woman cooking in kitchen",
+      "description": "A woman with Down syndrome is standing in a kitchen, smiling joyfully while holding a wooden spoon over a white bowl, suggesting she is happily engaged in cooking. The scene is framed to focus on her and the cooking activity, with kitchen elements like a pot and countertop visible in the background. The text overlay 'got a new slow cooker today' reinforces the domestic context and the stereotype that people with developmental disabilities are confined to kitchen roles.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3a567066"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_26742a95",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "ableism_stereotype_belongs_in_kitchen",
+      "label": "Stereotype: People with developmental disabilities 'belong in the kitchen'",
+      "description": "This is a well-documented ableist stereotype that implies individuals with developmental disabilities, such as Down syndrome, are only suited for or should be confined to domestic, kitchen-related tasks. It denies their full range of abilities, interests, and potential beyond domestic labor, reinforcing infantilization and competence denial. This stereotype is often used to justify limiting roles and opportunities for people with disabilities in society.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3a567066"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_215e3bca",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "ableism_infantilization",
+      "label": "Concept: Infantilization of people with developmental disabilities",
+      "description": "Infantilization is the process of treating individuals with developmental disabilities as if they are children, regardless of their actual age or capabilities. It involves denying their autonomy, competence, and right to engage in adult roles and activities. This concept is central to the meme's intent, as it frames the woman's joyful cooking activity as the only appropriate or 'natural' role for her.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3a567066"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a99dc17d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "ableism_competence_denial",
+      "label": "Concept: Competence denial for people with developmental disabilities",
+      "description": "Competence denial is the implicit or explicit belief that people with developmental disabilities are incapable of performing tasks, making decisions, or engaging in activities outside of a narrow, often domestic, scope. The meme perpetuates this by suggesting her 'only' appropriate role is cooking, ignoring her full range of abilities and potential, which can contribute to social exclusion and reduced opportunities.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3a567066"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_630dd382",
+      "@type": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful expression",
+      "description": "The woman is smiling broadly and appears engaged and happy while holding a wooden spoon over a bowl, suggesting genuine enjoyment in the cooking activity.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3a567066"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e66ae79f",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "woman is mapped as 'someone who got a new slow cooker today'",
+      "description": "The text 'got a new slow cooker today' is overlaid on the image of the woman cooking. This creates an analogical mapping where the woman (visual entity) is implicitly identified as the subject of the text (textual entity). The mapping projects the textual description of acquiring a kitchen appliance onto the visual subject, reinforcing the stereotype that her only appropriate role is domestic cooking. This is an instance of ableism, specifically 'belong in the kitchen' and 'competence denial', as the text frames her identity and activity within a narrow, domestic context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3a567066"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_41ed49bc",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman in the kitchen scene",
+      "description": "The user is projected onto the visual material of the woman with Down syndrome cooking, as the meme implicitly frames her as the subject of the text 'got a new slow cooker today'. This projection aligns with the meme's overall intent to reinforce the ableist stereotype that people with developmental disabilities 'belong in the kitchen', thereby projecting the user's identification with or acceptance of this limiting narrative onto the visual subject. There are no explicit deictic pronouns like 'me' or 'you', but the implicit framing of the woman as the 'new slow cooker owner' creates a semiotic projection where the user sees themselves in her role or accepts the stereotype as valid.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3a567066"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_087a71e6",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme perpetuates the harmful stereotype that people with developmental disabilities 'belong in the kitchen', which denies their full range of abilities, interests, and potential beyond domestic labor. This can contribute to social exclusion and reduced opportunities for individuals with disabilities.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3a567066"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_317fdae4",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general public",
+      "description": "The meme is designed for a general public audience that may be exposed to or unaware of the harmful ableist stereotypes it perpetuates. The target community includes individuals who might find the image relatable or humorous without recognizing the underlying infantilization and competence denial of people with developmental disabilities. The meme relies on common societal assumptions about people with Down syndrome being confined to domestic roles, which are widely held but harmful, making the general public the primary target for its message, even if unintentionally.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3a567066"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

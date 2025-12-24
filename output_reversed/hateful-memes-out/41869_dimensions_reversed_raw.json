@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Mysogynous; overall-intent-description: The image depicts a man leaning in close to a woman in an intimate setting, with overlaid text that reads 'him: gonna beat dat pussy into mashed potatoes!' and 'her: im down!'. The text uses vulgar, violent, and degrading language targeting the woman's body and sexualized identity, which is a clear example of misogynous content. The phrase 'beat dat pussy into mashed potatoes' is a hypersexualized and violent metaphor that objectifies the woman and reduces her to a body part, while the woman's response 'im down!' is presented as accepting this violent fantasy, reinforcing the harmful normalization of such attitudes. The overall intent is to shock and provoke through the juxtaposition of a seemingly romantic or intimate scene with explicit, violent, and degrading text, which perpetuates harmful stereotypes about women's bodies and sexual availability. This meme is designed to elicit a reaction through its offensive content, which is rooted in misogyny.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "him: gonna beat dat pussy into mashed potatoes!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "male individual",
+      "description": "A man with short dark hair and a beard, wearing a black and white patterned shirt, leaning in close to a woman in an intimate setting. His expression appears intense or aggressive, and he is positioned as the 'him' in the meme text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "intimate_interaction",
+      "label": "intimate_interaction",
+      "description": "A man leans in close to a woman in an intimate setting, with overlaid text that reads 'him: gonna beat dat pussy into mashed potatoes!' and 'her: im down!'. The scene depicts a juxtaposition of physical closeness with violent, degrading text, creating a contrast between the visual intimacy and the textual misogyny.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "leans_in_close_to",
+          "to": "woman"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype",
+      "label": "Misogynous Stereotype",
+      "description": "The meme relies on the stereotype that women are objectified and reduced to body parts, particularly genitalia, and that their sexual availability or submission is a central aspect of their value or desirability. The phrase 'beat dat pussy into mashed potatoes' is a hypersexualized and violent metaphor that objectifies the woman and reduces her to a body part, reinforcing the harmful normalization of such attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization_stereotype",
+      "label": "Hypersexualization Stereotype",
+      "description": "The meme uses the stereotype that women are hypersexualized, reducing them to sexual objects and focusing on their genitalia as a primary point of interest or degradation. This is evident in the violent and degrading language used in the text overlay, which treats the woman's body as something to be physically assaulted and consumed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "violent_metaphor",
+      "label": "Violent Metaphor",
+      "description": "The phrase 'beat dat pussy into mashed potatoes' is a violent metaphor that uses graphic imagery to convey sexual domination and degradation. This metaphor is not literal but relies on real-world knowledge of violence and food preparation to convey its meaning, which is rooted in misogynistic tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexualized_body_part_focus",
+      "label": "Sexualized Body Part Focus",
+      "description": "The meme centers on the sexualization of a specific body part (the 'pussy'), which is a common misogynistic trope that objectifies women by reducing them to their genitalia. This focus is not visible in the image but is implied by the text and is a key element of the meme's offensive content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_normative_response",
+      "label": "Misogynous Normative Response",
+      "description": "The woman's response 'im down!' is presented as accepting the violent fantasy, which reinforces the harmful normalization of misogynistic attitudes. This response is not visible in the image but is implied by the text and is a key element of the meme's intent to perpetuate harmful stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "aggression",
+      "label": "aggressive emotion",
+      "description": "The man's facial expression and body language convey an intense, aggressive emotion as he leans in close to the woman, paired with violent text that suggests physical domination. His expression is not relaxed or affectionate but rather confrontational and threatening.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man in the image is mapped as 'him' in the text",
+      "description": "The top text overlay explicitly labels the man as 'him', creating an analogical mapping where the visual entity (the man) is identified as the speaker of the text. This mapping is direct and explicit through the text's labeling.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material expressing violent misogyny",
+      "description": "The user is projected onto the text_chunk_1 ('him: gonna beat dat pussy into mashed potatoes!') as the speaker of the violent, misogynistic fantasy. The meme's structure invites the user to identify with the aggressor's perspective, even though the text is explicitly labeled 'him'. The projection is onto the textual material, which contains the deictic 'him' and the violent metaphor, creating an implicit identification with the perpetrator's viewpoint.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme contains explicit, violent, and degrading language targeting the woman's body and sexualized identity, which is a clear example of misogynous content. The phrase 'beat dat pussy into mashed potatoes' is a hypersexualized and violent metaphor that objectifies the woman and reduces her to a body part, while the woman's response 'im down!' is presented as accepting this violent fantasy, reinforcing the harmful normalization of such attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who are familiar with and may find humor or relatability in misogynistic, hypersexualized, and violent stereotypes about women, particularly those who engage with or create content that normalizes objectification and degrading sexual metaphors. The meme is designed to shock or provoke through its offensive content, which relies on the audience's understanding of misogynous tropes, such as the hypersexualization of women and the normalization of violent fantasies involving female bodies. The audience likely includes users of internet meme culture who are accustomed to dark humor, shock value, and the juxtaposition of intimate visuals with vulgar text, and who may identify with or find amusement in the 'misogynous normative response' depicted (the woman accepting the violent fantasy). The meme’s intent to perpetuate harmful stereotypes suggests it targets communities that either actively engage with or are desensitized to misogynistic content, often found in certain online subcultures or forums where such material is circulated for its provocative or edgy appeal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/41869.png",
+    "image_name": "41869.png",
+    "extraction_timestamp": "2025-12-16T01:10:09.442889",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

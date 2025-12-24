@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "cynical emotion",
+      "expressors": [
+        {
+          "entity": "the meme",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "the meme",
+          "relation": "emotionalRelationToEntity",
+          "to": "four_individuals_in_kkk_robes"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":cynical_emotion :hasExpressor :the_meme .",
+    ":the_meme :emotionalRelationToEntity :four_individuals_in_kkk_robes ."
+  ],
+  "triples_count": 2
+}

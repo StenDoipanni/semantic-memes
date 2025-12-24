@@ -1,0 +1,35 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "overallintent_instance"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "islamophobia_stereotype"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "horny_muslims_stereotype"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "virgin_sheep_concept"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :overallintent_instance .",
+    ":toxicity_1 :hasToxicElement :islamophobia_stereotype .",
+    ":toxicity_1 :hasToxicElement :horny_muslims_stereotype .",
+    ":toxicity_1 :hasToxicElement :virgin_sheep_concept ."
+  ],
+  "triples_count": 4
+}

@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_3f857e67",
+  "@type": "AnalysisDocument",
+  "title": "71396.png - Dimension Analysis",
+  "created": "2025-12-19T10:58:20.167551",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_49f903c7",
+    "@type": "Image",
+    "filename": "71396.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/71396.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/71396.png",
+    "image_name": "71396.png",
+    "extraction_timestamp": "2025-12-19T10:56:48.911243",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_853c2632",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: stand-your-ground-law-meme; hasOverallIntent: Harmful; overall-intent-description: The meme depicts a man in a mugshot pose holding a blank card, with text that reads 'stand your ground law.' and 'i said \"nibber get\"'. The juxtaposition of the 'stand your ground' legal concept with the absurd, possibly racially charged phrase 'nibber get' (a derogatory term often used to refer to Black people, implying a stereotypical criminal behavior association) is intended to mock or satirize the law. The visual of the mugshot reinforces the idea of criminality. While not explicitly abusive or hateful toward a specific individual, the use of a racial slur and the implication of criminal behavior associated with a racial group makes the meme harmful. It perpetuates a stereotype by linking a legal principle to a racially charged, derogatory phrase, potentially reinforcing negative racial biases and contributing to a hostile environment for the targeted group. The intent is to provoke laughter through shock value and the absurdity of the combination, but this comes at the cost of reinforcing harmful stereotypes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3f857e67"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_eb4fdf16",
+      "@type": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "stand your ground law.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3f857e67"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d0093f67",
+      "@type": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with a beard and short hair, wearing a gray hoodie, posing in a mugshot style with a blank black card. He appears in two views: front-facing and side-profile, both against a height chart background. His expression is serious in the front view and slightly amused or smirking in the side view.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3f857e67"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5867c688",
+      "@type": "Scene",
+      "instance_name": "mugshot_pose",
+      "label": "man posing in mugshot style",
+      "description": "A man is depicted in a mugshot pose, holding a blank black card, with two views: front-facing and side-profile, both against a height chart background. The text 'stand your ground law.' and 'i said \"nibber get\"' is overlaid on the image, suggesting a satirical or mocking context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3f857e67"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ae0fb4e8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_criminal_behavior",
+      "label": "Anti-Black Stereotype: Criminal Behavior Associations",
+      "description": "The phrase 'nibber get' is a derogatory racial slur targeting Black people, implying criminal behavior. This stereotype is part of a broader historical and systemic pattern of associating Black individuals with crime, which is used in the meme to mock the 'stand your ground' law by linking it to a racially charged, offensive phrase.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3f857e67"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_818731cd",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "stand_your_ground_law",
+      "label": "Stand Your Ground Law",
+      "description": "A legal doctrine in some U.S. states that allows individuals to use force, including deadly force, in self-defense without a duty to retreat. The meme uses this legal concept ironically by pairing it with an absurd and racially charged phrase, highlighting the absurdity or potential misuse of the law in a satirical context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3f857e67"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_57403586",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "mugshot_pose",
+      "label": "Mugshot Pose",
+      "description": "The visual of a person in a mugshot pose is a common trope in media to signify arrest or criminality. In this meme, the mugshot reinforces the implication that the person is a criminal, which is juxtaposed with the 'stand your ground' law and the offensive phrase 'nibber get', enhancing the satirical and mocking tone.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3f857e67"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_99496799",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "nibber_get",
+      "label": "Nibber Get",
+      "description": "A derogatory racial slur used to refer to Black people, often implying criminal behavior or association with crime. The phrase is used in the meme to create a jarring contrast with the 'stand your ground' law, satirizing the law by linking it to a racially charged and offensive term.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3f857e67"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_367a5e03",
+      "@type": "EmotionExpression",
+      "instance_name": "mocking_irony",
+      "label": "mocking and ironic emotional expression",
+      "description": "The overall emotional tone conveyed by the juxtaposition of the serious mugshot pose with the absurd and racially charged phrase 'i said \"nibber get\"' under the 'stand your ground law' text. The man's slightly amused or smirking expression in the side view reinforces this mocking, satirical intent, suggesting the absurdity or hypocrisy of the legal concept being paired with offensive content.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3f857e67"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bbb60c52",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man in the mugshot is mapped as the subject of the 'stand your ground law' text.",
+      "description": "The top text 'stand your ground law.' is juxtaposed with the visual of the man in a mugshot pose, implying that the man is the subject or embodiment of this legal concept. The visual material (the man) is being mapped onto the textual material (the law) to create a satirical association, suggesting the man is 'standing his ground' under the law, despite the absurd and racially charged context provided by the bottom text.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3f857e67"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2a5a05d7",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man in the mugshot",
+      "description": "The user is projected onto the visual material of the man in the mugshot pose, as the meme uses his image to embody the satirical juxtaposition of the 'stand your ground law' with the offensive phrase 'i said \"nibber get\"'. The user is implicitly identifying with or imagining themselves as the subject of the legal and racialized commentary presented in the meme.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3f857e67"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ad147631",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme perpetuates a harmful stereotype by linking the 'stand your ground' law to the racially charged phrase 'nibber get', which implies criminal behavior associated with Black people. This reinforces negative racial biases and contributes to a hostile environment for the targeted group.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3f857e67"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3010d997",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals familiar with U.S. legal concepts, particularly the 'stand your ground' law, and who are aware of or have encountered racial slurs like 'nibber get' in internet or media contexts. The meme is designed to provoke laughter through shock value and absurdity, likely appealing to an audience that finds humor in satirical juxtapositions involving law enforcement, criminal stereotypes, and racially charged language. This audience may include internet users who engage with satirical or dark humor memes, particularly those who understand the historical context of anti-Black stereotypes and the legal doctrine being mocked. The visual of the mugshot and the text 'stand your ground law' combined with 'nibber get' suggest the meme targets those who are culturally literate enough to recognize the irony and the underlying racial insensitivity, and who may be part of online communities that share or create memes that use offensive language for comedic effect, despite the harmful implications.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_3f857e67"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

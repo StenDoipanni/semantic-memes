@@ -1,0 +1,203 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a young girl smiling while playing with a toy kitchen set, with overlaid text reading 'mom won't let me use the oven with my friends.' The overall intent is to humorously or sarcastically portray a child's frustration over being denied access to a real oven for baking with friends, likely implying a sense of childish entitlement or a relatable parenting scenario. The scene is innocent and non-toxic, showing a child engaged in imaginative play. There is no evidence of abusive, cyberbullying, hateful, misogynistic, or propagandistic content. The meme's intent is lighthearted and relatable, using the juxtaposition of a child's innocent play with the text to create a humorous commentary on parental restrictions. It does not target any specific group or community with harmful stereotypes or discriminatory language, and thus does not fall under the categories of toxicity defined in the prompt.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "mom won't let me use the oven",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "child",
+      "label": "young girl",
+      "description": "A young girl with light brown hair and a yellow knitted sweater, smiling while playing with a toy kitchen set. She is the central subject of the image and the focus of the meme's text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "child_playing_with_toy_kitchen",
+      "label": "child playing with toy kitchen",
+      "description": "A young girl is engaged in imaginative play with a toy kitchen set, smiling as she interacts with the toy items. The scene is set indoors, with a map visible in the background, suggesting a home environment. The child is the central focus, and her actions are the main activity of the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "childhood_imagination_play",
+      "label": "Childhood Imagination Play",
+      "description": "The concept that children engage in pretend play using toys to simulate real-life activities, such as cooking or baking, which is a common developmental stage. This background knowledge is necessary to understand the child's behavior in the image and the humorous context of wanting to 'use the oven' with friends.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_playing_with_toy_kitchen",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "parental_restrictions",
+      "label": "Parental Restrictions",
+      "description": "The real-world concept that parents often impose limits on children's activities for safety, practicality, or developmental reasons. This knowledge is essential to understand the text 'mom won't let me use the oven' as a humorous or relatable depiction of a common parenting scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "baking_with_friends",
+      "label": "Baking with Friends",
+      "description": "A social activity where children (or adults) gather to bake together, often involving shared recipes, ingredients, and the fun of collaborative cooking. This concept is implied by the text 'with my friends' and helps contextualize the child's desire to share the experience beyond just playing alone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "toy_kitchen_set",
+      "label": "Toy Kitchen Set",
+      "description": "A common children's toy designed to simulate real kitchen activities, often including miniature appliances, utensils, and cookware. This knowledge is necessary to understand the child's interaction with the toy and the implied contrast with a real oven.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_playing_with_toy_kitchen",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "domestic_appliance",
+      "label": "Domestic Appliance",
+      "description": "A real-world household device, such as an oven, used for cooking food. This knowledge is required to understand the contrast between the toy kitchen and the real oven mentioned in the text, which is central to the meme's humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "childhood_entitlement",
+      "label": "Childhood Entitlement",
+      "description": "The stereotype or humorous trope that children sometimes exhibit a sense of entitlement, expecting to have things or do things they are not yet mature enough to handle. This is implied in the meme's text and is part of the relatable humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "relatable_parenting_meme",
+      "label": "Relatable Parenting Meme",
+      "description": "A genre of internet memes that humorously depict common parenting challenges or child behaviors, often resonating with parents and caregivers. This background knowledge helps categorize the meme and understand its intent as a lighthearted commentary on parenting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "child's joyful expression",
+      "description": "The young girl is smiling broadly, showing her teeth, and her eyes are bright, conveying a sense of pure joy and contentment as she engages in imaginative play with her toy kitchen set.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "child is the one who won't be let use the oven with friends",
+      "description": "The text 'mom won't let me use the oven with my friends' is mapped onto the visual entity 'child', who is depicted smiling while playing with a toy kitchen set. The child's joyful expression and engagement with the toy kitchen visually represent the child's desire to use the oven (as implied by the text) with friends, even though it is a toy. The mapping is established by the juxtaposition of the text with the child's image, where the child is the subject of the text ('me').",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the child as the subject of the text",
+      "description": "The user is projected onto the child (visual material) because the text 'mom won't let me use the oven with my friends' uses the first-person pronoun 'me', which directly refers to the child depicted in the image. The child is the central subject of the meme, and the text explicitly identifies her as 'me', creating a direct semiotic projection where the viewer sees themselves as the child in the scenario. This projection is reinforced by the child's joyful expression, which the user may relate to as their own experience or perspective.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "relatable_parenting_meme",
+      "description": "Parents and caregivers who find humor in common parenting challenges and child behaviors.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/61304.png",
+    "image_name": "61304.png",
+    "extraction_timestamp": "2025-12-16T07:02:06.745738",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

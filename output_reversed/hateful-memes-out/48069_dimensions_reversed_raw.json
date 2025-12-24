@@ -1,0 +1,221 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a group of Buddhist monks in orange robes standing in a park-like setting. The overlaid text reads, \"how dare people make fun of our peaceful religion.\" The meme's intent is to portray Buddhism as a peaceful, sacred, and sacredly protected religion, implying that any mockery of it is an affront or an act of disrespect. This framing is inherently hateful as it targets a specific religious group (Buddhists) by invoking a sense of offense and moral outrage, suggesting that criticism of their beliefs or practices is unacceptable or even blasphemous. The meme uses the visual of the monks to symbolize the religion's perceived innocence and peace, and the text to frame any criticism as a violation of that peace, thus creating a hostile and defensive tone that attacks those who might question or mock the religion. This is a form of religious intolerance and can be seen as a hate-based response to criticism, aiming to delegitimize dissent by labeling it as an attack on a sacred institution.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "how dare people make fun",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Buddhist_monks",
+      "label": "people",
+      "description": "A group of Buddhist monks wearing traditional orange and maroon robes, standing in a line in an outdoor park-like setting. They are the central visual focus and are used to represent the 'peaceful religion' mentioned in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "monks_in_park",
+      "label": "Buddhist monks standing in a park",
+      "description": "A group of Buddhist monks in orange and maroon robes are standing in a line on a grassy area in an outdoor park-like setting, with trees and lampposts in the background. They are the central visual focus of the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_intolerance",
+      "label": "Religious Intolerance",
+      "description": "The meme frames criticism of Buddhism as an affront to a 'peaceful religion,' invoking a sense of moral outrage and implying that dissent is unacceptable or blasphemous. This reflects a broader real-world phenomenon of religious intolerance, where criticism of religious beliefs or practices is met with hostility or attempts to delegitimize dissent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_buddhist_sentiment",
+      "label": "Anti-Buddhist Sentiment",
+      "description": "The meme implicitly references the existence of anti-Buddhist sentiment in society, where Buddhists may be targeted or mocked for their beliefs. This sentiment is often rooted in cultural misunderstandings, stereotypes, or prejudice against Eastern religions in Western contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_defensiveness",
+      "label": "Religious Defensiveness",
+      "description": "The meme exemplifies religious defensiveness — the tendency to react with anger or offense to criticism of one's faith, often by portraying the religion as sacred and inviolable. This is a common response in some religious communities when faced with questioning or satire.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hate_based_response",
+      "label": "Hate-Based Response",
+      "description": "The meme's intent is to delegitimize criticism by labeling it as an attack on a sacred institution, which is a form of hate-based response. This tactic aims to silence dissent by invoking moral outrage and implying that criticism is inherently hostile or offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_buddhism_as_peaceful",
+      "label": "Stereotype of Buddhism as Peaceful",
+      "description": "The meme relies on the widely held stereotype that Buddhism is inherently peaceful and non-violent. This stereotype is often used to justify or excuse Buddhist practices or to contrast Buddhism with other religions perceived as more aggressive or dogmatic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mockery_of_religion",
+      "label": "Mockery of Religion",
+      "description": "The meme references the real-world phenomenon of religious mockery — the use of satire, ridicule, or humor to criticize religious beliefs or practices. This can be a form of free speech or a form of offense, depending on context and intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "outrage",
+      "label": "outraged emotion",
+      "description": "The emotion of outrage is expressed through the overlaid text, which accuses others of disrespecting a 'peaceful religion,' implying moral offense and indignation. This emotion is conveyed by the confrontational tone of the text, which frames criticism as an affront to sacredness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Buddhist monks are mapped as the 'peaceful religion' being defended",
+      "description": "The text 'how dare people make fun of our peaceful religion' explicitly maps the visual entity 'Buddhist_monks' onto the abstract concept of 'peaceful religion'. The monks, as the visual representation of Buddhism, are being framed by the text as the embodiment of a sacred, peaceful institution that must be protected from mockery. This is an analogical mapping where the visual group is equated with the textual concept they represent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the text expressing offense",
+      "description": "The user is projected onto the textual material 'how dare people make fun of our peaceful religion', which frames the user as someone who is outraged or offended by mockery of Buddhism. The text implicitly addresses the viewer as 'you' — the person seeing the meme — by using 'how dare people make fun' as a rhetorical device that invokes the viewer's own moral stance or identity as a defender of the religion. The projection is onto the text_chunk, which acts as the vehicle for the user's imagined emotional response.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme frames criticism of Buddhism as an affront to a 'peaceful religion,' invoking moral outrage and implying that dissent is unacceptable or blasphemous. This reflects religious intolerance and a hate-based response to criticism, aiming to delegitimize dissent by labeling it as an attack on a sacred institution.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "Buddhist community",
+      "description": "The meme is designed to resonate with members of the Buddhist community, who are the target audience. The visual of Buddhist monks and the text 'how dare people make fun of our peaceful religion' are intended to evoke a sense of solidarity and moral outrage among Buddhists, framing criticism of their faith as an affront to their sacred and peaceful religion. This targets the community by invoking their religious identity and the stereotype of Buddhism as peaceful, aiming to unify them against perceived external mockery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/48069.png",
+    "image_name": "48069.png",
+    "extraction_timestamp": "2025-12-16T03:09:46.422341",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

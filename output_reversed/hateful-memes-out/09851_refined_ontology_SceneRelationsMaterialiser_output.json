@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "gourmet_dish_scene",
+      "participants": [
+        {
+          "entity": "gourmet_dish",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "text_overlay",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "gourmet_dish",
+          "relation": "isPresentedIn",
+          "to": "gourmet_dish_scene"
+        },
+        {
+          "from": "text_overlay",
+          "relation": "isOverlaying",
+          "to": "gourmet_dish_scene"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":gourmet_dish_scene :hasParticipant :gourmet_dish .",
+    ":gourmet_dish_scene :hasParticipant :text_overlay .",
+    ":gourmet_dish :isPresentedIn :gourmet_dish_scene .",
+    ":text_overlay :isOverlaying :gourmet_dish_scene ."
+  ],
+  "triples_count": 4
+}

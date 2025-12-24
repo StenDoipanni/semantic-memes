@@ -1,0 +1,47 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "emergency_call_scene",
+      "participants": [
+        {
+          "entity": "man_on_phone",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "man_on_ground",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_on_phone",
+          "relation": "isCalling",
+          "to": "man_on_ground"
+        },
+        {
+          "from": "man_on_phone",
+          "relation": "isCalling911",
+          "to": "man_on_ground"
+        },
+        {
+          "from": "man_on_ground",
+          "relation": "isLyingOnGround",
+          "to": "man_on_phone"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":emergency_call_scene :hasParticipant :man_on_phone .",
+    ":emergency_call_scene :hasParticipant :man_on_ground .",
+    ":man_on_phone :isCalling :man_on_ground .",
+    ":man_on_phone :isCalling911 :man_on_ground .",
+    ":man_on_ground :isLyingOnGround :man_on_phone ."
+  ],
+  "triples_count": 5
+}

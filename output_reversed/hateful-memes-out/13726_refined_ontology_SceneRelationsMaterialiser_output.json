@@ -1,0 +1,30 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "border_crossing_scene",
+      "participants": [
+        {
+          "entity": "woman_holding_child",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman_holding_child",
+          "relation": "isHolding",
+          "to": "child"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":border_crossing_scene :hasParticipant :woman_holding_child .",
+    ":woman_holding_child :isHolding :child ."
+  ],
+  "triples_count": 2
+}

@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "woman holding a child",
+      "participants": [
+        {
+          "entity": "woman",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "child",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "isHolding",
+          "to": "child"
+        },
+        {
+          "from": "child",
+          "relation": "isBeingHeldBy",
+          "to": "woman"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":woman_holding_a_child :hasParticipant :woman .",
+    ":woman_holding_a_child :hasParticipant :child .",
+    ":woman :isHolding :child .",
+    ":child :isBeingHeldBy :woman ."
+  ],
+  "triples_count": 4
+}

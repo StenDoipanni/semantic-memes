@@ -1,0 +1,191 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: shits_about_to_get_real; hasOverallIntent: Harmful; overall-intent-description: The image depicts a person carrying homemade explosive devices while other armed individuals are visible in the background. The overlaid text 'shits about to get real' suggests an impending escalation of violence or conflict. The overall intent is to convey a sense of impending danger or chaos, likely in a context of political or social unrest. While the image itself does not target any specific group with hate or abuse, its depiction of violence and potential for harm makes it inherently harmful. The meme uses the juxtaposition of the text with the visual of weapons and explosives to create a sense of foreboding or impending disaster, which can be unsettling or provoke fear in viewers. The intent is not to target a specific community with hate, but rather to evoke a reaction of alarm or anticipation of violence, which can be psychologically harmful or contribute to a climate of fear.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "shits about to get real",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person_in_foreground",
+      "label": "person carrying homemade explosives",
+      "description": "A person in the foreground, wearing a black shirt and a green strap over their shoulder, is holding a device with multiple cylindrical explosive charges attached. The charges are painted with red and green camouflage patterns and are connected by wires. The person's hand is visible gripping the device, and their face is not visible. This individual appears to be preparing or displaying the explosives.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "armed_individuals_with_explosives",
+      "label": "Scene of armed individuals with explosives",
+      "description": "The scene depicts a person in the foreground carrying homemade explosive devices, while other armed individuals are visible in the background. The spatial arrangement shows the foreground person as the central focus, with armed individuals positioned behind them, suggesting a context of imminent violence or conflict. The layout indicates a potential escalation of tension, with the explosives and weapons symbolizing impending danger.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person_in_foreground",
+          "relation": "carries",
+          "to": "explosive_devices"
+        },
+        {
+          "from": "person_in_foreground",
+          "relation": "faces",
+          "to": "person_in_background"
+        },
+        {
+          "from": "person_in_background",
+          "relation": "holds",
+          "to": "weapons"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism_associations",
+      "label": "Terrorism Associations",
+      "description": "The image depicts individuals with homemade explosives and firearms, which are commonly associated with terrorist activities. This background knowledge is necessary to understand the meme's implication of impending violence or conflict, as such imagery is often used to evoke fear or alarm in the context of terrorism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "armed_individuals_with_explosives",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "imminent_violence_concept",
+      "label": "Imminent Violence Concept",
+      "description": "The phrase 'shits about to get real' implies an impending escalation of violence or conflict. This concept relies on real-world understanding of how language is used to describe situations where danger or chaos is about to occur, often in political or social unrest contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "armed_individuals_with_explosives",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "homemade_explosives",
+      "label": "Homemade Explosives",
+      "description": "The devices shown are homemade explosives, which are often associated with non-state actors or insurgent groups. Understanding the nature and context of such devices requires background knowledge about their use in conflict zones or terrorist attacks.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person_in_foreground",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "imminent_danger_foreboding",
+      "label": "Imminent Danger Foreboding",
+      "description": "The meme uses the juxtaposition of text and image to create a sense of foreboding or impending disaster. This relies on cultural understanding of how visual and textual elements are combined to evoke psychological reactions such as alarm or fear.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "armed_individuals_with_explosives",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "foreboding",
+      "label": "foreboding emotion",
+      "description": "The emotion expressed is one of impending danger or disaster, evoked by the visual of homemade explosives and the text 'shits about to get real', which together suggest an imminent escalation of violence or chaos.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Imminent violence is about to occur",
+      "description": "The text 'shits about to get real' is mapped onto the visual of the person carrying homemade explosives and armed individuals in the background, implying that the depicted scene represents an impending escalation of violence or conflict. The visual material (explosives, weapons, armed individuals) is analogically mapped to the textual concept of 'imminent violence' conveyed by the phrase.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the imminent danger foreboding conveyed by the visual and textual elements",
+      "description": "The user is projected onto the overall sense of impending violence and danger created by the combination of the visual material (person carrying homemade explosives, armed individuals in background) and the textual material ('shits about to get real'). The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the meme's framing invites the user to identify with the anticipated outcome or the escalating tension, making the user a passive recipient of the foreboding message. The projection is onto the scene and its textual overlay, which collectively evoke a psychological response of alarm or anticipation of disaster.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The image depicts a person carrying homemade explosive devices while other armed individuals are visible in the background. The overlaid text 'shits about to get real' suggests an impending escalation of violence or conflict. The overall intent is to convey a sense of impending danger or chaos, which can be unsettling or provoke fear in viewers. The depiction of violence and potential for harm makes it inherently harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person_in_foreground",
+      "label": "individual carrying homemade explosives",
+      "description": "The central figure in the image, depicted with homemade explosive devices, is likely intended to represent a militant or insurgent actor. The meme targets audiences familiar with imagery of terrorism or armed conflict, particularly those who interpret such visuals as warnings of imminent violence. The target community includes viewers who understand the symbolic weight of explosives and weapons in contexts of political unrest or warfare, and who may be primed to interpret the text 'shits about to get real' as a foreshadowing of escalating danger. This audience is likely composed of individuals interested in or affected by geopolitical events, conflict zones, or social media commentary on violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/70346.png",
+    "image_name": "70346.png",
+    "extraction_timestamp": "2025-12-19T10:43:14.251104",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

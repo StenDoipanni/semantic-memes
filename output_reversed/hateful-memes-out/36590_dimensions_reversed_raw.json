@@ -1,0 +1,213 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: this_offends_me_ban_them; hasOverallIntent: hateful; overall-intent-description: The image depicts a person wearing a niqab, with text overlaid that reads 'this offends me ban them' and 'do you agree?'. The visual of the veiled individual is juxtaposed with the call to ban them, which is a direct attack on a religious and cultural practice. This aligns with Islamophobia, specifically the harmful stereotype that veiling is associated with oppression of women and incompatibility with Western values. The meme is designed to provoke a reaction by framing the wearing of the niqab as offensive and deserving of prohibition, targeting Muslim women and their religious expression. The intent is to incite hatred or prejudice against a specific group based on their religious attire, which is a hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "text content: 'this offends me ban them'; position: top of image, spanning the width, centered horizontally",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "individual wearing niqab",
+      "description": "A person with brown eyes, partially visible, wearing a black niqab that covers the entire face except for the eyes. The fabric appears to be a thick, dark textile, and the person's gaze is directed forward, creating a direct and intense visual connection with the viewer. The lighting highlights the eyes and the texture of the fabric, making the eyes the most salient feature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "offensive_call_to_action",
+      "label": "a scene of confrontation through visual and textual elements",
+      "description": "The scene is composed of a person wearing a niqab, whose eyes are the focal point, juxtaposed with overlaid text that expresses a hostile sentiment ('this offends me ban them') and seeks agreement from the viewer ('do you agree?'). The visual of the veiled individual is directly linked to the call to ban them, creating a confrontational and provocative composition that frames religious attire as offensive and deserving of prohibition. The spatial arrangement places the person centrally, with text positioned at the top and bottom, creating a visual hierarchy that emphasizes both the subject and the hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person",
+          "relation": "isTargetOf",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "expresses",
+          "to": "person"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The meme relies on the harmful stereotype that wearing a niqab is associated with oppression of women and incompatibility with Western values, which is a common theme in Islamophobic discourse. This stereotype frames religious attire as a threat to societal norms and justifies calls for prohibition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_sentiment",
+      "label": "Anti-Muslim Sentiment",
+      "description": "The meme expresses a sentiment that is rooted in anti-Muslim prejudice, specifically targeting Muslim women who wear the niqab. This sentiment is often used to justify discriminatory policies or bans on religious attire in Western societies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "niqab",
+      "label": "Niqab",
+      "description": "The niqab is a type of Islamic headscarf that covers the entire face except for the eyes. It is worn by some Muslim women as a religious practice and a symbol of modesty. The meme uses the visual of the niqab to trigger a reaction based on the stereotype that it represents oppression or incompatibility with Western values.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "western_values",
+      "label": "Western Values",
+      "description": "The meme implicitly references the concept of 'Western values' as a normative standard against which the niqab is judged. This concept is often used in political and cultural discourse to justify exclusionary policies or attitudes toward religious practices perceived as 'foreign' or 'backward'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ban_call",
+      "label": "Ban Call",
+      "description": "The text 'ban them' refers to a call for legal or social prohibition of the niqab, which is a real-world policy proposal that has been debated in some Western countries. This call is rooted in the belief that religious attire should not be permitted in public spaces, often under the guise of 'freedom' or 'safety'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is hatred or animosity, directed toward individuals wearing the niqab, as conveyed by the explicit call to ban them and the framing of the niqab as offensive. This is rooted in Islamophobic stereotypes and anti-Muslim sentiment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The person wearing the niqab is mapped as 'them' in the call to ban",
+      "description": "The text 'ban them' directly refers to the person wearing the niqab in the visual material. The visual entity (person) is being mapped onto the textual pronoun 'them', creating an analogical mapping where the individual is identified as the target of the ban. This mapping is reinforced by the spatial arrangement and the confrontational tone of the meme, which frames the person as the object of the hateful sentiment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual call to action",
+      "description": "The user is projected onto the textual material 'do you agree?' which directly addresses the viewer, inviting them to align with the hateful sentiment expressed in the meme. This creates a direct engagement where the user is positioned as a potential participant in the discriminatory call to ban the person wearing the niqab.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks individuals wearing the niqab by framing their religious attire as offensive and deserving of prohibition, rooted in Islamophobic stereotypes and anti-Muslim sentiment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who hold Islamophobic views or are influenced by anti-Muslim sentiment, particularly those who support or are sympathetic to calls for banning religious attire like the niqab in public spaces. The meme is designed to resonate with people who perceive the niqab as incompatible with Western values and who may be predisposed to view Muslim women wearing it as a threat or as oppressed individuals. The confrontational tone and direct question 'do you agree?' are aimed at provoking agreement from this audience, who are likely to be part of broader communities that support exclusionary policies based on religious or cultural grounds.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/36590.png",
+    "image_name": "36590.png",
+    "extraction_timestamp": "2025-12-15T23:26:55.606000",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

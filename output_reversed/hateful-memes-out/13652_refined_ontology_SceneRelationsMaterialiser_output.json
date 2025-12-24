@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "father_and_child_conversation",
+      "participants": [
+        {
+          "entity": "man",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "child",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "isTalkingTo",
+          "to": "child"
+        },
+        {
+          "from": "child",
+          "relation": "isTalkingTo",
+          "to": "man"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":father_and_child_conversation :hasParticipant :man .",
+    ":father_and_child_conversation :hasParticipant :child .",
+    ":man :isTalkingTo :child .",
+    ":child :isTalkingTo :man ."
+  ],
+  "triples_count": 4
+}

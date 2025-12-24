@@ -1,0 +1,204 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image features a smiling woman of color holding a small American flag, with overlaid text that reads: \"i say woman of color because i want to be inclusive of all but white women.\" This text is a deliberately exclusionary and racist statement, using the term \"woman of color\" to exclude white women from a supposed \"inclusive\" group. The meme's intent is to mock and demean the concept of inclusivity by framing it as a form of exclusionary racism, targeting white women specifically. It weaponizes the term \"woman of color\" to imply that white women are not included in the category, which is a harmful and hateful trope rooted in racial hierarchy. The visual of a Black woman (who is often associated with the term \"woman of color\") is juxtaposed with the text to create a false equivalence and to imply that her identity is being used to exclude others. This is a hateful meme that promotes racial division and exclusion, and it is designed to provoke a reaction by highlighting the perceived hypocrisy or exclusionary nature of the term \"woman of color\" when applied to exclude white women. The meme is not merely a joke but a direct attack on the inclusivity of the term, and it is intended to be offensive and divisive. The overall intent is to spread a hateful message that reinforces racial hierarchies and exclusionary practices.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text",
+      "description": "i say woman of color",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "Black woman",
+      "description": "A smiling Black woman wearing a black headscarf and a grey scarf, holding a small American flag. She appears to be outdoors in front of a building with columns, possibly the White House. Her expression is cheerful and she is gesturing with her hands. The visual material is central to the meme's intent, as her identity as a Black woman is juxtaposed with the exclusionary text to create a false equivalence and imply racial hierarchy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "exclusionary_statement_scene",
+      "label": "Exclusionary Statement Scene",
+      "description": "A scene where a Black woman is depicted holding an American flag, with overlaid text that reads: \"i say woman of color because i want to be inclusive of all but white women.\" The scene is designed to convey a hateful and exclusionary message by juxtaposing the woman's identity with a racist and divisive statement. The visual material (the woman) and the textual material (the overlaid text) are directly related in this scene, with the text serving as the primary message and the woman's image being used to visually support the exclusionary intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "isAssociatedWith",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_exclusionary_stereotype",
+      "label": "Racist Exclusionary Stereotype",
+      "description": "The meme relies on the stereotype that the term 'woman of color' is used to exclude white women, implying a racial hierarchy where white women are not considered 'women of color' and thus are excluded from the category. This is a harmful trope that weaponizes racial identity to create division and exclusion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_hierarchy_concept",
+      "label": "Racial Hierarchy Concept",
+      "description": "The meme implicitly references the broader social concept of racial hierarchy, where certain racial groups are positioned as superior or inferior to others. The text suggests that by using 'woman of color,' the speaker is implicitly placing white women outside of the 'inclusive' group, reinforcing a racial hierarchy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "term_woman_of_color",
+      "label": "Term 'Woman of Color'",
+      "description": "The term 'woman of color' is a social and political term used to describe women who are not white. It is intended to be inclusive of women from diverse racial and ethnic backgrounds. The meme misuses this term to imply exclusion, which is a distortion of its intended meaning.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_women_exclusion",
+      "label": "White Women Exclusion",
+      "description": "The meme explicitly targets white women by suggesting they are excluded from the category of 'woman of color.' This is a form of exclusionary rhetoric that is rooted in racial bias and is intended to provoke a reaction by highlighting perceived hypocrisy or exclusion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_meme_intention",
+      "label": "Hateful Meme Intention",
+      "description": "The meme is designed to spread a hateful message that reinforces racial division and exclusion. It weaponizes the term 'woman of color' to imply that white women are not included in the category, which is a harmful and hateful trope rooted in racial hierarchy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_happiness",
+      "label": "mocking happiness expression",
+      "description": "The woman's wide, cheerful smile and open-handed gesture are visually presented as a happy expression, but in the context of the overlaid text, this expression is used to mask or accompany a hateful, exclusionary message. The emotion is not genuine happiness but a performative or sarcastic joy that serves to contrast with the offensive content, creating a jarring and mocking effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The woman is mapped as 'woman of color' in the text",
+      "description": "The text 'i say woman of color' explicitly labels the visual entity (the Black woman) as a 'woman of color'. This is an analogical mapping where the textual term 'woman of color' is applied to the visual entity, creating a direct semantic link between the text and the visual representation. The mapping is central to the meme's intent, as it uses the visual identity of the woman to instantiate the term 'woman of color' in a context that is then weaponized to exclude white women.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the exclusionary statement scene",
+      "description": "The user is projected onto the exclusionary statement scene, which includes the visual material of the Black woman and the textual material stating 'i say woman of color because i want to be inclusive of all but white women.' The meme invites the user to identify with or internalize the perspective of the speaker, who is using the term 'woman of color' in a deliberately exclusionary way. The user is implicitly invited to see themselves as the speaker, adopting the stance of someone who uses the term to exclude white women, thereby projecting their own identity onto the scene and the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks the concept of inclusivity by framing the term 'woman of color' as exclusionary toward white women, promoting racial division and reinforcing a racial hierarchy. It weaponizes the term to imply that white women are not included, which is a harmful and hateful trope rooted in racial bias.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "white women",
+      "description": "The meme is explicitly designed to target white women by framing the term 'woman of color' as exclusionary toward them, using the visual of a Black woman to imply racial hierarchy and division. The text directly states the intent to exclude white women, making them the primary target audience for the meme's hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/23971.png",
+    "image_name": "23971.png",
+    "extraction_timestamp": "2025-12-15T18:50:15.933661",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

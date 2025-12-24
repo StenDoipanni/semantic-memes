@@ -1,0 +1,202 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: nazi_fitness_camp_before_and_after_body_transformation_within_hours; hasOverallIntent: Hateful; overall-intent-description: The image depicts a group of muscular men in a dimly lit setting, with text overlay claiming 'nazi fitness camp before' and 'and after body transformation within hours.' This juxtaposition is intentionally misleading and inflammatory. The term 'nazi fitness camp' is a direct and hateful reference to the historical atrocities of the Nazi regime, which was associated with forced physical conditioning, racial ideology, and mass murder. By applying this term to a modern fitness context, the meme attempts to equate contemporary bodybuilding or fitness culture with the genocidal and oppressive practices of the Nazis. This is a clear example of hateful content that uses historical trauma and association to dehumanize or stigmatize individuals or groups, likely targeting those involved in fitness culture or the men depicted. The meme's intent is to provoke shock, outrage, or ridicule by exploiting the gravity of Nazi history for a trivial or humorous context, which is both offensive and potentially harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "nazi fitness camp before",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "muscular men",
+      "description": "Five muscular men are standing in a dimly lit room, appearing to be in a fitness or bodybuilding context. They are shirtless, wearing minimal clothing (briefs or shorts), and appear to be sweating, suggesting recent physical activity. One man in the center is holding a resistance band. Their physiques are highly defined, indicating advanced fitness levels. The men are of varying skin tones, including Black and possibly other ethnicities, and appear to be in their late 20s to 40s. Their expressions are serious or focused, and they are looking in different directions, possibly at a coach or mirror.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "fitness_camp_before_after_scene",
+      "label": "fitness camp before and after body transformation scene",
+      "description": "A scene depicting five muscular men in a dimly lit fitness or bodybuilding setting, with text overlays claiming 'nazi fitness camp before' and 'and after body transformation within hours'. The men are shirtless, wearing minimal clothing, and appear to be sweating, suggesting recent physical activity. One man in the center is holding a resistance band. Their physiques are highly defined, indicating advanced fitness levels. The men are positioned in a line or semi-circle, facing different directions, possibly at a coach or mirror. The scene is framed to emphasize their muscular physiques and the contrast implied by the text overlays.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "stands_in_line_with",
+          "to": "man"
+        },
+        {
+          "from": "man",
+          "relation": "holds_resistance_band",
+          "to": "man"
+        },
+        {
+          "from": "man",
+          "relation": "looks_toward",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nazi_fitness_camp_stereotype",
+      "label": "Nazi Fitness Camp Stereotype",
+      "description": "A hateful and historically inaccurate stereotype that equates modern fitness or bodybuilding with the forced physical conditioning and racial ideology of the Nazi regime. This is a deliberate and offensive misrepresentation used to dehumanize or stigmatize individuals or groups, particularly in the context of bodybuilding or fitness culture. It relies on the historical trauma of the Holocaust and Nazi atrocities to trivialize or mock contemporary physical transformation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "fitness_camp_before_after_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "body_transformation_within_hours_stereotype",
+      "label": "Body Transformation Within Hours Stereotype",
+      "description": "A misleading and unrealistic stereotype that implies dramatic physical changes (like extreme muscle gain or fat loss) can occur within a very short time frame (e.g., hours). This is a common trope in fitness memes and clickbait, often used to exaggerate or sensationalize results, and is not grounded in realistic physiology or training science.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "fitness_camp_before_after_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_athletic_ability",
+      "label": "Anti-Black Stereotype: Athletic Ability as Sole Competency",
+      "description": "A disparaging stereotype that reduces Black individuals to their physical abilities, implying they are only valued for their athleticism or physical appearance, and lack other competencies or intellectual depth. This stereotype is often used to dehumanize or marginalize Black people, particularly in contexts where their physicality is highlighted (e.g., fitness, sports).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_hypersexualization",
+      "label": "Anti-Black Stereotype: Hypersexualization",
+      "description": "A disparaging stereotype that portrays Black individuals, particularly men, as hypersexual or sexually aggressive. This stereotype is often used to dehumanize or objectify Black men, particularly in contexts where their physicality is emphasized (e.g., fitness, bodybuilding).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_criminality",
+      "label": "Anti-Black Stereotype: Criminal Behavior Associations",
+      "description": "A disparaging stereotype that associates Black individuals with criminal behavior or violence. This stereotype is often used to dehumanize or marginalize Black people, particularly in contexts where their physicality is emphasized (e.g., fitness, bodybuilding).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_meme_expression",
+      "label": "hateful and inflammatory emotional expression",
+      "description": "The image conveys a hateful and inflammatory emotional tone through the juxtaposition of the text 'nazi fitness camp before' and 'and after body transformation within hours'. This expression is designed to provoke outrage, shock, or ridicule by exploiting the gravity of Nazi history for a trivial or humorous context, which is both offensive and potentially harmful. The emotional expression is rooted in the hateful stereotype of equating modern fitness culture with the genocidal practices of the Nazis.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_nazi_fitness_camp_before",
+      "label": "Mapping of muscular men to 'nazi fitness camp before'",
+      "description": "The text 'nazi fitness camp before' is mapped onto the visual material of the five muscular men, implying they are participants in a fictional or satirical 'Nazi fitness camp' before undergoing a transformation. This is an analogical mapping that equates the visual depiction of muscular men in a fitness context with the historical and hateful concept of a Nazi fitness camp, which is a deliberate and offensive misrepresentation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene and textual material",
+      "description": "The user is projected onto the overall scene and textual material of the meme, which presents a false and hateful narrative. The user is implicitly invited to view the image as a 'before' state within the context of the meme's false premise, and to contrast it with the 'after' state implied by the text. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the meme's structure and intent create a projection where the user is positioned as a viewer of this distorted historical analogy, potentially identifying with or being affected by the meme's hateful framing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses the term 'nazi fitness camp' to falsely and offensively equate modern fitness culture with the genocidal and oppressive practices of the Nazi regime, which is a direct attack on the historical memory and victims of the Holocaust. This is a hateful stereotype that dehumanizes individuals and trivializes historical trauma.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "fitness culture enthusiasts",
+      "description": "The meme targets individuals involved in or interested in fitness, bodybuilding, or physical transformation, as the visual content features muscular men in a fitness context and the text references 'body transformation within hours,' a common trope in fitness memes and clickbait. The audience is likely drawn to the sensationalized claim of rapid transformation, even if the context is hateful and misleading.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/81679.png",
+    "image_name": "81679.png",
+    "extraction_timestamp": "2025-12-19T14:15:02.538669",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

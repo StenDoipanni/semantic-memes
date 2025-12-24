@@ -1,0 +1,202 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: my-husband-told-me-to-make-him-a-sandwich; hasOverallIntent: Mysogynous; overall-intent-description: The meme depicts a woman with a bruised eye, implying she has been physically abused, and uses the text to frame her response to her husband's request for a sandwich as a sarcastic comeback. The visual juxtaposition of her bruised face with the text 'i would come back with a sandwich' is a common trope in misogynistic humor that equates domestic violence with a woman's 'comeback' or 'revenge' through food, reinforcing the harmful stereotype that women belong in the kitchen and are expected to be submissive or physically harmed in domestic settings. The meme relies on the visual of the bruise to imply abuse, which is a form of misogynistic content that normalizes or trivializes domestic violence by framing it as a punchline. The intent is to elicit laughter at the expense of a woman's suffering, which is a clear example of mysogynous intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "\"my husband told me to make him a sandwich\"",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_with_bruised_eye",
+      "label": "woman with bruised eye",
+      "description": "A woman with visible bruising under her left eye, appearing distressed or defeated, holding her chin with her hand. Her expression is somber and weary, suggesting she has endured physical harm. This is the lower half of the image, visually anchoring the meme's theme of domestic abuse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "sarcastic_response_scene",
+      "label": "woman delivering sarcastic comeback",
+      "description": "The scene depicts a woman with a bruised eye, who is visually positioned as the victim of domestic abuse, delivering a sarcastic comeback in response to her husband's request for a sandwich. The text overlays frame her response as a punchline, juxtaposing her physical suffering with a humorous, yet deeply problematic, retort. The composition places her in the foreground, emphasizing her emotional and physical state as central to the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype",
+      "label": "Misogynous Stereotype",
+      "description": "The stereotype that women 'belong in the kitchen' and are expected to be submissive, often portrayed as physically harmed or emotionally dependent in domestic settings. This is reinforced by the meme's framing of the woman's bruise as a punchline to her sarcastic comeback, trivializing domestic violence and reinforcing gendered power dynamics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "domestic_abuse_tradition",
+      "label": "Domestic Abuse as a Cultural Trope",
+      "description": "The implicit cultural understanding that domestic abuse is often normalized or trivialized in humor, particularly when it involves women. The meme uses the visual of a bruised eye to imply abuse, which is a common trope in misogynistic humor that frames suffering as a punchline or joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sarcastic_response_trope",
+      "label": "Sarcastic Comeback Trope",
+      "description": "The trope of using sarcasm or irony as a 'comeback' in response to an unreasonable or demeaning request, often used to mask deeper emotional or physical distress. In this meme, the sarcastic response 'I would come back with a sandwich' is used to imply the woman is being punished or abused, making the joke darkly ironic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "domestic_violence_normative_stereotype",
+      "label": "Normative Stereotype of Domestic Violence",
+      "description": "The stereotype that domestic violence is a private, often unspoken, and normalized part of relationships, particularly in patriarchal structures. The meme implies that the woman's suffering is accepted or expected, and her sarcastic response is framed as a 'comeback' rather than a plea for help or an expression of trauma.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gendered_power_dynamics",
+      "label": "Gendered Power Dynamics",
+      "description": "The implicit understanding that power imbalances in relationships are often gendered, with men holding dominant roles and women expected to be submissive or caretakers. The meme reinforces this by framing the husband's request as a trivial task and the woman's response as a sarcastic 'comeback' that implies she is being punished for not complying.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "sarcastic_irony",
+      "label": "sarcastic and ironic emotional expression",
+      "description": "The woman with the bruised eye delivers a sarcastic comeback, 'I would come back with a sandwich,' which is emotionally ironic given her physical state. The expression is not genuine amusement but a darkly humorous mask for pain or resignation, implying the husband's request is a form of abuse or control. The text overlays frame this as a punchline, reinforcing the emotional weight of the sarcasm.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The sarcastic comeback is mapped onto the woman with the bruised eye",
+      "description": "The text 'i would come back with a sandwich' is presented as a sarcastic response from the woman with the bruised eye. The visual of her bruised face is mapped onto this textual element to imply that her physical suffering is the 'comeback' to her husband's request, creating an analogical mapping where her pain is framed as a punchline. This mapping reinforces the misogynous stereotype that women are expected to be submissive and that their suffering is a form of 'revenge' or 'comeback' in domestic settings.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman with the bruised eye as the victim of domestic abuse",
+      "description": "The user is projected onto the visual material of the woman with the bruised eye, who is depicted as the victim of domestic abuse. The meme's overall intent and textual content frame her suffering as a punchline to her sarcastic comeback, which implies the user (as a viewer) is meant to identify with her position of victimhood and the dark humor of her response. The projection is implicit, not explicit with deictic pronouns, but the visual and textual framing invites the user to see themselves as the recipient of the joke — the one who might be in a similar situation or who is laughing at the absurdity of the 'comeback' while ignoring the abuse. The user is projected onto the scene of sarcastic response and the visual material of the bruised woman, who embodies the trope of the abused woman in a domestic setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme trivializes domestic violence by framing a woman's physical suffering as a punchline to a sarcastic comeback, reinforcing the harmful stereotype that women 'belong in the kitchen' and are expected to be submissive or physically harmed in domestic settings.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who consume and appreciate darkly humorous, misogynistic content that trivializes domestic violence by framing a woman's physical suffering as a punchline to a sarcastic comeback. This audience likely identifies with or enjoys internet memes that rely on gendered power dynamics, where women are expected to be submissive and 'belong in the kitchen,' and their distress or abuse is used for comedic effect. The meme appeals to those who find irony or sarcasm in situations involving domestic abuse, often normalizing or mocking the victim’s pain as a form of 'revenge' or 'comeback.' The audience may also be drawn to the visual trope of a bruised woman juxtaposed with text that implies her suffering is humorous, reinforcing the misogynous stereotype that women are emotionally or physically dependent in domestic settings.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/26391.png",
+    "image_name": "26391.png",
+    "extraction_timestamp": "2025-12-15T19:42:58.689323",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

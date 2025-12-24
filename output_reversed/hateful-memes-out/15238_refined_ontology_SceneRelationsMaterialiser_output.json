@@ -1,0 +1,36 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "honorable_burial_scene",
+      "participants": [
+        {
+          "entity": "people",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "people",
+          "relation": "gathered_around",
+          "to": "coffins"
+        },
+        {
+          "from": "people",
+          "relation": "stands_solemnly",
+          "to": "coffins"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":honorable_burial_scene :hasParticipant :people .",
+    ":people :gathered_around :coffins .",
+    ":people :stands_solemnly :coffins ."
+  ],
+  "triples_count": 3
+}

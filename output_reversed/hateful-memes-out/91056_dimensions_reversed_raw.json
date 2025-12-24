@@ -1,0 +1,194 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: ernie_leaves_letter_clues_about_what_type_of_minority_is_locked_in_his_oven; hasOverallIntent: Hateful; overall-intent-description: The image features the Muppet character Ernie, with overlaid text that reads: 'ernie leaves letter clues about what type of minority is locked in his oven.' This is a deliberately offensive and hateful meme that uses the character of Ernie (a white, non-disabled, non-LGBTQ+ male Muppet) to imply that a racial or ethnic minority is being metaphorically 'locked in an oven,' which is a violent and dehumanizing metaphor. The phrase 'locked in his oven' is a direct reference to the historical and ongoing antisemitic trope of 'the Jew in the oven,' which is a hateful and dangerous stereotype. The meme weaponizes this imagery to target a minority group, using the innocent, childlike character of Ernie to create a jarring and disturbing juxtaposition. The intent is to provoke discomfort and to spread hate by associating a protected group with a violent, antisemitic metaphor. The meme is not merely humorous or satirical; it is explicitly hateful and potentially harmful, as it promotes antisemitic imagery and stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "ernie leaves letter clues about",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Ernie",
+      "label": "Muppet character",
+      "description": "The central visual element is the Muppet character Ernie, recognizable by his orange skin, red nose, brown hair, and striped shirt. He is depicted in a close-up shot against a dark background, with his hand near his chin in a thoughtful or contemplative pose. Ernie is a well-known character from Sesame Street, typically portrayed as a cheerful, childlike, and non-threatening figure. His presence in this image creates a stark contrast with the hateful text overlay, which weaponizes his innocence to deliver a violent antisemitic message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "hateful_text_overlay_scene",
+      "label": "Ernie with hateful text overlay",
+      "description": "The scene features the Muppet character Ernie as the central visual element, positioned against a dark background. Overlaid on the image is hateful text that reads: 'ernie leaves letter clues about what type of minority is locked in his oven.' The text is directly related to Ernie, using his innocent, childlike appearance to deliver a violent antisemitic message. The spatial arrangement places Ernie centrally, with the text positioned above and below him, creating a jarring juxtaposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Ernie",
+          "relation": "isSubjectOf",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "conveys_hateful_message_about",
+          "to": "Ernie"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_stereotype",
+      "label": "Antisemitic Stereotype: 'Jew in the Oven'",
+      "description": "This is a historically rooted antisemitic trope that depicts Jews as being metaphorically or literally locked in an oven, often used to evoke imagery of persecution, genocide, or dehumanization. The meme weaponizes this stereotype by associating it with the Muppet character Ernie, creating a jarring and hateful juxtaposition. This trope is deeply tied to the Holocaust and has been used to incite hatred against Jewish people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "erased_context_of_ernie",
+      "label": "Ernie as a Non-Threatening, Innocent Character",
+      "description": "Ernie is a well-known, childlike, and non-threatening Muppet character from Sesame Street, typically associated with innocence, cheerfulness, and childlike curiosity. The meme exploits this perception by using his innocent appearance to contrast with the hateful message, thereby amplifying the shock and harm of the stereotype. This contrast is central to the meme’s intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "holocaust_denial_minimization",
+      "label": "Holocaust Denial or Minimization Themes",
+      "description": "The meme implicitly references the Holocaust by invoking the 'oven' metaphor, which is historically associated with the gas chambers of Nazi concentration camps. By using this imagery in a hateful context, the meme may be attempting to trivialize or minimize the horror of the Holocaust, which is a form of historical revisionism and antisemitic propaganda.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "puppet_master_imagery",
+      "label": "Puppet Master Imagery as Antisemitic Tropes",
+      "description": "The term 'puppet master' is an antisemitic trope that implies Jewish people control global events or media. While not explicitly stated, the use of a puppet (Ernie) in the meme may be a subtle reference to this trope, suggesting that the 'minority' being locked in the oven is being manipulated or controlled — a dangerous and dehumanizing stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "hateful_text_overlay_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_intent",
+      "label": "hateful emotional expression",
+      "description": "The emotion expressed is one of hatred and malice, conveyed through the hateful text overlay that weaponizes antisemitic stereotypes. The juxtaposition of Ernie's innocent, childlike appearance with the violent metaphor of being 'locked in his oven' creates a disturbing emotional effect intended to provoke discomfort and spread hate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_ernie_as_minority_in_oven",
+      "label": "Ernie is mapped as the minority locked in his oven",
+      "description": "The hateful text overlay explicitly states 'what type of minority is locked in his oven', directly mapping the visual entity Ernie to the role of 'minority locked in his oven'. This is a deliberate and harmful analogical mapping that weaponizes Ernie's innocent, childlike appearance to deliver an antisemitic stereotype. The text positions Ernie as the subject of the metaphor, creating a jarring juxtaposition where the non-threatening Muppet character is equated with a persecuted minority group in a violent, dehumanizing context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the hateful text overlay scene",
+      "description": "The user is projected onto the hateful text overlay scene, which contains the explicit antisemitic message 'ernie leaves letter clues about what type of minority is locked in his oven.' The meme does not contain any explicit deictic pronouns like 'me' or 'you,' but the user is implicitly projected onto the scene by being the recipient of the hateful message and the intended audience for the antisemitic stereotype being deployed. The user is expected to interpret the image and text as a provocative, hateful statement directed at them or society at large.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme explicitly uses antisemitic stereotypes by mapping the innocent Muppet character Ernie to the violent metaphor of being 'locked in his oven,' which is historically associated with the Holocaust and dehumanizes Jewish people. This is a direct attack on a protected group based on ethnicity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience that either does not recognize the antisemitic nature of the content or is deliberately seeking to provoke discomfort and spread hate by weaponizing historical stereotypes. The target audience likely includes individuals who are unfamiliar with or indifferent to the historical and cultural weight of the 'Jew in the oven' trope, and who may be drawn to the shock value of juxtaposing a childlike, innocent Muppet character with violent, hateful imagery. The meme’s intent is to normalize or trivialize antisemitic tropes, so its target audience may also include those who are susceptible to conspiracy theories, hate speech, or who enjoy dark humor that relies on dehumanizing metaphors.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/91056.png",
+    "image_name": "91056.png",
+    "extraction_timestamp": "2025-12-19T17:16:47.508507",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

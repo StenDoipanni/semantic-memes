@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful anger expressed through violent text",
+      "expressors": [
+        {
+          "entity": "piece_of_you_over_here_piece_of_you_over_there",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "piece_of_you_over_here_piece_of_you_over_there",
+          "relation": "emotionalRelationToEntity",
+          "to": "man"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_anger_expressed_through_violent_text :hasExpressor :piece_of_you_over_here_piece_of_you_over_there .",
+    ":piece_of_you_over_here_piece_of_you_over_there :emotionalRelationToEntity :man ."
+  ],
+  "triples_count": 2
+}

@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "solemn religious expression",
+      "expressors": [
+        {
+          "entity": "priest",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "priest",
+          "relation": "emotionalRelationToEntity",
+          "to": "man_being_blessed"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":solemn_religious_expression :hasExpressor :priest .",
+    ":priest :emotionalRelationToEntity :man_being_blessed ."
+  ],
+  "triples_count": 2
+}

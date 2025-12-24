@@ -1,0 +1,236 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: illegal_immigration_the_cowboy_way; hasOverallIntent: Hateful; overall-intent-description: The image depicts a man in cowboy attire holding a rifle, juxtaposed with the text 'illegal immigration the cowboy way' and 'we'll know them if they try to come back in!'. This visual and textual combination uses a violent, stereotypical 'cowboy' archetype to dehumanize and threaten individuals associated with undocumented immigration. The intent is to portray immigrants as dangerous, undesirable, and deserving of punitive force, which constitutes a hateful message targeting a specific ethnic/racial group (Latino/Hispanic communities) by invoking harmful stereotypes about immigration and criminality. The imagery of a gun and the threatening tone of the text are designed to incite fear and hostility toward immigrants, fitting the definition of a hateful meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "illegal immigration the cowboy way",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "a man in cowboy attire",
+      "description": "A middle-aged to older man with a weathered face, wearing a wide-brimmed cowboy hat, a leather jacket, and a red bandana around his neck. He has a mustache and goatee, and is holding a rifle over his shoulder. His expression is stern and intense, looking slightly off to the side. The lighting is dramatic, highlighting his face and upper body against a black background, emphasizing his rugged appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "threatening_cowboy_pose",
+      "label": "man holding rifle in threatening stance",
+      "description": "A man dressed in cowboy attire, including a hat and leather jacket, holds a rifle over his shoulder in a stern, intense pose. The dramatic lighting and black background emphasize his rugged appearance and the threatening nature of the scene, which is reinforced by the text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_latino_hispanic_stereotypes",
+      "label": "Anti-Latino/Hispanic Stereotypes",
+      "description": "The meme relies on the stereotype that Latino/Hispanic individuals are associated with illegal immigration, criminality, and are perceived as a threat to national security. This stereotype is used to dehumanize and incite fear toward this group, portraying them as dangerous and undeserving of compassion or legal protection. The cowboy imagery reinforces a violent, punitive, and border-enforcing narrative that is rooted in historical and contemporary racialized discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cowboy_archetype",
+      "label": "Cowboy Archetype",
+      "description": "The cowboy is a cultural symbol in American history associated with rugged individualism, frontier justice, and law enforcement. In modern usage, especially in political and media contexts, the cowboy is often invoked to represent a violent, punitive, and exclusionary form of 'order'—particularly in relation to immigration and border control. This archetype is used here to frame immigration enforcement as a violent, vigilant, and morally justified act, which is a distortion of historical reality and a tool for racialized fearmongering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "illegal_immigration",
+      "label": "Illegal Immigration",
+      "description": "The term 'illegal immigration' refers to the act of entering or residing in a country without legal authorization. This concept is central to the meme’s message, which frames immigration as a criminal act that must be punished. The meme uses this term to justify the violent imagery and rhetoric, implying that those who enter illegally are inherently dangerous and must be deterred or eliminated, which is a politically charged and often racially coded narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "border_crossing_imagery",
+      "label": "Border Crossing Imagery",
+      "description": "The phrase 'border crossing' is a common trope in anti-immigrant rhetoric, often used to depict immigrants as trespassers or invaders. This imagery is used in the meme to reinforce the idea that immigrants are violating national boundaries and must be stopped by force. The cowboy with a rifle symbolizes this enforcement, and the text 'we'll know them if they try to come back in!' implies a surveillance and punitive system targeting those who cross the border illegally.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "criminality_associations",
+      "label": "Criminality Associations",
+      "description": "The meme implicitly links immigrants to criminal behavior, which is a common and harmful stereotype. This association is used to justify the violent imagery and the threat of punishment. The cowboy with a rifle is a visual metaphor for law enforcement and punishment, and the text 'we'll know them if they try to come back in!' suggests that immigrants are dangerous and must be monitored and punished if they return, reinforcing the idea that they are inherently criminal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "punitive_immigration_policy",
+      "label": "Punitive Immigration Policy",
+      "description": "The meme reflects and promotes the idea of immigration as a criminal offense that must be punished, rather than a humanitarian or legal issue. This policy framework is rooted in the belief that immigrants are a threat to national security and must be controlled through force and surveillance. The cowboy imagery and the text 'we'll know them if they try to come back in!' are used to justify this punitive approach, which is often associated with xenophobic and racist ideologies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racialized_fearmongering",
+      "label": "Racialized Fearmongering",
+      "description": "The meme uses racialized language and imagery to incite fear and hostility toward Latino/Hispanic communities. The cowboy archetype and the violent imagery are used to portray immigrants as dangerous and undesirable, which is a form of racialized fearmongering. This tactic is often used to justify discriminatory policies and to dehumanize a specific ethnic group, making them targets of violence and exclusion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "threat",
+      "label": "threatening emotion",
+      "description": "The man's stern, intense facial expression, combined with his posture holding a rifle over his shoulder, conveys a clear sense of threat and intimidation. His gaze is fixed and unwavering, suggesting a readiness to enforce punishment or violence. This is reinforced by the dramatic lighting that highlights his rugged, menacing appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Cowboy archetype mapped to enforcement of illegal immigration",
+      "description": "The visual entity 'threatening_cowboy_pose' is mapped onto the textual concept 'illegal immigration the cowboy way'. The cowboy, as a symbol of frontier justice and punitive enforcement, is analogically mapped to the act of illegal immigration, suggesting that immigration enforcement should be carried out in a violent, cowboy-like manner. This mapping reinforces the stereotype that immigration enforcement requires a violent, vigilant, and morally justified act, which is a distortion of historical reality and a tool for racialized fearmongering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the threatening cowboy pose as an agent of enforcement",
+      "description": "The user is implicitly projected onto the visual entity 'threatening_cowboy_pose' (the man in cowboy attire holding a rifle). This projection occurs because the meme frames the user as the one who would enact or endorse the violent, punitive immigration policy implied by the cowboy imagery and text. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the scene and text create a direct identification: the user is the one who 'knows them' and who would 'come back in' with force, making the cowboy pose a visual embodiment of the user's imagined role as an enforcer. The user is projected onto the scene as the agent of the violent, border-enforcing action.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses violent imagery and stereotypical 'cowboy' archetypes to dehumanize and threaten individuals associated with undocumented immigration, portraying them as dangerous and deserving of punitive force. This constitutes a hateful message targeting Latino/Hispanic communities by invoking harmful stereotypes about immigration and criminality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold or are influenced by anti-Latino/Hispanic stereotypes, particularly those who support punitive immigration policies and racialized fearmongering. The meme is designed to resonate with people who view undocumented immigrants as a threat to national security and who endorse violent, vigilant enforcement methods, often rooted in xenophobic and racist ideologies. The cowboy archetype and the violent imagery are used to appeal to those who associate immigration enforcement with frontier justice and moral righteousness, thereby reinforcing their existing biases and fears toward Latino/Hispanic communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/27548.png",
+    "image_name": "27548.png",
+    "extraction_timestamp": "2025-12-15T20:08:03.984871",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

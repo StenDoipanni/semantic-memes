@@ -1,0 +1,64 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "showing_the_kids_you_can_do_it_too",
+      "participants": [
+        {
+          "entity": "Prince_Harry",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "child",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "adults_in_background",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Prince_Harry",
+          "relation": "encouraging_interaction",
+          "to": "child"
+        },
+        {
+          "from": "Prince_Harry",
+          "relation": "interacting_with",
+          "to": "child"
+        },
+        {
+          "from": "child",
+          "relation": "receiving_encouragement_from",
+          "to": "Prince_Harry"
+        },
+        {
+          "from": "adults_in_background",
+          "relation": "observing",
+          "to": "Prince_Harry"
+        },
+        {
+          "from": "adults_in_background",
+          "relation": "observing",
+          "to": "child"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":showing_the_kids_you_can_do_it_too :hasParticipant :Prince_Harry .",
+    ":showing_the_kids_you_can_do_it_too :hasParticipant :child .",
+    ":showing_the_kids_you_can_do_it_too :hasParticipant :adults_in_background .",
+    ":Prince_Harry :encouraging_interaction :child .",
+    ":Prince_Harry :interacting_with :child .",
+    ":child :receiving_encouragement_from :Prince_Harry .",
+    ":adults_in_background :observing :Prince_Harry .",
+    ":adults_in_background :observing :child ."
+  ],
+  "triples_count": 8
+}

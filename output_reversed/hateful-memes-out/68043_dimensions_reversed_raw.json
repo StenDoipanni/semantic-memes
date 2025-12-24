@@ -1,0 +1,190 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: plays_uno_steals_green_cards; hasOverallIntent: Hateful; overall-intent-description: The image depicts a man holding Mexican flags, with text overlaying the image that reads 'plays uno' and 'steals all the green cards.' This meme uses a visual of a Mexican national in a celebratory or patriotic context to make a derogatory and racially charged analogy. The phrase 'steals all the green cards' is a direct reference to immigration policy, where 'green cards' are permanent resident visas. The meme implies that Mexicans are 'stealing' these visas, which is a harmful stereotype that aligns with anti-Latino/hispanic tropes, particularly those involving immigration status assumptions and job theft accusations. The juxtaposition of the image of a proud Mexican citizen with the text creates a hateful message that attacks Mexican immigrants and reinforces negative stereotypes about their role in the U.S. immigration system. This is a clear example of hateful content targeting a specific ethnic group based on protected characteristics, specifically nationality and ethnicity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "plays uno",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with gray hair, wearing a white polo shirt, holding Mexican flags and smiling. He is the central figure in the image, positioned in the foreground.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "patriotic_display",
+      "label": "man_displaying_mexican_flags",
+      "description": "A man is prominently featured in the foreground, holding and waving Mexican flags with a joyful expression, set against a backdrop of a clear blue sky and urban architecture. The scene conveys a sense of national pride or celebration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_latino_hispanic_stereotypes",
+      "label": "Anti-Latino/Hispanic Stereotypes",
+      "description": "The meme relies on harmful stereotypes that portray Latinos, particularly Mexicans, as immigrants who 'steal' jobs and visas, which is a common trope used to dehumanize and demonize this group. This stereotype is used to justify xenophobic policies and attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "green_cards",
+      "label": "Green Cards",
+      "description": "Green cards are U.S. permanent resident visas. The phrase 'steals all the green cards' is a direct reference to immigration policy and implies that immigrants are taking jobs or resources from native-born citizens, which is a common xenophobic trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "uno_card_game",
+      "label": "UNO Card Game",
+      "description": "UNO is a popular card game where players take turns playing cards, and 'playing UNO' is a metaphor for engaging in a game or activity. In this meme, it is used to imply that Mexicans are 'playing' the immigration system in a way that is seen as unfair or exploitative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mexican_nationality",
+      "label": "Mexican Nationality",
+      "description": "The image features a man holding Mexican flags, which is a visual representation of Mexican nationality and pride. The meme uses this visual to associate Mexican identity with the negative stereotype of 'stealing' green cards, which is a form of racial and national stereotyping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "patriotic_display",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "immigration_policy",
+      "label": "Immigration Policy",
+      "description": "The meme references U.S. immigration policy, specifically the concept of green cards, which are permanent resident visas. The phrase 'steals all the green cards' is a direct reference to immigration policy and implies that immigrants are taking jobs or resources from native-born citizens, which is a common xenophobic trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful expression",
+      "description": "The man in the image is smiling broadly with an open mouth, conveying a sense of joy and pride. His posture and the way he holds the flags suggest enthusiasm and celebration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The man is mapped as 'plays uno'",
+      "description": "The top text overlay 'plays uno' is mapped onto the visual entity 'man'. This mapping implies that the man, who is depicted holding Mexican flags with a joyful expression, is being analogically represented as someone who 'plays uno'. This is a metaphorical projection where the man's celebratory action is equated with playing the card game UNO, which in this context is used to imply that Mexicans are engaging in a game-like or manipulative way with the immigration system.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man holding Mexican flags",
+      "description": "The user is projected onto the visual material of the man holding Mexican flags, as the meme uses his image to represent the stereotype of Mexicans 'playing UNO' and 'stealing green cards'. The user identifies with or imagines themselves as the subject of the stereotype being depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Mexican nationals based on protected characteristics (nationality and ethnicity) by implying they are 'stealing' green cards, which is a harmful stereotype that dehumanizes and demonizes this group. This aligns with anti-Latino/Hispanic tropes and is a clear example of hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who hold anti-Latino/Hispanic sentiments, particularly those who support xenophobic narratives around immigration policy. The meme is designed to resonate with people who believe in the stereotype that Mexicans 'steal' green cards and jobs, often rooted in political or cultural attitudes that favor native-born citizens over immigrants. The visual of a proud Mexican citizen juxtaposed with the hateful text is intended to provoke or reinforce these prejudices among those who already subscribe to such tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/68043.png",
+    "image_name": "68043.png",
+    "extraction_timestamp": "2025-12-16T09:13:04.961269",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

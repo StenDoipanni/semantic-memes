@@ -1,0 +1,179 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "dimension_1",
+      "label": "the overallintent",
+      "description": "The image shows an older Black man laughing joyfully, with text overlaid that reads ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "i'm so old",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "older Black man",
+      "description": "A bald, older Black man wearing a yellow polo shirt, laughing joyfully with his head tilted back and hands clasped together. He is the central visual focus of the image against a plain light blue background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "laughing_man_scene",
+      "label": "man laughing with text overlay",
+      "description": "An older Black man is laughing joyfully with his head tilted back and hands clasped together, positioned centrally against a plain light blue background. Text overlays describe a humorous reflection on aging.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "is_laughing_at",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "background_knowledge_1",
+      "label": "Historical usage of 'eat my ass' as an insult",
+      "description": "The phrase 'eat my ass' was historically used as a vulgar insult in English-speaking cultures, particularly in the 20th century, to express contempt or anger. The meme references a generational memory of this phrase being used as an insult, not as a literal food offer, which requires knowledge of historical language usage and social norms around profanity and insult.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "laughing_man_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "background_knowledge_2",
+      "label": "Generational memory and aging stereotypes",
+      "description": "The meme relies on the concept of generational memory — the idea that older people recall and reflect on cultural expressions and social norms from their youth. This requires understanding of how language and social behavior evolve over time, and how aging is culturally framed as a period of reflection on past norms. The phrase 'I'm so old' is a common self-deprecating expression tied to aging.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "laughing_man_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "background_knowledge_3",
+      "label": "Cultural context of racialized language and stereotypes",
+      "description": "The meme's humor is derived from the contrast between the man's current age and the crude, potentially racially charged nature of the phrase 'eat my ass' as an insult. While the phrase itself is not inherently racial, its use in this context may implicitly reference historical racial stereotypes that have been used to demean Black people, such as the 'watermelon and fried chicken' stereotype or the 'animalistic' caricature. The meme's humor may unintentionally rely on or echo these stereotypes, which are part of the broader cultural context of racialized language.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "laughing_man_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful laughter",
+      "description": "The man is laughing heartily with his head tilted back, eyes closed, and hands clasped together, conveying a strong sense of joy and amusement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man is mapped as 'I'm so old'",
+      "description": "The top text 'i'm so old' is directly mapped onto the visual entity 'man', indicating that the man represents the speaker of the phrase 'I'm so old'. This is a direct analogical mapping where the visual entity (the man) is identified as the subject of the textual statement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man as the speaker of 'I'm so old'",
+      "description": "The user is projected onto the visual entity 'man' because the top text 'i'm so old' is directly mapped onto him, implying the user identifies with or imagines themselves as the speaker of this statement. The humor and self-deprecating tone invite the viewer to project their own experience of aging onto the man's expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_2",
+      "label": "User projected onto the text as the speaker of the generational memory",
+      "description": "The user is projected onto the textual material 'i remember telling people to eat my ass as an insult not a snack offer' because the meme invites the viewer to identify with the speaker of this generational memory. The phrase 'I remember' creates a direct address to the viewer, implying 'you' or 'I' (the user) are the one recalling this past usage of the phrase, thus projecting the user onto the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme references a generational memory of using 'eat my ass' as an insult, which may unintentionally echo historical racial stereotypes associated with Black people, such as animalistic caricatures. While the phrase itself is not inherently racial, its use in this context may implicitly reference or rely on these stereotypes, which are part of the broader cultural context of racialized language. This can be perceived as harmful due to its potential to reinforce or normalize offensive historical associations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "older adults",
+      "description": "The meme targets older adults who can relate to generational memory and the evolution of language and social norms. The humor relies on recalling a time when phrases like 'eat my ass' were used as insults, which is a shared experience for those who lived through that era.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/19362.png",
+    "image_name": "19362.png",
+    "extraction_timestamp": "2025-12-15T17:27:10.554393",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

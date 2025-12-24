@@ -1,0 +1,226 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: enjoying_a_warm_cup_on_a_cold_day; hasOverallIntent: non-toxic-positive; overall-intent-description: The scene depicts a woman comfortably sitting in the bed of a pickup truck by a lake on a cold day, holding a warm beverage and wearing cozy winter attire. There are no elements of toxicity present in the image or text. The meme's intent is to evoke feelings of warmth, comfort, and simple pleasure in contrast to the cold environment, using the juxtaposition of the cozy human activity with the chilly natural setting to create a relatable and soothing visual metaphor for enjoying small comforts during harsh weather. It does not target any specific group or community with harmful, hateful, or abusive content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "enjoying a warm cup on a cold day",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman sitting in the bed of a pickup truck, wearing a white knit beanie with a pom-pom, a cream-colored sweater, blue jeans, and hiking boots. She is holding a small object, likely a phone or a cup, and appears to be looking down at it. Her attire and posture suggest she is enjoying a moment of comfort in a cold environment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "enjoying_warm_beverage_outdoors",
+      "label": "woman enjoying a warm beverage in a cold outdoor setting",
+      "description": "A woman is sitting in the bed of a pickup truck by a lake on a cold day, holding a warm beverage and wearing cozy winter attire. The scene conveys comfort and warmth in contrast to the cold environment, with the woman appearing relaxed and content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "is_sitting_in",
+          "to": "pickup_truck"
+        },
+        {
+          "from": "woman",
+          "relation": "is_holding",
+          "to": "cup"
+        },
+        {
+          "from": "woman",
+          "relation": "is_wearing",
+          "to": "white_knit_beanie"
+        },
+        {
+          "from": "woman",
+          "relation": "is_wearing",
+          "to": "cream_colored_sweater"
+        },
+        {
+          "from": "woman",
+          "relation": "is_wearing",
+          "to": "blue_jeans"
+        },
+        {
+          "from": "woman",
+          "relation": "is_wearing",
+          "to": "hiking_boots"
+        },
+        {
+          "from": "woman",
+          "relation": "is_by",
+          "to": "lake"
+        },
+        {
+          "from": "woman",
+          "relation": "is_on",
+          "to": "cold_day"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cold_weather_comfort_concept",
+      "label": "Cold Weather Comfort Concept",
+      "description": "The meme relies on the cultural understanding that enjoying a warm beverage in cold weather is a universally relatable and comforting experience. This concept is rooted in human physiology and social behavior — warmth is associated with safety, coziness, and emotional well-being, especially in contrast to harsh environments. The image evokes this by juxtaposing the woman’s warm attire and beverage with the cold, open landscape.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pickup_truck_camping_culture",
+      "label": "Pickup Truck Camping Culture",
+      "description": "The scene of sitting in the bed of a pickup truck by a lake is a common trope in outdoor recreation and 'van life' culture. It implies a sense of freedom, adventure, and self-sufficiency, often associated with road trips, camping, or remote outdoor living. This cultural context helps interpret the woman’s relaxed posture and the setting as intentional and meaningful, not accidental.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "warm_beverage_as_social_symbol",
+      "label": "Warm Beverage as Social Symbol",
+      "description": "A warm cup (often coffee, tea, or hot chocolate) is a symbol of comfort, hospitality, and social ritual. It is frequently used in media and culture to represent moments of pause, reflection, or simple pleasure. The meme uses this symbol to convey emotional warmth and contentment, which is culturally understood as a positive and soothing experience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "outdoor_winter_activity_stereotype",
+      "label": "Outdoor Winter Activity Stereotype",
+      "description": "The image subtly references the stereotype of people enjoying outdoor winter activities — such as hiking, camping, or fishing — despite the cold. This stereotype is often associated with rugged individualism, resilience, and a love for nature. The woman’s attire and setting align with this trope, which is culturally recognized and may evoke positive associations of adventure and self-reliance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cozy_winter_attire_cultural_meaning",
+      "label": "Cozy Winter Attire Cultural Meaning",
+      "description": "The woman’s clothing — knit beanie, sweater, jeans, and boots — is culturally coded as 'cozy' and 'warm.' This attire is not just functional but also symbolic of comfort, safety, and domesticity. It reinforces the meme’s message of finding warmth and peace in a cold world, a concept deeply embedded in Western cultural aesthetics and advertising.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contentment",
+      "label": "contented emotional state",
+      "description": "The woman is sitting relaxed in the truck bed, wearing cozy winter attire, and holding a warm beverage, suggesting she is enjoying a peaceful, satisfying moment. Her posture and focused gaze imply a state of calm satisfaction and comfort.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The woman is mapped as 'enjoying a warm cup on a cold day'",
+      "description": "The text 'enjoying a warm cup on a cold day' is an analogical mapping that describes the visual scene. The woman in the image, sitting in the truck bed by a cold lake, is depicted as the subject performing the action of enjoying a warm beverage in a cold environment. The text explicitly labels her activity and setting, creating a direct mapping between the textual description and the visual material. This mapping is supported by her cozy attire, the presence of a thermos (implying a warm drink), and the cold, open landscape in the background, which together instantiate the concept described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of enjoying a warm beverage in a cold outdoor setting",
+      "description": "The user is projected onto the scene 'enjoying_warm_beverage_outdoors' where the woman is depicted sitting in the bed of a pickup truck by a lake on a cold day, holding a warm beverage and wearing cozy winter attire. This projection is implicit, as the meme evokes a universal, relatable experience of finding comfort and warmth in a cold environment. The user identifies with the emotional state and activity described, projecting themselves onto the woman’s experience of simple pleasure and coziness. There are no explicit deictic pronouns like 'me' or 'you', but the scene and text create an implicit 'you' by inviting the viewer to imagine themselves in the same situation, enjoying a warm cup on a cold day.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "woman enjoying a warm beverage in a cold outdoor setting",
+      "description": "The target community is individuals who appreciate or engage in outdoor recreational activities, particularly those who enjoy camping, road trips, or van life culture. The image and text evoke a sense of freedom, adventure, and self-sufficiency associated with these communities. The cozy winter attire and the act of enjoying a warm drink in a cold environment also appeal to a broader audience that values comfort, simplicity, and the beauty of nature, especially during colder seasons. The meme is designed to resonate with people who find joy in small, simple pleasures and who identify with the cultural trope of rugged individualism and outdoor living.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/89542.png",
+    "image_name": "89542.png",
+    "extraction_timestamp": "2025-12-19T16:51:36.006529",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

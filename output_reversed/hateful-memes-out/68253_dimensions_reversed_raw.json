@@ -1,0 +1,201 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: free_blanket; hasOverallIntent: Harmful; overall-intent-description: The image depicts a dog wearing a Native American headdress, juxtaposed with the text 'free blanket' and 'maybe white man not so bad after all.' This visual and textual combination is a racist trope that appropriates and mocks Native American culture. The headdress is a sacred and culturally significant item, and its use in this context trivializes it. The meme's intent is to mock Native Americans by implying they are somehow 'grateful' or 'accepting' of white colonialism, which is a harmful and offensive stereotype. It perpetuates the idea that Native Americans are inferior or subservient, and it reinforces historical narratives of exploitation and cultural erasure. The meme is harmful because it normalizes and spreads racist imagery and language, potentially causing emotional distress to Native American individuals and communities, and it contributes to the ongoing marginalization and stereotyping of Indigenous peoples.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "free blanket",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "dog",
+      "label": "central subject",
+      "description": "A dog, likely a pit bull or similar breed, is the central visual element. It is looking directly at the camera with a somewhat serious or surprised expression. The dog's face is in focus, and its body is partially visible. It is wearing a Native American headdress, which is a significant and culturally sensitive object.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "dog_wearing_headdress",
+      "label": "dog wearing Native American headdress",
+      "description": "A dog, likely a pit bull or similar breed, is the central visual element. It is looking directly at the camera with a somewhat serious or surprised expression. The dog's face is in focus, and its body is partially visible. It is wearing a Native American headdress, which is a significant and culturally sensitive object.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Native_American_headdress_stereotype",
+      "label": "Native American headdress stereotype",
+      "description": "The headdress worn by the dog is a sacred and culturally significant item in many Native American tribes, often used in ceremonial contexts. Its use in this meme trivializes its importance and perpetuates a harmful stereotype that reduces Native American identity to a costume or prop for mockery. This stereotype is rooted in historical appropriation and colonial-era caricatures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dog_wearing_headdress",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Colonialism_and_cultural_appropriation",
+      "label": "Colonialism and cultural appropriation",
+      "description": "The meme references the historical context of colonialism, where Native American lands and cultures were forcibly taken by European settlers. The phrase 'free blanket' alludes to the historical practice of giving blankets to Native Americans as a form of 'gift' or 'bribe' to encourage assimilation or surrender of land, which was often a coercive tactic. The meme uses this to imply that Native Americans are 'grateful' for white colonialism, which is a harmful and offensive stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Racist_trope_of_Native_American_gratitude",
+      "label": "Racist trope of Native American gratitude",
+      "description": "This trope suggests that Native Americans are somehow 'grateful' or 'accepting' of white colonialism, implying they are inferior or subservient. It is a harmful stereotype that reinforces historical narratives of exploitation and cultural erasure, and it contributes to the ongoing marginalization and stereotyping of Indigenous peoples.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Historical_context_of_Native_American_land_dispossession",
+      "label": "Historical context of Native American land dispossession",
+      "description": "The meme implicitly references the historical context of Native American land dispossession, where Native American tribes were forcibly removed from their ancestral lands through treaties, wars, and policies like the Indian Removal Act. The 'free blanket' trope is a metaphor for the coercive nature of these policies, which were often used to encourage Native Americans to surrender their land or assimilate into white society.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Stereotype_of_Native_Americans_as_savages_or_uncivilized",
+      "label": "Stereotype of Native Americans as 'savages' or 'uncivilized'",
+      "description": "This stereotype, rooted in colonial-era propaganda, portrayed Native Americans as 'uncivilized' or 'savage' to justify their subjugation and displacement. The meme uses this stereotype to imply that Native Americans are somehow 'less than' white people, which is a harmful and offensive trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dog_wearing_headdress",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Racist_trope_of_Native_Americans_as_grateful_for_white_colonialism",
+      "label": "Racist trope of Native Americans as 'grateful' for white colonialism",
+      "description": "This trope suggests that Native Americans are somehow 'grateful' or 'accepting' of white colonialism, implying they are inferior or subservient. It is a harmful stereotype that reinforces historical narratives of exploitation and cultural erasure, and it contributes to the ongoing marginalization and stereotyping of Indigenous peoples.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_contempt",
+      "label": "mocking contempt expressed through visual and textual elements",
+      "description": "The image combines a dog wearing a Native American headdress with the text 'free blanket' and 'maybe white man not so bad after all' to convey a mocking and contemptuous attitude toward Native American culture and history. The visual of the dog in the headdress is used to trivialize and caricature Native American identity, while the text reinforces a demeaning stereotype that implies Native Americans are grateful for colonial oppression. This combination expresses contempt for Indigenous peoples and their cultural heritage.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "dog is a 'free blanket' recipient",
+      "description": "The text 'free blanket' is mapped onto the visual entity 'dog_wearing_headdress'. The meme implies that the dog (representing a Native American) is receiving a 'free blanket' (a symbol of colonial 'gifts' or coercion), creating an analogical mapping where the dog is portrayed as the recipient of this symbolic offering. This mapping is part of the racist trope that portrays Native Americans as grateful for colonial oppression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the dog wearing a Native American headdress",
+      "description": "The user is projected onto the visual material of the dog wearing the headdress, which serves as a stand-in for a Native American person in the meme's racist trope. The user identifies with or imagines themselves as the recipient of the 'free blanket' (a symbol of colonial coercion), thereby projecting their own perspective onto the dog's role in the meme's narrative. This projection is implicit, as there are no explicit deictic pronouns like 'me' or 'you', but the meme's structure invites the user to identify with the dog as the subject of the colonial 'gift' and the 'grateful' recipient.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme depicts a dog wearing a Native American headdress, juxtaposed with the text 'free blanket' and 'maybe white man not so bad after all.' This visual and textual combination is a racist trope that appropriates and mocks Native American culture. The headdress is a sacred and culturally significant item, and its use in this context trivializes it. The meme's intent is to mock Native Americans by implying they are somehow 'grateful' or 'accepting' of white colonialism, which is a harmful and offensive stereotype. It perpetuates the idea that Native Americans are inferior or subservient, and it reinforces historical narratives of exploitation and cultural erasure. The meme is harmful because it normalizes and spreads racist imagery and language, potentially causing emotional distress to Native American individuals and communities, and it contributes to the ongoing marginalization and stereotyping of Indigenous peoples.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with or find humor in racist stereotypes and historical appropriation, particularly those who may not recognize the offensive nature of the Native American headdress and the 'free blanket' trope. The meme is designed to appeal to a community that finds amusement in mocking Indigenous peoples by implying their 'gratitude' for colonialism, often through the lens of cultural appropriation and historical ignorance. This audience may include people who engage with internet humor that relies on offensive tropes, and who may not be aware of the harm caused by such imagery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/68253.png",
+    "image_name": "68253.png",
+    "extraction_timestamp": "2025-12-16T09:16:27.229205",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

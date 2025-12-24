@@ -1,0 +1,218 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: celebrating_the_weekend_like; hasOverallIntent: Harmful; overall-intent-description: The image depicts two Black children joyfully playing in a wet, possibly urban, environment, with one child extending arms in a celebratory or playful gesture. The overlaid text 'celebrating the weekend like' is juxtaposed with the scene to imply that the children are celebrating in a manner that is either primitive, unrefined, or comically 'basic' — a common trope in memes that reduces complex human joy to simplistic or stereotypical imagery. This framing can be interpreted as subtly reinforcing harmful stereotypes by equating unadorned, spontaneous joy with a lack of sophistication or cultural refinement. While not overtly abusive or hateful, the meme risks perpetuating a narrative that exoticizes or infantilizes Black children’s expressions of happiness, potentially contributing to a broader cultural pattern of devaluing their experiences. The intent is to create humor through contrast, but the visual and textual combination may unintentionally normalize or trivialize the children’s joy while reinforcing a racialized lens of 'otherness' in the context of leisure and celebration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "celebrating the weekend like",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "child_1",
+      "label": "naked child with arms outstretched",
+      "description": "A Black child, shirtless and barefoot, stands on a wet stone surface with arms spread wide in a joyful or celebratory pose. The child is smiling broadly, conveying a sense of uninhibited happiness. This child is the central focus of the image and is positioned in the foreground.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "celebrating_children",
+      "label": "children_celebrating_in_water",
+      "description": "A scene depicting two Black children joyfully interacting in a wet, urban environment. One child, child_1, is in the foreground with arms outstretched in a celebratory pose, while the second child is partially visible in the background, holding a bucket. The scene conveys spontaneous, uninhibited happiness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "child_1",
+          "relation": "has_arm_reach_to",
+          "to": "child_2"
+        },
+        {
+          "from": "child_1",
+          "relation": "is_celebrating_with",
+          "to": "child_2"
+        },
+        {
+          "from": "child_2",
+          "relation": "is_holding",
+          "to": "bucket"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_primitive_celebration",
+      "label": "Anti-Black Stereotype: Primitive or Unrefined Celebration",
+      "description": "The meme relies on the stereotype that Black children’s spontaneous, uninhibited joy (like dancing or playing in water) is 'primitive' or 'basic' compared to more 'refined' or 'civilized' forms of celebration. This trope reduces complex human emotion to simplistic, culturally exoticized imagery, often implying a lack of sophistication or cultural refinement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "celebrating_children",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_infantilization",
+      "label": "Anti-Black Stereotype: Infantilization of Black Children",
+      "description": "The image and text together may imply that the children’s joy is childish or naive, reinforcing the stereotype that Black children are perpetually 'in the moment' or 'unaware' of social norms, which infantilizes them and devalues their experiences as adults or as members of a complex culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "celebrating_children",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_exoticization",
+      "label": "Anti-Black Stereotype: Exoticization of Black Joy",
+      "description": "The meme frames the children’s celebration as 'other' or exotic — a common trope in media that portrays Black joy as something foreign or 'authentic' in a way that is not aligned with mainstream Western norms. This exoticization can be used to justify or normalize the reduction of their experiences to simplistic or stereotypical imagery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "celebrating_children",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_racialized_leisure",
+      "label": "Anti-Black Stereotype: Racialized Lens on Leisure and Celebration",
+      "description": "The meme implicitly reinforces a racialized lens that views Black leisure and celebration as inherently less sophisticated or culturally inferior. This stereotype is often used to devalue Black experiences and to justify the portrayal of Black joy as 'basic' or 'unrefined' in contrast to 'civilized' or 'refined' forms of celebration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "celebrating_children",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_water_play",
+      "label": "Anti-Black Stereotype: Water Play as Primitive or Unrefined",
+      "description": "The image of children playing in water, particularly in an urban setting, may be interpreted through the lens of stereotypes that associate Black children with 'primitive' or 'unrefined' play, often implying a lack of access to 'proper' recreational facilities or a preference for 'basic' forms of entertainment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "celebrating_children",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful celebration emotion",
+      "description": "The child in the foreground is smiling broadly with arms outstretched, conveying a sense of uninhibited, spontaneous joy and celebration. This expression is central to the image and is the primary emotional cue.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Children are mapped as 'celebrating the weekend like'",
+      "description": "The text 'celebrating the weekend like' is juxtaposed with the visual of two Black children joyfully playing in water. The mapping implies that the children’s spontaneous, uninhibited celebration (as expressed through their joyful poses and play) is being equated with how one might celebrate the weekend — specifically, in a manner that is perceived as primitive, unrefined, or culturally exotic. This mapping is central to the meme’s intent and relies on the visual material to instantiate the textual claim.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the celebratory scene of Black children",
+      "description": "The user is projected onto the visual and textual scene of two Black children joyfully playing in water, with the text 'celebrating the weekend like' implying that the user's own weekend celebration is being compared to or equated with the children's spontaneous, uninhibited joy. This projection is implicit, as the meme invites the viewer to imagine themselves in the children's position or to see their own weekend celebration through the lens of the children's 'basic' or 'primitive' play. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the framing of the meme creates a direct identification or comparison, projecting the user's experience onto the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme perpetuates harmful stereotypes by equating the spontaneous joy of Black children with a 'primitive' or 'basic' form of celebration, which can devalue their experiences and reinforce racialized narratives about leisure and cultural refinement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is likely individuals who are familiar with and engage with internet meme culture, particularly those who appreciate or enjoy humor derived from cultural stereotypes, especially those involving racialized portrayals of Black joy and leisure. The meme’s intent to juxtapose the children’s spontaneous celebration with the phrase 'celebrating the weekend like' suggests it is designed for an audience that finds humor in the contrast between 'primitive' or 'unrefined' expressions of happiness and more 'civilized' or 'refined' forms of celebration. This audience may include users who are aware of or unconsciously reinforce anti-Black stereotypes, such as the infantilization, exoticization, or racialized lens on leisure, which are central to the meme’s harmful intent. The meme’s appeal likely stems from its ability to evoke a sense of 'relatable' or 'comedic' absurdity through the lens of racialized tropes, targeting those who consume content that relies on such stereotypes for humor, even if unintentionally.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/80613.png",
+    "image_name": "80613.png",
+    "extraction_timestamp": "2025-12-19T14:00:01.662479",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,34 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "party_scene",
+      "participants": [
+        {
+          "entity": "young_adults",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": []
+    },
+    {
+      "scene": "workshop_scene",
+      "participants": [
+        {
+          "entity": "man_with_goatee",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": []
+    }
+  ],
+  "triples": [
+    ":party_scene :hasParticipant :young_adults .",
+    ":workshop_scene :hasParticipant :man_with_goatee ."
+  ],
+  "triples_count": 2
+}

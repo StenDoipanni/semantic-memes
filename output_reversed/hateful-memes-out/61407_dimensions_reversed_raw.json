@@ -1,0 +1,188 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image features a photo of actor Christopher Lee with overlaid text reading \"i'll take shit that ain't ever gonna happen for $500.\" The meme uses Lee's serious, slightly amused facial expression to mock the absurdity of someone agreeing to take a ridiculous or impossible deal for a small amount of money. The intent is humorous and satirical, aiming to highlight the irrationality or desperation of the situation being described. While the text contains vulgar language, it does not target any specific group based on protected characteristics (race, gender, religion, etc.) and is not abusive, cyberbullying, or hateful. The meme's overall intent is to entertain through absurdity and irony, not to cause harm or promote hate. The harmfulness, if any, is minimal and stems from the crude language, which may be offensive to some but does not constitute targeted toxicity against any community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "i'll take shit that ain't ever gonna happen for $500",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Christopher_Lee",
+      "label": "actor",
+      "description": "An elderly man with a bald head, gray beard, and intense facial expression, wearing a dark turtleneck and plaid suit jacket. He is the central subject of the image, positioned against a white backdrop with faint text and a pink flower visible on the left.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "meme_scene",
+      "label": "actor_with_overlaid_text",
+      "description": "A scene featuring actor Christopher Lee as the central visual entity, with overlaid text that forms the meme's humorous message. The text is positioned above and below his face, creating a visual composition that emphasizes his expression in relation to the absurd proposition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Christopher_Lee",
+          "relation": "isSubjectOf",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Christopher_Lee",
+      "label": "Actor Christopher Lee",
+      "description": "Christopher Lee was a renowned British actor known for his roles in horror, fantasy, and science fiction films, including iconic portrayals in the Hammer Horror films and as Saruman in 'The Lord of the Rings' trilogy. His distinctive appearance and commanding presence make him a recognizable figure in popular culture, often associated with gravitas and intensity. His image is used in memes to convey seriousness or mock solemnity, which is central to the meme's humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_text",
+      "label": "Meme Text: 'i'll take shit that ain't ever gonna happen for $500'",
+      "description": "The text is a satirical expression of absurdity, implying someone would accept an impossible or ridiculous deal for a small amount of money. This phrase is commonly used in internet culture to mock irrational behavior, desperation, or foolishness. The phrase 'for $500' is a specific reference to the game show 'Jeopardy!' where contestants can sometimes win $500 for a correct answer, but the phrase is often used humorously to describe situations where someone is willing to accept a bad deal for a small reward.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Jeopardy",
+      "label": "Game Show Jeopardy!",
+      "description": "Jeopardy! is a popular American quiz show where contestants answer trivia questions for cash prizes. The phrase 'for $500' is a direct reference to the game show's format, where contestants can win $500 for a correct answer. This reference is used in the meme to imply that the person is being absurdly desperate or foolish, as they would accept an impossible deal for a small amount of money.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "absurdity_humor",
+      "label": "Absurdity Humor",
+      "description": "This is a common comedic technique where the humor arises from situations that are illogical, impossible, or ridiculous. The meme uses this technique to highlight the irrationality of the situation being described, making it funny through contrast with the serious expression of Christopher Lee.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "vulgar_language",
+      "label": "Vulgar Language",
+      "description": "The use of the word 'shit' in the meme text is a form of vulgar language that is often used to convey strong emotion or to add a layer of crude humor. This language is not directly visible in the image but is essential to understanding the tone and intent of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "amused_skepticism",
+      "label": "amused skepticism expression",
+      "description": "Christopher Lee's facial expression combines a slight smile with raised eyebrows and a furrowed brow, conveying a mix of amusement at the absurdity of the proposition and a skeptical disbelief that someone would actually accept such a deal. His expression is not overtly angry or sad, but rather a dry, knowing amusement that contrasts with the ridiculousness of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The absurd proposition is mapped onto Christopher Lee's expression",
+      "description": "The text 'i'll take shit that ain't ever gonna happen for $500' describes an absurd, irrational situation. Christopher Lee's facial expression — a mix of amused skepticism — is visually mapped onto this proposition. His expression conveys the idea that the situation is ridiculous, and his slight smile suggests he is amused by the absurdity of someone agreeing to such a deal. The mapping is established through the juxtaposition of the text and his expression, where his demeanor becomes the visual representation of the text's content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the absurd proposition via Christopher Lee's expression",
+      "description": "The user is projected onto the textual content 'i'll take shit that ain't ever gonna happen for $500' and its visual representation through Christopher Lee's amused, skeptical expression. The user identifies with the hypothetical person making the absurd deal, and Lee's expression serves as a visual stand-in for that person's reaction or demeanor. The projection is implicit, not explicit (no 'me' or 'you'), but the meme's structure invites the user to imagine themselves in the role of the person accepting the ridiculous offer.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Vulgar Language",
+      "description": "The text 'i'll take shit that ain't ever gonna happen for $500' contains the vulgar word 'shit', which may be offensive to some viewers. This language is not targeted at any specific group based on protected characteristics but contributes to the crude humor of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "internet meme enthusiasts",
+      "description": "The meme is designed for an audience familiar with internet humor, particularly those who understand absurdity-based comedy and pop culture references like 'Jeopardy!' The use of Christopher Lee's iconic expression to mock a ridiculous proposition appeals to viewers who appreciate satirical and ironic content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/61407.png",
+    "image_name": "61407.png",
+    "extraction_timestamp": "2025-12-16T07:03:42.210059",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

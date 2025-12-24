@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "officer_down_scene",
+      "participants": [
+        {
+          "entity": "officer_1",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "officer_2",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "officer_1",
+          "relation": "running_toward",
+          "to": "officer_2"
+        },
+        {
+          "from": "officer_2",
+          "relation": "following",
+          "to": "officer_1"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":officer_down_scene :hasParticipant :officer_1 .",
+    ":officer_down_scene :hasParticipant :officer_2 .",
+    ":officer_1 :running_toward :officer_2 .",
+    ":officer_2 :following :officer_1 ."
+  ],
+  "triples_count": 4
+}

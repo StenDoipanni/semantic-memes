@@ -1,0 +1,189 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: the_fucking_dishwasher_is_acting_up; hasOverallIntent: Abusive; overall-intent-description: The image depicts a person frustratedly interacting with a dishwasher, with the text overlay \"the fucking dishwasher is acting up!\". The use of the expletive \"fucking\" indicates strong frustration or anger directed at the appliance. This is an abusive meme because it uses vulgar language to express irritation toward an inanimate object, which can be seen as a form of verbal abuse. The meme's intent is to humorously exaggerate the common experience of appliance malfunction, but the language itself is abusive and potentially offensive to those sensitive to profanity. There is no targeting of any specific group or community, so it does not fall under cyberbullying, harmful, hateful, misogynous, or propaganda categories. The intent is to convey frustration through exaggerated language, using the juxtaposition of the image (a person struggling with a dishwasher) and the text (a profanity-laden complaint) to create a relatable and humorous moment of domestic annoyance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "the fucking dishwasher",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "human",
+      "description": "A person wearing a white t-shirt and blue jeans, partially visible from the waist down, standing in front of an open dishwasher and reaching into it with their right hand. Their left hand is resting on the countertop. They appear to be interacting with the dishwasher, possibly trying to fix or retrieve something. A black wristwatch is visible on their left wrist.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "frustrated_person_with_dishwasher",
+      "label": "Person interacting with malfunctioning dishwasher",
+      "description": "A person is standing in front of an open dishwasher, reaching inside with one hand while the other rests on the countertop. The scene conveys frustration, emphasized by the text overlay 'the fucking dishwasher is acting up!'. The person's posture and interaction suggest they are trying to fix or retrieve something from the appliance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person",
+          "relation": "interactsWith",
+          "to": "dishwasher"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dishwasher_malfunction_stereotype",
+      "label": "Dishwasher Malfunction Stereotype",
+      "description": "The meme relies on the common stereotype that household appliances, especially dishwashers, are prone to malfunctioning and causing frustration. This is a relatable domestic annoyance that people experience, often humorously exaggerated. The use of the expletive 'fucking' amplifies the frustration, which is a common way to express exasperation with inanimate objects that fail to perform as expected.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "domestic_annoyance_culture",
+      "label": "Domestic Annoyance Culture",
+      "description": "This meme taps into a broader cultural phenomenon where minor domestic inconveniences (like a broken appliance) are often exaggerated or dramatized for comedic effect. It reflects a shared experience of frustration with household chores and technology, which is a common theme in internet humor and memes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "profanity_in_meme_context",
+      "label": "Profanity in Meme Context",
+      "description": "The use of the expletive 'fucking' is a form of verbal expression that conveys strong emotion, often frustration or anger. In meme culture, such language is frequently used to heighten the comedic or relatable impact of the situation, even if it is considered offensive or vulgar by some. The meme's humor comes from the juxtaposition of the mundane situation with the exaggerated language.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "appliance_reliability_stereotype",
+      "label": "Appliance Reliability Stereotype",
+      "description": "There is a common stereotype that household appliances, particularly older or cheaper models, are unreliable and prone to breaking down. This stereotype is often used humorously in memes to express the universal experience of dealing with malfunctioning technology in daily life.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "frustration",
+      "label": "frustrated emotion",
+      "description": "The emotion of frustration is conveyed through the person's interaction with the dishwasher and the explicit text overlay 'the fucking dishwasher is acting up!'. The use of the expletive 'fucking' strongly indicates anger or exasperation directed at the malfunctioning appliance. The person's posture—reaching into the dishwasher with one hand while the other rests on the countertop—suggests a sense of helplessness or annoyance with the situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_frustrated_person_with_dishwasher",
+      "label": "The person is mapped as 'the fucking dishwasher'",
+      "description": "The text 'the fucking dishwasher' is an analogical mapping that projects the visual entity 'person' onto the textual entity 'dishwasher'. The person is depicted interacting with the dishwasher in a frustrated manner, and the text explicitly labels the dishwasher as the source of frustration. This mapping is established through the juxtaposition of the visual scene (person struggling with dishwasher) and the text (focusing on the dishwasher as the 'culprit'), creating a humorous and exaggerated representation of domestic annoyance. The person's action and posture reinforce the mapping, as they are shown trying to fix or retrieve something from the appliance, which is the object of the text's frustration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the frustrated person with the dishwasher",
+      "description": "The user is projected onto the visual entity 'person' who is interacting with the malfunctioning dishwasher. This projection is implied through the relatable and exaggerated frustration expressed in the text 'the fucking dishwasher is acting up!', which invites the viewer to identify with the person's experience. The meme uses the person's action and posture to create a shared emotional experience, making the viewer feel as if they are 'the person' in the scene, experiencing the domestic annoyance. There are no explicit deictic pronouns like 'me' or 'you', but the context and the universal nature of the frustration create an implicit projection of the user onto the person.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Abusive",
+      "description": "The meme uses vulgar language ('fucking') to express frustration toward an inanimate object (the dishwasher), which constitutes abusive language. This is a form of verbal abuse directed at an appliance, intended to humorously exaggerate a common domestic annoyance. The language is offensive to some audiences and conveys strong anger, fitting the 'Abusive' toxicity category.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "domestic frustration audience",
+      "description": "The meme targets individuals who experience and relate to common domestic annoyances, particularly with household appliances like dishwashers. The visual of a person struggling with a malfunctioning dishwasher, combined with the text 'the fucking dishwasher is acting up!', is designed to resonate with anyone who has faced similar frustrations in their home. This audience likely includes homeowners, renters, or anyone who regularly uses kitchen appliances and finds them unreliable or inconvenient.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/45792.png",
+    "image_name": "45792.png",
+    "extraction_timestamp": "2025-12-16T01:50:24.968423",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

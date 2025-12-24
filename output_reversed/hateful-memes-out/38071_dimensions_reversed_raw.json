@@ -1,0 +1,222 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Abusive; overall-intent-description: The image features a black-and-white photo of actor Al Pacino, likely portraying a character known for intimidation or moral authority, with overlaid text that reads: 'don't ever think you got away with the rat shit you said or the snake shit you did because i have a good memory and alot of patience.' The text uses vulgar, aggressive language ('rat shit,' 'snake shit') to threaten and warn against past misdeeds, implying severe consequences. The visual of Pacino, often associated with intense, vengeful characters (e.g., in 'The Godfather' or 'Serpico'), reinforces the threatening tone. The overall intent is to intimidate or warn someone, potentially in a personal or confrontational context, using the image to amplify the perceived seriousness and danger of the message. This constitutes an abusive intent as it is designed to instill fear or coerce behavior through threats, without targeting a specific protected group, but rather using a general, aggressive tone that could be harmful in interpersonal contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "don't ever think you got away with the rat shit you said",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Al_Pacino",
+      "label": "actor",
+      "description": "A man with dark, wavy hair, wearing a dark button-up shirt with rolled-up sleeves and a watch on his left wrist. He is seated, looking slightly upward and to his right with a serious, intense expression. The image is black and white, and he appears to be in an indoor setting with a decorative fireplace mantel and floral arrangement visible in the background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "intimidating_threat",
+      "label": "intimidating_threat",
+      "description": "A scene where Al_Pacino, portrayed as a figure of moral authority or intimidation, delivers a threatening message through overlaid text. The visual composition and text together create a confrontational atmosphere, implying severe consequences for past actions. The scene is characterized by the spatial arrangement of Al_Pacino as the central figure, with the text positioned to frame his message as authoritative and unyielding.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Al_Pacino",
+          "relation": "delivers_message_to",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "conveys_threat_to",
+          "to": "Al_Pacino"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Al_Pacino_character_stereotype",
+      "label": "Al Pacino as a threatening or morally authoritative figure",
+      "description": "Al Pacino is widely recognized in popular culture for portraying intense, morally complex, and often intimidating characters, such as Michael Corleone in 'The Godfather' or Frank Serpico in 'Serpico'. His image in this meme leverages this established cinematic persona to convey a sense of authority, vengeance, and unyielding justice, which is essential to understanding the threatening tone of the overlaid text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Al_Pacino",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "intimidating_threat",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "rat_shit_metaphor",
+      "label": "Metaphor for deceitful or cowardly behavior",
+      "description": "The phrase 'rat shit' is a vulgar metaphor used to describe behavior that is deceitful, cowardly, or morally repugnant, often implying betrayal or underhanded actions. Understanding this metaphor is necessary to interpret the threat conveyed in the text, as it refers to a specific type of wrongdoing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "intimidating_threat",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "snake_shit_metaphor",
+      "label": "Metaphor for treacherous or malicious behavior",
+      "description": "The phrase 'snake shit' is a vulgar metaphor used to describe behavior that is treacherous, malicious, or deceitful, often implying betrayal or hidden agendas. Understanding this metaphor is necessary to interpret the threat conveyed in the text, as it refers to a specific type of wrongdoing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "intimidating_threat",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "good_memory_and_patience_stereotype",
+      "label": "Stereotype of a vengeful or patient avenger",
+      "description": "The phrase 'I have a good memory and a lot of patience' is a common trope in fiction and real-life intimidation, implying that the speaker will not forget past wrongs and will wait for the right moment to exact revenge. This stereotype is used to amplify the threat and instill fear in the target, relying on the audience's understanding of this cultural archetype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "intimidating_threat",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "vulgar_language_use",
+      "label": "Use of vulgar or offensive language to convey threat",
+      "description": "The use of explicit, vulgar language ('rat shit', 'snake shit') is a common rhetorical device in confrontational or threatening communication. It is intended to shock, provoke, or intimidate the recipient. Understanding this linguistic strategy is necessary to interpret the full impact of the message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "intimidating_threat",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "intimidation",
+      "label": "intimidating emotion",
+      "description": "The emotion expressed is intimidation, conveyed through Al Pacino's serious, intense facial expression and the threatening text overlay. His gaze, slightly upward and to his right, combined with his seated posture and the stern tone of the message, creates a sense of looming danger and moral authority. The text explicitly warns of consequences for past actions, reinforcing the intimidating atmosphere.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The speaker is mapped onto Al Pacino",
+      "description": "The text 'because i have a good memory and alot of patience' implies the speaker is the one delivering the threat. This speaker is analogically mapped onto Al Pacino, whose visual persona (serious, intense, morally authoritative) is used to embody the threatening message. The speaker's identity is projected onto the visual representation of Al Pacino to amplify the intimidation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the threatening speaker persona",
+      "description": "The user is projected onto the speaker of the text, who is analogically mapped onto Al Pacino. The text uses second-person address ('you') to directly target the recipient, making the user the implied target of the threat. The user identifies with the speaker's position of moral authority and vengeance, projecting themselves onto the intimidating persona embodied by Al Pacino.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_2",
+      "label": "User projected onto the threatened target",
+      "description": "The user is projected onto the recipient of the threat, as the text explicitly addresses 'you' ('don't ever think you got away...'). The user identifies with the person being warned or threatened, imagining themselves as the target of the speaker's vengeance. This projection is reinforced by the visual of Al Pacino, who is positioned as the authoritative enforcer of the threat.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Abusive",
+      "description": "The meme uses vulgar, aggressive language ('rat shit', 'snake shit') and threatens severe consequences for past actions, leveraging Al Pacino's intimidating persona to instill fear and coerce behavior. This constitutes an abusive intent as it is designed to intimidate or warn someone through threats, without targeting a specific protected group, but rather using a general, aggressive tone that could be harmful in interpersonal contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general adult internet users",
+      "description": "The meme is designed for a general adult audience familiar with pop culture, particularly fans of Al Pacino's film roles and internet meme formats. The use of Al Pacino's intimidating persona and vulgar language targets individuals who understand cinematic references and are comfortable with confrontational, threatening communication styles commonly found in online forums, social media, or personal messaging. The audience is expected to recognize the cultural archetype of the vengeful, patient avenger and interpret the metaphors ('rat shit', 'snake shit') within that context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/38071.png",
+    "image_name": "38071.png",
+    "extraction_timestamp": "2025-12-16T00:05:48.875304",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

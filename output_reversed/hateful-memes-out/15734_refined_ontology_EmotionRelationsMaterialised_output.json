@@ -1,0 +1,44 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful emotion",
+      "expressors": [
+        {
+          "entity": "muslims",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "people who aren't retarded",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "muslims",
+          "relation": "emotionalRelationToEntity",
+          "to": "hating jews"
+        },
+        {
+          "from": "people who aren't retarded",
+          "relation": "emotionalRelationToEntity",
+          "to": "hating jews"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_emotion :hasExpressor :muslims .",
+    ":hateful_emotion :hasExpressor :people_who_aren_t_retarded .",
+    ":muslims :emotionalRelationToEntity :hating_jews .",
+    ":people_who_aren_t_retarded :emotionalRelationToEntity :hating_jews ."
+  ],
+  "triples_count": 4
+}

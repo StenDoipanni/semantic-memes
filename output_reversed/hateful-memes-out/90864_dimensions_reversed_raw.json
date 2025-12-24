@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: rice_cooker_now; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes a modern rice cooker with a 1945 model, implying technological progress. While not explicitly targeting any protected group, it may be perceived as dismissive of historical context or the value of older technology, potentially causing offense to those who appreciate vintage items or associate the 1940s with a specific cultural or historical identity. The intent is to highlight technological advancement through visual contrast, but the framing could be seen as condescending or dismissive of past innovations, which may be interpreted as harmful to those who hold sentimental or historical value for older technology.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "text content and position: 'rice cooker now' at top of image, centered, white text on black background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "hand",
+      "label": "human hand",
+      "description": "A human hand holding a modern rice cooker, positioned in the upper half of the image. The hand appears to be of a darker skin tone and is gripping the handle of the appliance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "rice_cooker_comparison",
+      "label": "Comparison of rice cookers across time",
+      "description": "The scene juxtaposes a modern rice cooker being held by a hand in the upper half with a 1945 wooden rice cooker placed on a table in the lower half, visually contrasting technological advancement. The text overlays 'rice cooker now' and 'versus in 1945' explicitly frame this as a historical comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "hand",
+          "relation": "holds",
+          "to": "modern_rice_cooker"
+        },
+        {
+          "from": "text",
+          "relation": "labels",
+          "to": "rice_cooker_comparison"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "technological_progress",
+      "label": "Technological Progress",
+      "description": "The meme relies on the implicit understanding that technology has advanced over time, with modern appliances being more efficient, convenient, and sophisticated than their historical counterparts. This concept is central to interpreting the contrast between the modern rice cooker and the 1945 model.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "rice_cooker_comparison",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_context_1945",
+      "label": "Historical Context of 1945",
+      "description": "The year 1945 is implicitly referenced as a time of post-war reconstruction and limited industrial capacity. Understanding this context helps interpret the wooden rice cooker as a product of its era, reflecting material constraints and design aesthetics of that period, rather than simply being 'old'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "rice_cooker_comparison",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "consumer_appliance_evolution",
+      "label": "Evolution of Consumer Appliances",
+      "description": "The meme assumes knowledge of how household appliances have evolved from manual, wood-based, or rudimentary metal devices to electric, automated, and programmable machines. This background knowledge is necessary to appreciate the visual contrast and the implied narrative of progress.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "rice_cooker_comparison",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "material_scarcity_postwar",
+      "label": "Material Scarcity in Post-War Era",
+      "description": "The wooden rice cooker from 1945 implicitly references the material constraints of the post-World War II period, where metal and plastic were often scarce or expensive. This knowledge helps contextualize why such an appliance might have been common or necessary at that time.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "rice_cooker_comparison",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sentimental_value_of_vintage_items",
+      "label": "Sentimental Value of Vintage Items",
+      "description": "The meme may be perceived as dismissive of the sentimental or aesthetic value that some people attach to vintage or retro items. Understanding this cultural phenomenon helps explain why the comparison might be seen as condescending or offensive to certain audiences.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "rice_cooker_comparison",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cultural_perception_of_technological_advancement",
+      "label": "Cultural Perception of Technological Advancement",
+      "description": "The meme relies on the cultural norm that technological advancement is inherently positive and desirable. This background knowledge is necessary to understand why the comparison is framed as a 'versus' and implies superiority of the modern version.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "rice_cooker_comparison",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "condescension",
+      "label": "condescending emotion",
+      "description": "The emotion expressed through the juxtaposition of the modern rice cooker with the 1945 wooden model, implying that the older version is inferior or outdated, which may be perceived as dismissive or superior in tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_rice_cooker_now",
+      "label": "Modern rice cooker is mapped as 'rice cooker now'",
+      "description": "The text 'rice cooker now' at the top of the image is directly mapped onto the visual entity of the modern rice cooker being held by a hand in the upper half of the image. This mapping establishes the modern appliance as the current, contemporary version being referenced.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the modern rice cooker as a symbol of current technological superiority",
+      "description": "The user is implicitly projected onto the modern rice cooker (visual material) and the text 'rice cooker now' (textual material), which together represent the contemporary standard of technological advancement. The user is expected to identify with the modern appliance as the superior, current version, contrasting it with the historical 1945 model. This projection is reinforced by the framing of the image as a 'versus' comparison, positioning the user to view the modern cooker as the normative, advanced state.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme may be perceived as dismissive of historical context or the value of older technology, potentially causing offense to those who appreciate vintage items or associate the 1945 era with a specific cultural or historical identity. The framing could be seen as condescending or dismissive of past innovations, which may be interpreted as harmful to those who hold sentimental or historical value for older technology.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "person holding modern rice cooker",
+      "description": "The individual holding the modern rice cooker, whose hand appears to be of a darker skin tone, is visually present in the image. This demographic cue may signal the meme's attempt to appear universally relatable or to subtly imply a modern, everyday user, potentially targeting a broad audience familiar with contemporary appliances.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/90864.png",
+    "image_name": "90864.png",
+    "extraction_timestamp": "2025-12-19T17:15:14.366919",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

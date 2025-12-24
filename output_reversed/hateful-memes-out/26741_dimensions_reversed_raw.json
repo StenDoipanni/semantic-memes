@@ -1,0 +1,233 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Abusive; overall-intent-description: The image features a man in a red suit (Ron Burgundy) in a news studio setting, with clocks showing different time zones. The text overlay reads 'on behalf of nsw' at the top and 'go f@#k yourself queensland' at the bottom. This is a meme that uses a satirical news anchor persona to deliver a vulgar, aggressive message directed at Queensland, a state in Australia. The intent is clearly abusive, as it uses profanity and direct hostility toward a specific geographic region, which can be interpreted as a form of regional insult or trolling. The meme is not targeting individuals based on protected characteristics like race, gender, or sexual orientation, but rather uses regional identity as a target for abuse. The overall intent is to provoke, mock, or insult Queensland, likely in a context of regional rivalry or political tension, and the use of the news anchor format adds a layer of faux seriousness to the crude message, amplifying its offensive nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "on behalf of nsw",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Ron_Burgundy",
+      "label": "character",
+      "description": "A man with a mustache, wearing a red suit and tie, seated at a news desk. He is portrayed as a satirical news anchor, recognizable as the character Ron Burgundy from the film 'Anchorman: The Legend of Ron Burgundy'. His expression is smug and self-satisfied, fitting the meme's tone of faux seriousness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "satirical_news_broadcast",
+      "label": "satirical news broadcast scene",
+      "description": "A satirical news broadcast scene featuring Ron Burgundy as a news anchor in a studio setting, with clocks showing different time zones and text overlays delivering an abusive message. The scene uses the faux-seriousness of a news broadcast to deliver a vulgar insult directed at Queensland.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Ron_Burgundy",
+          "relation": "isPresentIn",
+          "to": "studio_background"
+        },
+        {
+          "from": "text",
+          "relation": "isOverlaying",
+          "to": "studio_background"
+        },
+        {
+          "from": "clocks",
+          "relation": "areMountedOn",
+          "to": "studio_background"
+        },
+        {
+          "from": "Ron_Burgundy",
+          "relation": "deliversMessage",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Ron_Burgundy_character",
+      "label": "Ron Burgundy character",
+      "description": "The character Ron Burgundy is from the 2004 film 'Anchorman: The Legend of Ron Burgundy', played by actor Will Ferrell. The character is a satirical portrayal of a 1970s news anchor known for his flamboyant style, smug demeanor, and faux-seriousness. His use in memes often leverages the contrast between his polished, professional appearance and the absurd or offensive content he is made to deliver, amplifying the meme's comedic or abusive tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "NSW",
+      "label": "New South Wales",
+      "description": "New South Wales is a state in Australia, one of the six states of the Commonwealth of Australia. It is the most populous state and is often contrasted with other Australian states like Queensland in regional rivalries, particularly in sports, politics, and cultural identity. The meme references NSW as the source of the abusive message, implying a regional conflict or rivalry.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Queensland",
+      "label": "Queensland",
+      "description": "Queensland is another state in Australia, known for its distinct cultural identity, strong sporting traditions (especially rugby league and cricket), and sometimes perceived regional rivalry with NSW. The meme targets Queensland directly with an abusive message, leveraging the real-world context of Australian state rivalries to heighten the meme's impact.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Australian_state_rivalries",
+      "label": "Australian state rivalries",
+      "description": "A cultural and often media-driven phenomenon in Australia where states like New South Wales and Queensland compete in areas such as sports, politics, and media representation. These rivalries are sometimes exaggerated or used for comedic effect, but can also fuel regional tensions. The meme exploits this dynamic to deliver an insult.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Satirical_news_broadcast",
+      "label": "Satirical news broadcast",
+      "description": "A genre of media that mimics the format and tone of serious news broadcasts but uses absurd, exaggerated, or offensive content for comedic or critical effect. The use of Ron Burgundy in a news studio setting is a classic example of this genre, which relies on the audience's familiarity with real news formats to enhance the humor or satire of the content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Profanity_in_meme_context",
+      "label": "Profanity in meme context",
+      "description": "The use of explicit or vulgar language in memes to convey strong emotion, shock, or insult. In this case, the phrase 'go f@#k yourself' is a direct, offensive insult. The inclusion of such language is a common meme tactic to provoke or mock, and its effectiveness relies on the audience's understanding of its vulgar nature and the social context in which it is used.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Regional_insult_meme",
+      "label": "Regional insult meme",
+      "description": "A type of meme that targets a specific geographic region, often using derogatory language or stereotypes associated with that region. These memes are frequently used to express regional pride, rivalry, or trolling, and rely on the audience's awareness of regional identities and associated cultural or political tensions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous expression",
+      "description": "Ron Burgundy's facial expression, characterized by a smug, self-satisfied smirk and a slight upward tilt of the lips, conveys a sense of disdain or superiority. This expression is amplified by the context of the meme, which delivers a vulgar insult, making the contempt appear as a faux-serious, dismissive attitude toward the target (Queensland).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "NSW is represented by Ron Burgundy",
+      "description": "The top text 'on behalf of nsw' is mapped onto Ron Burgundy, the visual entity, indicating that he is acting or speaking as the representative of New South Wales. This mapping leverages the satirical news anchor persona to deliver a message attributed to NSW.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the target of the abusive message",
+      "description": "The user is projected onto Queensland, the target of the abusive text 'go f@#k yourself queensland'. The meme uses the satirical news format to deliver a direct insult, and the user is implicitly positioned as the recipient of this insult, experiencing the message as directed at them or their regional identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Abusive",
+      "description": "The meme delivers a direct, vulgar insult ('go f@#k yourself') directed at Queensland, leveraging the satirical news format to amplify its offensive nature. This constitutes abusive content as it targets a specific geographic region with hostility and profanity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "Australian state rivalry enthusiasts",
+      "description": "The meme targets individuals familiar with or invested in Australian state rivalries, particularly between New South Wales (NSW) and Queensland. The use of Ron Burgundy as a satirical news anchor delivering an abusive message 'on behalf of NSW' to 'Queensland' leverages the cultural context of regional competition in sports, politics, and media. The audience is likely to understand and appreciate the humor or trolling inherent in this regional insult, making them the primary target community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/26741.png",
+    "image_name": "26741.png",
+    "extraction_timestamp": "2025-12-15T19:48:12.443429",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

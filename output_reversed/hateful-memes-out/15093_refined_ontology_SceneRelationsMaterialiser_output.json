@@ -1,0 +1,80 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "meme_image",
+      "participants": [
+        {
+          "entity": "angry_man_amidst_wreckage",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "man_on_left",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "man_in_background",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "man_in_green_hat",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "man_in_front_right",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "angry_man_amidst_wreckage",
+          "relation": "isCenterOfAttention",
+          "to": "meme_image"
+        },
+        {
+          "from": "angry_man_amidst_wreckage",
+          "relation": "isReactingTo",
+          "to": "car_wreckage"
+        },
+        {
+          "from": "man_on_left",
+          "relation": "isSurrounding",
+          "to": "angry_man_amidst_wreckage"
+        },
+        {
+          "from": "man_in_background",
+          "relation": "isObserving",
+          "to": "angry_man_amidst_wreckage"
+        },
+        {
+          "from": "man_in_green_hat",
+          "relation": "isNear",
+          "to": "angry_man_amidst_wreckage"
+        },
+        {
+          "from": "man_in_front_right",
+          "relation": "isNear",
+          "to": "angry_man_amidst_wreckage"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":meme_image :hasParticipant :angry_man_amidst_wreckage .",
+    ":meme_image :hasParticipant :man_on_left .",
+    ":meme_image :hasParticipant :man_in_background .",
+    ":meme_image :hasParticipant :man_in_green_hat .",
+    ":meme_image :hasParticipant :man_in_front_right .",
+    ":angry_man_amidst_wreckage :isCenterOfAttention :meme_image .",
+    ":angry_man_amidst_wreckage :isReactingTo :car_wreckage .",
+    ":man_on_left :isSurrounding :angry_man_amidst_wreckage .",
+    ":man_in_background :isObserving :angry_man_amidst_wreckage .",
+    ":man_in_green_hat :isNear :angry_man_amidst_wreckage .",
+    ":man_in_front_right :isNear :angry_man_amidst_wreckage ."
+  ],
+  "triples_count": 11
+}

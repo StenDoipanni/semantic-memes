@@ -1,0 +1,300 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes a majestic image of Mount Everest with text that reflects on the tragic deaths of climbers, suggesting that these individuals were once highly motivated. The concluding line, 'stay lazy, my friends,' is intended to be ironic and provocative, encouraging viewers to avoid the risks associated with extreme ambition. While not explicitly targeting any specific group with hate or abuse, the meme's message can be interpreted as harmful because it trivializes the immense physical and mental effort, as well as the risks, involved in attempting to climb Everest. It may discourage people from pursuing challenging goals by implying that such endeavors are ultimately futile or that the risks outweigh the rewards, potentially undermining motivation and resilience. The meme's intent is to provoke thought through irony, but its message can be seen as dismissive of human perseverance and achievement, which may have a negative psychological impact on those who value ambition and challenge.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "think about it: every single corpse on mt. everest was once a highly motivated person",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Mount_Everest",
+      "label": "mountain",
+      "description": "A snow-covered, rugged mountain peak under a clear blue sky, visually dominating the image and serving as the central visual element.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "everest_mountain_scene",
+      "label": "mountain_with_text_scene",
+      "description": "A scene depicting Mount Everest, a snow-covered rugged mountain peak under a clear blue sky, with overlaid text that reflects on the tragic deaths of climbers and encourages laziness. The mountain dominates the visual composition, while the text is positioned at the top and bottom of the image, framing the mountain as the central subject.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "isOverlaying",
+          "to": "Mount_Everest"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mountaineering_on_mountain_peaks",
+      "label": "Mountaineering on mountain peaks",
+      "description": "The meme references the real-world activity of climbing Mount Everest, which involves extreme physical and mental challenges, and carries a high risk of death. This background knowledge is necessary to understand the context of 'corpses on Mt. Everest' and the implied tragedy of those who died attempting to reach the summit.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "everest_corpses",
+      "label": "Corpses on Mount Everest",
+      "description": "Mount Everest has a documented history of deceased climbers whose bodies remain on the mountain due to the extreme difficulty and danger of the climb. This background knowledge is essential to understand the text's reference to 'every single corpse on Mt. Everest'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "highly_motivated_person",
+      "label": "Highly motivated person",
+      "description": "The meme implies that the deceased climbers were once 'highly motivated' individuals who pursued a challenging goal. This concept requires background knowledge about human motivation, ambition, and the psychological drive behind extreme sports or personal achievements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ironic_advice",
+      "label": "Ironic advice",
+      "description": "The concluding line 'stay lazy, my friends' is presented ironically. Understanding this requires background knowledge about rhetorical irony and the common use of sarcasm to convey a contrasting message, often used to critique or mock the very thing being discussed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "tragic_death_in_extreme_sports",
+      "label": "Tragic death in extreme sports",
+      "description": "The meme references the real-world phenomenon of fatalities in extreme sports, particularly mountaineering. This background knowledge is necessary to understand the gravity of the situation described and the implied commentary on the risks involved.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "motivation_and_resilience",
+      "label": "Motivation and resilience",
+      "description": "The meme implicitly references the concepts of human motivation and resilience, which are central to understanding why people undertake dangerous endeavors like climbing Everest. This background knowledge is needed to interpret the contrast between the climbers' past motivation and the final ironic message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mountain_climbing_risk",
+      "label": "Mountain climbing risk",
+      "description": "The meme alludes to the inherent dangers and risks associated with mountain climbing, including altitude sickness, avalanches, and exposure. This background knowledge is necessary to understand the context of the 'corpses' and the implied message about the cost of ambition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "futility_of_extreme_ambition",
+      "label": "Futility of extreme ambition",
+      "description": "The meme's message can be interpreted as suggesting that extreme ambition may be futile or that the risks outweigh the rewards. This philosophical concept requires background knowledge about human motivation, the value of achievement, and the potential for discouragement through ironic commentary.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_trend_of_trivializing_sacrifice",
+      "label": "Social trend of trivializing sacrifice",
+      "description": "The meme reflects a broader social trend of using irony or humor to downplay the seriousness of human sacrifice or effort, particularly in the context of extreme sports or personal achievement. This background knowledge helps understand the meme's potential to be perceived as dismissive or harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "ironic_contempt",
+      "label": "ironic contempt emotion",
+      "description": "The emotion expressed is ironic contempt, conveyed through the juxtaposition of the majestic, dangerous mountain with the text that reflects on the tragic deaths of climbers and ends with the sarcastic advice to 'stay lazy, my friends.' This creates a tone of mocking dismissal toward ambition and risk-taking, implying that the sacrifices made by the deceased climbers are ultimately meaningless or foolish.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "corpses on Mt. Everest are mapped as once highly motivated people",
+      "description": "The top text 'think about it: every single corpse on mt. everest was once a highly motivated person' maps the visual entity 'Mount_Everest' (specifically, the corpses on it) to the conceptual entity 'highly motivated person'. The mountain, as the visual anchor, represents the location where these deceased individuals (the corpses) once were, and the text explicitly states they were once 'highly motivated'. This creates an analogical mapping where the visual material (the mountain with corpses) is understood through the lens of the textual description (they were once highly motivated).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the ironic advice text",
+      "description": "The user is projected onto the textual material 'stay lazy, my friends.' through the ironic framing of the meme. The text directly addresses the viewer with a command ('stay lazy') and uses 'my friends' to include the audience, creating a direct address. This projection invites the user to identify with the implied audience of the ironic message, encouraging them to internalize the meme's sarcastic conclusion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the immense physical and mental effort, as well as the risks, involved in attempting to climb Everest. It may discourage people from pursuing challenging goals by implying that such endeavors are ultimately futile or that the risks outweigh the rewards, potentially undermining motivation and resilience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "individuals who value ambition and challenge",
+      "description": "The meme targets individuals who are motivated by personal achievement, ambition, or the pursuit of extreme goals, as it contrasts their potential drive with the ironic message to 'stay lazy.'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/17642.png",
+    "image_name": "17642.png",
+    "extraction_timestamp": "2025-12-15T17:05:39.549762",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 18,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

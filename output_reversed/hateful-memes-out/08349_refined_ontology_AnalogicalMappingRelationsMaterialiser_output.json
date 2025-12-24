@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_honor_killing_claim",
+      "hasMappedEntity": "text_chunk_1",
+      "hasMappingEntity": "man_shouting"
+    },
+    {
+      "from": "man_shouting",
+      "relation": "mappedOnto",
+      "to": "text_chunk_1"
+    }
+  ],
+  "triples": [
+    ":mapping_honor_killing_claim :hasMappedEntity :text_chunk_1 .",
+    ":mapping_honor_killing_claim :hasMappingEntity :man_shouting .",
+    ":man_shouting :mappedOnto :text_chunk_1 ."
+  ],
+  "triples_count": 3
+}

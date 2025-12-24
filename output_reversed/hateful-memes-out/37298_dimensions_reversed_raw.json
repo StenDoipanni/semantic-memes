@@ -1,0 +1,192 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: camel_meme; hasOverallIntent: harmful; overall-intent-description: The meme uses a visual of three camels with their mouths open, juxtaposed with text that mocks Islamic dietary laws by suggesting a contradiction: while pork is considered unclean, camel urine is promoted as 'medicine' based on a reference to Muhammad. This is a deliberately misleading and inflammatory comparison intended to provoke controversy and ridicule. The meme relies on a false equivalence and misrepresentation of religious practices to create a negative impression of Islam. It falls under 'harmful' because it promotes misinformation, stigmatizes a religious group, and can incite prejudice or hostility toward Muslims by distorting their beliefs and practices. The use of the camel image is not merely decorative but serves as a visual pun to reinforce the absurdity of the claim, making the meme more provocative and potentially offensive to its target audience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "muslim \"logic\": pork is unclean.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "camels",
+      "label": "three camels with open mouths",
+      "description": "Three camels are prominently featured in the foreground, looking upward with their mouths open as if shouting or laughing. Their positioning and expressions are central to the meme's visual humor and are used to visually represent the 'logic' being mocked in the text. The camels are the primary visual material and serve as a visual pun, reinforcing the absurdity of the claim made in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "camel_shouting_scene",
+      "label": "camels shouting in unison",
+      "description": "Three camels are positioned side-by-side in the foreground, all with their heads tilted upward and mouths open as if shouting or laughing. This visual arrangement creates a sense of collective vocalization, which is used metaphorically to represent the 'logic' being mocked in the text. The spatial relationship is one of parallel alignment, with each camel slightly offset from the others, creating a dynamic yet unified composition. The scene is framed against a bright blue sky with scattered clouds, emphasizing the camels as the central focus.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "camels",
+          "relation": "areShoutingTogether",
+          "to": "camels"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobic_stereotype",
+      "label": "Islamophobic Stereotype: Mocking Religious Practice as Absurd or Contradictory",
+      "description": "The meme relies on a stereotype that portrays Islam as logically inconsistent or absurd by juxtaposing the prohibition of pork with the promotion of camel urine as 'medicine'. This is a form of Islamophobia that uses false equivalence to discredit religious beliefs and practices, implying that Muslims are irrational or hypocritical. It is a common tactic in anti-Islamic rhetoric to highlight perceived contradictions in religious texts or practices to delegitimize the religion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "camel_urine_medicine_claim",
+      "label": "Claim that Camel Urine is Medicine",
+      "description": "This is a real-world claim rooted in traditional Islamic medicine (Hikma) and some folk remedies, which references the hadith (sayings of the Prophet Muhammad) where he is reported to have used camel urine for medicinal purposes. The meme misrepresents this as a 'perfect' or 'divine' endorsement, ignoring the context and the fact that such practices are not universally accepted or endorsed by mainstream Islamic scholars or modern medicine. The meme uses this claim to create a false equivalence with the prohibition of pork, which is a core tenet of Islamic dietary law.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pork_unclean_dietary_law",
+      "label": "Islamic Dietary Law: Pork is Unclean",
+      "description": "This is a fundamental tenet of Islamic law (Sharia) derived from the Quran and Hadith, which explicitly prohibits the consumption of pork and pork products. The meme references this as a 'logic' point to set up the false equivalence with camel urine, which is not a dietary prohibition but a medicinal claim. The meme uses this well-known fact to create a misleading comparison, implying that if Muslims follow such 'logic', they must be irrational or hypocritical.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "muhammad_perfect",
+      "label": "Reference to Muhammad as 'Perfect' or 'The Perfect Example'",
+      "description": "This is a core concept in Islam, where Muhammad is considered the final prophet and the perfect example (Al-As-Saadiq Al-Amin) for Muslims to follow. The meme uses this reference to imply that if Muhammad endorsed camel urine as medicine, then it must be true or acceptable, thereby attempting to validate the claim. This is a misrepresentation of Islamic theology, as the context of hadiths is often nuanced and not meant to be taken literally or as a blanket endorsement of all practices.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "camel_shouting_scene",
+      "label": "Visual Metaphor: Camels Shouting as a Symbol of Absurdity",
+      "description": "The image of three camels with their mouths open is a visual pun used to represent the 'logic' being mocked. The camels are not literally shouting, but their posture and expression are used to symbolize the absurdity or ridiculousness of the claim. This visual metaphor is a common trope in internet memes to convey a sense of 'laughing' or 'shouting' at a foolish idea. The meme relies on this visual metaphor to enhance the comedic and provocative effect of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "camel_shouting_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mockery",
+      "label": "mocking emotion",
+      "description": "The emotion expressed is mockery, conveyed through the juxtaposition of the camels' open-mouthed, shouting-like expressions with the text that presents a deliberately absurd and misleading comparison between Islamic dietary laws and a folk medicinal practice. The visual of the camels, combined with the text, is intended to ridicule the perceived 'logic' of the claim, implying absurdity or hypocrisy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Camels as visual representation of mocking 'logic'",
+      "description": "The visual of three camels with open mouths is mapped onto the textual claim 'muslim \"logic\": pork is unclean.' The camels' shouting-like posture is used as a visual metaphor to represent the absurdity or ridicule of the 'logic' being presented in the text. This mapping is central to the meme's intent, using the camels to visually embody the mockery of the claimed 'logic'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual metaphor of camels shouting to mock 'logic'",
+      "description": "The user is projected onto the visual material of the three camels with open mouths, which serves as a visual metaphor for mocking the 'logic' presented in the text. The camels' posture and expression are used to represent the absurdity or ridicule of the claim, creating a shared experience of laughter or disbelief that the user is invited to participate in. This projection is implicit, as the meme relies on the viewer to interpret the camels' visual pun as a direct commentary on the text's content, making the user an active participant in the meme's satirical framing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobic Stereotype",
+      "description": "The meme relies on a stereotype that portrays Islam as logically inconsistent or absurd by juxtaposing the prohibition of pork with the promotion of camel urine as 'medicine'. This is a form of Islamophobia that uses false equivalence to discredit religious beliefs and practices, implying that Muslims are irrational or hypocritical.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with or interested in Islamophobic stereotypes, particularly those who may be predisposed to mocking or ridiculing Islamic religious practices. The meme is designed to provoke controversy and ridicule by exploiting a false equivalence between the prohibition of pork and the medicinal use of camel urine, which is a common tactic in anti-Islamic rhetoric. The visual of camels shouting is used to symbolize the absurdity of the claim, appealing to an audience that finds humor in the perceived contradictions of religious beliefs. The reference to Muhammad as 'perfect' and the framing of the claim as 'muslim logic' are community-specific elements that target those who may be familiar with Islamic theology or have a vested interest in challenging it. The meme relies on cultural references to Islamic dietary laws and traditional medicine, making it most effective for an audience that understands these concepts and is likely to interpret the meme as a satirical or critical commentary on Islam.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/37298.png",
+    "image_name": "37298.png",
+    "extraction_timestamp": "2025-12-15T23:47:53.875699",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

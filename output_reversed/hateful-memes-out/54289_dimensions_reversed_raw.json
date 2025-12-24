@@ -1,0 +1,223 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Mysogynous; overall-intent-description: The meme juxtaposes a sloth (often used as a humorous, slow-moving animal) with a woman's face, using the text 'do you like to barbeque cause i'm bout to slap this meat across your grill.' The phrase 'slap this meat' is a crude, sexually suggestive metaphor that objectifies the woman by reducing her to a piece of meat, which is a misogynistic trope. The visual of the woman's face, combined with the vulgar text, is intended to be provocative and degrading, targeting women through objectification and sexualization. This aligns with misogynous content as it uses the woman's body as a target for ridicule and degradation, fitting the 'objectification/body part focus' and 'sexual availability assumptions' categories under misogyny.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "do you like to barbeque",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "sloth",
+      "label": "animal",
+      "description": "A sloth with light brown fur and a dark face, partially obscured by green foliage, peeking from behind a tree trunk. It is positioned in the top half of the image and is visually salient due to its close-up framing and the contrast with the background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "barbeque_threat_scene",
+      "label": "a threatening barbeque metaphor scene",
+      "description": "The scene is composed of a sloth and a woman's face, juxtaposed with text that creates a threatening metaphor about barbecuing meat. The sloth appears in the top half, and the woman's face is in the bottom half, visually separated by a white vertical bar. The text 'do you like to barbeque' is positioned above the sloth, and 'cause i'm bout to slap this meat across your grill' is below the woman's face. The scene uses the sloth as a visual punchline to the text, implying the woman is being objectified as 'meat' to be 'slapped' onto a grill. The spatial arrangement is vertical, with the sloth and woman's face occupying distinct halves of the image, creating a visual contrast that emphasizes the meme's misogynistic intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "sloth",
+          "relation": "isPositionedAbove",
+          "to": "woman_face"
+        },
+        {
+          "from": "woman_face",
+          "relation": "isPositionedBelow",
+          "to": "sloth"
+        },
+        {
+          "from": "sloth",
+          "relation": "isAssociatedWithText",
+          "to": "barbeque_text"
+        },
+        {
+          "from": "woman_face",
+          "relation": "isAssociatedWithText",
+          "to": "meat_slap_text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_objectification_stereotype",
+      "label": "Misogynous Objectification Stereotype",
+      "description": "The meme relies on the stereotype that women are objectified as 'meat' or 'food' to be used or consumed, which is a common misogynistic trope. This stereotype reduces women to their physical appearance and sexualizes their bodies, implying they are commodities to be 'slapped' onto a grill, which is a crude and degrading metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "barbeque_threat_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexualized_metaphor",
+      "label": "Sexualized Metaphor",
+      "description": "The phrase 'slap this meat across your grill' is a sexualized metaphor that implies the woman's body is being treated as food or a sexual object. This metaphor is used to degrade and objectify the woman, which is a form of misogynistic expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "barbeque_threat_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sloth_as_humorous_slow_animal",
+      "label": "Sloth as Humorous Slow Animal",
+      "description": "The sloth is often used in memes as a symbol of slowness or laziness, which is a common humorous trope. In this context, the sloth is juxtaposed with the threatening text to create a contrast, implying the woman is being 'slapped' onto the grill in a slow, deliberate, or comically exaggerated manner.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "sloth",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "barbeque_threat_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "barbeque_cooking_context",
+      "label": "Barbecue Cooking Context",
+      "description": "The phrase 'barbeque' and 'slap this meat across your grill' refers to the act of grilling meat, which is a common cooking method. The use of this context in a threatening way is a form of metaphorical violence, implying the woman is being treated as food to be cooked or consumed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "barbeque_threat_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "vulgar_language_use",
+      "label": "Vulgar Language Use",
+      "description": "The phrase 'bout to slap this meat' uses vulgar and crude language to describe the act of objectifying and degrading the woman. This language is used to shock or provoke, and it is a common feature of misogynistic content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "barbeque_threat_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "objectification",
+      "label": "objectifying emotion",
+      "description": "The emotion expressed is one of degrading objectification, where the woman is reduced to a piece of meat to be 'slapped' onto a grill, reflecting a misogynistic trope that treats women as commodities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "woman is mapped as 'meat' to be slapped on a grill",
+      "description": "The text 'cause i'm bout to slap this meat across your grill' explicitly maps the woman's visual representation (her face) onto the concept of 'meat'. This is a misogynistic objectification trope where the woman's body is reduced to a consumable commodity, visually represented by her face being juxtaposed with the vulgar metaphor. The sloth in the top half serves as a humorous, slow-moving visual punchline to the threat, reinforcing the crude and degrading nature of the metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene as the recipient of a threatening metaphor",
+      "description": "The user is projected onto the 'barbeque_threat_scene' as the implied recipient of the threat. The text 'do you like to barbeque' directly addresses the user with 'you', and 'cause i'm bout to slap this meat across your grill' uses 'your grill', explicitly directing the threat toward the user's personal domain (their grill). The user is thus projected onto the scene as the target of the misogynistic objectification metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme objectifies the woman by reducing her to 'meat' to be 'slapped' onto a grill, which is a degrading and misogynistic trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience familiar with misogynistic objectification tropes, particularly those who understand the crude sexualized metaphor of reducing women to 'meat' to be 'slapped' onto a grill. The target community likely includes individuals who find humor in degrading, vulgar, and sexually suggestive content, and who may be exposed to or enjoy internet memes that rely on shock value and crude humor. The use of the sloth as a humorous, slow-moving animal juxtaposed with the threatening text suggests the meme targets an audience that appreciates absurdist or dark humor, often found in online meme culture. The vulgar language and crude imagery are intended to provoke or shock, indicating the target audience is likely accustomed to such content and may be drawn to memes that challenge social norms or norms of decency through shock value.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/54289.png",
+    "image_name": "54289.png",
+    "extraction_timestamp": "2025-12-16T05:02:39.342886",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

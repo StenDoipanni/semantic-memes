@@ -1,0 +1,278 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: adolf-hitler-meme; hasOverallIntent: Hateful; overall-intent-description: The image displays a black-and-white portrait of Adolf Hitler, a historical figure responsible for the Holocaust and genocide, with the text overlay 'every one is afraid of this man.' The intent is to evoke fear or intimidation by associating Hitler with universal fear, which is a direct and hateful attack on his legacy and the atrocities he committed. This meme is not merely ironic or satirical; it glorifies or romanticizes a mass murderer and war criminal, thereby promoting hate and dangerous historical revisionism. The juxtaposition of the image of Hitler with the text 'every one is afraid of this man' serves to normalize or even celebrate his terrifying reputation, which is inherently hateful and potentially harmful by encouraging the glorification of genocide and totalitarianism. This aligns with the 'Hateful' category as it directly attacks an individual based on his historical role as a perpetrator of mass violence and genocide.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "every one is afraid of this man",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Adolf_Hitler",
+      "label": "Historical figure",
+      "description": "A black-and-white portrait of Adolf Hitler, the Nazi dictator responsible for the Holocaust and genocide. He is depicted with his characteristic mustache, neatly combed hair, and wearing a military-style uniform with a tie and strap. The image is a formal, close-up photograph with a dark background, emphasizing his stern facial expression. The text overlay 'every one is afraid of this man' is present at the bottom, contributing to the meme's hateful intent by glorifying his terrifying reputation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "portrait_with_text",
+      "label": "Portrait of Adolf Hitler with fear-inducing text overlay",
+      "description": "A black-and-white portrait of Adolf Hitler, shown in a formal military-style uniform with a tie and strap, looking directly at the camera with a stern expression. Below the portrait, the text 'every one is afraid of this man' is overlaid, creating a scene that associates him with universal fear. The dark background isolates the subject, emphasizing his presence and the ominous tone of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Adolf_Hitler",
+          "relation": "isSubjectOf",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust",
+      "label": "Holocaust",
+      "description": "The systematic, state-sponsored persecution and murder of six million Jews by Nazi Germany and its collaborators during World War II. This event is central to understanding the historical context of Adolf Hitler's actions and the global horror associated with his regime. The meme's claim that 'every one is afraid of this man' implicitly references the terror and genocide he orchestrated, making knowledge of the Holocaust essential to interpret the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Nazi_Germany",
+      "label": "Nazi Germany",
+      "description": "The totalitarian regime led by Adolf Hitler from 1933 to 1945, characterized by extreme nationalism, racial persecution, and the Holocaust. Understanding this political entity is necessary to comprehend the context of Hitler's power and the fear he instilled in populations both within and outside Germany. The meme's portrayal of him as universally feared is rooted in the historical reality of Nazi terror.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Genocide",
+      "label": "Genocide",
+      "description": "The deliberate and systematic destruction of a racial, political, or cultural group. This term is essential to understanding the scale and nature of Hitler's crimes, which included the murder of Jews, Roma, disabled individuals, and others. The meme's implication that Hitler is universally feared is tied to the global recognition of genocide as a horrific crime, making this concept critical to interpreting the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "War_Criminal",
+      "label": "War Criminal",
+      "description": "An individual who commits serious violations of international humanitarian law during armed conflict. Hitler is widely recognized as a war criminal for his role in World War II and the Holocaust. The meme's glorification of his fear is a dangerous distortion that requires knowledge of his legal and moral culpability to be understood as hateful and revisionist.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Totalitarianism",
+      "label": "Totalitarianism",
+      "description": "A political system in which the state holds total authority over society and seeks to control all aspects of public and private life. Hitler's regime exemplified totalitarianism through propaganda, censorship, and the suppression of dissent. The meme's portrayal of Hitler as universally feared is rooted in the historical reality of totalitarian terror, making this concept necessary to interpret the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Anti_Semitism",
+      "label": "Anti-Semitism",
+      "description": "Discrimination, prejudice, or hostility directed against Jewish people. Hitler's regime was built on virulent anti-Semitism, which led to the Holocaust. The meme's implication that Hitler is universally feared is tied to the historical context of anti-Semitic hatred, making this concept critical to understanding the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust_Denial",
+      "label": "Holocaust Denial",
+      "description": "The act of denying, minimizing, or distorting the historical reality of the Holocaust. The meme's glorification of Hitler as universally feared is a form of historical revisionism that implicitly promotes Holocaust denial by romanticizing his terror. Understanding this concept is necessary to recognize the meme's dangerous intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Hate_Speech",
+      "label": "Hate Speech",
+      "description": "Speech that expresses hatred or prejudice against a group or individual. The meme's text 'every one is afraid of this man' is a form of hate speech that glorifies a mass murderer and war criminal. Understanding this concept is necessary to interpret the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Historical_Revisionism",
+      "label": "Historical Revisionism",
+      "description": "The reinterpretation or distortion of historical events, often to serve a political or ideological agenda. The meme's portrayal of Hitler as universally feared is a form of historical revisionism that glorifies his terror. Understanding this concept is necessary to interpret the meme's dangerous intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Glorification_of_Terror",
+      "label": "Glorification of Terror",
+      "description": "The act of portraying or celebrating acts of terror or violence as heroic or justified. The meme's implication that Hitler is universally feared is a form of glorification of terror, which is inherently hateful and dangerous. Understanding this concept is necessary to interpret the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Hateful_Content",
+      "label": "Hateful Content",
+      "description": "Content that promotes hatred, violence, or discrimination against individuals or groups. The meme's portrayal of Hitler as universally feared is a form of hateful content that glorifies a mass murderer and war criminal. Understanding this concept is necessary to interpret the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "portrait_with_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "fear",
+      "label": "fear-inducing emotion",
+      "description": "The emotion of fear is expressed through the text overlay 'every one is afraid of this man', which directly states that the subject is universally feared. This text, combined with the stern facial expression of Adolf Hitler in the portrait, creates an atmosphere of intimidation and terror. The emotion is not depicted through the subject's facial expression alone, but is explicitly communicated via the textual material, which is a form of hate speech glorifying terror.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Adolf Hitler is mapped as 'every one is afraid of this man'",
+      "description": "The text 'every one is afraid of this man' explicitly maps the visual entity Adolf_Hitler as the subject universally feared. This is a direct analogical mapping where the textual description assigns a specific emotional and reputational attribute (being universally feared) to the visual entity depicted. The mapping is established through the juxtaposition of the text overlay with the portrait, creating a direct association between the text's claim and the visual subject.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual claim of universal fear",
+      "description": "The user is projected onto the textual material 'every one is afraid of this man', which implicitly positions the viewer as part of the collective 'everyone' who is afraid. This creates a semiotic projection where the user identifies with the group experiencing fear toward the depicted figure, thereby internalizing the meme's hateful framing. There are no explicit deictic pronouns like 'you' or 'me', but the universal quantifier 'every one' functions as an implicit projection of the user into the collective subject of fear.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Adolf Hitler based on his historical role as a perpetrator of mass violence and genocide, glorifying his terrifying reputation and promoting dangerous historical revisionism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who may be influenced by or sympathetic to hateful historical revisionism, glorification of totalitarian terror, or those who seek to normalize or romanticize Adolf Hitler's legacy. This includes communities that may engage with or propagate hate speech, anti-Semitic tropes, or glorification of war criminals. The meme is designed to appeal to those who either misunderstand or deliberately distort historical events, particularly those who associate Hitler with universal fear without acknowledging the genocide and atrocities he committed. The audience is likely to be drawn to the meme’s provocative and sensationalist framing, which exploits fear and historical trauma for shock value or ideological reinforcement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/36924.png",
+    "image_name": "36924.png",
+    "extraction_timestamp": "2025-12-15T23:35:06.596904",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 20,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

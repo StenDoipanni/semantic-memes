@@ -1,0 +1,35 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "child_held_by_horse",
+      "participants": [
+        {
+          "entity": "child",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "horse",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "being_held_by",
+          "to": "horse"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":child_held_by_horse :hasParticipant :child .",
+    ":child_held_by_horse :hasParticipant :horse .",
+    ":child :being_held_by :horse ."
+  ],
+  "triples_count": 3
+}

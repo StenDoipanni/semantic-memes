@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "humorous emotion",
+      "expressors": [
+        {
+          "entity": "international-boxing-day-meme",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "international-boxing-day-meme",
+          "relation": "expressesEmotion",
+          "to": "humorous emotion"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":humorous_emotion :hasExpressor :international_boxing_day_meme .",
+    ":international_boxing_day_meme :expressesEmotion :humorous_emotion ."
+  ],
+  "triples_count": 2
+}

@@ -1,0 +1,52 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "landmine_warning_scene",
+      "participants": [
+        {
+          "entity": "warning_sign",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "barbed_wire_fence",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "tall_grass",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "warning_sign",
+          "relation": "mountedOn",
+          "to": "metal_post"
+        },
+        {
+          "from": "warning_sign",
+          "relation": "inFrontOf",
+          "to": "barbed_wire_fence"
+        },
+        {
+          "from": "barbed_wire_fence",
+          "relation": "surroundedBy",
+          "to": "tall_grass"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":landmine_warning_scene :hasParticipant :warning_sign .",
+    ":landmine_warning_scene :hasParticipant :barbed_wire_fence .",
+    ":landmine_warning_scene :hasParticipant :tall_grass .",
+    ":warning_sign :mountedOn :metal_post .",
+    ":warning_sign :inFrontOf :barbed_wire_fence .",
+    ":barbed_wire_fence :surroundedBy :tall_grass ."
+  ],
+  "triples_count": 6
+}

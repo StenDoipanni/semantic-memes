@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "dark_humor_expression",
+      "expressors": [
+        {
+          "entity": "prisoners",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "prisoners",
+          "relation": "emotionalRelationToEntity",
+          "to": "text_chunk"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":dark_humor_expression :hasExpressor :prisoners .",
+    ":prisoners :emotionalRelationToEntity :text_chunk ."
+  ],
+  "triples_count": 2
+}

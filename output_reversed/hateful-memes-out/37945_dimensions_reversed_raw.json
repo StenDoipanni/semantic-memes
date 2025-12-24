@@ -1,0 +1,211 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Mysogynous; overall-intent-description: The image depicts a woman with a shocked expression while looking at her phone, overlaid with text that reads 'when she asks you to send a dick pic and your dick is in her mom's mouth.' This meme uses a crude, sexually explicit scenario to mock or ridicule women, particularly in the context of sexual requests or expectations. The humor is derived from objectifying the woman and implying a scenario that is both inappropriate and degrading, which aligns with misogynous tropes that reduce women to their sexual availability or behavior. The visual of the woman's shocked reaction is juxtaposed with the absurd and vulgar text to create a comedic effect rooted in sexualized humiliation, reinforcing harmful stereotypes about women's roles and sexual agency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when she asks you to send a dick pic",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "a young woman with long blonde hair",
+      "description": "The central figure in the image, wearing a dark blue puffer jacket, holding a smartphone and a drink cup with a straw. She has a shocked, wide-eyed expression with her mouth open, looking at her phone. Her expression is the focal point of the visual material and is juxtaposed with the meme text to convey surprise or horror.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "shocked_woman_on_phone",
+      "label": "woman reacting with shock while looking at phone",
+      "description": "The central visual scene features a woman with a shocked expression, holding a smartphone and a drink cup, looking at her phone. Her facial expression and posture suggest surprise or horror, which is juxtaposed with the meme text to create comedic or absurd effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype",
+      "label": "Misogynous Stereotype",
+      "description": "The meme relies on misogynous stereotypes by objectifying the woman and reducing her to her sexual availability or behavior. It implies that women are sexually demanding and that their requests are inherently inappropriate or absurd, reinforcing harmful tropes that devalue women's agency and autonomy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "shocked_woman_on_phone",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexual_objectification",
+      "label": "Sexual Objectification",
+      "description": "The meme uses sexual objectification by focusing on the woman's body and implying a crude, sexualized scenario involving her and her mother. This reduces the woman to her physical attributes and sexual behavior, which is a common misogynous trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "shocked_woman_on_phone",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization",
+      "label": "Hypersexualization",
+      "description": "The meme employs hypersexualization by depicting an exaggerated, vulgar sexual scenario involving the woman and her mother. This trope is often used to demean women by focusing on their sexual behavior and implying they are inherently sexual or promiscuous.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "shocked_woman_on_phone",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexual_humiliation",
+      "label": "Sexual Humiliation",
+      "description": "The meme derives humor from sexual humiliation by presenting an absurd and degrading scenario involving the woman. The visual of her shocked reaction is juxtaposed with the vulgar text to create a comedic effect rooted in sexualized humiliation, reinforcing harmful stereotypes about women's roles and sexual agency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "shocked_woman_on_phone",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexual_request_tropes",
+      "label": "Sexual Request Tropes",
+      "description": "The meme references common tropes around sexual requests, particularly the expectation that women will ask for explicit content (e.g., 'dick pic'). This trope is often used to mock or ridicule women for their perceived sexual availability or behavior, which is a form of misogynous humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "shocked_woman_on_phone",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "shock",
+      "label": "shocked emotion",
+      "description": "The woman's facial expression, characterized by wide eyes, an open mouth, and a startled posture, conveys a strong sense of shock or horror. This expression is visually emphasized by her focus on the smartphone, suggesting she has just encountered something unexpected or alarming.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The woman is mapped as the recipient of a sexual request",
+      "description": "The text 'when she asks you to send a dick pic' explicitly refers to the woman in the image as the person making the request. Her shocked expression is juxtaposed with this text to imply she is the one who initiated the sexual demand, which is then mapped onto her visual representation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material describing a sexual request",
+      "description": "The user is projected onto the textual material 'when she asks you to send a dick pic' because the phrase uses 'you' and 'she', creating a direct address to the viewer as the recipient of the request. This deictic pronoun 'you' explicitly positions the user as the subject of the scenario, making them the focal point of the meme's implied narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_2",
+      "label": "User projected onto the visual material of the shocked woman",
+      "description": "The user is projected onto the visual material of the woman (the 'shocked_woman_on_phone') because her shocked expression is juxtaposed with the text 'and your dick is in her mom's mouth', which uses 'your' to directly address the viewer. The user is implicitly positioned as the person whose 'dick' is in the scenario, making the woman's reaction a visual representation of the user's imagined or expected response to the absurd situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme uses a crude, sexually explicit scenario to mock or ridicule women, particularly in the context of sexual requests or expectations. The humor is derived from objectifying the woman and implying a scenario that is both inappropriate and degrading, which aligns with misogynous tropes that reduce women to their sexual availability or behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who are familiar with and find humor in misogynous tropes, particularly those who engage with or understand crude sexual humor, objectification of women, and hypersexualization. The meme is designed for an audience that finds amusement in sexual humiliation scenarios and the reduction of women to their sexual availability or behavior, often through absurd or vulgar juxtapositions. This audience likely includes people who consume internet memes that rely on shock value, sexual innuendo, and the reinforcement of harmful stereotypes about women, particularly in contexts involving sexual requests or expectations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/37945.png",
+    "image_name": "37945.png",
+    "extraction_timestamp": "2025-12-16T00:02:33.397426",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

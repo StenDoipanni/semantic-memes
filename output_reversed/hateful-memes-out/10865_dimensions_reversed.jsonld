@@ -1,0 +1,590 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123",
+  "@type": "AnalysisDocument",
+  "title": "10865.png - Dimension Analysis",
+  "created": "2025-12-15T14:34:34.711899",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_3cf3f5a1",
+    "@type": "Image",
+    "filename": "10865.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/10865.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/10865.png",
+    "image_name": "10865.png",
+    "extraction_timestamp": "2025-12-15T14:31:24.944733",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 50,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6b92cdff",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: this_movie_sucks_i_am_thinking_of_another_shooting; hasOverallIntent: Harmful; overall-intent-description: The image depicts a woman in a dramatic, elaborate costume seated in what appears to be a film set or studio, surrounded by crew members and equipment. The text overlay reads \"this movie sucks\" and \"i am thinking of another shooting.\" The overall intent is to convey a humorous or sarcastic commentary on the filmmaking process, suggesting that the creator is frustrated with the current project and is considering starting over. The scene is not inherently toxic or harmful in terms of targeting specific groups or individuals, but the phrase \"another shooting\" could be interpreted as a reference to violence or harm, which may be seen as potentially harmful or triggering depending on context. The meme uses juxtaposition to create a comedic effect by contrasting the glamorous, high-production setting with the crude, self-deprecating text, implying that even in a professional environment, creative frustrations can lead to thoughts of abandoning the project entirely. There is no direct evidence of abusive, cyberbullying, hateful, misogynistic, or propagandistic intent, but the potential for misinterpretation due to the phrase \"another shooting\" introduces a minor element of harmfulness.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2c58e330",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "this movie sucks",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1bb28277",
+      "@type": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "central figure in elaborate costume",
+      "description": "A woman seated prominently in the center of the image, wearing a dramatic, voluminous black feathered gown and an ornate headdress. Her posture is theatrical, and she appears to be the main subject of the scene, likely portraying a character in a film or theatrical production. She is surrounded by film crew and equipment, indicating a set environment.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a934bb94",
+      "@type": "Scene",
+      "instance_name": "film_set_scene",
+      "label": "film_set_scene",
+      "description": "A scene depicting a woman in an elaborate costume seated prominently in the center of a film set, surrounded by crew members and equipment. The spatial arrangement suggests a professional production environment with lighting and staging elements. The woman is the central focus, while crew members are positioned around her, indicating active filming or setup. The text overlay adds a humorous commentary on the filmmaking process.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_367b9805",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_process",
+      "label": "Film Production Process",
+      "description": "The meme references the behind-the-scenes work of filmmaking, including set design, lighting, and crew coordination, which are standard components of film production. Understanding this process is necessary to interpret the humor in the juxtaposition of the glamorous set with the crude text about abandoning the project.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ebdd7d28",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_set",
+      "label": "Film Set",
+      "description": "The setting is a film set, which is a temporary location constructed for the filming of a movie. Recognizing this context helps understand why the crew and equipment are present and why the central figure is being photographed or filmed.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5e93b516",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_directing",
+      "label": "Film Directing",
+      "description": "The presence of crew members and lighting equipment implies that directing is taking place. This knowledge helps interpret the scene as a professional filmmaking environment, which contrasts humorously with the text",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_086d652f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_crew",
+      "label": "Film Crew",
+      "description": "The individuals surrounding the central figure are part of the film crew, including lighting technicians and possibly a director or assistant. Understanding the roles of these crew members helps contextualize the scene as a professional film production.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c57050a8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_director",
+      "label": "Film Director",
+      "description": "The person overseeing the filming process, often responsible for the artistic and technical aspects of a film. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c270ef73",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production",
+      "label": "Film Production",
+      "description": "The overall process of creating a film, encompassing pre-production, production, and post-production. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_171e5cbd",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_shooting",
+      "label": "Film Shooting",
+      "description": "The act of filming a movie, which involves capturing scenes on camera. The phrase ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3e6ea0da",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_set_design",
+      "label": "Film Set Design",
+      "description": "The creation of the physical environment for a film scene, including props, furniture, and decor. The elaborate set in the image is a product of set design, which is part of the film production process.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_179c31c3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_lighting",
+      "label": "Film Lighting",
+      "description": "The use of artificial lighting to create the desired visual effect in a film scene. The presence of lighting equipment in the image indicates that lighting is being adjusted for the shot, a crucial part of film production.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8414bbd5",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_camera",
+      "label": "Film Camera",
+      "description": "The equipment used to capture images for a film. Although not explicitly visible, the presence of crew members and lighting suggests that a camera is being used to film the scene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_232d1294",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_actor",
+      "label": "Film Actor",
+      "description": "The central figure in the image is likely portraying a character in a film, which requires acting skills. Understanding the role of an actor helps interpret the scene as part of a performance.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5f8dc21e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_directing_process",
+      "label": "Film Directing Process",
+      "description": "The process by which a director guides the actors and crew to achieve the desired artistic vision. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8f1304c1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_post_production",
+      "label": "Film Post-Production",
+      "description": "The phase of film production that occurs after shooting, including editing, sound design, and visual effects. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8d348bd1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_budget",
+      "label": "Film Budget",
+      "description": "The financial resources allocated for a film production. The phrase ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_83e58294",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_schedule",
+      "label": "Film Schedule",
+      "description": "The timeline for filming a movie, which includes shooting days, breaks, and post-production deadlines. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_24399112",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_crew_roles",
+      "label": "Film Crew Roles",
+      "description": "The various roles within a film crew, including director, cinematographer, lighting technician, and assistant director. Understanding these roles helps interpret the scene as a professional film production.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7fba8154",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_challenges",
+      "label": "Film Production Challenges",
+      "description": "The difficulties and obstacles that can arise during film production, including budget constraints, scheduling issues, and creative disagreements. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6a86dc33",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_success",
+      "label": "Film Production Success",
+      "description": "The achievement of a successful film production, which includes meeting budget and schedule goals and achieving the desired artistic vision. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0ae122ad",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_failure",
+      "label": "Film Production Failure",
+      "description": "The failure of a film production, which can occur due to budget overruns, scheduling issues, or creative disagreements. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ffd6664e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_abandonment",
+      "label": "Film Production Abandonment",
+      "description": "The decision to abandon a film production before completion. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2f6ada90",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_restarts",
+      "label": "Film Production Restarts",
+      "description": "The decision to restart a film production, which can occur due to budget overruns, scheduling issues, or creative disagreements. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_597285d0",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_creative_disagreements",
+      "label": "Film Production Creative Disagreements",
+      "description": "Disagreements between the director, actors, and crew regarding the artistic vision of a film. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_77de93c1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_budget_overruns",
+      "label": "Film Production Budget Overruns",
+      "description": "Exceeding the allocated budget for a film production. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0dae044a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_scheduling_issues",
+      "label": "Film Production Scheduling Issues",
+      "description": "Problems with the timeline for filming a movie, which can include delays and missed deadlines. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e3ec345a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_technical_problems",
+      "label": "Film Production Technical Problems",
+      "description": "Issues with the equipment or technology used in film production. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f1f9c543",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_actor_performance",
+      "label": "Film Production Actor Performance",
+      "description": "The performance of actors in a film. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ecd15282",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_director_performance",
+      "label": "Film Production Director Performance",
+      "description": "The performance of the director in a film. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ffeabb95",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_crew_performance",
+      "label": "Film Production Crew Performance",
+      "description": "The performance of the crew in a film. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c0d8a06f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_script",
+      "label": "Film Production Script",
+      "description": "The written text of a film, which is the basis for the film",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a632fcac",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_location",
+      "label": "Film Production Location",
+      "description": "The physical location where a film is shot. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d35ab6eb",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_cast",
+      "label": "Film Production Cast",
+      "description": "The group of actors in a film. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_501d500b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_music",
+      "label": "Film Production Music",
+      "description": "The music used in a film. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_53215b5f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_sound",
+      "label": "Film Production Sound",
+      "description": "The sound used in a film. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6e7bcec8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_visual_effects",
+      "label": "Film Production Visual Effects",
+      "description": "The visual effects used in a film. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7feb82a3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_editing",
+      "label": "Film Production Editing",
+      "description": "The process of editing a film. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dfd8ace4",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_post_production",
+      "label": "Film Production Post-Production",
+      "description": "The phase of film production that occurs after shooting, including editing, sound design, and visual effects. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1691e774",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_distribution",
+      "label": "Film Production Distribution",
+      "description": "The process of distributing a film to theaters or other platforms. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8d7b2214",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_marketing",
+      "label": "Film Production Marketing",
+      "description": "The process of marketing a film to audiences. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f61a351e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_box_office",
+      "label": "Film Production Box Office",
+      "description": "The revenue generated by a film at the box office. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e6252363",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_critical_response",
+      "label": "Film Production Critical Response",
+      "description": "The response of critics to a film. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_45f3c7f5",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "film_production_audience_response",
+      "label": "Film Production Audience Response",
+      "description": "The response of audiences to a film. The meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_49fd7c33",
+      "@type": "EmotionExpression",
+      "instance_name": "frustration",
+      "label": "frustrated emotion",
+      "description": "The emotion of frustration is expressed through the text overlay 'this movie sucks' and the implied context of considering abandoning the project ('i am thinking of another shooting'), suggesting dissatisfaction with the current state of the film production. The juxtaposition of the glamorous set with the crude text amplifies the comedic frustration.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_28fe27f8",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "the text 'this movie sucks' is mapped onto the film production scene",
+      "description": "The top text overlay 'this movie sucks' is juxtaposed with the visual of a film set in progress, creating an analogical mapping where the entire film production scene (including the woman in costume and the crew) is being used to represent the 'movie' that is being criticized. The visual material (the film set) is mapped onto the textual entity 'this movie sucks', implying that the current film production is the subject of the criticism.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_43763476",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the film set scene",
+      "description": "The user is projected onto the film_set_scene, as the meme uses the visual of the film set and crew to represent the 'movie' being criticized. The text 'this movie sucks' and 'i am thinking of another shooting' implies the user (the creator or viewer) is identifying with the frustration of the filmmaking process, projecting their own experience or perspective onto the scene. The scene itself becomes the vessel for the user's emotional state.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f11befe4",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The phrase 'i am thinking of another shooting' could be interpreted as a reference to violence or harm, which may be seen as potentially harmful or triggering depending on context. While the overall intent is humorous and self-deprecating, the potential for misinterpretation introduces a minor element of harmfulness.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_70ad7968",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "film industry professionals",
+      "description": "The meme is designed for individuals involved in film production, such as directors, actors, cinematographers, and crew members, who can relate to the behind-the-scenes frustrations and creative challenges depicted in the image. The visual of a film set and the text 'this movie sucks' and 'i am thinking of another shooting' directly reference the filmmaking process, making it particularly resonant with those in the film industry.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_d1757123"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

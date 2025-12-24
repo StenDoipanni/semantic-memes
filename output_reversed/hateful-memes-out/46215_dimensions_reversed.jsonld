@@ -1,0 +1,502 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36",
+  "@type": "AnalysisDocument",
+  "title": "46215.png - Dimension Analysis",
+  "created": "2025-12-16T02:12:15.326126",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_ff7a9d42",
+    "@type": "Image",
+    "filename": "46215.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/46215.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/46215.png",
+    "image_name": "46215.png",
+    "extraction_timestamp": "2025-12-16T02:08:57.939126",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 42,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4febda18",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Mysogynous; overall-intent-description: The image depicts three men laughing while holding cups, with text overlaid that reads: 'you think that hoe thinks you're special' and 'lol she says that to us too!'. The term 'hoe' is a derogatory slang term used to demean women, implying they are sexually promiscuous and unworthy of respect. The meme uses this language to mock the idea that a woman might be attracted to or value a man, suggesting that such a belief is foolish or laughable. This reflects a misogynistic attitude by reducing a woman's worth to her sexual behavior and mocking her perceived lack of discernment. The overall intent is to ridicule and belittle women through the use of sexist language, fitting under the 'Mysogynous' category as it contains hate against women.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_340360b7",
+      "@type": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "you think that hoe thinks you're special",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b36d9d7d",
+      "@type": "VisualMaterial",
+      "instance_name": "man_on_left",
+      "label": "man wearing hoodie and cap",
+      "description": "A young man with dark hair, wearing a black cap backward, a grey hoodie, and a maroon vest. He is holding two red plastic cups and laughing with an open mouth, showing teeth. His expression is joyful and engaged in the group's laughter.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_57786361",
+      "@type": "Scene",
+      "instance_name": "laughing_friends",
+      "label": "friends laughing together",
+      "description": "Three men are gathered closely, all laughing heartily while holding plastic cups, suggesting a shared moment of amusement or mockery at a party or social gathering. Their body language and facial expressions indicate camaraderie and shared humor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9af2b43c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_slur_hoe",
+      "label": "Derogatory term ",
+      "description": "The term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1e9068cb",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_gold_digger",
+      "label": "Stereotype of ",
+      "description": "The stereotype that women are ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_608d3242",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_sexual_availability",
+      "label": "Stereotype of ",
+      "description": "The stereotype that women are inherently sexually available or promiscuous is used to devalue women",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1a9ec530",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_objectification",
+      "label": "Stereotype of objectification",
+      "description": "The stereotype that women are objects to be used or valued only for their physical appearance or sexual appeal is central to the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4a73fcc4",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_age_appearance_value_judgments",
+      "label": "Stereotype of age/appearance-based value judgments",
+      "description": "The stereotype that a woman",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5d2ebdca",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_crazy_hysterical",
+      "label": "Stereotype of ",
+      "description": "The stereotype that women are emotionally unstable or ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f0751ab0",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_belongs_in_kitchen",
+      "label": "Stereotype of ",
+      "description": "The stereotype that women are only suited for domestic roles, such as cooking or cleaning, is used to devalue their intellectual or emotional capabilities. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_19809e00",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_maternal_role_limitations",
+      "label": "Stereotype of maternal role limitations",
+      "description": "The stereotype that women are only valued for their maternal roles is used to limit their perceived worth to their ability to bear children. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_742c211c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_intelligence_competence_denial",
+      "label": "Stereotype of intelligence/competence denial",
+      "description": "The stereotype that women are intellectually inferior or incapable of making rational decisions is used to mock their perceived lack of discernment. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a4b1207a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_driving_ability_mockery",
+      "label": "Stereotype of driving ability mockery",
+      "description": "The stereotype that women are poor drivers is used to mock their perceived incompetence. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fbcae152",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_emotional_instability",
+      "label": "Stereotype of emotional instability",
+      "description": "The stereotype that women are emotionally unstable or irrational is used to mock their perceived lack of rationality. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_99932e25",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_body_part_focus",
+      "label": "Stereotype of body part focus",
+      "description": "The stereotype that women are valued only for their physical appearance or specific body parts is used to devalue their intellectual or emotional capabilities. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_995bc3f0",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_driving_ability_mockery",
+      "label": "Stereotype of driving ability mockery",
+      "description": "The stereotype that women are poor drivers is used to mock their perceived incompetence. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_41a4147f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_age_appearance_value_judgments",
+      "label": "Stereotype of age/appearance-based value judgments",
+      "description": "The stereotype that a woman",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a8e890eb",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_crazy_hysterical",
+      "label": "Stereotype of ",
+      "description": "The stereotype that women are emotionally unstable or ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4d5440b7",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_belongs_in_kitchen",
+      "label": "Stereotype of ",
+      "description": "The stereotype that women are only suited for domestic roles, such as cooking or cleaning, is used to limit their perceived worth to their ability to bear children. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d7166222",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_intelligence_competence_denial",
+      "label": "Stereotype of intelligence/competence denial",
+      "description": "The stereotype that women are intellectually inferior or incapable of making rational decisions is used to mock their perceived lack of discernment. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dca8d6ef",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_emotional_instability",
+      "label": "Stereotype of emotional instability",
+      "description": "The stereotype that women are emotionally unstable or irrational is used to mock their perceived lack of rationality. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d0ada837",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_body_part_focus",
+      "label": "Stereotype of body part focus",
+      "description": "The stereotype that women are valued only for their physical appearance or specific body parts is used to devalue their intellectual or emotional capabilities. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d8d6027b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_driving_ability_mockery",
+      "label": "Stereotype of driving ability mockery",
+      "description": "The stereotype that women are poor drivers is used to mock their perceived incompetence. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0a6bba1a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_age_appearance_value_judgments",
+      "label": "Stereotype of age/appearance-based value judgments",
+      "description": "The stereotype that a woman",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f69a9d89",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_crazy_hysterical",
+      "label": "Stereotype of ",
+      "description": "The stereotype that women are emotionally unstable or ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_de3f24a4",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_belongs_in_kitchen",
+      "label": "Stereotype of ",
+      "description": "The stereotype that women are only suited for domestic roles, such as cooking or cleaning, is used to limit their perceived worth to their ability to bear children. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a94ed990",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_intelligence_competence_denial",
+      "label": "Stereotype of intelligence/competence denial",
+      "description": "The stereotype that women are intellectually inferior or incapable of making rational decisions is used to mock their perceived lack of discernment. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b69e402d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_emotional_instability",
+      "label": "Stereotype of emotional instability",
+      "description": "The stereotype that women are emotionally unstable or irrational is used to mock their perceived lack of rationality. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4c7794cb",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_body_part_focus",
+      "label": "Stereotype of body part focus",
+      "description": "The stereotype that women are valued only for their physical appearance or specific body parts is used to devalue their intellectual or emotional capabilities. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d9b52fd5",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_driving_ability_mockery",
+      "label": "Stereotype of driving ability mockery",
+      "description": "The stereotype that women are poor drivers is used to mock their perceived incompetence. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_35b329b1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_age_appearance_value_judgments",
+      "label": "Stereotype of age/appearance-based value judgments",
+      "description": "The stereotype that a woman",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_90615ae2",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_crazy_hysterical",
+      "label": "Stereotype of ",
+      "description": "The stereotype that women are emotionally unstable or ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4b07ae7d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_belongs_in_kitchen",
+      "label": "Stereotype of ",
+      "description": "The stereotype that women are only suited for domestic roles, such as cooking or cleaning, is used to limit their perceived worth to their ability to bear children. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_43ec5d1f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_intelligence_competence_denial",
+      "label": "Stereotype of intelligence/competence denial",
+      "description": "The stereotype that women are intellectually inferior or incapable of making rational decisions is used to mock their perceived lack of discernment. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7c9fbb8d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_emotional_instability",
+      "label": "Stereotype of emotional instability",
+      "description": "The stereotype that women are emotionally unstable or irrational is used to mock their perceived lack of rationality. This is implied in the meme",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4dfdd6ad",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype_body_part_focus",
+      "label": "the backgroundknowledge",
+      "description": "Extracted from image analysis",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7827d99b",
+      "@type": "EmotionExpression",
+      "instance_name": "mocking_laughter",
+      "label": "mocking and derisive laughter",
+      "description": "The three men are laughing heartily while holding cups, their expressions conveying amusement that is clearly mocking or sarcastic, directed at the implied object of the meme (a woman). Their body language and facial expressions suggest they are ridiculing the idea that a woman might find them special, reinforcing the misogynistic tone of the text.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_60fb31bf",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The text 'you think that hoe thinks you're special' is mapped onto the laughing friends.",
+      "description": "The top text 'you think that hoe thinks you're special' is juxtaposed with the visual of three men laughing together. The laughter and camaraderie of the men are mapped onto the textual claim that a woman (the 'hoe') thinks they are special, implying that the men are mocking the idea that any woman would find them special. The visual of their shared, mocking laughter serves as the visual representation of the text's content.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_00bac7a8",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the laughing friends scene",
+      "description": "The user is projected onto the scene of the three laughing men, as the meme's humor and the text's implication (that the 'hoe' says this to them) create an identification with the men's perspective and their mocking laughter. The user sees themselves as part of the group laughing at the idea of being thought special by a woman.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3102f9c5",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme uses the derogatory term 'hoe' to demean women, implying they are sexually promiscuous and unworthy of respect. It mocks the idea that a woman might find the men special, reducing a woman's worth to her sexual behavior and portraying her as foolish or laughable. This reflects a misogynistic attitude by devaluing women through sexist language and stereotypes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bbfe15b3",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is young adult males, particularly those who identify with or participate in casual, party-oriented social settings where humor often involves mocking or belittling women. The meme's visual of three men laughing together while holding plastic cups, combined with the misogynistic text, is designed to resonate with an audience that finds amusement in sexist stereotypes and derogatory language about women. The use of the term 'hoe' and the mocking tone suggest the meme is aimed at a demographic that either uses or finds humor in such language, likely within a context of male camaraderie and social drinking culture. The target audience is likely to be individuals who identify with the visual of the laughing friends and who may share or appreciate the meme's underlying misogynistic humor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_506e9b36"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

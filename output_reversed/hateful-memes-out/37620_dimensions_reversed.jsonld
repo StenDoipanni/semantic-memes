@@ -1,0 +1,172 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_cdda10f7",
+  "@type": "AnalysisDocument",
+  "title": "37620.png - Dimension Analysis",
+  "created": "2025-12-15T23:55:46.610033",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_0a7d3db4",
+    "@type": "Image",
+    "filename": "37620.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/37620.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/37620.png",
+    "image_name": "37620.png",
+    "extraction_timestamp": "2025-12-15T23:54:26.927707",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_549d1c4a",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: do_i_have_something_in_my_teeth; hasOverallIntent: Harmful; overall-intent-description: The image shows a young Black child with a wide, joyful smile, and the text asks, 'do i have something in my teeth?'. The meme's intent is to create humor by juxtaposing the child's innocent, happy expression with the absurdity of the question. While not overtly abusive or hateful, the meme can be considered harmful because it relies on the visual of a Black child's teeth to generate a joke, which may unintentionally reinforce negative stereotypes about Black people's oral hygiene or appearance. This aligns with the 'RACISM - Anti-Black Stereotypes' knowledge base, specifically the 'Hygiene stereotypes' category, as it may imply that Black people are less hygienic or have 'dirty teeth' — a harmful trope that can perpetuate bias. The meme's humor is derived from the contrast between the child's joyful expression and the implication of something 'wrong' with their teeth, which can be seen as a form of visual mockery. The intent is not to target a specific individual but to use a racialized visual for comedic effect, which can be harmful to the community it represents.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cdda10f7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_eda051c1",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "do i have something",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cdda10f7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a288e34e",
+      "@type": "VisualMaterial",
+      "instance_name": "child",
+      "label": "young Black child",
+      "description": "A young Black child with a wide, joyful smile, showing teeth that appear to have sand or dirt on them. The child has short hair and is wearing a colorful striped shirt. The expression is innocent and happy, contrasting with the text asking if there is something in their teeth.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cdda10f7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ccdb100a",
+      "@type": "Scene",
+      "instance_name": "child_questioning_teeth",
+      "label": "child questioning if something is in their teeth",
+      "description": "A young Black child with a wide, joyful smile is the central visual element. The text overlay asks 'do i have something in my teeth?', creating a humorous and potentially harmful scene that juxtaposes innocence with a racially stereotyped implication about oral hygiene. The child is the sole participant, and the text is directly related to their expression and the implied question.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cdda10f7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1a5d8f90",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "hygiene_stereotype",
+      "label": "Hygiene Stereotype",
+      "description": "The meme relies on the implicit stereotype that Black people are less hygienic or have 'dirty teeth,' which is a harmful trope perpetuating racial bias. This stereotype is not visible in the image but is necessary to understand the meme's potentially offensive intent.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cdda10f7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3caa2577",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "Anti-Black Stereotype",
+      "description": "The meme implicitly references the broader category of 'Anti-Black Stereotypes' as outlined in the knowledge base, specifically 'Hygiene stereotypes.' This stereotype is not visible but is essential to understanding the meme's racialized humor and its potential harm.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cdda10f7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_11bd94df",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racialized_visual_joke",
+      "label": "Racialized Visual Joke",
+      "description": "The meme uses a racialized visual (a young Black child) to generate humor, which is a form of visual mockery. This concept is not directly visible but is necessary to understand the meme's intent and its potential to reinforce harmful stereotypes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cdda10f7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2fdd41e2",
+      "@type": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful expression",
+      "description": "The child displays a wide, toothy grin with crinkled eyes and an open-mouthed smile, conveying pure joy and innocence. The expression is unguarded and exuberant, suggesting genuine happiness.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cdda10f7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7eb644aa",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Child is the one asking the question",
+      "description": "The text 'do i have something in my teeth?' is directly mapped onto the visual of the child, implying that the child is the speaker of the question. The child's joyful expression and the text create an analogical mapping where the child is identified as 'I' in the question.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cdda10f7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a3646ab6",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the child questioning teeth",
+      "description": "The user is projected onto the child in the image, who is the subject of the question 'do i have something in my teeth?'. The use of 'i' in the text creates a direct deictic reference, implying that the viewer (user) is identifying with the child as the speaker. The child's joyful expression and the text create an analogical mapping where the user is positioned as the 'I' in the question, projecting themselves onto the child's visual and textual representation.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cdda10f7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_318d1610",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme relies on the visual of a Black child to generate humor by implying a hygiene stereotype, which can perpetuate racial bias and reinforce harmful tropes about Black people's oral hygiene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cdda10f7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_712437cc",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience familiar with internet humor and meme culture, particularly those who understand visual irony and racialized humor. The target community includes users who may not be aware of the harmful implications of the hygiene stereotype, and who may find the juxtaposition of the child's innocent expression with the absurd question humorous without recognizing the racial undertones.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_cdda10f7"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

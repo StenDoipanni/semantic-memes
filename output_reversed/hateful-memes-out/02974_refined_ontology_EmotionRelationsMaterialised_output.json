@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "degrading_humor_expression",
+      "expressors": [
+        {
+          "entity": "meme_text",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme_text",
+          "relation": "emotionalRelationToEntity",
+          "to": "X_ray_of_hands"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":degrading_humor_expression :hasExpressor :meme_text .",
+    ":meme_text :emotionalRelationToEntity :X_ray_of_hands ."
+  ],
+  "triples_count": 2
+}

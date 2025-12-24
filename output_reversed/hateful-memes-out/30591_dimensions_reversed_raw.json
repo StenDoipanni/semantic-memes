@@ -1,0 +1,198 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: i_hate_snow_meme; hasOverallIntent: Harmful; overall-intent-description: The image depicts a person shoveling snow, with overlaid text stating 'i hate snow' and 'it's white and on my land.' The intent is to humorously express frustration with snow by using a pun on the word 'white,' implying the snow is an unwanted intruder on one's property. While the meme is lighthearted and not targeted at any specific group, it could be considered harmful in a narrow sense because it trivializes the labor-intensive and often burdensome task of snow removal, potentially dismissing the real difficulties faced by people in snowy regions. The humor relies on a simplistic and somewhat absurd framing of snow as an 'invasion,' which may unintentionally minimize the legitimate challenges of winter weather. The meme does not contain abusive, cyberbullying, hateful, misogynistic, or propagandistic elements, but its tone could be seen as dismissive of the practical realities of snow management, making it mildly harmful in context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "i hate snow",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "person shoveling snow",
+      "description": "A person wearing a red jacket, gray pants, and a teal beanie is actively shoveling snow from a sidewalk. They are bent over, using a red snow shovel, indicating physical effort. Their posture and focused expression suggest they are engaged in the laborious task of snow removal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "snow_shoveling_scene",
+      "label": "person_shoveling_snow",
+      "description": "A person is actively shoveling snow from a sidewalk in a residential area. The person is bent over, using a red snow shovel, indicating physical effort. The scene includes snow-covered ground, residential buildings in the background, and a street with parked cars. The person is the central focus, engaged in the laborious task of snow removal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "snow_removal_stereotype",
+      "label": "Snow Removal as Burdensome Labor",
+      "description": "The meme relies on the real-world understanding that snow removal is a physically demanding and often tedious task, especially in regions with heavy snowfall. The humor stems from the absurdity of framing snow as an 'invasion' or 'intruder' on one's land, which is a metaphorical exaggeration of the real-world burden of winter maintenance. This stereotype is commonly associated with homeowners and property owners in snowy climates who must invest time and effort into clearing snow.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person_shoveling_snow",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "property_ownership_stereotype",
+      "label": "Property Ownership and Land as Personal Territory",
+      "description": "The phrase 'it's white and on my land' implies a sense of territorial ownership, which is a common real-world concept. It references the idea that individuals view their property as their personal domain and are frustrated when external elements (like snow) cover or interfere with it. This is a cultural and legal concept rooted in property rights and personal space, which is not visually depicted but is essential to understanding the meme's punchline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pun_based_humor",
+      "label": "Pun-Based Humor and Wordplay",
+      "description": "The meme uses a pun on the word 'white' — playing on the color of snow and the idea of 'white' as in 'white space' or 'white land' — to create a humorous and absurd framing. This relies on the audience's understanding of wordplay and the ability to recognize the double meaning. It is a common form of humor in internet culture, often used to create ironic or sarcastic commentary.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "winter_weather_stereotype",
+      "label": "Winter Weather as a Burden",
+      "description": "The meme implicitly references the real-world stereotype that winter weather, particularly snow, is a nuisance or burden for many people. This is a common cultural perception, especially in regions with cold climates, where snowfall can disrupt daily life, transportation, and property maintenance. The meme exaggerates this perception for comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "person_shoveling_snow",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "snow_as_invasion_stereotype",
+      "label": "Snow as an 'Invasion' or 'Intruder'",
+      "description": "The phrase 'it's white and on my land' is a metaphorical exaggeration that frames snow as an unwanted 'invasion' or 'intruder' on one's property. This is a humorous and absurd stereotype that relies on the audience's understanding of the concept of 'invasion' — typically associated with military or political conflict — being applied to a natural phenomenon. This is a form of hyperbole used for comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "frustration",
+      "label": "frustrated emotion",
+      "description": "The person is bent over with physical effort, shoveling snow, which conveys a sense of laborious struggle and annoyance. The overlaid text 'i hate snow' explicitly states the emotion of frustration toward the task and the weather condition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Person shoveling snow is mapped as 'me' who hates snow",
+      "description": "The text 'i hate snow' is overlaid on the image of a person shoveling snow, creating an analogical mapping where the person in the image is implicitly identified as 'me' — the speaker of the text. This mapping is established through the direct juxtaposition of the text with the visual subject, who is performing the action of snow removal, which the text explicitly states is hated.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the person shoveling snow",
+      "description": "The user is projected onto the person shoveling snow, as indicated by the text 'i hate snow' which uses the first-person pronoun 'i'. This creates an analogical mapping where the person in the image is implicitly identified as 'me' — the speaker of the text. The user sees themselves in the role of the person performing the laborious task of snow removal, thereby projecting their own experience or attitude onto the visual subject.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the labor-intensive and often burdensome task of snow removal, potentially dismissing the real difficulties faced by people in snowy regions. The humor relies on a simplistic and somewhat absurd framing of snow as an 'invasion,' which may unintentionally minimize the legitimate challenges of winter weather.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "person shoveling snow",
+      "description": "The target audience is individuals who experience or are familiar with the physical labor of snow removal, particularly homeowners or property owners in snowy regions. The meme's humor relies on the shared cultural understanding of snow as a burdensome winter task, making it relatable to those who have to shovel snow regularly. The audience is likely to include people living in areas with heavy snowfall, who can identify with the frustration expressed in the text 'i hate snow' and the absurdity of framing snow as an 'invasion' on their land.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/30591.png",
+    "image_name": "30591.png",
+    "extraction_timestamp": "2025-12-15T21:22:28.615905",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

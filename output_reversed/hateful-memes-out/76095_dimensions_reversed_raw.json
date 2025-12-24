@@ -1,0 +1,185 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: haters; hasOverallIntent: Hateful; overall-intent-description: The image depicts a woman in a red dress standing in front of a mirror, with the word 'haters' superimposed. The scene shows her looking at her reflection, with one side of the mirror showing her with arms crossed in a defiant or annoyed posture, while the other side shows her in a more joyful, celebratory pose. The overall intent is to portray the idea that 'haters' are the ones who are envious or critical of someone's success or appearance, and that the person in the image is unbothered by them. The meme is not targeting any specific group based on protected characteristics, but rather uses the term 'haters' as a general label for people who are critical or negative. The intent is to convey a message of resilience and self-confidence in the face of negativity, and to encourage viewers to ignore or dismiss critics. The image does not contain any abusive, cyberbullying, harmful, or misogynous content, and is not propaganda. The overall intent is to be empowering and motivational, encouraging viewers to focus on their own success and not be distracted by the negativity of others.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "haters",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman wearing a red dress and high-heeled sandals, standing in front of a mirror. She is depicted in two contrasting poses: on one side, she has her arms crossed with a defiant or annoyed expression; on the other side, she is smiling and holding up a white garment, appearing joyful and celebratory. The image uses these dual portrayals to symbolize resilience against critics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "mirror_reflection_scene",
+      "label": "woman viewing her reflection in a mirror",
+      "description": "The scene depicts a woman standing in front of a mirror, which shows two contrasting portrayals of her: one side shows her with arms crossed and a defiant expression, while the other side shows her smiling and holding up a garment. The word 'haters' is superimposed above the mirror, indicating the theme of ignoring critics. The spatial arrangement places the woman centrally, with the mirror dividing her image into two emotional states.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "views",
+          "to": "mirror_reflection_scene"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "haters_stereotype",
+      "label": "Haters Stereotype",
+      "description": "The term 'haters' refers to people who are envious, critical, or negative toward someone's success, appearance, or lifestyle. This stereotype is commonly used in internet culture to describe individuals who express disapproval or jealousy, often in response to social media posts or public achievements. The meme uses this stereotype to contrast the person's self-confidence with the imagined negativity of 'haters'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "mirror_reflection_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "self_confidence_meme_trend",
+      "label": "Self-Confidence Meme Trend",
+      "description": "This meme is part of a broader internet trend that uses visual contrast (e.g., before/after, sad/happy, defeated/confident) to convey resilience and self-acceptance. It often features a person ignoring or dismissing critics, reinforcing the idea that one should not be affected by negativity. This trend is rooted in motivational and empowerment content popular on social media platforms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "mirror_reflection_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mirror_self_reflection_concept",
+      "label": "Mirror Self-Reflection Concept",
+      "description": "The use of a mirror to depict dual self-portraits is a visual metaphor for internal conflict or self-perception. In this meme, the mirror represents the contrast between how the person perceives themselves (or how they are perceived by others) and how they choose to respond to criticism. This concept is rooted in psychology and self-image theory.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "mirror_reflection_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_media_criticism_context",
+      "label": "Social Media Criticism Context",
+      "description": "The meme is contextualized within the culture of social media, where users often face public criticism, trolling, or envy from online 'haters'. The image reflects a common coping mechanism: presenting a confident, unbothered persona in response to online negativity. This context is essential to understanding why the 'haters' label is used and why the dual reflection is effective.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "mirror_reflection_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "defiance",
+      "label": "defiant emotion",
+      "description": "The woman on the left side of the mirror has her arms crossed and is looking away with a stern expression, conveying a sense of defiance or annoyance towards critics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_haters_to_woman",
+      "label": "The text 'haters' is mapped onto the woman in the mirror reflection scene.",
+      "description": "The word 'haters' is superimposed above the mirror, which reflects two contrasting portrayals of the woman. The mapping implies that the woman is the subject of the 'haters' stereotype — that is, she is the person who is being criticized or envied by 'haters'. The visual material (the woman in the mirror) is thus mapped onto the textual concept of 'haters' as the target of criticism. This mapping is established through spatial adjacency and contextual contrast: the woman's defiant pose (arms crossed) is juxtaposed with her joyful pose, symbolizing her resilience against the negativity implied by 'haters'. The overall intent of the meme is to portray the woman as unbothered by critics, reinforcing the idea that 'haters' are the critics or envious observers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman in the mirror reflection scene",
+      "description": "The user is projected onto the woman depicted in the mirror reflection scene, as the meme invites the viewer to identify with her resilience and self-confidence in the face of 'haters'. The dual portrayal (defiant vs. joyful) and the superimposed text 'haters' create an implicit identification with the woman as the subject who is unbothered by criticism. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the motivational and empowering intent of the meme strongly encourages the viewer to project themselves onto the woman as the confident, unbothered individual.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses the term 'haters' to label a group of people who are critical or negative, which can be seen as a generalization and potentially dehumanizing. However, the overall intent is to portray resilience against such critics, not to attack or harm any specific group based on protected characteristics. The term 'haters' is used in a general, non-specific way, and the meme does not target any particular group based on race, gender, religion, or other protected characteristics. The visual content does not contain any abusive, cyberbullying, harmful, or misogynous content. The meme is empowering and motivational, encouraging viewers to ignore critics. Therefore, while the term 'haters' may carry negative connotations, the meme itself does not manifest toxicity in the form of hateful or harmful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with social media culture and the concept of 'haters'. It appeals to users who experience online criticism and relate to the theme of resilience and self-confidence in the face of negativity. The visual contrast and empowering message are universally accessible and resonate with viewers across demographics who engage with social media content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/76095.png",
+    "image_name": "76095.png",
+    "extraction_timestamp": "2025-12-19T12:51:00.501428",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

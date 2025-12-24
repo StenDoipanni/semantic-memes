@@ -1,0 +1,252 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: something_went_terribly_wrong_1947_2017; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes a formal 1947 portrait of a man with a 2017 image of a woman walking across a street in a revealing outfit, with the text 'something went terribly wrong.' This creates a satirical or absurdist comparison implying a dramatic cultural or moral decline over time. While not explicitly targeting any specific group with hate or abuse, the tone is mocking and potentially offensive to some viewers by implying that modern society is 'worse' or 'more degenerate' than the past. The intent is to provoke a reaction through shock value and historical contrast, which can be perceived as harmful due to its potential to reinforce negative stereotypes about contemporary social norms or gender expression, even if unintentionally.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "text content: 'something went... terribly wrong'; position: top of the image, spanning the width of the upper panel",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "bottom left text overlay",
+      "description": "text content: '1947'; position: centered horizontally in the lower panel, below the street scene",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_3",
+      "label": "bottom right text overlay",
+      "description": "text content: '2017'; position: centered horizontally in the lower panel, below the street scene",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_in_1947",
+      "label": "man in formal attire",
+      "description": "A man dressed in a suit, vest, tie, and bowler hat, posing for a formal portrait in 1947. His expression is serious and his posture formal, typical of early 20th-century studio photography. The image is black and white, with a textured, aged background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "formal_portrait_scene",
+      "label": "formal portrait scene",
+      "description": "A formal studio portrait of a man in 1947, dressed in a suit, vest, tie, and bowler hat, posing with a serious expression against a textured, aged background. The scene is black and white and includes the text '1947' at the bottom.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_in_1947",
+          "relation": "posed_for",
+          "to": "text_1947"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cultural_norms_decline_stereotype",
+      "label": "Cultural Norms Decline Stereotype",
+      "description": "The meme relies on the stereotype that societal norms have deteriorated over time, particularly in terms of modesty and propriety in public behavior. This is a common trope in reactionary or conservative commentary, often used to imply that modern society is 'worse' than past eras, especially regarding gender expression and clothing. The juxtaposition of formal 1947 attire with a 2017 woman in a revealing outfit is meant to visually represent this perceived decline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_in_1947",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "formal_portrait_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "The meme implicitly references misogynistic stereotypes that objectify women by focusing on their clothing and body, suggesting that women in the past were more 'proper' or 'modest' than women today. This aligns with misogynistic tropes that claim women are 'less capable' or 'less moral' when they deviate from traditional gender roles, particularly in public spaces. The 2017 image of the woman walking in a revealing outfit is interpreted through this lens as 'inappropriate' or 'decadent' compared to the 1947 man's formal attire.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "formal_portrait_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_context_1947",
+      "label": "Historical Context of 1947",
+      "description": "The year 1947 is used to evoke a specific historical period characterized by post-war conservatism, traditional gender roles, and strict social norms, particularly in Western societies. The formal attire of the man and the studio portrait style reflect the era's emphasis on propriety and decorum. Understanding this context is necessary to interpret the meme's contrast with the 2017 image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_in_1947",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "formal_portrait_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_context_2017",
+      "label": "Historical Context of 2017",
+      "description": "The year 2017 is used to represent a contemporary era perceived as more liberal, permissive, or 'decadent' in terms of social norms, particularly regarding gender expression and public modesty. The image of a woman in a revealing outfit walking across a street is interpreted as a symbol of modern societal attitudes, which the meme contrasts unfavorably with the 1947 image. This contrast relies on the viewer's understanding of 2017 as a time of perceived moral or cultural decline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_3",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "formal_portrait_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gender_expression_stereotype",
+      "label": "Gender Expression Stereotype",
+      "description": "The meme relies on the stereotype that women's clothing and public behavior should conform to traditional, modest standards. The 2017 image of the woman in a revealing outfit is interpreted as a violation of these standards, implying that such behavior is 'wrong' or 'degenerate' compared to the 1947 man's formal, restrained appearance. This stereotype is rooted in patriarchal norms that dictate how women should dress and behave in public.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "formal_portrait_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_disgust",
+      "label": "mocking disgust at perceived moral decline",
+      "description": "The emotion expressed is a satirical and mocking disgust, conveyed through the juxtaposition of the formal 1947 portrait with the 2017 image of a woman in revealing clothing, combined with the text 'something went terribly wrong.' This emotion is not genuine disgust but a performative, exaggerated reaction designed to shock and provoke, implying that modern society has regressed morally or culturally. It is rooted in the meme's intent to portray a decline in societal standards, particularly regarding gender expression and modesty.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The text 'something went terribly wrong' maps onto the visual contrast between 1947 and 2017",
+      "description": "The top text 'something went... terribly wrong' is mapped onto the visual juxtaposition of the formal 1947 portrait and the 2017 street scene. This mapping implies that the perceived cultural or moral decline from 1947 to 2017 (as represented by the visual contrast) is what 'went terribly wrong'. The text serves as a commentary on the visual material, attributing a negative historical narrative to the visual contrast.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_2",
+      "label": "The text '1947' maps onto the visual material of the man in formal attire",
+      "description": "The text '1947' is positioned directly below the formal portrait of the man, establishing a direct analogical mapping. The year 1947 is mapped onto the visual entity 'man_in_1947', indicating that the man in the portrait represents the societal norms and appearance of that year. This mapping anchors the visual material in a specific historical context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_3",
+      "label": "The text '2017' maps onto the visual material of the woman walking in a revealing outfit",
+      "description": "The text '2017' is positioned directly below the image of the woman walking across the street, establishing a direct analogical mapping. The year 2017 is mapped onto the visual entity 'woman_in_2017', indicating that the woman's attire and public behavior represent the societal norms and appearance of that year. This mapping anchors the visual material in a specific historical context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the cultural norms decline stereotype",
+      "description": "The user is projected onto the overarching cultural norms decline stereotype implied by the meme. The user is expected to interpret the visual contrast between the 1947 formal portrait and the 2017 revealing outfit as evidence of societal moral decay, aligning with the meme's intended message. This projection is not onto a specific visual or textual element but onto the interpretive framework the meme provides.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme implies a moral or cultural decline from 1947 to 2017 by contrasting formal attire with a revealing outfit, which can reinforce negative stereotypes about contemporary social norms or gender expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "Conservative or reactionary viewers",
+      "description": "The meme is designed to appeal to individuals who hold traditionalist views on social norms, particularly regarding gender expression and modesty. It targets those who perceive a moral or cultural decline from the post-war conservatism of 1947 to the perceived permissiveness of 2017, often aligning with conservative or reactionary commentary that critiques modern societal attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/13450.png",
+    "image_name": "13450.png",
+    "extraction_timestamp": "2025-12-15T14:56:41.862421",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 18,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

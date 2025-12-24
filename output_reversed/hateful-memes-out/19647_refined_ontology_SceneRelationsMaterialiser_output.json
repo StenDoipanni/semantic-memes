@@ -1,0 +1,80 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "Physical Discipline Scene",
+      "participants": [
+        {
+          "entity": "adult_female",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "child_being_disciplined",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "child_fearful",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "child_sitting",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "adult_male",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "adult_female",
+          "relation": "disciplines",
+          "to": "child_being_disciplined"
+        },
+        {
+          "from": "adult_female",
+          "relation": "holds_paddle",
+          "to": "child_being_disciplined"
+        },
+        {
+          "from": "child_fearful",
+          "relation": "reacts_to",
+          "to": "adult_female"
+        },
+        {
+          "from": "child_sitting",
+          "relation": "reacts_to",
+          "to": "adult_female"
+        },
+        {
+          "from": "adult_male",
+          "relation": "observes",
+          "to": "adult_female"
+        },
+        {
+          "from": "adult_male",
+          "relation": "observes",
+          "to": "child_being_disciplined"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":Physical_Discipline_Scene :hasParticipant :adult_female .",
+    ":Physical_Discipline_Scene :hasParticipant :child_being_disciplined .",
+    ":Physical_Discipline_Scene :hasParticipant :child_fearful .",
+    ":Physical_Discipline_Scene :hasParticipant :child_sitting .",
+    ":Physical_Discipline_Scene :hasParticipant :adult_male .",
+    ":adult_female :disciplines :child_being_disciplined .",
+    ":adult_female :holds_paddle :child_being_disciplined .",
+    ":child_fearful :reacts_to :adult_female .",
+    ":child_sitting :reacts_to :adult_female .",
+    ":adult_male :observes :adult_female .",
+    ":adult_male :observes :child_being_disciplined ."
+  ],
+  "triples_count": 11
+}

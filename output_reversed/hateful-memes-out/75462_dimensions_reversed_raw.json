@@ -1,0 +1,201 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: dating_in_2018; hasOverallIntent: Hateful; overall-intent-description: The meme uses a historical figure associated with genocide and racism (Adolf Hitler) to visually represent a modern dating preference that explicitly asks for a partner who laughs at racist jokes. This juxtaposition is intentionally provocative and hateful, as it equates the normalization of racist humor with a romantic ideal, thereby trivializing and endorsing harmful ideologies. The use of Hitler's image, a symbol of extreme anti-Semitism and racial hatred, to frame a dating request is a direct and offensive attack on the values of racial equality and human dignity, making it a hateful meme that promotes and glorifies racist attitudes under the guise of humor or relatability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "dating in 2018",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "bottom_text",
+      "label": "bottom text overlay",
+      "description": "i just want a girl who laugh at my racist jokes and cuddle me is it to much to ask!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Adolf_Hitler",
+      "label": "Historical figure",
+      "description": "A man with a mustache, wearing a dark suit and tie, standing and gesturing with both hands. He is the central figure in the image, historically associated with genocide and racism, and is used here in a provocative and hateful context to represent a modern dating preference that asks for a partner who laughs at racist jokes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "hateful_dating_request_scene",
+      "label": "A hateful dating request scene",
+      "description": "The scene depicts Adolf_Hitler, a historical figure associated with genocide and racism, standing and gesturing as if making a public statement. The image is overlaid with text that presents a hateful dating preference: asking for a girl who laughs at racist jokes and cuddles him, framed as a provocative and offensive request. The spatial arrangement places Hitler centrally, with the text overlaying the image to create a jarring juxtaposition between historical atrocity and modern romantic idealism. The scene's layout uses Hitler's authoritative posture and the text's confrontational tone to deliver a hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Adolf_Hitler",
+          "relation": "isRepresenting",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_jokes_stereotype",
+      "label": "Racist Jokes Stereotype",
+      "description": "The concept that racist jokes are a form of humor that normalizes or trivializes racial hatred, often used to mock or belittle marginalized groups. This stereotype is central to the meme's hateful message, as it frames the request for a partner to laugh at such jokes as a romantic ideal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "adolf_hitler_historical_figure",
+      "label": "Adolf Hitler as Historical Figure",
+      "description": "Adolf Hitler was the leader of Nazi Germany and the architect of the Holocaust, responsible for the genocide of six million Jews and millions of others. His image is used here as a symbol of extreme racism and hatred, making the meme's message deeply offensive and hateful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "genocide_concept",
+      "label": "Genocide Concept",
+      "description": "The systematic and deliberate destruction of a racial, political, or cultural group. This concept is implicitly referenced through the use of Hitler's image, which is globally associated with the Holocaust and genocide, thereby making the meme's message about laughing at racist jokes deeply offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dating_in_2018_context",
+      "label": "Dating in 2018 Context",
+      "description": "The year 2018 refers to a specific point in time when the meme was created and circulated. This context is important because it situates the meme within a social and cultural moment, where discussions about race, gender, and social media dating norms were prevalent, making the juxtaposition of Hitler with a modern dating request more jarring and offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_dating_request_scene",
+      "label": "Hateful Dating Request Scene",
+      "description": "The scene is a visual and textual composition that uses the image of Adolf Hitler to represent a modern dating preference that asks for a partner who laughs at racist jokes. This scene relies on the background knowledge of Hitler's association with genocide and racism to deliver its hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hatefulness",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is hateful, conveyed through the juxtaposition of Adolf Hitler, a symbol of genocide and extreme racism, with a text that explicitly requests a romantic partner who laughs at racist jokes. This combination is intentionally provocative and offensive, aiming to trivialize and endorse racist ideologies under the guise of a dating preference.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The hateful dating request is mapped onto Adolf Hitler",
+      "description": "The bottom text 'i just want a girl who laugh at my racist jokes and cuddle me is it to much to ask!' is explicitly attributed to the speaker (the person making the request), who is visually represented by Adolf Hitler. The meme uses Hitler's image to symbolize the speaker's persona, creating an analogical mapping where the hateful dating request is projected onto Hitler as the visual embodiment of the speaker. This is a direct and provocative mapping that equates the speaker's romantic ideal with the historical figure associated with genocide and racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the hateful dating request scene",
+      "description": "The user is projected onto the hateful dating request scene, which is explicitly framed as a request made by the speaker (the person making the request) who is visually represented by Adolf Hitler. The text 'i just want a girl who laugh at my racist jokes and cuddle me is it to much to ask!' uses the first-person pronoun 'me', directly projecting the user's identity onto the speaker of the request. This creates a semiotic projection where the user identifies with the speaker's persona and the hateful message. The projection is onto the entire scene, which includes both the visual material of Adolf Hitler and the textual material of the request, as the user is identifying with the speaker's romantic ideal and the hateful context in which it is presented.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses Adolf Hitler, a symbol of genocide and extreme racism, to represent a modern dating preference that asks for a partner who laughs at racist jokes. This is a direct and offensive attack on the values of racial equality and human dignity, making it a hateful meme that promotes and glorifies racist attitudes under the guise of humor or relatability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who engage with or create internet memes that use provocative, hateful, and offensive content for humor or shock value, particularly those who may find the juxtaposition of historical atrocities with modern dating tropes amusing or relatable. This includes users of social media platforms in 2018 who consume and circulate memes that normalize or trivialize racism under the guise of dating humor, often targeting or mocking marginalized groups through racist jokes. The meme is designed to elicit a reaction from those who understand the cultural context of dating in 2018 and are familiar with the use of historical figures like Adolf Hitler as symbols of extreme hatred, thereby appealing to a community that finds such juxtapositions edgy or funny, even if it is offensive to others.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/75462.png",
+    "image_name": "75462.png",
+    "extraction_timestamp": "2025-12-19T12:45:49.736604",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

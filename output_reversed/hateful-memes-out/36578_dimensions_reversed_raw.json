@@ -1,0 +1,196 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: patrick-kenneth-x-lebron-james-scandal; hasOverallIntent: hateful; overall-intent-description: The image depicts two baboons in a mating posture, overlaid with text referencing 'patrick kenneth x lebron james scandal'. This juxtaposition maps the visual of primates onto a human scandal, using the animal imagery to imply or suggest that the individuals referenced are 'animal-like' or 'primitive'. This is a form of dehumanizing and derogatory comparison, falling under the category of anti-Black stereotypes (as Black athletes are often subjected to such comparisons) and is intended to demean the subjects by associating them with animalistic behavior. The meme is hateful as it directly attacks individuals based on their race and public persona, using a degrading visual metaphor to imply moral or behavioral inferiority.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "patrick kenneth x lebron james scandal",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "two_baboons",
+      "label": "primates in mating posture",
+      "description": "Two brown-furred baboons are depicted in a mating position on sandy ground. One baboon is mounted on the back of the other, which is walking forward. The scene is set in what appears to be a zoo or wildlife enclosure with logs, rocks, and trees in the background. The visual is central and salient, serving as the primary metaphor in the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "mating_baboons_scene",
+      "label": "mating_baboons",
+      "description": "A scene depicting two baboons in a mating posture on sandy ground, with logs, rocks, and trees in the background. The visual metaphor is central to the meme's hateful intent, implying animalistic or primitive behavior. The scene is overlaid with text referencing 'patrick kenneth x lebron james scandal', which connects the visual to a human scandal through dehumanizing comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "two_baboons",
+          "relation": "in_mating_posture",
+          "to": "two_baboons"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_primate_comparison",
+      "label": "Anti-Black Stereotype: Comparing Black People to Primates",
+      "description": "This stereotype dehumanizes Black individuals by equating them with animals, particularly primates, implying inferiority, savagery, or animalistic behavior. It is a long-standing racist trope used to justify discrimination and violence against Black people. In this meme, the visual of mating baboons is used to imply that the referenced individuals (Patrick Kenneth and LeBron James) are 'animal-like' or 'primitive', which is a direct application of this harmful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "mating_baboons_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "patrick_kenneth",
+      "label": "Patrick Kenneth",
+      "description": "Patrick Kenneth is a real-world individual, likely a public figure or person involved in a scandal referenced in the meme. His name is part of the text overlay and is used to connect the visual metaphor to a specific human context. The meme implies he is being compared to the baboons in a degrading way.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lebron_james",
+      "label": "LeBron James",
+      "description": "LeBron James is a globally renowned Black NBA basketball player. He is a high-profile public figure whose image and persona are often subject to racialized stereotypes and media scrutiny. The meme references a 'scandal' involving him, implying that his behavior or public image is being judged through the lens of the primate metaphor, which is a form of racialized dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lebron_james_scandal",
+      "label": "LeBron James Scandal",
+      "description": "This refers to a real-world controversy or public dispute involving LeBron James. The meme uses this reference to ground the visual metaphor in a specific human event, implying that the scandal is so egregious or 'animalistic' that it warrants comparison to primates. The exact nature of the scandal is not visible in the image but is necessary to understand the meme's context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dehumanizing_comparison",
+      "label": "Dehumanizing Comparison",
+      "description": "This is a rhetorical and visual strategy used in the meme to strip the subjects of their humanity by comparing them to animals. It is a form of hate speech and racial stereotyping. The comparison is not literal but symbolic, intended to demean and insult the individuals by implying they are morally or intellectually inferior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "mating_baboons_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "dehumanization",
+      "label": "dehumanizing emotion",
+      "description": "The visual of mating baboons is used to strip the subjects (Patrick Kenneth and LeBron James) of their humanity, implying they are 'animal-like' or 'primitive'. This is an emotional expression of contempt and racialized degradation, intended to demean and insult the individuals by associating them with animalistic behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Dehumanizing comparison of Patrick Kenneth and LeBron James to mating baboons",
+      "description": "The text 'patrick kenneth x lebron james scandal' is mapped onto the visual of two baboons in a mating posture. This mapping implies that the individuals referenced in the text are being compared to the baboons, suggesting they are 'animal-like' or 'primitive'. This is a dehumanizing analogy used to demean the subjects by associating them with animalistic behavior, which is a form of anti-Black racial stereotyping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the dehumanizing visual metaphor",
+      "description": "The user is projected onto the visual material of the mating baboons, which serves as the central metaphor for the meme. The user is implicitly identifying with or projecting their own judgment, disgust, or moral stance onto the visual of the baboons, which is then mapped onto the human scandal referenced in the text. This projection is not explicit (e.g., no 'you' or 'me' text), but it is implied through the user's engagement with the meme's hateful intent — the user is projecting their own dehumanizing perspective onto the visual material, which is then used to demean the subjects. The projection is onto the VisualMaterial entity 'two_baboons' as the primary metaphorical anchor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks individuals based on their race and public persona, using a degrading visual metaphor to imply moral or behavioral inferiority. It maps the visual of primates onto a human scandal, using the animal imagery to imply or suggest that the individuals referenced are 'animal-like' or 'primitive'. This is a form of dehumanizing and derogatory comparison, falling under the category of anti-Black stereotypes and is intended to demean the subjects by associating them with animalistic behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience consists of individuals who are familiar with or interested in the public personas of Patrick Kenneth and LeBron James, particularly those who are aware of or have opinions about the referenced 'scandal'. The meme is designed to appeal to viewers who understand the racialized stereotype of comparing Black people to primates and who may find humor or satisfaction in dehumanizing portrayals of Black public figures. The audience likely includes online communities that engage in racially charged or degrading humor, particularly those that use animal imagery to mock Black athletes or celebrities. The meme's toxicity and reliance on anti-Black stereotypes suggest it is intended for an audience that either perpetuates or finds amusement in such racist tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/36578.png",
+    "image_name": "36578.png",
+    "extraction_timestamp": "2025-12-15T23:25:22.513204",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

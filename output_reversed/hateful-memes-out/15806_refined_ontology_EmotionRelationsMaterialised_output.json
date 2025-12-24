@@ -1,0 +1,44 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "concerned emotion",
+      "expressors": [
+        {
+          "entity": "the image",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "the text overlay",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "the image",
+          "relation": "emotionalRelationToEntity",
+          "to": "the massive pile of trash"
+        },
+        {
+          "from": "the text overlay",
+          "relation": "emotionalRelationToEntity",
+          "to": "the massive pile of trash"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":concerned_emotion :hasExpressor :the_image .",
+    ":concerned_emotion :hasExpressor :the_text_overlay .",
+    ":the_image :emotionalRelationToEntity :the_massive_pile_of_trash .",
+    ":the_text_overlay :emotionalRelationToEntity :the_massive_pile_of_trash ."
+  ],
+  "triples_count": 4
+}

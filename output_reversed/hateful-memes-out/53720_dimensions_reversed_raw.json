@@ -1,0 +1,223 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts children dressed in black robes carrying crosses on a rocky path, evoking imagery of religious penitence or forced religious indoctrination. The overlaid text states: 'forcing children into religion is child abuse' and 'religion has to be taught. it's not natural.' The overall intent is to argue that religion is unnatural and should be taught rather than imposed, using the visual of children in religious garb as a metaphor for forced religious upbringing. This meme is harmful because it frames religious practice as inherently coercive and unnatural, potentially stigmatizing religious communities and promoting the idea that religious belief is a form of abuse. The visual metaphor of children carrying crosses may be interpreted as a critique of religious institutions, but it risks oversimplifying complex religious experiences and could be seen as inflammatory or disrespectful to those who view religious practice as a natural or essential part of their identity. The meme does not target specific racial, gender, or sexual orientation groups, but it does promote a secular or anti-religious viewpoint that could be perceived as hostile toward religious communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "forcing children into religion is child abuse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "children",
+      "label": "children dressed in black robes",
+      "description": "A group of children, likely boys, are dressed in black hooded robes resembling religious or penitential attire. They are walking in a line on a rocky, dirt path, each carrying a large wooden cross on their shoulders. The children appear solemn and are the central visual focus of the image, evoking imagery of religious penitence or forced indoctrination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "forced_religious_indoctrination",
+      "label": "children carrying crosses in religious garb",
+      "description": "A scene depicting children dressed in black robes carrying large wooden crosses on a rocky path, evoking imagery of religious penitence or forced indoctrination. The visual composition suggests a procession or march, with children positioned in a line and moving forward. The scene is framed to emphasize the children as the central focus, with the background showing a natural, outdoor setting. The overlaid text reinforces the interpretation of the scene as a metaphor for forced religious upbringing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "children",
+          "relation": "carry",
+          "to": "crosses"
+        },
+        {
+          "from": "children",
+          "relation": "walk_in_line",
+          "to": "children"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "forced_religious_indoctrination_stereotype",
+      "label": "Stereotype of forced religious indoctrination",
+      "description": "The meme relies on the stereotype that religious institutions impose beliefs on children, which is often used in secular or anti-religious discourse to criticize organized religion. This stereotype frames religious upbringing as coercive or unnatural, implying that true belief must be freely chosen, not taught or instilled. The visual of children carrying crosses is used to evoke this stereotype, even though the image may not depict actual religious indoctrination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "forced_religious_indoctrination",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religion_as_natural_concept",
+      "label": "Concept that religion is 'natural'",
+      "description": "The meme references the idea that religion is not 'natural' and must be 'taught,' which is a philosophical or sociological stance often held by secular humanists or atheists. This concept is used to argue that religious belief is a learned behavior, not an innate human trait, and thus should be subject to critical examination or education rather than being assumed as inherent or divinely given. This idea is often used to challenge religious authority or promote secular education.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "child_abuse_definition",
+      "label": "Definition of child abuse",
+      "description": "The meme uses the term 'child abuse' to describe the act of forcing children into religion. This requires background knowledge of legal and social definitions of child abuse, which typically include physical, emotional, sexual, or neglectful harm. The meme implicitly equates religious coercion with these forms of abuse, which is a controversial and contested interpretation in many religious and secular communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_religious_discourse",
+      "label": "Anti-religious discourse",
+      "description": "The meme is part of a broader anti-religious discourse that views religion as a form of control, indoctrination, or social oppression. This discourse often frames religious institutions as authoritarian or harmful, particularly when they involve children. The meme uses the visual metaphor of children carrying crosses to represent this discourse, which is not directly visible in the image but is a common rhetorical device in secular or atheist circles.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_penitence_stereotype",
+      "label": "Stereotype of religious penitence",
+      "description": "The image of children carrying crosses evokes the stereotype of religious penitence, particularly associated with Catholic traditions like the Way of the Cross or Holy Week processions. This stereotype is often used to depict religious practice as extreme, self-flagellating, or overly rigid. The meme uses this stereotype to imply that religious upbringing is similarly extreme or harmful, even though the image may not depict actual religious rituals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "forced_religious_indoctrination",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "secular_humanist_ideology",
+      "label": "Secular humanist ideology",
+      "description": "The meme aligns with secular humanist ideology, which emphasizes reason, science, and individual autonomy over religious belief. The claim that 'religion has to be taught' reflects the secular humanist view that belief systems are constructed through education and socialization, not innate or divine. This ideology is often used to critique religious institutions and promote secular education.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_authority_critique",
+      "label": "Critique of religious authority",
+      "description": "The meme critiques religious authority by implying that religious institutions impose beliefs on children, which is a common theme in secular and atheist critiques of organized religion. This critique often frames religious authority as coercive or manipulative, and the visual of children carrying crosses is used to symbolize this critique, even though the image may not depict actual religious authority.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "condemnation",
+      "label": "condemning emotion",
+      "description": "The top text overlay expresses a strong moral condemnation of forcing children into religion, framing it as child abuse. This conveys a judgmental and critical emotional tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Forced religious indoctrination is mapped as child abuse",
+      "description": "The top text 'forcing children into religion is child abuse' maps the visual scene of children in black robes carrying crosses (a metaphor for forced religious indoctrination) onto the concept of child abuse. The meme equates the visual representation of children in religious garb carrying crosses with the act of child abuse, implying that religious imposition on children is abusive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual argument about religion being unnatural",
+      "description": "The user is projected onto the textual material stating 'religion has to be taught. it's not natural.' This text serves as the core argument of the meme, inviting the user to adopt the secular humanist perspective that religion is a learned behavior, not innate. The user is implicitly positioned as someone who agrees with or is being persuaded by this viewpoint, making the text the focal point of the user's projected identity or stance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme frames religious practice as inherently coercive and unnatural, potentially stigmatizing religious communities and promoting the idea that religious belief is a form of abuse. The visual metaphor of children carrying crosses may be interpreted as a critique of religious institutions, but it risks oversimplifying complex religious experiences and could be seen as inflammatory or disrespectful to those who view religious practice as a natural or essential part of their identity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "anti-religious discourse",
+      "description": "The meme is designed for individuals engaged in anti-religious discourse, who view religion as coercive, unnatural, or harmful, particularly when imposed on children. The framing of religious indoctrination as 'child abuse' and the assertion that 'religion has to be taught' align with secular humanist and atheist perspectives that critique religious authority and promote the idea that belief systems are learned behaviors rather than innate or divinely given.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/53720.png",
+    "image_name": "53720.png",
+    "extraction_timestamp": "2025-12-16T04:57:06.642770",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

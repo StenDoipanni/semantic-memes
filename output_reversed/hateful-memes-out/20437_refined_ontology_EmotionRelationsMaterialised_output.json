@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "humorous emotion",
+      "expressors": [
+        {
+          "entity": "the image",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "the image",
+          "relation": "emotionalRelationToEntity",
+          "to": "the text 'thanksgiving in china'"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":humorous_emotion :hasExpressor :the_image .",
+    ":the_image :emotionalRelationToEntity :the_text_thanksgiving_in_china ."
+  ],
+  "triples_count": 2
+}

@@ -1,0 +1,212 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: dad_does_wanking_give_you_big_muscles; hasOverallIntent: Harmful; overall-intent-description: The meme depicts a Black man in a domestic setting, seemingly in a conversation with a child. The text overlays create a darkly humorous and inappropriate scenario where the father, in response to a child's question about wanking and muscle growth, delivers a sexually explicit and crude punchline. The overall intent is to shock or provoke laughter through the juxtaposition of a mundane, innocent question with a vulgar, sexually charged response. While not explicitly targeting a specific group with hate, the content is sexually explicit and potentially offensive, especially to children or those sensitive to crude humor. The meme's harmfulness stems from its vulgar content and the potential to normalize or trivialize inappropriate sexual language in a family context, which could be damaging to children's understanding of appropriate boundaries and language. The image does not contain direct racist, sexist, or other targeted hate content, but the crude humor and sexualization of the interaction make it potentially harmful or offensive to some audiences.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "dad, does wanking give you big muscles",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "adult male",
+      "description": "A Black adult male, likely portraying a father, is shown in a domestic setting. He is wearing a light blue checkered shirt and appears to be engaged in a conversation with a child. His facial expression is one of mild confusion or concern, and he is looking toward the child. The context of the meme suggests he is responding to a child's question with an inappropriate and crude punchline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "father_and_child_conversation",
+      "label": "father_and_child_conversation",
+      "description": "A scene depicting a Black adult male (father) in a domestic setting, engaged in a conversation with a child. The father is looking at the child, and the text overlays suggest an inappropriate and crude exchange. The spatial arrangement shows the father in the foreground and the child in the background, facing each other.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "talksTo",
+          "to": "child"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization",
+      "label": "Hypersexualization",
+      "description": "The meme relies on the hypersexualization of the Black father figure, portraying him as sexually explicit and crude in his response to a child's innocent question. This stereotype reduces a father's role to one of sexual gratification and objectifies his body and behavior, which is offensive and degrading. It aligns with the broader anti-Black stereotype of hypersexualization, which falsely associates Black men with excessive or inappropriate sexual behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "father_and_child_conversation",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "wanking",
+      "label": "Wanking",
+      "description": "The term 'wanking' is a vulgar slang term for masturbation. Its use in the meme, especially in the context of a child asking a question, is inherently crude and inappropriate. The term itself is a piece of background knowledge that must be understood to interpret the meme's content and its shock value. It is not visible in the image but is essential to understanding the dialogue.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "father_and_child_conversation",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexual_explicit_content",
+      "label": "Sexual Explicit Content",
+      "description": "The punchline 'i don't know son, but don't stop now, i'm about to cum' contains explicit sexual language. This content is not visible in the image but is essential to understanding the meme's intent and its potential to offend. The use of such language in a family context, particularly involving a child, is a key element of the meme's harmfulness and shock value.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "father_and_child_conversation",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "child_innocence",
+      "label": "Child Innocence",
+      "description": "The meme juxtaposes a child's innocent question with a crude, sexualized response. The concept of child innocence is a background knowledge element that is necessary to understand the contrast and the shock value of the meme. The child's question is framed as naive, which makes the father's response seem even more inappropriate and offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "father_and_child_conversation",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "father_figure",
+      "label": "Father Figure",
+      "description": "The meme relies on the stereotype of the father figure as a source of guidance and moral authority. The father's role is subverted by his crude and inappropriate response, which undermines the expected role of a parent. This stereotype is a background knowledge element that is necessary to understand the meme's intent and its potential to be offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "father_and_child_conversation",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "confusion",
+      "label": "confused emotion",
+      "description": "The man's facial expression shows mild confusion or concern, with slightly raised eyebrows and a neutral mouth, indicating he is processing an unexpected or awkward question from the child.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Father figure mapped onto the adult male in the image",
+      "description": "The text 'dad' in the top text overlay explicitly identifies the adult male in the visual material as the father figure. This creates an analogical mapping where the textual entity 'dad' is mapped onto the visual entity 'man'. The father figure is a key role in the scene, and the text directly labels the visual person as fulfilling that role.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the father figure in the visual material",
+      "description": "The user is projected onto the adult male (father figure) in the visual material. This projection is implied by the meme's framing, where the father is the one responding to the child's question, and the user, as the viewer, is positioned as the one observing this interaction. The deictic 'dad' in the text explicitly labels the visual entity, creating a direct mapping that invites the user to identify with or project themselves onto the father figure's role in the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme contains sexually explicit content and hypersexualizes the Black father figure, potentially normalizing crude sexual language in a family context, which could be damaging to children's understanding of appropriate boundaries and language.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The meme is designed for an audience familiar with crude, dark humor and sexually explicit content, particularly those who find shock value in juxtaposing innocence (child's question) with vulgar, hypersexualized adult responses. The target community likely includes internet users who appreciate edgy, offensive, or taboo-breaking humor, often found in meme culture. The hypersexualization of the Black father figure and the use of explicit language suggest the meme targets an audience that may be desensitized to or finds amusement in offensive stereotypes and crude sexualization, potentially reinforcing harmful tropes. The meme’s intent to provoke laughter through shock value implies it is aimed at adults who are not easily offended by vulgar content, and who may identify with or enjoy subverting traditional family dynamics in a humorous, albeit inappropriate, way.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/13652.png",
+    "image_name": "13652.png",
+    "extraction_timestamp": "2025-12-15T15:07:13.541102",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

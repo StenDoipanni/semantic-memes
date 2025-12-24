@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_2925673d",
+  "@type": "AnalysisDocument",
+  "title": "56930.png - Dimension Analysis",
+  "created": "2025-12-16T05:31:08.480852",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_b0baec70",
+    "@type": "Image",
+    "filename": "56930.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/56930.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/56930.png",
+    "image_name": "56930.png",
+    "extraction_timestamp": "2025-12-16T05:29:38.730346",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2c8d819d",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: harmful; overall-intent-description: The image depicts a young person with a somber expression, juxtaposed with the text 'dis one time at concentration camp i got such bad gas.' This is a deeply insensitive and harmful meme that trivializes the horrific suffering of victims of the Holocaust and concentration camps by using a crude, vulgar joke about bodily functions. The intent is to shock or elicit laughter through shock value, but it does so by exploiting the memory of genocide and extreme human suffering for comedic effect. This is not merely offensive; it is a form of historical revisionism and desecration that can cause real psychological harm to survivors and their descendants, and it normalizes the use of trauma for humor. The meme's overall intent is to provoke a reaction through gross-out humor at the expense of one of history's most tragic events, making it categorically harmful.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_2925673d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b1291f36",
+      "@type": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "dis one time at concentration camp",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_2925673d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8e697bc3",
+      "@type": "VisualMaterial",
+      "instance_name": "person",
+      "label": "a young individual",
+      "description": "A young person with short, dark hair and a somber, serious facial expression, looking directly at the camera. They are wearing a dark-colored top and a thin necklace. The lighting is focused on their face against a dark, plain background, making them the central and most salient visual element.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_2925673d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_96710525",
+      "@type": "Scene",
+      "instance_name": "tragic_joke_scene",
+      "label": "a scene of a somber person juxtaposed with offensive text",
+      "description": "The scene features a young person with a somber expression, positioned centrally against a dark background. Superimposed over the image are two lines of text that create a jarring contrast: the top text references a concentration camp, and the bottom text makes a vulgar joke about bodily functions. The visual and textual elements are arranged to create a composition that is intentionally offensive and harmful, using the person's solemn demeanor to mock a horrific historical event.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_2925673d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_de8b41d4",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "concentration_camp",
+      "label": "Historical Event",
+      "description": "Refers to the Nazi concentration camps established during the Holocaust, where millions of Jews, Roma, disabled individuals, and other groups were systematically murdered. The term is used here in a context that trivializes the genocide and extreme suffering endured by victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_2925673d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ca832c46",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "holocaust_denial_minimization",
+      "label": "Holocaust Denial/Minimization Theme",
+      "description": "The meme uses the phrase 'dis one time at concentration camp' to imply a trivial or humorous anecdote about a horrific historical event, which is a form of historical revisionism and desecration. This theme is used to minimize the gravity of the Holocaust and normalize using trauma for shock humor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_2925673d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9c6c2d16",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "bodily_function_joke",
+      "label": "Vulgar Bodily Function Joke",
+      "description": "The phrase 'i got such bad gas' is a crude, vulgar joke about bodily functions. This type of humor is used here to create a gross-out effect, juxtaposed with the reference to concentration camps, making the joke offensive and insensitive.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_2925673d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0b42d50c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_semitism",
+      "label": "Anti-Semitism",
+      "description": "The meme references concentration camps, which were central to the Holocaust, a genocide targeting Jewish people. The use of this reference in a trivializing context is a form of anti-Semitic trope that minimizes the suffering of Jewish victims and exploits historical trauma for comedic effect.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_2925673d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ef33399e",
+      "@type": "EmotionExpression",
+      "instance_name": "sorrow",
+      "label": "the somber emotional expression",
+      "description": "The person in the image displays a solemn, serious facial expression with a neutral or slightly downturned mouth and direct, unblinking gaze, conveying a sense of sadness, gravity, or deep contemplation. This expression is visually emphasized by the stark lighting and dark background, isolating the individual and amplifying the emotional weight.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_2925673d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ab7ee834",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The person is mapped as the subject of the vulgar joke about bad gas.",
+      "description": "The text 'i got such bad gas' is mapped onto the visual entity 'person'. The person's somber expression is juxtaposed with the crude joke, creating an analogical mapping where the person is implicitly the 'one' who experienced the bad gas, even though the context is horrifically inappropriate. This mapping is part of the meme's harmful intent to trivialize trauma.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_2925673d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f247d2dd",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the person in the image",
+      "description": "The user is projected onto the visual entity 'person' as the implied subject of the joke 'i got such bad gas'. The somber expression of the person is juxtaposed with the vulgar text, creating a semiotic projection where the viewer is invited to imagine themselves as the person experiencing the bad gas, even though the context is horrifically inappropriate and trivializes historical trauma. This projection is implicit, not explicit, but it is a core part of the meme's mechanism of shock humor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_2925673d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f7ed6a61",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the Holocaust and concentration camps by juxtaposing a somber image of a young person with a vulgar joke about bodily functions, which is deeply insensitive and can cause psychological harm to survivors and their descendants.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_2925673d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4db35553",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who find shock value in gross-out humor and are willing to engage with offensive content that trivializes historical trauma. The meme is designed to elicit laughter through its juxtaposition of a somber image with a vulgar joke, appealing to those who prioritize comedic effect over historical sensitivity. The use of concentration camps as a punchline targets those who may not fully grasp the gravity of the Holocaust or who are desensitized to historical atrocities, making it particularly harmful to survivors and descendants. The meme’s intent to provoke a reaction through shock humor suggests it is aimed at an audience that finds humor in taboo or offensive subjects, potentially including internet users familiar with crude memes and dark humor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_2925673d"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: muslim_porn_star_goat; hasOverallIntent: hateful; overall-intent-description: The image depicts a goat wearing sunglasses, with the text 'muslim' at the top and 'porn star' at the bottom. This juxtaposition creates a derogatory and offensive stereotype by equating Muslims with the hypersexualized and demeaning trope of 'porn star,' which is a form of Islamophobia. The meme uses visual humor to mock and dehumanize a religious group by associating it with a sexualized and morally condemned caricature. This is a hateful meme as it directly attacks a protected characteristic (religion) through a demeaning and false analogy, aiming to provoke negative stereotypes and reinforce prejudice against Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "muslim",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "goat",
+      "label": "animal",
+      "description": "A black-and-white goat with curved horns, wearing dark sunglasses, positioned in the foreground. The goat is the central visual subject and is looking directly at the camera, creating a humorous and anthropomorphic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "goat_with_sunglasses",
+      "label": "goat wearing sunglasses",
+      "description": "A black-and-white goat with curved horns is positioned in the foreground, wearing dark sunglasses and looking directly at the camera. The goat is the central visual subject of the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The meme relies on the harmful stereotype that Muslims are inherently associated with hypersexualized or morally condemned behaviors, which is a form of Islamophobia. This stereotype is not visible in the image but is required to understand the offensive nature of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization_stereotype",
+      "label": "Hypersexualization Stereotype",
+      "description": "The term 'porn star' is used to imply hypersexualization, a derogatory trope often applied to marginalized groups. This stereotype is not visible in the image but is essential to interpret the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "derogatory_analogy",
+      "label": "Derogatory Analogy",
+      "description": "The meme creates a false and demeaning analogy by equating Muslims with 'porn stars,' which is a form of dehumanization and offensive caricature. This conceptual framing is not visible in the image but is necessary to understand the meme’s message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "goat_with_sunglasses",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_group_stereotype",
+      "label": "Religious Group Stereotype",
+      "description": "The meme targets Muslims as a religious group, using a stereotype that associates them with negative traits. This requires external knowledge about religious groups and how they are stereotyped in society.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking",
+      "label": "mocking emotion",
+      "description": "The goat wearing sunglasses and looking directly at the camera creates a humorous, anthropomorphic, and slightly mocking expression, which is amplified by the juxtaposition with the offensive text. The visual presentation is intentionally absurd to provoke laughter at the expense of a religious group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "goat is mapped as 'muslim' and 'porn star'",
+      "description": "The visual entity 'goat_with_sunglasses' is mapped onto the textual entities 'muslim' and 'porn star' through the meme's juxtaposition. The goat, with its anthropomorphic presentation (wearing sunglasses and looking directly at the camera), is used as a visual stand-in for the derogatory stereotypes associated with Muslims ('muslim') and hypersexualized individuals ('porn star'). This creates a false analogy where the goat is equated with these offensive labels, serving as the central analogical mapping in the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the goat as a stand-in for the stereotype",
+      "description": "The user is projected onto the visual material of the goat wearing sunglasses, which is anthropomorphized and used as a visual stand-in for the derogatory stereotypes of 'muslim' and 'porn star'. The goat's direct gaze and human-like presentation invite the user to identify with or project themselves onto the goat as the vessel for the offensive analogy. There are no explicit deictic pronouns like 'me' or 'you', but the anthropomorphic framing and the meme's structure create an implicit projection where the viewer sees themselves as the observer of the stereotype being embodied by the goat.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Muslims as a religious group through a demeaning and false analogy, equating them with the hypersexualized and morally condemned trope of 'porn star,' which is a form of Islamophobia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "text_chunk",
+      "label": "muslim",
+      "description": "The target community is Muslims, as the meme explicitly labels them with the text 'muslim' and associates them with derogatory stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/20867.png",
+    "image_name": "20867.png",
+    "extraction_timestamp": "2025-12-15T18:09:06.972535",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

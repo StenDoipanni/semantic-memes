@@ -1,0 +1,182 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: dirty_immigrant_scum; hasOverallIntent: Hateful; overall-intent-description: The image depicts a family of five standing in a field, with overlaid text reading 'dirty immigrant scum.' This juxtaposition of a wholesome, familial image with derogatory language targets immigrants, particularly those perceived as Latino or Hispanic, using a hateful stereotype. The text directly attacks the group's perceived moral character and hygiene, fitting the 'anti-Latino/Hispanic stereotypes' category, which includes 'disease/uncleanliness associations' and 'immigration status assumptions.' The intent is to dehumanize and vilify immigrants, promoting prejudice and hostility toward them based on their ethnicity or nationality. This is a clear example of hateful content as it directly attacks a protected characteristic (nationality/ethnicity) with abusive and degrading language.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "dirty immigrant scum",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "family_of_five",
+      "label": "group of people",
+      "description": "A family consisting of five individuals — a woman carrying a young girl on her shoulders, a teenage girl, two teenage boys, and another young girl partially obscured — standing together in a field. They appear to be posing for a photo, with expressions ranging from smiling to neutral. The family is dressed in casual clothing, suggesting a relaxed, everyday setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "family_posing_in_field",
+      "label": "Family posing together in a field",
+      "description": "A family of five is standing together in a green field, posing for a photo. The woman is carrying a young girl on her shoulders, while the other three children stand beside her. They are dressed casually and appear to be smiling or posing for the camera. The background consists of a lush green field with trees in the distance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_latino_hispanic_stereotypes",
+      "label": "Anti-Latino/Hispanic Stereotypes",
+      "description": "A set of derogatory stereotypes targeting Latino and Hispanic individuals, including assumptions about immigration status, criminality, intelligence, work ethic, family size, and hygiene. These stereotypes are often used to dehumanize and vilify this group, as seen in the meme's text 'dirty immigrant scum'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "immigration_status_assumptions",
+      "label": "Immigration Status Assumptions",
+      "description": "The implicit belief that immigrants are inherently untrustworthy, illegal, or a burden on society, often used to justify discrimination or hostility. This is directly referenced in the meme's text 'dirty immigrant scum', which attacks the moral character and hygiene of immigrants.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "disease_uncleanliness_associations",
+      "label": "Disease/Uncleanliness Associations",
+      "description": "A harmful stereotype that links immigrants, particularly those from certain regions, with disease, dirt, or poor hygiene. This is explicitly referenced in the meme's text 'dirty immigrant scum', which uses 'dirty' to dehumanize and vilify the group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "large_family_size_mockery",
+      "label": "Large Family Size Mockery",
+      "description": "A stereotype that portrays large families as a negative trait, often implying that immigrants are overburdening resources or are 'anchor babies'. The family of five in the image, with multiple children, may be implicitly targeted by this stereotype, even though it is not explicitly stated in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "family_of_five",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ethnicity_based_prejudice",
+      "label": "Ethnicity-Based Prejudice",
+      "description": "The systemic bias and discrimination against individuals based on their ethnicity or national origin. The meme's hateful text targets a specific ethnic group (Latino/Hispanic) and uses derogatory language to promote prejudice and hostility toward them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "happy family expression",
+      "description": "The family members are smiling and posing together in a relaxed, joyful manner, suggesting a positive emotional state. The woman carrying the child on her shoulders and the children standing close together convey warmth and familial affection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'dirty immigrant scum' is mapped onto the family of five.",
+      "description": "The overlaid text 'dirty immigrant scum' directly labels and dehumanizes the visual entity 'family_of_five'. The text explicitly assigns derogatory characteristics (dirty, scum) to the entire family, which is visually depicted as a happy, cohesive unit. This mapping is central to the meme's hateful intent, as it uses the wholesome image of a family to contrast with the abusive text, thereby vilifying the group it represents (Latino/Hispanic immigrants) through analogical projection. The mapping is established by the spatial adjacency and direct textual reference to the visual group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the derogatory text",
+      "description": "The user is projected onto the textual material 'dirty immigrant scum' as the target of the hate speech. The text directly addresses and vilifies the group represented by the visual material, implying the user is identifying with or projecting their own prejudice onto the labeled group. There are no explicit deictic pronouns like 'me' or 'you' in the text, but the hateful message is directed at the visual group, creating an implicit projection of the user's hostile attitude onto the family depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks a protected characteristic (nationality/ethnicity) with abusive and degrading language, dehumanizing immigrants and promoting prejudice and hostility toward them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The intended audience is individuals who hold or are exposed to anti-Latino/Hispanic stereotypes, particularly those who may harbor prejudice or hostility toward immigrants based on ethnicity or nationality. The meme targets this community by using derogatory language ('dirty immigrant scum') to dehumanize and vilify Latino/Hispanic immigrants, leveraging the visual of a happy family to contrast with the hateful text. The audience is likely to be those who resonate with or are influenced by immigration status assumptions, disease/uncleanliness associations, and large family size mockery — all of which are embedded in the meme’s intent and visual context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/93728.png",
+    "image_name": "93728.png",
+    "extraction_timestamp": "2025-12-19T18:03:19.867232",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_54889c85",
+  "@type": "AnalysisDocument",
+  "title": "18406.png - Dimension Analysis",
+  "created": "2025-12-15T17:19:55.055002",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_a9e05b32",
+    "@type": "Image",
+    "filename": "18406.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/18406.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/18406.png",
+    "image_name": "18406.png",
+    "extraction_timestamp": "2025-12-15T17:18:15.761979",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a7154a9d",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: welcome_to_melbourne_have_a_nice_day; hasOverallIntent: non-toxic_welcoming_message; overall-intent-description: The image depicts a family (two adults and a baby) and a dog in a sunny outdoor setting, with text overlay reading 'welcome to melbourne' and 'have a nice day'. The scene is warm, positive, and conveys hospitality and friendliness. There are no elements of toxicity, hate, abuse, or harmful stereotypes present. The intent is to welcome viewers to Melbourne in a cheerful, non-threatening manner, using the wholesome image of a family and pet to evoke positive emotions. The meme functions as a simple, benign greeting with no propagandistic, discriminatory, or harmful intent.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_54889c85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_15381407",
+      "@type": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "welcome to melbourne",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_54889c85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d9dfe321",
+      "@type": "VisualMaterial",
+      "instance_name": "adult_woman",
+      "label": "person",
+      "description": "A woman with long dark hair, wearing a beige sweater and jeans, crouching and holding a baby. She is smiling and looking down at the baby.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_54889c85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b0fafc01",
+      "@type": "Scene",
+      "instance_name": "welcoming_family_scene",
+      "label": "family_welcoming_with_dog",
+      "description": "A scene depicting a family (two adults and a baby) and a dog in a sunny outdoor setting, conveying warmth and hospitality. The adults are crouching, interacting with the baby and the dog, while smiling. The text overlay reads 'welcome to melbourne' and 'have a nice day', reinforcing the welcoming intent.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_54889c85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_302eb3b2",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "melbourne",
+      "label": "City of Melbourne",
+      "description": "Melbourne is the capital and most populous city of the Australian state of Victoria. It is a major global city known for its multiculturalism, arts, sports, and vibrant lifestyle. The text 'welcome to melbourne' implies a greeting to visitors arriving in this specific city, which requires knowledge of its geographic and cultural identity outside the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_54889c85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7eae6ef3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "welcome_message",
+      "label": "Common social greeting",
+      "description": "The phrase 'welcome to [place]' is a standard social convention used to greet visitors or newcomers to a location. It is a non-toxic, universally understood form of hospitality that requires cultural knowledge of social norms in human interaction.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_54889c85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_be76c919",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "have_a_nice_day",
+      "label": "Common polite closing phrase",
+      "description": "The phrase 'have a nice day' is a widely recognized polite expression used to end interactions on a positive note. It is a standard social courtesy that requires knowledge of common English-speaking social conventions.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_54889c85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dd527067",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "family_welcoming_with_dog",
+      "label": "Cultural trope of family as symbol of warmth and hospitality",
+      "description": "The image of a family (two adults and a child) with a pet dog is often used in media and advertising to symbolize warmth, safety, and domestic happiness. This trope relies on cultural knowledge that families and pets are associated with positive, welcoming environments.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_54889c85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_45ce769b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "australia",
+      "label": "Country",
+      "description": "Melbourne is located in Australia, a country known for its multicultural society and friendly, welcoming culture. Understanding the context of 'welcome to melbourne' requires knowledge of Australia as a nation and its cultural identity.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_54889c85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_79675f3d",
+      "@type": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful emotion",
+      "description": "The adult woman is smiling warmly while looking down at the baby, conveying affection and contentment. The other adult is also smiling broadly, indicating shared joy and a positive, welcoming atmosphere. The overall scene, including the sunny outdoor setting and the presence of a family and pet, reinforces a feeling of happiness and contentment.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_54889c85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a1491b06",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_welcome_to_melbourne",
+      "label": "The welcoming family scene is mapped as a representation of 'welcome to melbourne'",
+      "description": "The text 'welcome to melbourne' is overlaid on the image of a family and dog in a sunny, happy outdoor setting. This creates an analogical mapping where the visual scene (family_welcoming_with_dog) is interpreted as embodying the concept of a welcoming environment for Melbourne. The wholesome, happy family scene serves as a visual metaphor for the city's hospitality, mapping the abstract idea of 'welcome to melbourne' onto the concrete visual of domestic warmth and joy.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_54889c85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3ab39673",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User is projected onto the welcoming family scene",
+      "description": "The user is projected onto the scene of the family and dog in a sunny outdoor setting, as this scene is used to embody the welcoming message for Melbourne. The user is invited to imagine themselves as a visitor being welcomed into this warm, friendly environment. There are no explicit deictic pronouns like 'you' or 'me' in the text, but the overall intent of the meme creates an implicit projection where the viewer is the recipient of the welcome.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_54889c85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a1738052",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "visitors to melbourne",
+      "description": "The target community is individuals arriving in or planning to visit Melbourne, Australia. The text 'welcome to melbourne' explicitly addresses newcomers to the city, and the warm, family-oriented imagery reinforces a hospitable greeting intended for tourists, travelers, or relocating residents. The meme functions as a friendly, non-toxic welcome message to this specific demographic.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_54889c85"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

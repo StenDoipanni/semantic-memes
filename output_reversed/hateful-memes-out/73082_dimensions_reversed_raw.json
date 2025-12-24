@@ -1,0 +1,278 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme uses a before-and-after format to depict a map of the Middle East (labeled 'before' with text 'almost all terrorism is sponsored by saudi arabia') and then a crater (labeled 'after' with text 'the solution to terrorism' and 'problem solved'). This visual analogy is intentionally provocative and harmful, as it suggests that the only solution to terrorism is to destroy or obliterate the region, which is a gross oversimplification and a call for violent destruction. The meme promotes a dangerous and reductive narrative that equates terrorism with a specific country and implies that the solution is physical annihilation, which can incite hatred, violence, and support for extremist actions. It also perpetuates Islamophobia by linking terrorism directly to Saudi Arabia and by suggesting that the entire region is a source of terrorism, ignoring the complex geopolitical, historical, and social factors involved. The meme's intent is to provoke outrage and simplify a complex issue into a binary of 'problem' and 'solution' through violent imagery, which can be harmful to societal discourse and potentially dangerous.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "almost all terrorism is sponsored by saudi arabia",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "left side text overlay",
+      "description": "before",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_3",
+      "label": "middle text overlay",
+      "description": "the solution to terrorism",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_4",
+      "label": "left side text overlay",
+      "description": "after",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_5",
+      "label": "bottom text overlay",
+      "description": "problem solved",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "map_of_the_Middle_East",
+      "label": "geographic map",
+      "description": "A blue-toned satellite or topographic map showing the Middle East region, including Saudi Arabia, with a highlighted inset of Saudi Arabia. This is labeled 'before' and accompanied by the text 'almost all terrorism is sponsored by saudi arabia'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "crater",
+      "label": "geological feature",
+      "description": "A large, circular impact crater in a desert landscape, appearing as a deep, bowl-shaped depression. This is labeled 'after' and accompanied by the text 'the solution to terrorism' and 'problem solved'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "text_overlay",
+      "label": "meme text",
+      "description": "White text with black outline is overlaid on the image. The top section reads 'almost all terrorism is sponsored by saudi arabia' and 'before'. The bottom section reads 'the solution to terrorism', 'after', and 'problem solved'. These texts are central to the meme's message and visual metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "before_after_comparison",
+      "label": "before_and_after_visual_metaphor",
+      "description": "A meme scene composed of two distinct visual panels arranged vertically. The top panel, labeled 'before', displays a map of the Middle East with text claiming 'almost all terrorism is sponsored by saudi arabia'. The bottom panel, labeled 'after', shows a large desert crater with text stating 'the solution to terrorism' and 'problem solved'. The scene uses a stark before-and-after format to create a visual metaphor suggesting violent annihilation as the solution to terrorism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "map_of_the_Middle_East",
+          "relation": "isPositionedAbove",
+          "to": "crater"
+        },
+        {
+          "from": "text_overlay",
+          "relation": "labels",
+          "to": "map_of_the_Middle_East"
+        },
+        {
+          "from": "text_overlay",
+          "relation": "labels",
+          "to": "crater"
+        },
+        {
+          "from": "text_overlay",
+          "relation": "describes",
+          "to": "map_of_the_Middle_East"
+        },
+        {
+          "from": "text_overlay",
+          "relation": "describes",
+          "to": "crater"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism_sponsorship_stereotype",
+      "label": "Stereotype: Terrorism is primarily sponsored by Saudi Arabia",
+      "description": "This meme relies on a widely debunked and harmful stereotype that attributes terrorism primarily or exclusively to Saudi Arabia. This is a reductive and false narrative that ignores the complex geopolitical, historical, and social factors behind global terrorism. It is a form of Islamophobia that equates terrorism with a specific country and its people, ignoring the diversity of terrorist groups and their motivations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "violent_solution_stereotype",
+      "label": "Stereotype: The solution to terrorism is violent annihilation",
+      "description": "The meme uses the image of a crater to symbolize the 'solution' to terrorism, implying that the only way to solve the problem is through physical destruction or obliteration of the region. This is a dangerous and reductive metaphor that promotes violence as a solution to complex social and political problems, which can incite hatred and support for extremist actions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_3",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_5",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia: Fear or hatred of Islam and Muslims",
+      "description": "The meme implicitly promotes Islamophobia by linking terrorism directly to Saudi Arabia, a predominantly Muslim country, and by suggesting that the entire Middle East region is a source of terrorism. This perpetuates the harmful stereotype that Muslims are inherently violent or terrorist-prone, which is a dangerous and inaccurate generalization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "map_of_the_Middle_East",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "geopolitical_complexity",
+      "label": "Geopolitical Complexity: Terrorism is a multifaceted issue with many causes",
+      "description": "The meme oversimplifies a complex geopolitical issue by reducing terrorism to a single cause (Saudi Arabia) and a single solution (annihilation). In reality, terrorism is driven by a multitude of factors including political instability, economic inequality, ideological extremism, and historical grievances, which cannot be solved by physical destruction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "crater_as_metaphor",
+      "label": "Metaphor: Crater as symbol of destruction and obliteration",
+      "description": "The image of a crater is used as a metaphor for complete destruction. In the context of the meme, it represents the violent annihilation of the Middle East as the 'solution' to terrorism. This metaphor is intentionally provocative and harmful, as it equates terrorism with a physical location and suggests that the only solution is to destroy it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "crater",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_3",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_5",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_anger",
+      "label": "hateful anger emotion",
+      "description": "The meme expresses a hateful and angry sentiment by portraying terrorism as a problem solely caused by Saudi Arabia and suggesting its violent annihilation as the solution. This reflects a dangerous and reductive narrative that incites hatred and supports extremist actions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "terrorism problem mapped to Middle East region",
+      "description": "The text 'almost all terrorism is sponsored by saudi arabia' (text_chunk_1) is mapped onto the visual entity 'map_of_the_Middle_East' (visual_entity). The map visually represents the region where Saudi Arabia is located, establishing a direct analogical link between the textual claim about terrorism sponsorship and the geographic area depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the metaphorical 'solution' scene",
+      "description": "The user is projected onto the 'after' scene (the crater) which represents the violent annihilation of the Middle East as the 'solution' to terrorism. This projection is implicit, as the meme uses the user's perspective to imagine themselves as the one who has 'solved' the problem by destroying the region, thereby internalizing the meme's violent and reductive message. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the framing of 'before' and 'after' creates a participatory illusion where the viewer is positioned as the agent of the 'solution'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme promotes a dangerous and reductive narrative that equates terrorism with a specific country and implies that the solution is physical annihilation, which can incite hatred, violence, and support for extremist actions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who hold or are exposed to simplistic, reductive, and often Islamophobic narratives about terrorism and the Middle East. This includes those who believe in the stereotype that terrorism is primarily sponsored by Saudi Arabia (terrorism_sponsorship_stereotype) and who may be receptive to violent solutions (violent_solution_stereotype). The meme is designed to provoke outrage and simplify complex geopolitical issues, appealing to audiences who support or are influenced by extremist or hate-driven rhetoric. The audience is likely to be those who are already predisposed to Islamophobia or who are seeking emotionally charged, binary solutions to complex problems, as the meme’s visual metaphor (crater as destruction) is intended to incite hatred and support for violent annihilation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/73082.png",
+    "image_name": "73082.png",
+    "extraction_timestamp": "2025-12-19T11:40:53.422280",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 20,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

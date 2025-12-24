@@ -1,0 +1,579 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e",
+  "@type": "AnalysisDocument",
+  "title": "05869.png - Dimension Analysis",
+  "created": "2025-12-15T12:40:47.851935",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_5ffa8acc",
+    "@type": "Image",
+    "filename": "05869.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/05869.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/05869.png",
+    "image_name": "05869.png",
+    "extraction_timestamp": "2025-12-15T12:36:00.568710",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 49,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4b277629",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme depicts a man with a bloody nose and glasses, looking distressed, with text that reads: 'my wife asked me where i'd like to be buried' and 'apparently, \"balls deep in your sister\" wasn't the answer she was expecting.' The visual of the man with blood and the crude, sexually explicit punchline are intended to create shock humor. The intent is to elicit laughter through a gross-out, taboo-breaking joke that relies on shock value and sexual innuendo. While not targeting a specific protected group, the content is harmful due to its vulgar, crude, and potentially offensive nature, which could be distressing or inappropriate for many viewers. The humor is derived from the juxtaposition of a serious question (burial preference) with an absurd, sexually explicit answer, designed to provoke a reaction through shock and taboo violation.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6f2f754c",
+      "@type": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "my wife asked me where i'd like to be buried",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f1d59b80",
+      "@type": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with light-colored, shoulder-length hair, wearing glasses and a suit, with visible blood on his nose and mouth, looking directly at the camera with a distressed expression. The bright light source behind him creates a lens flare effect.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2f09ae8e",
+      "@type": "Scene",
+      "instance_name": "distressed_man_with_blood",
+      "label": "man_with_blood_and_glasses",
+      "description": "A man with light-colored, shoulder-length hair, wearing glasses and a suit, with visible blood on his nose and mouth, looking directly at the camera with a distressed expression. The bright light source behind him creates a lens flare effect.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7a211cc3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "shock_humor",
+      "label": "Shock Humor",
+      "description": "A comedic technique that relies on exaggerated, taboo, or gross-out elements to provoke laughter through discomfort or surprise. This meme uses the visual of a man with blood and a crude, sexually explicit punchline to generate shock humor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6a11c2ee",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "taboo_breaking_joke",
+      "label": "Taboo-Breaking Joke",
+      "description": "A joke that violates social norms, moral standards, or cultural taboos to elicit a reaction. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5aa86232",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "gross_out_comedy",
+      "label": "Gross-Out Comedy",
+      "description": "A comedic style that derives humor from disgusting, unpleasant, or physically repulsive imagery or situations. The visual of blood on the man",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_88db1855",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "sexual_innuendo",
+      "label": "Sexual Innuendo",
+      "description": "A suggestive or indirect reference to sex, often humorous or crude. The phrase ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e88444cd",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "vulgar_language",
+      "label": "Vulgar Language",
+      "description": "Language that is crude, offensive, or sexually explicit. The punchline contains vulgar language that is intended to shock and provoke a reaction.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5205127b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "shock_value",
+      "label": "Shock Value",
+      "description": "The use of shocking, surprising, or offensive content to attract attention or provoke a reaction. The meme relies on shock value to generate humor through the juxtaposition of a serious question with an absurd, crude answer.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f33bbd85",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "juxtaposition",
+      "label": "Juxtaposition",
+      "description": "The act of placing two contrasting or opposing things side by side to create a humorous or ironic effect. The meme juxtaposes a serious question (burial preference) with an absurd, sexually explicit answer to create humor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_08dd844a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "absurd_punchline",
+      "label": "Absurd Punchline",
+      "description": "A punchline that is illogical, ridiculous, or nonsensical, often used for comedic effect. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4128a9f3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "family_taboo",
+      "label": "Family Taboo",
+      "description": "A social taboo related to family relationships, particularly involving incest or inappropriate sexual behavior. The punchline references a taboo subject involving a sister, which is considered inappropriate and offensive.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1d9d0c88",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "sexual_taboo",
+      "label": "Sexual Taboo",
+      "description": "A social taboo related to sexual behavior, particularly involving inappropriate or forbidden acts. The punchline references a sexual taboo involving a sister, which is considered inappropriate and offensive.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c4711d39",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "inappropriate_joke",
+      "label": "Inappropriate Joke",
+      "description": "A joke that is considered offensive, distasteful, or inappropriate due to its content. The punchline is considered inappropriate due to its crude, sexually explicit nature.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a66c86d2",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "offensive_content",
+      "label": "Offensive Content",
+      "description": "Content that is considered offensive, distasteful, or inappropriate due to its content. The meme contains offensive content due to its crude, sexually explicit punchline.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6392b832",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "crude_punchline",
+      "label": "Crude Punchline",
+      "description": "A punchline that is crude, offensive, or sexually explicit. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5b9c40e9",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "sexual_explicitness",
+      "label": "Sexual Explicitness",
+      "description": "The explicit depiction or reference to sexual acts or behavior. The punchline contains sexual explicitness, which is intended to shock and provoke a reaction.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5319bd31",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "taboo_violation",
+      "label": "Taboo Violation",
+      "description": "The act of breaking a social taboo, often used for comedic effect. The punchline violates social taboos related to family and sexuality, creating humor through the violation.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c14c212c",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "joke_structure",
+      "label": "Joke Structure",
+      "description": "The structure of a joke, typically consisting of a setup and a punchline. The meme follows a joke structure with the setup ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f5f46c92",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "setup_punchline",
+      "label": "Setup and Punchline",
+      "description": "A common joke structure where a setup leads to a punchline. The setup ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c0757a85",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "humor_through_contrast",
+      "label": "Humor Through Contrast",
+      "description": "A comedic technique that derives humor from the contrast between two opposing elements. The meme uses humor through contrast by juxtaposing a serious question with an absurd, crude answer.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_adc8fd5a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "absurdity",
+      "label": "Absurdity",
+      "description": "The quality of being absurd, ridiculous, or nonsensical. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0cd5a2fc",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "inappropriate_response",
+      "label": "Inappropriate Response",
+      "description": "A response that is considered offensive, distasteful, or inappropriate due to its content. The punchline is an inappropriate response to the question about burial preferences.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2a4eb1e3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "sexual_joke",
+      "label": "Sexual Joke",
+      "description": "A joke that is centered around sexual themes or innuendos. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c4992628",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "family_joke",
+      "label": "Family Joke",
+      "description": "A joke that involves family members or family relationships. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_168ca722",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "crude_joke",
+      "label": "Crude Joke",
+      "description": "A joke that is crude, offensive, or sexually explicit. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_51e5048f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "shock_joke",
+      "label": "Shock Joke",
+      "description": "A joke that relies on shock value to generate humor. The meme is a shock joke that uses the visual of a man with blood and a crude, sexually explicit punchline to generate shock humor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f03e432b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "taboo_joke",
+      "label": "Taboo Joke",
+      "description": "A joke that violates social taboos, often used for comedic effect. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_27adab9a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "gross_joke",
+      "label": "Gross Joke",
+      "description": "A joke that is gross, disgusting, or unpleasant. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c3e3e931",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "offensive_joke",
+      "label": "Offensive Joke",
+      "description": "A joke that is considered offensive, distasteful, or inappropriate due to its content. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8e6541de",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "sexual_joke_structure",
+      "label": "Sexual Joke Structure",
+      "description": "A joke structure that is centered around sexual themes or innuendos. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ff693f9d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "family_joke_structure",
+      "label": "Family Joke Structure",
+      "description": "A joke structure that involves family members or family relationships. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f13f538a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "crude_joke_structure",
+      "label": "Crude Joke Structure",
+      "description": "A joke structure that is crude, offensive, or sexually explicit. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_08727a65",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "shock_joke_structure",
+      "label": "Shock Joke Structure",
+      "description": "A joke structure that relies on shock value to generate humor. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ea6966d9",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "taboo_joke_structure",
+      "label": "Taboo Joke Structure",
+      "description": "A joke structure that violates social taboos, often used for comedic effect. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8bc0e232",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "gross_joke_structure",
+      "label": "Gross Joke Structure",
+      "description": "A joke structure that is gross, disgusting, or unpleasant. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3e14689e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "offensive_joke_structure",
+      "label": "Offensive Joke Structure",
+      "description": "A joke structure that is considered offensive, distasteful, or inappropriate due to its content. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e4d4d890",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "joke_tropes",
+      "label": "Joke Tropes",
+      "description": "Common patterns or clichés in joke writing. The meme uses joke tropes such as the absurd punchline, the taboo-breaking joke, and the shock humor to create humor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d50b6864",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "absurd_punchline_trope",
+      "label": "Absurd Punchline Trope",
+      "description": "A common joke trope where the punchline is illogical, ridiculous, or nonsensical. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3f75a4eb",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "taboo_breaking_joke_trope",
+      "label": "Taboo-Breaking Joke Trope",
+      "description": "A common joke trope where the joke violates social taboos. The punchline ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f0c775e1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "gross_out_comedy_trope",
+      "label": "Gross-Out Comedy Trope",
+      "description": "A common comedic trope that relies on disgusting, unpleasant, or physically repulsive imagery or situations. The meme uses the gross-out comedy trope to create humor through the visual of blood and the crude punchline.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_aacb3408",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "shock_value_trope",
+      "label": "Shock Value Trope",
+      "description": "A common comedic trope that relies on shocking, surprising, or offensive content to attract attention or provoke a reaction. The meme uses the shock value trope to generate humor through the juxtaposition of a serious question with an absurd, crude answer.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6f75b714",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "juxtaposition_trope",
+      "label": "Juxtaposition Trope",
+      "description": "Extracted from image analysis",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_376ba607",
+      "@type": "EmotionExpression",
+      "instance_name": "distress",
+      "label": "distressed emotion",
+      "description": "The man's facial expression, with blood on his nose and mouth and a strained, grimacing look, conveys a state of physical discomfort or distress. The bright light and his direct gaze amplify the intensity of this emotional state.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7814b17c",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The man with blood is mapped as the speaker of the joke",
+      "description": "The visual of the distressed man with blood is mapped onto the textual entity 'my wife asked me where i'd like to be buried', implying that the man is the 'me' in the question. The text sets up a scenario where the speaker (the man) is being asked a serious question, and his subsequent inappropriate response is the punchline. The visual of the man's distress and injury serves as the embodiment of the speaker who is caught in the absurd and taboo situation described in the text.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_344e43ae",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the distressed man with blood as the speaker of the joke",
+      "description": "The user is projected onto the visual material of the distressed man with blood, who is mapped as 'me' in the textual setup. The text 'my wife asked me...' directly deictically refers to the speaker, and the visual of the man embodies this 'me' who is caught in the absurd and taboo situation. The user identifies with the speaker experiencing the shock and embarrassment of giving an inappropriate response.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_33db7e23",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme contains a crude, sexually explicit punchline that references a taboo subject involving incest, which is offensive and potentially distressing to many viewers. The humor is derived from shock value and gross-out comedy, relying on violating social norms and family taboos. While not targeting a specific protected group, the content is harmful due to its vulgar, crude, and potentially offensive nature.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_06910c3d",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who appreciate shock humor, gross-out comedy, and crude, taboo-breaking jokes. This includes viewers familiar with internet meme culture who enjoy humor derived from absurdity, sexual innuendo, and violating social norms. The meme is designed for an audience that finds humor in juxtaposing a serious question with an offensive, sexually explicit punchline, particularly those who are comfortable with vulgar language and family taboo violations as comedic devices.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6fbb7d3e"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

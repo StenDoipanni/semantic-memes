@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3",
+  "@type": "AnalysisDocument",
+  "title": "19587.png - Dimension Analysis",
+  "created": "2025-12-15T17:45:48.858138",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_6b8e9034",
+    "@type": "Image",
+    "filename": "19587.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/19587.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/19587.png",
+    "image_name": "19587.png",
+    "extraction_timestamp": "2025-12-15T17:44:14.963009",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_22f26fd7",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a Black woman, likely a public figure, being interviewed while overlaid with the text 'i support terrorists because they're pea brains like me.' This text is a hateful and racist trope that uses an anti-Black stereotype (comparing intelligence to 'pea brains') to dehumanize and insult a specific racial group. The meme's intent is to attack the individual and her community by invoking a harmful racial stereotype, implying that her intelligence or moral character is so low that she would support terrorism. This is a direct attack based on race, fitting the definition of hateful content. The juxtaposition of the image of a poised, professional Black woman with the derogatory text creates a jarring and offensive contrast meant to provoke outrage or ridicule, but ultimately serves to demean and dehumanize.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1454734c",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "i support terrorists because they're pea brains like me",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_31aa712f",
+      "@type": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "Black woman",
+      "description": "A Black woman wearing a dark headscarf, a black blazer, and a black top with a gold necklace. She appears to be speaking or being interviewed, gesturing with her hands. Her expression is engaged and professional. She is the central subject of the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8c18d3e3",
+      "@type": "Scene",
+      "instance_name": "interview_scene",
+      "label": "interview",
+      "description": "A Black woman is being interviewed outdoors, holding a microphone and gesturing while speaking. The scene is framed from a low angle, showing trees in the background and a hand holding the microphone from the right side of the frame.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c18850b3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_intelligence",
+      "label": "Anti-Black Stereotype: Intelligence-related slurs",
+      "description": "The meme uses the derogatory phrase 'pea brains' to imply that Black people are unintelligent, which is a harmful and widely recognized anti-Black stereotype. This stereotype is used to dehumanize and insult the Black woman depicted, suggesting her support for terrorism is due to her supposed low intelligence.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5f5467f9",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "terrorism_association_with_muslims",
+      "label": "Islamophobia: Terrorism associations",
+      "description": "The meme references 'terrorists' in a way that implicitly links terrorism with Muslims, a common and harmful Islamophobic trope. This association is not visible in the image but is essential to understanding the hateful context of the text, which uses the stereotype to attack the woman's identity or perceived affiliation.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_39d16fdc",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racial_slur_context",
+      "label": "Context of racial slurs and hate speech",
+      "description": "The phrase 'pea brains like me' is a racial slur that relies on the broader context of anti-Black racism and hate speech. Understanding that this phrase is a form of racial degradation requires external knowledge about how such language functions in society to demean and dehumanize Black people.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_05382e7d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "public_figure_context",
+      "label": "Context of the woman as a public figure",
+      "description": "The woman in the image is likely a public figure (e.g., Ilhan Omar, a U.S. Congresswoman), and the meme targets her specifically. Understanding that she is a public official or political figure is necessary to grasp the intent of the meme, which is to attack her based on her identity and perceived political views.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8b0e8ba9",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "hateful_meme_context",
+      "label": "Context of hateful memes and online discourse",
+      "description": "The meme format and its intent rely on the broader context of online hate speech and the use of memes to spread racist and Islamophobic tropes. This context is not visible in the image but is necessary to understand the meme's function as a tool of dehumanization and political attack.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e85cdc1d",
+      "@type": "EmotionExpression",
+      "instance_name": "hateful_anger",
+      "label": "hateful anger expressed through text",
+      "description": "The emotion of hateful anger is conveyed through the text overlay 'i support terrorists because they're pea brains like me,' which uses racist and Islamophobic tropes to dehumanize and insult the Black woman depicted. This text expresses extreme contempt and hostility toward her identity and perceived beliefs.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ae1ad051",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The speaker is mapped as 'me' in the text",
+      "description": "The text 'i support terrorists because they're pea brains like me' explicitly uses 'me' to refer to the speaker. The visual material shows a Black woman being interviewed, and the text maps her identity onto the pronoun 'me', creating an analogical mapping where the woman is the subject of the self-referential statement. This mapping is direct and explicit, as the text positions the woman as the speaker ('me') who is making the hateful claim.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ef05af9d",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman via the pronoun 'me' in the text",
+      "description": "The text 'i support terrorists because they're pea brains like me' explicitly uses the first-person pronoun 'me', which directly maps the speaker (the woman in the visual material) onto the user's perspective. The user is projected onto the woman as the subject of the self-referential statement, creating an identification where the user sees themselves as the 'me' referenced in the hateful text. This projection is explicit and direct, using the deictic pronoun 'me' to anchor the user's identity onto the visual subject.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_03745e8b",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks the Black woman depicted as a public figure by invoking racist and Islamophobic tropes, dehumanizing her and implying her support for terrorism is due to her supposed low intelligence. This is a direct attack based on race and perceived affiliation, fitting the definition of hateful content.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6adcf337",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold or are exposed to anti-Black racist ideologies, Islamophobic views, or who are politically motivated to attack public figures of color. The meme is designed to resonate with those who use or propagate harmful stereotypes about Black people's intelligence and Muslims' association with terrorism, often found in online hate communities, far-right forums, or politically charged social media spaces. The audience is likely to interpret the meme as a form of political or racial commentary, and may be drawn to it for its provocative, hateful, and dehumanizing content that aligns with their existing biases.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_12b569f3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

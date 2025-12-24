@@ -1,0 +1,176 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts a person in a flamboyant pink outfit with exaggerated makeup and accessories, looking at a phone while applying makeup. The text overlay reads, 'when you got a warrant out for your arrest & you on the run.....' The overall intent is to create a humorous or ironic juxtaposition between the person's flamboyant, possibly stereotyped appearance and the serious situation of being on the run from the law. The meme likely relies on the visual contrast to generate comedic effect, potentially mocking or stereotyping the individual's appearance or lifestyle. While the image does not explicitly target a specific protected group with hateful or abusive language, it may perpetuate harmful stereotypes by associating flamboyant or gender-nonconforming presentation with criminal behavior, which can be considered a form of LGBTQ+ discrimination or harmful generalization. The meme's intent is to provoke laughter through absurdity, but it risks reinforcing negative stereotypes about individuals who express themselves in non-traditional ways, potentially contributing to a hostile or mocking environment toward such individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you got a warrant out for your arrest & you on the run.....",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "central figure",
+      "description": "A person in the foreground wearing a bright pink polka-dotted outfit with a black bow tie, applying makeup while looking at a smartphone. They have exaggerated makeup, including red cheeks and white circles around the eyes, and are wearing large white earrings and a headband with pink sunglasses. Their expression appears focused or distressed as they look at the phone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "person_applying_makeup_while_checking_phone",
+      "label": "Person applying makeup while checking phone",
+      "description": "The central figure, a person in a bright pink polka-dotted outfit with exaggerated makeup and accessories, is applying makeup with one hand while holding and looking at a smartphone with the other. Their expression suggests focus or distress.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "LGBTQ_DISCRIMINATION",
+      "label": "LGBTQ+ Discrimination",
+      "description": "The meme relies on the stereotype that flamboyant or gender-nonconforming presentation (e.g., bright clothing, exaggerated makeup, and accessories) is associated with criminal behavior or moral deviance, which is a form of LGBTQ+ discrimination. This stereotype is used to create humor by juxtaposing the person's appearance with the serious situation of being on the run from the law, potentially mocking or stigmatizing individuals who express themselves in non-traditional ways.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "person_applying_makeup_while_checking_phone",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Gender_Presentation_Mockery",
+      "label": "Gender Presentation Mockery",
+      "description": "The meme implicitly references the stereotype of mocking or ridiculing individuals for their gender presentation, particularly those who express themselves in ways that deviate from traditional norms (e.g., wearing bright colors, applying makeup, using accessories). This mockery is used to generate humor by contrasting the person's appearance with the serious context of being on the run from the law.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "person_applying_makeup_while_checking_phone",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Criminal_Behavior_Associations",
+      "label": "Criminal Behavior Associations",
+      "description": "The meme relies on the stereotype that individuals who present themselves in flamboyant or gender-nonconforming ways are associated with criminal behavior. This stereotype is used to create a humorous or ironic juxtaposition between the person's appearance and the serious situation of being on the run from the law, potentially reinforcing negative perceptions about such individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "person_applying_makeup_while_checking_phone",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "distress",
+      "label": "distressed emotion",
+      "description": "The person's facial expression, with furrowed brows and an open mouth, conveys a sense of anxiety or panic, consistent with being on the run from the law as described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Person on the run is mapped to the central figure",
+      "description": "The text 'when you got a warrant out for your arrest & you on the run.....' explicitly refers to 'you', which is analogically mapped onto the central visual entity, 'person'. The person's distressed expression and the act of checking their phone while applying makeup are used to visually represent the state of being 'on the run', creating a humorous juxtaposition between the flamboyant appearance and the serious situation. This mapping is central to the meme's intent, as it projects the textual 'you' onto the visual 'person' to create the comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the central figure in the meme",
+      "description": "The text overlay 'when you got a warrant out for your arrest & you on the run.....' explicitly uses the deictic pronoun 'you', projecting the user (the viewer) onto the central visual entity, 'person'. This projection is central to the meme's humor, as it maps the user's imagined scenario onto the visual of the person applying makeup while looking at their phone, creating a comedic juxtaposition between the user's hypothetical situation and the person's flamboyant appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "LGBTQ+ Discrimination",
+      "description": "The meme relies on the stereotype that flamboyant or gender-nonconforming presentation (e.g., bright clothing, exaggerated makeup, and accessories) is associated with criminal behavior or moral deviance, which is a form of LGBTQ+ discrimination. This stereotype is used to create humor by juxtaposing the person's appearance with the serious situation of being on the run from the law, potentially mocking or stigmatizing individuals who express themselves in non-traditional ways.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "individual with flamboyant gender presentation",
+      "description": "The central figure, dressed in a bright pink polka-dotted outfit with exaggerated makeup and accessories, is visually targeted as the subject of the meme's stereotype. The meme's intent is to mock or ridicule this specific presentation, which is associated with LGBTQ+ identity, by juxtaposing it with the serious context of being on the run from the law. This targets individuals who express themselves in non-traditional ways, particularly those perceived as gender-nonconforming or flamboyant, within the broader context of LGBTQ+ discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/02789.png",
+    "image_name": "02789.png",
+    "extraction_timestamp": "2025-12-15T11:23:15.845069",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

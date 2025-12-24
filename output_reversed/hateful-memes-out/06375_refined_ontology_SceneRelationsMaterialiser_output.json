@@ -1,0 +1,47 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "peace_blessing_scene",
+      "participants": [
+        {
+          "entity": "priest",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "man_being_blessed",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "priest",
+          "relation": "blessing",
+          "to": "man_being_blessed"
+        },
+        {
+          "from": "priest",
+          "relation": "holding",
+          "to": "chalice"
+        },
+        {
+          "from": "man_being_blessed",
+          "relation": "receiving_blessing",
+          "to": "priest"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":peace_blessing_scene :hasParticipant :priest .",
+    ":peace_blessing_scene :hasParticipant :man_being_blessed .",
+    ":priest :blessing :man_being_blessed .",
+    ":priest :holding :chalice .",
+    ":man_being_blessed :receiving_blessing :priest ."
+  ],
+  "triples_count": 5
+}

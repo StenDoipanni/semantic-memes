@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: Harmful; overall-intent-description: The image displays an X-ray of two hands with visible bone structure and glowing areas, overlaid with text that reads: 'it might look fucked up, but her handjobs are fucking unbelievable.' The visual of the X-ray is juxtaposed with the explicit sexualized text, creating a crude and degrading joke. The intent is to mock or ridicule a person's physical appearance (implied to be 'fucked up') by hypersexualizing their hands, which is a form of objectification and body part focus. This aligns with misogynistic tropes that reduce a person's worth to their physical attributes and sexual potential. The meme is harmful because it promotes a degrading, sexually explicit stereotype and could cause emotional distress to the person it targets or to viewers who find such content offensive. It does not target a specific racial, ethnic, religious, or LGBTQ+ group, but it does contain misogynistic content by objectifying a woman's body parts for sexual gratification, which is a form of harmful and potentially abusive messaging.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "it might look fucked up, but her handjobs are fucking unbelievable",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "X_ray_of_hands",
+      "label": "medical imaging",
+      "description": "An X-ray image showing the skeletal structure of two human hands, with visible bones and joints. The image has a glowing, fiery orange-yellow effect concentrated in the wrist and palm areas, suggesting inflammation or heat. The hands are positioned side-by-side against a black background, with the fingers slightly spread. This is the primary visual element in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "handjob_joke_scene",
+      "label": "joke about hands and sexual performance",
+      "description": "The scene is composed of an X-ray image of two hands with glowing areas, overlaid with explicit text that makes a crude sexual joke about the hands' appearance. The visual of the X-ray is juxtaposed with the text to create a degrading and objectifying joke. The hands are positioned side-by-side against a black background, with the fingers slightly spread. The text is positioned at the top of the image, directly above the hands.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "makes_joke_about",
+          "to": "X_ray_of_hands"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization",
+      "label": "Hypersexualization",
+      "description": "A derogatory stereotype that involves objectifying individuals, particularly women, by focusing on their sexual attributes or potential, often reducing their worth to their physical appearance or sexual performance. This stereotype is used in the meme to mock the person's physical appearance by hypersexualizing their hands, implying that their value lies in their sexual capability rather than their overall personhood.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "handjob_joke_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification",
+      "label": "Objectification",
+      "description": "The act of treating a person, especially a woman, as an object for the purpose of sexual gratification, disregarding their humanity and individuality. The meme uses the X-ray image of hands to visually represent the hands as objects of sexual desire, reinforcing the degrading and dehumanizing nature of the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "handjob_joke_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "A systemic prejudice or hatred against women, often manifesting in the belief that women are inferior to men and should be dominated or controlled. The meme exemplifies misogynistic tropes by reducing a woman's worth to her physical attributes and sexual potential, which is a form of harmful and degrading messaging.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "handjob_joke_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "body_part_focus",
+      "label": "Body Part Focus",
+      "description": "A stereotype that involves focusing on specific body parts of a person, often in a sexualized or degrading manner, to define their value or worth. In this meme, the hands are singled out as the primary focus, implying that their appearance (or lack thereof) is the only thing of value, which is a form of body part focus.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "handjob_joke_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexual_performance_joke",
+      "label": "Sexual Performance Joke",
+      "description": "A type of joke that makes light of or mocks a person's sexual abilities or performance, often in a crude or degrading way. The meme uses the phrase 'handjobs are fucking unbelievable' to make a crude joke about the person's sexual performance, which is a form of sexual performance joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "handjob_joke_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "degrading_humor",
+      "label": "degrading humor expression",
+      "description": "The emotional expression conveyed by the crude and explicit text overlaying the X-ray image, which mocks the person's physical appearance by hypersexualizing their hands. This creates a tone of crude amusement and objectification, intended to elicit a reaction of shock or disgust from viewers while reinforcing harmful stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "handjob_joke_mapping",
+      "label": "The text 'handjobs' is mapped onto the visual of the X-ray hands",
+      "description": "The textual phrase 'handjobs are fucking unbelievable' directly references the visual material (the X-ray of hands) by implying that the hands are being used for sexual performance. The visual of the hands is thus mapped onto the textual concept of 'handjobs', creating an analogical mapping where the hands are equated with the act of performing handjobs. This mapping is central to the meme's degrading humor and objectification.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material making a sexualized joke about hands",
+      "description": "The user is projected onto the text_chunk 'it might look fucked up, but her handjobs are fucking unbelievable' because the meme uses this text to create a degrading, objectifying joke. The text directly addresses the viewer's perception of the visual material (the X-ray hands) and implies the user is the one making the judgment or experiencing the humor, even though the text does not contain explicit deictic pronouns like 'you' or 'me'. The projection is indirect but strong, as the user is expected to identify with the perspective of the joke-teller or the target of the joke, which is the person whose hands are shown. The user is thus projected onto the textual material as the source of the judgment or the recipient of the degrading humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme promotes degrading, sexually explicit stereotypes and objectifies a woman by hypersexualizing her hands, which can cause emotional distress and reinforces harmful messaging.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "misogynistic humor audience",
+      "description": "The meme is designed for an audience that finds crude, sexually explicit, and degrading humor acceptable, particularly when it involves objectifying women. The target community likely includes individuals who enjoy or are familiar with misogynistic tropes, such as hypersexualizing body parts (like hands) to mock or reduce a person's worth to their sexual performance. The use of explicit language and the visual of X-ray hands mapped to 'handjobs' signals an audience that appreciates shock value and objectification as comedic or provocative content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/02974.png",
+    "image_name": "02974.png",
+    "extraction_timestamp": "2025-12-15T11:28:19.728474",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

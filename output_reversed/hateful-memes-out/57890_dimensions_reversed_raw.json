@@ -1,0 +1,348 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: he_enemy_within; hasOverallIntent: Hateful; overall-intent-description: The meme presents three Muslim women politicians—Ilhan Omar, Linda Sarsour, and Rashida Tlaib—with derogatory text labeling them as 'the enemy within' and 'the trojan horse is no longer at the gates.' This framing uses the metaphor of a 'Trojan horse' to imply deception and hidden danger, which is a common trope in Islamophobic rhetoric. The intent is to delegitimize and vilify these individuals based on their religion and political affiliation, suggesting they are traitors or threats to American values. This is a hateful attack targeting Muslim women in public office, using fear-based imagery to incite prejudice and hostility against them and their communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "he enemy within",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "middle text overlay",
+      "description": "ilhan omar",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_3",
+      "label": "middle text overlay",
+      "description": "linda sarsour",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_4",
+      "label": "middle text overlay",
+      "description": "ocasio-corte",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_5",
+      "label": "bottom text overlay",
+      "description": "rashida tlaib",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_6",
+      "label": "bottom text overlay",
+      "description": "the trojan horse is no longer at the gates",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Ilhan_Omar",
+      "label": "Politician",
+      "description": "A woman wearing a patterned hijab, looking directly at the camera with a serious expression. She is labeled as 'ilhan omar' in the image. The background features a blurred image of the U.S. Capitol building, suggesting a political context. This is the first panel of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "meme_scene",
+      "label": "meme_with_three_politicians",
+      "description": "A three-panel meme featuring three Muslim women politicians: Ilhan Omar, Linda Sarsour, and Rashida Tlaib. Each panel shows one politician with text overlaying the image. The top panel shows Ilhan Omar with the text 'he enemy within'. The middle panel shows Linda Sarsour with the text 'linda sarsour ocasio-corte'. The bottom panel shows Rashida Tlaib with the text 'the trojan horse is no longer at the gates'. The overall scene is a composite of three separate visual panels arranged vertically, each depicting a different politician with derogatory text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Ilhan_Omar",
+          "relation": "isInPanel",
+          "to": "top_panel"
+        },
+        {
+          "from": "Linda_Sarsour",
+          "relation": "isInPanel",
+          "to": "middle_panel"
+        },
+        {
+          "from": "Rashida_Tlaib",
+          "relation": "isInPanel",
+          "to": "bottom_panel"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_trojan_horse_metaphor",
+      "label": "Islamophobic Trojan Horse Metaphor",
+      "description": "The metaphor of a 'Trojan horse' is used in Islamophobic rhetoric to imply that Muslim individuals or groups are secretly hostile or deceptive, posing a hidden threat to Western societies. This metaphor is often deployed to delegitimize Muslim political figures by suggesting they are infiltrators or traitors, despite their public roles. The phrase 'the trojan horse is no longer at the gates' implies that the perceived threat has moved from being external to being internal, thus intensifying the sense of betrayal and danger.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_6",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_enemy_within",
+      "label": "Islamophobic 'Enemy Within' Stereotype",
+      "description": "The phrase 'enemy within' is a common trope in Islamophobic rhetoric, suggesting that Muslim individuals, particularly those in positions of political power, are secretly working against the interests of their host country. This stereotype frames Muslim political figures as traitors or infiltrators, implying they are not loyal to the nation they serve, but rather to a foreign or extremist cause. This concept is used to delegitimize and vilify Muslim politicians by invoking fear and suspicion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_incompatibility_with_western_values",
+      "label": "Islamophobia: Incompatibility with Western Values",
+      "description": "This stereotype claims that Islamic culture and religious practices are fundamentally incompatible with Western democratic values, such as individual liberty, secularism, and gender equality. It is often used to justify hostility toward Muslim political figures by suggesting that their presence in public office represents a threat to the foundational principles of Western societies. This concept is central to the meme's framing of the three women as 'the enemy within' and 'the trojan horse'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_sharia_law_fearmongering",
+      "label": "Islamophobia: Sharia Law Fearmongering",
+      "description": "This stereotype involves the fear that Islamic law (Sharia) will be imposed or influence public policy in Western countries, often leading to the perception that Muslim politicians are advocating for the erosion of secular governance and individual rights. This fear is used to portray Muslim political figures as threats to the social order, reinforcing the meme's message that they are 'the enemy within' and 'the trojan horse'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_terrorism_associations",
+      "label": "Islamophobia: Terrorism Associations",
+      "description": "This stereotype links Muslim individuals, particularly those in public office, to terrorism or extremist ideologies, often without evidence. It is used to delegitimize Muslim political figures by suggesting they are either directly or indirectly connected to violent acts, thereby portraying them as dangerous or untrustworthy. This is a core component of the meme's hateful intent, as it frames the women as 'the enemy within' and 'the trojan horse'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_oppression_of_women",
+      "label": "Islamophobia: Oppression of Women",
+      "description": "This stereotype claims that Islamic culture inherently oppresses women, often used to justify hostility toward Muslim women in public office. It is used to portray Muslim women politicians as threats to gender equality and Western feminist values, reinforcing the meme's message that they are 'the enemy within' and 'the trojan horse'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_backwards_culture",
+      "label": "Islamophobia: 'Backwards Culture' Characterization",
+      "description": "This stereotype portrays Islamic culture as primitive, unprogressive, or 'backward' compared to Western culture, often used to justify the exclusion or marginalization of Muslim individuals in public life. It is used to delegitimize Muslim political figures by suggesting they represent a regressive force, reinforcing the meme's message that they are 'the enemy within' and 'the trojan horse'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_incompatibility_with_western_values",
+      "label": "Islamophobia: Incompatibility with Western Values",
+      "description": "This stereotype claims that Islamic culture and religious practices are fundamentally incompatible with Western democratic values, such as individual liberty, secularism, and gender equality. It is often used to justify hostility toward Muslim political figures by suggesting that their presence in public office represents a threat to the foundational principles of Western societies. This concept is central to the meme's framing of the three women as 'the enemy within' and 'the trojan horse'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_sharia_law_fearmongering",
+      "label": "Islamophobia: Sharia Law Fearmongering",
+      "description": "This stereotype involves the fear that Islamic law (Sharia) will be imposed or influence public policy in Western countries, often leading to the perception that Muslim politicians are advocating for the erosion of secular governance and individual rights. This fear is used to portray Muslim political figures as threats to the social order, reinforcing the meme's message that they are 'the enemy within' and 'the trojan horse'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_terrorism_associations",
+      "label": "Islamophobia: Terrorism Associations",
+      "description": "This stereotype links Muslim individuals, particularly those in public office, to terrorism or extremist ideologies, often without evidence. It is used to delegitimize Muslim political figures by suggesting they are either directly or indirectly connected to violent acts, thereby portraying them as dangerous or untrustworthy. This is a core component of the meme's hateful intent, as it frames the women as 'the enemy within' and 'the trojan horse'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_oppression_of_women",
+      "label": "Islamophobia: Oppression of Women",
+      "description": "This stereotype claims that Islamic culture inherently oppresses women, often used to justify hostility toward Muslim women in public office. It is used to portray Muslim women politicians as threats to gender equality and Western feminist values, reinforcing the meme's message that they are 'the enemy within' and 'the trojan horse'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_backwards_culture",
+      "label": "Islamophobia: 'Backwards Culture' Characterization",
+      "description": "This stereotype portrays Islamic culture as primitive, unprogressive, or 'backward' compared to Western culture, often used to justify the exclusion or marginalization of Muslim individuals in public life. It is used to delegitimize Muslim political figures by suggesting they represent a regressive force, reinforcing the meme's message that they are 'the enemy within' and 'the trojan horse'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hostility",
+      "label": "hostile emotion",
+      "description": "The meme expresses hostility toward Muslim women politicians through derogatory text and the use of Islamophobic metaphors like 'enemy within' and 'Trojan horse'. The overall intent is to vilify and delegitimize these individuals by framing them as threats to American values, invoking fear and suspicion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Ilhan Omar is mapped as 'he enemy within'",
+      "description": "The text 'he enemy within' is positioned directly above the image of Ilhan Omar, creating an analogical mapping where the textual label 'he enemy within' is projected onto the visual entity Ilhan_Omar. This mapping uses the metaphor of an 'enemy within' to vilify her, implying she is a traitor or hidden threat to American values, which is a common Islamophobic trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the meme scene as the one who perceives the 'enemy within' and 'trojan horse' metaphors",
+      "description": "The user is not explicitly projected onto a specific visual or textual element via deictic pronouns like 'me' or 'you'. However, the meme's structure and hateful intent create an implicit projection where the user is positioned as the one who perceives and interprets the derogatory metaphors ('enemy within', 'trojan horse') as true or threatening. The user is thus projected onto the overall meme scene, which functions as a frame for their interpretation of the political figures as threats. The scene itself is the entity onto which the user's perception is projected.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Muslim women politicians by labeling them as 'the enemy within' and 'the trojan horse is no longer at the gates,' invoking Islamophobic stereotypes and framing them as traitors or hidden threats to American values. This is a hateful attack targeting individuals based on their religion and political affiliation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold Islamophobic views and are likely to be politically conservative or right-wing, particularly those who are hostile toward Muslim women in public office. The meme is designed to resonate with people who believe that Muslim political figures are secretly working against American values, and who are receptive to the 'Trojan horse' and 'enemy within' metaphors used to vilify them. The audience is likely to be drawn to the meme's fear-based messaging and its alignment with stereotypes such as incompatibility with Western values, terrorism associations, and oppression of women, which are central to the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/57890.png",
+    "image_name": "57890.png",
+    "extraction_timestamp": "2025-12-16T05:42:52.588976",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 26,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

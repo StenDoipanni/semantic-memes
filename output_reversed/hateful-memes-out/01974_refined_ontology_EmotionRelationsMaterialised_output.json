@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "insensitive emotion",
+      "expressors": [
+        {
+          "entity": "the meme",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "the meme",
+          "relation": "emotionalRelationToEntity",
+          "to": "hibakusha"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":insensitive_emotion :hasExpressor :the_meme .",
+    ":the_meme :emotionalRelationToEntity :hibakusha ."
+  ],
+  "triples_count": 2
+}

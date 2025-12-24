@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "indignant moral judgment",
+      "expressors": [
+        {
+          "entity": "meme_text",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme_text",
+          "relation": "emotionalRelationToEntity",
+          "to": "elderly_woman"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":indignant_moral_judgment :hasExpressor :meme_text .",
+    ":meme_text :emotionalRelationToEntity :elderly_woman ."
+  ],
+  "triples_count": 2
+}

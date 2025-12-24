@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "condemning emotion",
+      "expressors": [
+        {
+          "entity": "text_chunk",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "text_chunk",
+          "relation": "emotionalRelationToEntity",
+          "to": "Morgan_Freeman"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":condemning_emotion :hasExpressor :text_chunk .",
+    ":text_chunk :emotionalRelationToEntity :Morgan_Freeman ."
+  ],
+  "triples_count": 2
+}

@@ -1,0 +1,217 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: for_my_haters_kill_yo_self_bitch; hasOverallIntent: Abusive; overall-intent-description: The image displays a handgun with the text 'for my haters' at the top and 'kill yo self bitch!' at the bottom. This juxtaposition of a firearm with violent, threatening language is intended to convey a message of retaliation and aggression toward critics or detractors. The overall intent is abusive, as it uses graphic imagery and explicit, hostile language to threaten and intimidate those who oppose or criticize the creator. The meme does not target any specific protected group based on race, gender, religion, or other characteristics, but rather uses a general, aggressive tone directed at 'haters' — a broad term for critics. The intent is to assert dominance and provoke fear or submission from those who disapprove, using the visual of a weapon to amplify the threat. This is a form of verbal and visual abuse, not targeted at a specific community, but still harmful and potentially dangerous due to its violent content and tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "for my haters",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "handgun",
+      "label": "firearm",
+      "description": "A silver and black semi-automatic pistol, likely a Walther P22 or similar model, is prominently displayed in the center of the image. It is the primary visual object and is rendered in high contrast against a plain white background, making it the focal point. The gun's metallic slide and textured grip are clearly visible, emphasizing its form and function as a weapon.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "threatening_weapon_display",
+      "label": "Threatening Weapon Display",
+      "description": "The scene centers on a handgun prominently displayed against a plain white background, with threatening text overlaid at the top and bottom. The handgun is the focal point, positioned centrally, and the text serves to amplify the aggressive intent of the image. The spatial arrangement is minimalistic, emphasizing the weapon and the hostile message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "threatens",
+          "to": "handgun"
+        },
+        {
+          "from": "handgun",
+          "relation": "symbolizes",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hater",
+      "label": "Hater",
+      "description": "The term 'hater' refers to a person who expresses dislike, criticism, or contempt for someone or something. In internet culture, it is commonly used to describe critics or detractors of a person, often in a derogatory or dismissive manner. The meme uses 'hater' as a broad, informal term to refer to critics, implying a confrontational or retaliatory stance toward them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "self_harm_threat",
+      "label": "Self-Harm Threat",
+      "description": "The phrase 'kill yo self bitch!' is a violent, threatening statement that implies self-harm or suicide as a response to criticism. This is a form of verbal abuse and intimidation, often used to provoke fear or submission. It is not a literal call to action but a rhetorical device to assert dominance and express anger toward critics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "weapon_as_symbol_of_power",
+      "label": "Weapon as Symbol of Power",
+      "description": "The handgun in the image is not just a firearm but a symbolic representation of power, aggression, and the potential for violence. In popular culture and media, weapons are often used to convey dominance, threat, or retaliation. The visual of the gun amplifies the hostile message in the text, making the threat more visceral and impactful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "aggressive_internet_culture",
+      "label": "Aggressive Internet Culture",
+      "description": "The meme reflects a trend in online discourse where individuals use aggressive, confrontational, and often violent language to respond to criticism or opposition. This culture is characterized by the use of threats, insults, and provocative imagery to assert dominance and provoke emotional reactions from critics. The phrase 'for my haters' is a common trope in internet memes that targets critics with a sense of revenge or defiance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "verbal_abuse",
+      "label": "Verbal Abuse",
+      "description": "The text 'kill yo self bitch!' is an example of verbal abuse, which involves the use of threatening, insulting, or demeaning language to harm or intimidate others. This type of abuse is often used to assert power or control over a target, and it can be psychologically damaging. The meme uses this form of abuse to convey a message of aggression and retaliation toward critics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "retaliatory_threat",
+      "label": "Retaliatory Threat",
+      "description": "The meme presents a retaliatory threat, where the creator of the meme is responding to criticism or opposition with a violent or aggressive response. This type of threat is often used to assert dominance or to provoke fear in the target audience. The phrase 'for my haters' indicates that the threat is directed specifically at critics, and the use of a weapon reinforces the seriousness of the threat.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "aggression",
+      "label": "aggressive emotion",
+      "description": "The emotion expressed is aggression, conveyed through the visual of a handgun and the violent, threatening text 'for my haters' and 'kill yo self bitch!'. The combination of the weapon and the hostile language creates a strong sense of hostility and intent to harm, directed at critics or detractors.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_for_my_haters",
+      "label": "The handgun is mapped as a symbol for retaliation against haters",
+      "description": "The text 'for my haters' is positioned above the handgun, creating an analogical mapping where the handgun visually represents the retaliatory threat directed at critics. The weapon serves as a symbolic manifestation of the aggressive intent expressed in the text, mapping the abstract concept of 'hater' onto the concrete visual of the firearm as a tool of retribution.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_kill_yo_self_bitch",
+      "label": "The handgun is mapped as the instrument of the self-harm threat",
+      "description": "The text 'kill yo self bitch!' at the bottom is juxtaposed with the handgun, establishing an analogical mapping where the firearm is visually identified as the instrument through which the self-harm threat is to be carried out. The gun's presence amplifies the violent intent of the text, mapping the verbal threat onto the visual object as its literal or symbolic executor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual threat as the target of retaliation",
+      "description": "The user is projected onto the textual material 'kill yo self bitch!' as the intended recipient of the retaliatory threat. The phrase 'for my haters' positions the user as the creator or speaker, while 'kill yo self bitch!' directly addresses the 'hater' (the target), implying the user is projecting their own aggressive stance onto the viewer who is perceived as a hater. The user is not directly addressed by 'you' in the text, but the entire context of the meme — the weapon and the threat — is directed at the 'hater', which is implicitly the user's perceived critic or opponent. The user is thus projected onto the scene as the one who is being targeted by the threat.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Abusive",
+      "description": "The meme uses violent imagery and explicit threatening language to intimidate and abuse critics ('haters'), conveying a message of retaliation and aggression. The handgun symbolizes power and potential violence, while the text 'kill yo self bitch!' is a direct verbal abuse intended to provoke fear or submission. This combination constitutes abusive content directed at a broad group of critics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "hater",
+      "label": "critics or detractors",
+      "description": "The meme is designed for individuals who are perceived as critics or detractors ('haters') of the creator. The text 'for my haters' explicitly targets this broad group, using aggressive and threatening language to assert dominance and provoke fear or submission from those who oppose or criticize the creator. The visual of the handgun amplifies this threat, making it a form of verbal and visual abuse directed at any person who is labeled a 'hater' in online discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/52089.png",
+    "image_name": "52089.png",
+    "extraction_timestamp": "2025-12-16T04:23:33.671359",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

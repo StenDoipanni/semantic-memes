@@ -1,0 +1,224 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: manual_tranny_automatic_tranny_rebuilt_tranny_meme; hasOverallIntent: informative; overall-intent-description: The meme visually contrasts three types of transmissions: a manual transmission, an automatic transmission, and a rebuilt transmission. The intent is to inform or educate viewers about the different mechanical components and their states (original, automatic, rebuilt). There is no toxicity, harmful content, or disparaging metaphor present. The juxtaposition of text and image serves an explanatory purpose, likely aimed at car enthusiasts or mechanics to illustrate transmission types and their condition. No protected characteristics are targeted, and the content is purely technical and non-harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "text location",
+      "description": "manual tranny",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "manual_tranny",
+      "label": "manual transmission",
+      "description": "A silver-colored, externally mounted manual transmission unit, likely from a car, shown in a top-down view. It has a complex mechanical structure with visible gears, shafts, and housing. The text 'manual tranny' is overlaid below it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "transmission_comparison_scene",
+      "label": "Comparison of transmission types",
+      "description": "The scene visually contrasts three types of transmissions: a manual transmission, an automatic transmission, and a rebuilt transmission. Each is presented in a separate horizontal panel, with descriptive text below each image. The spatial arrangement is vertical, with each transmission type occupying its own row, allowing for direct visual comparison. The scene's purpose is educational, illustrating the mechanical differences and states of the transmissions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "manual_tranny",
+          "relation": "isAbove",
+          "to": "automatic_tranny"
+        },
+        {
+          "from": "automatic_tranny",
+          "relation": "isAbove",
+          "to": "rebuilt_tranny"
+        },
+        {
+          "from": "manual_tranny",
+          "relation": "isBelow",
+          "to": "automatic_tranny"
+        },
+        {
+          "from": "automatic_tranny",
+          "relation": "isBelow",
+          "to": "rebuilt_tranny"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "manual_tranny",
+      "label": "manual transmission",
+      "description": "A type of transmission system in vehicles where the driver manually shifts gears using a clutch and gear lever. Requires driver input to change gears, offering more control and efficiency but less convenience than automatic transmissions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "manual_tranny",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "automatic_tranny",
+      "label": "automatic transmission",
+      "description": "A type of transmission system in vehicles that automatically changes gears without driver input, using a torque converter and planetary gear sets. Designed for convenience and ease of use, often at the expense of driver control and fuel efficiency compared to manual transmissions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "automatic_tranny",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "rebuilt_tranny",
+      "label": "rebuilt transmission",
+      "description": "A transmission that has been disassembled, repaired, and reassembled, often to restore functionality after wear or damage. May involve replacing worn parts, cleaning, and re-greasing. Often considered a cost-effective alternative to buying a new transmission, but quality can vary depending on the rebuild shop.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "rebuilt_tranny",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "transmission_comparison_scene",
+      "label": "transmission comparison scene",
+      "description": "The visual juxtaposition of different transmission types (manual, automatic, rebuilt) to educate or inform viewers about their mechanical differences and states. This educational format is common in automotive forums, YouTube videos, and repair manuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "transmission_comparison_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "text_chunk_1",
+      "label": "text_chunk_1",
+      "description": "The text 'manual tranny' overlaid on the image of the manual transmission. This text is a colloquial term for manual transmission, commonly used in automotive contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "text_chunk_2",
+      "label": "text_chunk_2",
+      "description": "The text 'automatic tranny' overlaid on the image of the automatic transmission. This text is a colloquial term for automatic transmission, commonly used in automotive contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "text_chunk_3",
+      "label": "text_chunk_3",
+      "description": "The text 'rebuilt tranny' overlaid on the image of the rebuilt transmission. This text is a colloquial term for a rebuilt transmission, commonly used in automotive repair and enthusiast communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_3",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "neutral",
+      "label": "neutral emotional state",
+      "description": "The image presents a factual, educational comparison of transmission types without conveying any overt emotional tone. The visual content is technical and informative, and the text labels are neutral descriptors. There are no facial expressions, gestures, or affective elements to indicate positive or negative emotion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_manual_tranny",
+      "label": "manual tranny is a manual transmission",
+      "description": "The text 'manual tranny' is overlaid directly below the image of the manual transmission, explicitly labeling the visual entity as a manual transmission. This creates a direct analogical mapping where the textual label identifies the visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the transmission comparison scene",
+      "description": "The user is projected onto the overall transmission comparison scene, as the meme is designed to inform or educate the viewer about different types of transmissions. There are no explicit deictic pronouns like 'me', 'you', or 'your' in the text, but the educational intent implies the user is the intended recipient of the information. The projection is onto the entire scene, which includes the visual materials and textual labels.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "automotive enthusiasts",
+      "description": "The meme is designed for individuals interested in cars, particularly those who understand or are learning about different types of transmissions. The use of technical terms like 'manual tranny', 'automatic tranny', and 'rebuilt tranny', along with the visual comparison of mechanical components, indicates a target audience familiar with automotive mechanics and repair.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/94802.png",
+    "image_name": "94802.png",
+    "extraction_timestamp": "2025-12-19T18:21:22.254847",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

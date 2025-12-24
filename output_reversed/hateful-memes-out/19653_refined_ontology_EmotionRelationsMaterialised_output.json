@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful_joy",
+      "expressors": [
+        {
+          "entity": "Pope_Francis",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Pope_Francis",
+          "relation": "emotionalRelationToEntity",
+          "to": "text_chunk_1"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_joy :hasExpressor :Pope_Francis .",
+    ":Pope_Francis :emotionalRelationToEntity :text_chunk_1 ."
+  ],
+  "triples_count": 2
+}

@@ -1,0 +1,214 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: when-your-dishwasher-is-ready-for-another-load; hasOverallIntent: Mysogynous; overall-intent-description: The image depicts a woman in a kitchen, wearing only underwear, reaching up to a cabinet, while a cat looks on. The text overlay reads, 'when your dishwasher is ready for another load.' The scene is framed to emphasize the woman's body, particularly her bare legs and underwear, in a domestic setting. This visual juxtaposition with the mundane task of dishwashing is intended to create a humorous or suggestive tone, implying that the woman is 'ready' for another load — a play on the idea of being 'ready' for something, but in a context that objectifies her physical appearance. The meme relies on the trope of women 'belonging in the kitchen' and their bodies being the focus of domestic humor, which aligns with misogynous stereotypes that reduce women to their physical appearance and domestic roles. The intent is to elicit laughter through the objectification of the woman's body, rather than focusing on the actual task or the appliance. This is a clear example of mysogynous intent, as it uses the woman's body as a punchline and reinforces harmful stereotypes about women's roles and appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when your dishwasher is ready for another load.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman standing in a kitchen, wearing only a white tank top and grey underwear, reaching up to a cabinet. Her body is the central focus of the image, framed to emphasize her bare legs and underwear, which aligns with misogynous stereotypes that objectify women's bodies in domestic settings.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "kitchen_domestic_task",
+      "label": "woman_reaching_for_cabinet",
+      "description": "A woman in a kitchen, wearing only underwear, is reaching up to a cabinet while standing near a dishwasher. A cat is observing from the counter. The scene is framed to emphasize her body, creating a humorous or suggestive tone related to the text overlay about the dishwasher being 'ready for another load.'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "reaches_toward",
+          "to": "cabinet"
+        },
+        {
+          "from": "cat",
+          "relation": "observes",
+          "to": "woman"
+        },
+        {
+          "from": "woman",
+          "relation": "stands_near",
+          "to": "dishwasher"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype",
+      "label": "Misogynous Stereotype",
+      "description": "The stereotype that women 'belong in the kitchen' and are primarily valued for their physical appearance and domestic roles, often used to objectify women in humorous or degrading contexts. This is central to understanding the meme's intent, as the woman's body is emphasized over her task, reinforcing the idea that her value is tied to her physicality rather than her competence or agency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification",
+      "label": "Objectification",
+      "description": "The act of treating a person, especially a woman, as an object for the viewer's pleasure or amusement, often focusing on their body rather than their personality or capabilities. In this meme, the woman’s body is framed as the punchline, reducing her to a visual gag rather than acknowledging her as a person performing a task.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "domestic_task_stereotype",
+      "label": "Domestic Task Stereotype",
+      "description": "The cultural trope that women are naturally suited for household chores and domestic labor, often portrayed as the default or expected role for women. This stereotype is invoked in the meme by placing the woman in a kitchen setting performing a mundane task (dishwashing), which is then juxtaposed with her physical appearance to create humor rooted in gendered expectations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dishwasher_metaphor",
+      "label": "Dishwasher Metaphor",
+      "description": "The use of the dishwasher as a metaphor for a woman’s body being 'ready' for another load — a play on the literal function of a dishwasher (which needs to be loaded with dishes) and the figurative meaning of being 'ready' for something. This metaphor relies on the viewer understanding the double entendre and the cultural association of women’s bodies with domestic labor and availability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "humor_through_objectification",
+      "label": "Humor Through Objectification",
+      "description": "A comedic technique where humor is derived from the degrading or sexualized portrayal of a person, often a woman, in a context that reduces them to their physical attributes. This meme uses this technique by framing the woman’s body as the punchline to a mundane situation, relying on the viewer’s understanding of objectification as a source of humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "objectification",
+      "label": "objectified emotional expression",
+      "description": "The woman's body is framed and emphasized in the image to create a humorous or suggestive tone, reducing her to a visual gag rather than acknowledging her as a person performing a task. This emotional expression is derived from the viewer's perception of her physical appearance as the punchline to the situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "woman's body mapped as 'dishwasher ready for another load'",
+      "description": "The text 'when your dishwasher is ready for another load' is an analogical mapping that projects the woman's physical body (specifically her bare legs and underwear, emphasized in the visual) onto the metaphorical concept of a dishwasher being 'ready'. This mapping relies on the double entendre: the literal function of a dishwasher (needs dishes to be loaded) is humorously equated with the woman's body being 'ready' for another load — a play on sexual availability. The visual of the woman in minimal clothing is framed to be the punchline, creating a humorous or suggestive tone rooted in objectification and misogynous stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman in the kitchen scene",
+      "description": "The user is projected onto the woman (VisualMaterial entity) in the image, as the meme uses the phrase 'when your dishwasher is ready for another load' to imply the user is the one who experiences this situation — specifically, the user is the one who must load the dishwasher, and the woman's body is humorously framed as 'ready' for another load. The deictic 'your' in the text directly projects the user's perspective onto the scene, making the viewer identify with the person who must deal with the dishwasher and, by extension, the woman's physical presence in the kitchen. The projection is onto the VisualMaterial entity 'woman' and the Scene entity 'kitchen_domestic_task', as the user is invited to imagine themselves in the context of the domestic task and the objectified portrayal of the woman.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme objectifies the woman by framing her body as the punchline to a mundane domestic task, reinforcing harmful stereotypes that reduce women to their physical appearance and domestic roles.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who recognize and engage with misogynous stereotypes, particularly those who find humor in the objectification of women’s bodies in domestic settings. The meme relies on cultural references to gendered expectations (e.g., 'woman belongs in the kitchen') and the visual framing of the woman’s body as the punchline to a mundane task. The intended audience likely includes people familiar with internet humor tropes that use hypersexualized or degrading portrayals of women, often found in meme culture that reinforces harmful gender norms. The humor is derived from the audience’s understanding of the double entendre and the objectification trope, making it primarily accessible to those who consume and appreciate such content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/64957.png",
+    "image_name": "64957.png",
+    "extraction_timestamp": "2025-12-16T08:27:00.870003",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

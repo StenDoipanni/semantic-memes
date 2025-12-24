@@ -1,0 +1,190 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: harmful; overall-intent-description: The image depicts a photograph of Osama bin Laden, a globally recognized terrorist leader, overlaid with text that reads: 'i was gonna make a muslim joke but they always blow up in your face gotta be careful.' The meme uses the image of a terrorist to deliver a joke about making jokes about Muslims, implying that such jokes are dangerous because they might provoke violent retaliation. This is a harmful meme because it trivializes terrorism and violence, and it promotes fear and caution around making jokes about Muslims, which can contribute to Islamophobia. The meme's intent is to create humor by juxtaposing the image of a terrorist with a warning about the consequences of making jokes about Muslims, thereby normalizing the idea that Muslims are inherently violent or dangerous. This is a harmful meme because it can contribute to the spread of Islamophobic stereotypes and may encourage fear and discrimination against Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "i was gonna make a muslim joke but",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Osama_bin_Laden",
+      "label": "person",
+      "description": "A man with a long beard and wearing a white turban and camouflage vest, holding up his index finger. He is the central figure in the image and is identifiable as Osama bin Laden, the former leader of al-Qaeda.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "joke_warning_scene",
+      "label": "joke_warning_scene",
+      "description": "A scene where a person (Osama_bin_Laden) is depicted making a gesture (holding up index finger) while overlaid text delivers a joke warning about making Muslim jokes due to potential violent retaliation. The scene combines visual and textual elements to convey a humorous yet cautionary message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Osama_bin_Laden",
+          "relation": "isDepictedIn",
+          "to": "joke_warning_scene"
+        },
+        {
+          "from": "text",
+          "relation": "deliversMessage",
+          "to": "joke_warning_scene"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The meme relies on the stereotype that Muslims are inherently violent or associated with terrorism, which is a core component of Islamophobia. This stereotype is used to justify the warning in the text that 'they always blow up in your face' — implying that making jokes about Muslims will provoke violent retaliation. This is a harmful and inaccurate generalization that equates all Muslims with terrorism, which is a well-documented form of prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "joke_warning_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "osama_bin_laden_identity",
+      "label": "Osama bin Laden Identity",
+      "description": "The image of Osama bin Laden is not just a visual element but a powerful symbol of global terrorism. His identity as the leader of al-Qaeda and the orchestrator of the 9/11 attacks is essential background knowledge to understand why the meme uses his image to deliver its message. The meme implies that jokes about Muslims are dangerous because they might provoke violent retaliation — a reference to the real-world consequences of terrorism and the association of Muslims with it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "joke_warning_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism_concept",
+      "label": "Terrorism Concept",
+      "description": "The meme references the concept of terrorism, specifically the idea that acts of violence are often attributed to certain groups (in this case, Muslims). This concept is essential to understand the joke's warning — 'they always blow up in your face' — which implies that making jokes about Muslims might provoke violent retaliation. This is a real-world phenomenon that has been used to justify fear and discrimination against Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "joke_warning_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "joke_warning_meme_format",
+      "label": "Joke Warning Meme Format",
+      "description": "This meme follows a common internet meme format where a person (often a figure associated with danger or controversy) is used to deliver a humorous warning. The format relies on the audience understanding that the person depicted is dangerous or controversial, and the text delivers a joke that plays on that danger. In this case, the joke is about making Muslim jokes, and the warning is that they might provoke violent retaliation — a reference to the real-world consequences of terrorism and the association of Muslims with it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "joke_warning_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "joke_warning_emotion",
+      "label": "cautionary humor emotion",
+      "description": "The emotion expressed is a blend of humor and caution, conveyed through the juxtaposition of a serious figure (Osama bin Laden) with a lighthearted warning about the dangers of making Muslim jokes. The tone is ironic and self-aware, suggesting that the speaker is aware of the potential for backlash but is framing it as a joke. The gesture of holding up the index finger adds to the comedic warning tone, mimicking a 'stop' or 'be careful' signal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The speaker is mapped onto Osama bin Laden",
+      "description": "The text 'i was gonna make a muslim joke but' implies the speaker is the one who might make such a joke, and this speaker is visually represented by Osama bin Laden. The meme uses his image to stand in for the 'joke-maker' who is warned about the consequences of making Muslim jokes. This is an analogical mapping where the textual entity 'speaker' is mapped onto the visual entity 'Osama_bin_Laden'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the speaker role in the joke warning",
+      "description": "The user is projected onto the speaker of the joke, who is visually represented by Osama bin Laden. The text 'i was gonna make a muslim joke but' uses the first-person pronoun 'i', which directly implicates the viewer/user as the potential joke-maker. This creates a semiotic projection where the user is mapped onto the speaker role, making the warning feel personal and immediate. The user is thus projected onto the textual entity 'top_text' and the visual entity 'Osama_bin_Laden' as the speaker.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobia",
+      "description": "The meme equates all Muslims with terrorism and violent retaliation, promoting a harmful stereotype that all Muslims are inherently violent or dangerous. This is a core component of Islamophobia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a general internet audience familiar with internet meme formats, particularly those involving cautionary warnings or humorous self-deprecation. The target audience likely includes individuals who understand the reference to Osama bin Laden as a symbol of terrorism and are aware of the stereotype that Muslims are associated with violence. The meme relies on the audience recognizing the danger implied by the image and the text, and it assumes they will find the juxtaposition of the terrorist image with a joke about Muslim jokes humorous or ironic. The audience is expected to be familiar with the concept of 'blowing up in your face' as a metaphor for violent retaliation, and they are expected to understand the meme's warning as a joke about the potential consequences of making jokes about Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/95763.png",
+    "image_name": "95763.png",
+    "extraction_timestamp": "2025-12-19T18:37:55.171501",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

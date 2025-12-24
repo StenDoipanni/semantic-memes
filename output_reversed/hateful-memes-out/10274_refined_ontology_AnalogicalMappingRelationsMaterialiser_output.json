@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_1",
+      "hasMappedEntity": "text_chunk",
+      "hasMappingEntity": "goat"
+    },
+    {
+      "from": "goat",
+      "relation": "mappedOnto",
+      "to": "text_chunk"
+    }
+  ],
+  "triples": [
+    ":mapping_1 :hasMappedEntity :text_chunk .",
+    ":mapping_1 :hasMappingEntity :goat .",
+    ":goat :mappedOnto :text_chunk ."
+  ],
+  "triples_count": 3
+}

@@ -1,0 +1,47 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "firefighter_holding_baby",
+      "participants": [
+        {
+          "entity": "firefighter",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "baby",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "firefighter",
+          "relation": "isHolding",
+          "to": "baby"
+        },
+        {
+          "from": "firefighter",
+          "relation": "isLookingAt",
+          "to": "baby"
+        },
+        {
+          "from": "baby",
+          "relation": "isBeingHeldBy",
+          "to": "firefighter"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":firefighter_holding_baby :hasParticipant :firefighter .",
+    ":firefighter_holding_baby :hasParticipant :baby .",
+    ":firefighter :isHolding :baby .",
+    ":firefighter :isLookingAt :baby .",
+    ":baby :isBeingHeldBy :firefighter ."
+  ],
+  "triples_count": 5
+}

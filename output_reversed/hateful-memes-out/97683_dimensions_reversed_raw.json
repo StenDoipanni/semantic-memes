@@ -1,0 +1,177 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts a man in traditional Jewish attire (black coat, fur hat) energetically dancing or gesturing in a room filled with other men in similar attire, seated around long tables covered with plastic. The text overlay reads 'when the bass drops just right,' implying a humorous or exaggerated reaction to music. The scene is likely a Jewish celebration or gathering, such as a wedding or festive meal. The meme's intent is to humorously portray the man's enthusiastic, almost ecstatic, reaction to music, using the visual of a traditional religious figure in a moment of uninhibited joy. There is no evidence of toxicity, harmful content, or disparaging stereotypes. The meme relies on the contrast between the formal, traditional setting and the spontaneous, energetic movement, creating a comedic effect. The intent is purely lighthearted and satirical, not targeting any specific group with hate or abuse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when the bass drops just right",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_dancing",
+      "label": "man in traditional Jewish attire",
+      "description": "A man wearing a black coat and a fur hat, with a long beard, is energetically dancing or gesturing with his arms outstretched. He is the central focus of the image and appears to be reacting with great enthusiasm to music.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "dancing_man_scene",
+      "label": "man_dancing_in_a_celebration",
+      "description": "A man in traditional Jewish attire (black coat, fur hat) is energetically dancing or gesturing with arms outstretched in the center of a room filled with seated men in similar attire. The scene takes place at a long table covered with plastic, suggesting a festive Jewish gathering like a wedding or meal. The text overlay 'when the bass drops just right' implies the man's exaggerated reaction to music. The spatial arrangement shows the dancing man as the focal point, with other participants seated around him, observing or participating in the event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_dancing",
+          "relation": "dances_in_front_of",
+          "to": "people"
+        },
+        {
+          "from": "man_dancing",
+          "relation": "reacts_to_music",
+          "to": "people"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Jewish_wedding_celebration",
+      "label": "Jewish wedding celebration",
+      "description": "The scene depicts a traditional Jewish celebration, likely a wedding or festive meal (seudah), where dancing and music are common. The attire (black coat, fur hat, long beard) and setting (long tables covered with plastic, seated guests) are typical of such events. Understanding this cultural context is necessary to interpret the man's behavior as part of a joyful, communal celebration rather than an unrelated or inappropriate act.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dancing_man_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Bass_drop_in_music",
+      "label": "Bass drop in music",
+      "description": "The phrase 'when the bass drops just right' refers to a musical term in electronic dance music (EDM) and hip-hop where a sudden, powerful low-frequency sound (the bass drop) occurs, often triggering an energetic reaction from the audience. This cultural phenomenon is not visible in the image but is essential to understand the meme's humor — the man's exaggerated dance is a comedic reaction to this specific musical event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "dancing_man_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Contrast_between_religious_formality_and_spontaneous_joy",
+      "label": "Contrast between religious formality and spontaneous joy",
+      "description": "The meme relies on the humorous juxtaposition of a formal, traditional religious setting (Jewish celebration with Orthodox attire) with an uninhibited, ecstatic physical reaction (dancing). This contrast is a common comedic device in internet memes, requiring knowledge of cultural norms around religious decorum and the use of absurdity for humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dancing_man_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Meme_culture_and_internet_humor",
+      "label": "Meme culture and internet humor",
+      "description": "The image is a meme, a form of digital humor that relies on combining an image with text to create a joke or commentary. Understanding that this is a meme format — often used to exaggerate or satirize real-life situations — is necessary to interpret the intent. The humor is derived from the unexpectedness and over-the-top nature of the reaction, which is a hallmark of internet meme culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dancing_man_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "ecstatic_happiness",
+      "label": "ecstatic happiness expression",
+      "description": "The man in traditional Jewish attire is captured mid-motion with arms outstretched and an animated posture, conveying a sense of uninhibited joy and euphoria. His facial expression, though partially obscured, suggests intense delight, likely triggered by the music implied by the text overlay. This emotion is exaggerated for comedic effect, highlighting the contrast between the formal setting and spontaneous celebration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The man's ecstatic reaction is mapped to the moment when the bass drops just right",
+      "description": "The text 'when the bass drops just right' is mapped onto the visual of the man in traditional Jewish attire energetically dancing or gesturing. The meme humorously equates the man's exaggerated, uninhibited joy and physical movement with the specific musical event of a bass drop in electronic or hip-hop music. The mapping is based on the juxtaposition of the text and the visual, where the man's reaction is presented as the comedic, exaggerated response to the bass drop. This is a classic analogical mapping in meme culture where a visual reaction is attributed to a specific textual event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the dancing man as the embodiment of the bass drop reaction",
+      "description": "The user is projected onto the visual material of the man_dancing, imagining themselves as the person experiencing the moment described by the text 'when the bass drops just right'. The meme invites the viewer to identify with the man's exaggerated, joyful physical reaction, making the user feel as if they are the one dancing or reacting in that moment. This projection is implicit, not explicit, but is a core feature of meme culture — the viewer is encouraged to see themselves in the visual subject's place.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "Jewish meme audience",
+      "description": "The meme is designed for an audience familiar with Jewish cultural practices, particularly Orthodox Jewish celebrations like weddings or festive meals (seudah), where dancing and music are common. The visual of a man in traditional attire (black coat, fur hat, long beard) dancing energetically in such a setting is culturally specific and relies on the audience recognizing the context as a joyful, communal event. The humor stems from the contrast between the formal religious setting and the spontaneous joy, which is most appreciated by those who understand the cultural norms around such gatherings.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/97683.png",
+    "image_name": "97683.png",
+    "extraction_timestamp": "2025-12-19T19:46:54.126370",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

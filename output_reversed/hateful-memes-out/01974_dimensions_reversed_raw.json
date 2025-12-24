@@ -1,0 +1,228 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: hiroshima_nagasaki_everybody_needs_a_friend; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes a map of Japan with the red circle of the Japanese flag, labeling 'hiroshima' and 'nagasaki' to reference the atomic bombings. Below, it shows a man with the caption 'everybody needs a friend,' implying that the bombings were a 'friend' to Japan. This is a harmful and insensitive analogy that trivializes the immense human suffering and destruction caused by the atomic bombings, reducing a catastrophic historical event to a joke about friendship. The intent is to mock or downplay the tragedy, which can be deeply offensive to survivors and their descendants, and potentially cause emotional harm to those affected by the bombings. The meme does not target any specific protected group with hate, but its content is harmful due to its disrespectful and trivializing portrayal of a genocide-level event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "hiroshima",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "map_of_japan",
+      "label": "map",
+      "description": "A white background map of Japan with a red circle (representing the Japanese flag) superimposed over it. The map is outlined in gray and is the primary graphic element in the top panel.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "map_scene",
+      "label": "map_of_japan_with_labels",
+      "description": "A scene showing a map of Japan with a red circle (Japanese flag) superimposed, labeled with 'hiroshima' and 'nagasaki'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text_hiroshima",
+          "relation": "isLocatedOn",
+          "to": "map_of_japan"
+        },
+        {
+          "from": "text_nagasaki",
+          "relation": "isLocatedOn",
+          "to": "map_of_japan"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "atomic_bombings_of_hiroshima_and_nagasaki",
+      "label": "Atomic bombings of Hiroshima and Nagasaki",
+      "description": "Historical events in which the United States dropped atomic bombs on the Japanese cities of Hiroshima and Nagasaki in August 1945, resulting in massive destruction and loss of life. These bombings were pivotal in ending World War II but also caused long-term suffering, radiation sickness, and social trauma for survivors (hibakusha) and their descendants. The meme trivializes this genocide-level event by comparing it to a 'friend'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "map_of_japan_with_labels",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "holocaust_denial_minimization_themes",
+      "label": "Holocaust denial/minimization themes",
+      "description": "A form of antisemitic trope that downplays or denies the Holocaust, often by trivializing its scale and horror. This meme uses a similar harmful rhetorical strategy by minimizing the catastrophic human suffering of the atomic bombings, reducing it to a joke about friendship. This is a form of historical minimization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "map_of_japan_with_labels",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "trivialization_of_trauma",
+      "label": "Trivialization of trauma",
+      "description": "The act of reducing a serious, painful, or catastrophic event to something mundane or humorous. In this meme, the immense suffering caused by the atomic bombings is reduced to the phrase 'everybody needs a friend', which is deeply offensive and insensitive to survivors and their families.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "map_of_japan_with_labels",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hibakusha",
+      "label": "Hibakusha",
+      "description": "The term for survivors of the atomic bombings of Hiroshima and Nagasaki. They endured severe physical and psychological trauma, radiation sickness, and social stigma. The meme's insensitivity directly offends this group and their descendants.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "map_of_japan_with_labels",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "japanese_flag",
+      "label": "Japanese flag",
+      "description": "The national flag of Japan, known as the 'Nisshōki' or 'Hinomaru', featuring a red circle on a white background. The image uses this symbol to represent Japan, and the placement of 'hiroshima' and 'nagasaki' on it implies these cities are part of Japan, which is a factual reference needed to understand the context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "map_of_japan_with_labels",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "everybody_needs_a_friend",
+      "label": "Everybody needs a friend",
+      "description": "A common social trope suggesting that friendship is universally necessary. In this meme, it is used ironically and inappropriately to suggest that the atomic bombings were a 'friend' to Japan, which is a deeply offensive and harmful analogy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "map_of_japan_with_labels",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "insensitivity",
+      "label": "insensitive emotion",
+      "description": "The emotion expressed is insensitivity, stemming from the meme's trivialization of the atomic bombings of Hiroshima and Nagasaki by comparing them to a 'friend'. This reduces the immense human suffering and genocide-level trauma to a joke, which is deeply offensive to survivors (hibakusha) and their descendants.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The atomic bombings are mapped as a 'friend'",
+      "description": "The text 'everybody needs a friend' is juxtaposed with the visual of the map of Japan labeled with 'hiroshima' and 'nagasaki', creating an analogical mapping where the catastrophic historical event (atomic bombings) is equated with the concept of a 'friend'. This is a harmful and offensive analogy that trivializes the immense human suffering and genocide-level trauma caused by the bombings.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene implying the atomic bombings are a 'friend'",
+      "description": "The user is projected onto the meme's overall ironic and harmful analogy, where the atomic bombings are equated with a 'friend'. This projection is implicit, not explicit (e.g., no 'you' or 'me'), but the user is expected to understand the meme's framing and identify with the perspective that the bombings were a 'friend' to Japan, which is the core of the semiotic projection. The projection is onto the scene that combines the map of Japan with the text 'everybody needs a friend', creating the analogy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the atomic bombings of Hiroshima and Nagasaki by equating them with a 'friend', reducing a genocide-level historical trauma to a joke. This is deeply offensive to survivors (hibakusha) and their descendants, and can cause emotional harm. It aligns with 'holocaust denial/minimization themes' by downplaying the catastrophic human suffering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "hibakusha",
+      "label": "Survivors of the atomic bombings",
+      "description": "The meme directly offends the hibakusha (survivors of Hiroshima and Nagasaki bombings) and their descendants by trivializing the immense trauma and genocide-level suffering they endured. The analogy equating the bombings with a 'friend' is deeply insensitive and emotionally harmful to this community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/01974.png",
+    "image_name": "01974.png",
+    "extraction_timestamp": "2025-12-15T10:51:51.790288",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

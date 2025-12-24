@@ -1,0 +1,205 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: commander!_our_transgender_battalion_needs_reinforcements!; hasOverallIntent: Hateful; overall-intent-description: The image depicts a soldier in a forest, screaming while holding a rifle, with text overlay that reads 'commander! our transgender battalion needs reinforcements!'. The overall intent is to portray transgender individuals as incompetent or in need of constant support, using a military metaphor to imply weakness or inadequacy. This is a hateful meme that targets the transgender community by mocking their perceived inability to function independently or effectively, thereby reinforcing harmful stereotypes and discrimination. The juxtaposition of the intense, aggressive visual of a soldier with the text about a 'transgender battalion' creates a tone of ridicule and dehumanization, which is intended to demean and belittle transgender people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "commander! our transgender battalion needs reinforcements!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "soldier",
+      "label": "person",
+      "description": "A person dressed in military camouflage gear, wearing a cap and gloves, holding a rifle, and screaming with an intense facial expression. The soldier is the central visual focus of the image, positioned in a forest setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "screaming_soldier_scene",
+      "label": "soldier_screaming_in_forest",
+      "description": "A soldier in military camouflage gear is positioned in a forest, holding a rifle and screaming with an intense facial expression. The scene is framed to emphasize the soldier's emotional state and action, with the forest background providing a natural, outdoor setting. The text overlay 'commander! our transgender battalion needs reinforcements!' is present, adding a contextual layer to the visual.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "transgender_battalion_stereotype",
+      "label": "Transgender Battalion Stereotype",
+      "description": "A derogatory stereotype that portrays transgender individuals as incompetent, in need of constant support or reinforcement, and unable to function independently or effectively in a military or other structured environment. This stereotype is used to demean and dehumanize the transgender community by implying weakness or inadequacy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "military_metaphor",
+      "label": "Military Metaphor",
+      "description": "The use of military terminology and imagery (e.g., 'battalion', 'commander', 'reinforcements') to describe or evaluate a group, often to imply strength, discipline, or capability. In this context, it is used pejoratively to suggest that transgender individuals are weak or require constant support, reinforcing harmful stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_meme",
+      "label": "Hateful Meme",
+      "description": "A meme designed to ridicule, demean, or dehumanize a specific group by using exaggerated, offensive, or false imagery and text. This meme targets the transgender community by mocking their perceived inability to function independently or effectively, thereby reinforcing discrimination and harmful stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "screaming_soldier_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "transgender_community",
+      "label": "Transgender Community",
+      "description": "A social group comprising individuals who identify as transgender, meaning their gender identity differs from the sex they were assigned at birth. The meme targets this community with derogatory stereotypes, implying they are incapable or in need of constant support.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dehumanization",
+      "label": "Dehumanization",
+      "description": "The process of stripping away the humanity of a group, often by portraying them as less than human, incompetent, or in need of constant support. This meme uses dehumanizing language and imagery to portray transgender individuals as weak or incapable.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "screaming_soldier_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mockery_of_independence",
+      "label": "Mockery of Independence",
+      "description": "The act of ridiculing or belittling a group for being perceived as dependent or unable to function without external support. In this meme, the phrase 'needs reinforcements' is used to mock the perceived lack of independence of the transgender community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "rage",
+      "label": "intense anger and aggression",
+      "description": "The soldier's facial expression, with eyes squeezed shut, mouth wide open in a scream, and tense facial muscles, conveys extreme rage or aggression. This is amplified by the physical gesture of gripping the rifle tightly, suggesting a state of high emotional intensity and combat readiness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The screaming soldier is mapped as the 'commander' needing reinforcements for the 'transgender battalion'.",
+      "description": "The text 'commander! our transgender battalion needs reinforcements!' explicitly refers to a 'commander' who is in need of support. The visual material shows a soldier in an intense, aggressive state (screaming, gripping a rifle), which is mapped onto the role of 'commander'. This mapping is not literal but metaphorical and pejorative, using the soldier's rage and perceived incompetence to represent the 'commander' of the 'transgender battalion' as someone who is overwhelmed or incapable of leading, thus needing reinforcements. The soldier's visual state (rage, aggression) is projected onto the textual role of 'commander' to imply that the commander is in a state of crisis or failure, thereby reinforcing the stereotype that the transgender battalion is weak and in need of constant support.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the soldier as the commander needing reinforcements",
+      "description": "The user is projected onto the visual material of the soldier (person) who is screaming and holding a rifle, interpreting this figure as the 'commander' who is overwhelmed and in need of reinforcements for the 'transgender battalion'. This projection is metaphorical and pejorative, using the soldier's intense emotional state to represent the commander's perceived incompetence or crisis, thereby aligning the user's perspective with the hateful stereotype being conveyed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks the transgender community by portraying them as incompetent and in need of constant support, using a military metaphor to imply weakness or inadequacy. This is a hateful meme that targets the transgender community by mocking their perceived inability to function independently or effectively, thereby reinforcing harmful stereotypes and discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "transgender_community",
+      "label": "Transgender Community",
+      "description": "The meme targets the transgender community by using derogatory stereotypes, portraying them as incompetent and in need of constant support, thereby reinforcing discrimination and harmful stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/75130.png",
+    "image_name": "75130.png",
+    "extraction_timestamp": "2025-12-19T12:30:34.180657",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,169 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: non-toxic; overall-intent-description: The image depicts two women walking and smiling while conversing in an urban setting. One woman is holding a drink, and the text overlay reads, 'i am full! that pho was good!'. The scene is lighthearted and positive, conveying a sense of satisfaction and enjoyment after eating. There is no toxicity, harmful content, or hateful messaging present. The meme's intent is to humorously express fullness and praise for a meal, likely pho, in a relatable and casual way. The visual of happy, casually dressed women enjoying a meal aligns with the text to create a humorous, everyday moment. No protected characteristics are targeted, and no stereotypes or harmful tropes are present. The meme is purely for entertainment and relatability, not to attack or demean any group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "i am full! that pho was good !",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_on_left",
+      "label": "woman with short brown hair",
+      "description": "A woman with short, straight brown hair, wearing a yellow top under a denim jacket, smiling while walking and looking at her companion. She has a black crossbody bag and appears cheerful and engaged in conversation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "walking_friends",
+      "label": "two women walking and talking while enjoying a meal",
+      "description": "The scene depicts two women walking together in an urban outdoor setting, smiling and engaged in conversation. One woman is holding a drink, and the text overlay indicates they are discussing how full they are after eating pho. The spatial arrangement shows them side-by-side, moving forward, with the background blurred to emphasize their interaction. The scene conveys a lighthearted, positive, and relatable moment of satisfaction after eating.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman_on_left",
+          "relation": "talksTo",
+          "to": "woman_on_right"
+        },
+        {
+          "from": "woman_on_right",
+          "relation": "talksTo",
+          "to": "woman_on_left"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pho",
+      "label": "Vietnamese noodle soup",
+      "description": "Pho is a traditional Vietnamese noodle soup that is widely popular in Vietnam and among Vietnamese communities abroad. It is typically made with rice noodles, broth, herbs, and meat (often beef or chicken). The text 'that pho was good!' implies the women have just eaten this dish and are expressing satisfaction, which requires background knowledge of what pho is and its cultural significance as a popular food item.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Vietnam",
+      "label": "Country of origin for pho",
+      "description": "Pho originates from Vietnam and is a staple of Vietnamese cuisine. Understanding that pho is a Vietnamese dish helps contextualize the cultural reference in the text, even though the image does not show any explicit Vietnamese cultural markers. The background knowledge of Vietnam as the origin of pho is necessary to interpret the specificity of the food mentioned.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "street_food_culture",
+      "label": "Urban street food culture",
+      "description": "The image depicts two women walking in an urban setting, casually enjoying a meal. The text implies they are discussing a recent meal, likely eaten at a street food stall or casual eatery. Background knowledge of street food culture — particularly in Asian cities — helps understand the context of the scene: the casual, social, and often affordable nature of eating out in public spaces, which is common in many urban environments, especially in Asia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "urban_outdoor_setting",
+      "label": "Modern urban public space",
+      "description": "The background of the image shows a modern, possibly Asian, urban environment with architectural elements like elevated walkways or bridges. While the image does not specify the location, background knowledge of urban outdoor settings — such as pedestrian plazas, shopping districts, or transit hubs — helps interpret the scene as a place where people casually meet, eat, and socialize, which is relevant to the context of the text about having just eaten.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful satisfaction emotion",
+      "description": "The two women are smiling broadly and appear to be engaged in a happy, lighthearted conversation. Their facial expressions convey contentment and enjoyment, likely stemming from the satisfaction of having eaten a delicious meal. The overall scene radiates positivity and camaraderie.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The women are mapped as the ones who are full and praising the pho.",
+      "description": "The text 'i am full! that pho was good!' is directly mapped onto the two women walking and smiling. The visual of the happy, satisfied women is used to represent the emotional state and experience described in the text — specifically, the feeling of being full and pleased after eating pho. The women are the subjects of the text, and their visual depiction (smiling, engaged in conversation) serves as the visual instantiation of the text's content. This is an analogical mapping where the visual entities (the women) are the embodiment of the textual entities (the speaker of the text, who is full and praising the pho).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of two women enjoying a meal",
+      "description": "The user is projected onto the scene of two women walking and talking in an urban setting, as the text 'i am full! that pho was good!' describes a relatable, first-person experience of satisfaction after eating. The visual of the happy, casually dressed women serves as a direct analogical representation of the user's own experience, inviting the viewer to identify with the speaker's state of fullness and enjoyment. There are no explicit deictic pronouns like 'me' or 'you' in the text, but the first-person plural 'I am full!' and the casual, conversational tone create an implicit projection where the user sees themselves as one of the women in the scene, sharing in the moment of satisfaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "food enthusiasts",
+      "description": "The meme targets individuals who enjoy eating out, particularly those familiar with or interested in street food and noodle dishes like pho. The text 'that pho was good!' and the visual of casually enjoying a meal in an urban setting appeal to people who relish food experiences and share moments of satisfaction after eating.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/12754.png",
+    "image_name": "12754.png",
+    "extraction_timestamp": "2025-12-15T14:45:13.740453",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

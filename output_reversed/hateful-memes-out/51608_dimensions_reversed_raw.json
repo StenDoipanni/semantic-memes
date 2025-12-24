@@ -1,0 +1,192 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: winnie_the_pooh_meme; hasOverallIntent: Harmful; overall-intent-description: The image shows a child standing between two Disney characters, Tigger and Winnie the Pooh, with text overlaying the image that reads 'winnie the pooh is a disney classic.' The overall intent of this meme is to make a humorous or ironic statement about the character Winnie the Pooh being a 'Disney classic.' However, the meme is harmful because it uses the image of a child standing between the characters to imply that the child is somehow 'classic' or 'authentic' in a way that is not appropriate or respectful. The meme is also potentially harmful because it could be interpreted as suggesting that the child is a 'classic' or 'authentic' version of the character, which could be seen as a form of objectification or infantilization. The meme does not contain any explicit abusive, cyberbullying, or hateful content, but it does contain harmful content that could be interpreted as objectifying or infantilizing the child.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "winnie the pooh",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Winnie_the_Pooh",
+      "label": "Disney character",
+      "description": "A large, yellow bear in a red shirt, standing on the right side of the image. It is a costumed character, part of the Disney franchise, and is one of the main subjects of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "child_with_disney_characters",
+      "label": "child standing between Disney characters",
+      "description": "A young child is positioned between two large Disney costumed characters, Tigger and Winnie the Pooh, in a posed photograph. The child is the central human subject, flanked by the costumed characters, creating a composition that suggests a playful interaction or a themed photo opportunity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "standsBetween",
+          "to": "Winnie_the_Pooh"
+        },
+        {
+          "from": "child",
+          "relation": "standsBetween",
+          "to": "Tigger"
+        },
+        {
+          "from": "Winnie_the_Pooh",
+          "relation": "flanks",
+          "to": "child"
+        },
+        {
+          "from": "Tigger",
+          "relation": "flanks",
+          "to": "child"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "infantilization_stereotype",
+      "label": "Infantilization Stereotype",
+      "description": "The meme uses the image of a child standing between two large costumed characters to imply that the child is 'classic' or 'authentic' in a way that is not appropriate or respectful. This relies on the real-world stereotype that children are inherently 'classic' or 'authentic' versions of things, which can be seen as infantilizing or objectifying the child. This stereotype is part of broader ableist and ageist tropes that reduce individuals to their perceived developmental stage.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_with_disney_characters",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification_stereotype",
+      "label": "Objectification Stereotype",
+      "description": "The meme's framing of the child as a 'classic' version of Winnie the Pooh, juxtaposed with the costumed characters, can be interpreted as objectifying the child by reducing them to a symbolic or literal representation of a cartoon character. This relies on the real-world stereotype that children are objects to be used or displayed for entertainment or aesthetic purposes, rather than as autonomous individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "child_with_disney_characters",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "disney_classic_concept",
+      "label": "Disney Classic Concept",
+      "description": "The text 'winnie the pooh is a disney classic' refers to the real-world concept that 'Disney classics' are films or characters that have been widely recognized and celebrated by Disney as enduring and iconic. This concept is part of Disney's marketing and cultural branding strategy, and understanding it requires knowledge of Disney's history and its role in popular culture. The meme uses this concept ironically or humorously, implying the child is 'classic' in a way that is not appropriate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "disney_character_stereotype",
+      "label": "Disney Character Stereotype",
+      "description": "The meme relies on the real-world stereotype that Disney characters are iconic, timeless, and often used as symbols of childhood innocence or nostalgia. This stereotype is part of broader cultural phenomena around media franchises and their influence on public perception. The meme uses this to create a humorous or ironic contrast with the child, who is also being framed as 'classic' or 'authentic'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Winnie_the_Pooh",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "child_with_disney_characters",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful expression",
+      "description": "The child and the adults in the image are smiling and posing for a photo, indicating a happy and playful emotional state. The overall scene conveys a sense of fun and enjoyment typical of a themed photo opportunity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The child is mapped as a 'Disney classic' through the text overlay.",
+      "description": "The text 'winnie the pooh is a disney classic' is juxtaposed with the visual of a child standing between Disney characters. This creates an analogical mapping where the child is implicitly projected as being 'classic' or 'authentic' in the same way that Winnie the Pooh is a 'Disney classic'. This mapping relies on the stereotype that children are inherently 'classic' or 'authentic' versions of things, which can be seen as infantilizing or objectifying the child. The mapping is established through the ironic or humorous framing of the child as a 'classic' version of the character, using the Disney classic concept as a textual anchor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the child in the scene",
+      "description": "The user is projected onto the child standing between the Disney characters, as the meme's text 'winnie the pooh is a disney classic' implicitly frames the child as a 'classic' version of the character. This projection relies on the visual material of the child and the textual material to create an analogical mapping where the user sees themselves as the 'classic' or 'authentic' version of the character, which is a form of infantilization and objectification. The projection is not explicit with deictic pronouns like 'me' or 'you', but it is implied through the ironic juxtaposition of the child with the Disney classic concept.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses the image of a child standing between two large costumed characters to imply that the child is 'classic' or 'authentic' in a way that is not appropriate or respectful. This relies on the real-world stereotype that children are inherently 'classic' or 'authentic' versions of things, which can be seen as infantilizing or objectifying the child. The meme does not contain any explicit abusive, cyberbullying, or hateful content, but it does contain harmful content that could be interpreted as objectifying or infantilizing the child.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad general internet audience familiar with Disney characters and pop culture references. It leverages common visual tropes (child with costumed characters) and ironic text overlays to create humor, appealing to users who understand Disney branding and the concept of 'Disney classics.' The target community includes individuals who engage with internet memes, particularly those that use visual juxtaposition and irony for comedic effect, and who are likely to recognize Winnie the Pooh and Tigger as iconic Disney figures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/51608.png",
+    "image_name": "51608.png",
+    "extraction_timestamp": "2025-12-16T04:10:23.210510",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

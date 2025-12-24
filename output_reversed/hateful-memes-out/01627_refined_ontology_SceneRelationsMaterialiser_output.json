@@ -1,0 +1,30 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "crucifixion_scene",
+      "participants": [
+        {
+          "entity": "person",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "person",
+          "relation": "isCrucifiedOn",
+          "to": "cross"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":crucifixion_scene :hasParticipant :person .",
+    ":person :isCrucifiedOn :cross ."
+  ],
+  "triples_count": 2
+}

@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_id_1",
+      "hasMappedEntity": "textual_entity_name",
+      "hasMappingEntity": "woman"
+    },
+    {
+      "from": "woman",
+      "relation": "mappedOnto",
+      "to": "textual_entity_name"
+    }
+  ],
+  "triples": [
+    ":mapping_id_1 :hasMappedEntity :textual_entity_name .",
+    ":mapping_id_1 :hasMappingEntity :woman .",
+    ":woman :mappedOnto :textual_entity_name ."
+  ],
+  "triples_count": 3
+}

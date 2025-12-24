@@ -1,0 +1,59 @@
+Reversed Dimension Extraction Results
+=====================================
+
+Pipeline Type: Reversed (starts with ToxicityAssessment)
+Image: 27635.png
+Extraction Time: 2025-12-15T20:10:12.672252
+LLM Provider: huggingface
+Total Dimensions Found: 12
+
+Extracted Dimensions:
+-------------------
+1. OverallIntent: the overallintent
+   Description: meme-id: dat ass ahmarbkrich d; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes an image of sheep with their rear ends prominently displayed against a man in a headscarf and sunglasses who is screaming in apparent shock or disgust. The text 'dat ass' is overlaid on the sheep image, while 'ahmarbkrich d' (a distorted, likely misspelled or coded term) is overlaid on the man. The visual and textual elements together create a crude, mocking comparison, likely targeting individuals of Middle Eastern or Muslim appearance. This is a clear example of Islamophobia, as it uses a degrading visual metaphor (sheep butts) to mock a person's appearance and religious identity, fitting the category of hateful content. The meme relies on the stereotype of 'backward culture' and 'animal treatment' accusations, and it is designed to provoke negative reactions toward the targeted group. The intent is to demean and insult based on protected characteristics (religion/ethnicity), making it hateful and potentially harmful.
+   Method: llm_extraction_huggingface
+
+2. TextualMaterial: text location
+   Description: dat ass
+   Method: llm_extraction_huggingface
+
+3. VisualMaterial: man wearing headscarf and sunglasses
+   Description: A man in the foreground wearing a green headscarf with Arabic text, sunglasses, and a black-and-white checkered scarf. He is screaming with his hands near his mouth, appearing shocked or disgusted. His attire and appearance suggest he may be perceived as Middle Eastern or Muslim, and he is the central figure in the lower half of the meme.
+   Method: llm_extraction_huggingface
+
+4. Scene: man reacting with shock to sheep image
+   Description: The scene depicts a man in a headscarf and sunglasses, screaming with his hands near his mouth, reacting to an image of sheep with their rear ends prominently displayed. The visual juxtaposition and text overlay ('dat ass' and 'ahmarbkrich d') create a mocking and degrading context. The man is positioned in the foreground, while the sheep image is in the background, forming a composition that implies the man is reacting to the sheep image as if it were a shocking or offensive sight.
+   Method: llm_extraction_huggingface
+
+5. BackgroundKnowledge: Islamophobia Stereotype
+   Description: The meme relies on the stereotype that Muslims or people of Middle Eastern appearance are 
+   Method: regex_fallback
+
+6. BackgroundKnowledge: Animal Treatment Accusation
+   Description: The meme uses the visual of sheep butts to imply that the man is 
+   Method: regex_fallback
+
+7. BackgroundKnowledge: Distorted Text Term
+   Description: The text 
+   Method: regex_fallback
+
+8. EmotionExpression: disgusted emotion
+   Description: The man in the headscarf is screaming with his hands near his mouth, a facial expression and gesture commonly associated with disgust or revulsion. His wide-open mouth and intense gaze suggest he is reacting to something offensive or repulsive, as implied by the juxtaposition with the sheep image and the text 'dat ass'.
+   Method: llm_extraction_huggingface
+
+9. AnalogicalMapping: The man is mapped as 'dat ass'
+   Description: The text 'dat ass' is overlaid on the image of sheep with their rear ends prominently displayed. This creates an analogical mapping where the sheep's butts are being mapped as 'dat ass', and this mapping is then projected onto the man in the headscarf, who is visually positioned as the recipient of this degrading label. The man's shocked expression reinforces the implication that he is being mocked as 'dat ass' through the visual metaphor of the sheep butts.
+   Method: llm_extraction_huggingface
+
+10. SemioticProjection: User projected onto the man in headscarf as the target of the degrading metaphor
+   Description: The user is projected onto the man in the headscarf (man_in_headscarf) as the recipient of the degrading label 'dat ass', which is visually mapped onto the sheep butts and then analogically transferred to him. The man's shocked expression and the meme's overall intent reinforce that the user is meant to perceive him as the object of mockery. The distorted text 'ahmarbkrich d' further projects the user's identification with the degrading stereotype being applied to him.
+   Method: llm_extraction_huggingface
+
+11. ToxicityAssessment: Hateful
+   Description: The meme uses a degrading visual metaphor (sheep butts) and text ('dat ass') to mock a man perceived as Middle Eastern or Muslim, projecting a hateful stereotype that equates him with animal treatment and 'backward culture'. The distorted text 'ahmarbkrich d' further reinforces the dehumanizing projection. This constitutes a direct attack based on protected characteristics (religion/ethnicity).
+   Method: llm_extraction_huggingface
+
+12. TargetCommunity: audience description
+   Description: The target community is individuals who hold or are exposed to Islamophobic stereotypes, particularly those who may find humor or satisfaction in mocking people of Middle Eastern or Muslim appearance. The meme is designed to provoke negative reactions toward this group by using degrading visual metaphors (sheep butts) and distorted text ('ahmarbkrich d') to imply that the man in the headscarf is 'dat ass' — a projection rooted in the 'backward culture' and 'animal treatment' accusations commonly used in Islamophobic rhetoric. The intended audience likely includes those who identify with or support such stereotypes, or who are seeking to reinforce or spread them through humor or shock value.
+   Method: llm_extraction_huggingface
+

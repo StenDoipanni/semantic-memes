@@ -1,0 +1,200 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a man with a confused or strained expression, overlaid with text reading 'when you strive to be a real life picasso painting.' The intent is to humorously suggest that someone is so artistically inept or aesthetically unappealing that they resemble a Picasso painting — a reference to Picasso's abstract and often unconventional style. While the meme is self-deprecating and uses absurd comparison for comedic effect, it carries a subtle harmful undertone by implying that the person's appearance is so 'artistic' or 'unconventional' that it is objectively undesirable or grotesque. This can be interpreted as a form of aesthetic mockery, which may be considered harmful as it reduces a person's appearance to a joke based on perceived artistic failure. The meme does not target any specific protected group, but it does rely on a potentially demeaning visual metaphor that could be interpreted as mocking someone's physical appearance or artistic taste, which may contribute to body image issues or self-esteem damage in some viewers. The overall intent is to create humor through absurd comparison, but the underlying message may be perceived as mildly demeaning or harmful due to its focus on appearance and artistic judgment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text",
+      "description": "when you strive to be",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A Caucasian man with short brown hair, wearing a white collared shirt over a white t-shirt, looking directly at the camera with a confused, strained, or slightly disgusted facial expression. His eyebrows are raised, eyes are wide, and his mouth is set in a firm, unsmiling line. This expression is central to the meme's humor and is used to convey the feeling of being aesthetically unappealing or artistically inept.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "self_deprecating_comparative_scene",
+      "label": "Self-deprecating artistic comparison scene",
+      "description": "A scene where a man is depicted with a strained, confused facial expression, visually representing the humorous and self-mocking idea of striving to be 'a real life picasso painting'. The scene combines the man's expression with overlaid text to create a meme that uses absurd aesthetic comparison for comedic effect, implying the person's appearance is so unconventional or unappealing that it resembles abstract art.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "isRepresenting",
+          "to": "self_deprecating_comparative_scene"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "picasso_art_style",
+      "label": "Picasso's Art Style",
+      "description": "The meme references Pablo Picasso, a renowned Spanish painter and sculptor known for co-founding the Cubist movement and creating abstract, fragmented, and often unconventional artworks. The phrase 'real life picasso painting' implies that the person's appearance is so unattractive or bizarre that it resembles Picasso's abstract art — a humorous and self-deprecating comparison. This requires knowledge of Picasso's artistic legacy and his association with abstract, non-representational forms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "self_deprecating_comparative_scene",
+      "label": "Self-Deprecating Comparative Scene",
+      "description": "This meme relies on the cultural phenomenon of self-deprecating humor, where individuals mock their own appearance or abilities using absurd or exaggerated comparisons. The scene uses the man's strained expression to visually represent the internal feeling of being aesthetically unappealing or artistically inept — a concept rooted in social humor and self-mockery traditions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "aesthetic_mockery",
+      "label": "Aesthetic Mockery",
+      "description": "The meme employs aesthetic mockery — the act of ridiculing someone’s appearance or style — by comparing the person to a Picasso painting. This requires understanding that appearance can be judged or mocked in a humorous context, which is a common social trope, though potentially harmful as it can reduce a person’s worth to their looks.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "artistic_ineptitude_stereotype",
+      "label": "Artistic Ineptitude Stereotype",
+      "description": "The meme implicitly references the stereotype that people who are 'unconventional' or 'unattractive' are somehow 'artistic' or 'creative' — a humorous inversion of the idea that artistic talent is linked to aesthetic appeal. This stereotype is rooted in the cultural perception that abstract or ugly art is 'artistic' and thus, by extension, the person who looks like it is 'artistic' — a form of ironic self-deprecation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "body_image_issues",
+      "label": "Body Image Issues",
+      "description": "The meme may contribute to body image issues by reducing a person’s appearance to a joke based on perceived artistic failure. This requires knowledge of societal pressures around appearance and how humor can sometimes reinforce negative self-perceptions, especially when it involves aesthetic judgment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "confusion",
+      "label": "confused emotional expression",
+      "description": "The man's facial expression — with raised eyebrows, wide eyes, and a firm, unsmiling mouth — conveys a state of bewilderment or confusion, as if he is struggling to understand or accept something absurd or self-deprecating about himself.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The man is mapped as 'a real life picasso painting'",
+      "description": "The textual phrase 'a real life picasso painting' is mapped onto the visual entity 'man'. The man's strained, confused facial expression is used to visually represent the absurd and self-deprecating idea of being so aesthetically unappealing or artistically inept that one resembles a Picasso painting. This mapping is central to the meme's humor and relies on the visual material (the man's expression) to embody the textual metaphor (Picasso painting).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the self-deprecating comparative scene",
+      "description": "The user is projected onto the scene where the man's strained, confused facial expression represents the humorous and self-mocking idea of striving to be 'a real life picasso painting'. The meme uses the man's expression as a visual metaphor for the user's own potential aesthetic failure or artistic ineptitude, creating an identification with the depicted person. The text 'when you strive to be' directly addresses the user, inviting them to identify with the scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses aesthetic mockery by comparing a person's appearance to a Picasso painting, which can be interpreted as demeaning and potentially harmful by reducing a person's worth to their looks. This may contribute to body image issues or self-esteem damage in some viewers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "audience description",
+      "description": "The meme targets individuals who are self-aware of their appearance or artistic abilities and who engage in self-deprecating humor. The intended audience includes people who understand and appreciate ironic comparisons, particularly those who recognize the absurdity of equating personal appearance with abstract art. It appeals to a general internet-savvy demographic familiar with meme culture, visual humor, and pop art references (specifically Picasso). The target community is likely young adults and internet users who enjoy aesthetic mockery and self-mocking content, especially those who may feel insecure about their looks or artistic taste and find humor in such insecurities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/62934.png",
+    "image_name": "62934.png",
+    "extraction_timestamp": "2025-12-16T07:43:25.372968",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

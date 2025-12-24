@@ -1,0 +1,200 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Abusive; overall-intent-description: The image depicts a hand crushing a cigarette, with scattered cigarette butts and smoke in the background. The overlaid text reads: 'you are not wanted! you are a mental deficient!' This is an abusive meme that uses violent imagery (crushing a cigarette) to metaphorically represent the rejection or devaluation of a person, coupled with explicit derogatory language targeting mental capacity. The intent is to shame, demean, and psychologically attack the viewer or a specific target group by equating them with something undesirable (a cigarette) and labeling them as 'mental deficient,' which is a harmful and dehumanizing insult. The overall intent is to inflict emotional harm and reinforce negative stereotypes about mental disability or incompetence, fitting the 'Abusive' category as it directly threatens and abuses the individual or group it targets.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "text location",
+      "description": "you are not wanted!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "hand",
+      "label": "human hand",
+      "description": "A human hand is visible in the foreground, actively crushing a cigarette. The hand is the central human element in the image, performing a violent action that symbolizes rejection or destruction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "crushing_cigarette",
+      "label": "Hand crushing a cigarette",
+      "description": "A human hand is actively crushing a cigarette, symbolizing rejection or destruction. The cigarette is being crushed under pressure, with smoke rising from the point of impact. The hand is the central participant, performing a violent action on the cigarette.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "hand",
+          "relation": "crushes",
+          "to": "cigarette"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mental_deficient_slur",
+      "label": "Mental Deficient Slur",
+      "description": "A derogatory term used to demean individuals perceived as having low mental capacity or intellectual disability. It is a form of ableism that dehumanizes and stigmatizes people with cognitive impairments or those perceived as incompetent. This slur is often used to justify exclusion, discrimination, or violence against individuals with disabilities or those who are perceived as 'not smart enough'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "Ableism",
+      "description": "Discrimination or prejudice against individuals with disabilities, often rooted in the belief that people with disabilities are less capable, less valuable, or a burden. Ableism manifests in social, cultural, and institutional contexts and includes the use of slurs, exclusion, and dehumanizing language like 'mental deficient'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cigarette_as_metaphor",
+      "label": "Cigarette as Metaphor for Disposal/Rejection",
+      "description": "The act of crushing a cigarette is a common visual metaphor for discarding something unwanted, undesirable, or harmful. In this meme, the cigarette represents the person being targeted, implying they are being treated as trash or something to be destroyed. This metaphor relies on cultural understanding of cigarettes as symbols of vice, addiction, or low value.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "crushing_cigarette",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dehumanizing_language",
+      "label": "Dehumanizing Language",
+      "description": "Language that strips a person of their humanity, dignity, or moral worth. Phrases like 'you are not wanted' and 'you are a mental deficient' are dehumanizing because they reduce a person to an object or a label, denying their inherent value and agency. This is a common tactic in abusive and hateful rhetoric.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "abusive_meme_tropes",
+      "label": "Abusive Meme Tropes",
+      "description": "A category of internet memes that use violent imagery, degrading text, or harmful stereotypes to attack, shame, or demean a target. These memes often rely on shock value and emotional manipulation to provoke a reaction. The combination of crushing imagery and insulting text is a classic abusive trope used to inflict psychological harm.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "crushing_cigarette",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hatred",
+      "label": "hateful emotion",
+      "description": "The emotion of hatred is expressed through the violent act of crushing a cigarette and the explicit, dehumanizing text overlay that labels the target as 'not wanted' and 'a mental deficient'. This combination conveys intense hostility, contempt, and a desire to demean and destroy the target.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The person being targeted is mapped onto the cigarette being crushed.",
+      "description": "The text 'you are not wanted!' and 'you are a mental deficient!' explicitly labels the target of the meme. The visual material of the hand crushing a cigarette serves as a metaphor for rejection and devaluation. The analogical mapping is that the cigarette (a visual entity) is being treated as the 'you' being targeted by the text — the cigarette is the object being destroyed, symbolizing the person being dehumanized and discarded. This mapping is reinforced by the metaphor 'cigarette as metaphor for disposal/rejection' and the dehumanizing language used in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the cigarette being crushed",
+      "description": "The user is projected onto the cigarette being crushed, as the text explicitly addresses 'you' ('you are not wanted!', 'you are a mental deficient!'). The visual of the hand crushing the cigarette serves as a metaphor for the user being targeted and devalued. The projection is reinforced by the direct address in the text, which maps the user onto the cigarette as the object of rejection and dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Abusive",
+      "description": "The meme uses violent imagery (crushing a cigarette) and explicit derogatory text ('you are not wanted!', 'you are a mental deficient!') to directly threaten, demean, and psychologically attack the viewer or a specific target group. The intent is to inflict emotional harm and reinforce negative stereotypes about mental disability or incompetence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "individual targeted by dehumanizing language",
+      "description": "The meme targets any individual perceived as having low mental capacity or intellectual disability, using the slur 'mental deficient' and the metaphor of crushing a cigarette to dehumanize and reject them. The target is defined by the slur and the visual metaphor, not by any specific demographic or cultural group, but rather by the stereotype of being 'mentally deficient'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/86491.png",
+    "image_name": "86491.png",
+    "extraction_timestamp": "2025-12-19T16:00:23.504115",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

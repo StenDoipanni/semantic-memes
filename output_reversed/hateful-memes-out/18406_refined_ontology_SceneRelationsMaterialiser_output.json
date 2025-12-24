@@ -1,0 +1,81 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "family_welcoming_with_dog",
+      "participants": [
+        {
+          "entity": "adult_woman",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "adult_man",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "baby",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "dog",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "adult_woman",
+          "relation": "holding",
+          "to": "baby"
+        },
+        {
+          "from": "adult_man",
+          "relation": "holding",
+          "to": "baby"
+        },
+        {
+          "from": "adult_woman",
+          "relation": "petting",
+          "to": "dog"
+        },
+        {
+          "from": "adult_man",
+          "relation": "looking_at",
+          "to": "baby"
+        },
+        {
+          "from": "adult_woman",
+          "relation": "looking_at",
+          "to": "baby"
+        },
+        {
+          "from": "adult_man",
+          "relation": "looking_at",
+          "to": "dog"
+        },
+        {
+          "from": "adult_woman",
+          "relation": "looking_at",
+          "to": "dog"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":family_welcoming_with_dog :hasParticipant :adult_woman .",
+    ":family_welcoming_with_dog :hasParticipant :adult_man .",
+    ":family_welcoming_with_dog :hasParticipant :baby .",
+    ":family_welcoming_with_dog :hasParticipant :dog .",
+    ":adult_woman :holding :baby .",
+    ":adult_man :holding :baby .",
+    ":adult_woman :petting :dog .",
+    ":adult_man :looking_at :baby .",
+    ":adult_woman :looking_at :baby .",
+    ":adult_man :looking_at :dog .",
+    ":adult_woman :looking_at :dog ."
+  ],
+  "triples_count": 11
+}

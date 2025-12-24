@@ -1,0 +1,162 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: i'm dreaming of a white christmas; hasOverallIntent: Overall Intent; overall-intent-description: The image displays a festive, snowy Christmas scene with snow-covered pine branches and soft, glowing lights, evoking a cozy, holiday atmosphere. The text 'i'm dreaming of a white christmas' is overlaid in bold white font. There is no toxicity present in this image. The meme's intent is to evoke nostalgia or romanticize the idea of a snowy Christmas, using the visual of winter and holiday lights to complement the sentiment expressed in the text. The juxtaposition of the text with the serene winter imagery creates an emotional appeal, likely intended to trigger feelings of warmth, longing, or seasonal cheer. No harmful, hateful, abusive, cyberbullying, misogynistic, or propagandistic content is present.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "i'm dreaming of a white christmas",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "snow_covered_pine_branches",
+      "label": "objects",
+      "description": "Frosty pine branches frame the image on the left and right sides, covered in white snow, contributing to the wintry, festive atmosphere.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "snowy_christmas_scene",
+      "label": "Festive snowy Christmas scene",
+      "description": "A serene winter scene featuring snow-covered pine branches framing the image, with soft glowing lights in the background, evoking a cozy holiday atmosphere. The text 'i'm dreaming of a white christmas' is overlaid in bold white font, enhancing the nostalgic and romanticized sentiment of the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "snow_covered_pine_branches",
+          "relation": "frames",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "overlayed_on",
+          "to": "snow_covered_pine_branches"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "song_title",
+      "label": "Song Title",
+      "description": "The phrase 'I'm dreaming of a white Christmas' is the title of a famous Christmas song originally written by Irving Berlin and first performed by Bing Crosby in 1942. The song is a staple of holiday music and evokes nostalgia and romanticized imagery of snowy winter scenes, which is directly reflected in the visual content of the image. Understanding the cultural significance and widespread recognition of this song is essential to interpreting the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "holiday_music_culture",
+      "label": "Holiday Music Culture",
+      "description": "The meme relies on the cultural phenomenon of holiday music, particularly Christmas songs, which are deeply embedded in Western traditions. The song 'I'm Dreaming of a White Christmas' is emblematic of this tradition, often associated with warmth, nostalgia, and seasonal cheer. The image's visual elements (snow, lights, pine branches) are culturally coded to complement this musical sentiment, making the background knowledge of holiday music culture necessary to fully appreciate the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "romanticized_winter_imaging",
+      "label": "Romanticized Winter Imaging",
+      "description": "The image and text together invoke a romanticized, idealized vision of a snowy Christmas, which is a common trope in Western media and advertising. This concept is not just about weather but about an emotional and aesthetic ideal that has been culturally constructed over decades. Understanding this trope helps explain why the image and text together create a specific nostalgic and sentimental feeling.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "nostalgia",
+      "label": "nostalgic emotion",
+      "description": "The emotion of longing for past experiences, evoked by the romanticized imagery of a snowy Christmas and the iconic song title, which together trigger memories of traditional holiday warmth and idealized winter scenes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The text 'i'm dreaming of a white christmas' is mapped onto the snowy Christmas scene.",
+      "description": "The textual phrase 'i'm dreaming of a white christmas' is directly analogous to the visual material of the snowy Christmas scene. The text expresses a longing for a specific idealized winter holiday image, which is visually represented by the snow-covered pine branches, soft glowing lights, and overall wintry atmosphere. The mapping is established through the thematic and emotional congruence: the text describes a desired state (a white Christmas), and the visual material embodies that state (snowy pine branches, festive lights). This creates an analogical mapping where the textual dream is visually instantiated by the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the romanticized winter scene",
+      "description": "The user is projected onto the snowy Christmas scene, as the text 'i'm dreaming of a white christmas' evokes a personal longing or desire that the visual scene fulfills. The user identifies with the sentiment expressed in the text, imagining themselves within the idealized winter holiday setting. This projection is implicit, not explicit, but is established through the emotional and thematic congruence between the text and the visual material. The user is not directly addressed with deictic pronouns like 'you' or 'me', but the first-person singular 'I' in the text creates an implicit identification with the speaker, projecting the user into the role of the dreamer.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "holiday music culture audience",
+      "description": "The meme is designed for individuals who are familiar with and appreciate holiday music, particularly Christmas songs. The reference to the iconic song 'I'm Dreaming of a White Christmas' and the visual elements (snow-covered pine branches, festive lights) are culturally coded to evoke nostalgia and seasonal cheer, appealing to those who engage with Western holiday traditions and music.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/64902.png",
+    "image_name": "64902.png",
+    "extraction_timestamp": "2025-12-16T08:25:48.501588",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 11,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

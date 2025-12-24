@@ -1,0 +1,205 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts armed men in military-style gear, with overlaid text claiming they kill gay people and women who go out in public without a male relative, and are supported by democrats and liberals. This is a hateful meme that targets specific groups (LGBTQ+ individuals and women) by associating them with violence and portraying them as victims of a group that is falsely and maliciously depicted as being supported by Western political ideologies. The meme uses dehumanizing and false equivalencies to incite fear and hatred toward these communities, fitting the definition of hateful content as it directly attacks individuals based on protected characteristics (sexual orientation and gender).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "they kill gays, and women who go out in public without a male relative",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "armed_men",
+      "label": "people",
+      "description": "Multiple men in military-style camouflage uniforms and tactical gear, sitting on the ground. Many have their faces covered with black balaclavas or scarves. They appear to be armed with rifles, which are laid out in front of them. Their posture is uniform and disciplined, suggesting a military or paramilitary unit.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "armed_men_sitting_in_line",
+      "label": "armed men sitting in a line",
+      "description": "Multiple armed men in military-style camouflage uniforms and tactical gear are seated in a disciplined row on the ground. Their faces are covered with black balaclavas or scarves. Rifles are laid out in front of them, indicating a paramilitary or military context. The spatial arrangement is uniform, suggesting organization and readiness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The meme associates the armed men with terrorism and violence, which is a common Islamophobic stereotype that portrays Muslims as inherently violent or barbaric, often used to justify discrimination or hostility toward Muslim communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "armed_men",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny_stereotype",
+      "label": "Misogyny Stereotype",
+      "description": "The text references killing 'women who go out in public without a male relative,' which is a misogynistic stereotype that devalues women's autonomy and reinforces patriarchal control by implying women are inherently unsafe or immoral without male supervision.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lgbtq_plus_discrimination_stereotype",
+      "label": "LGBTQ+ Discrimination Stereotype",
+      "description": "The claim that these men 'kill gays' is a discriminatory stereotype that frames LGBTQ+ individuals as targets of violence, often used to justify prejudice or to vilify LGBTQ+ communities by associating them with danger or moral corruption.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_parties_in_usa",
+      "label": "US Political Parties",
+      "description": "The text claims these groups are 'supported by democrats and liberals,' which refers to political ideologies and parties in the United States. This requires background knowledge of American political discourse, where 'Democrats' and 'Liberals' are often associated with progressive values, but the meme falsely links them to violent actors, implying a conspiracy or endorsement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "paramilitary_groups",
+      "label": "Paramilitary Groups",
+      "description": "The visual depiction of armed men in uniform and tactical gear, sitting in disciplined rows, implies a paramilitary or militia context. This requires background knowledge of real-world paramilitary organizations, which are often associated with violence, extremism, or state-sponsored repression, especially in conflict zones.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "armed_men",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "armed_men_sitting_in_line",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "western_values",
+      "label": "Western Values",
+      "description": "The meme implies that the armed men are 'incompatible with Western values' by suggesting they are supported by 'democrats and liberals,' which is a common trope in right-wing rhetoric. This requires background knowledge of cultural and political narratives that frame Western societies as morally superior and contrast them with 'backward' or 'violent' cultures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is hatred, directed toward LGBTQ+ individuals and women, as well as toward political groups (Democrats and Liberals) falsely portrayed as supporting violence. This is conveyed through the violent imagery and the dehumanizing text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "armed_men are mapped as the perpetrators of violence against LGBTQ+ individuals and women",
+      "description": "The text 'they kill gays, and women who go out in public without a male relative' explicitly maps the visual entity 'armed_men' as the agents of the described violence. This is an analogical mapping where the visual depiction of armed men in uniform is equated with the textual claim of being responsible for killing LGBTQ+ individuals and women under specific conditions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the armed_men as the perpetrators of violence",
+      "description": "The user is implicitly projected onto the visual entity 'armed_men' as the agents of the violence described in the text. The meme frames the user as someone who must confront or judge the actions of these armed men, who are depicted as violent actors targeting LGBTQ+ individuals and women, and are falsely linked to 'democrats and liberals'. This projection is implicit through the accusatory tone of the text and the visual presentation of the armed men as the focal point of blame.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks individuals based on protected characteristics (sexual orientation and gender) by associating them with violence and portraying them as victims of a group falsely depicted as being supported by Western political ideologies. This is a hateful meme that incites fear and hatred toward these communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold or are influenced by right-wing, conservative, or populist ideologies in the United States, particularly those who believe in conspiratorial narratives that falsely link progressive political groups (Democrats and Liberals) to violent extremist groups. The meme is designed to appeal to this audience by invoking fear of perceived threats to traditional values, using stereotypes about LGBTQ+ individuals and women, and falsely attributing support to Western political ideologies. It leverages existing cultural and political tensions to incite hatred and reinforce divisive narratives.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/53694.png",
+    "image_name": "53694.png",
+    "extraction_timestamp": "2025-12-16T04:55:21.746970",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "mocking and dismissive humor",
+      "expressors": [
+        {
+          "entity": "Gene Wilder",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Gene Wilder",
+          "relation": "emotionalRelationToEntity",
+          "to": "triggered individuals"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":mocking_and_dismissive_humor :hasExpressor :Gene_Wilder .",
+    ":Gene_Wilder :emotionalRelationToEntity :triggered_individuals ."
+  ],
+  "triples_count": 2
+}

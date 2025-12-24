@@ -1,0 +1,229 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Abusive; overall-intent-description: The image depicts a woman being held at gunpoint by a masked assailant, with the text 'don't move and give me your money' overlaid. This visual and textual combination creates a direct, threatening scenario that simulates a robbery. The intent is to portray a violent, coercive act, which is inherently abusive. The scene is designed to evoke fear and simulate a real-world criminal threat, making it a clear example of abusive content as it threatens and intimidates the viewer or subject. There is no targeting of specific protected groups, but the content is harmful and potentially traumatizing due to its violent nature. The meme uses the juxtaposition of the image (a vulnerable person being threatened) with the text (a direct command to surrender money) to create a sense of immediacy and danger, fulfilling an abusive intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "don't move and give me your money",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with dark hair and green eyes, wearing a red top, is depicted with a fearful expression. Her mouth is covered by a hand, and she appears to be restrained by another person behind her. She is the central subject of the image and the focus of the threatening scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "threatening_scene",
+      "label": "threatening_scene",
+      "description": "A woman is being held at gunpoint by a masked assailant, with her mouth covered by a hand. The text 'don't move and give me your money' is overlaid, indicating a robbery scenario. The scene depicts a coercive, violent act designed to simulate a real-world criminal threat.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person",
+          "relation": "covers_mouth_of",
+          "to": "woman"
+        },
+        {
+          "from": "person",
+          "relation": "holds",
+          "to": "woman"
+        },
+        {
+          "from": "person",
+          "relation": "threatens",
+          "to": "woman"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "robbery_scenario",
+      "label": "Robbery Scenario",
+      "description": "The image and text depict a classic robbery scenario where a perpetrator demands money under threat of violence. This is a real-world criminal act that requires understanding of legal and social systems, including concepts like property crime, coercion, and the threat of physical harm. The meme relies on the viewer's recognition of this common crime trope to convey its message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "criminal_threat",
+      "label": "Criminal Threat",
+      "description": "The image portrays a criminal threat, which is a real-world concept involving the use of force or intimidation to compel someone to surrender property. This requires background knowledge of how such threats operate in society, including the legal consequences and societal fear associated with them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gender_based_vulnerability",
+      "label": "Gender-Based Vulnerability Stereotype",
+      "description": "The image portrays a woman as the victim, which implicitly references societal stereotypes that women are more vulnerable to physical harm and crime. This stereotype is part of broader misogynistic tropes that portray women as passive, easily victimized, and less capable of defending themselves, which is a form of background knowledge needed to understand the meme's framing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "The meme implicitly relies on misogynistic stereotypes by depicting a woman as the helpless victim of a violent crime. This reinforces the stereotype that women are inherently vulnerable and in need of protection, which is a harmful social construct. The background knowledge of misogyny is necessary to understand the societal implications of this portrayal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "violence_as_threat",
+      "label": "Violence as a Threat",
+      "description": "The image uses violence (hand covering mouth, implied threat) as a means to coerce compliance. This requires background knowledge of how violence functions as a social and psychological tool to control or intimidate others, which is a real-world concept not directly visible in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "coercion",
+      "label": "Coercion",
+      "description": "The text 'don't move and give me your money' is a direct command that implies coercion — the use of force or threat to compel someone to act against their will. This is a real-world concept that requires understanding of social dynamics, power structures, and legal definitions of coercion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "fear",
+      "label": "fearful expression",
+      "description": "The woman's wide, alert eyes and the fact that her mouth is covered by a hand convey a state of extreme fear and helplessness. Her facial expression suggests she is terrified and unable to react due to the threat.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Textual command mapped onto visual victim",
+      "description": "The text 'don't move and give me your money' is directly mapped onto the visual entity of the woman, who is depicted as the victim being held at gunpoint. The text explicitly commands her to surrender money, and her visual portrayal as restrained and fearful reinforces this mapping. The woman is the direct subject of the command, making her the mapped entity in the visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the victim in the threatening scene",
+      "description": "The user is projected onto the woman depicted in the image, who is the direct subject of the textual command 'don't move and give me your money'. The text uses 'your money', which implicitly addresses the viewer as the possessor of the money, thereby projecting the user as the potential target or victim of the robbery scenario. The visual portrayal of the woman as restrained and fearful reinforces this projection, making the viewer feel personally implicated in the scenario as the person whose money is being demanded. This projection is achieved through the deictic 'your' in the text, which directly links the viewer to the victim's situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Abusive",
+      "description": "The image and text depict a violent, coercive act (a robbery scenario) that threatens and intimidates the viewer or subject, simulating a real-world criminal threat. This is inherently abusive content as it uses violence and fear to compel compliance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "woman",
+      "description": "The intended audience is individuals who recognize and understand the trope of a woman being portrayed as a vulnerable victim in a robbery scenario, often reinforcing harmful gender stereotypes. The meme targets viewers familiar with media portrayals of gender-based vulnerability and coercive violence, particularly those who may internalize or be exposed to misogynistic narratives that depict women as passive and easily victimized. The audience is likely to include those who engage with internet memes that rely on shock value, fear, or social commentary, and who may be familiar with the visual language of crime and threat in popular culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/98215.png",
+    "image_name": "98215.png",
+    "extraction_timestamp": "2025-12-19T20:00:51.110874",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,260 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: some_crazy_rez_girls_be_like; hasOverallIntent: Hateful; overall-intent-description: The meme depicts a person in Indigenous attire with exaggerated, mocking text that stereotypes Indigenous women as emotionally unstable and violent. The phrase 'if you ever leave me, I'll punch myself in the face and tell cops you did it' is presented as a joke, but it is rooted in harmful stereotypes that portray Indigenous women as 'crazy' or 'hysterical,' which is a form of misogynistic and racist caricature. This trope is used to demean and dehumanize Indigenous women, reducing their complex identities to a simplistic, violent, and irrational stereotype. The meme's intent is to ridicule and belittle a specific group based on their gender and ethnicity, making it hateful and harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text",
+      "description": "some crazy rez girls be like:",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "bottom text",
+      "description": "\"if you ever leave me, i'll punch myself in the face and tell cops you did it\"",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "a woman wearing Indigenous-style headwear and a white jacket",
+      "description": "The central figure is a woman with a wide, expressive facial expression, arms outstretched. She is wearing a feathered headdress with colorful accents and a white jacket with fur trim. Her attire suggests a cultural or ceremonial context, though the meme uses it in a stereotypical and mocking way. The person appears to be outdoors, standing in front of a metal fence and a backdrop of grass and a building.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "mocking_stereotype_scene",
+      "label": "mocking_stereotype_scene",
+      "description": "A scene depicting a person in Indigenous-style attire with exaggerated, mocking text that stereotypes Indigenous women as emotionally unstable and violent. The person is positioned centrally with arms outstretched, conveying an exaggerated emotional expression. The text overlays the image, presenting a harmful and demeaning stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_crazy_hysterical_indigenous_women",
+      "label": "Stereotype: Indigenous women are crazy or hysterical",
+      "description": "This is a harmful racial and gender stereotype that portrays Indigenous women as emotionally unstable, irrational, or violent. It is used to demean and dehumanize them, reducing their complex identities to a simplistic, irrational caricature. This stereotype is rooted in historical racism and misogyny against Indigenous peoples, particularly women, and is often used to justify systemic discrimination and violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_indigenous_women_violent",
+      "label": "Stereotype: Indigenous women are violent or dangerous",
+      "description": "This stereotype falsely claims that Indigenous women are inherently violent or prone to aggression, often used to justify their marginalization or to portray them as threats to society. It is a racist trope that ignores the reality of Indigenous women’s experiences and contributes to the erasure of their humanity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynistic_stereotype_crazy_hysterical",
+      "label": "Misogynistic Stereotype: Women are crazy or hysterical",
+      "description": "This is a long-standing misogynistic trope that portrays women as emotionally unstable, irrational, or prone to outbursts. It is used to discredit women’s opinions, experiences, and agency, and is often weaponized to justify controlling or belittling them. In this meme, it is combined with racism to target Indigenous women specifically.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_stereotype_indigenous_people",
+      "label": "Racist Stereotype: Indigenous people are primitive or irrational",
+      "description": "This is a racist trope that portrays Indigenous peoples as primitive, irrational, or incapable of rational thought. It is used to justify colonialism, dispossession, and systemic oppression. In this meme, it is combined with misogyny to target Indigenous women specifically, reinforcing harmful racial and gender hierarchies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "term_rez",
+      "label": "Term: 'Rez' as slang for reservation",
+      "description": "The term 'rez' is a colloquial abbreviation for 'reservation,' referring to lands set aside for Native American tribes. While not inherently offensive, in this context, it is used in a derogatory way to refer to Indigenous people, often implying they are 'backwards' or 'primitive.' The term is frequently used in stereotypical or mocking contexts, especially in memes like this one.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "term_rez_as_derogatory",
+      "label": "Term: 'Rez' used as a derogatory label",
+      "description": "In popular culture and online discourse, 'rez' is sometimes used as a derogatory term to refer to Indigenous people, often implying they are 'crazy,' 'uneducated,' or 'living in poverty.' This usage is rooted in racist stereotypes and is considered offensive by many Indigenous communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_indigenous_women_emotional_instability",
+      "label": "Stereotype: Indigenous women are emotionally unstable",
+      "description": "This is a specific and harmful stereotype that targets Indigenous women, portraying them as emotionally volatile or prone to irrational behavior. It is used to undermine their credibility and agency, and is often combined with other racist or misogynistic tropes to justify their marginalization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_indigenous_women_violent_threat",
+      "label": "Stereotype: Indigenous women are violent threats",
+      "description": "This is a racist and misogynistic stereotype that portrays Indigenous women as inherently violent or dangerous, often used to justify their exclusion from public life or to portray them as threats to society. It is a false and harmful trope that ignores the reality of Indigenous women’s experiences and contributes to the erasure of their humanity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_laughter",
+      "label": "mocking and exaggerated laughter",
+      "description": "The person's wide-open mouth, expressive eyes, and outstretched arms convey an exaggerated, theatrical expression of laughter or exuberance, which is used in the meme to mock and ridicule the stereotype being presented. This is not a genuine emotional expression but a performative one meant to enhance the comedic (and hateful) tone of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The text 'some crazy rez girls be like:' maps to the person in the image",
+      "description": "The top text explicitly labels the person in the image as 'some crazy rez girls', establishing an analogical mapping where the person is being represented as an exemplar of this stereotyped group. This mapping is direct and explicit through the text's labeling function.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the person in the meme as an exemplar of the stereotyped group",
+      "description": "The user is projected onto the visual material of the person (a woman in Indigenous-style attire) because the top text explicitly labels her as 'some crazy rez girls'. This creates a direct analogical mapping where the user imagines themselves as part of this stereotyped group, or at least identifies with the persona being mocked. The projection is onto the VisualMaterial entity 'person'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme depicts a person in Indigenous attire with exaggerated, mocking text that stereotypes Indigenous women as emotionally unstable and violent. The phrase 'if you ever leave me, I'll punch myself in the face and tell cops you did it' is presented as a joke, but it is rooted in harmful stereotypes that portray Indigenous women as 'crazy' or 'hysterical,' which is a form of misogynistic and racist caricature. This trope is used to demean and dehumanize Indigenous women, reducing their complex identities to a simplistic, violent, and irrational stereotype. The meme's intent is to ridicule and belittle a specific group based on their gender and ethnicity, making it hateful and harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience that understands and engages with internet humor that relies on harmful stereotypes, particularly those targeting Indigenous women. The target audience likely includes individuals who are familiar with online meme culture and may find the exaggerated, mocking portrayal of 'crazy rez girls' amusing or relatable, despite its deeply offensive and racist content. The use of the term 'rez' as a derogatory label and the specific stereotypes (emotional instability, violence) are coded for an audience that either does not recognize the harm or chooses to ignore it, often reinforcing systemic racism and misogyny.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/07258.png",
+    "image_name": "07258.png",
+    "extraction_timestamp": "2025-12-15T12:58:07.328822",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 18,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

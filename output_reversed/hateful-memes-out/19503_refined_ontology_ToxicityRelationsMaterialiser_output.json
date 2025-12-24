@@ -1,0 +1,30 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "woman"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "child"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :woman .",
+    ":toxicity_1 :hasToxicElement :child .",
+    ":toxicity_1 :hasToxicElement :text_chunk ."
+  ],
+  "triples_count": 3
+}

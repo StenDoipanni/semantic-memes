@@ -1,0 +1,35 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "whispering_scene",
+      "participants": [
+        {
+          "entity": "man_whispering",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "man_listening",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_whispering",
+          "relation": "whispersTo",
+          "to": "man_listening"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":whispering_scene :hasParticipant :man_whispering .",
+    ":whispering_scene :hasParticipant :man_listening .",
+    ":man_whispering :whispersTo :man_listening ."
+  ],
+  "triples_count": 3
+}

@@ -1,0 +1,45 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful anger emotion",
+      "expressors": [
+        {
+          "entity": "meme_file_name",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "meme_file_name",
+          "relation": "emotionalRelationToEntity",
+          "to": "lgbtq_pride_month"
+        },
+        {
+          "from": "meme_file_name",
+          "relation": "emotionalRelationToEntity",
+          "to": "911_tragedy"
+        },
+        {
+          "from": "meme_file_name",
+          "relation": "emotionalRelationToEntity",
+          "to": "lgbtq_discrimination_stereotype"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_anger_emotion :hasExpressor :meme_file_name .",
+    ":meme_file_name :emotionalRelationToEntity :lgbtq_pride_month .",
+    ":meme_file_name :emotionalRelationToEntity :_911_tragedy .",
+    ":meme_file_name :emotionalRelationToEntity :lgbtq_discrimination_stereotype ."
+  ],
+  "triples_count": 4
+}

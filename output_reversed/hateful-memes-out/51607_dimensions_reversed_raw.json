@@ -1,0 +1,258 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The meme depicts a stark contrast: the top panel shows a smiling Muslim man seemingly unaware or indifferent to the tragedy, while the bottom panel shows a crying Muslim man reacting to the same event. The text in both panels refers to the 2019 Christchurch mosque shootings, which killed 49 people. The meme's intent is to portray Muslims as either ignorant or overly emotional about a mass shooting that occurred at mosques, implying a false dichotomy or insensitivity. This is a hateful meme because it targets Muslims by associating them with the perpetrators or victims of a specific atrocity, and it uses the emotional reaction of one individual to stereotype an entire religious group. The juxtaposition of the two images is meant to provoke a reaction that reinforces negative stereotypes about Muslims, particularly by implying they are either insensitive or overly dramatic, which is a form of Islamophobia. The meme does not target any other protected characteristic, but its core intent is to demean and stereotype Muslims based on their religious identity, making it hateful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top_text",
+      "description": "49 people were killed at christchurch",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_smiling",
+      "label": "man smiling while looking at phone",
+      "description": "A bald man with a dark complexion, wearing a black shirt, is smiling broadly while holding and looking at a smartphone. He appears to be in a well-lit office or indoor setting with large windows in the background. The text 'muslim' is overlaid on his image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "scene_top",
+      "label": "man_smiling_reading_phone",
+      "description": "A bald man with a dark complexion, wearing a black shirt, is smiling broadly while holding and looking at a smartphone. He appears to be in a well-lit office or indoor setting with large windows in the background. The text 'muslim' is overlaid on his image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_smiling",
+          "relation": "is_reading",
+          "to": "text_top"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "2019_Christchurch_mosque_shootings",
+      "label": "2019 Christchurch Mosque Shootings",
+      "description": "A mass shooting that occurred on March 15, 2019, at two mosques in Christchurch, New Zealand, during Friday prayers. The perpetrator, Brenton Tarrant, killed 51 people and injured 49 others. The attack was livestreamed on social media and widely condemned globally. The event is referenced in the meme's text and is the central real-world event being depicted. The meme's hateful intent relies on the viewer recognizing this specific, tragic event and associating it with the religious identity of the victims (Muslims) to fuel the stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Islamophobia",
+      "label": "Islamophobia",
+      "description": "A form of prejudice, discrimination, or hostility directed against Muslims. The meme relies on this stereotype by implying that Muslims are either insensitive (top panel) or overly emotional (bottom panel) about a mass shooting that occurred at mosques, thereby portraying them as inherently incapable of appropriate emotional response or as being complicit in the violence. This is a core component of the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Terrorism_associations",
+      "label": "Terrorism Associations",
+      "description": "A common Islamophobic stereotype that links Muslims with terrorism. The meme implicitly uses this by referencing a mass shooting at mosques, which is often associated with terrorism in Western media narratives. The meme's hateful intent is to reinforce this stereotype by portraying Muslims as either indifferent to or overly emotional about such an event, thereby implying a false dichotomy or insensitivity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "False_dichotomy",
+      "label": "False Dichotomy",
+      "description": "A logical fallacy that presents two opposing views as the only possibilities, ignoring other alternatives. The meme uses this by contrasting the 'insensitive' Muslim (top) with the 'overly emotional' Muslim (bottom), implying that Muslims must fall into one of these two categories when reacting to the Christchurch shootings. This is a key rhetorical device used to stereotype and demean Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Christchurch",
+      "label": "Christchurch",
+      "description": "A city in New Zealand. The location of the 2019 mosque shootings. The meme's text references this specific location, which is essential for understanding the context of the event. The image does not show the location, but the text requires the viewer to know that Christchurch is a city in New Zealand to understand the event being referenced.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Mosque",
+      "label": "Mosque",
+      "description": "A place of worship for Muslims. The text in the meme specifies that the shootings occurred at 'mosques', which is crucial for understanding the religious context of the victims. The image does not show a mosque, but the text requires the viewer to know what a mosque is and its significance to Muslims to understand the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Muslim",
+      "label": "Muslim",
+      "description": "A person who follows the religion of Islam. The meme explicitly labels both men as 'muslim', which is essential for understanding the target of the stereotype. The image does not show any religious symbols or attire, but the text requires the viewer to know that the individuals depicted are being identified by their religious identity to understand the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_smiling",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_crying",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "49_people_killed",
+      "label": "49 People Killed",
+      "description": "The specific number of fatalities in the Christchurch mosque shootings. This number is crucial for the meme's impact, as it is used to create a sense of shock and horror. The image does not show the number, but the text requires the viewer to know this specific statistic to understand the gravity of the event being referenced.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "indifference",
+      "label": "indifferent emotion",
+      "description": "The man in the top panel is smiling broadly while looking at his phone, suggesting a lack of concern or emotional response to the tragic event mentioned in the text. His expression is cheerful and detached, contrasting sharply with the gravity of the situation described.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_top",
+      "label": "The text '49 people were killed at christchurch' is mapped onto the smiling man labeled 'muslim'.",
+      "description": "The top panel's text '49 people were killed at christchurch' is juxtaposed with the visual of a smiling man labeled 'muslim'. This mapping implies that the man represents or embodies the reaction (or lack thereof) to the event described in the text, specifically portraying him as indifferent or insensitive to the tragedy. The text explicitly labels the event, and the visual material (the man) is mapped onto this event through the label 'muslim', creating an analogical mapping where the man is presented as a representative of the Muslim community's supposed reaction to the Christchurch shootings.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_bottom",
+      "label": "The text '49 people were killed at christchurch mosques' is mapped onto the crying man labeled 'muslim'.",
+      "description": "The bottom panel's text '49 people were killed at christchurch mosques' is juxtaposed with the visual of a crying man labeled 'muslim'. This mapping implies that the man represents or embodies the emotional reaction to the event described in the text, specifically portraying him as overly emotional or grieving. The text explicitly labels the event, and the visual material (the man) is mapped onto this event through the label 'muslim', creating an analogical mapping where the man is presented as a representative of the Muslim community's supposed reaction to the Christchurch mosque shootings.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the smiling Muslim man in the top panel",
+      "description": "The user is projected onto the visual material of the smiling man labeled 'muslim' in the top panel. The user is expected to see themselves in this figure, interpreting the man's indifference as a representation of how Muslims are supposedly reacting to the Christchurch shootings. This projection is implicit, as the meme does not use explicit deictic pronouns like 'you' or 'me', but the viewer is invited to identify with the figure as a representative of the Muslim community being stereotyped.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme depicts a stark contrast: the top panel shows a smiling Muslim man seemingly unaware or indifferent to the tragedy, while the bottom panel shows a crying Muslim man reacting to the same event. The text in both panels refers to the 2019 Christchurch mosque shootings, which killed 49 people. The meme's intent is to portray Muslims as either ignorant or overly emotional about a mass shooting that occurred at mosques, implying a false dichotomy or insensitivity. This is a hateful meme because it targets Muslims by associating them with the perpetrators or victims of a specific atrocity, and it uses the emotional reaction of one individual to stereotype an entire religious group. The juxtaposition of the two images is meant to provoke a reaction that reinforces negative stereotypes about Muslims, particularly by implying they are either insensitive or overly dramatic, which is a form of Islamophobia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience that is familiar with the 2019 Christchurch mosque shootings and holds Islamophobic views. The target audience is likely individuals who are predisposed to stereotypes about Muslims, particularly those who believe Muslims are either insensitive to or overly emotional about acts of violence against them. The meme relies on the audience's recognition of the specific event and its association with Muslims to reinforce negative stereotypes. The visual contrast and the labeling of both men as 'muslim' are intended to provoke a reaction from viewers who are already inclined to view Muslims through a lens of prejudice or fear.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/51607.png",
+    "image_name": "51607.png",
+    "extraction_timestamp": "2025-12-16T04:08:15.193398",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 18,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_id_1",
+      "hasMappedEntity": "the_only_kkk",
+      "hasMappingEntity": "three_women"
+    },
+    {
+      "from": "three_women",
+      "relation": "mappedOnto",
+      "to": "the_only_kkk"
+    }
+  ],
+  "triples": [
+    ":mapping_id_1 :hasMappedEntity :the_only_kkk .",
+    ":mapping_id_1 :hasMappingEntity :three_women .",
+    ":three_women :mappedOnto :the_only_kkk ."
+  ],
+  "triples_count": 3
+}

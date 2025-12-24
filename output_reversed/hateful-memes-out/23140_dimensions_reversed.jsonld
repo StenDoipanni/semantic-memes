@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_b9084533",
+  "@type": "AnalysisDocument",
+  "title": "23140.png - Dimension Analysis",
+  "created": "2025-12-15T18:35:22.883498",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_c9d5859b",
+    "@type": "Image",
+    "filename": "23140.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/23140.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/23140.png",
+    "image_name": "23140.png",
+    "extraction_timestamp": "2025-12-15T18:32:20.831464",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dcc84d83",
+      "@type": "OverallIntent",
+      "instance_name": "dimension_1",
+      "label": "the overallintent",
+      "description": "The meme uses a young man with long hair and a leather jacket as a visual punchline to a joke about dry skin. The text ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9084533"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a5b38c7b",
+      "@type": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "winter weather got your skin dry?",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9084533"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c692b291",
+      "@type": "VisualMaterial",
+      "instance_name": "young_man",
+      "label": "person",
+      "description": "A young man with long, wavy, light brown hair, wearing a black leather jacket over a striped shirt, looking directly at the camera with a neutral expression. He is the central visual focus of the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9084533"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_73621688",
+      "@type": "Scene",
+      "instance_name": "lotion_joke_scene",
+      "label": "A young man offering lotion as a punchline to a dry skin joke",
+      "description": "The scene features a young man with long hair and a leather jacket, who is the central visual focus. He is positioned in front of a blurred background, looking directly at the camera with a neutral expression. The scene is framed by text at the top and bottom that sets up a joke about winter skin dryness and the punchline that the lotion is 'in the back'. The visual and textual elements together create a humorous, self-referential scene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9084533"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c9a25690",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "winter_weather_dry_skin",
+      "label": "Winter weather causing dry skin",
+      "description": "A common real-world phenomenon where cold, low-humidity weather in winter leads to dehydration and dryness of the skin, prompting the need for moisturizers or lotions. This is the context for the joke's setup.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9084533"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b9f48666",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "lotion_as_punchline",
+      "label": "Lotion as a punchline",
+      "description": "The joke relies on the unexpected and humorous twist that the lotion is not on the person but 'in the back', implying it's not readily available or perhaps even hidden. This is a common comedic device in memes and stand-up comedy, playing on the audience's expectation.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9084533"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bb933f5f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "long_haired_young_man_stereotype",
+      "label": "Stereotype of long-haired young men",
+      "description": "In popular culture, young men with long hair, especially in a leather jacket, are often stereotyped as 'hippies', 'counterculture rebels', or 'unconventional' individuals. This stereotype is used humorously here to imply the person is not conventionally 'practical' or 'ready to help' with a mundane task like applying lotion, enhancing the joke's absurdity.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9084533"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2362dc73",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "leather_jacket_cool_guy_stereotype",
+      "label": "Leather jacket as 'cool guy' stereotype",
+      "description": "Wearing a leather jacket is often associated with a 'cool', rebellious, or edgy persona in popular media and fashion. This stereotype is invoked to contrast with the mundane, practical need for lotion, adding to the humor of the punchline.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9084533"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2395b555",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "self_referential_meme_structure",
+      "label": "Self-referential meme structure",
+      "description": "The meme uses a self-referential format where the image and text work together to create a joke that relies on the viewer understanding the setup and punchline. This is a common structure in internet memes, where the humor comes from the unexpected twist or the absurdity of the situation.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9084533"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7d41b7bc",
+      "@type": "EmotionExpression",
+      "instance_name": "neutral_expression",
+      "label": "neutral facial expression",
+      "description": "The young man is looking directly at the camera with a calm, unemotional face, showing no clear signs of happiness, sadness, anger, or surprise. This neutrality contrasts with the humorous text, enhancing the comedic effect by making his expression seem unhelpful or indifferent to the dry skin situation.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9084533"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a7554a53",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The young man is mapped as the one who has lotion in the back",
+      "description": "The bottom text 'i've got some lotion in the back.' creates an analogical mapping where the young man (visual entity) is implicitly identified as the person who possesses the lotion. The punchline relies on the visual of the young man (who appears to be offering nothing practical) being mapped onto the textual role of the lotion provider, creating a humorous contrast between his appearance and his 'offering'.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9084533"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d6183471",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene as the recipient of the lotion joke",
+      "description": "The user is projected onto the scene (lotion_joke_scene) as the person who is experiencing dry skin, making them the implied 'you' in the question 'winter weather got your skin dry?'. The punchline 'i've got some lotion in the back.' then directly addresses this projected user, creating a self-referential interaction where the user is positioned as the one needing the lotion.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9084533"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_359e883c",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals familiar with internet meme culture, particularly those who recognize and appreciate self-referential humor and visual punchlines. The meme relies on the audience understanding the setup (winter weather causing dry skin) and the punchline (lotion is 'in the back'), which requires cultural awareness of common comedic tropes. The visual of the young man with long hair and a leather jacket is used to invoke stereotypes (e.g., 'hippie' or 'cool guy') that are widely recognized in popular media and internet culture, making the joke accessible to those who have encountered these archetypes. The humor is also targeted at people who experience dry skin in winter and are familiar with the need for lotion, making it relatable to a general demographic that deals with seasonal skin issues. The meme’s structure and visual cues are designed to resonate with a broad, internet-savvy audience that enjoys absurdist humor and visual gags.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9084533"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: hey_i_just_met_you_adolf_hitler_camping_meme; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes a historical photograph of Adolf Hitler, a figure universally recognized as a perpetrator of genocide and one of the most evil leaders in human history, with the innocuous, casual text 'hey, i just met you and this is crazy but here's your number.. so camping, maybe?'. This creates a grotesque and intentionally offensive contrast. The intent is to shock, provoke, and elicit a reaction through the absurdity of associating Hitler with a mundane, harmless activity like camping. The meme is hateful because it uses the image of a genocidal dictator to mock or trivialize his legacy, reducing his monstrous historical role to a joke. This is not merely satire; it is a form of historical revisionism and dehumanization that trivializes the Holocaust and the suffering of millions. The meme's overall intent is to provoke discomfort or laughter at the expense of one of history's most heinous figures, thereby normalizing or trivializing his legacy, which is deeply harmful and offensive to victims of his regime and their descendants.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "hey, i just met you",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Adolf_Hitler",
+      "label": "Historical figure",
+      "description": "A black-and-white portrait of Adolf Hitler, the former Chancellor of Germany and leader of the Nazi Party, who was responsible for the Holocaust and World War II. He is depicted in formal attire with arms crossed, a mustache, and a stern expression. His image is central and highly salient, serving as the visual anchor for the meme's offensive juxtaposition with the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "juxtaposed_meme_scene",
+      "label": "juxtaposed_meme_scene",
+      "description": "A scene where a historical photograph of Adolf Hitler is visually juxtaposed with casual, humorous text that trivializes his legacy by associating him with a mundane activity (camping). The scene is intentionally offensive and hateful, using the stark contrast between the gravitas of Hitler's image and the absurdity of the text to provoke discomfort or laughter at the expense of his historical atrocities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Adolf_Hitler",
+          "relation": "isJuxtaposedWith",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust",
+      "label": "Holocaust",
+      "description": "The systematic, state-sponsored persecution and murder of six million Jews by Nazi Germany and its collaborators during World War II. This event is central to understanding the historical horror associated with Adolf Hitler and is the context that makes the meme's trivialization deeply offensive and hateful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Nazi_Party",
+      "label": "Nazi Party",
+      "description": "The political party led by Adolf Hitler, which came to power in Germany in 1933 and implemented policies leading to the Holocaust and World War II. The party's ideology and actions are the historical foundation for the monstrous legacy associated with Hitler's image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "World_War_II",
+      "label": "World War II",
+      "description": "The global conflict (1939–1945) in which Nazi Germany, under Hitler, was a primary aggressor. The war resulted in unprecedented destruction and loss of life, and Hitler's role as its architect is a key historical reference point for the meme's offensive content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust_denial_minimization",
+      "label": "Holocaust denial/minimization themes",
+      "description": "The act of denying, downplaying, or trivializing the Holocaust, which is a form of antisemitism and historical revisionism. The meme's intent to mock Hitler by associating him with camping is a clear example of this harmful trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "genocide",
+      "label": "genocide",
+      "description": "The systematic extermination of a racial, ethnic, religious, or national group. The Holocaust is the most infamous example of genocide, and the meme's use of Hitler's image to trivialize his role in it is a direct assault on this historical fact.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitism",
+      "label": "antisemitism",
+      "description": "Discrimination or prejudice against Jewish people, often rooted in historical myths and conspiracy theories. The meme's use of Hitler, a central figure in antisemitic ideology, to make a joke is a form of antisemitic trivialization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "camping",
+      "label": "camping",
+      "description": "A recreational activity involving spending time outdoors, often in a tent. The juxtaposition of this mundane, harmless activity with Hitler's image is the core of the meme's absurdity and offensive intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_meme",
+      "label": "hateful meme",
+      "description": "A meme designed to provoke discomfort, shock, or laughter by using offensive, dehumanizing, or trivializing imagery and text. The meme's intent to associate Hitler with camping is a clear example of a hateful meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_laughter",
+      "label": "hateful laughter",
+      "description": "The meme expresses a grotesque, mocking, and offensive emotion by juxtaposing the image of Adolf Hitler with the absurd, trivializing text about 'camping'. This creates a form of dark humor intended to shock and provoke discomfort, not genuine amusement, and is rooted in antisemitic and Holocaust-denial/minimization themes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Hitler is mapped as a person who just met someone and is offering a number for camping",
+      "description": "The text 'hey, i just met you and this is crazy but here's your number.. so camping, maybe?' is mapped onto Adolf_Hitler. The meme implies that Adolf_Hitler is the 'person' who just met someone and is offering a 'number' (a phone number) for 'camping'. This is an absurd and offensive analogical mapping that trivializes Hitler's monstrous legacy by associating him with a mundane, harmless activity. The mapping is created through the juxtaposition of the text with the visual material, where the text's casual tone and content are projected onto the image of Hitler, who is a historical figure associated with genocide and the Holocaust.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material as the 'person' initiating the interaction",
+      "description": "The user is projected onto the textual material ('hey, i just met you...') which frames the user as the 'person' who just met someone and is offering a number for camping. This projection is implicit through the first-person perspective of the text, which the user identifies with when viewing the meme. The user is not explicitly deictic (e.g., 'me' or 'you'), but the text's casual, conversational tone and the meme's structure create a direct identification with the speaker of the text, making the user the 'you' in the scenario. The user is projected onto the text_chunk entity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses the image of Adolf Hitler, a genocidal dictator responsible for the Holocaust, in a grotesque juxtaposition with casual, trivializing text about 'camping'. This is a direct attack on the historical memory of the Holocaust and the victims of Nazi atrocities, trivializing one of history's most heinous figures and his crimes. The intent is to shock and provoke laughter at the expense of his legacy, which is deeply offensive and hateful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who are familiar with internet meme culture and are capable of understanding the absurd and offensive juxtaposition of Adolf Hitler with casual, trivializing text about camping. The meme is designed to provoke shock, discomfort, or laughter through its grotesque contrast, and thus targets an audience that finds such dark humor or historical revisionism amusing or provocative. This audience likely includes users of online platforms where such memes circulate, and may be drawn to the meme for its shock value or as a form of edgy, controversial content. The meme's intent to trivialize Hitler's legacy and the Holocaust makes it particularly offensive to victims and descendants of Nazi atrocities, but the target audience is not necessarily composed of those individuals — rather, it is those who are not deeply affected by the historical gravity and who may find the meme's absurdity humorous or attention-grabbing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/28905.png",
+    "image_name": "28905.png",
+    "extraction_timestamp": "2025-12-15T20:52:00.830225",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

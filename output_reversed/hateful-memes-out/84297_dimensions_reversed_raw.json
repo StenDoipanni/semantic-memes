@@ -1,0 +1,200 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image features actor Tim Robbins with a surprised facial expression, overlaid with text that reads: 'you want a fight? put your head up my ass and fight for air. whats up!'. The text is a crude, vulgar, and aggressive taunt that uses a sexually suggestive and demeaning metaphor ('put your head up my ass') to provoke or intimidate. While the meme does not target any specific protected group (race, gender, religion, etc.) in a discriminatory way, its content is intentionally offensive, crude, and potentially harmful due to its vulgar language and aggressive tone. The intent is to shock, provoke, or elicit a strong emotional reaction through absurd and offensive humor, which can be considered harmful due to its potential to offend or upset viewers. The meme relies on juxtaposing the actor's innocent-looking expression with the violent, vulgar text to create a comedic or ironic effect, but the underlying message is hostile and disrespectful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "you want a fight?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Tim_Robbins",
+      "label": "actor",
+      "description": "A middle-aged man with medium-length brown hair, a mustache, and a goatee, wearing a light blue collared shirt. He has a surprised or startled facial expression with wide eyes and slightly parted lips. He is the central subject of the image, positioned against a plain white background with partial blue lettering visible behind him.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "vulgar_taunt_scene",
+      "label": "actor_delivering_vulgar_taunt",
+      "description": "The scene depicts actor Tim Robbins with a surprised facial expression, overlaid with text that delivers a crude, vulgar, and aggressive taunt. The text reads: 'you want a fight? put your head up my ass and fight for air. whats up!'. The juxtaposition of the actor's innocent-looking expression with the violent, vulgar text creates a comedic or ironic effect, but the underlying message is hostile and disrespectful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Tim_Robbins",
+          "relation": "isDelivering",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "vulgar_taunt_concept",
+      "label": "Vulgar Taunt Concept",
+      "description": "The phrase 'put your head up my ass and fight for air' is a crude, vulgar, and sexually suggestive metaphor used to provoke or intimidate. It relies on shock value and offensive humor, often associated with aggressive or hostile communication styles. This concept is not visible in the image but is essential to understanding the meme's intent and impact.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "tim_robbins_actor",
+      "label": "Tim Robbins as Actor",
+      "description": "Tim Robbins is a well-known American actor, director, and producer. His recognizable appearance and public persona are key to the meme's effect, as his innocent or surprised expression is juxtaposed with the vulgar text. This contrast is a common meme technique, relying on the audience's recognition of the actor to create irony or absurdity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_juxtaposition_technique",
+      "label": "Meme Juxtaposition Technique",
+      "description": "This meme uses the technique of juxtaposing an innocent or surprised facial expression with aggressive, vulgar, or absurd text to create a comedic or ironic effect. This technique is common in internet memes and relies on the audience understanding the contrast between the visual and textual elements to derive humor or meaning.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "offensive_humor",
+      "label": "Offensive Humor",
+      "description": "The meme relies on offensive humor, which uses crude, vulgar, or taboo language to provoke a reaction or elicit laughter. This type of humor is often considered harmful or inappropriate due to its potential to offend or upset viewers, especially when it involves sexual or violent metaphors.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexual_suggestion_metaphor",
+      "label": "Sexual Suggestion Metaphor",
+      "description": "The phrase 'put your head up my ass' is a sexually suggestive metaphor that implies a demeaning or degrading act. This type of metaphor is often used in vulgar taunts to provoke or intimidate, and it relies on the audience understanding the sexual connotation to fully grasp the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hostility",
+      "label": "hostile emotion expressed through vulgar taunt",
+      "description": "The emotion of hostility is conveyed through the aggressive and vulgar text 'you want a fight? put your head up my ass and fight for air. whats up!', which is a crude taunt intended to provoke, intimidate, and demean. This hostile intent is juxtaposed with Tim Robbins' surprised facial expression, creating a comedic or ironic effect that masks the underlying aggression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'you want a fight?' is mapped onto Tim Robbins' surprised facial expression.",
+      "description": "The top text 'you want a fight?' is juxtaposed with Tim Robbins' surprised facial expression, creating an analogical mapping where the text's implied subject (a confrontational challenger) is visually represented by the actor's startled look. This mapping uses the actor's expression to embody the persona or state described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual taunt as the aggressor",
+      "description": "The user is projected onto the textual material 'you want a fight?' and the subsequent vulgar taunt, as the text directly addresses an implied 'you' (the viewer or opponent). The user is positioned as the target of the aggressive challenge, and the meme invites the user to imagine themselves as the one being provoked or insulted. The projection is onto the textual material, which contains the deictic 'you' and 'your head', creating an implicit identification with the recipient of the taunt.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme contains vulgar, aggressive, and sexually suggestive language ('put your head up my ass and fight for air') that is intended to provoke, intimidate, and demean. While it does not target specific protected groups (race, gender, religion, etc.), its content is offensive, crude, and potentially harmful due to its shock value and hostile tone. The juxtaposition of Tim Robbins' innocent expression with the vulgar taunt creates a comedic effect but masks underlying hostility, which can offend or upset viewers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad general internet audience familiar with meme culture, particularly those who appreciate offensive humor, shock value, and the juxtaposition of innocent visuals with vulgar text. The target community includes users who understand and engage with internet memes that rely on irony, absurdity, and crude language for comedic effect, even if the content is potentially offensive or harmful. The use of a well-known actor (Tim Robbins) as a visual anchor further indicates the meme is intended for an audience that recognizes celebrity imagery and can interpret the contrast between the actor's expression and the text as a form of humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/84297.png",
+    "image_name": "84297.png",
+    "extraction_timestamp": "2025-12-19T15:01:11.675323",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

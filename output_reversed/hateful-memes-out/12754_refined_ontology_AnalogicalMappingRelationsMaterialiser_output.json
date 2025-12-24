@@ -1,0 +1,39 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_001",
+      "hasMappedEntity": "text_chunk",
+      "hasMappingEntity": "woman_on_left"
+    },
+    {
+      "mapping": "mapping_001",
+      "hasMappedEntity": "text_chunk",
+      "hasMappingEntity": "woman_on_right"
+    },
+    {
+      "from": "woman_on_left",
+      "relation": "mappedOnto",
+      "to": "text_chunk"
+    },
+    {
+      "from": "woman_on_right",
+      "relation": "mappedOnto",
+      "to": "text_chunk"
+    }
+  ],
+  "triples": [
+    ":mapping_001 :hasMappedEntity :text_chunk .",
+    ":mapping_001 :hasMappingEntity :woman_on_left .",
+    ":mapping_001 :hasMappedEntity :text_chunk .",
+    ":mapping_001 :hasMappingEntity :woman_on_right .",
+    ":woman_on_left :mappedOnto :text_chunk .",
+    ":woman_on_right :mappedOnto :text_chunk ."
+  ],
+  "triples_count": 6
+}

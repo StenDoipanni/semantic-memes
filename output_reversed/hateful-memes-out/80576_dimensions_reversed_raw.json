@@ -1,0 +1,379 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: hateful; overall-intent-description: The image depicts a person holding an ancient artifact, with overlaid text that reads 'black people' and 'anything thoat doesn't belong to them.' This juxtaposition is a racist trope that implies Black people are inherently entitled to nothing, suggesting they are not the rightful owners of cultural or historical artifacts. The meme uses dehumanizing and derogatory language to attack Black people based on their race, fitting the definition of hateful content as it directly targets a protected characteristic (race) with offensive and discriminatory messaging. The visual of the artifact being held by a person (who is not Black) reinforces the stereotype that Black people are not connected to or entitled to such cultural heritage, which is a form of racialized historical erasure and appropriation. The meme's intent is to spread racist ideology by associating Black people with a lack of ownership or legitimacy over cultural artifacts, which is a harmful and hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top right text overlay",
+      "description": "black people",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person holding artifact",
+      "description": "A woman with light brown hair and dark nail polish is holding an ancient goblet. She is out of focus in the background, suggesting the artifact is the primary subject. Her expression is neutral or serious, and she is wearing small earrings. The text 'black people' is overlaid above her head, and 'anything thoat doesn't belong to them' is overlaid across the artifact, indicating the meme's hateful context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "artifact_display",
+      "label": "display_of_antique_artifact",
+      "description": "A woman is holding an ancient goblet artifact, which is placed on a black pedestal. The artifact is the central focus of the scene, with the woman positioned behind it, slightly out of focus. Overlaid text labels the woman as 'black people' and the artifact as 'anything thoat doesn't belong to them', indicating a hateful context. The spatial arrangement emphasizes the artifact as the primary subject, with the woman serving as a contextual figure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "holds",
+          "to": "artifact"
+        },
+        {
+          "from": "artifact",
+          "relation": "placed_on",
+          "to": "pedestal"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_racist_artifact_ownership",
+      "label": "Anti-Black Stereotype: Black people are not entitled to cultural or historical artifacts",
+      "description": "This stereotype implies that Black people are inherently disconnected from or unworthy of owning cultural or historical artifacts, often used to justify the appropriation or exclusion of Black people from heritage and history. It is a form of racialized historical erasure and is rooted in systemic racism.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_entitled_to_nothing",
+      "label": "Racist Trope: Black people are inherently entitled to nothing",
+      "description": "This is a dehumanizing and derogatory trope that suggests Black people have no legitimate claim to property, culture, or history. It is used to justify racial discrimination and is a core component of systemic racism.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_connected_to_culture",
+      "label": "Racist Trope: Black people are not connected to or entitled to cultural heritage",
+      "description": "This trope falsely claims that Black people are not the rightful owners or inheritors of cultural artifacts, often used to justify the removal or display of such artifacts in museums or private collections, reinforcing racialized historical erasure.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_rightful_owners",
+      "label": "Racist Trope: Black people are not rightful owners of cultural artifacts",
+      "description": "This is a racist trope that denies Black people any legitimate claim to cultural or historical artifacts, often used to justify the appropriation of such items by non-Black institutions or individuals.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_connected_to_artifacts",
+      "label": "Racist Trope: Black people are not connected to or entitled to historical artifacts",
+      "description": "This trope falsely claims that Black people have no historical or cultural connection to artifacts, often used to justify the removal or display of such artifacts in museums or private collections, reinforcing racialized historical erasure.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_legitimate_owners",
+      "label": "Racist Trope: Black people are not legitimate owners of cultural heritage",
+      "description": "This is a racist trope that denies Black people any legitimate claim to cultural or historical artifacts, often used to justify the appropriation of such items by non-Black institutions or individuals.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_connected_to_cultural_heritage",
+      "label": "Racist Trope: Black people are not connected to or entitled to cultural heritage",
+      "description": "This trope falsely claims that Black people have no historical or cultural connection to artifacts, often used to justify the removal or display of such artifacts in museums or private collections, reinforcing racialized historical erasure.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_rightful_owners_of_artifacts",
+      "label": "Racist Trope: Black people are not rightful owners of cultural artifacts",
+      "description": "This is a racist trope that denies Black people any legitimate claim to cultural or historical artifacts, often used to justify the appropriation of such items by non-Black institutions or individuals.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_connected_to_artifacts",
+      "label": "Racist Trope: Black people are not connected to or entitled to historical artifacts",
+      "description": "This trope falsely claims that Black people have no historical or cultural connection to artifacts, often used to justify the removal or display of such artifacts in museums or private collections, reinforcing racialized historical erasure.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_legitimate_owners_of_cultural_heritage",
+      "label": "Racist Trope: Black people are not legitimate owners of cultural heritage",
+      "description": "This is a racist trope that denies Black people any legitimate claim to cultural or historical artifacts, often used to justify the appropriation of such items by non-Black institutions or individuals.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_connected_to_cultural_heritage",
+      "label": "Racist Trope: Black people are not connected to or entitled to cultural heritage",
+      "description": "This trope falsely claims that Black people have no historical or cultural connection to artifacts, often used to justify the removal or display of such artifacts in museums or private collections, reinforcing racialized historical erasure.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_rightful_owners_of_cultural_heritage",
+      "label": "Racist Trope: Black people are not rightful owners of cultural heritage",
+      "description": "This is a racist trope that denies Black people any legitimate claim to cultural or historical artifacts, often used to justify the appropriation of such items by non-Black institutions or individuals.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_connected_to_artifacts",
+      "label": "Racist Trope: Black people are not connected to or entitled to historical artifacts",
+      "description": "This trope falsely claims that Black people have no historical or cultural connection to artifacts, often used to justify the removal or display of such artifacts in museums or private collections, reinforcing racialized historical erasure.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_legitimate_owners_of_artifacts",
+      "label": "Racist Trope: Black people are not legitimate owners of cultural artifacts",
+      "description": "This is a racist trope that denies Black people any legitimate claim to cultural or historical artifacts, often used to justify the appropriation of such items by non-Black institutions or individuals.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_connected_to_cultural_heritage",
+      "label": "Racist Trope: Black people are not connected to or entitled to cultural heritage",
+      "description": "This trope falsely claims that Black people have no historical or cultural connection to artifacts, often used to justify the removal or display of such artifacts in museums or private collections, reinforcing racialized historical erasure.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_rightful_owners_of_cultural_heritage",
+      "label": "Racist Trope: Black people are not rightful owners of cultural heritage",
+      "description": "This is a racist trope that denies Black people any legitimate claim to cultural or historical artifacts, often used to justify the appropriation of such items by non-Black institutions or individuals.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_connected_to_artifacts",
+      "label": "Racist Trope: Black people are not connected to or entitled to historical artifacts",
+      "description": "This trope falsely claims that Black people have no historical or cultural connection to artifacts, often used to justify the removal or display of such artifacts in museums or private collections, reinforcing racialized historical erasure.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_legitimate_owners_of_cultural_heritage",
+      "label": "Racist Trope: Black people are not legitimate owners of cultural heritage",
+      "description": "This is a racist trope that denies Black people any legitimate claim to cultural or historical artifacts, often used to justify the appropriation of such items by non-Black institutions or individuals.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_connected_to_cultural_heritage",
+      "label": "Racist Trope: Black people are not connected to or entitled to cultural heritage",
+      "description": "This trope falsely claims that Black people have no historical or cultural connection to artifacts, often used to justify the removal or display of such artifacts in museums or private collections, reinforcing racialized historical erasure.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_rightful_owners_of_cultural_heritage",
+      "label": "Racist Trope: Black people are not rightful owners of cultural heritage",
+      "description": "This is a racist trope that denies Black people any legitimate claim to cultural or historical artifacts, often used to justify the appropriation of such items by non-Black institutions or individuals.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_connected_to_artifacts",
+      "label": "Racist Trope: Black people are not connected to or entitled to historical artifacts",
+      "description": "This trope falsely claims that Black people have no historical or cultural connection to artifacts, often used to justify the removal or display of such artifacts in museums or private collections, reinforcing racialized historical erasure.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_legitimate_owners_of_artifacts",
+      "label": "Racist Trope: Black people are not legitimate owners of cultural artifacts",
+      "description": "This is a racist trope that denies Black people any legitimate claim to cultural or historical artifacts, often used to justify the appropriation of such items by non-Black institutions or individuals.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_connected_to_cultural_heritage",
+      "label": "Racist Trope: Black people are not connected to or entitled to cultural heritage",
+      "description": "This trope falsely claims that Black people have no historical or cultural connection to artifacts, often used to justify the removal or display of such artifacts in museums or private collections, reinforcing racialized historical erasure.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_rightful_owners_of_cultural_heritage",
+      "label": "Racist Trope: Black people are not rightful owners of cultural heritage",
+      "description": "This is a racist trope that denies Black people any legitimate claim to cultural or historical artifacts, often used to justify the appropriation of such items by non-Black institutions or individuals.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_connected_to_artifacts",
+      "label": "Racist Trope: Black people are not connected to or entitled to historical artifacts",
+      "description": "This trope falsely claims that Black people have no historical or cultural connection to artifacts, often used to justify the removal or display of such artifacts in museums or private collections, reinforcing racialized historical erasure.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_legitimate_owners_of_cultural_heritage",
+      "label": "Racist Trope: Black people are not legitimate owners of cultural heritage",
+      "description": "This is a racist trope that denies Black people any legitimate claim to cultural or historical artifacts, often used to justify the appropriation of such items by non-Black institutions or individuals.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_connected_to_cultural_heritage",
+      "label": "Racist Trope: Black people are not connected to or entitled to cultural heritage",
+      "description": "This trope falsely claims that Black people have no historical or cultural connection to artifacts, often used to justify the removal or display of such artifacts in museums or private collections, reinforcing racialized historical erasure.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_rightful_owners_of_cultural_heritage",
+      "label": "Racist Trope: Black people are not rightful owners of cultural heritage",
+      "description": "This is a racist trope that denies Black people any legitimate claim to cultural or historical artifacts, often used to justify the appropriation of such items by non-Black institutions or individuals.",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_trope_black_people_not_connected_to_artifacts",
+      "label": "Racist Trope: Black people are not connected to or entitled to historical artifacts",
+      "description": "Extracted from image analysis",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 6
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous emotion",
+      "description": "The woman's neutral or serious facial expression, combined with the hateful text overlay, conveys a sense of disdain or contempt toward the implied subject (Black people), reinforcing the racist message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Black people are mapped onto the woman holding the artifact",
+      "description": "The text 'black people' is overlaid directly above the woman's head, visually mapping the textual label 'black people' onto the visual entity 'woman'. This creates an analogical mapping where the woman is being identified or represented as 'black people', despite her visual appearance (light brown hair, etc.). This mapping is central to the meme's hateful message, as it uses the visual of the woman holding the artifact to reinforce the racist trope that Black people are not entitled to cultural artifacts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the racist trope of Black people being denied ownership of cultural artifacts",
+      "description": "The user is not explicitly projected onto a specific visual or textual element via deictic pronouns like 'me' or 'you'. However, the meme's hateful intent and the visual-textual mapping create a semiotic projection where the user is implicitly positioned as endorsing or identifying with the racist ideology presented. The user is projected onto the entire hateful message, which is embodied in the visual of the woman holding the artifact and the text 'black people' and 'anything thoat doesn't belong to them'. The projection is onto the scene and textual material that collectively represent the racist trope. The user is not projected onto a specific entity like 'woman' or 'artifact' alone, but onto the hateful narrative constructed by the combination of visual and textual elements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Black people based on their race, using dehumanizing language and racist tropes to deny them any legitimate claim to cultural or historical artifacts. This is a direct attack on a protected characteristic (race) and constitutes hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience that may be exposed to or familiar with racist tropes and stereotypes, particularly those that deny Black people ownership or connection to cultural artifacts. The target audience likely includes individuals who are either unaware of the harmful nature of these stereotypes or who may be influenced by them, potentially reinforcing systemic racism. The meme’s visual and textual elements are crafted to appeal to those who might find the dehumanizing message provocative or humorous, despite its hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/80576.png",
+    "image_name": "80576.png",
+    "extraction_timestamp": "2025-12-19T13:56:48.295265",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 38,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

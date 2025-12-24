@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_7f3f80da",
+  "@type": "AnalysisDocument",
+  "title": "20371.png - Dimension Analysis",
+  "created": "2025-12-15T18:00:17.724612",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_11f009e7",
+    "@type": "Image",
+    "filename": "20371.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/20371.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/20371.png",
+    "image_name": "20371.png",
+    "extraction_timestamp": "2025-12-15T17:58:03.240294",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7544e36e",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: harmful; overall-intent-description: The image depicts a Black woman with her mouth open in an exaggerated, possibly distressed or aggressive expression, juxtaposed with the text 'when you ask the stroke patient to smile.' This creates a harmful and misleading analogy, implying that asking a stroke patient to smile might result in a grotesque or primal reaction. The meme is toxic because it uses a vulnerable medical condition (stroke) to generate shock humor, potentially stigmatizing stroke patients and reinforcing negative stereotypes about Black people by associating them with primal or animalistic behavior. The visual of the woman's expression, combined with the text, is designed to provoke a reaction through shock value, which can be harmful by reducing a serious medical condition to a joke and by potentially reinforcing racial stereotypes. The meme does not target a specific individual but uses a racialized visual to mock a medical condition, which can contribute to broader societal harm by normalizing the dehumanization of people with disabilities or medical conditions, particularly when tied to race.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f3f80da"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_79efbc97",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you ask the stroke patient to smile",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f3f80da"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5596c10e",
+      "@type": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "Black woman",
+      "description": "A Black woman with dark, curly hair, shown from the shoulders up, with her mouth wide open in an exaggerated expression. Her eyes are rolled back, and her teeth are visible, conveying a look of distress, aggression, or primal reaction. She appears to be lying down or reclining, with one hand near her neck or shoulder. The lighting is dramatic, highlighting her face against a dark background.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f3f80da"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5a2ecd92",
+      "@type": "Scene",
+      "instance_name": "primal_reaction_scene",
+      "label": "Primal Reaction Scene",
+      "description": "A scene depicting a Black woman with an exaggerated, distressed, or aggressive facial expression, with her mouth wide open and eyes rolled back, conveying a primal or animalistic reaction. The scene is juxtaposed with the text 'when you ask the stroke patient to smile,' creating a harmful and misleading analogy. The woman appears to be lying down or reclining, with one hand near her neck or shoulder, under dramatic lighting against a dark background.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f3f80da"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a7ba8546",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_primal_animalistic",
+      "label": "Anti-Black Stereotype: Primal or Animalistic Behavior",
+      "description": "The meme relies on the harmful stereotype that Black people are inherently aggressive, primal, or animalistic. The exaggerated, open-mouthed expression of the Black woman in the image is used to visually represent this stereotype, which is then linked to the medical context of a stroke patient being asked to smile. This association is not medically accurate and is rooted in racist caricatures that dehumanize Black individuals by equating them with non-human or primitive behavior.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f3f80da"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ed7cfd50",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "stroke_patient_medical_context",
+      "label": "Medical Context: Stroke Patient",
+      "description": "The meme references the real-world medical condition of stroke, which can cause facial paralysis (e.g., Bell's palsy or hemiplegia) and impair a patient's ability to smile or control facial muscles. The text 'when you ask the stroke patient to smile' implies a physical inability or a forced, unnatural expression, which is a real medical scenario. However, the meme misrepresents this by juxtaposing it with a grotesque, primal reaction, thereby mocking the patient's condition and reducing a serious medical issue to a joke.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f3f80da"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c8948e32",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "shock_humor_trope",
+      "label": "Shock Humor Trope",
+      "description": "The meme uses shock humor, a comedic technique that derives its effect from depicting something shocking, grotesque, or taboo. In this case, the shock value comes from the juxtaposition of a vulnerable medical scenario (a stroke patient) with a racially charged, primal visual. This trope is often used to provoke laughter through discomfort, but in this context, it is harmful because it exploits a medical condition and racial stereotype for comedic effect, potentially reinforcing prejudice.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f3f80da"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_277f2b0d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "ableism_stereotype",
+      "label": "Ableism Stereotype: Mocking Physical Disability",
+      "description": "The meme perpetuates ableist stereotypes by mocking the physical limitations of a stroke patient. It implies that asking a stroke patient to smile is an unreasonable or absurd request, and the exaggerated reaction is presented as a humorous consequence. This is a form of ableism that reduces a person's medical condition to a punchline, reinforcing the idea that people with disabilities are burdensome or comical, rather than deserving of dignity and care.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f3f80da"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_82c492aa",
+      "@type": "EmotionExpression",
+      "instance_name": "primal_aggression",
+      "label": "primal aggression expression",
+      "description": "The woman's facial expression, with her mouth wide open, teeth bared, and eyes rolled back, conveys a primal, aggressive, or distressed emotional state. This expression is exaggerated and is visually associated with animalistic or non-human behavior, which is reinforced by the meme's context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f3f80da"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bfef9b90",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Stroke Patient is mapped to Primal Reaction Scene",
+      "description": "The text 'when you ask the stroke patient to smile' is mapped onto the visual of the Black woman's primal reaction. The meme implies that asking a stroke patient to smile results in the exaggerated, animalistic expression shown, thereby equating the medical condition with a primal, aggressive response. This mapping is harmful as it uses a real medical scenario to reinforce racist stereotypes about Black people being inherently primal or aggressive.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f3f80da"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2ba8b142",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of the primal reaction",
+      "description": "The user is projected onto the visual scene of the Black woman's exaggerated, primal reaction, which is juxtaposed with the text about asking a stroke patient to smile. The meme implies that the user (or the viewer) is imagining themselves in the position of asking the stroke patient, and the resulting reaction is the grotesque, animalistic expression shown. This projection is part of the shock humor trope, where the viewer is invited to imagine the absurd or shocking outcome, thereby internalizing the stereotype.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f3f80da"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_64d6af6d",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a vulnerable medical condition (stroke) to generate shock humor, potentially stigmatizing stroke patients and reinforcing negative stereotypes about Black people by associating them with primal or animalistic behavior. The visual of the woman's expression, combined with the text, is designed to provoke a reaction through shock value, which can be harmful by reducing a serious medical condition to a joke and by potentially reinforcing racial stereotypes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f3f80da"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7bb893ef",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who are familiar with or enjoy shock humor that relies on racial stereotypes and ableist tropes. The meme is designed to provoke laughter through discomfort by juxtaposing a medical condition (stroke patient) with a racially charged, primal visual of a Black woman. This suggests the audience likely includes people who find humor in dehumanizing or mocking vulnerable groups, particularly those who may hold or reinforce anti-Black stereotypes or ableist views. The meme’s toxicity and reliance on harmful analogies indicate it targets an audience that either does not recognize the harm or actively seeks out content that reinforces prejudice, particularly through the lens of racialized shock humor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_7f3f80da"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

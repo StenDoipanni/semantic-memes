@@ -1,0 +1,39 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "mocking disgust at perceived moral decline",
+      "expressors": [
+        {
+          "entity": "the meme",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "the meme",
+          "relation": "emotionalRelationToEntity",
+          "to": "man_in_1947"
+        },
+        {
+          "from": "the meme",
+          "relation": "emotionalRelationToEntity",
+          "to": "woman_in_2017"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":mocking_disgust_at_perceived_moral_decline :hasExpressor :the_meme .",
+    ":the_meme :emotionalRelationToEntity :man_in_1947 .",
+    ":the_meme :emotionalRelationToEntity :woman_in_2017 ."
+  ],
+  "triples_count": 3
+}

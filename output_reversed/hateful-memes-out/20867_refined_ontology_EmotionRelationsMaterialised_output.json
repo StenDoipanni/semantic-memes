@@ -1,0 +1,39 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "mocking emotion",
+      "expressors": [
+        {
+          "entity": "goat",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "goat",
+          "relation": "emotionalRelationToEntity",
+          "to": "muslim"
+        },
+        {
+          "from": "goat",
+          "relation": "emotionalRelationToEntity",
+          "to": "porn star"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":mocking_emotion :hasExpressor :goat .",
+    ":goat :emotionalRelationToEntity :muslim .",
+    ":goat :emotionalRelationToEntity :porn_star ."
+  ],
+  "triples_count": 3
+}

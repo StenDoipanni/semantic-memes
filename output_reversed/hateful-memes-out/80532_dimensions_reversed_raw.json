@@ -1,0 +1,191 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: lovely_couch_you_have_here; hasOverallIntent: harmful; overall-intent-description: The meme depicts a baby in a bear costume sitting on an ornate couch, with text that reads: 'lovely couch you have here,' 'it'd be a shame if someone were to,' and 'shit on it.' The overall intent is to create a humorous, absurd, and slightly vulgar punchline by juxtaposing the innocence of a baby with the crude, taboo phrase 'shit on it.' While not targeting any specific group or individual, the meme's intent is to shock or provoke laughter through taboo language and the unexpected combination of a cute image with a vulgar concept. The humor derives from the incongruity and the mild taboo, which can be considered harmful or offensive to some viewers due to its crude nature, even if not explicitly targeting a protected group. The meme is not abusive, cyberbullying, hateful, misogynistic, or propagandistic, but its use of vulgar language and the potential to offend or discomfort viewers makes it potentially harmful in context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "lovely couch you have here",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "middle text overlay",
+      "description": "it'd be a shame if someone were to",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_3",
+      "label": "bottom text overlay",
+      "description": "shit on it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "baby",
+      "label": "child wearing bear costume",
+      "description": "A baby dressed in a brown and white bear costume with ears on the hood, sitting upright on a couch. The baby has wide, expressive eyes and appears to be looking directly at the camera in all three panels, with facial expressions changing slightly to convey innocence or surprise. The costume covers the baby's entire body, including the head, and has white accents on the chest and cuffs. The baby's hands are visible, sometimes holding small objects or resting on the lap.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "couch_sitting_scene",
+      "label": "Baby sitting on an ornate couch",
+      "description": "A baby dressed in a bear costume is seated upright on a large, ornate, beige upholstered couch with dark wooden trim. The baby is the central focus, positioned centrally on the couch cushion, looking directly at the camera with changing expressions across the three panels. The couch is the primary spatial element, providing a stable, luxurious setting for the baby. The scene is composed of three sequential panels showing the same baby and couch, with text overlays that create a narrative progression from admiration to a crude punchline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "baby",
+          "relation": "sittingOn",
+          "to": "couch"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "vulgar_language_use",
+      "label": "Use of crude or taboo language",
+      "description": "The phrase 'shit on it' is a vulgar expression that references bodily waste, which is considered taboo in many cultures. Its use in a meme context creates shock value and humor by juxtaposing innocence (the baby) with crude language. This requires background knowledge of social taboos and the cultural understanding that such language is offensive or inappropriate in polite conversation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_3",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "incongruity_humor",
+      "label": "Incongruity humor",
+      "description": "The humor derives from the juxtaposition of a cute, innocent image (a baby in a bear costume) with a crude, taboo concept ('shit on it'). This relies on background knowledge of comedic techniques, specifically incongruity humor, where the clash between two unrelated or opposing elements (cute vs. vulgar) creates surprise and amusement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "baby_innocence_stereotype",
+      "label": "Baby innocence stereotype",
+      "description": "The meme relies on the cultural stereotype that babies are inherently innocent, pure, and incapable of wrongdoing. This stereotype is used to heighten the absurdity of the punchline, as the baby is portrayed as the potential 'culprit' of a vulgar act. Understanding this stereotype is necessary to appreciate the humor and the implied incongruity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "taboo_juxtaposition",
+      "label": "Taboo juxtaposition for comedic effect",
+      "description": "The meme uses the contrast between a wholesome, domestic setting (a lovely couch) and a crude, taboo action (shitting on it) to create humor. This technique requires background knowledge of how taboo subjects are used in comedy to provoke laughter through shock or discomfort, which is a common trope in internet memes and satire.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "innocence",
+      "label": "innocent expression",
+      "description": "The baby's wide, unblinking eyes and upright, still posture convey a sense of pure, uncorrupted innocence. This expression is consistent across all three panels, reinforcing the stereotype of babies as inherently innocent and incapable of wrongdoing, which is central to the meme's humor and shock value.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "baby is the one who might shit on the couch",
+      "description": "The text 'shit on it' is mapped onto the baby, implying that the baby is the potential agent of the vulgar action. This mapping relies on the visual of the baby (a symbol of innocence) being juxtaposed with the crude text, creating an incongruous and humorous scenario where the baby is humorously projected as the one who might commit the taboo act.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the baby as the potential agent of the vulgar action",
+      "description": "The user is projected onto the baby (visual material) as the implied subject of the punchline 'shit on it.' The meme uses the baby's innocence and the visual of the baby sitting on the couch to create an incongruous scenario where the user (as the viewer) is humorously invited to imagine the baby as the one who might commit the taboo act. This projection relies on the baby's visual representation and the textual punchline to create a shared humorous experience where the user identifies with the baby as the potential 'culprit.'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses vulgar language ('shit on it') in a context that juxtaposes innocence (a baby) with a crude taboo action, which can be offensive or discomforting to some viewers. While not targeting specific groups, the use of taboo language and the incongruous humor can be considered potentially harmful due to its crude nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with internet humor tropes, particularly those involving incongruity, taboo juxtaposition, and shock value. The target community includes viewers who appreciate crude, absurdist humor and are comfortable with vulgar language in a comedic context. The meme relies on widely understood cultural references such as baby innocence stereotypes and the use of taboo language for comedic effect, making it accessible to a general demographic that engages with meme culture. The humor is not targeted at any specific protected group but is intended to provoke laughter through the unexpected combination of a cute image with a vulgar punchline, appealing to audiences who enjoy edgy or 'gross' humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/80532.png",
+    "image_name": "80532.png",
+    "extraction_timestamp": "2025-12-19T13:53:39.211290",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

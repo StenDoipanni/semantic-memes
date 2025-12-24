@@ -1,0 +1,183 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts two individuals, a man and a woman, posing together at what appears to be an awards ceremony (American Music Awards backdrop). The man is holding an award and wearing a hat and gold chains, while the woman is dressed in a shiny yellow top and patterned pants. The overlaid text reads: 'there's so much white trash in this picture i barely know where to start!'. The meme uses this text to mock the appearance or perceived 'trashiness' of the individuals, particularly targeting their clothing and style. The term 'white trash' is a derogatory stereotype historically used to demean people of lower socioeconomic status, often implying laziness, lack of education, or moral inferiority. This usage is inherently racist and classist, as it relies on a harmful racialized and class-based stereotype to insult the subjects. The intent is to ridicule the subjects' fashion choices and overall presentation, framing them as 'trashy' and unworthy of admiration. This is a form of cyberbullying and harmful content, as it attacks the individuals based on their appearance and social status, potentially causing emotional harm. The meme's overall intent is to provoke laughter through the use of a vulgar, offensive stereotype, thereby normalizing and spreading derogatory language.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "there's so much white trash in this picture i barely know where to start!",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man wearing a gray fedora, a light blue shirt, and gold chains, holding an award. He has long hair and a beard, and is smiling at the camera.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "posing_at_awards",
+      "label": "posing_at_awards",
+      "description": "A scene depicting two individuals, a man and a woman, posing together at an awards ceremony. The man is holding an award and wearing a hat and gold chains, while the woman is dressed in a shiny yellow top and patterned pants. They are standing in front of a backdrop with 'The American Music Awards' logo. The scene is framed by overlaid text that mocks their appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "holds",
+          "to": "award"
+        },
+        {
+          "from": "man",
+          "relation": "hasArmAround",
+          "to": "woman"
+        },
+        {
+          "from": "woman",
+          "relation": "standsNextTo",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_trash_stereotype",
+      "label": "White Trash Stereotype",
+      "description": "A derogatory racial and class-based stereotype historically used to demean people of lower socioeconomic status, often implying laziness, lack of education, or moral inferiority. This term is inherently racist and classist, relying on harmful racialized and class-based assumptions to insult the subjects. It is commonly used in American vernacular to mock appearance, behavior, or lifestyle deemed 'trashy' or 'unrefined'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "american_music_awards",
+      "label": "American Music Awards",
+      "description": "An annual awards show honoring achievements in the music industry, hosted by the American Music Association. The event is a major entertainment industry event in the United States, attracting celebrities and media attention. The backdrop visible in the image identifies the event as such, providing context for the setting and the subjects' public appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cyberbullying",
+      "label": "Cyberbullying",
+      "description": "The act of using digital communication to bully a person, typically by sending messages of an intimidating or harmful nature. The meme's intent to ridicule the subjects based on their appearance and social status, framed as 'trashy', constitutes a form of cyberbullying, as it attacks individuals through online or public media platforms, potentially causing emotional harm.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harmful_content",
+      "label": "Harmful Content",
+      "description": "Content that is intended to cause emotional, psychological, or social harm to individuals or groups. The meme's use of derogatory language and offensive stereotypes to mock the subjects' appearance and social status qualifies as harmful content, as it normalizes and spreads derogatory language, potentially damaging the subjects' reputations and well-being.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mockery",
+      "label": "mocking emotion",
+      "description": "The emotion expressed through the overlaid text, which uses a derogatory stereotype ('white trash') to ridicule the subjects' appearance and social status, conveying contempt and amusement at their perceived 'trashiness'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The text 'white trash' is mapped onto the visual appearance of the man and woman.",
+      "description": "The overlaid text 'there's so much white trash in this picture i barely know where to start!' uses the derogatory stereotype 'white trash' to mock the visual presentation of the man and woman. The text explicitly labels their appearance (e.g., the man's gold chains, hat, and the woman's shiny top and patterned pants) as 'white trash', creating an analogical mapping between the stereotype and their visual material. This mapping is based on the juxtaposition of the text with the visual subjects, projecting the stereotype onto them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material mocking the subjects",
+      "description": "The user is projected onto the overlaid text 'there's so much white trash in this picture i barely know where to start!' which serves as the primary semiotic anchor for the meme's intent. The text functions as a direct address to the viewer, inviting them to share the user's perspective of the subjects as 'white trash'. This projection is not deictic (e.g., 'you' or 'me') but is implied through the user's identification with the meme's judgmental stance, making the text the focal point of the user's projection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful Content",
+      "description": "The meme uses derogatory language and offensive stereotypes to mock the subjects' appearance and social status, potentially causing emotional harm.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who are familiar with and use derogatory racial and class-based stereotypes, particularly the 'white trash' stereotype, to mock or ridicule others based on their appearance or perceived social status. The meme is designed to appeal to an audience that finds humor in offensive language and visual mockery, often within online or social media contexts where such content is shared and consumed. The audience likely identifies with or enjoys the use of harmful, racially charged humor, and may be drawn to the meme for its shock value or its ability to provoke laughter through the use of vulgar, offensive language. The meme's intent to normalize and spread derogatory language suggests that the target audience may be those who are desensitized to or actively engage with harmful content, including cyberbullying, and who derive amusement from attacking individuals based on their appearance and social status.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/82379.png",
+    "image_name": "82379.png",
+    "extraction_timestamp": "2025-12-19T14:27:55.990773",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

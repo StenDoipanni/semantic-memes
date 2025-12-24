@@ -1,0 +1,242 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a man holding a rifle in front of an American flag, with text that reads: 'I'm so patriotic, I piss red, white, and blue. My doctor said it may be pancreatic cancer. I told him to shut his commie mouth.' The overall intent is to portray a stereotypical, exaggerated, and hateful caricature of a right-wing, gun-owning, anti-establishment, and anti-immigrant American patriot. The meme uses the juxtaposition of the patriotic imagery (flag, rifle) with the crude, violent, and politically charged text to reinforce a toxic, divisive, and hateful message. The use of 'commie' (a derogatory term for communist or leftist) to insult a doctor, combined with the violent imagery and the implication of a 'patriotic' person being violent or aggressive, promotes hate and division. The meme is designed to provoke strong emotional reactions and to reinforce negative stereotypes about certain political groups, particularly those associated with gun rights and anti-government sentiment. The overall intent is to spread hate and division by using violent imagery and inflammatory language to attack political opponents and promote a hateful, extremist worldview.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "i'm so patriotic, i piss red, white, and blue.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A middle-aged Caucasian man with short brown hair and a goatee, wearing a plaid shirt over a white t-shirt, holding an assault rifle. He has a stern, slightly disgusted facial expression. He is the central figure in the image, positioned in front of an American flag.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "patriotic_man_with_rifle",
+      "label": "man holding rifle in front of American flag",
+      "description": "A man is standing in front of an American flag, holding an assault rifle. He is dressed in a plaid shirt over a white t-shirt and has a stern, slightly disgusted facial expression. The scene is framed to emphasize his patriotic symbolism (flag) juxtaposed with his armed presence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "holds",
+          "to": "assault_rifle"
+        },
+        {
+          "from": "man",
+          "relation": "stands_in_front_of",
+          "to": "american_flag"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "patriotic_rifleman_stereotype",
+      "label": "Patriotic Rifleman Stereotype",
+      "description": "A stereotype depicting a white, gun-owning, right-wing American patriot who is overly nationalistic, often associated with anti-government, anti-immigrant, and anti-leftist views. This stereotype is frequently used in media and memes to caricature certain political groups, especially those associated with the Second Amendment and conservative politics. The image of a man with a rifle in front of an American flag is a common visual shorthand for this stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "patriotic_man_with_rifle",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "commie_slur",
+      "label": "Commie Slur",
+      "description": "A derogatory term used to refer to communists or leftists, often employed in political discourse to insult or demean opponents. The term 'commie' is historically associated with anti-communist sentiment, particularly during the Cold War, and is still used today in a pejorative manner to dismiss or attack political opponents on the left. In the meme, the use of 'commie' to refer to a doctor implies that the speaker is attacking the doctor's political views or affiliations, which is a form of political insult.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pancreatic_cancer",
+      "label": "Pancreatic Cancer",
+      "description": "A serious and often fatal form of cancer that affects the pancreas. It is known for being difficult to detect early and having a low survival rate. The mention of pancreatic cancer in the meme is a real-world medical condition that is used here as a punchline to imply that the speaker is so angry or frustrated that they are willing to use violent language (telling the doctor to 'shut his commie mouth') even in the face of a serious illness. This is a form of dark humor or irony.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_establishment_rhetoric",
+      "label": "Anti-Establishment Rhetoric",
+      "description": "A political and social stance that opposes or criticizes established institutions, such as the government, medical system, or mainstream media. This rhetoric is often used to express distrust in authority and to promote alternative viewpoints or ideologies. In the meme, the speaker's refusal to listen to a doctor's advice and his use of inflammatory language ('commie mouth') are examples of anti-establishment rhetoric, which is often associated with right-wing populist movements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gun_rights_movement",
+      "label": "Gun Rights Movement",
+      "description": "A political and social movement that advocates for the right to own and carry firearms, often based on the Second Amendment of the United States Constitution. The movement is associated with various political ideologies, including conservatism and libertarianism, and is often portrayed in media and memes as a symbol of American patriotism and individual freedom. The image of a man holding an assault rifle is a common visual representation of this movement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "patriotic_man_with_rifle",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_leftist_sentiment",
+      "label": "Anti-Leftist Sentiment",
+      "description": "A political and social attitude that opposes or criticizes left-wing ideologies, such as socialism, communism, or progressive liberalism. This sentiment is often associated with right-wing politics and is frequently expressed through rhetoric that labels leftists as 'commies', 'socialists', or 'liberals'. In the meme, the speaker's use of 'commie' to refer to a doctor is an example of anti-leftist sentiment, which is used to attack the doctor's political views or affiliations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "toxic_patriotism",
+      "label": "Toxic Patriotism",
+      "description": "A form of patriotism that is extreme, aggressive, and often used to justify violence, discrimination, or intolerance. It is characterized by an exaggerated sense of national pride and a willingness to use inflammatory language or violent imagery to promote a particular political agenda. The meme uses the image of a man holding a rifle in front of an American flag to portray a caricature of toxic patriotism, which is often associated with right-wing extremism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "patriotic_man_with_rifle",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_meme",
+      "label": "Hateful Meme",
+      "description": "A meme that is designed to spread hate, division, or negative stereotypes. These memes often use violent imagery, inflammatory language, or exaggerated caricatures to provoke strong emotional reactions and to reinforce negative views about certain groups or ideologies. The meme in question is an example of a hateful meme, as it uses the image of a man holding a rifle in front of an American flag to portray a caricature of a right-wing, gun-owning, anti-establishment, and anti-immigrant American patriot, and uses crude, violent, and politically charged text to reinforce a toxic, divisive, and hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "patriotic_man_with_rifle",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "anger",
+      "label": "angry emotion",
+      "description": "The man's stern, slightly disgusted facial expression, combined with the violent imagery of holding an assault rifle and the inflammatory text ('told him to shut his commie mouth'), conveys a strong emotion of anger. The anger is directed at the doctor, framed as an attack on political ideology (commie), and is amplified by the context of a serious illness (pancreatic cancer) being dismissed with hostility.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Patriotic Man is the speaker of the text",
+      "description": "The text 'i'm so patriotic, i piss red, white, and blue.' is directly attributed to the man in the image, who is visually depicted as a patriotic figure holding a rifle in front of an American flag. The text explicitly uses 'I' to refer to the man, establishing an analogical mapping where the man is the speaker of the text. This mapping is reinforced by the visual context of patriotism and the man's stern expression, which aligns with the tone of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man as the speaker of the text",
+      "description": "The user is projected onto the man in the image, who is visually depicted as the speaker of the text. The text uses 'I' to refer to the man, explicitly attributing the statement to him. This creates a direct analogical mapping where the viewer identifies with or imagines themselves as the man speaking the text, especially given the visual context of patriotism and the man's stern expression. The projection is onto the VisualMaterial entity 'man' and the TextualMaterial entity 'text_chunk_1'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses violent imagery (man holding an assault rifle) and inflammatory, politically charged text ('commie mouth') to attack a doctor, portraying a caricature of a right-wing, anti-leftist patriot. This promotes hate and division by reinforcing negative stereotypes about political opponents and using derogatory language.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "right-wing, gun-owning, anti-establishment, anti-leftist American patriots",
+      "description": "The meme is designed to resonate with individuals who identify with or sympathize with right-wing, gun-owning, anti-government, and anti-leftist ideologies. The visual of the man holding an assault rifle in front of an American flag, combined with the text that uses 'commie' to insult a doctor and references 'patriotic' behavior, targets those who embrace or are drawn to the 'patriotic rifleman' stereotype. The use of 'commie' as a slur and the violent imagery are intended to appeal to or provoke members of communities that hold anti-leftist sentiment and support gun rights, often associated with conservative or libertarian political movements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/47605.png",
+    "image_name": "47605.png",
+    "extraction_timestamp": "2025-12-16T02:48:51.481269",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

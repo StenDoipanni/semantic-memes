@@ -1,0 +1,189 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: that_chicken_was_so_black_the_police_just_arrested_it; hasOverallIntent: Hateful; overall-intent-description: The meme depicts Gordon Ramsay in an angry expression, juxtaposed with the text 'that chicken was so black the police just arrested it.' This text uses a racist stereotype by equating the color black with criminality, implying that being black (in this case, metaphorically referring to the chicken's color) leads to arrest. The humor is derived from the absurdity of the situation, but the underlying message perpetuates a harmful and hateful association between Blackness and criminal behavior, which is a well-documented anti-Black stereotype. The meme's intent is to provoke laughter through this offensive and racially charged joke, making it a hateful meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "that chicken was so black",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Gordon_Ramsay",
+      "label": "person",
+      "description": "A man with short, light-colored hair, wearing a blue shirt and a microphone headset, displaying an angry or frustrated facial expression while speaking to another person. He is the central figure in the image and the focus of the meme's text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "angry_confrontation",
+      "label": "angry_confrontation",
+      "description": "A scene depicting Gordon Ramsay in an angry expression, confronting another person who is facing away from the camera. The scene is framed to emphasize Ramsay's intense facial expression and his direct engagement with the other person, who is partially visible and wearing a cap. The text overlay adds a humorous but racially charged context to the interaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Gordon_Ramsay",
+          "relation": "talksTo",
+          "to": "person_with_cap"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_criminality",
+      "label": "Anti-Black Stereotype: Criminal Behavior Associations",
+      "description": "The meme relies on the harmful stereotype that Black people are inherently criminal or prone to criminal behavior. This is conveyed through the text 'that chicken was so black the police just arrested it,' which uses the color black as a proxy for Blackness and implies that being Black (metaphorically) leads to arrest. This stereotype is a well-documented form of racial prejudice and is central to understanding the meme's offensive nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gordon_ramsay",
+      "label": "Gordon Ramsay",
+      "description": "Gordon Ramsay is a well-known British chef, television personality, and restaurateur. His public persona is often associated with intense, fiery, and confrontational behavior, especially during cooking competitions or restaurant critiques. The image captures him in a moment of anger, which is leveraged by the meme to amplify the perceived absurdity and shock value of the text. His real-world fame and recognizable persona are essential to understanding the meme’s context and impact.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_slur_metaphor",
+      "label": "Racial Slur Metaphor",
+      "description": "The phrase 'that chicken was so black' is a racial slur metaphor. It uses the color black to refer to Black people, which is a common tactic in racist language to dehumanize or stereotype. The meme’s humor is derived from the absurdity of the situation, but the underlying message perpetuates a harmful and hateful association between Blackness and criminal behavior, which is a well-documented anti-Black stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "police_arrest_stereotype",
+      "label": "Police Arrest Stereotype",
+      "description": "The phrase 'the police just arrested it' implies that the chicken (metaphorically representing a Black person) was arrested for being black. This is a direct reference to the stereotype that Black people are more likely to be arrested or criminalized. This stereotype is rooted in systemic racism and is a key element of the meme’s hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "anger",
+      "label": "angry expression",
+      "description": "Gordon Ramsay is displaying a visibly angry facial expression, with furrowed brows, narrowed eyes, and an open mouth as if shouting or yelling. His body language, leaning forward toward the other person, reinforces the confrontational and enraged emotional state.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'that chicken was so black' is mapped onto the visual entity Gordon Ramsay, implying he is the one who is 'black' (metaphorically referring to Blackness) and thus the subject of the arrest.",
+      "description": "The text 'that chicken was so black' uses a racial slur metaphor to refer to Black people. The visual entity Gordon Ramsay is mapped onto this metaphorical 'black' entity. His angry expression and confrontational posture are leveraged to amplify the absurdity of the stereotype, making the mapping between the text and his visual portrayal central to the meme's hateful intent. The mapping is established through the juxtaposition of his intense expression with the text, which projects the stereotype onto him as the subject of the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene and text",
+      "description": "The user is projected onto the scene of Gordon Ramsay's angry confrontation and the textual content 'that chicken was so black the police just arrested it'. The meme invites the user to imagine themselves in the role of the person being confronted or to identify with the absurdity of the situation, thereby internalizing the racist stereotype presented. The projection is implicit, not explicit with deictic pronouns, but the user is positioned as the one experiencing or interpreting the meme's content, which is centered on the visual and textual elements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses a racial slur metaphor to associate Blackness with criminality, perpetuating a harmful and hateful stereotype. The text 'that chicken was so black the police just arrested it' directly maps the color black to Black people and implies inherent criminality, which is a well-documented form of anti-Black racism. The visual of Gordon Ramsay's angry expression is leveraged to amplify the absurdity of the stereotype, making the mapping between the text and his portrayal central to the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who are familiar with Gordon Ramsay’s public persona and the internet meme culture that leverages his confrontational style for comedic effect. The meme relies on the audience’s recognition of Ramsay’s anger and the absurdity of the text to generate humor, which is typically appreciated by those who understand and engage with satirical, often offensive, internet humor. The audience is likely to be online users who are aware of racial stereotypes and may find the joke amusing despite its hateful content, indicating a community that consumes and shares memes that perpetuate harmful tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/43025.png",
+    "image_name": "43025.png",
+    "extraction_timestamp": "2025-12-16T01:28:28.799567",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

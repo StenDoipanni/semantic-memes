@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "snake_mouth_realization_mapping",
+      "hasMappedEntity": "text_chunk_1",
+      "hasMappingEntity": "yellow_snake"
+    },
+    {
+      "from": "yellow_snake",
+      "relation": "mappedOnto",
+      "to": "text_chunk_1"
+    }
+  ],
+  "triples": [
+    ":snake_mouth_realization_mapping :hasMappedEntity :text_chunk_1 .",
+    ":snake_mouth_realization_mapping :hasMappingEntity :yellow_snake .",
+    ":yellow_snake :mappedOnto :text_chunk_1 ."
+  ],
+  "triples_count": 3
+}

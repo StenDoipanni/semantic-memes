@@ -1,0 +1,241 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: latinos_will_do_anything_to_get_into_trump_s_america; hasOverallIntent: hateful; overall-intent-description: The image depicts people climbing a border fence with the overlaid text 'latinos will do anything to get into trump's america.' This meme uses a visual of border crossing, which is mapped onto the text to imply that Latinos are desperate or willing to risk everything to enter the United States under a Trump administration. This is a harmful and hateful stereotype that falls under 'Anti-Latino/Hispanic Stereotypes' in the provided knowledge base, specifically targeting immigration status assumptions and portraying Latinos as inherently criminal or desperate. The intent is to dehumanize and stigmatize a specific ethnic group based on their immigration status, which is a direct attack on protected characteristics and promotes xenophobic and racist attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "latinos will do anything",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "people",
+      "label": "group of individuals",
+      "description": "A group of people, appearing to be predominantly Latino or Hispanic based on the meme's context, are seen climbing or perched on a border fence. They are positioned along the top of the fence, with some actively climbing and others sitting or standing on the structure. Their attire is casual, including jackets, hoodies, and backpacks, suggesting they are in transit or attempting to cross. The group is diverse in age and gender, and their actions are the central visual focus of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "border_crossing_scene",
+      "label": "people attempting to cross a border fence",
+      "description": "A group of people are seen climbing or perched on a border fence, with the ocean in the background. The scene is framed by the fence in the foreground and the waves in the background, suggesting an attempt to cross into another country. The text overlay implies a narrative of desperation or determination to enter 'Trump's America.'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "people",
+          "relation": "climbing_on",
+          "to": "border_fence"
+        },
+        {
+          "from": "people",
+          "relation": "facing",
+          "to": "ocean"
+        },
+        {
+          "from": "text",
+          "relation": "overlaying",
+          "to": "people"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_latino_hispanic_stereotypes",
+      "label": "Anti-Latino/Hispanic Stereotypes",
+      "description": "The meme relies on the harmful stereotype that Latinos are inherently desperate, criminal, or willing to risk everything to enter the U.S., particularly under a Trump administration. This stereotype is used to dehumanize and stigmatize Latinos based on their immigration status, portraying them as inherently dangerous or morally inferior. It is a form of xenophobic and racist rhetoric that has been historically used to justify discriminatory policies and attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "people",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "border_crossing_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "trump_administration",
+      "label": "Trump Administration",
+      "description": "The phrase 'Trump's America' refers to the political and social environment during the presidency of Donald Trump (2017-2021), which was marked by a hardline immigration policy, including the construction of the U.S.-Mexico border wall, stricter border enforcement, and rhetoric that often targeted immigrants, particularly those from Latin America. The meme uses this reference to imply that Latinos are motivated by a perceived threat or opportunity under Trump's policies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "border_crossing_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "border_wall",
+      "label": "U.S.-Mexico Border Wall",
+      "description": "The fence visible in the image is a physical barrier along the U.S.-Mexico border, constructed or reinforced under the Trump administration as part of a broader immigration enforcement strategy. The image visually represents the act of crossing this barrier, which is central to the meme's message about immigration and desperation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "border_crossing_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "people",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "immigration_policy",
+      "label": "Immigration Policy",
+      "description": "The meme references the broader context of U.S. immigration policy, particularly the policies enacted or promoted during the Trump administration, which included stricter border controls, family separation, and the 'zero tolerance' policy. The image and text together imply that Latinos are willing to risk crossing the border to enter the U.S. under these policies, which is a simplification and distortion of complex immigration realities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "border_crossing_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "xenophobia",
+      "label": "Xenophobia",
+      "description": "The meme promotes xenophobic attitudes by portraying Latinos as inherently dangerous or desperate to enter the U.S., which is a fear or hatred of people from other countries or cultures. This is a form of prejudice that has been historically used to justify discriminatory policies and attitudes toward immigrants.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "border_crossing_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racism",
+      "label": "Racism",
+      "description": "The meme is rooted in racist stereotypes that portray Latinos as inherently criminal, lazy, or desperate, which is a form of prejudice based on race or ethnicity. This is a form of systemic discrimination that has been historically used to justify discriminatory policies and attitudes toward Latinos.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "border_crossing_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "desperation",
+      "label": "desperate emotion",
+      "description": "The emotional state implied by the act of climbing a border fence and the overlaid text 'latinos will do anything to get into trump's america' suggests a sense of desperation or extreme determination to enter the United States. This emotion is conveyed through the visual action of crossing a border barrier and the textual framing that portrays the group as willing to risk everything.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Latino immigrants are mapped as desperate individuals willing to risk everything",
+      "description": "The text 'latinos will do anything' is mapped onto the visual of people climbing the border fence, implying that the visual action (climbing) represents the textual claim (willingness to do anything). This mapping uses the visual of border crossing to symbolize desperation or extreme determination to enter 'Trump's America', as stated in the text. The visual material (people climbing the fence) is analogically mapped to the textual claim about Latinos' supposed behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message and visual scene implying personal responsibility or shared experience with the stereotype",
+      "description": "The user is not explicitly projected onto a specific deictic pronoun like 'me' or 'you' in the text. However, the meme's structure and overall intent create an implicit projection where the viewer is positioned as someone who understands or accepts the stereotype being presented. The user is projected onto the textual material ('latinos will do anything to get into trump's america') and the visual scene ('border_crossing_scene'), which together form a narrative that the user is expected to interpret as a universal truth or a shared social commentary. This projection is not direct (e.g., 'you are the one climbing') but rather indirect, through the framing of the meme as a statement about a group's supposed behavior, which the user is invited to internalize or react to as part of their worldview.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Latinos based on their ethnicity and immigration status, portraying them as inherently desperate, criminal, or willing to risk everything to enter the U.S. under a Trump administration. This is a direct attack on protected characteristics and promotes xenophobic and racist attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold or are exposed to anti-Latino/Hispanic stereotypes, particularly those who support or are influenced by xenophobic, racist, or Trump administration-aligned rhetoric. The meme is designed to resonate with people who believe in the harmful stereotype that Latinos are inherently desperate, criminal, or willing to risk everything to enter the U.S., especially under a Trump administration. This includes audiences familiar with the U.S.-Mexico border wall imagery and immigration policy debates, and who may be predisposed to viewing Latinos through a lens of moral inferiority or threat. The meme leverages cultural references to Trump’s immigration policies and the visual of border crossing to appeal to those who endorse or are sympathetic to these prejudiced narratives.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/61904.png",
+    "image_name": "61904.png",
+    "extraction_timestamp": "2025-12-16T07:18:21.740500",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

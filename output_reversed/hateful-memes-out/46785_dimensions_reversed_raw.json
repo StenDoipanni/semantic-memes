@@ -1,0 +1,151 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: turn_for_what; hasOverallIntent: non-toxic; overall-intent-description: The image shows a man in a car looking confused, with the text 'turn for what?' overlaid. This is a common meme format used to express bewilderment or confusion about a situation or instruction. The scene is neutral and does not contain any disparaging metaphors, stereotypes, or harmful content. The intent is to humorously convey confusion, not to target or demean any group or individual. There are no elements of toxicity, abuse, cyberbullying, harmfulness, hate, misogyny, or propaganda present in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "turn",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A middle-aged man with gray hair and a beard, wearing a dark sweater over a collared shirt, sitting in the driver's seat of a car and looking confused or bewildered.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "confused_driver",
+      "label": "man looking confused while driving",
+      "description": "A middle-aged man with gray hair and a beard, wearing a dark sweater over a collared shirt, is seated in the driver's seat of a car. He is looking sideways with a bewildered expression, suggesting confusion or bewilderment. The text 'turn for what?' is overlaid on the image, reinforcing the theme of confusion about an instruction or situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "confused_driver_meme_concept",
+      "label": "Confused Driver Meme Concept",
+      "description": "This meme format uses a person in a car looking confused to humorously express bewilderment or confusion about an instruction or situation. The phrase 'turn for what?' is a common rhetorical question used to express confusion about a direction or action that lacks context or purpose. This concept relies on the cultural understanding of driving and the common experience of receiving unclear or nonsensical instructions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "confused_driver",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "driving_context",
+      "label": "Driving Context",
+      "description": "The meme relies on the real-world context of driving, where 'turn' is a common verb used in navigation and traffic instructions. The confusion arises from the lack of context — 'turn' without specifying 'left', 'right', 'at the next intersection', etc. — which is a common source of bewilderment in real-life driving situations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "confused_driver",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "rhetorical_question",
+      "label": "Rhetorical Question",
+      "description": "The phrase 'for what?' is a rhetorical question used to express confusion or incredulity. It is not asking for a literal answer but rather to highlight the absurdity or lack of context in the preceding statement ('turn'). This rhetorical device is widely understood in everyday communication.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "confusion",
+      "label": "confused emotion",
+      "description": "The man's facial expression, with his head turned sideways and eyes looking off to the side, conveys a state of bewilderment or confusion. His slightly furrowed brow and open mouth suggest he is processing an unclear or nonsensical instruction. This is reinforced by the overlaid text 'turn for what?', which explicitly frames the situation as one of puzzlement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The driver is confused about the instruction 'turn'",
+      "description": "The text 'turn' is mapped onto the visual entity of the confused driver. The driver's bewildered expression and the rhetorical question 'for what?' imply that he is interpreting the instruction 'turn' as incomplete or nonsensical, thus the text 'turn' is being analogically mapped to his state of confusion regarding an action that lacks context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the confused driver",
+      "description": "The user is projected onto the visual material of the man in the car looking confused, as the meme format invites the viewer to identify with the bewildered driver questioning an unclear instruction. The rhetorical question 'for what?' reinforces this projection by implying the user is in the same state of confusion as the driver.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with common meme formats and rhetorical humor. The visual of a confused driver and the text 'turn for what?' are universally relatable and do not rely on niche cultural references, specific demographics, or community-specific elements. The target community includes anyone who has experienced confusion over an unclear instruction, particularly in the context of driving or everyday life.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/46785.png",
+    "image_name": "46785.png",
+    "extraction_timestamp": "2025-12-16T02:24:09.936575",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 11,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

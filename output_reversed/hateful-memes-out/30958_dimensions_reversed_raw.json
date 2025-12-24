@@ -1,0 +1,162 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: chocolate-melts-at-86f; hasOverallIntent: Harmful; overall-intent-description: The image shows a stack of chocolate bars melting, with the text overlay stating 'Chocolate melts at 86°F'. This is factually incorrect — dark chocolate melts at around 86°F (30°C), but milk chocolate melts at a lower temperature, and the melting point varies by composition. The meme's intent is to present a misleading or false scientific fact in a visually appealing way, potentially to provoke confusion or skepticism. While not explicitly abusive, cyberbullying, or hateful toward any group, it is harmful because it spreads misinformation, which can mislead viewers and undermine trust in factual knowledge. The intent is likely to create a humorous or ironic effect by juxtaposing a visually decadent image with a scientifically inaccurate claim, possibly to mock or highlight the absurdity of false information.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "Chocolate melts at 86°F",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "chocolate_bars",
+      "label": "stacked chocolate bars",
+      "description": "A stack of dark chocolate bars, partially melted, with chocolate dripping down the sides. The bars are arranged vertically, showing their segmented, rectangular shape. The melting chocolate creates a glossy, flowing appearance, emphasizing the decadence and visual appeal of the chocolate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "melting_chocolate_scene",
+      "label": "melting chocolate scene",
+      "description": "A stack of chocolate bars is melting, with chocolate dripping down the sides. The scene is visually appealing and decadent, emphasizing the glossy, flowing appearance of the melting chocolate. The text overlay states 'Chocolate melts at 86°F', which is factually misleading as it implies a universal melting point for all chocolate types, when in reality, melting points vary by composition (dark vs. milk chocolate).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "chocolate_bars",
+          "relation": "isMelting",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "melting_point_fact",
+      "label": "Melting Point of Chocolate",
+      "description": "The claim that 'Chocolate melts at 86°F' is factually misleading. Dark chocolate melts around 86°F (30°C), but milk chocolate melts at a lower temperature, and the melting point varies significantly by composition. This scientific inaccuracy is central to the meme's intent to spread misinformation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misinformation_spread",
+      "label": "Spread of Misinformation",
+      "description": "The meme leverages the visual appeal of melting chocolate to present a scientifically inaccurate claim, aiming to provoke confusion or skepticism. This reflects a broader social phenomenon where false or misleading information is disseminated for humorous or ironic effect, potentially undermining trust in factual knowledge.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "melting_chocolate_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "scientific_accuracy",
+      "label": "Scientific Accuracy of Melting Points",
+      "description": "Real-world knowledge about the physical properties of chocolate, including how its melting point varies by type (dark, milk, white), is required to understand why the meme's claim is misleading. This knowledge is not visible in the image but is essential for evaluating the meme's factual content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mischievousness",
+      "label": "the mischievous emotion",
+      "description": "The emotion expressed is mischievous, conveyed through the juxtaposition of a visually appealing, decadent image of melting chocolate with a scientifically inaccurate and misleading claim ('Chocolate melts at 86°F'). The intent is to provoke confusion or skepticism in a humorous or ironic way, which is characteristic of mischievous behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Chocolate melting point claim mapped to visual depiction of melting chocolate",
+      "description": "The text 'Chocolate melts at 86°F' is presented as a factual statement, which is then visually instantiated by the image of chocolate bars melting. The visual material (melting chocolate) serves as the concrete representation or embodiment of the textual claim, creating an analogical mapping where the text's assertion is visually anchored to the scene. This mapping is central to the meme's structure, as the visual material confirms the text's claim (even though it is factually misleading), thereby creating a false equivalence between the visual and the textual assertion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual material of melting chocolate",
+      "description": "The user is projected onto the visual material (chocolate_bars) as the subject of the meme's visual appeal and the implied target of the misleading claim. The user is invited to perceive the decadent, glossy melting chocolate as a representation of the stated fact, even though the fact is scientifically inaccurate. The projection is implicit, not deictic, but the user is positioned as the observer of the visual material that embodies the textual claim.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme spreads misinformation by presenting a scientifically inaccurate claim ('Chocolate melts at 86°F') as fact, which can mislead viewers and undermine trust in factual knowledge. This is harmful because it promotes false information disguised as factual content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with online humor, memes, and the concept of misinformation. It leverages visual appeal (melting chocolate) and a scientifically inaccurate claim to create irony or confusion, appealing to viewers who enjoy absurd or misleading facts presented in a visually engaging way. The target community includes individuals who engage with social media, online forums, or meme culture, where such content is commonly shared and appreciated for its humorous or satirical effect, even if it spreads false information.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/30958.png",
+    "image_name": "30958.png",
+    "extraction_timestamp": "2025-12-15T21:37:47.537588",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

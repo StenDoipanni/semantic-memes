@@ -1,0 +1,263 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes the image of a person with manicured nails (suggesting vanity or superficiality) with a photo of Adolf Hitler, implying that Hitler was vain or obsessed with appearance. This is a hateful and offensive comparison that dehumanizes and trivializes a historical figure responsible for genocide and war crimes. The intent is to mock Hitler's appearance or perceived vanity, which is a form of hate speech targeting a specific group (Jews, other victims of the Holocaust) by associating them with a symbol of extreme evil. The meme uses Hitler's image to make a derogatory and harmful statement, which falls under hateful intent as it attacks a protected characteristic (ethnicity, religion, historical identity) by linking it to a figure of extreme historical evil. The overall intent is to provoke a reaction through shock value and historical distortion, which is harmful and potentially dangerous by normalizing or trivializing the atrocities committed by the Nazi regime.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "getyournailsready,",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "middle text overlay",
+      "description": "you never know when you",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_3",
+      "label": "bottom text overlay",
+      "description": "have to show them off",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person_with_manicured_nails",
+      "label": "person with manicured nails",
+      "description": "A person's hands with neatly manicured nails are shown in the top panel, holding a pink nail polish bottle and a brush, suggesting a focus on personal grooming and vanity. This image is used to represent superficiality or vanity in the meme context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person_applying_nail_polish",
+      "label": "person applying nail polish",
+      "description": "A person's hands are shown applying nail polish to a fingernail in the middle panel, emphasizing the act of beautification and self-care. This reinforces the theme of vanity or appearance-focused behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "adolf_hitler",
+      "label": "Adolf Hitler",
+      "description": "A black-and-white historical photograph of Adolf Hitler, the former leader of Nazi Germany and architect of the Holocaust. His image is used in the meme to create a jarring juxtaposition with the manicured nails, implying a satirical or hateful commentary on his perceived vanity or appearance obsession.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "nail_vanity_scene",
+      "label": "Scene of vanity and appearance-focused behavior",
+      "description": "The scene is composed of three panels: the top panel shows a person with manicured nails holding a nail polish bottle, the middle panel shows a person applying nail polish, and the bottom panel shows a historical photograph of Adolf Hitler. The text overlays suggest a satirical or hateful commentary, implying that Hitler was vain or obsessed with appearance, which is a derogatory and offensive comparison. The spatial arrangement is vertical, with each panel stacked to create a narrative progression from grooming to the final juxtaposition with Hitler's image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person_with_manicured_nails",
+          "relation": "isPartOf",
+          "to": "nail_vanity_scene"
+        },
+        {
+          "from": "person_applying_nail_polish",
+          "relation": "isPartOf",
+          "to": "nail_vanity_scene"
+        },
+        {
+          "from": "adolf_hitler",
+          "relation": "isPartOf",
+          "to": "nail_vanity_scene"
+        },
+        {
+          "from": "person_with_manicured_nails",
+          "relation": "juxtaposedWith",
+          "to": "adolf_hitler"
+        },
+        {
+          "from": "person_applying_nail_polish",
+          "relation": "juxtaposedWith",
+          "to": "adolf_hitler"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "adolf_hitler_vanity_stereotype",
+      "label": "Hitler vanity stereotype",
+      "description": "The meme relies on the stereotype that Adolf Hitler was vain or obsessed with his appearance, which is a historically inaccurate and offensive caricature. This stereotype is used to mock Hitler's perceived vanity by juxtaposing his image with manicured nails, implying he was obsessed with superficial beauty. This is a form of hate speech that trivializes the Holocaust and dehumanizes victims by associating the perpetrator with vanity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "adolf_hitler",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "nail_vanity_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "holocaust_trivialization",
+      "label": "Holocaust trivialization",
+      "description": "The meme implicitly references the Holocaust and the atrocities committed by the Nazi regime. By using Hitler's image in a context of vanity, the meme trivializes the genocide and war crimes he orchestrated, reducing a symbol of extreme evil to a joke about appearance. This is a form of historical distortion and hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "adolf_hitler",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "nail_vanity_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_semitic_stereotype",
+      "label": "Anti-Semitic stereotype",
+      "description": "The meme implicitly references anti-Semitic stereotypes by associating Hitler, a symbol of anti-Semitism and the Holocaust, with vanity. This is a form of hate speech that targets Jewish people and other victims of the Holocaust by linking them to a symbol of extreme evil, thereby dehumanizing and trivializing their suffering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "adolf_hitler",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "nail_vanity_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_context_of_hitler",
+      "label": "Historical context of Hitler",
+      "description": "The meme requires knowledge of Adolf Hitler's role as the leader of Nazi Germany and the architect of the Holocaust. This historical context is necessary to understand the gravity of his actions and the offense of trivializing him through a joke about vanity. The image of Hitler is not just a person but a symbol of genocide and war crimes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "adolf_hitler",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "nail_vanity_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "derision",
+      "label": "derisive emotion",
+      "description": "The emotion expressed is derision, conveyed through the juxtaposition of manicured nails (symbolizing vanity) with Adolf Hitler's image, implying mockery of his perceived vanity. This is a hateful and offensive sentiment that trivializes the Holocaust and dehumanizes victims by associating the perpetrator with superficiality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Hitler is mapped as someone who needs to show off his nails",
+      "description": "The text 'get your nails ready, you never know when you have to show them off' is mapped onto the visual entity 'adolf_hitler'. The meme implies that Hitler, like the person shown applying nail polish, was obsessed with vanity and appearance, suggesting he needed to 'show off' his nails. This is an analogical mapping where the textual message about vanity is projected onto Hitler's image, creating a hateful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_2",
+      "label": "The act of applying nail polish is mapped onto Hitler's vanity",
+      "description": "The visual scene of applying nail polish (person_applying_nail_polish) is mapped onto the textual implication that Hitler 'has to show them off'. The text 'you never know when you have to show them off' is projected onto the visual act of nail application, which is then associated with Hitler. This mapping suggests that Hitler's vanity is analogous to the act of beautifying one's nails.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_3",
+      "label": "The manicured nails are mapped as Hitler's vanity symbol",
+      "description": "The visual entity 'person_with_manicured_nails' is mapped onto the textual message 'get your nails ready'. The text implies that one should prepare their nails for when they need to 'show them off', and this is projected onto Hitler's image, suggesting that his manicured nails (or appearance) were his vanity symbol. This is an analogical mapping where the visual representation of vanity is linked to the textual instruction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the vanity behavior depicted in the meme",
+      "description": "The user is projected onto the act of preparing one's nails, as implied by the text 'get your nails ready, you never know when you have to show them off'. This suggests the user is being addressed as if they are the one who needs to be ready to show off their nails, thereby identifying the user with the vanity behavior being portrayed. The projection is onto the textual material and the visual material of the nail grooming scene, which together form the 'nail_vanity_scene'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses Adolf Hitler's image to mock his perceived vanity, which trivializes the Holocaust and dehumanizes victims by associating the perpetrator with superficiality. This is a direct attack on a protected characteristic (ethnicity, religion, historical identity) by linking it to a symbol of extreme evil.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who are familiar with historical figures like Adolf Hitler and understand the gravity of the Holocaust. The meme relies on the audience's knowledge of Hitler's role in genocide and war crimes to create a jarring, hateful juxtaposition. It is designed to provoke shock and amusement by trivializing a symbol of extreme evil through a joke about vanity. The audience is likely to include those who find humor in historical distortion or who are unaware of the offensive nature of the comparison, making it particularly harmful to Jewish people and other victims of the Holocaust. The meme's intent is to mock Hitler's perceived vanity, which is a form of hate speech targeting a protected characteristic (ethnicity, religion, historical identity) by linking it to a figure of extreme historical evil.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/41823.png",
+    "image_name": "41823.png",
+    "extraction_timestamp": "2025-12-16T01:06:36.318526",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 19,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

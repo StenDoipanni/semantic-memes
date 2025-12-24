@@ -1,0 +1,218 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: bitch..; hasOverallIntent: Abusive; overall-intent-description: The image features a vintage black-and-white photograph of a woman with a pensive or disdainful expression, juxtaposed with highly derogatory text. The text reads 'bitch..' at the top and 'shut your ugly crack addict looking, poor white trash ass up' at the bottom. This combination uses explicit, vulgar language to insult the woman's appearance and socioeconomic status, targeting her as a 'white trash' individual with a 'crack addict' look. The meme's intent is to demean and insult the subject through crude, offensive language, fitting the definition of an abusive meme. The visual of the woman is used to amplify the insult, creating a confrontational and hostile tone. The overall intent is to provoke a negative emotional reaction and to degrade the subject based on appearance and assumed lifestyle, which aligns with abusive intent as it threatens and abuses the individual depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "bitch..",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with short, wavy hair, wearing a dark dress, seated in a chair with her hand resting on her chin, looking directly at the camera with a pensive or disdainful expression. She is the central visual element of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "abusive_insult_scene",
+      "label": "Abusive Insult Scene",
+      "description": "A scene composed of a woman and overlaid text, where the text delivers a highly derogatory and abusive insult directed at the woman. The woman is depicted in a vintage black-and-white photograph, seated and looking at the camera with a pensive or disdainful expression. The text, positioned at the top and bottom of the image, uses vulgar language to demean her appearance and socioeconomic status, targeting her as a 'white trash' individual with a 'crack addict' look. The visual of the woman is juxtaposed with the insulting text to amplify the degradation, creating a confrontational and hostile tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "insults",
+          "to": "woman"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_trash_stereotype",
+      "label": "White Trash Stereotype",
+      "description": "A derogatory stereotype that refers to people of lower socioeconomic status, particularly those perceived as poor, uneducated, and lacking in moral or social refinement. It is often used to demean individuals based on their appearance, behavior, or assumed lifestyle, and is rooted in class-based prejudice and racialized assumptions about rural or working-class populations, particularly white people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "crack_addict_stereotype",
+      "label": "Crack Addict Stereotype",
+      "description": "A harmful and inaccurate stereotype that associates individuals with a 'crack addict' appearance with criminality, moral decay, and social marginalization. This stereotype is rooted in racist and classist assumptions and has been used to dehumanize and stigmatize people who use drugs, particularly in impoverished communities, often conflating appearance with inherent character flaws.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "A system of prejudice and discrimination against women, often manifesting as hatred, contempt, or violence directed at women. It includes the belief that women are inferior to men, and it is often expressed through objectification, demeaning language, and the denial of women's competence or agency. The meme's use of vulgar insults and appearance-based degradation directly reflects misogynistic tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "Ableism",
+      "description": "Discrimination or prejudice against people with disabilities, often manifesting as the belief that people with disabilities are less capable, less worthy, or a burden on society. While not directly applicable here, the meme's degrading language and focus on appearance can be seen as a form of ableist thinking when it reduces a person's worth to their physical or perceived 'defects'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racism",
+      "label": "Racism",
+      "description": "Prejudice, discrimination, or antagonism directed against individuals or groups based on their race or ethnicity. The term 'white trash' is a racialized slur that implies inferiority based on race and class, and its use in the meme reflects a racist framework that devalues people based on their perceived racial and socioeconomic status.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "vulgar_language",
+      "label": "Vulgar Language",
+      "description": "The use of offensive, crude, or taboo language to insult or demean someone. The text 'shut your ugly crack addict looking, poor white trash ass up' is filled with vulgar and explicit language designed to provoke and degrade, which is a common feature of abusive memes and reflects a broader cultural pattern of using profanity to assert dominance or insult.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "textual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "abusive_memes",
+      "label": "Abusive Memes",
+      "description": "A category of internet memes that use explicit, vulgar, or threatening language to insult, demean, or harass individuals or groups. These memes often rely on stereotypes, prejudice, and degrading language to provoke emotional reactions and are considered harmful and offensive. The meme in question fits this category due to its explicit insults and hostile tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "disdain",
+      "label": "disdainful expression",
+      "description": "The woman's facial expression, with her chin resting on her hand and her gaze directed at the camera, conveys a sense of disdain or contempt. Her slightly downturned lips and intense stare suggest she is looking down on or dismissing something or someone, which is amplified by the insulting text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The woman is mapped as the target of the abusive insult",
+      "description": "The text 'bitch..' at the top and 'shut your ugly crack addict looking, poor white trash ass up' at the bottom directly addresses the woman in the image. The visual of the woman is used as the target onto which the insulting text is projected. Her disdainful expression is juxtaposed with the text to amplify the insult, creating an analogical mapping where the woman is the entity being insulted by the text. The mapping is explicit: the text refers to her as 'bitch' and 'ugly crack addict looking, poor white trash ass', directly mapping her visual appearance and perceived identity to the derogatory labels.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman as the target of the abusive insult",
+      "description": "The user is projected onto the woman (VisualMaterial entity) as the direct target of the insulting text. The text uses deictic pronouns like 'your' ('your ugly crack addict looking, poor white trash ass') which explicitly directs the insult at the woman, making her the focal point of the user's projection. The user sees themselves as the one delivering the insult, projecting their hostile intent onto the woman's image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Abusive",
+      "description": "The meme uses explicit, vulgar language to insult the woman's appearance and socioeconomic status, targeting her as a 'white trash' individual with a 'crack addict' look. The visual of the woman is juxtaposed with the insulting text to amplify the degradation, creating a confrontational and hostile tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who engage with or create abusive memes, particularly those who enjoy or are drawn to vulgar, degrading, and stereotypical language. This community is likely to appreciate the use of offensive insults, racialized class stereotypes (such as 'white trash'), and misogynistic tropes. The meme is designed to provoke a hostile or confrontational reaction, appealing to an audience that finds satisfaction in degrading others based on appearance, socioeconomic status, and perceived moral character. The use of explicit language and the visual of the woman as the target suggest the audience is familiar with internet meme culture and the conventions of abusive content, which often rely on shock value and the reinforcement of harmful stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/83965.png",
+    "image_name": "83965.png",
+    "extraction_timestamp": "2025-12-19T14:54:07.890735",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,257 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: stupid_americans_meme; hasOverallIntent: Hateful; overall-intent-description: The image features a person in a Marvin the Martian costume holding a rocket, with overlaid text reading 'stupid americans.. they elect their enemy to rule over them.' The meme uses a popular cartoon character to mock American political processes, implying that voters are choosing their adversaries. This is a hateful message that targets American citizens as a group, using derogatory language and a dismissive tone to express disdain for the political system and its electorate. The intent is to provoke anger or reinforce negative stereotypes about American voters and their choices, fitting the definition of a hateful meme as it attacks a group based on nationality and political behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "stupid americans.. they elect their enemy to rule over them",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Marvin_the_Martian",
+      "label": "Cartoon character in costume",
+      "description": "A person dressed in a full-body costume of Marvin the Martian, a fictional character from Looney Tunes, featuring a green helmet, black face with white eyes, red suit, green skirt, and white gloves and shoes. The character is holding a red rocket launcher with text on it. The costume is highly detailed and recognizable.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "costume_pose",
+      "label": "Marvin the Martian posing with a rocket launcher",
+      "description": "The central visual material entity, Marvin the Martian, is standing in a confident or defiant pose, holding a red rocket launcher. The costume is detailed and recognizable, with the character's iconic green helmet, red suit, and white gloves and shoes. The rocket launcher has visible text on it, adding to the character's portrayal as a villainous figure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "American_political_system",
+      "label": "American political system",
+      "description": "The meme references the electoral process in the United States, where citizens vote for political leaders. The text implies that voters are choosing 'their enemy,' which is a critique of the political system and voter behavior. This requires knowledge of U.S. democracy, elections, and political parties to understand the context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Marvin_the_Martian",
+      "label": "Marvin the Martian",
+      "description": "Marvin the Martian is a fictional character from the Looney Tunes franchise, known as a villainous alien who is an enemy of the main character, Bugs Bunny. His portrayal as an 'enemy' in the meme is a direct reference to his character archetype in the cartoons, which is used to symbolize an adversary in the political context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Political_rhetoric",
+      "label": "Political rhetoric",
+      "description": "The meme uses a common political trope of criticizing voters for electing opponents. This rhetorical device is often used in political discourse to delegitimize opponents or to express frustration with the electorate. Understanding this rhetorical strategy is necessary to interpret the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Hateful_meme",
+      "label": "Hateful meme",
+      "description": "The meme is classified as hateful because it uses derogatory language ('stupid americans') and targets a group (American voters) based on nationality and political behavior. This requires understanding the concept of hateful content and its impact on discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Nationality_stereotype",
+      "label": "Nationality stereotype",
+      "description": "The meme relies on a stereotype that portrays American voters as foolish or naive for electing their enemies. This is a derogatory stereotype that generalizes a group based on nationality, which is a form of prejudice and bias.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Political_enemy",
+      "label": "Political enemy",
+      "description": "The term 'enemy' in the meme refers to a political opponent or adversary. This concept is used to frame the political process as a conflict between opposing forces, which is a common theme in political discourse and media.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Looney_Tunes",
+      "label": "Looney Tunes",
+      "description": "The character Marvin the Martian is from the Looney Tunes franchise, which is a well-known animated series. The meme uses this character to evoke a sense of familiarity and to create a contrast between the cartoon villain and real-world political figures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Conspiracy_theory",
+      "label": "Conspiracy theory",
+      "description": "The meme implies a conspiracy or a hidden agenda behind the election of political leaders, suggesting that voters are being manipulated or are unaware of the true nature of their choices. This requires knowledge of conspiracy theories and their role in political discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Political_disillusionment",
+      "label": "Political disillusionment",
+      "description": "The meme reflects a sentiment of disillusionment with the political system, where voters feel that their choices are futile or that they are being led astray. This is a common theme in political commentary and media, especially in times of political polarization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Political_polarization",
+      "label": "Political polarization",
+      "description": "The meme is a product of political polarization, where opposing sides view each other as enemies. This requires understanding the concept of political polarization and its impact on public discourse and voter behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "disdain",
+      "label": "disdainful emotion",
+      "description": "The character Marvin the Martian is depicted with an angry, scowling facial expression, featuring narrowed white eyes and a stern, hostile demeanor. This conveys a clear emotion of disdain or contempt, fitting the meme's message of viewing Americans as foolish for electing an enemy. The pose, with a clenched fist, reinforces this aggressive and dismissive emotional state.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Marvin the Martian is mapped as the 'enemy' elected by Americans",
+      "description": "The text 'they elect their enemy to rule over them' explicitly maps the visual entity Marvin the Martian (a known enemy character from Looney Tunes) onto the role of 'enemy' in the political context. The meme uses Marvin's villainous persona and his iconic weapon (rocket launcher) to symbolize a political adversary, creating an analogical mapping where the cartoon character represents the political enemy being elected by Americans. This mapping is reinforced by Marvin's disdainful expression and pose, which visually embody the contempt expressed in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message as the target of criticism",
+      "description": "The user is projected onto the text 'stupid americans.. they elect their enemy to rule over them' as the speaker or the one expressing the disdainful judgment. The text directly addresses 'Americans' as the group being criticized, implying the user is identifying with the perspective of the critic, even if indirectly. The meme's hateful intent and the use of derogatory language ('stupid') create a projection where the user sees themselves as the one who understands the 'truth' or is frustrated by the political system, thereby projecting their own feelings or beliefs onto the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks American citizens as a group using derogatory language ('stupid americans') and frames them as foolish for electing political adversaries, which constitutes a hateful message targeting a group based on nationality and political behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "American voters",
+      "description": "The meme targets American voters as a group, using derogatory language ('stupid americans') and implying they elect their political enemies, which is a direct critique of the American electoral process and voter behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/97142.png",
+    "image_name": "97142.png",
+    "extraction_timestamp": "2025-12-19T19:28:03.125147",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 19,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

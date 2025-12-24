@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "threatening and intimidating emotion",
+      "expressors": [
+        {
+          "entity": "the dog",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "the dog",
+          "relation": "emotionalRelationToEntity",
+          "to": "the viewer"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":threatening_and_intimidating_emotion :hasExpressor :the_dog .",
+    ":the_dog :emotionalRelationToEntity :the_viewer ."
+  ],
+  "triples_count": 2
+}

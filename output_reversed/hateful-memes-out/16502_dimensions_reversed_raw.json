@@ -1,0 +1,196 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: admins_be_like_this_my_group; hasOverallIntent: Harmful; overall-intent-description: The image depicts a crying baby with the text 'admins be like' at the top and 'this my group' at the bottom. The visual of a distressed infant is juxtaposed with the text to humorously convey the exaggerated frustration or exasperation that administrators might feel when dealing with a group or community they perceive as difficult or unreasonable. The meme's intent is to elicit laughter through relatable, albeit exaggerated, emotional reactions. While the meme is not explicitly abusive, cyberbullying, or hateful toward any specific protected group, it does contain a potentially harmful element: it may normalize or trivialize the emotional distress of administrators, which could be interpreted as dismissive of their actual professional challenges. The meme relies on the infantile, helpless image to create a comedic effect, which may unintentionally undermine the seriousness of administrative responsibilities. The overall intent is to entertain through analogical mapping — the baby's crying is mapped onto the emotional state of admins — but the humor is derived from the contrast between the vulnerability of the baby and the perceived overreaction of admins, which could be seen as demeaning to those in administrative roles.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "admins be like",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "baby",
+      "label": "human infant",
+      "description": "A young human infant with light skin and sparse blond hair, captured mid-cry with an expressive, distressed facial expression. The baby's eyes are squeezed shut, eyebrows furrowed, and mouth wide open in a wailing motion, conveying intense emotion. The infant is shirtless and positioned against a plain, neutral gray background, making the emotional expression the central visual focus.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "crying_baby_scene",
+      "label": "crying_baby_with_text",
+      "description": "A scene depicting a crying baby positioned centrally against a plain gray background, with overlaid text at the top and bottom that reads 'admins be like' and 'this my group', respectively. The baby's distressed expression is the focal point, and the text provides context for the humorous interpretation of the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "baby",
+          "relation": "isDepictedWith",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "administrators",
+      "label": "administrators",
+      "description": "The term 'admins' refers to individuals who hold administrative roles, typically in online communities, forums, or organizations. These roles involve moderating content, enforcing rules, managing user access, and maintaining order. The meme humorously exaggerates the frustration or exasperation admins feel when dealing with unruly or unreasonable group members, using the crying baby as an analogy for their emotional state. This requires background knowledge of administrative responsibilities and the common challenges faced by moderators in online spaces.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "online_groups",
+      "label": "online_groups",
+      "description": "The phrase 'this my group' implies a reference to online communities, forums, or social media groups where users interact and sometimes behave in ways that challenge moderation. The meme relies on the understanding that such groups can be chaotic or difficult to manage, which is a common experience for administrators. This background knowledge is necessary to interpret the context of the baby's distress as a metaphor for admin frustration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "crying_baby_as_analogy",
+      "label": "crying_baby_as_analogy",
+      "description": "The use of a crying baby to represent the emotional state of administrators is a form of analogical mapping. This requires understanding that the baby's exaggerated distress is being used humorously to convey the perceived overreaction or emotional intensity of admins. This is a common meme trope where infantile imagery is used to depict adult emotional states, often for comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "crying_baby_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_culture",
+      "label": "meme_culture",
+      "description": "The meme format 'admins be like' is part of a broader internet meme culture that uses relatable or exaggerated scenarios to create humor. Understanding this context requires knowledge of internet humor, meme tropes, and the conventions of online communities. This background knowledge helps interpret the meme as a humorous, albeit potentially insensitive, commentary on administrative roles.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "crying_baby_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "emotional_distress_in_administrators",
+      "label": "emotional_distress_in_administrators",
+      "description": "The meme humorously portrays the emotional distress experienced by administrators when managing difficult groups. This requires background knowledge of the real-world challenges faced by moderators, including dealing with toxic behavior, rule violations, and user conflicts. The meme's humor stems from the contrast between the baby's vulnerability and the perceived overreaction of admins, which may be seen as demeaning to those in administrative roles.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "distress",
+      "label": "the distressed emotion",
+      "description": "The baby's facial expression — with eyes squeezed shut, furrowed brows, and mouth wide open in a wailing motion — conveys intense emotional distress, frustration, or anguish. This is the primary emotion visually expressed in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "admins_be_like_mapping",
+      "label": "admins are mapped onto the crying baby",
+      "description": "The text 'admins be like' is positioned above the crying baby, creating an analogical mapping where the baby's distressed state is used to represent the exaggerated emotional state of administrators when dealing with their groups. The baby's crying is mapped onto the perceived frustration or exasperation of admins, humorously suggesting that admins react with infantile distress to group management challenges.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the crying baby as an analogy for admin frustration",
+      "description": "The user is projected onto the crying baby visual, interpreting the baby's distress as a humorous representation of their own or others' emotional state when dealing with online group management challenges. The text 'admins be like' and 'this my group' frames the baby's expression as a relatable, exaggerated reaction to group dynamics, inviting the user to identify with the admin's perspective.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme may normalize or trivialize the emotional distress of administrators by using a crying baby as an analogy for their frustration, which could be interpreted as dismissive of their actual professional challenges and potentially demeaning to those in administrative roles.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "administrators",
+      "label": "administrators",
+      "description": "The meme is designed for individuals who hold or have held administrative roles in online communities, forums, or organizations. These individuals are the primary target audience as the humor is based on their relatable experiences of frustration and exasperation when managing unruly or unreasonable group members. The meme resonates with them by exaggerating their emotional state using the crying baby as an analogy, which is a common trope in internet humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/16502.png",
+    "image_name": "16502.png",
+    "extraction_timestamp": "2025-12-15T16:36:41.280180",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

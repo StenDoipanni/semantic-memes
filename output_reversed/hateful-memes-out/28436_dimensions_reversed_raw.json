@@ -1,0 +1,232 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: socialism_vs_capitalism_bread_meme; hasOverallIntent: Propaganda; overall-intent-description: The meme uses a visual of a baker holding bread to contrast 'socialism' (people lining up for bread) with 'capitalism' (bread lining up for people), implying capitalism is more efficient. This is a propagandistic simplification of complex economic systems, aiming to influence viewers' opinions by using an oversimplified analogy. The intent is to promote a favorable view of capitalism and a negative view of socialism, potentially reinforcing ideological biases. No specific protected group is targeted, but the meme relies on economic ideology as a form of ideological propaganda.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "socialism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "baker",
+      "label": "person",
+      "description": "A woman with short blonde hair, wearing a white polo shirt and a yellow apron, holding a tray of bread. She is the central figure in the image, positioned in front of shelves of baked goods and an oven.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "baker_holding_bread",
+      "label": "Baker holding tray of bread in bakery",
+      "description": "A baker is positioned centrally in the scene, holding a tray of freshly baked bread. She is surrounded by shelves of baked goods and an oven, indicating a bakery setting. The scene is framed to emphasize her as the central figure, with text overlays contrasting 'socialism' and 'capitalism' using the bread as a metaphor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "socialism",
+      "label": "Socialism",
+      "description": "A political and economic ideology advocating for public or collective ownership of the means of production, distribution, and exchange. In the meme, it is used as a shorthand for a system where resources (like bread) are rationed or distributed through centralized planning, often implying scarcity or inefficiency. This is a real-world concept that requires external knowledge to understand the meme's contrast with capitalism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "capitalism",
+      "label": "Capitalism",
+      "description": "An economic system based on private ownership of the means of production and the creation of goods and services for profit. In the meme, it is used to represent a market-driven system where supply meets demand efficiently, implying abundance and consumer choice. This is a real-world concept that requires external knowledge to understand the meme's contrast with socialism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "economic_system_comparison",
+      "label": "Economic System Comparison",
+      "description": "The meme relies on a simplified, often misleading, comparison between two complex economic systems. It uses the metaphor of bread distribution to represent broader economic principles, which requires understanding of economic theory and ideological debates. This is a real-world concept that is not visible in the image but is essential to interpret the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ideological_propaganda",
+      "label": "Ideological Propaganda",
+      "description": "The meme is designed to promote a specific ideological viewpoint (favoring capitalism over socialism) by using a simplified and often exaggerated analogy. This requires understanding of how propaganda works and how it uses visual and textual elements to influence opinion, which is a real-world concept not visible in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "bread_as_metaphor",
+      "label": "Bread as Metaphor",
+      "description": "In the meme, bread is used as a metaphor for basic necessities or goods in an economy. This requires understanding that bread is a common symbol for sustenance and economic well-being, which is a real-world cultural and symbolic reference not visible in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "economic_efficiency_stereotype",
+      "label": "Economic Efficiency Stereotype",
+      "description": "The meme implies that capitalism is more efficient than socialism by showing bread 'lined up waiting for people,' which is a stereotype that assumes market systems are inherently more efficient. This requires understanding of economic efficiency debates and the common ideological trope that markets are superior to planned economies, which is a real-world concept not visible in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ideological_bias",
+      "label": "Ideological Bias",
+      "description": "The meme is designed to reinforce a particular ideological bias by oversimplifying complex economic systems. This requires understanding that such memes often reflect the biases of their creators or the cultural context in which they are shared, which is a real-world concept not visible in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "calm_confidence",
+      "label": "calm and confident expression",
+      "description": "The baker has a composed, slightly smiling facial expression, looking directly at the viewer with a neutral to positive demeanor, suggesting self-assurance and contentment in her work. Her posture and the way she holds the tray of bread reinforce this calm confidence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_socialism_bread_line",
+      "label": "Socialism is mapped to people lining up for bread",
+      "description": "The top text 'socialism.' is juxtaposed with the visual of shelves filled with bread, implying that under socialism, people line up for bread. The visual of the bread on shelves is mapped to the textual concept of 'people lining up waiting for bread' as a representation of socialism's perceived inefficiency or scarcity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the baker holding bread as a symbol of capitalist efficiency",
+      "description": "The user is implicitly projected onto the baker, who is the central visual figure holding bread. The meme frames the baker as the embodiment of the capitalist system's efficiency — where bread (goods) is abundantly produced and readily available, contrasting with the imagined inefficiency of socialism. The user is invited to identify with the baker's role as a provider in a market system, reinforcing the meme's propagandistic message that capitalism is superior because it delivers goods to consumers without requiring queues. The projection is onto the VisualMaterial entity 'baker' and the Scene entity 'baker_holding_bread', which together represent the capitalist ideal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Propaganda",
+      "description": "The meme uses a simplified and exaggerated analogy to promote a specific ideological viewpoint (favoring capitalism over socialism), which is a form of ideological propaganda. It aims to influence viewers' opinions by oversimplifying complex economic systems.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "ideological audience",
+      "description": "The meme is designed for individuals who are engaged in ideological debates about economic systems, particularly those who hold favorable views toward capitalism and critical views toward socialism. The target audience likely includes politically or economically aware individuals who interpret the meme as a simplified argument for market efficiency over centralized planning. The meme relies on understanding of economic ideologies and uses propaganda techniques to reinforce existing biases, making it most effective for audiences already predisposed to favor capitalism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/28436.png",
+    "image_name": "28436.png",
+    "extraction_timestamp": "2025-12-15T20:33:10.341118",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

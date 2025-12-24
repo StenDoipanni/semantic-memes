@@ -1,0 +1,86 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "medieval_confrontation_scene",
+      "participants": [
+        {
+          "entity": "man_in_black_cloak",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "medieval_knight",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "woman_in_medieval_dress",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_in_black_cloak",
+          "relation": "confronting",
+          "to": "medieval_knight"
+        },
+        {
+          "from": "medieval_knight",
+          "relation": "standingNextTo",
+          "to": "woman_in_medieval_dress"
+        },
+        {
+          "from": "woman_in_medieval_dress",
+          "relation": "standingNextTo",
+          "to": "man_in_black_cloak"
+        }
+      ]
+    },
+    {
+      "scene": "conspiracy_flag_scene",
+      "participants": [
+        {
+          "entity": "green_flag_with_black_border",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "clock_tower",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "tree_branches",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "green_flag_with_black_border",
+          "relation": "displayedInFrontOf",
+          "to": "clock_tower"
+        },
+        {
+          "from": "green_flag_with_black_border",
+          "relation": "setAgainst",
+          "to": "tree_branches"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":medieval_confrontation_scene :hasParticipant :man_in_black_cloak .",
+    ":medieval_confrontation_scene :hasParticipant :medieval_knight .",
+    ":medieval_confrontation_scene :hasParticipant :woman_in_medieval_dress .",
+    ":man_in_black_cloak :confronting :medieval_knight .",
+    ":medieval_knight :standingNextTo :woman_in_medieval_dress .",
+    ":woman_in_medieval_dress :standingNextTo :man_in_black_cloak .",
+    ":conspiracy_flag_scene :hasParticipant :green_flag_with_black_border .",
+    ":conspiracy_flag_scene :hasParticipant :clock_tower .",
+    ":conspiracy_flag_scene :hasParticipant :tree_branches .",
+    ":green_flag_with_black_border :displayedInFrontOf :clock_tower .",
+    ":green_flag_with_black_border :setAgainst :tree_branches ."
+  ],
+  "triples_count": 11
+}

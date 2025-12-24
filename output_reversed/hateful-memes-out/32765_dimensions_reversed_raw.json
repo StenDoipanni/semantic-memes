@@ -1,0 +1,238 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme uses a juxtaposition of text and image to present a false equivalence: it claims that outlawing abortions would only lead to illegal abortions, while outlawing guns would make everyone safe from gun crime. This is a misleading and oversimplified argument that ignores the complexities of both issues. The meme is harmful because it promotes a dangerous and inaccurate narrative that can influence public opinion and policy, potentially leading to ineffective or harmful legislation. The image of the woman (who is likely a public figure) is used to convey a sense of authority or credibility to the argument, which can mislead viewers into accepting the flawed logic. The meme does not contain direct hate or abuse towards any specific group, but its harmful intent lies in its potential to misinform and distort public understanding of complex social and legal issues.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "if you outlaw abortions",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A middle-aged woman with short brown hair, wearing a black sleeveless top and a necklace, appears in two panels of the meme. In the top panel, she is gesturing with her hands while speaking, and in the bottom panel, she is looking upward with a slight smile. The background in both panels is a blue backdrop with partially visible white text. She is the central visual element and is used to convey the message of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "meme_scene",
+      "label": "meme_with_text_and_image",
+      "description": "A meme composed of two panels featuring the same woman, each with overlaid text. The top panel shows the woman gesturing while speaking, with text about outlawing abortions. The bottom panel shows the woman looking upward with a slight smile, with text about outlawing guns. The scene is structured to juxtapose two contrasting statements using the same visual subject.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "isDepictedIn",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "isOverlaying",
+          "to": "woman"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "abortion_law",
+      "label": "Abortion Law",
+      "description": "The concept of legal abortion and its regulation through legislation, including the historical and ongoing debates surrounding its legality, access, and enforcement in various countries. This background knowledge is necessary to understand the first part of the meme's text: 'if you outlaw abortions, abortions will just happen illegally'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gun_control_law",
+      "label": "Gun Control Law",
+      "description": "The concept of regulating or outlawing firearms, including historical and current debates on gun ownership, gun violence, and the effectiveness of gun control legislation in reducing gun crime. This is necessary to understand the second part of the meme's text: 'but if you outlaw guns, we will all be safe from gun crime'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "false_equivalence",
+      "label": "False Equivalence",
+      "description": "A logical fallacy where two different issues are presented as being equivalent or comparable when they are not. This is the core rhetorical device used in the meme to mislead viewers by comparing the consequences of outlawing abortions with those of outlawing guns, which are fundamentally different in nature and complexity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misinformation",
+      "label": "Misinformation",
+      "description": "The spread of false or misleading information, often with the intent to deceive or manipulate public opinion. The meme is an example of misinformation because it presents a simplified and inaccurate comparison to influence beliefs about public policy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "public_figure",
+      "label": "Public Figure",
+      "description": "The use of a recognizable person (in this case, a woman who appears to be a public speaker or official) to lend credibility or authority to an argument. The meme relies on the viewer's perception of the woman as an authoritative source to make the false equivalence more persuasive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "woman",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_rhetoric",
+      "label": "Political Rhetoric",
+      "description": "The use of language and argumentation in political discourse, often involving simplification, emotional appeal, or false equivalences to persuade an audience. The meme is a form of political rhetoric that uses oversimplified logic to promote a specific policy viewpoint.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gun_crime",
+      "label": "Gun Crime",
+      "description": "The concept of criminal acts involving firearms, including homicide, assault, and other violent crimes. This is necessary to understand the claim in the second part of the meme that outlawing guns would make everyone safe from gun crime.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "illegal_abortion",
+      "label": "Illegal Abortion",
+      "description": "The practice of abortion performed without legal authorization, often in unsafe conditions. This concept is central to the first part of the meme's argument, which claims that outlawing abortion would lead to illegal abortions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "sarcasm",
+      "label": "sarcastic expression",
+      "description": "The woman's facial expression in the bottom panel — looking upward with a slight smile — conveys a tone of ironic or sarcastic dismissal, suggesting that the claim about gun crime being eliminated by outlawing guns is absurd or overly simplistic. This expression contrasts with the serious tone of the top panel, reinforcing the meme’s satirical intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The woman is mapped as the speaker of the text about outlawing abortions",
+      "description": "In the top panel, the woman is visually depicted while gesturing and speaking, and the text 'if you outlaw abortions, abortions will just happen illegally' is overlaid. This creates an analogical mapping where the visual entity (the woman) is understood to be the source or speaker of the textual claim. The spatial and contextual adjacency of the text and her expressive posture reinforces this mapping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual argument presented in the meme",
+      "description": "The user is projected onto the contrastive textual claims presented in the meme, which frame a false equivalence between the consequences of outlawing abortions and outlawing guns. The user is implicitly invited to accept or reject this argument as presented, making the user the recipient of the rhetorical projection. There are no explicit deictic pronouns like 'you' or 'me' in the text, but the meme's structure and intent create an implicit projection onto the viewer as the one who must evaluate or be persuaded by the argument.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme promotes a false equivalence between outlawing abortions and outlawing guns, which is misleading and oversimplified. It ignores the complexities of both issues and can misinform public opinion and policy, potentially leading to ineffective or harmful legislation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals engaged in political discourse or policy debates, particularly those interested in or affected by abortion law and gun control law. The meme uses political rhetoric to appeal to viewers who may be influenced by simplified arguments and false equivalences, often found in conservative or anti-abortion advocacy circles. The use of a public figure as a speaker lends authority to the argument, targeting audiences who value perceived expert or official opinions. The meme’s harmful intent and misinformation are directed at shaping public opinion on contentious social issues, making it especially relevant to communities involved in legislative or public policy discussions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/32765.png",
+    "image_name": "32765.png",
+    "extraction_timestamp": "2025-12-15T22:29:59.928287",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

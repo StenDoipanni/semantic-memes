@@ -1,0 +1,211 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme depicts a man drinking from a bottle, with text that reads 'when you don't have to see your ex future mother-in-law anymore.' The scene uses the visual of intoxication to symbolize relief or escape from a difficult interpersonal situation. The intent is to humorously convey the emotional release associated with no longer having to interact with a specific family member. While the content is not explicitly abusive, cyberbullying, or hateful toward any protected group, it does contain potentially harmful implications by trivializing complex family dynamics and emotional distress. The meme normalizes the idea of using alcohol as a coping mechanism for interpersonal conflict, which can be harmful by suggesting that avoidance or intoxication is an acceptable or even desirable response to difficult social situations. The humor is derived from the juxtaposition of the image (drinking) with the text (relief from a future mother-in-law), implying that the situation is so unpleasant that one would need to drink to cope. This can be seen as a form of emotional shorthand that may not be appropriate for all audiences, especially those who have experienced similar situations or who may be struggling with coping mechanisms. The meme does not contain any direct attacks on individuals based on protected characteristics, but it does contain content that could be interpreted as dismissive of the emotional complexity of family relationships and the potential harm of using alcohol as a coping strategy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when you don't have to see",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person",
+      "description": "A man with dark hair and a beard, wearing a white t-shirt, is shown drinking from a bottle. He is tilting his head back with his eyes closed, suggesting he is intoxicated or seeking relief. His expression and posture convey a sense of emotional release or escape.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "drinking_for_relief",
+      "label": "man_drinking_to_escape",
+      "description": "A man is shown drinking from a bottle, with his head tilted back and eyes closed, suggesting emotional release or escape. The text overlay implies this action is a response to no longer having to see his ex future mother-in-law, indicating the scene is about seeking relief through intoxication.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "drinks_from",
+          "to": "bottle"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ex_future_mother_in_law",
+      "label": "Ex Future Mother-in-Law",
+      "description": "A term referring to a woman who was previously the partner of one's ex-partner, and thus becomes the mother-in-law of one's current partner. The term implies a complex family relationship that may involve past conflict or tension, especially if the ex-partner is no longer involved. The meme uses this term to describe a specific interpersonal dynamic that can be emotionally taxing, making the relief of no longer having to interact with her a humorous or relatable situation for some viewers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "alcohol_as_coping_mechanism",
+      "label": "Alcohol as Coping Mechanism",
+      "description": "The use of alcohol to manage or escape from emotional distress or difficult social situations. This is a common social phenomenon, often associated with stress, anxiety, or interpersonal conflict. The meme implies that the man's drinking is a form of emotional release, which may be seen as a coping strategy, albeit one that is potentially harmful or unhealthy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "family_dynamics",
+      "label": "Family Dynamics",
+      "description": "The complex relationships and interactions within a family unit, including in-laws, ex-partners, and their respective families. The meme references a specific type of family dynamic involving an ex-partner and their mother, which can be fraught with tension, especially if there is a history of conflict or if the relationship is complicated by the presence of a new partner or child. Understanding this context is necessary to interpret the humor and emotional weight of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "emotional_release",
+      "label": "Emotional Release",
+      "description": "The act of letting go of pent-up emotions or stress through a physical or psychological outlet. In the context of the meme, the man's drinking and the text imply that he is experiencing a form of emotional release from the stress of no longer having to interact with his ex future mother-in-law. This concept is central to understanding the humor and the underlying emotional message of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_stigma_around_alcohol_use",
+      "label": "Social Stigma Around Alcohol Use",
+      "description": "The societal perception that using alcohol to cope with stress or emotional problems is a negative or unhealthy behavior. While the meme uses this as a humorous device, it implicitly references the social stigma associated with alcohol use as a coping mechanism, which may be seen as a form of self-medication or emotional avoidance. This stigma is part of the broader cultural context that makes the meme's humor relatable or ironic to some viewers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "interpersonal_conflict",
+      "label": "Interpersonal Conflict",
+      "description": "A disagreement or clash between individuals, often involving emotions such as anger, frustration, or hurt. The meme references a specific type of interpersonal conflict involving family relationships, particularly with an ex-partner's mother. Understanding this concept is necessary to interpret the emotional context of the man's actions and the humor of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "relief",
+      "label": "relief emotion",
+      "description": "The man's posture—head tilted back, eyes closed, and drinking from a bottle—conveys a sense of release and emotional unburdening. This is reinforced by the text, which states he no longer has to see his ex future mother-in-law, implying the action is a response to escaping a stressful interpersonal situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "man is the person who no longer has to see his ex future mother-in-law",
+      "description": "The visual of the man drinking is mapped onto the textual description of someone who is relieved from having to see their ex future mother-in-law. The man's action (drinking) and posture (head back, eyes closed) symbolize the emotional release described in the text, creating an analogical mapping where the man represents the person experiencing this relief.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of drinking for relief",
+      "description": "The user is projected onto the scene where the man is drinking from a bottle, as the text 'when you don't have to see your ex future mother-in-law anymore' directly addresses the viewer ('you') and implies that the viewer is the person experiencing this relief. The visual of the man drinking is mapped onto the viewer's own potential experience of emotional release from a difficult interpersonal situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme normalizes the idea of using alcohol as a coping mechanism for interpersonal conflict, which can be harmful by suggesting that avoidance or intoxication is an acceptable or even desirable response to difficult social situations. The humor is derived from the juxtaposition of the image (drinking) with the text (relief from a future mother-in-law), implying that the situation is so unpleasant that one would need to drink to cope. This can be seen as a form of emotional shorthand that may not be appropriate for all audiences, especially those who have experienced similar situations or who may be struggling with coping mechanisms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who have experienced or can relate to interpersonal conflict within family dynamics, particularly involving ex-partners and their families. The meme appeals to people who may have had difficult or strained relationships with an ex-partner's family member, such as an ex-future mother-in-law, and who may use humor to cope with or express the emotional relief of no longer having to interact with such a person. The audience is likely to include adults navigating complex family relationships, especially those who have gone through breakups or divorces and are dealing with the emotional fallout involving in-laws. The meme also targets those who are familiar with or have observed the social stigma around using alcohol as a coping mechanism for stress or conflict, making the humor relatable to viewers who recognize this behavior as a common, albeit unhealthy, response to difficult social situations. The visual of the man drinking and the text 'when you don't have to see your ex future mother-in-law anymore' are designed to resonate with people who have faced similar emotional burdens and find humor in the idea of escaping such situations through intoxication.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/23071.png",
+    "image_name": "23071.png",
+    "extraction_timestamp": "2025-12-15T18:30:20.070569",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

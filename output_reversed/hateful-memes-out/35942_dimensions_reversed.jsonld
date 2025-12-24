@@ -1,0 +1,194 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569",
+  "@type": "AnalysisDocument",
+  "title": "35942.png - Dimension Analysis",
+  "created": "2025-12-15T23:13:41.503064",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_bdbf203c",
+    "@type": "Image",
+    "filename": "35942.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/35942.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/35942.png",
+    "image_name": "35942.png",
+    "extraction_timestamp": "2025-12-15T23:12:22.535015",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_46e3d566",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a pig in a cage with overlaid text that reads, 'you know why muslims hates pigs? because they fuck donkeys!'. This meme uses a false and derogatory stereotype to mock Muslims by falsely attributing a baseless biological claim (pigs mating with donkeys) to them. This is a clear example of Islamophobia, as it relies on a harmful and inaccurate trope to demean a religious group. The intent is to provoke offense and ridicule by exploiting a sensitive religious taboo (the prohibition of pork in Islam) and distorting it with an absurd and offensive biological claim, thereby reinforcing prejudice and hostility toward Muslims. The juxtaposition of the innocent-looking pig with the vulgar, false claim serves to amplify the hateful message.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2aaa7c47",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "you know why muslims hates pigs?",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5a440936",
+      "@type": "VisualMaterial",
+      "instance_name": "pig",
+      "label": "animal",
+      "description": "A pink pig with large ears and a snout, lying on a metal grate in a cage, looking directly at the camera. Another pig is visible in the background, out of focus. The pig is the central visual element and the subject of the overlaid text.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_62b49877",
+      "@type": "Scene",
+      "instance_name": "pig_in_cage_scene",
+      "label": "pig_in_cage",
+      "description": "A scene featuring a pig lying on a metal grate in a cage, looking directly at the camera, with another pig visible in the background. The pig is the central visual element, and the cage bars form the spatial structure of the scene.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0ce21296",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype: Muslims hate pigs because pigs mate with donkeys",
+      "description": "This is a false and derogatory stereotype used to mock Muslims by falsely attributing a baseless biological claim (pigs mating with donkeys) to them. It exploits a sensitive religious taboo (the prohibition of pork in Islam) and distorts it with an absurd and offensive biological claim, thereby reinforcing prejudice and hostility toward Muslims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ef6c4030",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "pork_prohibition_in_islam",
+      "label": "Pork Prohibition in Islam",
+      "description": "In Islam, the consumption of pork is strictly prohibited (haram) based on religious texts (Quran and Hadith). This prohibition is one of the core tenets of Islamic dietary laws and is a significant religious taboo for Muslims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_24fef717",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "pig_donkey_mating_fact",
+      "label": "Biological Fact: Pigs and Donkeys Can Mate",
+      "description": "While biologically possible under rare circumstances, pigs and donkeys mating to produce a hybrid (a 'mule' or 'pig-mule') is extremely rare and not a common or natural occurrence. The meme falsely uses this as a reason for Muslim hatred of pigs, which is a baseless and offensive claim.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0c4c15ed",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "islamophobia_category",
+      "label": "Islamophobia",
+      "description": "A form of prejudice, discrimination, or hostility directed against Muslims. This meme is a clear example of Islamophobia as it relies on a harmful and inaccurate trope to demean a religious group.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f8545cf0",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "hateful_meme",
+      "label": "Hateful Meme",
+      "description": "A meme designed to provoke offense and ridicule by exploiting sensitive topics or stereotypes. This meme uses a false and derogatory stereotype to mock Muslims, thereby reinforcing prejudice and hostility.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_156dde21",
+      "@type": "EmotionExpression",
+      "instance_name": "hateful_meme_emotion",
+      "label": "hateful and mocking emotion",
+      "description": "The emotion expressed is hateful, mocking, and provocative, stemming from the false and offensive stereotype presented in the text overlay. The juxtaposition of the innocent-looking pig with the vulgar, false claim serves to amplify the hateful message and provoke offense.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dc04b819",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The pig is mapped as the entity that Muslims supposedly hate.",
+      "description": "The text 'you know why muslims hates pigs?' directly maps the visual entity 'pig' as the object of hatred attributed to Muslims. The pig in the cage is visually presented as the target of the stereotype being discussed in the text.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7d2ff412",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material questioning Muslim beliefs",
+      "description": "The user is projected onto the top textual material 'you know why muslims hates pigs?' which uses the second-person pronoun 'you' to directly address the viewer, inviting them to engage with the false stereotype being presented. This creates an implicit 'you' projection where the user is positioned as the one who should know or be aware of the supposed reason for Muslim hatred of pigs, thereby making the viewer complicit in the meme's rhetorical framing.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b1933c84",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Islamophobia",
+      "description": "The meme uses a false and derogatory stereotype to mock Muslims by falsely attributing a baseless biological claim (pigs mating with donkeys) to them, exploiting a sensitive religious taboo (the prohibition of pork in Islam) and distorting it with an absurd and offensive biological claim, thereby reinforcing prejudice and hostility toward Muslims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_eb5f572a",
+      "@type": "TargetCommunity",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Target Audience: Individuals who may be exposed to or propagate Islamophobic stereotypes",
+      "description": "The meme is designed to target and provoke members of the general public who may hold or be susceptible to Islamophobic views, by leveraging a false and offensive stereotype about Muslims and pigs. The content is crafted to reinforce prejudice against Muslims by mocking their religious practices (pork prohibition) with a baseless and vulgar biological claim (pigs mating with donkeys), making it particularly aimed at audiences who either already harbor Islamophobic sentiments or are susceptible to such harmful tropes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_b9f1f569"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

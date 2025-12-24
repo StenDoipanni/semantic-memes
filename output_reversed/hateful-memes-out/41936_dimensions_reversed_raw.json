@@ -1,0 +1,215 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts armed individuals in a combat setting, juxtaposed with text that reads 'just because your islamaphobic doesn't mean they don't want to kill you.' This combination is intended to provoke fear and reinforce harmful stereotypes by linking Islamophobia with violent intent. The visual of armed figures, often associated with terrorism, is used to amplify the message that those who hold Islamophobic views are perceived as being in danger from Muslims, which is a hateful and dangerous generalization. The meme uses the visual of armed individuals to symbolize the perceived threat from Muslims, thereby reinforcing the stereotype that Muslims are inherently violent and dangerous, which is a form of Islamophobic hate speech. The intent is to instill fear in the viewer and to promote a negative perception of Muslims by associating them with violence, which is a direct attack on a protected characteristic (religion).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "just because your islamaphobic",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "armed_individuals",
+      "label": "people",
+      "description": "Two individuals wearing black head coverings and tactical gear, holding large rocket-propelled grenades (RPGs). Their faces are obscured, and they appear to be in a combat or militant setting. One is in the foreground, aiming the weapon, while the other is partially visible behind. These figures are central to the visual material and are used to symbolize perceived threat.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "armed_individuals_in_combat_setting",
+      "label": "armed individuals in combat setting",
+      "description": "Two armed individuals wearing black head coverings and tactical gear, holding large rocket-propelled grenades (RPGs), positioned in a combat or militant setting with buildings in the background. One individual is in the foreground aiming the weapon, while the other is partially visible behind. The scene is framed to emphasize the threat posed by the armed individuals.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "armed_individuals",
+          "relation": "arePositionedIn",
+          "to": "combat_setting"
+        },
+        {
+          "from": "armed_individuals",
+          "relation": "hold",
+          "to": "rocket_propelled_grenades"
+        },
+        {
+          "from": "foreground_armed_individual",
+          "relation": "aims",
+          "to": "rocket_propelled_grenades"
+        },
+        {
+          "from": "background_armed_individual",
+          "relation": "isPositionedBehind",
+          "to": "foreground_armed_individual"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The meme relies on the stereotype that Muslims are inherently violent and associated with terrorism, which is a common and harmful form of Islamophobia. This stereotype is not visible in the image but is essential to understanding the meme's message and intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "armed_individuals_in_combat_setting",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "terrorism_association",
+      "label": "Terrorism Association",
+      "description": "The image uses armed individuals with RPGs to symbolize a perceived threat, which is implicitly linked to terrorism. This association is a real-world concept that is not directly visible in the image but is critical to understanding the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "armed_individuals_in_combat_setting",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobic_hate_speech",
+      "label": "Islamophobic Hate Speech",
+      "description": "The meme's text explicitly references 'islamaphobic' and implies that such individuals are in danger from Muslims, which constitutes hate speech targeting Muslims. This is a real-world concept that is not visible in the image but is essential to understanding the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "perceived_threat_from_muslims",
+      "label": "Perceived Threat from Muslims",
+      "description": "The meme constructs a narrative that those who hold Islamophobic views are perceived to be in danger from Muslims, which is a dangerous generalization. This concept is not visible in the image but is central to the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "armed_individuals_in_combat_setting",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harmful_generalization",
+      "label": "Harmful Generalization",
+      "description": "The meme promotes the idea that all Muslims are inherently violent, which is a harmful generalization. This is a real-world concept that is not visible in the image but is essential to understanding the meme's message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "fear",
+      "label": "fear-inducing emotion",
+      "description": "The emotion of fear is expressed through the threatening visual of armed individuals with RPGs and the text that warns 'just because your islamaphobic doesn't mean they don't want to kill you,' which instills fear in the viewer by implying imminent danger from Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Textual warning mapped onto armed individuals",
+      "description": "The text 'just because your islamaphobic doesn't mean they don't want to kill you' is juxtaposed with the visual of armed individuals holding RPGs. This creates an analogical mapping where the armed individuals are symbolically mapped as the entities that 'want to kill you' — specifically, Muslims perceived as violent — in response to the viewer's islamophobia. The visual material (armed individuals) is used to represent the perceived threat from Muslims, which the text explicitly links to the viewer's islamophobic stance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the viewer as the target of potential violence due to islamophobia",
+      "description": "The text 'just because your islamaphobic doesn't mean they don't want to kill you' explicitly addresses the user ('your') and projects the user as the target of potential violence. The user is being warned that their islamophobic stance makes them vulnerable to harm from the armed individuals depicted, who are symbolically mapped as Muslims. The projection is onto the user as the 'you' in the text, making the user the central subject of the threat narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks individuals based on their religion (Islam) by promoting the stereotype that Muslims are inherently violent and dangerous, which is a form of Islamophobic hate speech. The visual of armed individuals is used to symbolize this perceived threat, reinforcing harmful generalizations about an entire religious group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "text_chunk",
+      "label": "islamaphobic text",
+      "description": "The text 'just because your islamaphobic doesn't mean they don't want to kill you' directly targets individuals who hold Islamophobic views, framing them as being in danger from Muslims. This indicates the meme is designed for people who are either Islamophobic or are aware of such attitudes, aiming to provoke fear or reinforce stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/41936.png",
+    "image_name": "41936.png",
+    "extraction_timestamp": "2025-12-16T01:13:38.766818",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

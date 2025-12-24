@@ -1,0 +1,339 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: this_man_took_millions_of_lives; hasOverallIntent: Harmful; overall-intent-description: The image depicts Adolf Hitler, a historical figure responsible for the Holocaust and the deaths of millions, with the text 'this man took millions of lives.' The overall intent is to convey a stark, unambiguous condemnation of Hitler's atrocities. While the message is factually accurate and serves an educational or moral purpose, it is inherently harmful because it reifies the historical trauma associated with Hitler and the Nazi regime. The meme's intent is not to threaten or abuse, but to shock and warn viewers about the consequences of extreme ideologies and totalitarianism. The juxtaposition of the image of Hitler with the text serves as a direct, visceral reminder of the human cost of his actions, functioning as a form of historical propaganda aimed at preventing the recurrence of such atrocities. The meme does not target any specific individual or group based on protected characteristics, but its content is deeply tied to the historical trauma of genocide and war, making it potentially triggering and emotionally charged for survivors and descendants of victims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "this man took",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Adolf_Hitler",
+      "label": "Historical figure",
+      "description": "A man in a Nazi uniform with a swastika armband, looking directly at the camera with a stern expression. He is the central subject of the image and the focus of the meme's text, which states 'this man took millions of lives.' His appearance is iconic and historically associated with the Holocaust and World War II atrocities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "condemnation_scene",
+      "label": "condemnation_of_historical_atrocities",
+      "description": "A scene depicting the historical figure Adolf_Hitler, visually presented in a Nazi uniform with a swastika armband, as the central subject of a condemnation. The scene is framed by overlaid text that explicitly states 'this man took millions of lives,' creating a direct visual and textual relationship that serves to condemn his actions and legacy. The spatial arrangement places the figure centrally, with the text positioned above and below his image to emphasize the message. The scene's structure is designed to evoke a strong emotional and moral response by juxtaposing the image of the historical figure with the stark, accusatory text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "accuses",
+          "to": "Adolf_Hitler"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust",
+      "label": "Holocaust",
+      "description": "The systematic, state-sponsored persecution and murder of six million Jews by Nazi Germany and its collaborators during World War II. This event is the central historical atrocity referenced in the meme's text 'this man took millions of lives' when applied to Adolf Hitler. The meme relies on the global historical knowledge of the Holocaust to convey the scale and moral weight of Hitler's crimes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "condemnation_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "World_War_II",
+      "label": "World War II",
+      "description": "A global conflict that lasted from 1939 to 1945, in which Nazi Germany and its allies fought against the Allied Powers. Hitler's leadership of Nazi Germany during this war resulted in the deaths of tens of millions of people, including civilians and soldiers. The meme's condemnation of Hitler implicitly references his role in initiating and directing this global conflict, which led to the Holocaust and other mass atrocities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "condemnation_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Nazi_Germany",
+      "label": "Nazi Germany",
+      "description": "The German state under the leadership of Adolf Hitler and the Nazi Party from 1933 to 1945. The regime was characterized by totalitarian control, racial ideology, and genocide. The swastika armband visible on the figure in the image is a direct symbol of this regime, and the meme's condemnation relies on the historical understanding of Nazi Germany as the state responsible for the Holocaust and other crimes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "condemnation_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Adolf_Hitler",
+      "label": "Adolf Hitler",
+      "description": "The German chancellor and dictator of Nazi Germany from 1933 until his death in 1945. He is the central historical figure referenced in the meme. The image of Hitler is iconic and universally recognized as the leader responsible for the Holocaust and World War II. The meme's message is only comprehensible because of the global historical knowledge of Hitler's identity and his role in orchestrating mass murder.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "condemnation_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Anti_Semitism",
+      "label": "Anti-Semitism",
+      "description": "A long-standing prejudice and discrimination against Jewish people, which was institutionalized and radicalized by the Nazi regime. The Holocaust was the culmination of centuries of anti-Semitic hatred. The meme's condemnation of Hitler implicitly references his promotion of anti-Semitic ideology as the core driver of his genocidal policies, which is a key piece of background knowledge for understanding the historical context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "condemnation_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Genocide",
+      "label": "Genocide",
+      "description": "The deliberate and systematic destruction of a racial, political, or cultural group. The Holocaust is the most infamous example of genocide in history. The meme's text 'this man took millions of lives' is only meaningful because it refers to the concept of genocide, which is a specific, legally and morally defined term that requires external knowledge to understand the scale and nature of the atrocity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "condemnation_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Nazi_Symbolism",
+      "label": "Nazi Symbolism",
+      "description": "The visual and ideological symbols used by the Nazi Party, including the swastika, the Iron Cross, and the Nazi salute. The swastika armband on the figure in the image is a key symbol of the Nazi regime. The meme's condemnation relies on the viewer's recognition of this symbolism as a marker of evil and totalitarianism, which is a piece of cultural and historical knowledge outside the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "condemnation_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Historical_Propaganda",
+      "label": "Historical Propaganda",
+      "description": "The use of media and imagery to promote a political agenda or ideology. The meme functions as a form of historical propaganda, using the iconic image of Hitler and stark text to convey a moral message. The effectiveness of the meme relies on the viewer's understanding of how historical propaganda has been used to shape public perception of historical figures and events.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "condemnation_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Moral_Condemnation",
+      "label": "Moral Condemnation",
+      "description": "The act of expressing strong disapproval or judgment of a person or action based on moral principles. The meme's intent is to deliver a moral condemnation of Hitler's actions. This requires the viewer to understand the concept of moral condemnation as a form of ethical judgment, which is a piece of background knowledge about social and ethical norms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "condemnation_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Historical_Trauma",
+      "label": "Historical Trauma",
+      "description": "The psychological and emotional impact of historical events, particularly those involving violence and loss, on individuals and communities. The meme's message is emotionally charged and potentially triggering for survivors and descendants of Holocaust victims. The meme relies on the concept of historical trauma to convey the lasting human cost of Hitler's actions, which is a piece of background knowledge about the psychological effects of historical atrocities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "condemnation_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "condemnation",
+      "label": "moral condemnation emotion",
+      "description": "The emotion expressed is one of profound moral condemnation, conveyed through the stark, accusatory text 'this man took millions of lives' overlaid on the image of Adolf Hitler. The emotion is not an expression on Hitler's face, but rather an emotion evoked in the viewer by the image and text combination, which serves to condemn his historical atrocities. The emotion is heavy, somber, and morally charged, intended to shock and warn viewers about the consequences of extreme ideologies and totalitarianism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Adolf Hitler is mapped as 'this man'",
+      "description": "The text 'this man took millions of lives' explicitly identifies the visual entity Adolf_Hitler as 'this man'. The spatial positioning of the text directly above and below the image reinforces this direct analogical mapping, where the textual referent 'this man' is projected onto the visual entity Adolf_Hitler. This mapping is central to the meme's intent, as it directly links the historical figure to the accusation of mass murder.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the condemnation scene",
+      "description": "The user is projected onto the overall condemnation scene, which includes the visual material of Adolf_Hitler and the textual material 'this man took millions of lives'. The scene functions as a direct moral condemnation, and the user is implicitly positioned as the recipient of this condemnation, witnessing the historical atrocity and its attribution to the figure. The projection is not deictic (e.g., 'you' or 'me'), but rather existential and moral — the user is placed in the role of a witness to historical trauma and moral judgment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme depicts Adolf Hitler, a historical figure responsible for the Holocaust and the deaths of millions, with the text 'this man took millions of lives.' While the message is factually accurate and serves an educational or moral purpose, it is inherently harmful because it reifies the historical trauma associated with Hitler and the Nazi regime. The meme's intent is to shock and warn viewers about the consequences of extreme ideologies and totalitarianism, functioning as a form of historical propaganda aimed at preventing the recurrence of such atrocities. The content is deeply tied to the historical trauma of genocide and war, making it potentially triggering and emotionally charged for survivors and descendants of victims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general public",
+      "description": "The meme is designed for a broad general public audience with basic historical awareness, as it relies on universally recognized imagery of Adolf Hitler and the Holocaust to convey its message of moral condemnation. It does not target any specific demographic or community based on protected characteristics but assumes viewers possess foundational knowledge of World War II and Nazi atrocities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/91536.png",
+    "image_name": "91536.png",
+    "extraction_timestamp": "2025-12-19T17:21:24.486162",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 19,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

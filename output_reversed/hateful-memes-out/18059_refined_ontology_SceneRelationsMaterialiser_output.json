@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "man gesturing to crowd",
+      "participants": [
+        {
+          "entity": "man_in_blue_shirt",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "crowd",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_in_blue_shirt",
+          "relation": "gesturing_to",
+          "to": "crowd"
+        },
+        {
+          "from": "crowd",
+          "relation": "surrounding",
+          "to": "man_in_blue_shirt"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":man_gesturing_to_crowd :hasParticipant :man_in_blue_shirt .",
+    ":man_gesturing_to_crowd :hasParticipant :crowd .",
+    ":man_in_blue_shirt :gesturing_to :crowd .",
+    ":crowd :surrounding :man_in_blue_shirt ."
+  ],
+  "triples_count": 4
+}

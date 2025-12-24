@@ -1,0 +1,196 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image shows a smiling Black man wearing a rainbow lanyard, likely at a Pride event, with the text overlay 'I am against gun, violence and discrimination.' The scene is positive and inclusive, featuring a diverse background. There is no toxicity present in the image. The intent is to convey a message of solidarity and opposition to harmful societal issues, using the individual's visible identity (Black, LGBTQ+ ally via rainbow lanyard) as a symbol of unity and advocacy. The meme aims to promote social justice values and encourage support for anti-violence and anti-discrimination causes. The juxtaposition of the joyful, affirming image with the serious message reinforces the call to action and highlights the individual's commitment to these values.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "i am against gun, violence and discrimination",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "Black man",
+      "description": "A smiling Black man in the foreground, wearing a blue polo shirt, a rainbow-colored lanyard, and a backpack. He has sunglasses perched on his head and is looking directly at the camera. His visible identity suggests he is likely an ally or participant in a Pride event, symbolizing inclusivity and advocacy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "pride_event_participants",
+      "label": "Pride event participants",
+      "description": "A scene depicting a Black man in the foreground wearing a rainbow lanyard and backpack, smiling at the camera, with other people in the background, likely at a Pride parade or similar event. The man's attire and the background suggest a celebration of LGBTQ+ identity and inclusion. The text overlay reinforces a message of solidarity against gun violence, violence, and discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "isPartOf",
+          "to": "pride_event_participants"
+        },
+        {
+          "from": "people",
+          "relation": "isPartOf",
+          "to": "pride_event_participants"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Pride_event",
+      "label": "Pride Event",
+      "description": "A Pride event is a public celebration of LGBTQ+ identity and community, often involving parades, rallies, and public demonstrations. The rainbow lanyard worn by the man is a symbol of LGBTQ+ pride and allyship. Understanding this context is necessary to interpret the man’s visible identity as an expression of support for LGBTQ+ rights and inclusion, which is central to the meme’s message of opposing discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene_entities_pride_event_participants",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Gun_violence",
+      "label": "Gun Violence",
+      "description": "Gun violence refers to acts of violence involving firearms, often resulting in injury or death. It is a significant social and political issue in many countries, particularly in the United States. The text overlay references opposition to gun violence, which requires background knowledge of this societal problem to understand the meme’s advocacy message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Discrimination",
+      "label": "Discrimination",
+      "description": "Discrimination is the unjust or prejudicial treatment of different categories of people, especially on grounds of race, sex, age, disability, or sexual orientation. The text explicitly mentions opposition to discrimination, which requires understanding this social concept to interpret the meme’s call for equality and inclusion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Anti_Black_Stereotypes",
+      "label": "Anti-Black Stereotypes",
+      "description": "Anti-Black stereotypes are derogatory beliefs and tropes historically used to dehumanize and marginalize Black people. These include claims of aggression, criminality, or hypersexualization. The meme’s message of opposing discrimination implicitly references the need to counter these stereotypes, especially since the man’s Black identity is visually prominent and used as a symbol of solidarity. Understanding these stereotypes is necessary to appreciate the meme’s intent to challenge systemic racism and promote inclusion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material_man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "LGBTQ_Discrimination",
+      "label": "LGBTQ+ Discrimination",
+      "description": "LGBTQ+ discrimination refers to prejudice or mistreatment based on sexual orientation or gender identity. The rainbow lanyard and the context of a Pride event imply the man is an ally or participant in the LGBTQ+ community. The text’s mention of opposing discrimination requires understanding this specific form of social injustice to fully grasp the meme’s message of solidarity and advocacy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material_man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene_entities_pride_event_participants",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "joyful expression",
+      "description": "The man in the foreground is smiling broadly, showing his teeth, with crinkled eyes, conveying a strong sense of joy and positivity. This expression aligns with the celebratory and inclusive atmosphere of the Pride event depicted in the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The text 'I am against gun, violence and discrimination' is mapped onto the smiling Black man in the foreground.",
+      "description": "The text explicitly states 'I am against...', which directly projects the speaker's identity (the person who is against these issues) onto the visual entity — the Black man in the foreground. His joyful expression, rainbow lanyard, and presence at a Pride event visually represent his identity as an ally and advocate for the causes mentioned in the text. The mapping is established by the textual 'I' being attributed to the visual subject, making him the embodiment of the message. This is a classic analogical mapping where the visual subject is identified as the speaker of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the smiling Black man as the speaker of the message",
+      "description": "The text 'I am against gun, violence and discrimination' explicitly projects the user's identity (the speaker) onto the visual entity — the Black man in the foreground. The use of 'I' directly attributes the message to him, making him the embodiment of the statement. The user is thus projected onto this visual material, identifying him as the source of the message. This projection is reinforced by the man's joyful expression, rainbow lanyard, and presence at a Pride event, which visually represent his identity as an ally and advocate for the causes mentioned in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "Black LGBTQ+ ally or supporter",
+      "description": "The smiling Black man wearing a rainbow lanyard at a Pride event visually represents an ally or participant in the LGBTQ+ community, symbolizing inclusivity and advocacy. His identity is central to the meme’s message, as the text 'I am against gun, violence and discrimination' is attributed to him, making him the embodiment of the message. The rainbow lanyard and Pride event context explicitly signal his alignment with LGBTQ+ rights, while his Black identity is presented as part of the broader coalition against systemic discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/72093.png",
+    "image_name": "72093.png",
+    "extraction_timestamp": "2025-12-19T11:18:09.430124",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

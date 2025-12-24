@@ -1,0 +1,198 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts prisoners in striped uniforms, likely from a concentration camp, smiling and raising their hands in what appears to be a celebratory or defiant gesture. The overlaid text reads, 'you can be happy and smiling in any situation.' This juxtaposition is deeply harmful because it trivializes the suffering and trauma of Holocaust victims by suggesting their happiness is a virtue or a coping mechanism, ignoring the horrific context of their imprisonment. It misrepresents their experience as one of resilience in the face of extreme suffering, which can be seen as minimizing the gravity of the Holocaust and potentially perpetuating harmful stereotypes about victims of genocide. The meme's intent is to convey a message of forced positivity or emotional resilience, but in doing so, it risks dehumanizing the victims and distorting historical reality, which can be psychologically damaging and offensive to survivors and their descendants. The overall intent is to promote a superficial message of optimism while ignoring the profound suffering depicted, making it a harmful meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "you can be happy and",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "prisoners",
+      "label": "people in striped uniforms",
+      "description": "A group of individuals wearing striped prison uniforms, characteristic of concentration camp inmates, are depicted smiling and raising their hands in a gesture that appears celebratory or defiant. Their expressions and body language contrast sharply with the grim historical context of their imprisonment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "prisoners_smiling_together",
+      "label": "prisoners smiling together",
+      "description": "A group of prisoners in striped uniforms are gathered closely, smiling and raising their hands in a celebratory or defiant gesture. They are positioned behind barbed wire, indicating a confined and oppressive environment. The scene conveys a stark contrast between their expressions and the grim historical context of their imprisonment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust",
+      "label": "Holocaust",
+      "description": "The Holocaust was the systematic, state-sponsored persecution and murder of six million Jews by Nazi Germany and its collaborators during World War II. The image depicts prisoners in striped uniforms, characteristic of concentration camp inmates, which directly references this historical atrocity. Understanding the meme requires knowledge of the Holocaust to recognize the profound suffering and genocide depicted, which the text attempts to trivialize.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "prisoners",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prisoners_smiling_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Holocaust_denial_minimization_themes",
+      "label": "Holocaust denial/minimization themes",
+      "description": "This is a disparaging stereotype or harmful concept that involves downplaying or denying the scale and horror of the Holocaust. The meme's text, 'you can be happy and smiling in any situation,' when juxtaposed with the image of concentration camp prisoners, implicitly promotes a form of Holocaust minimization by suggesting their happiness is a virtue or coping mechanism, thereby ignoring the horrific context of their imprisonment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prisoners_smiling_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Inspiration_porn_pity_narratives",
+      "label": "Inspiration porn/pity narratives",
+      "description": "This is a form of ableism that involves portraying people with disabilities or trauma as inspirational or heroic for enduring suffering, often to evoke pity or admiration. The meme's message of forced positivity ('you can be happy and smiling in any situation') can be seen as a form of inspiration porn, as it frames the prisoners' happiness as admirable or virtuous, rather than acknowledging the trauma and suffering they endured.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prisoners_smiling_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Concentration_camps",
+      "label": "Concentration camps",
+      "description": "Concentration camps were camps established by Nazi Germany during World War II to imprison, torture, and murder millions of people, primarily Jews, but also other groups deemed undesirable by the regime. The image of prisoners in striped uniforms behind barbed wire is a direct reference to these camps, which are central to understanding the historical context of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "prisoners",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prisoners_smiling_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Barbed_wire",
+      "label": "Barbed wire",
+      "description": "Barbed wire is a type of fencing used to enclose and control access to areas, often associated with prisons, concentration camps, and military installations. In the image, barbed wire is visible in the foreground, indicating the prisoners are confined within a secure, oppressive environment. Understanding the symbolism of barbed wire is necessary to interpret the context of the prisoners' situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "prisoners_smiling_together",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "forced happiness expression",
+      "description": "The prisoners are depicted with wide smiles and raised hands, conveying an expression of joy or celebration. However, this happiness is contextually inappropriate and deeply problematic, as it is juxtaposed with the horrific reality of concentration camp imprisonment, making it appear as a forced or performative emotion rather than genuine joy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'you can be happy and' is mapped onto the prisoners smiling and raising their hands.",
+      "description": "The textual phrase 'you can be happy and' is juxtaposed with the visual of prisoners in striped uniforms smiling and raising their hands. This creates an analogical mapping where the text implies that the prisoners are an example of 'you' (the viewer) being happy, despite their grim context. The mapping equates the prisoners' forced or performative happiness with the universal ideal of happiness, ignoring the horrific reality of their situation. This is a harmful mapping that trivializes their suffering and promotes a form of Holocaust minimization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the prisoners as an example of happiness",
+      "description": "The user is projected onto the prisoners in the image, who are depicted smiling and raising their hands. The text 'you can be happy and' directly addresses the user ('you'), implying that the viewer should emulate the prisoners' happiness, despite the horrific context of their imprisonment. This projection equates the viewer with the prisoners, suggesting the viewer can adopt their demeanor as a model for happiness in any situation, which is a harmful and misleading interpretation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the suffering of Holocaust victims by suggesting their happiness is a virtue or coping mechanism, ignoring the horrific context of their imprisonment. It promotes a superficial message of optimism while distorting historical reality, which can be psychologically damaging and offensive to survivors and their descendants.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience, likely individuals who consume and share internet memes without specific cultural or historical context. The target community includes those who may not be aware of the Holocaust or the historical significance of the image, and who might interpret the juxtaposition of smiling prisoners with the text 'you can be happy and smiling in any situation' as a motivational or inspirational message about resilience and positivity. The meme's harmful intent targets those who are not critically aware of the historical context, potentially normalizing or trivializing the suffering of Holocaust victims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/62745.png",
+    "image_name": "62745.png",
+    "extraction_timestamp": "2025-12-16T07:41:30.787025",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

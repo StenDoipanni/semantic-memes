@@ -1,0 +1,232 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image displays a photograph of the World Trade Center towers in New York City, overlaid with text that reads 'we said we would never forget' at the top and 'why are you voting them into our government?' at the bottom. The visual material (the towers) is juxtaposed with the textual material to evoke the 9/11 terrorist attacks and to express outrage or condemnation toward political figures or parties perceived as being associated with those attacks. The intent is to provoke emotional response and to question the electorate's choice to support such figures, potentially leading to harmful consequences such as increased polarization, division, or even violence. The meme does not contain explicit hate speech or discriminatory language targeting specific protected groups, but its message is politically charged and potentially inflammatory, which can contribute to societal harm by inciting anger and distrust. The overall intent is propagandistic, aiming to influence political opinion and action by leveraging the trauma of 9/11 to discredit political opponents or policies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "we said we would never forget",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "World_Trade_Center_towers",
+      "label": "skyscrapers",
+      "description": "Two iconic skyscrapers, the Twin Towers, standing tall in the center of the image, surrounded by other buildings in a cityscape. They are the central visual focus and symbolize the 9/11 attacks.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "memorial_scene",
+      "label": "Memorial Scene",
+      "description": "A memorial scene centered on the World Trade Center towers, symbolizing the 9/11 attacks, overlaid with text expressing outrage and questioning political choices. The towers are the central visual focus, surrounded by the urban landscape, with text positioned at the top and bottom to frame the emotional and political message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "World_Trade_Center_towers",
+          "relation": "symbolizes",
+          "to": "911_attacks"
+        },
+        {
+          "from": "text",
+          "relation": "conveys",
+          "to": "political_outrage"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "911_terrorism_attacks",
+      "label": "9/11 Terrorist Attacks",
+      "description": "The 9/11 attacks were a series of coordinated terrorist attacks carried out by the Islamic extremist group al-Qaeda against the United States on September 11, 2001. The attacks resulted in the destruction of the World Trade Center towers in New York City and the deaths of nearly 3,000 people. This event is the central historical reference point for the meme, as the image of the Twin Towers is juxtaposed with text expressing outrage over political choices, implying a connection between the attacks and current political figures or parties.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "World_Trade_Center_towers",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "memorial_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_opposition",
+      "label": "Political Opposition",
+      "description": "The meme implicitly references political opposition or criticism of specific political figures or parties, often in the context of elections. The phrase 'why are you voting them into our government?' suggests a political context where the electorate is being questioned for supporting individuals or parties perceived as having ties to or sympathies for the 9/11 attackers. This requires background knowledge of political systems, elections, and partisan discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "memorial_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia",
+      "description": "The meme implicitly references Islamophobia, the fear or hatred of Muslims. The association of the 9/11 attacks with 'them' (implied to be Muslim extremists) and the rhetorical question about voting such figures into government reflects a common stereotype that links Islam with terrorism. This requires background knowledge of Islamophobia and its manifestations in political discourse and media.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "memorial_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_islam_stereotype",
+      "label": "Anti-Islam Stereotype",
+      "description": "The meme relies on the stereotype that Muslims are inherently associated with terrorism, which is a common and harmful trope. This stereotype is used to frame the political question in the meme, implying that voting for certain candidates is equivalent to supporting terrorism. This requires background knowledge of anti-Islam stereotypes and their role in political rhetoric.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "memorial_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_rhetoric",
+      "label": "Political Rhetoric",
+      "description": "The meme uses political rhetoric to evoke emotional responses and to question the electorate's choices. The phrase 'we said we would never forget' is a common rhetorical device used to invoke trauma and moral outrage. This requires background knowledge of political rhetoric and its use in shaping public opinion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "memorial_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "trauma_and_politics",
+      "label": "Trauma and Politics",
+      "description": "The meme leverages the trauma of the 9/11 attacks to influence political opinion. This requires background knowledge of how trauma can be used in political discourse to mobilize voters or to discredit opponents. The use of trauma as a political tool is a significant concept in understanding the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "memorial_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "outrage",
+      "label": "outraged emotion",
+      "description": "The emotion of intense anger and moral indignation, expressed through the rhetorical question 'why are you voting them into our government?' which implies betrayal and condemnation of political choices linked to the 9/11 attacks.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The 9/11 attacks are mapped onto the political choice being questioned",
+      "description": "The top text 'we said we would never forget' is mapped onto the visual entity 'World_Trade_Center_towers', which symbolizes the 9/11 attacks. The rhetorical question 'why are you voting them into our government?' implies that the political figures being criticized are associated with the attackers, thus mapping the trauma of 9/11 onto the act of voting for such figures. This creates an analogical mapping where the visual symbol of the towers (representing the attack) is equated with the political decision being condemned.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the rhetorical question text",
+      "description": "The user is projected onto the bottom textual material 'why are you voting them into our government?' which directly addresses the viewer with 'you', making the user the target of the rhetorical question and inviting self-reflection or blame regarding political choices.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme leverages the trauma of the 9/11 attacks to incite anger and distrust toward political opponents, potentially leading to societal harm through increased polarization and division. It frames political choices as morally equivalent to supporting terrorism, which can incite violence or hatred.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "political_opposition",
+      "label": "Political Opposition",
+      "description": "The meme is designed for individuals who are politically engaged and critical of specific political figures or parties, particularly those perceived as having ties to or sympathies for the 9/11 attackers. The rhetorical question 'why are you voting them into our government?' targets voters who support such candidates, framing their political choices as morally equivalent to supporting terrorism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/01936.png",
+    "image_name": "01936.png",
+    "extraction_timestamp": "2025-12-15T10:49:37.516295",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

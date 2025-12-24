@@ -1,0 +1,36 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "person aiming rifle out of window",
+      "participants": [
+        {
+          "entity": "person",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "person",
+          "relation": "isAiming",
+          "to": "rifle-like object"
+        },
+        {
+          "from": "person",
+          "relation": "isPositionedNear",
+          "to": "window"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":person_aiming_rifle_out_of_window :hasParticipant :person .",
+    ":person :isAiming :rifle_like_object .",
+    ":person :isPositionedNear :window ."
+  ],
+  "triples_count": 3
+}

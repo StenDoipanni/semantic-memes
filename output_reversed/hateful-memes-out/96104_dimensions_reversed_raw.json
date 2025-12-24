@@ -1,0 +1,251 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image juxtaposes a historical photo of Ku Klux Klan members with text claiming they killed 3,446 Black people over 86 years, then contrasts it with a claim that since 2016, 1,891 Black people were killed by other Black people in Chicago alone. The intent is to provoke outrage by equating historical systemic racial violence with contemporary Black-on-Black violence, implying that the latter is somehow comparable or even worse. This comparison is harmful as it minimizes the historical and systemic nature of white supremacist violence against Black communities and attempts to deflect attention from institutional racism by framing contemporary violence as an internal Black issue. The meme uses the visual of the KKK to evoke fear and historical trauma, then uses the statistic to create a misleading and inflammatory comparison that can incite racial division and hostility. The overall intent is to manipulate perception by creating a false equivalence between two vastly different types of violence, thereby potentially justifying or downplaying systemic racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top_text",
+      "description": "the ku klux klan killed 3446 blacks in a span of 86 years",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "four_klan_members",
+      "label": "four individuals dressed in Ku Klux Klan robes",
+      "description": "Four people standing side-by-side, wearing white hooded robes with pointed hoods and black circular emblems on the chest. Their faces are obscured by the hoods and masks. They appear to be posing for a photograph, likely from the early 20th century, given the black-and-white film quality and the biplane visible in the background. The robes are tied at the waist with ropes or cords. The visual material is historically significant and carries strong connotations of white supremacist violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "ku_klan_members_pose",
+      "label": "Ku Klux Klan members posing for a photograph",
+      "description": "Four Ku Klux Klan members are standing side-by-side in a row, dressed in white hooded robes with pointed hoods and black circular emblems on their chests. Their faces are obscured by masks. They appear to be posing for a photograph, likely from the early 20th century, with a biplane visible in the background. The scene is static and formal, suggesting a staged group portrait.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_ku_klan_violence",
+      "label": "Historical Ku Klux Klan violence against Black Americans",
+      "description": "The Ku Klux Klan was a white supremacist terrorist organization in the United States that engaged in violent acts, including lynchings, against Black people, particularly during the Reconstruction era and into the 20th century. The statistic of 3,446 Black people killed over 86 years refers to documented lynchings and other racially motivated killings attributed to the KKK and related white supremacist groups. This requires external historical knowledge to understand the context and scale of the violence depicted by the visual of the KKK members.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "four_klan_members",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "contemporary_black_on_black_violence_in_chicago",
+      "label": "Contemporary Black-on-Black violence in Chicago",
+      "description": "The statistic claiming 1,891 Black people killed by other Black people in Chicago since 2016 refers to homicide data from the city. This requires external knowledge of urban crime statistics, racial demographics, and social issues in Chicago to understand the context and significance of the claim. The meme uses this statistic to create a false equivalence with historical KKK violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "false_equivalence_racism",
+      "label": "False equivalence between historical systemic racism and contemporary Black-on-Black violence",
+      "description": "The meme's core argument relies on a false equivalence, implying that contemporary Black-on-Black violence is comparable to or even worse than historical white supremacist violence. This requires understanding of sociological and historical context: historical violence was systemic, institutional, and racially motivated by white supremacy, while contemporary violence is often the result of complex social, economic, and systemic issues within communities. The meme uses this false equivalence to deflect attention from systemic racism and to incite racial division.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "four_klan_members",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "systemic_racism",
+      "label": "Systemic racism and its historical impact on Black communities",
+      "description": "The historical violence by the KKK was part of a broader system of racial oppression, including Jim Crow laws, disenfranchisement, and economic exploitation. Understanding this requires external knowledge of U.S. racial history and the concept of systemic racism, which is central to interpreting why the KKK's violence was so devastating and how it was sustained over decades.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "four_klan_members",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_division_and_hostility",
+      "label": "Racial division and hostility as a social consequence of the meme",
+      "description": "The meme's intent is to provoke racial division and hostility by framing contemporary Black-on-Black violence as a 'problem' that must be addressed internally, while minimizing the historical and systemic nature of white supremacist violence. This requires understanding of social dynamics, racial tensions, and how such memes can be used to incite prejudice and fear.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "four_klan_members",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "white_supremacist_terrorism",
+      "label": "White supremacist terrorism and its historical context",
+      "description": "The Ku Klux Klan is a historical example of white supremacist terrorism. Understanding the nature of this terrorism — its use of violence to maintain racial hierarchy, its targeting of Black communities, and its role in suppressing civil rights — requires external knowledge of U.S. history and the concept of terrorism as a tool of racial oppression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "four_klan_members",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "urban_crime_statistics",
+      "label": "Urban crime statistics and racial disparities in homicide rates",
+      "description": "The statistic about 1,891 Black people killed by other Black people in Chicago since 2016 requires external knowledge of urban crime data, racial disparities in homicide rates, and the social factors contributing to violence in urban communities. This knowledge is necessary to understand the context and validity of the claim.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_context_of_lynching",
+      "label": "Historical context of lynching in the United States",
+      "description": "The statistic of 3,446 Black people killed by the KKK over 86 years refers to lynching, a form of extrajudicial punishment and racial terror. Understanding the historical context of lynching — its prevalence, its purpose, and its impact on Black communities — requires external knowledge of U.S. racial history and the history of racial violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "four_klan_members",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "outrage",
+      "label": "outrageous emotion",
+      "description": "The emotion of outrage is expressed through the juxtaposition of historical KKK violence and contemporary Black-on-Black violence, aiming to provoke strong emotional reactions by creating a false equivalence that minimizes systemic racism and incites racial division.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "KKK members are mapped as perpetrators of historical racial violence",
+      "description": "The visual of the four Ku Klux Klan members is mapped onto the textual claim that 'the ku klux klan killed 3446 blacks in a span of 86 years'. The image of the KKK members serves as a visual representation of the historical white supremacist group responsible for the violence mentioned in the text, creating an analogical mapping where the visual entity (KKK members) is identified as the entity (perpetrators) described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual material of Ku Klux Klan members",
+      "description": "The user is projected onto the visual material of the four Ku Klux Klan members, as the image evokes a direct association with historical white supremacist violence. The user is implicitly positioned as someone who must confront or judge the historical and contemporary violence presented, with the visual of the KKK members serving as a focal point for this projection. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the framing of the meme (juxtaposing historical and contemporary violence) invites the user to engage with the content and form an opinion, thereby projecting the user onto the visual material as the intended audience for the message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme creates a false equivalence between historical white supremacist violence and contemporary Black-on-Black violence, which can incite racial division and hostility by minimizing the systemic nature of historical racism and deflecting attention from institutional oppression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are likely to engage with racially charged content, particularly those who may be exposed to or influenced by narratives that equate historical white supremacist violence with contemporary Black-on-Black violence. This includes people who may be susceptible to false equivalences, those who hold or are exposed to racially divisive ideologies, and individuals who may be seeking to justify or downplay systemic racism by focusing on internal community issues. The meme is designed to provoke outrage and racial division, so its target audience likely includes those who are already predisposed to racial hostility or who are influenced by extremist or conspiratorial narratives that minimize the historical and systemic nature of white supremacist violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/96104.png",
+    "image_name": "96104.png",
+    "extraction_timestamp": "2025-12-19T18:51:17.682867",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

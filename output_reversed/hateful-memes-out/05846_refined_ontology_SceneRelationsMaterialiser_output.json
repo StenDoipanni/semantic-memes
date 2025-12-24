@@ -1,0 +1,57 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "four_individuals_in_kkk_robes",
+      "participants": [
+        {
+          "entity": "individual_1",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "individual_2",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "individual_3",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "individual_4",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "individual_1",
+          "relation": "standsNextTo",
+          "to": "individual_2"
+        },
+        {
+          "from": "individual_2",
+          "relation": "standsNextTo",
+          "to": "individual_3"
+        },
+        {
+          "from": "individual_3",
+          "relation": "standsNextTo",
+          "to": "individual_4"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":four_individuals_in_kkk_robes :hasParticipant :individual_1 .",
+    ":four_individuals_in_kkk_robes :hasParticipant :individual_2 .",
+    ":four_individuals_in_kkk_robes :hasParticipant :individual_3 .",
+    ":four_individuals_in_kkk_robes :hasParticipant :individual_4 .",
+    ":individual_1 :standsNextTo :individual_2 .",
+    ":individual_2 :standsNextTo :individual_3 .",
+    ":individual_3 :standsNextTo :individual_4 ."
+  ],
+  "triples_count": 7
+}

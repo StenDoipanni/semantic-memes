@@ -1,0 +1,52 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "petting_dog",
+      "participants": [
+        {
+          "entity": "Meghan_Markle",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "woman_holding_dog",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "dog",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Meghan_Markle",
+          "relation": "petting",
+          "to": "dog"
+        },
+        {
+          "from": "woman_holding_dog",
+          "relation": "holding",
+          "to": "dog"
+        },
+        {
+          "from": "Meghan_Markle",
+          "relation": "interacting_with",
+          "to": "woman_holding_dog"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":petting_dog :hasParticipant :Meghan_Markle .",
+    ":petting_dog :hasParticipant :woman_holding_dog .",
+    ":petting_dog :hasParticipant :dog .",
+    ":Meghan_Markle :petting :dog .",
+    ":woman_holding_dog :holding :dog .",
+    ":Meghan_Markle :interacting_with :woman_holding_dog ."
+  ],
+  "triples_count": 6
+}

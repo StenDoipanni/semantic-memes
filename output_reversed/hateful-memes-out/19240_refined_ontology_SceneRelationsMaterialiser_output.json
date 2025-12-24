@@ -1,0 +1,35 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "protest_with_identity_juxtaposition",
+      "participants": [
+        {
+          "entity": "person_wearing_niqab",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "person_holding_rainbow_flag",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "person_wearing_niqab",
+          "relation": "juxtaposedWith",
+          "to": "person_holding_rainbow_flag"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":protest_with_identity_juxtaposition :hasParticipant :person_wearing_niqab .",
+    ":protest_with_identity_juxtaposition :hasParticipant :person_holding_rainbow_flag .",
+    ":person_wearing_niqab :juxtaposedWith :person_holding_rainbow_flag ."
+  ],
+  "triples_count": 3
+}

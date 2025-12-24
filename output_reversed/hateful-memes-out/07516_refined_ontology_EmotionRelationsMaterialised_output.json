@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "shocked emotion",
+      "expressors": [
+        {
+          "entity": "person holding an object",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "person holding an object",
+          "relation": "emotionalRelationToEntity",
+          "to": "teacher: alright class take out your calculators"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":shocked_emotion :hasExpressor :person_holding_an_object .",
+    ":person_holding_an_object :emotionalRelationToEntity :teacher_alright_class_take_out_your_calculators ."
+  ],
+  "triples_count": 2
+}

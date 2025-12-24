@@ -1,0 +1,182 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: muslim_strip_club; hasOverallIntent: Hateful; overall-intent-description: The image juxtaposes a group of goats in a natural setting with the text 'muslim strip club,' creating a deliberately offensive and degrading stereotype. This is a form of Islamophobia, using a crude and sexually suggestive metaphor to mock Muslims, implying they are sexually promiscuous or morally degenerate. The visual of goats, often associated with rustic or 'primitive' imagery, is combined with the explicit phrase to reinforce a demeaning caricature. The intent is to provoke ridicule and spread harmful, hateful generalizations about a religious group, fitting the category of hateful content as it directly attacks a protected characteristic (religion) through offensive and degrading analogies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "muslim strip club",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "goats",
+      "label": "animals",
+      "description": "A group of goats, including a prominent white goat in the foreground with a green ear tag, standing on dry grass in a hilly, natural landscape. Other goats of various colors (brown, white, spotted) are visible behind it, some looking toward the camera. One goat in the background appears to have a person in a yellow vest partially visible behind it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "goats_in_field",
+      "label": "goats_in_field",
+      "description": "A group of goats is gathered in a dry, grassy field on a hilly terrain. The prominent white goat with a green ear tag is in the foreground, while other goats of various colors (brown, white, spotted) are positioned behind it. One goat in the background has a person in a yellow vest partially visible behind it. The scene is framed by a cloudy sky and distant hills.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The meme relies on a harmful stereotype that associates Muslims with sexual promiscuity or moral degeneracy, often through crude and degrading metaphors. This stereotype is part of a broader pattern of Islamophobic tropes that portray Muslims as inherently violent, backward, or sexually deviant, which is used to incite fear and hatred.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "goat_as_primitive_animal",
+      "label": "Goat as Primitive Animal",
+      "description": "The image uses goats, which are often associated with rustic, rural, or 'primitive' imagery, to reinforce the degrading stereotype. This visual metaphor is not literal but relies on cultural associations that equate goats with simplicity, lack of sophistication, or animalistic behavior — a common trope in racist and xenophobic caricatures.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization_stereotype",
+      "label": "Hypersexualization Stereotype",
+      "description": "The phrase 'strip club' implies hypersexualization — the exaggerated or inappropriate focus on sexual behavior — which is applied to Muslims in this meme. This is a form of sexualized stereotyping that reduces a religious group to sexualized caricatures, often used to demean and dehumanize.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "animal_treatment_accusation",
+      "label": "Animal Treatment Accusation",
+      "description": "The meme implicitly references the stereotype that Muslims are cruel to animals, which is a common Islamophobic trope. This accusation is not visible in the image but is part of the broader hateful context that the meme relies on to mock Muslims, using the image of goats as a proxy for this accusation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sharia_law_fearmongering",
+      "label": "Sharia Law Fearmongering",
+      "description": "The meme taps into the stereotype that Islamic religious practices, particularly those associated with Sharia law, are incompatible with Western values and are inherently oppressive or threatening. This is a common theme in Islamophobic rhetoric, even though it is not directly visible in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_meme_emotion",
+      "label": "hateful and degrading emotion",
+      "description": "The image expresses a hateful and degrading emotion through the juxtaposition of goats with the text 'muslim strip club,' which is a deliberately offensive stereotype. This emotion is rooted in Islamophobia and aims to provoke ridicule and spread harmful generalizations about Muslims by associating them with sexual promiscuity and moral degeneracy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Goats are mapped as 'muslim strip club'",
+      "description": "The text 'muslim strip club' is juxtaposed with the visual of goats, creating an analogical mapping where the goats are implicitly equated with Muslims in a degrading context. This mapping relies on the stereotype that Muslims are hypersexualized and morally degenerate, using the image of goats — often associated with rustic or primitive imagery — as a visual proxy for this harmful caricature. The mapping is not literal but symbolic, projecting the textual stereotype onto the visual entities (goats) to reinforce the hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual stereotype",
+      "description": "The user is projected onto the text 'muslim strip club', which serves as the primary source of the hateful stereotype. The user is implicitly invited to internalize or identify with the degrading caricature being projected onto the visual material (goats) through this text. There are no explicit deictic pronouns like 'me' or 'you', but the meme's structure forces the viewer to confront the stereotype as if it were a direct address or accusation, making the user the recipient of the hateful projection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Muslims as a protected characteristic through offensive and degrading stereotypes, fitting the category of hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The target audience is individuals who are familiar with or susceptible to Islamophobic stereotypes, particularly those who may be exposed to or propagate hateful content targeting Muslims. The meme is designed to provoke ridicule and spread harmful generalizations about Muslims, implying they are sexually promiscuous or morally degenerate. The visual metaphor of goats — often associated with rustic or 'primitive' imagery — is used to reinforce a demeaning caricature, appealing to those who may find such crude and degrading analogies amusing or provocative. The meme relies on cultural associations that equate Muslims with hypersexualization and moral degeneracy, targeting communities that may hold or be influenced by such stereotypes. The intended audience likely includes individuals who are not Muslim and may be exposed to or endorse Islamophobic tropes, such as those who consume internet memes that rely on offensive humor or who are part of online communities that normalize hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/71680.png",
+    "image_name": "71680.png",
+    "extraction_timestamp": "2025-12-19T11:07:03.812964",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "innocence",
+      "expressors": [
+        {
+          "entity": "child",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "emotionalRelationToEntity",
+          "to": "society"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":innocence :hasExpressor :child .",
+    ":child :emotionalRelationToEntity :society ."
+  ],
+  "triples_count": 2
+}

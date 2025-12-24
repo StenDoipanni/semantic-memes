@@ -1,0 +1,47 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "posing_in_front_of_batmobile",
+      "participants": [
+        {
+          "entity": "Christian_Bale",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "Sibi_Blazic",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Christian_Bale",
+          "relation": "hasArmAround",
+          "to": "Sibi_Blazic"
+        },
+        {
+          "from": "Christian_Bale",
+          "relation": "isStandingNextTo",
+          "to": "Sibi_Blazic"
+        },
+        {
+          "from": "Sibi_Blazic",
+          "relation": "isStandingNextTo",
+          "to": "Christian_Bale"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":posing_in_front_of_batmobile :hasParticipant :Christian_Bale .",
+    ":posing_in_front_of_batmobile :hasParticipant :Sibi_Blazic .",
+    ":Christian_Bale :hasArmAround :Sibi_Blazic .",
+    ":Christian_Bale :isStandingNextTo :Sibi_Blazic .",
+    ":Sibi_Blazic :isStandingNextTo :Christian_Bale ."
+  ],
+  "triples_count": 5
+}

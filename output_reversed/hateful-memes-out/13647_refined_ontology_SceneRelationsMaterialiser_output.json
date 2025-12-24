@@ -1,0 +1,53 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "walking_friends",
+      "participants": [
+        {
+          "entity": "man_on_left",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "man_on_right",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_on_left",
+          "relation": "isWalkingWith",
+          "to": "man_on_right"
+        },
+        {
+          "from": "man_on_right",
+          "relation": "hasArmAround",
+          "to": "man_on_left"
+        },
+        {
+          "from": "man_on_left",
+          "relation": "isSmiling",
+          "to": "man_on_right"
+        },
+        {
+          "from": "man_on_right",
+          "relation": "isSmiling",
+          "to": "man_on_left"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":walking_friends :hasParticipant :man_on_left .",
+    ":walking_friends :hasParticipant :man_on_right .",
+    ":man_on_left :isWalkingWith :man_on_right .",
+    ":man_on_right :hasArmAround :man_on_left .",
+    ":man_on_left :isSmiling :man_on_right .",
+    ":man_on_right :isSmiling :man_on_left ."
+  ],
+  "triples_count": 6
+}

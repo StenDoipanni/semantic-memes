@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "indifferent emotion",
+      "expressors": [
+        {
+          "entity": "Adolf Hitler",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Adolf Hitler",
+          "relation": "emotionalRelationToEntity",
+          "to": "Anne Frank"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":indifferent_emotion :hasExpressor :Adolf_Hitler .",
+    ":Adolf_Hitler :emotionalRelationToEntity :Anne_Frank ."
+  ],
+  "triples_count": 2
+}

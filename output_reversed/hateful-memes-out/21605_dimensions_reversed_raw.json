@@ -1,0 +1,202 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: jokes-don-t-kill-people; hasOverallIntent: hateful; overall-intent-description: The meme depicts a group of men, visually identifiable as Muslim men based on their attire (keffiyehs, headscarves), in an angry, aggressive pose. The text juxtaposes two statements: 'jokes don't kill people' and 'muslims who are offended by jokes kill people.' This creates a false equivalence and scapegoats an entire religious group for acts of violence, implying that the mere act of being offended by jokes is a justification for violence. This is a harmful and hateful stereotype that directly attacks Muslims by linking their religious identity to violence and aggression, which is a common trope in Islamophobia. The intent is to delegitimize the right of Muslims to feel offended by certain jokes, while simultaneously implying that their anger is inherently dangerous and responsible for real-world violence. The image and text together function as a prejudiced argument that uses the emotional reaction of a group to justify a violent outcome, thereby promoting hatred and fear toward Muslims.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "jokes don't kill people",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "group_of_men",
+      "label": "group of men",
+      "description": "A crowd of men, visually identifiable as Muslim men based on their attire (keffiyehs, headscarves), are depicted in an angry, aggressive pose. They are raising their hands, shouting, and displaying expressions of outrage or aggression. Their clothing includes traditional Middle Eastern garments such as keffiyehs and white headscarves (ghutras).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "angry_men_protest",
+      "label": "angry men protesting",
+      "description": "A scene depicting a group of men, visually identifiable as Muslim men based on their attire (keffiyehs, headscarves), in an angry, aggressive pose. They are raising their hands, shouting, and displaying expressions of outrage or aggression. Their clothing includes traditional Middle Eastern garments such as keffiyehs and white headscarves (ghutras). The scene is framed to emphasize their collective anger and confrontation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The meme relies on the harmful stereotype that Muslims are inherently violent or prone to aggression, particularly when offended. This stereotype is a core component of Islamophobia and is used to delegitimize Muslim emotional responses and to scapegoat the group for acts of violence, even when those acts are not connected to the specific offense mentioned (jokes).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "group_of_men",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "angry_men_protest",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "joke_offense_stereotype",
+      "label": "Joke Offense Stereotype",
+      "description": "The meme implies that the mere act of being offended by jokes is a justification for violence, which is a false and dangerous equivalence. This stereotype suggests that religious or cultural groups are overly sensitive or irrational in their reactions to humor, thereby justifying the violent outcomes attributed to them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "angry_men_protest",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "violence_joke_equivalence",
+      "label": "Violence-Joke Equivalence",
+      "description": "The meme falsely equates the act of telling a joke with the act of killing, and then attributes the violence to the offended group's reaction. This is a logical fallacy that ignores the complex causes of violence and instead blames a specific group for any violent outcome, regardless of context or causation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "angry_men_protest",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_terrorism_association",
+      "label": "Islamophobia: Terrorism Association",
+      "description": "The meme implicitly references the real-world association between Islam and terrorism, which is a common and dangerous trope in Islamophobia. This association is used to justify the stereotype that Muslims are inherently violent, even when the specific act of violence is not connected to the offense (jokes).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "group_of_men",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "angry_men_protest",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_violence_barbarism_claim",
+      "label": "Islamophobia: Violence/Barbarism Claim",
+      "description": "The meme relies on the stereotype that Muslims are inherently violent or barbaric, which is a core component of Islamophobia. This stereotype is used to justify the violent outcomes attributed to the group, even when those outcomes are not connected to the specific offense (jokes).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "group_of_men",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "angry_men_protest",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "anger",
+      "label": "angry emotion",
+      "description": "The group of men in the image are depicted with intense facial expressions—wide eyes, open mouths, and furrowed brows—indicating extreme anger or outrage. Their aggressive gestures, such as raised hands and pointing fingers, further reinforce this emotional state. The overall scene conveys a collective display of fury and hostility.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The angry men are mapped as 'muslims who are offended by jokes'",
+      "description": "The top text 'jokes don't kill people' is juxtaposed with the visual of angry men, who are then explicitly mapped by the bottom text 'muslims who are offended by jokes kill people'. This creates an analogical mapping where the visual entity (group_of_men) is being identified as the group described in the text (muslims who are offended by jokes). The visual material (angry_men_protest) is thus mapped onto the textual description (joke_offense_stereotype) to imply that this group is responsible for violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual material of angry Muslim men",
+      "description": "The user is implicitly projected onto the visual material of the angry men (group_of_men) in the image. The meme's structure, which juxtaposes the visual of angry men with the text 'muslims who are offended by jokes kill people', creates a semiotic projection where the viewer is expected to identify with or associate themselves with the group being depicted. This projection is not explicit (e.g., no 'you' or 'me' text), but it is implied through the accusatory framing and the user's role as the one interpreting the meme's message. The user is projected onto the scene of the angry men, who are visually mapped as 'muslims who are offended by jokes', thereby internalizing the meme's harmful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Muslims by linking their religious identity to violence and aggression, implying that their anger over jokes is inherently dangerous and responsible for real-world violence. This is a harmful and hateful stereotype that delegitimizes the right of Muslims to feel offended.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed to target and provoke a non-Muslim audience, particularly those who may hold or be exposed to Islamophobic stereotypes. The visual of angry Muslim men is used to elicit fear or anger in the viewer, who is then presented with the false equivalence that 'muslims who are offended by jokes kill people.' The target audience is likely individuals who are not Muslim, or who may be influenced by or sympathetic to anti-Muslim rhetoric, as the meme functions to delegitimize Muslim emotional responses and scapegoat the group for violence. The meme relies on the audience's potential acceptance of the stereotype that Muslims are inherently violent or prone to aggression when offended, which is a core component of Islamophobia.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/21605.png",
+    "image_name": "21605.png",
+    "extraction_timestamp": "2025-12-15T18:18:18.176323",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

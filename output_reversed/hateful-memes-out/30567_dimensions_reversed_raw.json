@@ -1,0 +1,271 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts four drag queens taking a selfie, with overlaid text reading \"maybe if you worked a bit we wouldn't have inequality.\" The scene juxtaposes the glamorous, high-energy presentation of drag performers with a cynical, economically deterministic message about inequality. The intent is to use the visual contrast to mock or dismiss the idea that systemic inequality can be solved by individual effort alone. While not explicitly targeting a specific protected group with hate, the meme's message is harmful because it oversimplifies complex social and economic issues, potentially undermining legitimate discussions about structural inequality and systemic barriers. It frames the struggle against inequality as a personal failure rather than a societal problem, which can be demoralizing and misleading. The meme may also be perceived as dismissive of the labor and resilience of marginalized communities, including those in the LGBTQ+ community who often face systemic barriers, thus carrying implicit harmful undertones.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "maybe if you worked a bit",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person_1",
+      "label": "Black drag queen",
+      "description": "A Black woman with short hair, wearing sunglasses, a black studded top with fringe, and a silver skirt. She is smiling and holding a pink smartphone to take a selfie with the group. Her pose is confident and she is leaning in towards the camera.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "selfie_group",
+      "label": "drag_queens_taking_selfie",
+      "description": "Four drag queens are gathered closely together outdoors, posing for a selfie. They are all smiling and holding smartphones, with their bodies angled toward the camera. The scene is set on a sunny street with trees and a traffic light in the background. The composition emphasizes their camaraderie and vibrant, glamorous appearance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person_1",
+          "relation": "holds_phone",
+          "to": "phone_1"
+        },
+        {
+          "from": "person_3",
+          "relation": "holds_phone",
+          "to": "phone_2"
+        },
+        {
+          "from": "person_1",
+          "relation": "stands_next_to",
+          "to": "person_2"
+        },
+        {
+          "from": "person_2",
+          "relation": "stands_next_to",
+          "to": "person_3"
+        },
+        {
+          "from": "person_3",
+          "relation": "stands_next_to",
+          "to": "person_4"
+        },
+        {
+          "from": "person_4",
+          "relation": "stands_next_to",
+          "to": "person_1"
+        },
+        {
+          "from": "person_1",
+          "relation": "poses_for_photo",
+          "to": "person_2"
+        },
+        {
+          "from": "person_2",
+          "relation": "poses_for_photo",
+          "to": "person_1"
+        },
+        {
+          "from": "person_3",
+          "relation": "poses_for_photo",
+          "to": "person_4"
+        },
+        {
+          "from": "person_4",
+          "relation": "poses_for_photo",
+          "to": "person_3"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "systemic_inequality",
+      "label": "Systemic Inequality",
+      "description": "The concept that inequality is not solely the result of individual effort or merit, but is deeply rooted in structural, institutional, and historical factors such as racism, sexism, classism, and ableism. This background knowledge is essential to understand the meme's critique of the text's oversimplified message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "individual_effort_vs_systemic_barriers",
+      "label": "Individual Effort vs. Systemic Barriers",
+      "description": "The contrast between personal responsibility and societal structures that create unequal opportunities. This concept is central to the meme's message and requires external knowledge to interpret the irony or critique embedded in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "drag_queen_culture",
+      "label": "Drag Queen Culture",
+      "description": "The subculture of drag performance, which often involves theatrical costumes, makeup, and personas that challenge gender norms. Understanding this context helps interpret the visual contrast between the glamorous drag queens and the cynical text about inequality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "selfie_group",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "economic_determinism",
+      "label": "Economic Determinism",
+      "description": "The belief that economic outcomes are primarily determined by individual effort and choices, ignoring structural factors like wealth distribution, access to education, and systemic discrimination. This is the ideology the meme is mocking.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "LGBTQ_community_systemic_barriers",
+      "label": "Systemic Barriers Faced by the LGBTQ+ Community",
+      "description": "The real-world knowledge that LGBTQ+ individuals, particularly those from marginalized racial or socioeconomic backgrounds, often face systemic discrimination, including employment bias, housing discrimination, and lack of access to healthcare. This context is necessary to understand why the meme's message may be perceived as dismissive or harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "person_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "selfie_group",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_drag_queens_as_entertainers",
+      "label": "Stereotype of Drag Queens as Entertainers",
+      "description": "The common perception that drag queens are primarily performers or entertainers, which can be used to dismiss their lived experiences or the systemic issues they may face. This stereotype is implicitly referenced in the meme's juxtaposition of glamour with a cynical message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "selfie_group",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_format_of_juxtaposition",
+      "label": "Meme Format of Juxtaposition",
+      "description": "The common meme technique of placing contrasting visuals or ideas together to create irony or satire. Understanding this format helps interpret the meme's intent to use the glamorous image of drag queens to mock the simplistic economic message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "selfie_group",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_joy",
+      "label": "mocking and ironic happiness",
+      "description": "The drag queens are smiling broadly and posing for a selfie, but their expressions are juxtaposed with a cynical text that dismisses systemic inequality as a result of individual effort. The visual joy contrasts with the critical message, creating an ironic or mocking emotional tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_inequality_vs_drag_queens",
+      "label": "The text 'we wouldn't have inequality' is mapped onto the drag queens as a representation of systemic inequality being dismissed as a result of individual effort.",
+      "description": "The meme uses the visual of glamorous drag queens to represent the idea of 'working a bit' as a solution to systemic inequality. The text 'we wouldn't have inequality' is mapped onto the drag queens, implying that if they (or anyone like them) worked harder, inequality would disappear. This is an analogical mapping where the drag queens, as visually presented, are being used to represent the concept of individual effort being sufficient to solve systemic problems, thereby mocking the idea that systemic inequality can be resolved by personal effort alone. The drag queens' glamorous appearance contrasts with the cynical message, creating irony.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message as the implied subject of the economic critique",
+      "description": "The user is projected onto the text 'maybe if you worked a bit we wouldn't have inequality' as the implied 'you' who is being addressed. The meme uses the text to directly address the viewer, suggesting that the viewer (the user) is the one who 'should have worked a bit' to solve systemic inequality. This projection is implicit, as the text uses 'you' as a deictic pronoun, directing the message at the audience. The user is thus projected onto the textual material, which frames them as the individual responsible for the systemic problem being discussed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme's message oversimplifies complex social and economic issues by framing systemic inequality as solvable through individual effort alone, which can be demoralizing and misleading. It implicitly dismisses the labor and resilience of marginalized communities, including those in the LGBTQ+ community who face systemic barriers, thus carrying implicit harmful undertones.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person_1",
+      "label": "Black drag queen",
+      "description": "The meme visually centers on a Black drag queen, using her presence to anchor the critique of economic determinism. Her inclusion signals that the meme is targeting or commenting on the experiences of Black LGBTQ+ individuals, who face intersecting systemic barriers. The visual contrast between her glamorous drag persona and the cynical text about individual effort mocking systemic inequality implicitly frames her (and by extension, other marginalized drag performers) as emblematic of the very communities the meme's message dismisses.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/30567.png",
+    "image_name": "30567.png",
+    "extraction_timestamp": "2025-12-15T21:20:19.997636",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,199 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Mysogynous; overall-intent-description: The image features a Black man in a luxurious fur coat and hat, posing confidently. The text reads: 'shoutout to all the ladies who don't gotta be half naked to get a mans attention. the rest of you bitches come with me.' The overall intent is to objectify women by implying that only those who are sexually provocative (\"half naked\") receive attention, while dismissing other women as unworthy. The use of the term \"bitches\" is derogatory and degrading toward women. This meme is misogynistic as it reduces women to their sexual availability and reinforces harmful stereotypes about female behavior and value. The juxtaposition of the man's confident, wealthy appearance with the demeaning text about women's worth creates a message that devalues women's autonomy and dignity. The meme promotes a harmful and sexist worldview that equates a woman's worth with her sexual appeal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "shoutout to all the ladies who don't gotta be half naked to get a mans attention.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "Black man",
+      "description": "A Black man is centrally positioned in the image, posing confidently with his head tilted slightly upward. He is wearing a white fedora-style hat and a luxurious, oversized fur coat with a prominent collar, over a white collared shirt. His expression is smug and self-assured, with a slight smirk. His hands are placed on his chest and abdomen, with one hand showing a ring. The background is plain white, emphasizing his figure and attire. His appearance suggests wealth and confidence, contrasting with the misogynistic text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "man_pose_scene",
+      "label": "man posing confidently",
+      "description": "A Black man is centrally positioned in the image, posing confidently with his head tilted slightly upward. He is wearing a white fedora-style hat and a luxurious, oversized fur coat with a prominent collar, over a white collared shirt. His expression is smug and self-assured, with a slight smirk. His hands are placed on his chest and abdomen, with one hand showing a ring. The background is plain white, emphasizing his figure and attire. His appearance suggests wealth and confidence, contrasting with the misogynistic text overlay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype",
+      "label": "Misogynous Stereotype",
+      "description": "The meme promotes the stereotype that a woman's value or worth is tied to her sexual availability or appearance, specifically implying that only those who are 'half naked' receive attention, while dismissing other women as unworthy. This is a harmful and sexist worldview that reduces women to their sexual appeal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_pose_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hypersexualization_stereotype",
+      "label": "Hypersexualization Stereotype",
+      "description": "The text explicitly references 'half naked' as a condition for getting a man's attention, which is a form of hypersexualization that objectifies women by reducing their worth to their sexual availability. This stereotype is commonly used in misogynistic discourse to demean women.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "derogatory_language",
+      "label": "Derogatory Language",
+      "description": "The phrase 'the rest of you bitches come with me' uses the term 'bitches,' which is a derogatory and degrading term used to insult women. This language is part of the broader misogynistic trope of using slurs to demean and belittle women.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification",
+      "label": "Objectification",
+      "description": "The meme objectifies women by implying that their value is determined by their sexual appeal and appearance, rather than their character, intelligence, or other qualities. This is a core component of misogynistic messaging.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "man_pose_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "wealth_and_confidence_stereotype",
+      "label": "Wealth and Confidence Stereotype",
+      "description": "The man's luxurious attire (fur coat, hat) and confident pose are used to imply that he is wealthy and powerful, which contrasts with the misogynistic text. This juxtaposition reinforces the stereotype that men who are wealthy and confident can afford to be dismissive of women's worth, while also implying that such men are entitled to treat women as objects.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_pose_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "arrogance",
+      "label": "arrogant expression",
+      "description": "The man's smug facial expression, slight smirk, and confident pose with hands placed on his chest and abdomen convey a sense of self-importance and superiority. His upward-tilted head and luxurious attire reinforce this arrogant demeanor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man is mapped as the speaker of the text",
+      "description": "The text 'shoutout to all the ladies who don't gotta be half naked to get a mans attention. the rest of you bitches come with me' is attributed to the man in the image. His confident, wealthy appearance and smug expression are used to visually represent the persona of the speaker who is making this misogynistic statement. The visual material (the man) is mapped onto the textual material (the speaker of the text).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the speaker persona represented by the man in the image",
+      "description": "The user is projected onto the man in the image, who is visually mapped as the speaker of the misogynistic text. The text uses 'you' ('all the ladies', 'the rest of you bitches') and implicitly 'me' (the speaker) to address the viewer. The user is positioned as the recipient of the speaker's message, which is delivered through the man's confident, wealthy visual persona. The projection is onto the VisualMaterial entity 'man' and the TextualMaterial entity 'text_chunk_1', as the man's appearance and the text together construct the speaker's persona.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_2",
+      "label": "User projected onto the target audience of the text",
+      "description": "The user is projected onto the group of women being addressed by the text ('all the ladies', 'the rest of you bitches'). The text uses 'you' to directly address the viewer/user as part of the target audience. The projection is onto the TextualMaterial entity 'text_chunk_1', which contains the deictic pronouns 'you' and 'your' (implied by 'your attention' and 'your bitches'). The user is positioned as one of the 'ladies' being spoken to, either as the 'half naked' type or the 'bitches' type.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme promotes the stereotype that a woman's value or worth is tied to her sexual availability or appearance, specifically implying that only those who are 'half naked' receive attention, while dismissing other women as unworthy. This is a harmful and sexist worldview that reduces women to their sexual appeal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "Black man",
+      "description": "The central figure in the image, a Black man dressed in a luxurious fur coat and hat, posing confidently. His appearance and demeanor are used to visually represent the speaker of the misogynistic text, implying wealth, entitlement, and self-assuredness. The meme targets and speaks to an audience that may identify with or find humor in this persona, particularly those who subscribe to or enjoy misogynistic tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/35967.png",
+    "image_name": "35967.png",
+    "extraction_timestamp": "2025-12-15T23:13:46.642872",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

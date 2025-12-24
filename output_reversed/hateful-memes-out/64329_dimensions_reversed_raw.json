@@ -1,0 +1,221 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: hateful; overall-intent-description: The image depicts a person's chained feet on the ground, juxtaposed with the text 'i like my coffee like i like my slaves extra dark.' This is a direct and explicit racist metaphor that equates the consumption of dark coffee with the ownership of enslaved people, using the visual of shackled feet to reinforce the imagery of slavery. The meme is hateful as it directly attacks Black people by invoking historical and ongoing racial trauma through the dehumanizing comparison of slavery to a personal preference. It is also harmful as it normalizes and trivializes the horrors of chattel slavery, potentially reinforcing racist ideologies and perpetuating systemic racism. The intent is to shock and provoke through the juxtaposition of a mundane consumer preference with the brutal reality of human bondage, using the visual of chains to symbolize oppression and the text to frame it as a 'choice' or 'taste.'",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "i like my coffee like i like my slaves",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "human figure",
+      "description": "lower legs and feet of a person, barefoot, chained together with metal shackles, standing on sandy ground with dry leaves. The skin tone is dark, suggesting the person is Black. The chains are visibly attached to the ankles and connected by a short chain, symbolizing bondage or enslavement. The person's toenails are painted white, a detail that contrasts with the otherwise grim visual.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "chained_person_scene",
+      "label": "person_chained_to_ground",
+      "description": "A scene depicting a person's lower legs and feet, barefoot and chained together with metal shackles, standing on sandy ground covered with dry leaves. The chains symbolize bondage or enslavement, and the visual is juxtaposed with text that equates dark coffee preference with slavery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_slavery_comparison",
+      "label": "Anti-Black Stereotype: Equating Black people with slavery",
+      "description": "The meme explicitly uses a racist metaphor by equating the preference for 'extra dark' coffee with owning enslaved people. This is a direct invocation of the historical trauma of chattel slavery in the United States and other regions, which was a system of forced labor and human bondage. The visual of chained feet reinforces this comparison, making it a dehumanizing and hateful stereotype that reduces Black people to the historical context of slavery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "chained_person_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "chattel_slavery",
+      "label": "Chattel Slavery",
+      "description": "The meme references the historical institution of chattel slavery, where human beings were treated as property and forced into labor. The visual of shackled feet and the text 'i like my slaves' directly invoke this brutal system, which was central to the economies of the Americas and the United States, and caused immense suffering and racial trauma. Understanding this historical context is essential to comprehend the hateful nature of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "chained_person_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racial_trauma",
+      "label": "Racial Trauma",
+      "description": "The meme taps into the deep-seated racial trauma experienced by Black communities due to the legacy of slavery and systemic racism. By trivializing slavery as a 'choice' or 'taste', the meme attempts to normalize and downplay the horrors of human bondage, which is a form of psychological and cultural harm that continues to affect Black people today.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "chained_person_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dehumanizing_metaphor",
+      "label": "Dehumanizing Metaphor",
+      "description": "The meme uses a dehumanizing metaphor to equate a personal preference (coffee) with the ownership of enslaved people. This metaphor is inherently racist and offensive because it reduces human beings to objects of consumption or preference, thereby denying their inherent dignity and humanity. This is a common tactic in racist discourse to normalize oppression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "chained_person_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_context_of_slavery",
+      "label": "Historical Context of Slavery",
+      "description": "The meme relies on the historical context of slavery in the United States and other regions, where millions of Africans were forcibly brought to the Americas and enslaved. The visual of shackled feet and the text 'i like my slaves' directly reference this history, which is a foundational part of the racial and social fabric of many countries. Understanding this history is necessary to grasp the full impact of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "chained_person_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_metaphor",
+      "label": "Racist Metaphor",
+      "description": "The meme employs a racist metaphor by comparing the consumption of dark coffee to the ownership of enslaved people. This is a form of racialized language that uses a benign or mundane activity to justify or normalize a horrific historical and ongoing injustice. This metaphor is a tool of racist ideology and is deeply offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "chained_person_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The image and text together express a hateful sentiment by equating the preference for dark coffee with the ownership of enslaved people, using the visual of shackled feet to reinforce the dehumanizing metaphor. This is a direct and explicit racist expression that invokes historical racial trauma.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Slaves are mapped to the chained person",
+      "description": "The text 'i like my slaves' directly maps to the visual of the chained person, equating the enslaved person with a commodity or object of preference, as referenced in the racist metaphor. The visual of the shackled feet reinforces the metaphor of human bondage, making the chained person the visual instantiation of 'slaves' in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the chained person as the embodiment of the racist metaphor",
+      "description": "The user is projected onto the visual material of the chained person, who is depicted as the literal embodiment of the 'slaves' referenced in the text. The meme uses the chained person as a visual anchor for the dehumanizing metaphor, implying that the user (the viewer) is identifying with or projecting themselves onto the enslaved person, thereby internalizing the racist framing. The text 'i like my slaves' directly addresses the user ('i'), making the user the subject of the projection. The user is projected onto the 'person' entity, which is visually represented by the chained feet and is the focal point of the dehumanizing comparison.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme explicitly equates the preference for dark coffee with the ownership of enslaved people, using the visual of shackled feet to reinforce the dehumanizing metaphor. This is a direct and explicit racist expression that invokes historical racial trauma.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed to target individuals who may hold or be exposed to racist ideologies, particularly those who use or normalize dehumanizing metaphors that equate Black people with slavery. The target audience likely includes people who are unaware of the historical trauma associated with chattel slavery, or who are deliberately using such imagery to provoke or shock, often within online communities that propagate hate speech or racialized humor. The meme’s visual and textual elements are crafted to resonate with audiences who may find the comparison between coffee preference and slavery offensive or humorous, thereby reinforcing racist stereotypes and potentially normalizing systemic racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/64329.png",
+    "image_name": "64329.png",
+    "extraction_timestamp": "2025-12-16T08:12:44.278820",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

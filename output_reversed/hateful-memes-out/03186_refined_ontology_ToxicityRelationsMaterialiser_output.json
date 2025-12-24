@@ -1,0 +1,40 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk_3"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "text_chunk_4"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "adolf_hitler"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "world_war_two"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "holocaust_minimization"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :text_chunk_3 .",
+    ":toxicity_1 :hasToxicElement :text_chunk_4 .",
+    ":toxicity_1 :hasToxicElement :adolf_hitler .",
+    ":toxicity_1 :hasToxicElement :world_war_two .",
+    ":toxicity_1 :hasToxicElement :holocaust_minimization ."
+  ],
+  "triples_count": 5
+}

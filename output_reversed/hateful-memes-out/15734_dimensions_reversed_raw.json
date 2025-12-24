@@ -1,0 +1,204 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: hateful; overall-intent-description: The image depicts two hands shaking, one with a darker skin tone labeled 'muslims' and the other with a lighter skin tone labeled 'people who aren't retarded'. The center of the handshake is labeled 'hating jews'. This juxtaposition is intentionally provocative and hateful, using the visual metaphor of a handshake — typically symbolizing unity or agreement — to imply a deceptive or hypocritical alliance. The text labels are loaded with antisemitic and Islamophobic stereotypes: 'people who aren't retarded' is a derogatory and ableist trope used to dismiss or belittle Muslims, while 'hating jews' directly targets Jewish people with antisemitic content. The meme's intent is to spread hate by suggesting that Muslims are in some way complicit in or aligned with antisemitism, while simultaneously mocking Muslims as unintelligent. This is a harmful and hateful meme that promotes division, prejudice, and conspiracy thinking against both Jewish and Muslim communities, and it uses offensive stereotypes to dehumanize and vilify these groups. The overall intent is to incite hatred and reinforce harmful stereotypes, making it a clear example of hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "text location",
+      "description": "text content and position: 'muslims' is written in white bold text with a black outline, positioned diagonally across the darker-skinned arm on the left side of the handshake.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "handshake",
+      "label": "visual metaphor of unity or agreement",
+      "description": "Two hands clasped together in a handshake, one with a darker skin tone and one with a lighter skin tone, symbolizing an alliance or agreement. The visual is juxtaposed with hateful text labels to create a provocative and deceptive message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "deceptive_alliance",
+      "label": "handshake symbolizing a deceptive alliance",
+      "description": "The scene depicts a handshake, a visual metaphor for unity or agreement, but the text labels imply a deceptive or hypocritical alliance between groups. The handshake is central to the composition, with text labels positioned around it to convey a hateful message. The spatial arrangement places the handshake as the focal point, with the labels framing it to emphasize the contrast between the visual metaphor and the hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text_muslims",
+          "relation": "labels",
+          "to": "handshake"
+        },
+        {
+          "from": "text_people_who_arent_retarded",
+          "relation": "labels",
+          "to": "handshake"
+        },
+        {
+          "from": "text_hating_jews",
+          "relation": "labels",
+          "to": "handshake"
+        },
+        {
+          "from": "handshake",
+          "relation": "symbolizes",
+          "to": "deceptive_alliance"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_stereotype",
+      "label": "Antisemitic Stereotype",
+      "description": "The label 'hating jews' directly references antisemitism, a long-standing and harmful prejudice against Jewish people. This stereotype is not visible in the image but is essential to understanding the hateful message. It implies a conspiracy or inherent hostility toward Jewish people, which is a core component of the meme's intent to incite hatred.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobic_stereotype",
+      "label": "Islamophobic Stereotype",
+      "description": "The label 'muslims' combined with the derogatory phrase 'people who aren't retarded' is a form of Islamophobia. This stereotype is not visible in the image but is critical to understanding the meme's intent. It uses a demeaning and ableist trope to dehumanize Muslims, implying they are unintelligent or inferior, which is a common tactic in hate speech.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableist_stereotype",
+      "label": "Ableist Stereotype",
+      "description": "The phrase 'people who aren't retarded' is a derogatory and ableist trope. It is not visible in the image but is essential to understanding the meme's hateful message. This stereotype mocks and devalues individuals based on perceived intelligence, which is a form of ableism and contributes to the dehumanization of the group labeled 'muslims'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "deceptive_alliance_metaphor",
+      "label": "Deceptive Alliance Metaphor",
+      "description": "The handshake is a visual metaphor for unity or agreement, but in this context, it is used to imply a deceptive or hypocritical alliance. This metaphor is not explicitly stated in the image but is essential to understanding the meme's message. The juxtaposition of the handshake with hateful text creates a false impression of solidarity that is actually rooted in prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hatefulness",
+      "label": "hateful emotion",
+      "description": "The image expresses a hateful emotional state through its text labels and visual metaphor. The phrase 'hating jews' directly conveys antisemitic hatred, while 'people who aren't retarded' expresses Islamophobic and ableist hatred. The deceptive alliance metaphor (handshake) implies a hypocritical or conspiratorial alignment rooted in prejudice, amplifying the hateful intent. The overall composition is designed to incite hatred and reinforce stereotypes against Jewish and Muslim communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "muslims mapped to darker-skinned hand",
+      "description": "The text 'muslims' is positioned diagonally across the darker-skinned arm, explicitly mapping the group 'muslims' onto the visual entity of the darker-skinned hand. This creates an analogical mapping where the textual label identifies the visual entity as representing the group mentioned.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the deceptive alliance scene",
+      "description": "The user is projected onto the scene of the deceptive alliance, where the handshake visually represents a false unity between groups labeled 'muslims' and 'people who aren't retarded', with the central text 'hating jews' implying a harmful conspiracy. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the meme's overall intent and framing invite the user to interpret the visual and textual elements as a direct accusation or commentary on real-world dynamics, thereby projecting the user into the role of an observer or participant in the depicted deceptive alliance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks and vilifies two protected communities: Muslims and Jewish people, using hateful stereotypes and conspiracy imagery. The text 'hating jews' is a direct antisemitic attack, while 'people who aren't retarded' is a derogatory and Islamophobic ableist trope. The deceptive alliance metaphor (handshake) implies a conspiratorial and hypocritical alignment rooted in prejudice, amplifying the hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with or susceptible to antisemitic, Islamophobic, and ableist stereotypes, and who may be inclined to consume or share hate content that reinforces conspiracy theories about Muslim-Jewish alliances. The meme is designed to appeal to those who hold prejudiced views and are drawn to provocative, deceptive metaphors that imply complicity or alignment between marginalized groups, often using visual symbolism (like the handshake) to mislead or provoke. The use of derogatory labels ('people who aren't retarded') suggests the audience may include those who are already primed to accept or enjoy dehumanizing humor or hate speech targeting Muslims, while the 'hating jews' label targets those who are already antisemitic or open to conspiracy narratives. The meme’s intent is to incite hatred and division, so its target audience is likely individuals who are already part of or sympathetic to hate groups or communities that propagate such stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/15734.png",
+    "image_name": "15734.png",
+    "extraction_timestamp": "2025-12-15T16:14:41.293498",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

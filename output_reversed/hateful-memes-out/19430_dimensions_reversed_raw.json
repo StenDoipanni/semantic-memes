@@ -1,0 +1,177 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: i_am_not_racist_some_of_my_best_slaves_are_black; hasOverallIntent: hateful; overall-intent-description: The image depicts a close-up of black ants carrying what appear to be larvae or pupae, juxtaposed with the text 'i am not racist some of my best slaves are black.' This creates a harmful and hateful analogy that equates Black people with enslaved Africans and uses the visual of ants (often stereotyped as primitive or animal-like) to reinforce racist tropes. The meme leverages the visual of ants to imply that Black people are inherently inferior or suited for servitude, directly invoking anti-Black racism and the historical legacy of slavery. The intent is to normalize or justify racial prejudice by using a dehumanizing metaphor, which is a form of hateful content targeting Black people based on race.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text",
+      "description": "i am not racist some",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "ants",
+      "label": "black ants",
+      "description": "A dense cluster of black ants, appearing glossy and segmented, are shown in close-up. They are actively engaged in carrying what appear to be brown, elongated larvae or pupae. The ants are the primary visual focus, filling most of the frame, and their dark coloration contrasts with the lighter soil background. Their presence is central to the meme's visual metaphor, which equates them with Black people in a racially charged context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "ant_carrier_scene",
+      "label": "ants carrying larvae",
+      "description": "A dense cluster of black ants is actively engaged in carrying brown, elongated larvae or pupae. The ants are positioned closely together, filling most of the frame, and their movement suggests coordinated labor. This visual composition forms a scene of collective transport, which is central to the meme's metaphorical message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "ants",
+          "relation": "areCarrying",
+          "to": "larvae"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_comparing_to_primates",
+      "label": "Anti-Black Stereotype: Comparing Black People to Primates",
+      "description": "This stereotype dehumanizes Black people by likening them to animals, particularly primates, implying inferiority and a lack of civilization. In this meme, the visual of black ants is used to metaphorically equate Black people with enslaved Africans, reinforcing the idea that they are 'animal-like' and suited for servitude, which is a direct invocation of this harmful trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "ant_carrier_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_slavery_in_america",
+      "label": "Historical Slavery in America",
+      "description": "The phrase 'some of my best slaves are black' directly references the historical institution of chattel slavery in the United States, where millions of Africans were forcibly brought to America and enslaved. The meme uses this historical reference to imply that Black people are inherently suited for servitude, which is a racist and historically inaccurate assertion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racist_metaphor_of_slavery",
+      "label": "Racist Metaphor of Slavery",
+      "description": "The meme employs a racist metaphor by equating Black people with enslaved Africans and using the visual of ants (often stereotyped as primitive or animal-like) to reinforce the idea that Black people are inherently inferior or suited for servitude. This metaphor is rooted in the historical legacy of slavery and is used to normalize or justify racial prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "ant_carrier_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dehumanizing_metaphor_in_racism",
+      "label": "Dehumanizing Metaphor in Racism",
+      "description": "This background knowledge refers to the use of dehumanizing metaphors in racist discourse, where groups are compared to animals or objects to justify oppression. In this meme, the ants are used as a dehumanizing metaphor for Black people, implying they are 'slaves' and 'inferior,' which is a form of racial dehumanization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "ant_carrier_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hatefulness",
+      "label": "hateful emotional expression",
+      "description": "The meme expresses hateful sentiment through its racist text and dehumanizing visual metaphor, invoking anti-Black stereotypes and historical slavery tropes to normalize racial prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Black ants are mapped as 'slaves' in the text",
+      "description": "The text 'some of my best slaves are black' explicitly maps the visual entity 'ants' (specifically black ants) onto the concept of 'slaves'. This is a direct analogical mapping where the visual material (black ants) is equated with enslaved Black people, reinforcing a dehumanizing and racist metaphor. The ants' laborious activity of carrying larvae is visually analogous to the historical and racist trope of enslaved people being treated as property or laborers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material expressing racist ideology",
+      "description": "The user is projected onto the textual material 'i am not racist some of my best slaves are black' which explicitly uses first-person language ('I am not racist') to assert a position. This creates a semiotic projection where the viewer is implicitly invited to identify with or internalize the speaker's perspective, even though the statement is inherently racist and false. The projection is onto the text, which frames the user as the one making the claim, thereby aligning the user with the hateful message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly invokes anti-Black racism by equating Black people with enslaved Africans and using the visual of black ants to reinforce dehumanizing stereotypes. The text 'some of my best slaves are black' explicitly references the historical institution of chattel slavery, normalizing racial prejudice and invoking harmful tropes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The meme is designed for an audience that may be familiar with or receptive to racist tropes, particularly those involving anti-Black stereotypes. The target community likely includes individuals who either consciously or unconsciously endorse or are indifferent to the dehumanizing metaphor of equating Black people with enslaved Africans and animals (like ants). The meme’s intent is to normalize or justify racial prejudice, so its target audience may be those who are already exposed to or sympathetic to such hateful content, or who are seeking to provoke or reinforce racist ideologies through humor or shock value. The visual of black ants and the text 'some of my best slaves are black' are specifically crafted to appeal to those who understand the historical reference to slavery and the dehumanizing stereotype of comparing Black people to primates or animals, making the target audience likely to be individuals who are either unaware of the harm or who actively engage with such content as a form of dark humor or social commentary.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/19430.png",
+    "image_name": "19430.png",
+    "extraction_timestamp": "2025-12-15T17:34:07.656270",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

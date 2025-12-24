@@ -1,0 +1,156 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: harmful; overall-intent-description: The meme depicts a Black man in a suit handing out money, with text that reads, 'any time you have to rely upon your enemy for a job you're in bad shape!' This visual and textual combination is intended to convey a message about economic desperation and moral failure. The image uses a Black man as the visual anchor for the concept of 'relying on your enemy,' which can be interpreted as a racialized trope that associates Black people with economic dependency or welfare reliance. This aligns with harmful stereotypes such as 'welfare dependency tropes' and 'lazy/unemployed characterizations' from the provided knowledge base. The meme's intent is to stigmatize individuals who rely on others for economic support, particularly by implying that this reliance is morally or socially unacceptable, and by using a Black man as the visual representation, it potentially reinforces racialized narratives about economic behavior. The overall intent is harmful because it promotes a negative stereotype about a specific racial group and uses that stereotype to justify a judgment about economic behavior, which can contribute to social stigma and discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "text location",
+      "description": "any time you have to rely upon your enemy for a job",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "Black man in business attire",
+      "description": "A Black man wearing a gray suit, white shirt, and striped tie, extending his hand forward to offer a fan of cash. He has a neutral to slightly smug facial expression and is looking directly at the viewer. His appearance is professional and polished, contrasting with the meme's derogatory message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "money_handing_scene",
+      "label": "man offering money",
+      "description": "A Black man in business attire is extending his hand forward, offering a fan of cash to the viewer. The scene is framed to emphasize the act of giving money, with the man positioned centrally and looking directly at the viewer. The text overlay reinforces the context of economic desperation and moral judgment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "welfare_dependency_tropes",
+      "label": "Welfare Dependency Tropes",
+      "description": "A set of derogatory stereotypes that portray individuals, particularly from certain racial or socioeconomic groups, as morally failing or lazy for relying on government assistance or others for economic support. These tropes are often used to justify social stigma and discrimination against those in need.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lazy_unemployed_characterizations",
+      "label": "Lazy/Unemployed Characterizations",
+      "description": "Stereotypes that associate economic dependency or unemployment with laziness, moral weakness, or personal failure. These characterizations are often applied to specific groups and are used to shame or dehumanize individuals in need.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racialized_economic_behavior",
+      "label": "Racialized Economic Behavior",
+      "description": "The implicit association of economic behavior (such as reliance on others for work or welfare) with specific racial groups, often used to reinforce negative stereotypes and justify social exclusion or discrimination. In this meme, the Black man is visually coded to represent this racialized trope.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous expression",
+      "description": "The man's facial expression, characterized by a slight smirk and direct, unblinking gaze, conveys a sense of superiority or disdain. This expression, combined with the act of handing out money, suggests a judgmental attitude toward the recipient, implying moral failure or weakness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The Black man in the suit is mapped as the 'enemy' who provides a job",
+      "description": "The top text 'any time you have to rely upon your enemy for a job' explicitly identifies the visual entity (the Black man) as the 'enemy'. This creates an analogical mapping where the man is projected as the 'enemy' in the context of the meme's message about economic desperation. The visual material (the man) is mapped onto the textual concept of 'enemy' to reinforce the racialized trope of welfare dependency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of receiving money from the enemy",
+      "description": "The user is projected onto the scene where they are the recipient of money being offered by the Black man, who is identified as 'your enemy' in the text. The phrase 'you're in bad shape!' directly addresses the user, implying that the user is the one in a vulnerable position who must rely on the enemy for a job. The visual of the man extending money toward the viewer creates a direct deictic address to the user, making them the subject of the judgment. The user is projected onto the 'money_handing_scene' as the recipient and the target of the meme's moral condemnation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme promotes a harmful stereotype by associating economic desperation with a specific racial group, using a Black man as the visual anchor for the concept of 'relying on your enemy,' which reinforces racialized narratives about economic behavior and contributes to social stigma and discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold or are exposed to racialized economic stereotypes, particularly those who perceive Black people as morally failing or lazy for relying on others for economic support. The meme is designed to resonate with audiences familiar with 'welfare dependency tropes' and 'lazy/unemployed characterizations,' and who may use or endorse the idea of 'relying on your enemy' as a moral judgment. The visual of a Black man in business attire is leveraged to reinforce these stereotypes, targeting communities that accept or perpetuate racialized narratives about economic behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/07826.png",
+    "image_name": "07826.png",
+    "extraction_timestamp": "2025-12-15T13:12:37.922716",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

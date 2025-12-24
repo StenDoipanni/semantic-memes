@@ -1,0 +1,213 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: immigrant_problem_meme; hasOverallIntent: Hateful; overall-intent-description: The meme juxtaposes a black-and-white image of people running through a field with the text 'immigrant problem,' and a second image of a person lying in the grass with the text 'problem fixed.' This visual and textual pairing uses dehumanizing imagery to suggest that immigrants are a threat that must be eliminated or 'fixed' by force, implying violence or death as a solution. The meme relies on harmful stereotypes about immigrants, particularly associating them with criminality or danger, and presents a violent resolution as a 'fix.' This is a hateful meme that targets immigrants and promotes xenophobic and violent attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "immigrant problem",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "people",
+      "label": "human figures",
+      "description": "Top image: multiple people running through a field, appearing as silhouettes or dark figures against a lighter background. Bottom image: one person lying motionless in grass, suggesting death or incapacitation. Both images depict human beings, but the top image implies movement and urgency, while the bottom image implies stillness and finality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "immigrant_problem_scene",
+      "label": "Immigrant problem scene",
+      "description": "The top image shows multiple people running through a field, implying urgency or escape, while the bottom image shows one person lying motionless in grass, suggesting death or incapacitation. The text 'immigrant problem' and 'problem fixed' frames the scene as a dehumanizing narrative of elimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "people",
+          "relation": "areRunningFrom",
+          "to": "text"
+        },
+        {
+          "from": "people",
+          "relation": "leadTo",
+          "to": "people"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "immigrant_problem_stereotype",
+      "label": "Immigrant Problem Stereotype",
+      "description": "The meme relies on the harmful stereotype that immigrants are a threat or problem requiring violent elimination. This stereotype is rooted in xenophobic narratives that portray immigrants as criminals, dangerous, or burdensome to society, often used to justify discriminatory policies or violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "violent_solution_stereotype",
+      "label": "Violent Solution Stereotype",
+      "description": "The meme implies that the 'problem' of immigrants can be 'fixed' through violence or death, reflecting a dehumanizing and dangerous narrative that equates immigration with a threat that must be eradicated. This is a harmful trope used to justify xenophobic or racist violence.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dehumanizing_immigrant_imagery",
+      "label": "Dehumanizing Immigrant Imagery",
+      "description": "The visual of people running (top image) and one person lying dead (bottom image) is used to dehumanize immigrants, portraying them as animals or pests that must be hunted down and eliminated. This imagery is a common tactic in hate speech to strip victims of their humanity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "people",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "xenophobic_attitudes",
+      "label": "Xenophobic Attitudes",
+      "description": "The meme promotes xenophobic attitudes by framing immigration as a problem that must be solved through force, reflecting real-world prejudices that view outsiders as inherently dangerous or undesirable. This is a core component of the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_immigrant_rhetoric",
+      "label": "Anti-Immigrant Rhetoric",
+      "description": "The meme uses language and imagery that aligns with anti-immigrant rhetoric, which often includes dehumanizing language, fear-mongering, and calls for violent or exclusionary solutions to immigration. This rhetoric is used to incite hatred and justify discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hate",
+      "label": "hateful emotion",
+      "description": "The emotion expressed is hatred, conveyed through the dehumanizing imagery and text that frames immigrants as a threat to be eliminated, reflecting xenophobic and violent attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_immigrant_problem_to_people_running",
+      "label": "Immigrant problem is mapped onto people running through a field",
+      "description": "The text 'immigrant problem' is juxtaposed with the visual of multiple people running through a field, implying that these individuals are the 'problem' being referenced. This mapping equates the visual entity (people running) with the textual concept (immigrant problem), using the imagery to dehumanize and frame immigrants as a threat requiring action.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the violent solution stereotype",
+      "description": "The user is projected onto the implicit deictic of the meme's narrative, where the 'problem' (immigrants) is equated with the visual of people running (threat) and the 'solution' (death) is shown as 'problem fixed'. This frames the user as endorsing or identifying with the violent resolution, even without explicit deictic pronouns. The projection is onto the Scene entity 'immigrant_problem_scene' which encapsulates the entire hateful narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses dehumanizing imagery and text to portray immigrants as a threat that must be eliminated, promoting xenophobic and violent attitudes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "anti-immigrant audience",
+      "description": "The meme is designed for individuals who hold xenophobic or anti-immigrant attitudes, likely those who support or are influenced by rhetoric that frames immigrants as a threat requiring violent or exclusionary solutions. The target audience is drawn to the dehumanizing imagery and hateful language, which reinforces existing prejudices and may incite hatred or support for discriminatory policies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/50789.png",
+    "image_name": "50789.png",
+    "extraction_timestamp": "2025-12-16T03:53:45.693703",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

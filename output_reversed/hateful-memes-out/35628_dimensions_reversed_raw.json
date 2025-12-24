@@ -1,0 +1,250 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: breaking_news_meme; hasOverallIntent: Harmful; overall-intent-description: The meme uses a photo of Anderson Cooper, a well-known news anchor, with the text 'breaking news' and 'the people don't believe our bullshit anymore.' The intent is to satirize or critique the perceived loss of public trust in mainstream media narratives. While not targeting any specific protected group, it is harmful because it undermines the credibility of professional journalism and may contribute to a broader erosion of trust in institutions, potentially leading to misinformation or apathy. The tone is cynical and dismissive, which can be damaging to public discourse and the integrity of news reporting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "breaking news",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Anderson_Cooper",
+      "label": "person",
+      "description": "A well-known American news anchor and television personality, depicted in a formal suit and tie, looking directly at the camera with a neutral expression. He is the central visual subject of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "breaking_news_scene",
+      "label": "breaking_news_scene",
+      "description": "A scene depicting Anderson Cooper in a formal suit and tie, positioned centrally against a backdrop with 'THE HOLLYWOOD REPORTER' logo, with overlaid text reading 'breaking news' at the top and 'the people don't believe our bullshit anymore' at the bottom. The scene conveys a satirical or critical message about public distrust in media narratives.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Anderson_Cooper",
+          "relation": "isDepictedWith",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "public_trust_in_media",
+      "label": "Public Trust in Mainstream Media",
+      "description": "A widely discussed social trend and cultural phenomenon in which audiences have become increasingly skeptical of the accuracy, motives, and integrity of traditional news outlets. This trend is often attributed to factors such as political polarization, the rise of social media, misinformation, and perceived bias in reporting. The meme references this erosion of trust as a central theme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "breaking_news_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mainstream_media",
+      "label": "Mainstream Media",
+      "description": "The collective term for traditional news organizations such as television networks, newspapers, and major news agencies (e.g., CNN, The New York Times, The Hollywood Reporter). These institutions are often contrasted with alternative or social media sources in discussions about information credibility and public perception.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "breaking_news_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Anderson_Cooper",
+      "label": "Anderson Cooper",
+      "description": "A well-known American news anchor and television personality for CNN, recognized for his serious, professional demeanor and coverage of major news events. His image is used here to satirize the perceived disconnect between media presentation and public perception.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "breaking_news_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "breaking_news_meme_format",
+      "label": "Breaking News Meme Format",
+      "description": "A popular internet meme template that uses a photo of a news anchor or reporter with the text 'breaking news' to deliver a satirical or ironic message. This format is often used to mock or comment on current events, media narratives, or public sentiment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "breaking_news_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "the_hollywood_reporter",
+      "label": "The Hollywood Reporter",
+      "description": "A major American entertainment industry trade magazine that covers film, television, and celebrity news. Its logo in the background indicates the photo was taken at a formal event, adding context to Anderson Cooper’s professional setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "breaking_news_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "media_credibility",
+      "label": "Media Credibility",
+      "description": "The perceived reliability, accuracy, and trustworthiness of news sources. The meme critiques the notion that media narratives are no longer seen as credible by the general public, a concept central to understanding the meme’s message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "breaking_news_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "public_disillusionment",
+      "label": "Public Disillusionment",
+      "description": "A social and psychological state in which the public loses faith in institutions, leaders, or systems (including media) due to perceived dishonesty, incompetence, or corruption. This concept underpins the meme’s cynical tone and message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "breaking_news_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "cynicism",
+      "label": "cynical emotion",
+      "description": "The emotion expressed is cynicism, conveyed through the juxtaposition of Anderson Cooper’s neutral, professional demeanor with the sarcastic text 'the people don't believe our bullshit anymore.' This creates a tone of disillusionment and skepticism toward mainstream media narratives, implying that the media’s credibility is now questioned by the public.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Anderson Cooper is mapped as a symbol of mainstream media",
+      "description": "The visual entity Anderson_Cooper is mapped onto the textual concept of mainstream media. His professional appearance and the context (The Hollywood Reporter backdrop) position him as a representative of traditional news institutions, which the text 'the people don't believe our bullshit anymore' critiques. This mapping implies that Anderson Cooper, as a figurehead of mainstream media, is the subject of public disillusionment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual message criticizing media credibility",
+      "description": "The user is projected onto the textual material 'the people don't believe our bullshit anymore', which serves as the core message of the meme. The user identifies with the sentiment expressed — the disillusionment of the public toward mainstream media narratives — and sees themselves as part of that collective skepticism. The projection is implicit, not deictic (e.g., no 'you' or 'me'), but the tone and content of the text create a direct psychological alignment with the viewer's own perception of media distrust.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme undermines the credibility of professional journalism and may contribute to a broader erosion of trust in institutions, potentially leading to misinformation or apathy. The tone is cynical and dismissive, which can be damaging to public discourse and the integrity of news reporting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who are critical of or skeptical toward mainstream media, particularly those who perceive a disconnect between media narratives and reality. This includes people who have experienced or witnessed the erosion of public trust in traditional news institutions, and who may be active on social media or in online discourse spaces where such memes circulate. The meme appeals to a demographic that is disillusioned with the perceived bias, sensationalism, or dishonesty of professional journalism, and who may identify with or support alternative information sources. The use of Anderson Cooper as a symbol of mainstream media and the phrase 'the people don't believe our bullshit anymore' directly addresses this community, signaling that the message is intended for those who feel alienated from or distrustful of traditional news outlets.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/35628.png",
+    "image_name": "35628.png",
+    "extraction_timestamp": "2025-12-15T23:01:20.426043",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

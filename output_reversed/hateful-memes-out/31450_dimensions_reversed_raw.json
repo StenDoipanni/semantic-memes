@@ -1,0 +1,195 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: a_local_market; hasOverallIntent: Overall Intent; overall-intent-description: The image depicts a bustling local market scene, likely in Turkey, with vendors wearing red shirts featuring the Turkish flag and serving ice cream cones to customers. The text overlay 'a local market' is generic and descriptive, serving to label the setting. There is no evidence of abusive, cyberbullying, harmful, hateful, misogynous, or propaganda intent. The scene is presented neutrally, capturing a common cultural or tourist experience without targeting any specific group or promoting harmful stereotypes. The intent is to document or share a slice of local life, possibly for travel, cultural, or commercial purposes, without any toxic or discriminatory messaging.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "a local market",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "vendor",
+      "label": "man wearing red shirt with Turkish flag design",
+      "description": "A male vendor with dark hair and a beard, wearing a red t-shirt featuring a white star and crescent (Turkish flag motif), actively serving ice cream. He is positioned behind a counter and appears focused on his task.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "ice_cream_serving",
+      "label": "vendor serving ice cream",
+      "description": "A scene where a vendor in a red shirt with a Turkish flag design is actively serving ice cream to customers at a market stall. The vendor is positioned behind a counter, surrounded by customers and stacks of ice cream cones. The scene includes visual elements like a Coca-Cola refrigerator, Turkish flag, and a text overlay 'a local market'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "vendor",
+          "relation": "serves",
+          "to": "customer"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "turkey",
+      "label": "Country",
+      "description": "The presence of the Turkish flag on the vendor's shirt and the Coca-Cola refrigerator with Turkish branding implies the location is Turkey. Understanding the cultural context of Turkey is necessary to interpret the scene as a local market in that country, not just any generic market.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "vendor",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "ice_cream_serving",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "turkish_flag",
+      "label": "National Symbol",
+      "description": "The white star and crescent on the red shirt is the national flag of Turkey. Recognizing this symbol as a national emblem is essential to understand the cultural and national identity being represented in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "vendor",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "ice_cream_serving",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "coca_cola",
+      "label": "Global Brand",
+      "description": "The Coca-Cola refrigerator is a globally recognized brand. Its presence in a local market scene helps ground the image in a real-world commercial context, indicating that even local markets often feature international products.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "ice_cream_serving",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ice_cream_cone",
+      "label": "Cultural Food Item",
+      "description": "The large stacks of ice cream cones being sold are a common sight in Turkish street markets, particularly in summer. This knowledge helps contextualize the vendor's activity as a typical local commerce activity in Turkey.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "ice_cream_serving",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "local_market",
+      "label": "Cultural Phenomenon",
+      "description": "The text overlay 'a local market' is generic, but understanding that 'local markets' are a common cultural and economic feature in many countries, especially in Turkey, helps interpret the scene as a slice of everyday life rather than an isolated event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "ice_cream_serving",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "neutral_expression",
+      "label": "neutral emotional expression",
+      "description": "The vendor's facial expression is focused and neutral, indicating concentration on his task of serving ice cream rather than conveying strong emotion. His gaze is directed at his work, and his mouth is closed in a relaxed, unemotional state. This reflects a typical professional demeanor in a commercial setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "the scene is labeled as a local market",
+      "description": "The text overlay 'a local market' is positioned over the image to label the entire scene. This creates an analogical mapping where the visual material (the bustling market scene with vendors and customers) is mapped onto the textual description 'a local market'. The text serves to categorize or identify the visual content as a local market, establishing a direct semantic link between the text and the visual entities present (e.g., the vendor, customers, ice cream cones, Turkish flag, Coca-Cola refrigerator).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of a local market",
+      "description": "The user is projected onto the overall scene depicted in the image, which includes the vendor, customers, ice cream cones, Turkish flag, and the text overlay 'a local market'. There are no explicit deictic pronouns like 'me', 'you', or 'your...' in the image. The projection is implicit and contextual, as the user is invited to perceive themselves as an observer or participant in the cultural experience being documented — a slice of everyday life in a Turkish local market. The scene itself, as a whole, serves as the projected entity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "tourists and locals in Turkey",
+      "description": "The target community is individuals interested in experiencing or documenting local culture in Turkey, including tourists seeking authentic market experiences and locals engaging in everyday commerce. The presence of Turkish flag motifs, ice cream cones as a cultural food item, and the generic label 'a local market' suggests the image is designed to appeal to those curious about Turkish street life, possibly for travel, cultural appreciation, or commercial purposes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/31450.png",
+    "image_name": "31450.png",
+    "extraction_timestamp": "2025-12-15T22:03:23.603741",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

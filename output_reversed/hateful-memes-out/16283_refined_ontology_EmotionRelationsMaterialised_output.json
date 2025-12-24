@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "mocking_sarcasm",
+      "expressors": [
+        {
+          "entity": "goat",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "goat",
+          "relation": "emotionalRelationToEntity",
+          "to": "pork"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":mocking_sarcasm :hasExpressor :goat .",
+    ":goat :emotionalRelationToEntity :pork ."
+  ],
+  "triples_count": 2
+}

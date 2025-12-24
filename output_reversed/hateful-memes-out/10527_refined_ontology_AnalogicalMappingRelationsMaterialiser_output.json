@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_id_1",
+      "hasMappedEntity": "Textual entity '150 black people'",
+      "hasMappingEntity": "crowd"
+    },
+    {
+      "from": "crowd",
+      "relation": "mappedOnto",
+      "to": "Textual entity '150 black people'"
+    }
+  ],
+  "triples": [
+    ":mapping_id_1 :hasMappedEntity :Textual_entity_150_black_people .",
+    ":mapping_id_1 :hasMappingEntity :crowd .",
+    ":crowd :mappedOnto :Textual_entity_150_black_people ."
+  ],
+  "triples_count": 3
+}

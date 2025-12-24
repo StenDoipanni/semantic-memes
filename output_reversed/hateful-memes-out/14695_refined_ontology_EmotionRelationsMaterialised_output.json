@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "the somber emotional state",
+      "expressors": [
+        {
+          "entity": "child",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "emotionalRelationToEntity",
+          "to": "the somber emotional state"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":the_somber_emotional_state :hasExpressor :child .",
+    ":child :emotionalRelationToEntity :the_somber_emotional_state ."
+  ],
+  "triples_count": 2
+}

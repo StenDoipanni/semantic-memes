@@ -1,0 +1,35 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "caricatured_jewish_men_conversing",
+      "participants": [
+        {
+          "entity": "caricatured_jewish_man_1",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "caricatured_jewish_man_2",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "caricatured_jewish_man_1",
+          "relation": "conversingWith",
+          "to": "caricatured_jewish_man_2"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":caricatured_jewish_men_conversing :hasParticipant :caricatured_jewish_man_1 .",
+    ":caricatured_jewish_men_conversing :hasParticipant :caricatured_jewish_man_2 .",
+    ":caricatured_jewish_man_1 :conversingWith :caricatured_jewish_man_2 ."
+  ],
+  "triples_count": 3
+}

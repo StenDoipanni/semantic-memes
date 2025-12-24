@@ -1,0 +1,204 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: what-stopped-a-suicidal-boy-from-jumping; hasOverallIntent: harmful; overall-intent-description: The meme uses a visual pun involving a dog (Husky) to deliver a dark joke about suicide. The setup poses a question about what stopped a suicidal person from jumping, and the punchline 'the rope' is a play on the word 'rope' as in 'rope' for hanging, implying the person was stopped by a literal rope. This is a harmful and insensitive joke that trivializes the serious issue of suicide and could be deeply distressing to those affected by it. The meme's intent is to elicit a darkly humorous reaction by juxtaposing a cute dog image with a morbid concept, but the content is potentially harmful due to its subject matter and the way it frames suicide.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "what stopped a suicidal",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "middle text overlay",
+      "description": "boy from jumping?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_3",
+      "label": "bottom text overlay",
+      "description": "the rope",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Husky_puppy",
+      "label": "a young Siberian Husky with blue eyes",
+      "description": "The top panel shows a close-up of a fluffy black-and-white Husky puppy lying on grass, looking directly at the camera with bright blue eyes. This image is used as the setup for the meme's question.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "suicide_joke_scene",
+      "label": "A dark joke scene using a Husky puppy to imply a suicide attempt was stopped by a rope",
+      "description": "The scene is composed of three panels featuring a Husky puppy in different contexts, with overlaid text forming a dark joke. The top panel shows the puppy lying on grass, posing the question 'what stopped a suicidal boy from jumping?'. The middle panel shows the puppy on a wooden deck at sunset, and the bottom panel shows the puppy yawning widely. The punchline 'the rope' is placed under the yawning puppy, implying the rope is what stopped the jump, playing on the double meaning of 'rope' as in hanging. The spatial arrangement is vertical, with each panel stacked, and the visual elements are connected by the meme's narrative structure.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Husky_puppy",
+          "relation": "isSubjectOf",
+          "to": "text"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "suicide_joke_concept",
+      "label": "Suicide Joke Concept",
+      "description": "The meme uses a dark, morbid joke about suicide, specifically referencing the act of jumping (likely from a height) and the implication that a 'rope' stopped it. This relies on the real-world understanding of suicide methods, particularly hanging, which involves a rope. The joke is insensitive and harmful as it trivializes the serious issue of suicide.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hanging_method",
+      "label": "Hanging Method",
+      "description": "The punchline 'the rope' is a play on the word 'rope' as in 'rope' for hanging, which is a method of suicide. This requires real-world knowledge of suicide methods and the specific association of ropes with hanging. The joke is dark and insensitive because it frames suicide in a way that could be deeply distressing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_3",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism_stereotype",
+      "label": "Ableism Stereotype",
+      "description": "The meme implicitly relies on the stereotype that people with mental illness or suicidal tendencies are 'weak' or 'unworthy' of life, which is a form of ableism. It also trivializes mental health struggles by using a dark joke, which can be seen as stigmatizing and harmful. This stereotype is part of the broader societal issue of mental illness stigmatization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mental_illness_stigmatization",
+      "label": "Mental Illness Stigmatization",
+      "description": "The meme's dark humor about suicide and the use of a 'rope' as a punchline can be seen as stigmatizing mental illness. It frames suicide as something that can be 'stopped' by a physical object, which is a harmful and insensitive portrayal of mental health struggles. This is a form of ableism and mental illness stigmatization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "dark_humor",
+      "label": "darkly humorous emotion",
+      "description": "The emotion expressed through the meme's setup and punchline, which uses a morbid joke about suicide to elicit a darkly humorous reaction. The juxtaposition of a cute dog image with a serious and potentially distressing subject matter creates an ironic and unsettling emotional tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The Husky puppy is mapped as 'a suicidal boy' in the joke setup",
+      "description": "The top panel shows a Husky puppy, and the text 'what stopped a suicidal boy from jumping?' explicitly maps the visual entity (Husky puppy) onto the textual entity 'suicidal boy'. This is an analogical mapping where the visual material is used to represent the textual concept, creating a visual pun.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_2",
+      "label": "The yawning Husky puppy is mapped as 'the rope' in the punchline",
+      "description": "The bottom panel shows a yawning Husky puppy, and the text 'the rope' is placed beneath it. This creates an analogical mapping where the visual entity (yawning Husky puppy) is mapped onto the textual entity 'the rope', playing on the double meaning of 'rope' as in hanging. The visual material (puppy) is used to represent the textual concept (rope) in the punchline.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual punchline",
+      "description": "The user is projected onto the textual material 'the rope' in the bottom panel, as this is the punchline of the dark joke. The user is expected to understand the morbid pun and identify with the joke's structure, even though no explicit deictic pronoun is used. The projection is implicit through the meme's narrative structure, where the user is invited to complete the joke by interpreting the visual pun.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a dark joke about suicide, specifically referencing the act of jumping and the implication that a 'rope' stopped it, which is a play on the word 'rope' as in hanging. This is insensitive and harmful as it trivializes the serious issue of suicide and could be deeply distressing to those affected by it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who are familiar with internet humor, particularly dark or edgy memes that rely on visual puns and morbid wordplay. The meme is designed for users who appreciate absurdist or ironic humor that uses shock value or taboo subjects (like suicide) to provoke a reaction. The audience likely includes internet users who are comfortable with or even enjoy dark humor, and who understand the double meaning of ",
+      "extraction_method": "regex_fallback",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/31092.png",
+    "image_name": "31092.png",
+    "extraction_timestamp": "2025-12-15T21:40:51.618687",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

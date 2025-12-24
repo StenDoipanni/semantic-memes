@@ -1,0 +1,205 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3",
+  "@type": "AnalysisDocument",
+  "title": "86730.png - Dimension Analysis",
+  "created": "2025-12-19T16:11:10.068739",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_7355f81b",
+    "@type": "Image",
+    "filename": "86730.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/86730.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/86730.png",
+    "image_name": "86730.png",
+    "extraction_timestamp": "2025-12-19T16:09:37.393030",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_db8989f3",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: harmful; overall-intent-description: The image depicts the destruction of the World Trade Center towers during the 9/11 attacks, overlaid with text that reads, 'i know you shouldn't laugh at 9/11 jokes but their just, plane hilarious.' This juxtaposition uses the horrific visual of a national tragedy to deliver a joke that trivializes the event. The intent is to create humor by playing on the word 'plane' (as in airplane) and 'plane hilarious,' which is a pun that mocks the gravity of the event. This is harmful because it minimizes the suffering and loss of life associated with 9/11, potentially causing emotional distress to survivors, victims' families, and the broader public. The meme's intent is to provoke laughter at the expense of a deeply traumatic historical event, which can be seen as a form of disrespect and insensitivity. The overall intent is to elicit humor through dark, insensitive wordplay, which is harmful due to its potential to trivialize a catastrophic event and its victims.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ffbc748c",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text overlay",
+      "description": "i know you shouldn't laugh at 9/11 jokes",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e0dfcade",
+      "@type": "VisualMaterial",
+      "instance_name": "World_Trade_Center_towers",
+      "label": "Buildings",
+      "description": "Two iconic skyscrapers, the North and South Towers, visibly engulfed in flames and smoke, with structural collapse beginning. This is the visual representation of the 9/11 attacks.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_376941c8",
+      "@type": "Scene",
+      "instance_name": "tragedy_with_pun",
+      "label": "scene of 9/11 destruction with text overlay",
+      "description": "The scene depicts the World Trade Center towers during the 9/11 attacks, engulfed in flames and smoke, with structural collapse visible. Overlaid on this image is text that reads 'i know you shouldn't laugh at 9/11 jokes but their just, plane hilarious,' creating a dark, insensitive pun. The visual of the tragedy is juxtaposed with the humorous text to create a scene of dark humor that trivializes the event.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_377c43c1",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "9_11_attacks",
+      "label": "September 11, 2001 terrorist attacks",
+      "description": "A catastrophic event in which 19 terrorists hijacked four commercial airplanes and crashed two into the Twin Towers of the World Trade Center in New York City, causing their collapse and resulting in nearly 3,000 deaths. This event is globally recognized as one of the most significant and traumatic in modern history, symbolizing national tragedy and loss.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_cf78e7b5",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "dark_humor",
+      "label": "Dark humor",
+      "description": "A form of humor that derives its effect from topics that are taboo, morbid, or distressing, such as death, tragedy, or suffering. It is often used to cope with or comment on serious events, but can be perceived as insensitive or offensive when trivializing the gravity of the subject matter.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_73f0b2ca",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "pun_on_plane",
+      "label": "Pun on 'plane' (airplane) and 'plane hilarious'",
+      "description": "A wordplay that exploits the homophonic similarity between 'plane' (as in airplane) and 'plane' (as in flat or level). The joke 'but their just, plane hilarious' uses this pun to mock the gravity of the 9/11 event by suggesting the tragedy is 'just plane hilarious,' which is a deliberately insensitive and trivializing joke.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_40823a9d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "insensitivity_trivialization",
+      "label": "Insensitivity and trivialization of tragedy",
+      "description": "The act of minimizing or mocking the seriousness of a traumatic or tragic event, often for comedic effect. This can cause emotional distress to victims, survivors, and the public, and is widely considered disrespectful and harmful in the context of major historical tragedies like 9/11.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a0822b82",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "harmful_meme",
+      "label": "Harmful meme",
+      "description": "A meme that is considered harmful because it promotes disrespect, insensitivity, or trivialization of a serious event or group, potentially causing emotional harm or reinforcing negative stereotypes. In this case, the meme uses dark humor to trivialize the 9/11 attacks, which is widely condemned.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_89f0cb5f",
+      "@type": "EmotionExpression",
+      "instance_name": "insensitivity",
+      "label": "insensitive emotion",
+      "description": "The emotion expressed is insensitivity, stemming from the deliberate trivialization of a national tragedy through dark humor. The text overlay mocks the gravity of the 9/11 attacks by suggesting the event is 'just plane hilarious,' which is a deliberately offensive and disrespectful joke that minimizes the suffering and loss of life associated with the event.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_cffa0744",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "tragedy mapped to pun",
+      "description": "The visual material of the 9/11 attacks (World Trade Center towers in flames) is mapped onto the textual pun 'plane hilarious' to create a dark, insensitive joke. The text 'but their just, plane hilarious' uses the word 'plane' (as in airplane) to mock the gravity of the event, implying the tragedy is 'just plane hilarious'. This mapping trivializes the horrific visual by equating it with a pun, thereby creating a harmful analogical relationship between the visual tragedy and the textual joke.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7c8b5442",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material expressing self-awareness about humor",
+      "description": "The user is projected onto the top text overlay 'i know you shouldn't laugh at 9/11 jokes', which uses the second-person pronoun 'you' to address the viewer directly. This creates a semiotic projection where the user is positioned as the recipient of the moral statement, implying they are the one who 'shouldn't laugh' but is being invited to laugh anyway. The projection is onto the textual material, which frames the user as the subject of the moral injunction.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_91ea0bbd",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_2",
+      "label": "User projected onto the scene of the 9/11 tragedy as the subject of the joke",
+      "description": "The user is projected onto the entire scene of the 9/11 destruction (the 'tragedy_with_pun' scene) through the textual pun 'but their just, plane hilarious'. The joke implies that the user (or the viewer) is the one who finds the event 'plane hilarious', even though the text acknowledges the moral objection. The user is thus projected onto the scene as the one who is being asked to laugh, making them the target of the dark humor. The projection is onto the scene, which includes both the visual material and the textual material, but the core of the joke is the user's potential reaction.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2045b862",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the 9/11 attacks by using dark humor to suggest the event is 'just plane hilarious,' which minimizes the suffering and loss of life associated with the tragedy. This can cause emotional distress to victims, survivors, and the public, and is widely considered disrespectful and harmful.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bddc2b47",
+      "@type": "TargetCommunity",
+      "instance_name": "text_chunk",
+      "label": "audience description",
+      "description": "The text overlay 'i know you shouldn't laugh at 9/11 jokes but their just, plane hilarious' is a direct address to the viewer, acknowledging the sensitivity of the topic while inviting them to engage with the dark humor. This targets an audience familiar with 9/11 and capable of understanding the pun, likely those who are internet-savvy and accustomed to dark humor memes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_0e8ddcd3"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

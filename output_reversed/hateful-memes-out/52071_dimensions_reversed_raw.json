@@ -1,0 +1,206 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: i'm tired boss; hasOverallIntent: Hateful; overall-intent-description: The meme uses a photo of a Black man with a weary expression, juxtaposed with text that frames him as a 'boss' who is 'tired of doing time in fb jail because snowflakes get offended over everything.' This visual and textual combination is intended to delegitimize or mock the concept of 'snowflakes' (a term often used pejoratively to describe people perceived as overly sensitive or easily offended). The meme relies on racial stereotyping by using a Black man's image to represent a figure of authority or exhaustion, which can be interpreted as reinforcing harmful tropes that associate Black people with criminality or being 'overly sensitive' in a derogatory way. The overall intent is to express disdain for social media sensitivity, but it does so by leveraging a racialized visual to deliver a message that can be seen as racially charged and potentially harmful to Black individuals and communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "i'm tired boss",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "Black man with weary expression",
+      "description": "A Black man with a bald head and a tired, exasperated facial expression, wearing a light blue button-up shirt with a microphone clipped to it. He appears to be in a formal or semi-formal setting, possibly a panel or interview, with a blue pixelated background. His expression is central to the meme's intent, conveying exhaustion or resignation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "tired_boss_scene",
+      "label": "man_expressing_resignation",
+      "description": "A Black man with a weary expression is the central figure in the scene, positioned in the foreground. He is wearing a light blue button-up shirt with a microphone clipped to it, suggesting a formal or semi-formal setting like a panel or interview. The background is a blue pixelated screen, indicating a stage or studio environment. The scene is framed by overlaid text that conveys his emotional state and the meme's message. The man's expression and posture convey exhaustion and resignation, which is the core of the scene's interpretation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "snowflakes",
+      "label": "snowflakes",
+      "description": "A pejorative term used in online discourse to describe people perceived as overly sensitive, easily offended, or excessively cautious about social norms, often used to dismiss or mock their concerns. The term is not visible in the image but is central to the meme's text and intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "fb_jail",
+      "label": "fb jail",
+      "description": "A colloquial and metaphorical term referring to the perceived social media environment (specifically Facebook) where users are punished or restricted for expressing opinions that offend others, often used to describe the experience of being banned, muted, or shadowbanned for controversial posts. This concept is not visible in the image but is essential to understanding the meme's text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "tired_boss",
+      "label": "tired boss",
+      "description": "A meme template that uses the image of a weary-looking Black man (often identified as Mookie from 'Do the Right Thing' or a similar figure) to convey exhaustion or resignation. The term 'boss' implies authority or responsibility, and the phrase 'I'm tired' suggests being overwhelmed. This is a cultural meme format that relies on the visual of a Black man to represent a figure of authority or burden, which can be racially stereotyping.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "anti-black_stereotype",
+      "description": "A harmful racial stereotype that associates Black people with criminality, aggression, or being overly sensitive, often used to delegitimize their experiences or perspectives. The meme leverages the image of a Black man to represent a 'boss' who is 'tired' of social media conflicts, which can be interpreted as reinforcing the stereotype that Black people are inherently 'angry' or 'overly sensitive' in a derogatory way.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racialized_visual",
+      "label": "racialized_visual",
+      "description": "The use of a Black person's image to represent a concept or emotion that is culturally or socially loaded, often to reinforce racial stereotypes or to make a point about race in a way that can be offensive or harmful. In this meme, the Black man's weary expression is used to represent the 'boss' who is 'tired' of social media conflicts, which can be interpreted as racially charged and potentially harmful to Black individuals and communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "resignation",
+      "label": "resigned emotion",
+      "description": "The man's facial expression conveys a sense of weariness, fatigue, and defeat, suggesting he has given up or is overwhelmed by a situation. His downturned mouth, heavy eyelids, and lack of engagement with the camera communicate emotional exhaustion and a desire to stop.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The man is mapped as the 'tired boss'",
+      "description": "The top text 'i'm tired boss' explicitly maps the visual entity (the Black man with a weary expression) onto the role of 'tired boss'. This is a direct analogical mapping where the textual label 'tired boss' is assigned to the visual person, implying he embodies that role. This mapping is central to the meme's structure and intent, using the visual to represent the textual concept.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the tired boss scene",
+      "description": "The user is projected onto the scene where the Black man with a weary expression is depicted as the 'tired boss'. The meme uses the visual of the man to represent the user's own feelings of exhaustion and frustration with social media dynamics, particularly the perceived over-sensitivity of 'snowflakes'. The text 'i'm tired boss' directly addresses the user, implying that the user identifies with the man's emotional state and role. This projection is reinforced by the overall intent of the meme, which frames the user's experience as one of being overwhelmed by online social conflicts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses a Black man's image to represent a 'boss' who is 'tired of doing time in fb jail because snowflakes get offended over everything,' which can be interpreted as racially charged and potentially harmful to Black individuals and communities by reinforcing harmful stereotypes that associate Black people with criminality or being 'overly sensitive' in a derogatory way.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who are familiar with internet culture, particularly those who engage with social media platforms like Facebook and understand the term 'snowflakes' as a pejorative. The meme is designed for users who resonate with the sentiment of being overwhelmed by online social dynamics and the perceived hypersensitivity of certain online communities. The use of the 'tired boss' meme template suggests the audience is likely to recognize the visual reference and the cultural context of the phrase, indicating a demographic that is digitally literate and participates in online discourse. The meme's intent to mock 'snowflakes' and 'fb jail' implies the target audience includes those who feel frustrated with social media moderation and the perceived overreaction of online communities, often aligning with users who identify as 'trolls', 'free speech advocates', or 'online skeptics'. The racialized visual of the Black man as the 'boss' may also appeal to an audience that is aware of or engages with racialized internet memes, though this aspect is inherently problematic and potentially alienating to Black audiences.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/52071.png",
+    "image_name": "52071.png",
+    "extraction_timestamp": "2025-12-16T04:21:30.827505",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

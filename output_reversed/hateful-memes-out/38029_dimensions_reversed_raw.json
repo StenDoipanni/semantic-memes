@@ -1,0 +1,179 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: loading_the_dishwasher_in_the_back; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts a moving truck with a person loading items, including a dishwasher, into the back of the truck. The text overlay reads 'loading the dishwasher in the back' and 'solid move'. The overall intent of the meme is to humorously suggest that the person is making a 'solid move' by loading the dishwasher into the back of the truck, implying that this is a smart or well-thought-out decision. There is no toxicity present in the image or text, as it does not contain any disparaging metaphors, stereotypes, or harmful content. The meme is purely comedic and does not target any specific group or individual based on protected characteristics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "text location",
+      "description": "loading the dishwasher in the back",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "moving_truck",
+      "label": "vehicle",
+      "description": "A white moving truck with its back open, parked on a residential street. The truck is loaded with boxes and other moving items, and a person is visible inside the truck loading items. The truck has a flatbed rear section and is positioned near a house.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "loading_dishwasher",
+      "label": "person_loading_dishwasher_into_truck",
+      "description": "A person is inside the moving truck, loading a dishwasher into the back of the truck. The truck is parked in front of a house, and the scene is set in a residential neighborhood under a clear sky. The text overlay 'loading the dishwasher in the back' and 'solid move' adds a humorous context to the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "person",
+          "relation": "is_loading_into",
+          "to": "moving_truck"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dishwasher",
+      "label": "dishwasher",
+      "description": "A dishwasher is a household appliance used for washing dishes automatically. In the context of the meme, the phrase 'loading the dishwasher in the back' implies that the appliance is being moved, likely during a relocation. This requires background knowledge about household appliances and the context of moving, which is not visually depicted but is necessary to understand the humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "loading_dishwasher",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "solid_move",
+      "label": "solid_move",
+      "description": "The phrase 'solid move' is an idiomatic expression meaning a wise, well-considered, or successful decision. This phrase is used humorously in the meme to suggest that loading the dishwasher into the back of the moving truck is a smart or clever choice. Understanding this idiom requires background knowledge of English idioms and colloquial expressions, which are not visible in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "moving_truck",
+      "label": "moving_truck",
+      "description": "A moving truck is a vehicle specifically designed for transporting goods during relocation. The context of the image involves a moving truck, which implies a household move. This requires background knowledge about moving services and household relocation, which is not visually depicted but is necessary to understand the scenario.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "loading_dishwasher",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "household_appliances",
+      "label": "household_appliances",
+      "description": "Household appliances are devices used in the home for various tasks, including dishwashing. The meme references a dishwasher, which is a type of household appliance. Understanding the context of moving appliances requires background knowledge about household appliances and their typical handling during relocation, which is not visually depicted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "loading_dishwasher",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "idiomatic_expression",
+      "label": "idiomatic_expression",
+      "description": "An idiomatic expression is a phrase whose meaning cannot be deduced from the literal definitions of its words. The phrase 'solid move' is an idiomatic expression. Understanding this phrase requires background knowledge of idioms and colloquial language, which is not visually depicted but is necessary to interpret the humor in the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "humor",
+      "label": "humorous emotion",
+      "description": "The emotion expressed is humor, conveyed through the absurdity of loading a dishwasher into the back of a moving truck and the ironic use of the phrase 'solid move' to describe this action. The juxtaposition of a mundane household appliance with the context of a move creates a comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "loading the dishwasher in the back",
+      "description": "The text 'loading the dishwasher in the back' is mapped onto the visual scene of a person loading a dishwasher into the back of a moving truck. The text explicitly identifies the action being performed in the image, creating an analogical mapping between the textual description and the visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the humorous interpretation of the scene",
+      "description": "The user is projected onto the scene where the person is loading the dishwasher into the back of the moving truck, interpreting the text 'solid move' as a humorous commentary on the action. The user is not explicitly addressed with deictic pronouns like 'you' or 'me', but the meme invites the viewer to share in the joke, projecting the user's own understanding and amusement onto the visual and textual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with common idioms and moving-related humor. It relies on the universal understanding of a 'solid move' as a wise decision and the relatable scenario of moving household items, including appliances like dishwashers. The humor is accessible without requiring niche cultural references or specific demographic markers, making it suitable for a wide range of viewers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/38029.png",
+    "image_name": "38029.png",
+    "extraction_timestamp": "2025-12-16T00:04:26.456019",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

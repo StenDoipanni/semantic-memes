@@ -1,0 +1,227 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: 3d_visualization_of_atomic_bomb; hasOverallIntent: Harmful; overall-intent-description: The image displays a 3D visualization of various atomic bomb designs, presented in a neutral, technical manner. The overall intent is not to convey hate, abuse, or propaganda, but rather to present a visual catalog of nuclear weapons. While the subject matter is inherently dangerous and potentially harmful due to its association with mass destruction and global conflict, the meme itself does not contain toxic language, stereotypes, or targeted attacks against any group. The intent is informational or illustrative, not malicious or discriminatory. The juxtaposition of the text '3d visualization of atomic bomb' with the images serves to label the content as a technical or educational visualization, not to incite violence or promote harmful ideologies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text",
+      "description": "3d visualization",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "atomic_bomb_designs",
+      "label": "3D visualizations of atomic bombs",
+      "description": "The image displays multiple 3D renderings of different atomic bomb designs, including cylindrical and spherical configurations, presented in a technical, neutral manner. These are not real weapons but digital models, likely for educational or illustrative purposes. The bombs are shown from various angles, emphasizing their structural forms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "atomic_bomb_visualization_scene",
+      "label": "3D visualization of atomic bomb designs",
+      "description": "A scene composed of multiple 3D visualizations of atomic bomb designs arranged in a grid-like layout on a white background. The scene is labeled with text at the top and bottom, indicating its purpose as a '3d visualization of atomic bomb'. The bombs are shown from various angles, emphasizing their structural forms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "atomic_bomb_designs",
+          "relation": "displayed_in",
+          "to": "atomic_bomb_visualization_scene"
+        },
+        {
+          "from": "text",
+          "relation": "labels",
+          "to": "atomic_bomb_visualization_scene"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nuclear_weapons",
+      "label": "Nuclear Weapons",
+      "description": "The concept of atomic bombs as weapons of mass destruction, developed during the Manhattan Project and used in World War II (e.g., Hiroshima and Nagasaki). This background knowledge is necessary to understand the gravity and historical context of the 3D visualizations shown, which are representations of real-world destructive technologies.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "atomic_bomb_designs",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "manhattan_project",
+      "label": "Manhattan Project",
+      "description": "The secret U.S. government project during World War II that developed the first nuclear weapons. This historical event provides context for the origin and significance of atomic bombs, which are depicted in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "atomic_bomb_designs",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cold_war",
+      "label": "Cold War",
+      "description": "The period of geopolitical tension between the United States and the Soviet Union (and their allies) from the late 1940s to the early 1990s, during which nuclear weapons were central to global politics and deterrence strategies. Understanding this context helps interpret the visualizations as part of a broader historical and military narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "atomic_bomb_designs",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nuclear_deterrence",
+      "label": "Nuclear Deterrence",
+      "description": "The strategic concept that nuclear weapons prevent conflict by threatening mutual destruction. This concept underpins the global political landscape and explains why atomic bomb designs are studied and visualized, even in a neutral, technical manner.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "atomic_bomb_designs",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "3d_visualization_technique",
+      "label": "3D Visualization Technique",
+      "description": "The use of computer-generated imagery to create realistic, three-dimensional models of objects. This knowledge is required to understand that the image is not a photograph of real weapons but a digital rendering, which may be used for educational, design, or illustrative purposes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "atomic_bomb_designs",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "atomic_bomb_designs_history",
+      "label": "History of Atomic Bomb Designs",
+      "description": "The evolution of nuclear weapon designs, including early gun-type and implosion-type bombs, and later thermonuclear designs. This background knowledge helps interpret the variety of shapes shown (cylindrical, spherical) as different technological iterations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "atomic_bomb_designs",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nuclear_arms_race",
+      "label": "Nuclear Arms Race",
+      "description": "The competition between nuclear powers to develop and stockpile more powerful and numerous nuclear weapons. This concept explains why multiple atomic bomb designs were created and why their visualization might be of interest to military, scientific, or historical audiences.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "atomic_bomb_designs",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "awe",
+      "label": "awe-inspired emotion",
+      "description": "The image evokes a sense of awe due to the technical complexity and destructive power represented by the 3D visualizations of atomic bombs. The neutral, precise presentation of the designs, combined with the label '3d visualization', frames the subject matter as impressive and scientifically significant, even if the underlying technology is inherently dangerous.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "3D visualization of atomic bomb",
+      "description": "The text '3d visualization' at the top of the image is mapped onto the visual material of the 3D renderings of atomic bomb designs. This mapping indicates that the visual content is being explicitly labeled as a '3d visualization', establishing the nature of the presentation. The bottom text 'of atomic bomb' further completes this mapping by specifying the subject matter of the visualization. Together, the text labels the entire visual scene as a '3d visualization of atomic bomb'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the scene of atomic bomb visualizations",
+      "description": "The user is projected onto the overall scene, which includes both the visual material of atomic bomb designs and the textual material labeling it as a '3d visualization of atomic bomb'. There are no explicit deictic pronouns like 'me', 'you', or 'your' in the text. The projection is implicit, as the user is expected to interpret the image as a technical visualization, and the scene as a whole is the object of their attention and understanding. The user is not projected onto a specific textual or visual element in isolation, but onto the entire labeled scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The subject matter of atomic bombs is inherently dangerous and potentially harmful due to its association with mass destruction and global conflict. While the meme presents the content in a neutral, technical manner without toxic language or stereotypes, the visualization of nuclear weapons carries significant societal and historical weight related to destruction and warfare, which can be perceived as harmful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "atomic_bomb_designs",
+      "label": "technical audience",
+      "description": "The 3D visualizations of atomic bomb designs are presented in a neutral, technical manner, suggesting the target community is individuals interested in engineering, military history, nuclear physics, or educational contexts where such visualizations serve as illustrative tools. The focus on structural forms and the use of 3D visualization technique indicate an audience that values technical accuracy and design analysis.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/48203.png",
+    "image_name": "48203.png",
+    "extraction_timestamp": "2025-12-16T03:12:51.614024",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "misogynous_anger",
+      "expressors": [
+        {
+          "entity": "chicken_meme_scene",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "chicken_meme_scene",
+          "relation": "emotionalRelationToEntity",
+          "to": "women"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":misogynous_anger :hasExpressor :chicken_meme_scene .",
+    ":chicken_meme_scene :emotionalRelationToEntity :women ."
+  ],
+  "triples_count": 2
+}

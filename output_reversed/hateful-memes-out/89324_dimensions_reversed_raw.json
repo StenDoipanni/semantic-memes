@@ -1,0 +1,211 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes images of three political figures (Bernie Sanders, Elizabeth Warren, and Cory Booker) with the repeated phrase 'free stuff!' in a sarcastic and mocking tone. The text 'las cosas mas gratis' (the most free stuff) is presented as if it were a quote from the debate, implying that the politicians are promoting or emphasizing free stuff as a key policy. The meme's intent is to ridicule the politicians by suggesting they are obsessed with or overly focused on 'free stuff,' which is presented as a trivial or unserious policy focus. This is a form of political satire that may be perceived as dismissive or condescending toward the candidates' policy positions. While it does not contain explicit hate speech or targeted abuse against specific protected groups, it does use a mocking tone that could be seen as harmful to the political discourse by reducing complex policy debates to a simplistic and potentially misleading caricature. The meme's overall intent is to entertain through ridicule while potentially undermining the seriousness of the candidates' policy discussions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "\"las cosas mas gratis\" (the most free stuff)",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Elizabeth_Warren",
+      "label": "Politician",
+      "description": "A woman with short blonde hair and glasses, wearing a purple suit, speaking with an expressive face. She is the central figure in the top panel of the meme, with text overlaying her image that reads 'las cosas mas gratis' (the most free stuff) and 'in case you missed the debate... free stuff!'. Her expression appears earnest or emphatic, fitting the context of a political debate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "debate_promotion_scene",
+      "label": "Political debate promotion scene",
+      "description": "A scene depicting three political figures (Elizabeth Warren, Bernie Sanders, and Cory Booker) in a debate setting, with text overlays emphasizing 'free stuff' as a central theme. The scene is structured as a meme with three panels, each featuring a different politician and text that sarcastically highlights their focus on 'free stuff'. The spatial arrangement is vertical, with each politician occupying a separate panel, and the text is positioned to directly relate to each individual's image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Elizabeth_Warren",
+          "relation": "promotes",
+          "to": "free_stuff"
+        },
+        {
+          "from": "Bernie_Sanders",
+          "relation": "promotes",
+          "to": "free_stuff"
+        },
+        {
+          "from": "Cory_Booker",
+          "relation": "promotes",
+          "to": "free_stuff"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "free_stuff_politics_stereotype",
+      "label": "Free Stuff Politics Stereotype",
+      "description": "A common political stereotype that caricatures politicians, especially from the Democratic Party, as being overly focused on 'free stuff' (e.g., free college, free healthcare, free public transportation) as a central policy theme, often used sarcastically to imply they are trivializing complex policy debates or pandering to populist demands. This stereotype is frequently used in political satire and media commentary to mock candidates perceived as prioritizing populist promises over substantive policy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Elizabeth_Warren",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Bernie_Sanders",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Cory_Booker",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "debate_promotion_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "spanish_phrase_translation",
+      "label": "Spanish Phrase Translation",
+      "description": "The phrase 'las cosas mas gratis' is Spanish for 'the most free stuff'. Understanding this requires knowledge of Spanish language and its common usage in political discourse, particularly in the U.S. context where Spanish-speaking communities are present. The meme uses this phrase to mimic a political statement, implying it was said during a debate, which requires knowledge of the context of political debates and the use of foreign language phrases for comedic or ironic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "debate_promotion_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_debate_context",
+      "label": "Political Debate Context",
+      "description": "The meme references a political debate, specifically implying that the quoted phrase 'las cosas mas gratis' was said during a debate. This requires background knowledge of U.S. political campaigns and debates, particularly those involving the 2020 Democratic primary candidates (Elizabeth Warren, Bernie Sanders, Cory Booker). The phrase 'in case you missed the debate...' is a sarcastic framing device that relies on the audience's familiarity with political debates as public events where candidates make policy statements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Elizabeth_Warren",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Bernie_Sanders",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Cory_Booker",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "debate_promotion_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sarcastic_meme_format",
+      "label": "Sarcastic Meme Format",
+      "description": "The meme uses a three-panel format with escalating text ('free stuff!', 'more free stuff!', 'even more free stuff!') to create a comedic or mocking effect. This format relies on background knowledge of internet meme culture, where repetition and escalation are used to emphasize a point or to parody a situation. The sarcastic tone is implied by the juxtaposition of earnest political figures with the trivializing phrase 'free stuff!', which requires understanding of meme conventions and satire.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "debate_promotion_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "sarcastic_misery",
+      "label": "sarcastic and mocking emotional expression",
+      "description": "The meme uses exaggerated facial expressions and escalating text ('free stuff!', 'more free stuff!', 'even more free stuff!') to convey a sarcastic and mocking tone. The expressions of the politicians—particularly Elizabeth Warren's earnestness, Cory Booker's wide grin, and the surprised look of the third politician—are juxtaposed with the trivializing phrase 'free stuff!' to create a humorous and dismissive emotional effect, implying the politicians are overly focused on simplistic policy promises.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Elizabeth Warren is mapped as the source of the phrase 'las cosas mas gratis'",
+      "description": "The text overlay 'las cosas mas gratis' (the most free stuff) is positioned directly over Elizabeth Warren's image, implying she is the one who said or is being attributed this phrase. This creates an analogical mapping where the textual material (the phrase) is projected onto the visual material (Elizabeth Warren) as its source or speaker.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the sarcastic meme format and its textual content",
+      "description": "The user is projected onto the meme's structure and text, which uses the phrase 'in case you missed the debate...' to imply the user is the one who 'missed' the debate, thereby positioning the user as the audience being addressed. The escalating text ('free stuff!', 'more free stuff!', 'even more free stuff!') is also projected onto the user as the recipient of this sarcastic commentary, creating a sense of being targeted or mocked for not being aware of the 'free stuff' focus. The user is not explicitly addressed with 'you' or 'your', but the framing device 'in case you missed the debate...' creates an implicit projection onto the user as the intended audience.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a sarcastic and mocking tone to ridicule politicians by reducing complex policy debates to a simplistic and potentially misleading caricature of being obsessed with 'free stuff'. This can be perceived as dismissive or condescending toward the candidates' policy positions and may undermine the seriousness of political discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "Political Satire Audience",
+      "description": "The target community is individuals familiar with U.S. political debates, particularly those who follow or are aware of the 2020 Democratic primary candidates (Elizabeth Warren, Bernie Sanders, Cory Booker). The meme relies on cultural references to political discourse, the use of sarcastic meme formats, and the stereotype of politicians being obsessed with 'free stuff' to create humor. This audience understands the context of the debate, the translation of the Spanish phrase, and the mocking tone intended to ridicule the candidates' policy focus.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/89324.png",
+    "image_name": "89324.png",
+    "extraction_timestamp": "2025-12-19T16:44:24.307287",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

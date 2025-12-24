@@ -1,0 +1,172 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_6b2bceab",
+  "@type": "AnalysisDocument",
+  "title": "47618.png - Dimension Analysis",
+  "created": "2025-12-16T02:54:26.832012",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_14b21ebb",
+    "@type": "Image",
+    "filename": "47618.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/47618.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/47618.png",
+    "image_name": "47618.png",
+    "extraction_timestamp": "2025-12-16T02:52:53.392146",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_56b1f27c",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: harmful; overall-intent-description: The image depicts a Black man in a kitchen, eating a banana while looking intently at a laptop, with text overlay that reads 'when they say not to blink or you'll miss the magic trick.' The scene is framed to suggest he is intensely focused on something on the screen, possibly a video or trick. The meme's intent is to humorously portray the experience of being so engrossed in something that one forgets to blink, using the man's focused expression as the visual punchline. While the image itself does not contain overtly abusive, hateful, or cyberbullying content, it relies on a racialized stereotype by using a Black man as the subject of a common 'not blinking' trope. This can be considered harmful because it reinforces the stereotype that Black people are hyper-focused or 'always watching,' which can contribute to racial profiling or the perpetuation of negative racial tropes. The meme's humor is derived from the juxtaposition of the mundane (eating a banana) with the intense focus required to 'not blink,' but the racialized subject matter can be seen as a subtle form of racial stereotyping, which is a form of harmful content.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6b2bceab"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2d51ec7e",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "when they say not to blink",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6b2bceab"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7e9d317e",
+      "@type": "VisualMaterial",
+      "instance_name": "man",
+      "label": "Black man",
+      "description": "A Black man with a shaved head, wearing a pink t-shirt, is seated at a kitchen table. He is holding a banana and appears intensely focused on a laptop screen in front of him. His expression suggests deep concentration or suspense, as if he is trying not to blink while watching something important. He is also wearing a watch on his left wrist.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6b2bceab"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bca23bca",
+      "@type": "Scene",
+      "instance_name": "intense_focus_scene",
+      "label": "man_focused_on_laptop",
+      "description": "A Black man is seated at a kitchen table, intensely focused on a laptop screen while eating a banana. His expression suggests deep concentration, as if he is trying not to blink to avoid missing something important on the screen. The scene is framed to emphasize his hyper-focused state, with the laptop in front of him and a glass of orange juice nearby.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6b2bceab"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7b6067db",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_hyperfocus",
+      "label": "Anti-Black Stereotype: Hyperfocus or 'Always Watching'",
+      "description": "The meme relies on the stereotype that Black people are hyper-focused, intense, or 'always watching,' which is often used in a derogatory way to imply suspicion, vigilance, or an exaggerated level of attentiveness. This stereotype is reinforced by the image of the Black man intensely focused on the laptop, which is framed as a humorous but racially charged trope.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6b2bceab"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e0c47f9d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "not_blink_magic_trick_concept",
+      "label": "Common Internet Meme Trope: 'Not Blinking to See Magic Trick'",
+      "description": "The phrase 'when they say not to blink or you'll miss the magic trick' is a well-known internet meme trope that references the classic magic trick where the audience is instructed not to blink to avoid missing a surprise. This trope is often used humorously to describe situations where one must maintain intense focus to witness something extraordinary or unexpected. The meme uses this trope to create a humorous contrast with the mundane activity of eating a banana.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6b2bceab"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_16b2ec9b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "racialized_stereotype_in_meme",
+      "label": "Racialized Stereotype in Meme Context",
+      "description": "The meme's humor is derived from the juxtaposition of the mundane (eating a banana) with the intense focus required to 'not blink,' but the racialized subject matter (a Black man) can be seen as a subtle form of racial stereotyping. This reinforces the stereotype that Black people are hyper-focused or 'always watching,' which can contribute to racial profiling or the perpetuation of negative racial tropes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6b2bceab"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_71155314",
+      "@type": "EmotionExpression",
+      "instance_name": "intense_focus",
+      "label": "intense focus emotion",
+      "description": "The man's facial expression, with narrowed eyes and a fixed gaze, conveys a state of deep concentration and suspense, as if he is trying not to blink to avoid missing something important on the laptop screen. This is reinforced by the context of the text overlay, which references the 'not blink' magic trick trope.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6b2bceab"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_69cbc00f",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The man is mapped as the person who must not blink to see the magic trick",
+      "description": "The text 'when they say not to blink or you'll miss the magic trick' is mapped onto the visual of the man intensely focused on the laptop. His expression and posture visually represent the act of trying not to blink, aligning with the textual instruction. This creates an analogical mapping where the man embodies the role of the person instructed to maintain intense focus to witness a magic trick, even while performing a mundane activity like eating a banana.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6b2bceab"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bf7af1d8",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man in the intense focus scene",
+      "description": "The user is projected onto the visual material of the Black man intensely focused on the laptop, as the meme's humor and intent rely on the viewer imagining themselves in his position—trying not to blink to witness a magic trick. The text 'when they say not to blink' implicitly addresses the viewer, inviting them to identify with the man's experience. The user is not explicitly deictic (e.g., 'you' or 'me'), but the framing and context of the meme create an implicit projection where the viewer is positioned as the person who must maintain intense focus, mirroring the man's state.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6b2bceab"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4b64fb78",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Racial Stereotyping",
+      "description": "The meme relies on the stereotype that Black people are hyper-focused or 'always watching,' which is often used in a derogatory way to imply suspicion or exaggerated attentiveness. This stereotype is reinforced by the image of the Black man intensely focused on the laptop, framed as a humorous but racially charged trope.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6b2bceab"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_740eeb06",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience familiar with internet humor tropes, particularly the 'not blink or you'll miss the magic trick' meme format. The humor relies on the juxtaposition of mundane activity (eating a banana) with intense focus, which is a common comedic device. The target audience likely includes users of social media platforms who engage with visual memes and understand the cultural reference to magic tricks requiring sustained attention. The racialized element may be overlooked or intentionally used by some viewers as a punchline, but the meme's primary appeal is to those who recognize and enjoy the 'not blinking' trope.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_6b2bceab"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

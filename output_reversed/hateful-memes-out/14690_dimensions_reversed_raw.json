@@ -1,0 +1,168 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: showing_the_kids_you_can_do_it_too; hasOverallIntent: Harmful; overall-intent-description: The image depicts Prince Harry kneeling and interacting with a young child in what appears to be a community or charity event, surrounded by adults. The overlaid text reads \"showing the kids you can do it too,\" which is intended to convey encouragement and empowerment. There is no visible toxicity, hate, or harmful content in the image itself. The scene is positive and motivational, aiming to inspire children to believe in their own abilities. The meme does not contain any disparaging metaphors, stereotypes, or harmful elements as defined in the provided knowledge base. The intent is to promote positivity, self-confidence, and inclusivity, without targeting any specific group or community with harmful messages.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "showing the kids",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Prince_Harry",
+      "label": "man kneeling and interacting with a child",
+      "description": "A man in a white shirt and dark pants is kneeling on the ground, smiling and reaching out to a young child. He appears to be engaging warmly with the child, suggesting encouragement or mentorship. His posture and expression convey positivity and approachability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "encouraging_interaction",
+      "label": "encouraging_interaction",
+      "description": "Prince Harry is kneeling and engaging warmly with a young child, conveying positivity and approachability. The child is standing in front of him, seemingly receiving encouragement. The overlaid text \"showing the kids you can do it too\" reinforces the motivational nature of the interaction.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Prince_Harry",
+          "relation": "encourages",
+          "to": "child"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Prince_Harry",
+      "label": "Prince Harry of the United Kingdom",
+      "description": "Prince Harry, Duke of Sussex, is a member of the British royal family. His public appearances, especially those involving children and charitable causes, are often framed as inspirational or motivational. The meme leverages his public persona as a figure of encouragement and accessibility to convey its message. His identity as a royal figure adds context to the scene, implying a symbolic gesture of empowerment from someone of high status.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "encouraging_interaction",
+      "label": "Motivational encouragement in public settings",
+      "description": "The concept of a public figure encouraging children to believe in themselves is a common trope in media and charity work. It is often used to promote self-confidence, resilience, and social mobility. The meme relies on this cultural understanding that such interactions are meant to be uplifting and inspirational, not merely casual.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "top_text",
+      "label": "Meme text: 'showing the kids you can do it too'",
+      "description": "The phrase 'showing the kids you can do it too' is a common motivational phrase used in educational, sports, and social contexts to encourage children to believe in their own potential. It implies that someone (often a role model or authority figure) is demonstrating that success or capability is attainable for others, even if they are not currently achieving it. This phrase is culturally understood as positive and empowering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_structure",
+      "label": "Meme format: 'showing the kids you can do it too'",
+      "description": "This meme format is a common internet meme structure used to convey encouragement or empowerment. It typically features a person (often a celebrity or public figure) interacting with a child or group of children, with text overlaying the image to suggest that the person is demonstrating a skill or attitude that the children can emulate. The format relies on the viewer's understanding of motivational messaging and public figures as role models.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "encouragement",
+      "label": "encouraging emotion",
+      "description": "Prince Harry is kneeling and smiling warmly while reaching out to the child, conveying a supportive and uplifting emotional state. His body language and facial expression suggest he is motivating the child to believe in their ability to succeed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Prince Harry is mapped as 'showing the kids'",
+      "description": "The top text 'showing the kids' is mapped onto Prince Harry, who is visually depicted kneeling and interacting with a child. The text implies that Prince Harry is demonstrating something to children, and his visual posture and expression (smiling, reaching out) are interpreted as embodying this role. The mapping is based on the textual instruction being visually instantiated by Prince Harry's action and presence in the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the motivational message and scene",
+      "description": "The user is projected onto the textual message 'showing the kids you can do it too' and the scene of Prince Harry encouraging a child, interpreting the meme as a personal call to action or identification with the empowering message. The phrase 'you can do it too' directly addresses the viewer, creating a sense of personal relevance and encouragement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general public",
+      "description": "The meme is designed for a broad, general audience, including parents, educators, and anyone interested in motivational or inspirational content. The positive, uplifting message of empowerment and encouragement is universally relatable and does not target any specific demographic or community with harmful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/14690.png",
+    "image_name": "14690.png",
+    "extraction_timestamp": "2025-12-15T15:48:03.952270",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

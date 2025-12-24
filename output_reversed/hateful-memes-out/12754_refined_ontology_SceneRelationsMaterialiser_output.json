@@ -1,0 +1,53 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "walking_friends",
+      "participants": [
+        {
+          "entity": "woman_on_left",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "woman_on_right",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman_on_left",
+          "relation": "isTalkingTo",
+          "to": "woman_on_right"
+        },
+        {
+          "from": "woman_on_right",
+          "relation": "isTalkingTo",
+          "to": "woman_on_left"
+        },
+        {
+          "from": "woman_on_left",
+          "relation": "isWalkingBeside",
+          "to": "woman_on_right"
+        },
+        {
+          "from": "woman_on_right",
+          "relation": "isWalkingBeside",
+          "to": "woman_on_left"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":walking_friends :hasParticipant :woman_on_left .",
+    ":walking_friends :hasParticipant :woman_on_right .",
+    ":woman_on_left :isTalkingTo :woman_on_right .",
+    ":woman_on_right :isTalkingTo :woman_on_left .",
+    ":woman_on_left :isWalkingBeside :woman_on_right .",
+    ":woman_on_right :isWalkingBeside :woman_on_left ."
+  ],
+  "triples_count": 6
+}

@@ -1,0 +1,199 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: harmful; overall-intent-description: The image depicts a black-and-white photo of three women performing music on stage, with text overlaid that reads 'only 30's kids will remember this.' The overall intent is to evoke nostalgia and imply that the depicted scene or music is a cultural artifact from a specific past era, likely targeting individuals who are now in their 30s. The meme is not inherently abusive, cyberbullying, hateful, misogynistic, or propagandistic. However, it can be considered harmful because it may unintentionally exclude or marginalize people who are not part of the targeted demographic (those in their 30s) by suggesting that their experiences or memories are somehow less valid or less 'authentic' than those of the group being referenced. This can foster a sense of generational exclusion or cultural elitism, which may cause emotional discomfort or alienation for those outside the specified age group. The meme relies on generational nostalgia and potentially creates a hierarchy of cultural memory, which can be exclusionary and diminish the value of experiences from other age groups.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "text content and position: 'only 30's kids' located at top center of image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_on_left",
+      "label": "woman wearing beret and clapping",
+      "description": "A woman on the left side of the image, wearing a beret, smiling broadly while clapping her hands. She appears to be enjoying the performance. Her expression and gesture suggest enthusiasm and engagement with the music.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "stage_performance",
+      "label": "musical performance on stage",
+      "description": "A black-and-white scene depicting three women performing music on a stage under spotlights. One woman on the left wears a beret and claps enthusiastically, another in the center plays a saxophone, and a third on the right sings into a vintage microphone while wearing a hat. The scene conveys a lively, nostalgic musical performance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman_on_left",
+          "relation": "claps_for",
+          "to": "woman_in_center"
+        },
+        {
+          "from": "woman_in_center",
+          "relation": "plays_music_for",
+          "to": "woman_on_right"
+        },
+        {
+          "from": "woman_on_right",
+          "relation": "sings_with",
+          "to": "woman_in_center"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "generational_nostalgia",
+      "label": "Generational Nostalgia",
+      "description": "The meme relies on the concept that certain cultural artifacts, music, or events are tied to specific generations, and that only those who experienced them firsthand can truly 'remember' them. This creates an implicit hierarchy of cultural memory, where the experiences of one generation are deemed more authentic or valuable than others. The phrase 'only 30's kids will remember this' implies that the depicted scene is from a past era that is now inaccessible to younger people, and that the targeted demographic (30-somethings) has a unique, privileged connection to it.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "stage_performance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cultural_elitism",
+      "label": "Cultural Elitism",
+      "description": "The meme subtly promotes the idea that cultural experiences are exclusive to certain age groups, implying that those outside the targeted demographic (30-somethings) are somehow less connected to or less capable of appreciating the cultural artifact being referenced. This can lead to the marginalization of other age groups and the creation of a hierarchy where the '30's kids' are positioned as the authentic or superior cultural inheritors.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "stage_performance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "age_based_exclusion",
+      "label": "Age-Based Exclusion",
+      "description": "The meme functions by excluding individuals who are not in their 30s from the cultural narrative it presents. By stating that only '30's kids' will remember the scene, it implicitly devalues the experiences and memories of other age groups, potentially causing emotional discomfort or alienation for those who are not part of the targeted demographic. This is a form of exclusion based on age, which can be harmful as it suggests that cultural memory is not universal or accessible to all.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "stage_performance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nostalgia_as_cultural_property",
+      "label": "Nostalgia as Cultural Property",
+      "description": "The meme treats nostalgia as a form of cultural property that is owned or exclusive to a specific generation. This concept implies that the cultural artifact (the performance) is not merely a shared experience but something that is 'owned' by those who experienced it in the past, and that this ownership is tied to age. This can lead to the commodification of nostalgia and the exclusion of those who did not experience it firsthand.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "stage_performance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "nostalgia",
+      "label": "nostalgic emotion",
+      "description": "The overall scene and text evoke a sense of longing for a past era, suggesting that the depicted musical performance is a cherished memory tied to a specific time period. The black-and-white aesthetic and the phrase 'only 30's kids will remember this' reinforce this feeling of looking back fondly on something that is now distant and perhaps inaccessible to younger generations.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The text 'only 30's kids' maps onto the visual scene of the stage performance.",
+      "description": "The text 'only 30's kids' is positioned at the top center of the image, directly above the visual scene of the stage performance. This spatial adjacency creates an analogical mapping where the text explicitly identifies the visual scene as something that is exclusively remembered by '30's kids'. The mapping implies that the entire visual scene (the stage performance) is a cultural artifact tied to a specific past era, and that only individuals in their 30s are the legitimate bearers of this memory. This is a direct projection of the textual claim onto the visual material, establishing the performance as the 'thing' that is being claimed to be exclusive to the 30's demographic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the targeted demographic of '30's kids",
+      "description": "The user is implicitly projected onto the demographic of '30's kids, as the meme's text 'only 30's kids will remember this' positions this group as the exclusive audience or memory holders of the depicted scene. The user is invited to identify with this group, feeling that their experience or memory of the cultural artifact is validated by the meme. This projection is not explicit with deictic pronouns like 'you' or 'me', but is implied through the exclusivity claim and the user's assumed alignment with the targeted age group.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Age-Based Exclusion",
+      "description": "The meme implies that only individuals in their 30s have authentic or valid memories of the depicted cultural artifact, potentially marginalizing and devaluing the experiences of other age groups. This fosters a sense of generational hierarchy and exclusion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "text_chunk",
+      "label": "audience indicator",
+      "description": "The text 'only 30's kids' explicitly identifies the target demographic as individuals in their 30s, serving as a direct audience indicator for the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/41923.png",
+    "image_name": "41923.png",
+    "extraction_timestamp": "2025-12-16T01:11:52.516497",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

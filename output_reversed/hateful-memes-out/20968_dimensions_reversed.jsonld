@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_16440b80",
+  "@type": "AnalysisDocument",
+  "title": "20968.png - Dimension Analysis",
+  "created": "2025-12-15T18:12:37.054509",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_81f3d4c9",
+    "@type": "Image",
+    "filename": "20968.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/20968.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/20968.png",
+    "image_name": "20968.png",
+    "extraction_timestamp": "2025-12-15T18:10:36.823376",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d641d411",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: MISOGYNY; overall-intent-description: The image depicts a woman sitting on the edge of a bed with a distressed or weary expression, arms crossed over her chest. The text overlay reads: 'all men are dogs.. so which breed is your dad?'. This meme uses a misogynistic trope by generalizing all men as 'dogs' — a degrading metaphor implying men are inherently animalistic, untrustworthy, or lacking in moral character. The question 'so which breed is your dad?' escalates the insult by implying the father (a man) is a specific, undesirable type of dog, reinforcing the dehumanizing and derogatory stereotype. The visual of the woman looking downcast or defeated is used to imply she is suffering from this generalized male behavior, which is a classic misogynistic framing that blames women's emotional state on men's supposed inherent flaws. The overall intent is to demean men and perpetuate the idea that men are inherently flawed or animal-like, which is a form of misogynistic humor that reinforces harmful gender stereotypes and can contribute to a culture of resentment or hostility toward men, while also potentially validating the emotional distress of the woman depicted as a consequence of male behavior.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_16440b80"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_33a59565",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "all men are dogs..",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_16440b80"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_62f060c3",
+      "@type": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A woman with dark, curly hair, sitting on the edge of a bed, resting her head on her crossed arms. She has a distressed or weary expression, looking downward. She is wearing a light-colored t-shirt and patterned pajama pants. Her posture and facial expression convey emotional exhaustion or sadness.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_16440b80"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_231c5a0a",
+      "@type": "Scene",
+      "instance_name": "woman_on_bed",
+      "label": "woman sitting on bed",
+      "description": "A woman with dark, curly hair is sitting on the edge of a bed, resting her head on her crossed arms. She has a distressed or weary expression, looking downward. She is wearing a light-colored t-shirt and patterned pajama pants. Her posture and facial expression convey emotional exhaustion or sadness.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_16440b80"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1022465f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynistic_stereotype",
+      "label": "Misogynistic Stereotype: All Men Are Dogs",
+      "description": "The meme relies on a misogynistic stereotype that dehumanizes men by comparing them to dogs, implying they are inherently animalistic, untrustworthy, or lacking in moral character. This is a common trope in misogynistic humor that reinforces harmful gender stereotypes and blames women's emotional state on men's supposed inherent flaws.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_16440b80"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_135d7171",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "dog_breed_stereotype",
+      "label": "Dog Breed Stereotype",
+      "description": "The question 'so which breed is your dad?' escalates the insult by implying the father (a man) is a specific, undesirable type of dog, reinforcing the dehumanizing and derogatory stereotype. This relies on real-world knowledge of dog breeds and their associated negative connotations (e.g., 'pit bull' as aggressive, 'chihuahua' as small and fragile, etc.), which are culturally understood as metaphors for undesirable human traits.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_16440b80"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_6bc0ec60",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "emotional_distress_as_consequence_of_male_behavior",
+      "label": "Emotional Distress as Consequence of Male Behavior",
+      "description": "The visual of the woman looking downcast or defeated is used to imply she is suffering from this generalized male behavior. This relies on the background knowledge that women's emotional state is often blamed on men's supposed inherent flaws, a common misogynistic framing.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_16440b80"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5418352d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "misogynistic_humor",
+      "label": "Misogynistic Humor",
+      "description": "The meme uses humor to demean men and perpetuate the idea that men are inherently flawed or animal-like. This type of humor is rooted in real-world social trends and cultural phenomena that reinforce harmful gender stereotypes and can contribute to a culture of resentment or hostility toward men.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_16440b80"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7c20bf5d",
+      "@type": "EmotionExpression",
+      "instance_name": "emotional_distress",
+      "label": "distressed emotion",
+      "description": "The woman's facial expression, with furrowed brows and downward gaze, combined with her posture of resting her head on crossed arms, conveys a state of emotional exhaustion, sadness, or defeat. This is visually reinforced by the context of the meme, which frames her distress as a consequence of generalized male behavior.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_16440b80"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_133165ed",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Woman is mapped as the victim of misogynistic stereotype",
+      "description": "The visual entity 'woman_on_bed' is mapped onto the textual entity 'text_chunk_1' ('all men are dogs..') through the analogical mapping that frames her emotional distress as a consequence of the generalized male behavior described in the text. The woman's distressed expression and posture visually represent the emotional suffering implied by the misogynistic stereotype, creating a direct analogical link between her state and the text's dehumanizing claim about men.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_16440b80"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9e1a947c",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman as the victim of misogynistic stereotype",
+      "description": "The user is projected onto the visual entity 'woman_on_bed', who is depicted as emotionally distressed, implying that the user identifies with her suffering as a consequence of the misogynistic stereotype described in the text. The text 'so which breed is your dad?' uses 'your' to directly address the user, making the user the target of the insult and thus projected onto the scene and the woman's emotional state.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_16440b80"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b6f195fa",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Misogynous",
+      "description": "The meme uses a misogynistic stereotype by generalizing all men as 'dogs' — a degrading metaphor implying men are inherently animalistic, untrustworthy, or lacking in moral character. The question 'so which breed is your dad?' escalates the insult by implying the father (a man) is a specific, undesirable type of dog, reinforcing the dehumanizing and derogatory stereotype. The visual of the woman looking downcast or defeated is used to imply she is suffering from this generalized male behavior, which is a classic misogynistic framing that blames women's emotional state on men's supposed inherent flaws.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_16440b80"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_47fa830d",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "misogynistic humor audience",
+      "description": "The target community for this meme is individuals who are familiar with and may find amusement in misogynistic stereotypes, particularly those who perceive or have been affected by generalized negative portrayals of men. The meme relies on culturally understood metaphors (dogs, dog breeds) and the visual trope of a distressed woman to frame male behavior as the source of female emotional distress, appealing to an audience that either validates or enjoys this type of dehumanizing humor. This audience may include people who resonate with the idea that men are inherently flawed or animalistic, or who find satisfaction in mocking or ridiculing men through exaggerated stereotypes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_16440b80"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

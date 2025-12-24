@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image depicts two anime characters, Goku from Dragon Ball and Luffy from One Piece, dressed in cosplay, posing on a red carpet at the International Emmy Awards. The text overlay reads, 'this isn't even my final form,' which is a humorous and self-deprecating reference to Goku's 'Final Form' (Super Saiyan Blue) and Luffy's 'Final Form' (Gear 5). The meme's intent is to create humor by juxtaposing the characters' iconic power levels with their current, relatively 'basic' appearances. There is no toxicity present in the image; it is a lighthearted, fan-based joke that relies on pop culture knowledge and playful exaggeration. The humor stems from the contrast between the characters' immense power in their final forms and their current, less powerful states, which is a common trope in anime fan culture. The meme does not target any specific group or individual based on protected characteristics, nor does it contain abusive, cyberbullying, harmful, hateful, misogynous, or propaganda elements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "this isn't even",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Goku",
+      "label": "Anime character in cosplay",
+      "description": "A cosplayer dressed as Goku from Dragon Ball, wearing his iconic orange gi with blue accents, black boots with yellow trim, and yellow spiky hair. He is posing with a flexing arm gesture on a red carpet at the International Emmy Awards.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "cosplay_on_red_carpet",
+      "label": "cosplay_on_red_carpet",
+      "description": "Two anime characters, Goku and Luffy, dressed in cosplay, are posing together on a red carpet at the International Emmy Awards. The scene is framed by a backdrop with sponsor logos, and the characters are positioned side-by-side, facing forward with confident poses. The text overlay humorously contrasts their current appearances with their 'final forms' in their respective anime series.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Goku",
+          "relation": "stands_next_to",
+          "to": "Luffy"
+        },
+        {
+          "from": "Goku",
+          "relation": "poses_with",
+          "to": "Luffy"
+        },
+        {
+          "from": "Luffy",
+          "relation": "poses_with",
+          "to": "Goku"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "goku_final_form",
+      "label": "Goku's Final Form",
+      "description": "In Dragon Ball Super, Goku's final form is Super Saiyan Blue, a powerful transformation that represents his peak power level. The meme humorously implies that the cosplayer's current appearance (Super Saiyan 3 or earlier) is not even close to his ultimate power state, playing on the contrast between his current form and his most powerful transformation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "luffy_final_form",
+      "label": "Luffy's Final Form",
+      "description": "In One Piece, Luffy's final form is Gear 5, a transformation that grants him immense power and speed. The meme humorously implies that the cosplayer's current appearance (standard form or Gear 2/3) is not even close to his ultimate power state, playing on the contrast between his current form and his most powerful transformation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "international_emmy_awards",
+      "label": "International Emmy Awards",
+      "description": "An annual awards ceremony honoring excellence in television programming from around the world. The event is a prestigious occasion for the global TV industry, and the presence of anime cosplayers at such an event highlights the growing international recognition and popularity of anime and cosplay culture.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cosplay_culture",
+      "label": "Cosplay Culture",
+      "description": "A subculture centered around dressing up as characters from movies, TV shows, video games, and comics. Cosplay is a popular form of fan expression and is often featured at conventions and events like the International Emmy Awards, where fans showcase their creativity and dedication to their favorite franchises.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anime_popularity",
+      "label": "Anime Popularity",
+      "description": "The global phenomenon of anime, which has gained widespread popularity and cultural significance beyond Japan. Anime characters like Goku and Luffy are iconic figures in global pop culture, and their appearances at international events like the Emmy Awards reflect the growing influence of anime in mainstream entertainment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "Scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_joke_structure",
+      "label": "Meme Joke Structure",
+      "description": "A common meme format that uses a humorous or self-deprecating statement to create a comedic effect. In this case, the text 'this isn't even my final form' is a playful exaggeration that relies on the audience's knowledge of the characters' iconic power levels in their respective anime series.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "TextualMaterial",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "humor",
+      "label": "humorous expression",
+      "description": "The overall emotional tone of the image is lighthearted and comedic, conveyed through the juxtaposition of the cosplayers' current forms with their iconic 'final forms' in their respective anime series. The text overlay 'this isn't even my final form' is a self-deprecating joke that relies on pop culture knowledge to create humor by exaggerating the contrast between their current appearances and their peak power states.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Cosplayer's current form is mapped as not being their final form",
+      "description": "The text 'this isn't even my final form' is an analogical mapping that projects the visual material of the cosplayers (Goku and Luffy in their current cosplay forms) onto the textual concept of 'my final form'. The humor arises from the contrast between their current appearances and their iconic, powerful final forms in their respective anime series (Goku's Super Saiyan Blue and Luffy's Gear 5). The text explicitly states that their current state is not even close to their ultimate power level, creating a self-deprecating joke that relies on pop culture knowledge.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material expressing self-deprecation",
+      "description": "The user is projected onto the textual material 'this isn't even my final form', which uses the first-person pronoun 'my' to create a self-referential joke. The user identifies with the cosplayers' perspective, imagining themselves as the characters and humorously claiming their current form is not even close to their ultimate power state. This projection is onto the textual material, which explicitly uses 'my' to anchor the humor to the viewer's imagined identity as the character.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "cosplay_culture",
+      "label": "Cosplay Culture",
+      "description": "The meme is designed for fans of cosplay culture, who recognize the humor in the juxtaposition of characters' current cosplay appearances with their iconic final forms. The presence of cosplayers at a high-profile event like the International Emmy Awards signals an audience familiar with and engaged in cosplay as a form of fan expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/13964.png",
+    "image_name": "13964.png",
+    "extraction_timestamp": "2025-12-15T15:25:45.629267",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

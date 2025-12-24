@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "the surprised expression",
+      "expressors": [
+        {
+          "entity": "young_girl",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "young_girl",
+          "relation": "emotionalRelationToEntity",
+          "to": "adult_woman"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":the_surprised_expression :hasExpressor :young_girl .",
+    ":young_girl :emotionalRelationToEntity :adult_woman ."
+  ],
+  "triples_count": 2
+}

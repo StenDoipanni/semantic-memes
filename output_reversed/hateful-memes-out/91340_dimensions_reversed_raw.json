@@ -1,0 +1,181 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: this_nigga_so_black_they_had_to_change_his_background_white; hasOverallIntent: Hateful; overall-intent-description: The meme features a Black man in a black tank top against a plain white background, with overlaid text that reads, 'this nigga so black they had to change his background white.' This text is a racist trope that attempts to mock the person's skin tone by implying that his natural color is so dark that it necessitated a white background to be visible. This is a direct attack based on race, using a derogatory term ('nigga') and a stereotype that reduces the individual to a caricature of his race. The intent is to demean and insult the person's appearance through racialized humor, which is inherently hateful and reinforces harmful anti-Black stereotypes. The juxtaposition of the image (a person of color) with the text (mocking his skin tone) creates a visual and textual punchline rooted in racial prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "this nigga so black they had to change his background white",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "a Black man",
+      "description": "A Black man with short hair, wearing a black tank top, looking directly at the camera with a neutral expression. He is the central and only person in the image, positioned against a plain white background. His skin tone is visibly dark, and the image is a head-and-shoulders portrait.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "mocking_skin_tone",
+      "label": "mocking skin tone scene",
+      "description": "A scene where a Black man is depicted against a plain white background, with overlaid text that reads 'this nigga so black they had to change his background white.' The text is a racist trope mocking the person's skin tone by implying his natural color is so dark that it necessitated a white background to be visible. The scene is composed of the man and the text, with the text positioned above the man's head, creating a visual and textual punchline rooted in racial prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "mocks",
+          "to": "man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype",
+      "label": "Anti-Black Stereotype: Mocking Skin Tone",
+      "description": "A derogatory stereotype that implies Black people's skin is so dark that it requires a white background to be visible, which is used to mock and demean Black individuals. This trope is rooted in racist ideology and is a form of visual and textual racial caricature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "derogatory_term_nigga",
+      "label": "Derogatory Term 'Nigga'",
+      "description": "The term 'nigga' is a racial slur historically used to demean Black people. Its use in the meme is a direct act of racial insult and is part of the broader anti-Black racialized language that reinforces systemic racism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "racialized_humor",
+      "label": "Racialized Humor",
+      "description": "A form of humor that relies on racial stereotypes and offensive tropes to create a punchline, often at the expense of a racial group. This meme uses racialized humor to mock the appearance of a Black man, which is inherently hateful and degrading.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_intent",
+      "label": "Hateful Intent",
+      "description": "The meme is designed to demean and insult a Black person through racialized humor, which is a form of hate speech. The intent is to reinforce harmful anti-Black stereotypes and to attack the individual based on their race.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_contempt",
+      "label": "contemptuous mockery emotion",
+      "description": "The emotion expressed is contemptuous mockery, conveyed through the juxtaposition of the man's neutral facial expression with the racist text overlay that mocks his skin tone. The man's expression is not emotive but serves as a passive canvas for the hateful commentary, which is the true emotional driver of the meme. The emotion is not felt by the man but is projected by the creator of the meme to ridicule and demean.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text maps the man's skin tone to a visual joke about needing a white background",
+      "description": "The textual material 'this nigga so black they had to change his background white' is an analogical mapping that projects the visual material of the Black man's dark skin tone onto the concept of requiring a white background to be visible. This mapping is rooted in the racist trope of mocking Black skin tone by implying it is so dark that it necessitates a white background for contrast, creating a visual and textual punchline. The man's visual presence (dark skin, black tank top, white background) is directly mapped onto the textual claim that his skin is so black it required the background to be changed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material mocking the man's skin tone",
+      "description": "The user is projected onto the textual material 'this nigga so black they had to change his background white', which functions as a deictic statement directed at the viewer. The meme invites the user to perceive the man's dark skin tone as an object of ridicule, positioning the user as the one who 'sees' the joke or the 'truth' in the text. The text acts as a direct address to the user, implying that the user is the one who must interpret the visual and textual elements as a racialized punchline. The projection is onto the text_chunk, which contains the deictic framing of the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses racist language and imagery to demean a Black man based on his race, directly attacking his appearance through a harmful stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals who are familiar with and may find amusement in racist stereotypes and racialized humor, particularly those who engage with or perpetuate anti-Black tropes. The meme is designed to appeal to an audience that understands the derogatory nature of the term 'nigga' and the mocking implication that a Black person's skin is so dark it requires a white background to be visible. This audience likely includes people who consume internet memes that rely on offensive racial caricatures, and who may be drawn to the meme’s punchline through its reinforcement of harmful anti-Black stereotypes. The meme’s hateful intent suggests it is targeted at those who either do not recognize the racism or who actively enjoy such content, thereby reinforcing systemic prejudice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/91340.png",
+    "image_name": "91340.png",
+    "extraction_timestamp": "2025-12-19T17:19:51.068961",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

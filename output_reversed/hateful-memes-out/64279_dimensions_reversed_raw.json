@@ -1,0 +1,208 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: jew_mad_get_fuhrererious; hasOverallIntent: hateful; overall-intent-description: The image depicts a historical scene of Nazi Germany with Adolf Hitler and other Nazi officials in a parade, overlaid with the text 'jew mad?' and 'get fuhrererious!'. The meme uses the visual of Nazi imagery to mock or provoke a reaction, implying that Jews are 'mad' or irrational, and then sarcastically suggests they should 'get fuhrererious' (a play on 'get furious' and 'Fuhrer'), which is a direct reference to Hitler. This is a hateful meme that uses anti-Semitic tropes and Nazi imagery to demean and dehumanize Jewish people, invoking historical atrocities and promoting hate. The juxtaposition of the text with the image is designed to provoke, mock, and spread anti-Semitic sentiment, making it a clear example of hateful content targeting a protected group based on ethnicity and religion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "jew mad?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Adolf_Hitler",
+      "label": "central figure in the parade",
+      "description": "Man in a dark suit standing in the center of the image, looking forward with a serious expression. He is surrounded by Nazi officials and is the focal point of the parade scene. His presence is central to the historical context of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "nazi_parade_scene",
+      "label": "Nazi parade scene",
+      "description": "A historical parade scene featuring Adolf Hitler and other Nazi officials in uniform, with Nazi salutes and a decorated car in the foreground. The scene is overlaid with hateful text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Adolf_Hitler",
+          "relation": "is_centered_in",
+          "to": "nazi_parade_scene"
+        },
+        {
+          "from": "text",
+          "relation": "overlays",
+          "to": "nazi_parade_scene"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_semitic_stereotype_jew_mad",
+      "label": "Anti-Semitic Stereotype: 'Jew mad?'",
+      "description": "The phrase 'jew mad?' is a derogatory stereotype implying Jewish people are irrational, hysterical, or emotionally unstable. This is a common antisemitic trope used to dehumanize Jews by suggesting they are prone to irrational anger or behavior, which is historically rooted in antisemitic propaganda.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_semitic_stereotype_get_fuhrererious",
+      "label": "Anti-Semitic Stereotype: 'get fuhrererious!'",
+      "description": "The phrase 'get fuhrererious!' is a play on 'get furious' and 'Fuhrer', directly referencing Adolf Hitler. It is a hateful trope that implies Jews should become as extreme or dangerous as Hitler, mocking their supposed 'madness' by suggesting they should emulate the leader of a genocidal regime. This is a form of antisemitic provocation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nazi_parade_scene_context",
+      "label": "Historical Context: Nazi Parade Scene",
+      "description": "The image depicts a Nazi parade, likely the 1933 Nazi Party Rally in Nuremberg, which was a key event in Nazi Germany used to display power and propaganda. The presence of Adolf Hitler and Nazi officials in uniform, along with the Nazi salute, is a direct reference to the regime's ideology and its violent, racist agenda. Understanding this historical context is essential to interpret the meme's hateful intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "nazi_parade_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "adolf_hitler_context",
+      "label": "Historical Figure: Adolf Hitler",
+      "description": "Adolf Hitler was the dictator of Nazi Germany and the architect of the Holocaust, responsible for the genocide of six million Jews and millions of others. His image and association with Nazi ideology are central to understanding the meme's hateful content, as it uses his presence to invoke historical atrocities and dehumanize Jewish people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "Adolf_Hitler",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_concept_holocaust_denial",
+      "label": "Antisemitic Concept: Holocaust Denial/Minimization",
+      "description": "The meme's use of Nazi imagery and the implication that Jews are 'mad' or should 'get fuhrererious' is a form of Holocaust denial or minimization, as it trivializes the genocide of Jews and other groups by the Nazis. This is a dangerous antisemitic trope that seeks to downplay or distort the historical reality of the Holocaust.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "nazi_parade_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "antisemitic_concept_puppet_master",
+      "label": "Antisemitic Concept: 'Puppet Master' Imagery",
+      "description": "The meme's sarcastic suggestion that Jews should 'get fuhrererious' implies they are somehow responsible for or should emulate Hitler, which is a form of 'puppet master' imagery. This trope falsely suggests that Jews control or are responsible for the actions of powerful figures, a common antisemitic conspiracy theory.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_meme_emotion",
+      "label": "hateful and provocative emotion",
+      "description": "The overall emotion expressed by the meme is hateful and provocative, designed to incite anger or mockery toward Jewish people by using Nazi imagery and antisemitic stereotypes. The text 'jew mad?' and 'get fuhrererious!' are emotionally charged phrases that mock and dehumanize Jews, invoking historical atrocities and promoting hate. The visual of Hitler and Nazi officials in a parade, combined with the text, creates a confrontational and offensive emotional tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_jew_mad_adolf_hitler",
+      "label": "Jew mad? is mapped onto Adolf Hitler",
+      "description": "The text 'jew mad?' is an antisemitic stereotype that implies Jewish people are irrational or hysterical. This text is juxtaposed with the visual of Adolf Hitler, who is the central figure in the Nazi parade. The mapping suggests that Hitler is the embodiment of the 'mad' Jew stereotype, or that the meme is sarcastically implying that Hitler himself is 'mad' (a reversal of the antisemitic trope). This is a hateful analogical mapping that uses Hitler's image to reinforce the dehumanizing stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the antisemitic stereotype text",
+      "description": "The user is projected onto the textual material 'jew mad?' and 'get fuhrererious!' which directly address the viewer with a provocative, hateful question and a sarcastic, dehumanizing suggestion. The meme uses these texts to imply the user (or a group the user identifies with) is being mocked or challenged to react in a way that reinforces the antisemitic stereotypes. The projection is onto the textual material, which acts as a direct address to the viewer.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses Nazi imagery and antisemitic stereotypes to directly attack Jewish people based on their ethnicity and religion, invoking historical atrocities and promoting hate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "intended audience",
+      "description": "The target community is individuals who are familiar with or have an interest in antisemitic tropes, Nazi history, or internet meme culture that uses hate speech and historical imagery for provocation. The meme is designed to elicit a reaction from those who understand the historical context of Nazi Germany and the dehumanizing stereotypes against Jewish people, particularly those who may be exposed to or engage with extremist or hateful online content. The audience is likely to be those who find humor in or are desensitized to hate speech, and who may be drawn to the meme’s use of shock value and historical references to provoke or mock.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/64279.png",
+    "image_name": "64279.png",
+    "extraction_timestamp": "2025-12-16T08:08:48.046272",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

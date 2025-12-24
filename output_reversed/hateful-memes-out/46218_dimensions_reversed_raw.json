@@ -1,0 +1,219 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: grilling-at-grave-site-meme; hasOverallIntent: Harmful; overall-intent-description: The image depicts a cemetery with tombstones under a cloudy sky, overlaid with text that reads: 'if you're not grilling at my grave site we were never really friends.' This meme uses a darkly humorous and morbid analogy to express a sense of finality or betrayal in a friendship. The intent is to mock or exaggerate the idea that a friend is not truly loyal or committed if they do not show up at a symbolic 'grave site' to grill. While not explicitly targeting any protected group, the content is potentially harmful as it promotes a cynical, nihilistic view of friendship and could be interpreted as emotionally manipulative or insensitive, especially in contexts where people are grieving or dealing with loss. The humor is derived from the juxtaposition of a solemn, final setting (a cemetery) with a casual, social activity (grilling), creating a jarring and potentially offensive contrast that may be seen as disrespectful or insensitive to those who have lost loved ones.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "if you're not grilling at my grave site",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "cemetery",
+      "label": "scene",
+      "description": "A wide, grassy cemetery with numerous tombstones and headstones scattered across the landscape, surrounded by trees and under a cloudy sky.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "grilling_at_grave_site_scene",
+      "label": "Grilling at Grave Site Scene",
+      "description": "A scene depicting a cemetery with tombstones under a cloudy sky, overlaid with text that reads: 'if you're not grilling at my grave site we were never really friends.' The scene uses a darkly humorous and morbid analogy to express a sense of finality or betrayal in a friendship. The humor is derived from the juxtaposition of a solemn, final setting (a cemetery) with a casual, social activity (grilling), creating a jarring and potentially offensive contrast.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "isOverlaidOn",
+          "to": "cemetery"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "grilling",
+      "label": "Grilling",
+      "description": "The act of cooking food, typically outdoors, over an open flame or heat source. In the context of the meme, it represents a casual, social, and often celebratory activity that contrasts sharply with the solemnity of a cemetery. This contrast is central to the meme's dark humor and is a real-world concept that must be understood to interpret the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "grilling_at_grave_site_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "grave_site",
+      "label": "Grave Site",
+      "description": "A location where a deceased person is buried, typically marked by a tombstone or headstone. In the meme, it symbolizes death, finality, and mourning. The juxtaposition of a grave site with grilling is the core of the meme's dark humor and requires understanding of cultural norms around death and remembrance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "grilling_at_grave_site_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "friendship",
+      "label": "Friendship",
+      "description": "A close, personal, and often emotional bond between individuals. The meme uses the concept of friendship to express a sense of betrayal or finality, implying that a friend is not truly loyal if they do not participate in a symbolic act (grilling at the grave). This is a social concept that must be understood to interpret the meme's emotional core.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "grilling_at_grave_site_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dark_humor",
+      "label": "Dark Humor",
+      "description": "Humor derived from morbid, taboo, or distressing subjects, such as death, suffering, or tragedy. The meme relies on dark humor to create its effect, using the juxtaposition of a cemetery and grilling to generate a jarring and potentially offensive contrast. Understanding this genre of humor is necessary to interpret the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "grilling_at_grave_site_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cemetery",
+      "label": "Cemetery",
+      "description": "A place where the dead are buried. In the meme, it is used as a symbolic setting to represent death and finality. The visual of a cemetery is a real-world entity that must be understood in context to appreciate the meme's darkly humorous and potentially insensitive tone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "VisualMaterial",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "grilling_at_grave_site_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_culture",
+      "label": "Meme Culture",
+      "description": "A form of internet-based humor that relies on visual and textual elements to convey a message or joke. The meme format itself, including the use of text overlays on images, is a cultural phenomenon that must be understood to interpret the meme's structure and intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "grilling_at_grave_site_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "dark_humor",
+      "label": "darkly humorous emotion",
+      "description": "The emotion expressed through the juxtaposition of a solemn cemetery setting with the casual act of grilling, creating a jarring and ironic tone that is central to the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Grave site is mapped to the cemetery scene",
+      "description": "The text 'if you're not grilling at my grave site' explicitly refers to a 'grave site', which is visually represented by the cemetery scene in the image. The cemetery, with its tombstones and solemn atmosphere, serves as the visual embodiment of the textual concept of a 'grave site'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material expressing a conditional statement about friendship",
+      "description": "The user is projected onto the textual material 'if you're not grilling at my grave site we were never really friends' because the text uses the second-person pronoun 'you' and the first-person possessive 'my', directly addressing the viewer as the person who must fulfill the condition to be considered a true friend. This creates an implicit 'you' as the projected user, who is being judged by the meme's logic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme promotes a cynical, nihilistic view of friendship and could be interpreted as emotionally manipulative or insensitive, especially in contexts where people are grieving or dealing with loss. The dark humor derived from juxtaposing a solemn cemetery with a casual activity like grilling may be seen as disrespectful or insensitive to those who have lost loved ones.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "meme culture enthusiasts",
+      "description": "The intended audience is individuals familiar with internet meme culture, who appreciate dark humor and the juxtaposition of solemn imagery with casual, social activities. The meme relies on the visual and textual format typical of online humor, targeting those who understand and engage with this form of expression.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/46218.png",
+    "image_name": "46218.png",
+    "extraction_timestamp": "2025-12-16T02:12:20.457162",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

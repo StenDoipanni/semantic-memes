@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "hateful emotion",
+      "expressors": [
+        {
+          "entity": "the text 'when you finally headshot 150 black people'",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "the text 'when you finally headshot 150 black people'",
+          "relation": "emotionalRelationToEntity",
+          "to": "Black people"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":hateful_emotion :hasExpressor :the_text_when_you_finally_headshot_150_black_people .",
+    ":the_text_when_you_finally_headshot_150_black_people :emotionalRelationToEntity :Black_people ."
+  ],
+  "triples_count": 2
+}

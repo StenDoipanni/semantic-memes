@@ -1,0 +1,172 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_df7b1549",
+  "@type": "AnalysisDocument",
+  "title": "60513.png - Dimension Analysis",
+  "created": "2025-12-16T06:49:40.813757",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_e75f3aa3",
+    "@type": "Image",
+    "filename": "60513.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/60513.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/60513.png",
+    "image_name": "60513.png",
+    "extraction_timestamp": "2025-12-16T06:48:15.213348",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bdec581f",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: hateful; overall-intent-description: The image displays a modern kitchen with double-stacked ovens, overlaid with the text 'what do you call double stacked ovens?' and the punchline 'jewish bunk beds.' This setup is a derogatory joke that uses a crude, antisemitic stereotype by equating Jewish people with 'bunk beds,' implying they are cheap, frugal, or overly efficient in a way that is demeaning. The joke relies on a harmful and offensive stereotype that associates Jewish people with being penny-pinching or overly practical in a way that is demeaning and dehumanizing. The visual of the ovens is juxtaposed with the text to create a punchline that is intended to be offensive and insulting, targeting a specific ethnic group. The meme's intent is to provoke laughter through the use of a harmful and antisemitic stereotype, which is a form of hateful content.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_df7b1549"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_20da7944",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "what do you call double stacked ovens?",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_df7b1549"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_12a2ca56",
+      "@type": "VisualMaterial",
+      "instance_name": "kitchen",
+      "label": "scene",
+      "description": "A modern kitchen with wooden cabinetry, stainless steel appliances, and a central island. The scene is well-lit with natural light coming through large glass doors.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_df7b1549"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2f84501f",
+      "@type": "Scene",
+      "instance_name": "kitchen_scene",
+      "label": "modern_kitchen_with_double_stacked_ovens",
+      "description": "A modern kitchen featuring wooden cabinetry, stainless steel double-stacked ovens, a central island with a sink, and large glass doors allowing natural light. The scene is overlaid with text that forms a hateful antisemitic joke.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_df7b1549"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a01a5942",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "antisemitic_stereotype",
+      "label": "antisemitic stereotype",
+      "description": "The meme relies on a harmful antisemitic stereotype that equates Jewish people with being cheap, frugal, or overly efficient, often portrayed as penny-pinching or overly practical in a demeaning way. This stereotype is used to create a derogatory joke by associating Jewish people with 'bunk beds' as a metaphor for being 'cheap' or 'overly efficient.'",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_df7b1549"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8a18b04f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "jewish_bunk_beds_metaphor",
+      "label": "jewish bunk beds metaphor",
+      "description": "This is a derogatory metaphor used in the meme to imply that Jewish people are cheap or overly efficient, by comparing double-stacked ovens (which are seen as space-saving and cost-effective) to 'bunk beds,' which are associated with frugality and minimalism. The metaphor is offensive and relies on antisemitic stereotypes.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_df7b1549"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dacc3177",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "double_stacked_ovens",
+      "label": "double stacked ovens",
+      "description": "A kitchen appliance configuration where two ovens are stacked vertically to save space. This is a common feature in modern kitchens, especially in compact or high-end designs. The meme uses this visual to set up a joke that relies on a stereotype.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_df7b1549"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7e60c7e6",
+      "@type": "EmotionExpression",
+      "instance_name": "hateful_antisemitic_joke",
+      "label": "hateful antisemitic joke emotion",
+      "description": "The emotion expressed is hateful and antisemitic, conveyed through the derogatory joke that equates Jewish people with 'jewish bunk beds' as a metaphor for being cheap or overly efficient. This emotion is derived from the text and the visual context of the double-stacked ovens, which are used to set up the offensive punchline.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_df7b1549"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ff11835e",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "double stacked ovens are mapped to jewish bunk beds",
+      "description": "The textual punchline 'jewish bunk beds' is an analogical mapping that equates the visual entity 'double stacked ovens' with the derogatory metaphor 'jewish bunk beds'. This mapping is created by the juxtaposition of the text with the image of the ovens, implying that the ovens (as space-saving and cost-effective appliances) are analogous to 'bunk beds' (associated with frugality and minimalism), which in turn is mapped onto a harmful antisemitic stereotype. The mapping is explicit in the text's punchline and relies on the visual of the ovens to set up the joke.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_df7b1549"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9a22b998",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "user projected onto the antisemitic stereotype conveyed by the text and visual",
+      "description": "The user is projected onto the hateful antisemitic stereotype embedded in the meme's textual punchline 'jewish bunk beds' and its visual representation of double-stacked ovens. The joke implicitly invites the user to recognize and internalize the offensive metaphor, projecting the user into the role of someone who might find the stereotype amusing or acceptable, thereby reinforcing the harmful message. There are no explicit deictic pronouns like 'you' or 'me', but the meme's structure and intent create an implicit projection where the viewer is positioned as the one who 'gets' the joke, thus engaging with the stereotype.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_df7b1549"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_94644f83",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme contains a hateful antisemitic stereotype by equating Jewish people with 'jewish bunk beds' as a metaphor for being cheap or overly efficient, which is a form of hateful content targeting a specific ethnic group.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_df7b1549"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_08508638",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who are familiar with or may find offensive antisemitic stereotypes, particularly those who might appreciate or be exposed to crude, hate-driven humor that relies on equating Jewish people with 'bunk beds' as a metaphor for being cheap or overly efficient. The meme is designed to provoke laughter through the use of a harmful antisemitic stereotype, which is a form of hateful content targeting a specific ethnic group.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_df7b1549"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

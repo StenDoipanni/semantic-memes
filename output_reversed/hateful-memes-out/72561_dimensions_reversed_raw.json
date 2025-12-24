@@ -1,0 +1,222 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_file_name; hasOverallIntent: overall-intent_id; overall-intent-description: The image shows a black-and-white photo of a man in a suit stepping off a train, with a caption that reads 'back in my day blowing a tranny meant car trouble.' The visual material (a man in formal attire, possibly from an earlier era, with a cigar and a confident posture) is juxtaposed with the text to create a humorous or ironic effect. The intent is to use historical context to mock or satirize modern language or behavior, specifically the term 'tranny,' which is a derogatory slur for transgender people. The meme relies on the contrast between the 'old-fashioned' appearance of the man and the modern, offensive term to create a comedic effect. However, the use of the term 'tranny' is inherently harmful and hateful, as it is a slur targeting transgender individuals. The meme's intent is to provoke laughter through the use of offensive language, which can be considered harmful and hateful, as it perpetuates discrimination against a marginalized group. The overall intent is to create humor by juxtaposing historical imagery with a modern slur, but this comes at the cost of reinforcing harmful stereotypes and language against transgender people.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "back in my day blowing a tranny meant car trouble",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_in_suit",
+      "label": "man in formal attire",
+      "description": "A man dressed in a plaid suit, vest, and tie, holding a cigar, stepping off a train with a confident posture. His appearance suggests he is from an earlier era, possibly the 1930s or 1940s. He is the central figure in the image and the focus of the meme's visual material.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "man_stepping_off_train",
+      "label": "man stepping off train",
+      "description": "A man in formal attire (plaid suit, vest, tie) is stepping down from a train, holding a cigar, with a confident posture. He is the central figure in the scene, positioned on the steps of the train. Another person in a white shirt and dark pants is partially visible behind him, likely assisting or accompanying him.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_in_suit",
+          "relation": "steps_off",
+          "to": "train"
+        },
+        {
+          "from": "man_in_suit",
+          "relation": "holds",
+          "to": "cigar"
+        },
+        {
+          "from": "man_in_suit",
+          "relation": "stands_on",
+          "to": "train_step"
+        },
+        {
+          "from": "person_in_white_shirt",
+          "relation": "stands_behind",
+          "to": "man_in_suit"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "transgender_slur",
+      "label": "transgender slur",
+      "description": "The term 'tranny' is a derogatory slur used to demean and dehumanize transgender individuals. Its use in the meme's caption is inherently offensive and harmful, relying on real-world knowledge of its association with hate speech and discrimination against the LGBTQ+ community. The meme's humor is built on the juxtaposition of historical imagery with this modern slur, which requires understanding of contemporary social and linguistic contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "historical_context_of_language",
+      "label": "historical context of language",
+      "description": "The phrase 'back in my day' implies a nostalgic or anachronistic perspective, suggesting that the speaker is referencing a time when certain terms or behaviors were different. This requires understanding of how language and social norms have evolved over time, particularly regarding the use of offensive terms. The meme relies on this contrast to create humor, but it also perpetuates harmful stereotypes by implying that past language was somehow 'acceptable' or 'innocent'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "transgender_identity",
+      "label": "transgender identity",
+      "description": "The meme references 'tranny' as a term related to transgender people, which requires knowledge of gender identity and the social and political context surrounding transgender individuals. Understanding that 'tranny' is a slur that targets transgender people is essential to interpreting the meme's offensive nature and its implications for LGBTQ+ discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_format",
+      "label": "meme format",
+      "description": "The meme format involves juxtaposing a historical or vintage image with a modern, often offensive, caption to create humor or irony. This format relies on the viewer's understanding of internet culture and meme conventions, which often use irony, satire, or shock value to provoke reactions. The visual of a man in formal attire stepping off a train is used to contrast with the modern, offensive text, which requires knowledge of meme culture and its conventions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_in_suit",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hate_speech",
+      "label": "hate speech",
+      "description": "The use of the term 'tranny' in the caption constitutes hate speech, which is a form of communication intended to vilify, humiliate, or incite violence against a group based on their identity. Understanding that this term is a slur targeting transgender people is essential to recognizing the harmful nature of the meme, even if the intent is to be humorous. This requires knowledge of contemporary social justice issues and the impact of language on marginalized communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "transgender_discrimination",
+      "label": "transgender discrimination",
+      "description": "The meme implicitly references the broader issue of discrimination against transgender individuals, which includes social exclusion, hate crimes, and systemic inequality. The use of the slur 'tranny' is a form of discrimination that relies on real-world knowledge of the experiences and challenges faced by transgender people. Understanding this context is necessary to interpret the meme's offensive nature and its implications for LGBTQ+ rights.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "arrogance",
+      "label": "arrogant expression",
+      "description": "The man's confident posture, direct gaze, and the act of stepping down from the train with a cigar in hand convey an air of self-assuredness and superiority, typical of a person who believes they are above others or in control of their environment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The man in the suit is mapped as 'back in my day' persona",
+      "description": "The text 'back in my day' is juxtaposed with the visual of the man in formal attire stepping off a train, implying that he represents a person from a past era. The meme uses his appearance (plaid suit, cigar, confident posture) to visually embody the nostalgic, anachronistic perspective referenced in the text. This creates an analogical mapping where the man is projected as the embodiment of the 'back in my day' speaker.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the historical persona embodied by the man in the suit",
+      "description": "The user is projected onto the visual material of the man in the suit stepping off the train, who is implicitly framed as 'me' or 'back in my day' persona. The text 'back in my day' creates an anachronistic perspective that invites the viewer to identify with the man as a representative of a past era, thereby projecting the user's own identity onto this historical figure. This projection is reinforced by the meme's format, which uses the man's appearance (plaid suit, cigar, confident posture) to visually embody the nostalgic speaker.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses the term 'tranny,' which is a derogatory slur targeting transgender individuals, to create humor by juxtaposing historical imagery with offensive language. This constitutes a direct attack on a protected characteristic (transgender identity) and is inherently hateful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "text_chunk",
+      "label": "caption containing offensive slur",
+      "description": "The meme's text 'back in my day blowing a tranny meant car trouble' is designed to target viewers familiar with internet meme culture and the historical evolution of language, particularly those who understand the derogatory nature of the term 'tranny' as a slur against transgender people. The humor relies on the audience recognizing the offensive term and the anachronistic framing, which implies the meme is intended for individuals who are aware of contemporary social justice issues and the impact of hate speech, even if they are not necessarily part of the transgender community. The target audience is likely internet-savvy individuals who appreciate ironic or satirical humor that uses shock value and historical juxtaposition, but the content is inherently harmful and targets the transgender community.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/72561.png",
+    "image_name": "72561.png",
+    "extraction_timestamp": "2025-12-19T11:28:34.876986",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

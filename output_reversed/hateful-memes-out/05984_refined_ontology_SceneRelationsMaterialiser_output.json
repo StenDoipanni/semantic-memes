@@ -1,0 +1,30 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "child_on_scooter",
+      "participants": [
+        {
+          "entity": "child",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "child",
+          "relation": "riding",
+          "to": "scooter"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":child_on_scooter :hasParticipant :child .",
+    ":child :riding :scooter ."
+  ],
+  "triples_count": 2
+}

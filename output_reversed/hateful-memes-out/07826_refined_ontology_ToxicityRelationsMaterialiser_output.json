@@ -1,0 +1,35 @@
+{
+  "materializer": "ToxicityRelationsMaterialiser",
+  "dimension": "ToxicityAssessment",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "overallintent_instance"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "man"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "top_text"
+    },
+    {
+      "toxicity": "toxicity_1",
+      "hasToxicElement": "money_handing_scene"
+    }
+  ],
+  "triples": [
+    ":toxicity_1 :hasToxicElement :overallintent_instance .",
+    ":toxicity_1 :hasToxicElement :man .",
+    ":toxicity_1 :hasToxicElement :top_text .",
+    ":toxicity_1 :hasToxicElement :money_handing_scene ."
+  ],
+  "triples_count": 4
+}

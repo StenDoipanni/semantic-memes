@@ -1,0 +1,318 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes three individuals with the text 'when nobody knew who you were' and 'until you got on your knees.' The visual and textual elements together imply that the individuals' public recognition or status was achieved only after they performed a submissive or humiliating act. This can be interpreted as mocking or belittling the individuals, suggesting their value or fame is contingent on submission. The meme may be perceived as demeaning and potentially harmful due to its implication of worth being tied to submission, which can be seen as degrading. The overall intent is to ridicule or diminish the perceived value of the individuals based on their actions, which may be interpreted as harmful to their dignity or public image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "Text content: 'when nobody knew who you were'. Position: top section of the image, centered over the first person's photo.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_2",
+      "label": "bottom text overlay",
+      "description": "Text content: 'until you got on your knees'. Position: bottom section of the image, centered over the third person's photo.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_top",
+      "label": "woman in floral jacket",
+      "description": "A woman with long dark hair, smiling, wearing a black jacket adorned with colorful floral embroidery. She appears to be seated in a dimly lit indoor setting.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_middle",
+      "label": "man with braided hair",
+      "description": "A man with braided hair and a beard, smiling, wearing a black shirt with white decorative stitching. He is standing in front of a purple background with a partial logo visible.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_bottom",
+      "label": "woman holding microphone",
+      "description": "A woman with short dark hair, smiling, holding a microphone. She is wearing a black blazer and standing in front of an American flag backdrop.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "text_top",
+      "label": "text overlay",
+      "description": "White text reading 'when nobody knew who you were' positioned above the top image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "text_bottom",
+      "label": "text overlay",
+      "description": "White text reading 'until you got on your knees' positioned below the bottom image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "background_top",
+      "label": "indoor setting",
+      "description": "A dimly lit indoor environment with indistinct background elements, suggesting a casual or social gathering.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "background_middle",
+      "label": "purple backdrop",
+      "description": "A solid purple background with a partial white logo or design element visible on the right side.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "background_bottom",
+      "label": "American flag backdrop",
+      "description": "An American flag with visible stars and stripes serving as the background behind the woman holding the microphone.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "microphone",
+      "label": "microphone",
+      "description": "A handheld microphone held by the woman in the bottom image, indicating a public speaking or performance context.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "meme_composition",
+      "label": "Meme Scene with Three Individuals and Text Overlays",
+      "description": "A vertically stacked meme scene composed of three distinct visual panels, each featuring a different person and accompanied by text overlays that form a narrative. The top panel shows a woman in a floral jacket, the middle panel shows a man with braided hair, and the bottom panel shows a woman holding a microphone in front of an American flag. Text overlays frame the narrative: 'when nobody knew who you were' above the top image and 'until you got on your knees' below the bottom image. The spatial arrangement is linear, with each visual panel separated by white space, creating a clear sequence of images that support the meme's textual message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text_top",
+          "relation": "describes",
+          "to": "woman_top"
+        },
+        {
+          "from": "text_bottom",
+          "relation": "describes",
+          "to": "woman_bottom"
+        },
+        {
+          "from": "woman_top",
+          "relation": "appearsIn",
+          "to": "background_top"
+        },
+        {
+          "from": "man_middle",
+          "relation": "appearsIn",
+          "to": "background_middle"
+        },
+        {
+          "from": "woman_bottom",
+          "relation": "holds",
+          "to": "microphone"
+        },
+        {
+          "from": "woman_bottom",
+          "relation": "appearsIn",
+          "to": "background_bottom"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_structure",
+      "label": "Meme Structure: 'When Nobody Knew Who You Were Until You Got on Your Knees'",
+      "description": "This is a common internet meme format that implies a person's public recognition or status was achieved only after they performed a submissive or humiliating act. The phrase 'got on your knees' is a metaphor for submission, often used in a derogatory context to suggest that a person's value or fame is contingent on their willingness to submit or perform a degrading act. This structure relies on cultural understanding of metaphorical language and social dynamics around fame and humiliation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_composition",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "submission_metaphor",
+      "label": "Submission Metaphor",
+      "description": "The phrase 'got on your knees' is a metaphor for submission, often used in a derogatory context to imply that a person's value or status is contingent on their willingness to submit or perform a degrading act. This metaphor is culturally understood and relies on societal norms around power, hierarchy, and humiliation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_2",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "public_recognition",
+      "label": "Public Recognition",
+      "description": "The concept of 'nobody knew who you were' implies a lack of public recognition or fame. This is a common social dynamic where individuals gain visibility or status through public actions, media exposure, or social media. The meme relies on the understanding that fame or recognition is often a result of public performance or visibility.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "degrading_implication",
+      "label": "Degrading Implication",
+      "description": "The meme implies that the individuals' public recognition or status was achieved through a degrading or humiliating act. This relies on the cultural understanding that submission or humiliation can be used to diminish a person's perceived value or dignity, which is often seen as a form of mockery or belittlement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_composition",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "dignity_and_worth",
+      "label": "Dignity and Worth",
+      "description": "The meme implies that a person's worth or value is contingent on their actions, specifically their willingness to submit or perform a degrading act. This relies on the cultural understanding of dignity and worth, which is often tied to social status, public perception, and personal integrity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_composition",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mockery_and_belittlement",
+      "label": "Mockery and Belittlement",
+      "description": "The meme is interpreted as mocking or belittling the individuals, suggesting their value or fame is contingent on submission. This relies on the cultural understanding of mockery and belittlement as a form of social criticism or ridicule, which can be perceived as harmful to the individuals' dignity or public image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_composition",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mockery",
+      "label": "mocking emotion",
+      "description": "The overall meme structure and text imply a mocking or belittling tone, suggesting that the individuals' public recognition was achieved through a degrading act. This is conveyed through the juxtaposition of the three individuals and the phrase 'until you got on your knees,' which is culturally understood as a metaphor for submission and humiliation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The top text maps to the top visual person",
+      "description": "The text 'when nobody knew who you were' is positioned above the woman in the floral jacket, implying that she represents someone who was unknown to the public before a certain event. The mapping is established by spatial adjacency and contextual narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_2",
+      "label": "The bottom text maps to the bottom visual person",
+      "description": "The text 'until you got on your knees' is positioned below the woman holding the microphone, implying that she represents someone who achieved public recognition after performing a submissive or humiliating act. The mapping is established by spatial adjacency and contextual narrative.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the meme's narrative structure implying personal humiliation for public recognition",
+      "description": "The user is projected onto the meme's overall narrative, which frames the viewer as someone who understands the implied humiliation and submission required for public recognition. The meme does not use explicit deictic pronouns like 'me' or 'you', but the structure invites the user to identify with the implied experience of gaining status through submission, thus projecting the user onto the scene's metaphorical framework.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme implies that the individuals' public recognition or status was achieved only after they performed a submissive or humiliating act, which can be interpreted as demeaning and potentially harmful due to its implication of worth being tied to submission. This can be seen as degrading to the individuals' dignity or public image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The meme is designed for a general internet audience familiar with the 'When Nobody Knew Who You Were Until You Got on Your Knees' meme format. The target community likely includes users who understand the metaphorical implication of submission for public recognition, and who may find humor or relatability in the idea of gaining fame through a degrading act. The meme's structure and content are intended to resonate with viewers who appreciate or are exposed to internet humor that relies on social commentary, irony, or mocking public figures' rise to fame.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/80237.png",
+    "image_name": "80237.png",
+    "extraction_timestamp": "2025-12-19T13:46:59.838938",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 25,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

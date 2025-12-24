@@ -1,0 +1,41 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "man_in_distress_and_observer",
+      "participants": [
+        {
+          "entity": "man_on_left",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "man_on_right",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_on_left",
+          "relation": "isInDistress",
+          "to": "man_on_right"
+        },
+        {
+          "from": "man_on_right",
+          "relation": "observes",
+          "to": "man_on_left"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":man_in_distress_and_observer :hasParticipant :man_on_left .",
+    ":man_in_distress_and_observer :hasParticipant :man_on_right .",
+    ":man_on_left :isInDistress :man_on_right .",
+    ":man_on_right :observes :man_on_left ."
+  ],
+  "triples_count": 4
+}

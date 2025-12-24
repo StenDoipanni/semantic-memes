@@ -1,0 +1,188 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: chuck_norris_meme; hasOverallIntent: misogynous; overall-intent-description: The image shows an elderly man in military gear, with text that reads 'chuck norris?' and 'never heard of her.' The joke relies on the gendered misrepresentation of Chuck Norris, a male action star, by implying he is a woman ('her') whom the speaker has never heard of. This is a form of misogynous humor because it uses the stereotype that women are unfamiliar or unknown to the speaker, and it mocks the idea of a male figure being mistaken for a female one, which can be seen as reinforcing gendered assumptions and objectifying women by reducing them to a 'never heard of' status. The meme's intent is to create humor through this gendered misrepresentation, which can be interpreted as misogynous due to its reliance on gender stereotypes and the implication that women are less known or less significant than men.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "chuck norris?",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "elderly_man",
+      "label": "person",
+      "description": "An elderly man wearing military gear, including a helmet and vest, with a serious expression. He is the central subject of the image and the focus of the meme's text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "meme_scene",
+      "label": "meme_with_text_and_elderly_man",
+      "description": "A black-and-white meme featuring an elderly man in military gear as the central subject. The scene includes overlaid text that reads 'chuck norris?' and 'never heard of her.' The text is positioned above and below the man's image, creating a humorous and misogynistic context. The man's serious expression and military attire contrast with the absurdity of the text, forming the core of the meme's composition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "text",
+          "relation": "isOverlaidOn",
+          "to": "elderly_man"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "chuck_norris",
+      "label": "Chuck Norris",
+      "description": "Chuck Norris is a real-world American actor, martial artist, and former professional wrestler, known for his roles in action films and his association with martial arts and toughness. He is a male figure, and the meme humorously misrepresents him as 'her' (a woman) to create a joke based on gendered stereotypes. This requires external knowledge of who Chuck Norris is and his public persona as a male action star.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynous_stereotype",
+      "label": "Misogynous Stereotype",
+      "description": "The meme relies on the stereotype that women are unfamiliar or unknown to the speaker, and it mocks the idea of a male figure being mistaken for a female one. This is a form of misogynous humor because it uses gender stereotypes and implies that women are less known or less significant than men. This stereotype is not visible in the image but is required to understand the joke's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gendered_misrepresentation",
+      "label": "Gendered Misrepresentation",
+      "description": "The meme humorously misrepresents Chuck Norris, a male action star, by implying he is a woman ('her'), which is a gendered misrepresentation. This requires external knowledge of gender roles and the cultural context in which such misrepresentations are used for comedic effect, often reinforcing gendered assumptions.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "male_action_star",
+      "label": "Male Action Star",
+      "description": "Chuck Norris is a male action star, and the meme's joke is built on the assumption that he is a male figure whose gender is being humorously denied or misrepresented. This requires external knowledge of the cultural archetype of the male action star and how such figures are often associated with masculinity and toughness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "humor_through_gendered_misrepresentation",
+      "label": "Humor Through Gendered Misrepresentation",
+      "description": "The humor in the meme arises from the gendered misrepresentation of Chuck Norris as 'her,' which is a form of comedic trope that relies on the audience's understanding of gender roles and stereotypes. This requires external knowledge of comedic tropes and how they are used to create humor through misrepresentation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "meme_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "disdain",
+      "label": "disdainful expression",
+      "description": "The elderly man's facial expression, characterized by a stern, unimpressed gaze and a slightly downturned mouth, conveys a sense of disdain or contempt. This expression is directed toward the absurdity of the text overlay, which humorously misrepresents Chuck Norris as 'her' and claims ignorance of her existence. The expression reinforces the meme's tone of dismissive humor, aligning with the implied superiority or indifference of the character portrayed.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Chuck Norris is mapped onto the elderly man",
+      "description": "The top text 'chuck norris?' explicitly names the elderly man in the image as Chuck Norris. This creates an analogical mapping where the textual entity 'chuck_norris' is projected onto the visual entity 'elderly_man'. The joke relies on this mapping to then misrepresent Chuck Norris as 'her' (a woman) in the subsequent text, creating a gendered misrepresentation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the elderly man in military gear",
+      "description": "The user is projected onto the visual material of the elderly man, as the meme's humor and intent are directed at the viewer's interpretation of the image and text. The user is expected to recognize the elderly man as Chuck Norris (via the text) and then interpret the punchline 'never heard of her' as a joke about gender misrepresentation. The user's role is to engage with the visual and textual elements to understand the meme's misogynistic intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Misogynous",
+      "description": "The meme relies on the stereotype that women are unfamiliar or unknown to the speaker, and it mocks the idea of a male figure being mistaken for a female one, which is a form of misogynous humor because it uses gender stereotypes and implies that women are less known or less significant than men.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community for this meme is individuals familiar with Chuck Norris as a male action star and who understand the comedic trope of gendered misrepresentation. The meme relies on cultural knowledge of Chuck Norris's public persona and the stereotype that women are unfamiliar or unknown to the speaker, which is a form of misogynous humor. The audience is expected to recognize the absurdity of misrepresenting a male figure as 'her' and find the joke humorous through this gendered misrepresentation. The visual of an elderly man in military gear, combined with the text, is designed to appeal to those who appreciate internet memes that use shock value and stereotype-based humor, particularly those who are aware of Chuck Norris's status as a male action icon.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/16927.png",
+    "image_name": "16927.png",
+    "extraction_timestamp": "2025-12-15T16:42:51.900183",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "contemptuous expression",
+      "expressors": [
+        {
+          "entity": "man",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "emotionalRelationToEntity",
+          "to": "viewer"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":contemptuous_expression :hasExpressor :man .",
+    ":man :emotionalRelationToEntity :viewer ."
+  ],
+  "triples_count": 2
+}

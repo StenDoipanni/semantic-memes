@@ -1,0 +1,35 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "woman questioning child",
+      "participants": [
+        {
+          "entity": "woman",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "child",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "questioning",
+          "to": "child"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":woman_questioning_child :hasParticipant :woman .",
+    ":woman_questioning_child :hasParticipant :child .",
+    ":woman :questioning :child ."
+  ],
+  "triples_count": 3
+}

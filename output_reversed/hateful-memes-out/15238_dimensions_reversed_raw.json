@@ -1,0 +1,247 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: being_buried_with_honor_vs_disrespect_in_an_unmarked_grave; hasOverallIntent: Harmful; overall-intent-description: The meme juxtaposes a dignified military funeral with national flags (implying honor and respect) against a barren, unmarked grave (implying neglect and disrespect). The intent is to create a stark contrast highlighting perceived injustice or disparity in how different groups or individuals are treated posthumously. While not explicitly targeting a specific protected group with hate speech, it uses a powerful visual metaphor to convey a message of inequality or systemic injustice, which can be harmful by reinforcing negative perceptions of institutional or societal treatment of certain groups. The overall intent is to provoke emotional response and critique social or political systems, potentially causing harm by amplifying feelings of grievance or marginalization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_caption",
+      "label": "top text overlay",
+      "description": "being buried with honor",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "people",
+      "label": "group of individuals",
+      "description": "A group of people, including military personnel in uniform and civilians in casual attire, are gathered around three coffins in the top panel. Their posture and solemn expressions suggest a formal, respectful ceremony.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "honorable_burial_scene",
+      "label": "Military funeral with national flags",
+      "description": "A formal, respectful ceremony where people, including military personnel and civilians, gather around three coffins draped with national flags. The coffins are adorned with floral wreaths, and the participants stand solemnly, indicating honor and respect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "people",
+          "relation": "surrounding",
+          "to": "coffins"
+        },
+        {
+          "from": "people",
+          "relation": "standing_near",
+          "to": "coffins"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "military_funeral_with_national_flags",
+      "label": "Military Funeral with National Flags",
+      "description": "This refers to a formal ceremony where deceased military personnel are honored with full military honors, often including the presence of national flags draped over the casket, military personnel in uniform, and public or state officials. This is a recognized and respected tradition in many countries, particularly in India, to honor those who served in the armed forces. The presence of the Indian national flag (tricolor with Ashoka Chakra) on the coffins indicates this is an Indian context, and such ceremonies are typically broadcast or widely publicized as acts of national respect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "honorable_burial_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_caption",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "unmarked_grave",
+      "label": "Unmarked Grave",
+      "description": "An unmarked grave is a burial site without a headstone, plaque, or other marker. It often implies neglect, lack of recognition, or social marginalization. In many cultures, especially in Western societies, marked graves are considered a sign of respect and remembrance. An unmarked grave can be associated with individuals who died in poverty, without family, or whose deaths were not officially recognized or commemorated by society or institutions. This concept is used in the meme to contrast with the dignified military funeral.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "disrespect_in_an_unmarked_grave",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_caption",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "systemic_injustice",
+      "label": "Systemic Injustice",
+      "description": "This refers to the systemic, institutionalized, and often structural inequalities that result in unequal treatment of different groups within a society. The meme uses the contrast between the honored military burial and the unmarked grave to imply that some groups (e.g., certain communities, marginalized groups, or specific social classes) are treated differently posthumously, reflecting broader societal or institutional biases. This concept is central to understanding the meme’s intent to critique social or political systems.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "military_honor",
+      "label": "Military Honor",
+      "description": "Military honor refers to the formal recognition and respect accorded to members of the armed forces for their service, sacrifice, and loyalty. It is often symbolized by ceremonies, medals, national flags, and public tributes. In many countries, including India, military personnel are accorded special status and respect, and their deaths are treated as national tragedies. This concept is essential to understanding the 'honor' referenced in the top caption.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "honorable_burial_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_caption",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_marginalization",
+      "label": "Social Marginalization",
+      "description": "Social marginalization refers to the process by which certain groups are pushed to the periphery of society, often due to prejudice, discrimination, or systemic exclusion. This can result in lack of access to resources, recognition, or even basic dignity, including in death. The unmarked grave in the meme is a visual metaphor for this phenomenon, implying that the deceased person was not valued or recognized by society. This concept is critical to understanding the meme’s critique of societal treatment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "disrespect_in_an_unmarked_grave",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "overallintent_instance",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "national_identity_and_patriotism",
+      "label": "National Identity and Patriotism",
+      "description": "This refers to the collective sense of belonging and loyalty to a nation, often expressed through symbols like the national flag, military service, and public ceremonies. The use of the Indian flag on the coffins in the top panel is a direct reference to national identity and patriotism. The contrast with the barren, unmarked grave in the bottom panel implies a critique of how national values are applied unevenly, or how certain groups are excluded from the benefits of national recognition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "honorable_burial_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_caption",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "cultural_concept_of_respect_in_death",
+      "label": "Cultural Concept of Respect in Death",
+      "description": "This refers to the cultural and societal norms surrounding how individuals are treated after death, including the importance of proper burial, memorials, and public recognition. Different cultures have different practices, but in many societies, especially Western and Indian ones, a dignified burial is seen as a fundamental human right and a sign of respect. The meme relies on this cultural understanding to make its point about disparity in treatment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "honorable_burial_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "disrespect_in_an_unmarked_grave",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "respect",
+      "label": "emotion of respect",
+      "description": "The solemn posture of the people gathered around the coffins draped with national flags, along with the ceremonial floral wreaths, visually expresses deep respect and honor for the deceased. The text 'being buried with honor' reinforces this emotion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_honor_vs_respect",
+      "label": "being buried with honor is mapped to the military funeral scene",
+      "description": "The top text 'being buried with honor' is directly mapped to the visual scene of the military funeral with national flags. The visual material (honorable_burial_scene) visually represents the concept of honor and respect described in the text. The presence of military personnel, national flags, and floral wreaths on the coffins directly instantiate the textual claim of 'honor'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the contrast between honorable burial and unmarked grave",
+      "description": "The user is projected onto the entire meme structure, which presents a stark contrast between two scenes: a dignified military funeral (honorable_burial_scene) and an unmarked grave (unmarked_grave). The user is implicitly invited to identify with the implied injustice or disparity being highlighted — the feeling of being honored versus being neglected — which is the core emotional and critical message of the meme. There are no explicit deictic pronouns like 'you' or 'me', but the framing of the contrast creates a direct projection of the user's perspective onto the two opposing scenes, making them the implied audience for the critique of systemic injustice.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a stark visual contrast to imply systemic injustice or disparity in how different groups are treated posthumously, which can reinforce negative perceptions of institutional or societal treatment of certain groups and potentially cause harm by amplifying feelings of grievance or marginalization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who are aware of or affected by issues of systemic injustice, social marginalization, and disparities in how different groups are treated posthumously. This includes people who follow or are critical of national narratives around military honor, patriotism, and cultural concepts of respect in death. The meme is designed to resonate with those who perceive or experience inequality in societal recognition, particularly in contexts where certain groups (e.g., marginalized communities, non-military personnel, or those without family or institutional support) are denied the dignity of a marked or honored burial. The audience is likely to include politically or socially conscious individuals, veterans or their families, and those familiar with the cultural symbolism of national flags and military funerals in India, as well as those who understand the metaphor of an unmarked grave as a symbol of neglect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/15238.png",
+    "image_name": "15238.png",
+    "extraction_timestamp": "2025-12-15T16:01:05.117782",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

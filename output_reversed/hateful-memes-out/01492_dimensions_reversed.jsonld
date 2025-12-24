@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_eba48dad",
+  "@type": "AnalysisDocument",
+  "title": "01492.png - Dimension Analysis",
+  "created": "2025-12-15T10:45:08.198790",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_4c6967ec",
+    "@type": "Image",
+    "filename": "01492.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/01492.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/01492.png",
+    "image_name": "01492.png",
+    "extraction_timestamp": "2025-12-15T10:42:03.362764",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_39b65d14",
+      "@type": "OverallIntent",
+      "instance_name": "dimension_1",
+      "label": "the overallintent",
+      "description": "The image depicts a Black woman on a beach wearing a visor, with text that reads ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_eba48dad"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_08cefd4d",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "i don't like the sun",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_eba48dad"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d07a7511",
+      "@type": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "Black woman",
+      "description": "A Black woman standing on a beach, wearing a black swimsuit and a pink visor. She is looking directly at the camera with a neutral to slightly displeased expression. Her body appears to be overweight, and she is holding the hem of her swimsuit. The image is framed to focus on her upper body and face, with the beach and ocean in the background. The text overlay reads 'i don't like the sun so i wear a visor,' which is a pun implying she wears the visor to avoid the sun, despite being on a beach.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_eba48dad"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fc4e2e94",
+      "@type": "Scene",
+      "instance_name": "woman_on_beach",
+      "label": "woman wearing visor on beach",
+      "description": "A Black woman is standing on a beach, wearing a black swimsuit and a pink visor. She is looking directly at the camera with a neutral to slightly displeased expression. The beach and ocean are in the background. Text overlay reads 'i don't like the sun so i wear a visor,' which is a pun implying she wears the visor to avoid the sun, despite being on a beach.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_eba48dad"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0241885e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_of_physical_appearance",
+      "label": "Anti-Black Stereotype: Physical Appearance",
+      "description": "The meme implicitly references the stereotype that Black women are often hypersexualized or objectified based on their physical appearance, particularly their body size. The image of a Black woman on a beach, combined with the text 'i don't like the sun so i wear a visor,' can be read as a punchline that plays on the stereotype that Black women are 'too hot' or 'too dark' to be on the beach, thus needing to 'hide' or 'avoid' the sun. This is a form of racialized body shaming that ties into broader anti-Black stereotypes about physicality and behavior.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_eba48dad"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_03bd936e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_of_body_size",
+      "label": "Anti-Black Stereotype: Body Size",
+      "description": "The meme implicitly references the stereotype that Black women are often portrayed as overweight or 'unattractive' in mainstream media, which is used to demean or objectify them. The image of the woman's body, combined with the text, can be interpreted as a joke that reinforces the idea that Black women are 'too big' for the beach or 'too hot' to be there, which is a form of racialized body shaming.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_eba48dad"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e8fa37a6",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_of_behavior",
+      "label": "Anti-Black Stereotype: Behavior",
+      "description": "The meme implicitly references the stereotype that Black women are 'too hot' or 'too dark' to be on the beach, which is a form of racialized behavior stereotype. The text 'i don't like the sun so i wear a visor' is a pun that plays on the idea that Black women are 'too hot' to be on the beach, which is a form of racialized behavior stereotype.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_eba48dad"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ea656caa",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_of_physical_appearance_and_behavior",
+      "label": "Anti-Black Stereotype: Physical Appearance and Behavior",
+      "description": "The meme implicitly references the stereotype that Black women are often portrayed as overweight or 'unattractive' in mainstream media, which is used to demean or objectify them. The image of the woman's body, combined with the text, can be interpreted as a joke that reinforces the idea that Black women are 'too big' for the beach or 'too hot' to be there, which is a form of racialized body shaming and behavior stereotype.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_eba48dad"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c8d1177b",
+      "@type": "EmotionExpression",
+      "instance_name": "displeasure",
+      "label": "slightly displeased expression",
+      "description": "The woman's facial expression conveys a neutral to slightly displeased emotion, with her lips slightly pursed and a direct, unsmiling gaze at the camera. This expression is not overtly angry but suggests mild annoyance or indifference, possibly in reaction to the context of being on a beach while wearing a visor.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_eba48dad"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_19d5cefc",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "The woman is mapped as 'someone who doesn't like the sun'",
+      "description": "The text 'i don't like the sun' is mapped onto the visual entity 'woman', implying that she is the person who doesn't like the sun. This is a direct analogical mapping where the textual entity 'i' (the speaker) is projected onto the visual entity 'woman'. The woman's presence on the beach while wearing a visor, combined with the text, creates a humorous or ironic contrast that reinforces this mapping.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_eba48dad"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_d1339186",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the woman in the meme",
+      "description": "The user is projected onto the visual entity 'woman' as the speaker of the text 'i don't like the sun so i wear a visor'. The text uses 'i' to directly map the user's perspective onto the woman, making her the embodied subject of the statement. This projection is reinforced by the visual framing, which centers the woman as the focal point of the meme's humor and irony.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_eba48dad"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3e7cce47",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Racialized body shaming",
+      "description": "The meme uses the visual of a Black woman on a beach and the text 'i don't like the sun so i wear a visor' to imply she is 'too hot' or 'too dark' to be on the beach, which reinforces harmful anti-Black stereotypes about physical appearance and behavior. This is a form of racialized body shaming that ties into broader anti-Black stereotypes about physicality and behavior.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_eba48dad"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b915dccd",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The meme is designed for a general internet audience familiar with racialized stereotypes and internet humor that relies on visual puns and irony, particularly those targeting Black women's physical appearance and behavior. The target community likely includes users who recognize and engage with memes that play on anti-Black stereotypes, such as the idea that Black women are 'too hot' or 'too dark' to be on the beach, and who find humor in the irony of the woman wearing a visor while being on a beach. The meme's toxicity and reliance on racialized body shaming suggest it is intended for an audience that either does not recognize the harm or finds such content amusing, often within online spaces where such stereotypes are circulated.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_eba48dad"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

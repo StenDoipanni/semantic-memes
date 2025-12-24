@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "self_awareness",
+      "expressors": [
+        {
+          "entity": "man_taking_selfie",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_taking_selfie",
+          "relation": "emotionalRelationToEntity",
+          "to": "selfie_taking_scene"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":self_awareness :hasExpressor :man_taking_selfie .",
+    ":man_taking_selfie :emotionalRelationToEntity :selfie_taking_scene ."
+  ],
+  "triples_count": 2
+}

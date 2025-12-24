@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "defiant emotion",
+      "expressors": [
+        {
+          "entity": "girl",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "girl",
+          "relation": "emotionalRelationToEntity",
+          "to": "man"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":defiant_emotion :hasExpressor :girl .",
+    ":girl :emotionalRelationToEntity :man ."
+  ],
+  "triples_count": 2
+}

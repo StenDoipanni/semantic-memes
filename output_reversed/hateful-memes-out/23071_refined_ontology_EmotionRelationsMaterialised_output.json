@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "relief",
+      "expressors": [
+        {
+          "entity": "man",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "emotionalRelationToEntity",
+          "to": "ex future mother-in-law"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":relief :hasExpressor :man .",
+    ":man :emotionalRelationToEntity :ex_future_mother_in_law ."
+  ],
+  "triples_count": 2
+}

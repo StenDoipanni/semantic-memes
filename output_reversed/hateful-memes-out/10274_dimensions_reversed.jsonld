@@ -1,0 +1,172 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_f2e07457",
+  "@type": "AnalysisDocument",
+  "title": "10274.png - Dimension Analysis",
+  "created": "2025-12-15T14:05:58.205446",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_0f6c4272",
+    "@type": "Image",
+    "filename": "10274.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/10274.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/10274.png",
+    "image_name": "10274.png",
+    "extraction_timestamp": "2025-12-15T14:02:56.878994",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e8533bf5",
+      "@type": "OverallIntent",
+      "instance_name": "dimension_1",
+      "label": "the overallintent",
+      "description": "The image shows a goat lying down next to a wooden structure, with the text ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_f2e07457"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_66601e63",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "The text '(laughs in goat fucker)' is located at the bottom of the image, spanning the entire width. It is written in white, bold, sans-serif font with a black outline, making it stand out against the background. The text is enclosed in parentheses and is positioned directly below the goat, appearing as a caption or meme overlay.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_f2e07457"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_181d99b8",
+      "@type": "VisualMaterial",
+      "instance_name": "goat",
+      "label": "animal",
+      "description": "A light brown goat is lying down on sandy ground, looking directly at the camera with a slightly open mouth, appearing relaxed or amused. It is positioned next to a wooden structure with a metal grate on top.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_f2e07457"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2803f4ad",
+      "@type": "Scene",
+      "instance_name": "goat_laughing_scene",
+      "label": "goat_laughing_scene",
+      "description": "A light brown goat is lying down on sandy ground next to a wooden structure with a metal grate, looking directly at the camera with a slightly open mouth, appearing relaxed or amused. The scene is accompanied by text that reads '(laughs in goat fucker)', suggesting a humorous or mocking context.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_f2e07457"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1d95fdaf",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "goat_fucker_stereotype",
+      "label": "Goat as a derogatory term for a person",
+      "description": "The phrase 'goat fucker' is a derogatory slang term used to refer to a person who is perceived as foolish, incompetent, or lacking in intelligence. It is often used in internet culture to mock or belittle someone, especially in contexts where the person is seen as being out of their depth or making a foolish mistake. The term 'goat' itself is sometimes used as a euphemism for 'greatest of all time' (GOAT) in sports, but in this context, it is being used in a negative, mocking way.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_f2e07457"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e1e6beea",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "laughs_in_stereotype",
+      "label": "The 'laughs in [X]' meme format",
+      "description": "This is a popular internet meme format where a person or character is shown laughing while another person or entity is being mocked or ridiculed. The phrase 'laughs in [X]' is used to indicate that the person in the image is amused or smugly confident in the face of the mockery. It is often used to convey a sense of superiority or detachment from the situation being mocked.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_f2e07457"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_07329cc6",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "goat_as_animal",
+      "label": "Goat as an animal",
+      "description": "Goats are domesticated animals known for their agility, curiosity, and sometimes mischievous behavior. They are often used in memes and internet culture as symbols of foolishness or stupidity, especially when paired with the phrase 'goat fucker'. The image of a goat lying down and looking relaxed or amused is used to visually represent the 'laughs in' part of the meme.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_f2e07457"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_fb19060c",
+      "@type": "EmotionExpression",
+      "instance_name": "mocking_smugness",
+      "label": "mocking and smug emotional expression",
+      "description": "The goat's relaxed posture and slightly open mouth, combined with direct eye contact, convey an expression of amusement or smugness, as if it is laughing at something foolish or incompetent. This is reinforced by the text overlay, which explicitly frames the goat as the one 'laughing in goat fucker'.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_f2e07457"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_60e03af4",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "goat is laughing in goat fucker",
+      "description": "The text '(laughs in goat fucker)' is mapped onto the visual entity 'goat'. The goat's relaxed posture and direct gaze are interpreted as embodying the 'laughs in' part of the meme, while the term 'goat fucker' is a derogatory stereotype being mocked. The visual material (the goat) is thus mapped onto the textual concept of the 'laughs in [X]' format, where 'X' is 'goat fucker'.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_f2e07457"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_0f1d6d93",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the goat as the 'laughs in' entity",
+      "description": "The user is projected onto the visual material of the goat, interpreting the goat's relaxed and amused expression as embodying the 'laughs in' part of the meme. The user identifies with the goat's smug or detached attitude in the face of the derogatory term 'goat fucker'.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_f2e07457"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_30a1dedb",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses a derogatory slang term 'goat fucker' to mock or belittle someone perceived as foolish or incompetent. While not targeting a specific protected group, the term is offensive and potentially harmful by demeaning an individual's intelligence or competence.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_f2e07457"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ac01e538",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "internet meme culture",
+      "description": "The meme targets individuals familiar with internet humor, particularly those who recognize and use the 'laughs in [X]' meme format and understand the derogatory slang term 'goat fucker'. The audience is likely online communities that engage with edgy, self-deprecating, or mocking humor, where such phrases are used to express superiority or amusement at perceived incompetence.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_f2e07457"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

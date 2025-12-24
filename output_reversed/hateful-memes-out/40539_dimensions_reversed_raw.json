@@ -1,0 +1,220 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: baboon_congress_meme; hasOverallIntent: harmful; overall-intent-description: The meme juxtaposes the text 'a group of baboons is called a congress' with an image of baboons displaying their red genitalia, concluding with 'suddenly makes sense!'. The intent is to create a crude, humorous association between the term 'congress' and the visual of baboons' anatomy, implying a mocking or vulgar interpretation of the word. While not explicitly targeting a specific human group, the visual focus on genitalia and the pun-based humor can be considered harmful due to its crude, objectifying, and potentially offensive nature. The meme relies on biological imagery to generate shock humor, which may be perceived as vulgar or disrespectful, especially in contexts where such imagery is inappropriate. The overall intent is to provoke laughter through shock value and crude wordplay, but this can be interpreted as demeaning or offensive to viewers who find the content distasteful or inappropriate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "a group of baboons is called a congress",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "baboon",
+      "label": "monkey",
+      "description": "A baboon sitting on a rock, displaying its red genitalia, with another baboon partially visible to the right. The baboon is the central visual focus and is the subject of the meme's text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "baboon_congress_scene",
+      "label": "baboon_displaying_genitalia_scene",
+      "description": "A scene depicting a baboon sitting on a rock, displaying its red genitalia, with another baboon partially visible to the right. The scene is framed by text at the top and bottom that reads 'a group of baboons is called a congress' and 'suddenly makes sense!', creating a humorous and crude association between the term 'congress' and the visual of baboons' anatomy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "baboon",
+          "relation": "is_displaying",
+          "to": "text"
+        },
+        {
+          "from": "text",
+          "relation": "is_above",
+          "to": "baboon"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "baboon_congress_metaphor",
+      "label": "Metaphor linking 'congress' to baboon genitalia",
+      "description": "The meme relies on the real-world knowledge that 'a group of baboons is called a congress' (a true zoological term) and then juxtaposes it with the visual of baboons displaying their red genitalia to create a crude, vulgar pun. This requires understanding that 'congress' can refer to a legislative body (e.g., U.S. Congress) and that the term is being used ironically to imply a connection between legislative bodies and genitalia, which is offensive and mocking.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "baboon_congress_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "objectification_of_baboons",
+      "label": "Objectification of baboons through focus on genitalia",
+      "description": "The meme's humor and shock value depend on the viewer understanding that the visual focus on baboon genitalia is intentionally crude and objectifying. This requires background knowledge about how such imagery is used in humor to demean or mock, often by reducing subjects to their most basic biological features.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "baboon_congress_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "vulgar_wordplay",
+      "label": "Vulgar wordplay and crude humor",
+      "description": "The meme uses vulgar wordplay by linking the term 'congress' (which can refer to a legislative body) with the visual of baboon genitalia. This requires background knowledge about how crude humor and puns are used to generate shock value and laughter, often at the expense of dignity or respect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "baboon_congress_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "harmful_intent",
+      "label": "Harmful intent through crude humor",
+      "description": "The meme's intent is considered harmful because it uses crude, vulgar humor to mock or demean, relying on biological imagery to generate shock. This requires background knowledge about how such humor can be perceived as offensive, disrespectful, or inappropriate in certain contexts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "baboon_congress_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexual_objectification",
+      "label": "Sexual objectification of animals",
+      "description": "The meme relies on the background knowledge that focusing on the genitalia of animals (in this case, baboons) for humorous or shocking effect is a form of sexual objectification. This requires understanding that such imagery can be seen as degrading or disrespectful, even when the subject is an animal.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "baboon_congress_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_congress_reference",
+      "label": "Reference to political congress",
+      "description": "The meme implicitly references the U.S. Congress (or any legislative body) by using the term 'congress' to describe a group of baboons. This requires background knowledge about the term 'congress' as a political institution, which is then used ironically to imply a connection between legislative bodies and genitalia, which is offensive and mocking.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "baboon_congress_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "vulgar_humor",
+      "label": "vulgar humor expression",
+      "description": "The image and text together express a crude, offensive humor by linking the term 'congress' (a political body) with the visual of baboon genitalia, creating a shocking and mocking pun. This humor relies on objectification and sexualization of animals for comedic effect, which is perceived as vulgar and disrespectful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "baboon_congress_mapping",
+      "label": "Mapping of 'congress' to baboon genitalia",
+      "description": "The text 'a group of baboons is called a congress' is mapped onto the visual of baboons displaying their red genitalia. The meme creates an analogical mapping where the term 'congress' (which refers to a legislative body) is humorously and crudely associated with the anatomical feature of baboons, implying a vulgar pun. This mapping relies on the visual focus on genitalia to generate shock humor and is intended to be offensive and mocking.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual material of baboons displaying genitalia",
+      "description": "The user is projected onto the visual material of the baboons, specifically their exposed red genitalia, which is central to the meme's crude humor and shock value. The user is implicitly invited to see the image and connect it to the text, thereby internalizing the vulgar pun. The projection is not explicit (e.g., no 'you' or 'me'), but the user is required to engage with the visual material to understand the meme's intent, making the visual material the focal point of the user's projection.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses crude, vulgar humor by linking the term 'congress' (a political body) with the visual of baboon genitalia, creating a shocking and mocking pun. This relies on objectification and sexualization of animals for comedic effect, which is perceived as vulgar and disrespectful, potentially causing offense or discomfort to viewers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who appreciate crude, vulgar humor and shock value, particularly those familiar with political satire or wordplay involving taboo subjects. The meme relies on the audience understanding the term 'congress' as both a zoological term for a group of baboons and a political institution, and being willing to accept the crude, objectifying visual of baboon genitalia as humorous. This audience likely includes internet users who engage with edgy, meme-based content that uses biological imagery for shock humor, often found in online forums, social media, or subcultures that value dark or offensive comedy. The meme’s intent to provoke laughter through shock and crude association suggests it is designed for viewers who find such content amusing, even if offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/40539.png",
+    "image_name": "40539.png",
+    "extraction_timestamp": "2025-12-16T00:36:26.904339",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

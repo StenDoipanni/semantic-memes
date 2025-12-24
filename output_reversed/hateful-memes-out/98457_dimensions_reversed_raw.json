@@ -1,0 +1,224 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: cheers_to_all_the_people; hasOverallIntent: Propaganda; overall-intent-description: The image shows a smiling woman holding a glass of champagne, with text that reads: 'cheers to all the people who can change their minds when presented with information that contradicts their beliefs.' The overall intent is to use the positive, celebratory visual of a toast to frame the concept of being open-minded or intellectually flexible as something to be celebrated. This is a form of propaganda, as it aims to influence the viewer's perception by associating the desirable trait of being open to changing one's mind with a festive, socially acceptable image. The meme does not contain any toxic elements such as abusive, cyberbullying, harmful, hateful, misogynous, or discriminatory content against any protected group. The intent is to promote the value of intellectual humility and adaptability in the face of new information, using the visual metaphor of a toast to make the message more palatable and engaging.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text",
+      "description": "cheers to all the people",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman",
+      "label": "person",
+      "description": "A smiling blonde woman with long hair, wearing a sequined top, holding a glass of champagne and looking directly at the camera.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "cheers_to_people",
+      "label": "woman_toasting",
+      "description": "A smiling woman is holding a glass of champagne and toasting towards the viewer, with text overlay that reads 'cheers to all the people who can change their minds when presented with information that contradicts their beliefs.' The scene uses the visual metaphor of a celebratory toast to frame the concept of intellectual flexibility as something to be celebrated.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "holds",
+          "to": "glass_of_champagne"
+        },
+        {
+          "from": "woman",
+          "relation": "faces",
+          "to": "viewer"
+        },
+        {
+          "from": "woman",
+          "relation": "toasts",
+          "to": "viewer"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "intellectual_flexibility",
+      "label": "Intellectual Flexibility",
+      "description": "The concept that individuals can revise their beliefs or opinions in light of new evidence or contradictory information. This is a core idea in critical thinking and scientific reasoning, often contrasted with dogmatism or closed-mindedness. The meme uses this concept as its central message, framing it as something to be celebrated.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "open_mindedness",
+      "label": "Open-Mindedness",
+      "description": "The disposition to consider new ideas, perspectives, or evidence, even if they challenge one's existing beliefs. It is often associated with intellectual humility and is considered a desirable trait in education, science, and democratic discourse. The meme implicitly promotes this trait as worthy of celebration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "celebratory_toast",
+      "label": "Celebratory Toast",
+      "description": "A social gesture of raising a drink to express goodwill, celebration, or acknowledgment. In the context of the meme, it is used as a visual metaphor to frame intellectual flexibility as a positive, festive, and socially desirable trait. This metaphor relies on cultural understanding of toasts as expressions of approval or celebration.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "propaganda",
+      "label": "Propaganda",
+      "description": "The deliberate, often biased dissemination of information to promote a particular political, ideological, or commercial agenda. The meme is identified as propaganda because it uses a positive visual (a toast) to subtly influence viewers to view intellectual flexibility as something to be celebrated, thereby shaping attitudes or behaviors.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "intellectual_humility",
+      "label": "Intellectual Humility",
+      "description": "The recognition that one's own beliefs or knowledge may be incomplete or incorrect, and the willingness to revise them in light of new evidence. This trait is often associated with intellectual flexibility and is promoted in educational and scientific contexts as a key component of critical thinking.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "critical_thinking",
+      "label": "Critical Thinking",
+      "description": "The objective analysis and evaluation of an issue to form a judgment. It involves questioning assumptions, examining evidence, and considering alternative perspectives. The meme implicitly references this skill set as the foundation for changing one's mind in response to contradictory information.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "happiness",
+      "label": "celebratory happiness",
+      "description": "The woman is smiling broadly and holding a glass of champagne in a toasting gesture, conveying a joyful, celebratory emotion. Her direct gaze and open expression suggest warmth and positivity, aligning with the festive context of the toast.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "Celebratory toast as metaphor for intellectual flexibility",
+      "description": "The visual of the woman toasting with champagne is mapped onto the textual concept of 'cheers to all the people who can change their minds'. The toast serves as a metaphor for celebrating intellectual flexibility, which is the core message of the text. The woman's joyful expression and toasting gesture visually represent the positive, celebratory framing of the trait described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the celebratory toast scene",
+      "description": "The user is projected onto the scene of the woman toasting with champagne, as the toast is used as a metaphor for celebrating intellectual flexibility. The act of toasting directly addresses the viewer, inviting them to participate in the celebration of open-mindedness. The text 'cheers to all the people' explicitly includes 'all the people', which includes the viewer, creating a direct address and projection of the user onto the scene.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "person",
+      "label": "general audience",
+      "description": "The meme is designed for a broad, general audience, as the visual of a smiling woman toasting with champagne and the text about intellectual flexibility are universally relatable and do not rely on niche cultural references, specific demographics, or community-specific markers. The message promotes a widely valued trait (open-mindedness) and uses a universally understood visual metaphor (celebratory toast), making it accessible to most viewers regardless of background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/98457.png",
+    "image_name": "98457.png",
+    "extraction_timestamp": "2025-12-19T20:09:18.816881",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

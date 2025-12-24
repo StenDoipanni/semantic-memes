@@ -1,0 +1,177 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: overall-intent_id; overall-intent-description: The scene features a close-up of Jack Nicholson with a smug, dismissive expression, overlaid with text that reads: 'i love it when people think my posts are about them' and 'as if i had enough time to insult you bastards individually.' The overall intent is to convey a sarcastic, self-deprecating, or ironic attitude toward online interactions, particularly when users misinterpret content as being directed at them. The meme uses Nicholson's iconic 'The Shining' look to symbolize a detached, slightly menacing, or amused persona. The intent is to signal that the creator is not personally targeting anyone, and that the humor lies in the absurdity of people projecting personal relevance onto content that is not intended for them. There is no toxicity present in this meme; it does not target any specific group based on protected characteristics, nor does it contain abusive, cyberbullying, harmful, hateful, misogynistic, or propagandistic content. The humor is rooted in internet culture and self-awareness, not in disparaging any group or individual.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "i love it when people think my posts are about them",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "Jack_Nicholson",
+      "label": "person",
+      "description": "A close-up of Jack Nicholson wearing dark sunglasses, with a smug, dismissive expression. He is wearing a black jacket over a green t-shirt. His gray hair is visible, and he appears to be looking slightly upward with a condescending smirk. The background is dark and out of focus, with another person faintly visible behind him. This image is iconic from his role in 'The Shining' and is widely used in memes to convey a sarcastic, self-deprecating, or ironic attitude.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "smug_dismissive_expression",
+      "label": "Jack Nicholson displaying a smug, dismissive expression",
+      "description": "The scene centers on Jack Nicholson, who is wearing dark sunglasses and a green t-shirt under a black jacket. His facial expression is smug and slightly condescending, with a smirk and upward gaze. The background is dark and out of focus, with another person faintly visible behind him. The text overlay reads: 'i love it when people think my posts are about them' and 'as if i had enough time to insult you bastards individually.' The scene conveys a sarcastic, self-deprecating attitude toward online interactions where people misinterpret content as being directed at them.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "Jack_Nicholson",
+          "relation": "isLookingAt",
+          "to": "background_person"
+        },
+        {
+          "from": "Jack_Nicholson",
+          "relation": "hasExpression",
+          "to": "smug_dismissive_expression"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "Jack_Nicholson_iconic_expression",
+      "label": "Jack Nicholson's iconic smug expression from 'The Shining'",
+      "description": "The image of Jack Nicholson wearing dark sunglasses with a smug, dismissive expression is widely recognized as his portrayal of the character Jack Torrance in the 1980 film 'The Shining'. This specific look has become a meme template used to convey sarcasm, self-deprecation, or ironic detachment, especially in online contexts. The meme relies on viewers recognizing this specific cinematic reference to understand the tone and intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "smug_dismissive_expression",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "online_meme_culture",
+      "label": "Internet meme culture and self-awareness",
+      "description": "The meme relies on understanding of internet culture, particularly the phenomenon of users misinterpreting online content as being personally directed at them. The humor stems from the creator's self-awareness and ironic detachment, which is a common trope in online communities. The phrase 'as if I had enough time to insult you bastards individually' is a humorous exaggeration that plays on the absurdity of personal projection in digital spaces.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "smug_dismissive_expression",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "social_media_interpretation",
+      "label": "Social media users misinterpreting content",
+      "description": "The meme references a common social media behavior where users project personal relevance onto content that is not intended for them. This is a well-documented social trend in online communities, where people often assume that posts, comments, or images are directed at them, even when they are not. The humor lies in the creator's sarcastic acknowledgment of this behavior.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sarcastic_self_deprecation",
+      "label": "Sarcastic self-deprecation as a comedic device",
+      "description": "The meme uses sarcastic self-deprecation to convey a humorous and ironic attitude. The creator is not actually insulting anyone, but rather mocking the absurdity of people thinking their posts are about them. This comedic device relies on the audience understanding the difference between literal and figurative meaning, and the use of irony to create humor.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "smug_dismissive_expression",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "sarcastic_detachment",
+      "label": "sarcastic and detached emotion",
+      "description": "The emotion expressed is a blend of sarcasm and detachment, conveyed through Jack Nicholson's smug, dismissive facial expression and the ironic text overlay. The expression suggests amusement at the absurdity of people misinterpreting online content as being directed at them, while simultaneously mocking the idea that the creator has the time or inclination to target individuals personally.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Creator's sarcastic self-deprecation mapped onto Jack Nicholson's smug expression",
+      "description": "The text 'i love it when people think my posts are about them' and 'as if i had enough time to insult you bastards individually' is mapped onto Jack Nicholson's smug, dismissive expression. The visual material (Jack Nicholson's expression) serves as a metaphor for the creator's sarcastic, self-deprecating attitude toward online interactions where users misinterpret content as being directed at them. The mapping is based on the iconic association of Jack Nicholson's expression with sarcasm and detachment, which aligns with the tone of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material expressing sarcastic self-deprecation",
+      "description": "The user is projected onto the textual material, specifically the phrase 'as if i had enough time to insult you bastards individually', which uses the deictic 'you' to directly address the viewer/user. The user is also implicitly projected onto the overall scene and visual material, as the meme's humor relies on the user recognizing themselves as the 'you' being sarcastically addressed. The projection is onto the textual material because it contains the explicit deictic 'you', which directly targets the user.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "online_meme_culture",
+      "label": "Internet meme culture and self-awareness",
+      "description": "The meme is designed for individuals familiar with internet meme culture, particularly those who understand the phenomenon of users misinterpreting online content as being personally directed at them. The humor relies on self-awareness and ironic detachment, common tropes in online communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/80153.png",
+    "image_name": "80153.png",
+    "extraction_timestamp": "2025-12-19T13:45:29.369245",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 12,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

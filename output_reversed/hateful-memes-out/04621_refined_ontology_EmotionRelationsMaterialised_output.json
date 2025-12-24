@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "derisive emotion",
+      "expressors": [
+        {
+          "entity": "fruit_costumed_people_walking",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "fruit_costumed_people_walking",
+          "relation": "emotionalRelationToEntity",
+          "to": "meanwhile_in_africa"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":derisive_emotion :hasExpressor :fruit_costumed_people_walking .",
+    ":fruit_costumed_people_walking :emotionalRelationToEntity :meanwhile_in_africa ."
+  ],
+  "triples_count": 2
+}

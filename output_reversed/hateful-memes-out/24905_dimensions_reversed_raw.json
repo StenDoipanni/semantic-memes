@@ -1,0 +1,220 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: nascar_presents_the_wal-mart_500; hasOverallIntent: ableism; overall-intent-description: The image depicts an elderly woman using a mobility scooter, with text overlaying the image that reads 'nascar presents the wal-mart 500.' This juxtaposition creates a satirical and mocking comparison between the high-speed, competitive, and physically demanding world of NASCAR racing and the mundane, slow-paced, and everyday context of a senior citizen using a mobility scooter. The intent is to ridicule the idea of elderly people engaging in or being associated with high-stakes, high-speed activities, implying they are not suited for such endeavors. This is a form of ableism, as it reduces the capability and dignity of older adults with mobility challenges by mocking their physical limitations and associating them with a context that is not appropriate or respectful. The meme uses the visual of the scooter and the elderly woman to create a humorous but demeaning contrast with the serious and high-energy world of NASCAR, thereby perpetuating stereotypes about aging and disability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "nascar presents",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "elderly_woman",
+      "label": "person",
+      "description": "An elderly woman with white hair and sunglasses, wearing a light blue patterned shirt and white pants, seated on a mobility scooter. She is the central subject of the image and the focus of the meme's satirical comparison to NASCAR.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "elderly_woman_on_scooter",
+      "label": "elderly woman riding mobility scooter",
+      "description": "An elderly woman is seated on a blue mobility scooter, positioned in the foreground on a paved path. She is the central subject of the image, and the scooter is the vehicle she is operating. The scene is set outdoors in a residential or park-like area with trees, bushes, and a wooden fence visible in the background.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "elderly_woman",
+          "relation": "is_seated_on",
+          "to": "mobility_scooter"
+        },
+        {
+          "from": "elderly_woman",
+          "relation": "is_operating",
+          "to": "mobility_scooter"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "nascar",
+      "label": "NASCAR",
+      "description": "NASCAR (National Association for Stock Car Auto Racing) is a major American auto racing series known for high-speed, high-stakes, and physically demanding races. It is a cultural phenomenon in the United States, associated with athleticism, adrenaline, and competitive motorsport. The meme uses 'NASCAR presents' to mock the idea of an elderly person being associated with such a high-energy, elite sporting event.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "wal_mart_500",
+      "label": "The Wal-Mart 500",
+      "description": "The Wal-Mart 500 is a fictional and satirical race name created for the meme. It is a parody of real NASCAR race names like the 'Daytona 500' or 'Sprint Cup Series' events. The name 'Wal-Mart 500' is a direct reference to the retail giant Walmart, implying a mundane, everyday, or even commercial context for a high-stakes race, thereby creating a humorous and mocking contrast with the image of the elderly woman on a mobility scooter.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "Ableism",
+      "description": "Ableism is a system of oppression and discrimination against people with disabilities. It often manifests as the assumption that people with disabilities are less capable, less worthy, or less deserving of respect. The meme perpetuates ableist stereotypes by mocking the physical limitations of the elderly woman and associating her with a context (NASCAR) that is not appropriate or respectful, thereby reducing her dignity and capability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "elderly_woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "elderly_woman_on_scooter",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "mobility_scooter",
+      "label": "Mobility Scooter",
+      "description": "A mobility scooter is a motorized vehicle designed to assist people with mobility impairments in moving around. It is a common assistive device for elderly individuals or those with disabilities. The meme uses the scooter as a symbol of everyday, low-speed, and non-competitive mobility, contrasting it with the high-speed, high-stakes world of NASCAR.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "elderly_woman_on_scooter",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_elderly_people_in_motorsport",
+      "label": "Stereotype of Elderly People in Motorsport",
+      "description": "This is a cultural stereotype that elderly people are not suited for high-speed, physically demanding activities like motorsport. The meme relies on this stereotype to create its satirical and mocking effect, implying that the elderly woman is not capable of participating in or being associated with NASCAR.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "elderly_woman",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "satirical_juxtaposition",
+      "label": "Satirical Juxtaposition",
+      "description": "This is a rhetorical device that involves placing two contrasting or incongruous elements together to create humor or to make a point. In this meme, the juxtaposition of an elderly woman on a mobility scooter with the text 'NASCAR presents the Wal-Mart 500' creates a humorous and mocking contrast, highlighting the absurdity of the comparison and perpetuating stereotypes.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "elderly_woman_on_scooter",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_contempt",
+      "label": "mocking contempt emotion",
+      "description": "The emotion expressed is one of mocking contempt, conveyed through the satirical juxtaposition of an elderly woman on a mobility scooter with the text 'NASCAR presents the Wal-Mart 500.' The meme uses this contrast to ridicule the physical limitations of the elderly woman and to imply she is not suited for high-stakes, high-speed activities, thereby reducing her dignity and capability. This emotion is not expressed by the woman herself but is an emotional tone imposed by the meme's creators and conveyed through the visual and textual elements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "NASCAR presents the elderly woman on a mobility scooter",
+      "description": "The text 'nascar presents' is mapped onto the visual entity 'elderly_woman_on_scooter', implying that the elderly woman is being presented as if she were a NASCAR driver or participant in a NASCAR event. This creates a satirical and mocking contrast between the high-speed, elite world of NASCAR and the mundane, everyday context of an elderly person using a mobility scooter.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the elderly woman on the mobility scooter",
+      "description": "The user is projected onto the visual material of the elderly woman on the mobility scooter, as the meme uses her as the central subject and satirical target. The user sees themselves in the role of the elderly woman, or at least identifies with the experience or perception being mocked — the idea of being associated with a high-stakes, high-speed event like NASCAR while being in a mundane, low-speed context. The projection is implicit, not deictic, but the user is positioned as the observer of the satirical juxtaposition, and thus, the subject of the meme's commentary.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "ableism",
+      "description": "The meme perpetuates ableist stereotypes by mocking the physical limitations of the elderly woman and associating her with a context (NASCAR) that is not appropriate or respectful, thereby reducing her dignity and capability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals familiar with NASCAR culture and American pop culture references, particularly those who understand the satirical juxtaposition of high-speed motorsport with mundane, everyday life. The meme relies on cultural knowledge of NASCAR’s branding (e.g., 'Daytona 500', 'Sprint Cup Series') and the commercial association of Walmart to create humor. The intended audience likely includes fans of NASCAR, internet meme creators and consumers who appreciate absurdist humor, and people who are aware of or have encountered ableist stereotypes in media. The meme’s humor is derived from the incongruity between the image of an elderly woman on a mobility scooter and the text 'NASCAR presents the Wal-Mart 500,' which requires an understanding of both motorsport culture and retail branding. The audience is also likely to be those who are comfortable with or have been exposed to internet memes that use satire and mockery to comment on social norms, including those related to aging and disability.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/24905.png",
+    "image_name": "24905.png",
+    "extraction_timestamp": "2025-12-15T19:18:29.765402",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 15,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

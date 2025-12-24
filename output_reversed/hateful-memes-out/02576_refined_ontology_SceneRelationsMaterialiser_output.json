@@ -1,0 +1,47 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "predator_prey_interaction",
+      "participants": [
+        {
+          "entity": "yellow_snake",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "green_lizard",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "yellow_snake",
+          "relation": "isPredatorOf",
+          "to": "green_lizard"
+        },
+        {
+          "from": "yellow_snake",
+          "relation": "isHolding",
+          "to": "green_lizard"
+        },
+        {
+          "from": "green_lizard",
+          "relation": "isPreyOf",
+          "to": "yellow_snake"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":predator_prey_interaction :hasParticipant :yellow_snake .",
+    ":predator_prey_interaction :hasParticipant :green_lizard .",
+    ":yellow_snake :isPredatorOf :green_lizard .",
+    ":yellow_snake :isHolding :green_lizard .",
+    ":green_lizard :isPreyOf :yellow_snake ."
+  ],
+  "triples_count": 5
+}

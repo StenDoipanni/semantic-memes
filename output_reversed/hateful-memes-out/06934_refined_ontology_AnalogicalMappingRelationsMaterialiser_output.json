@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_id_1",
+      "hasMappedEntity": "textual_material_top",
+      "hasMappingEntity": "visual_material_adolf_hitler"
+    },
+    {
+      "from": "visual_material_adolf_hitler",
+      "relation": "mappedOnto",
+      "to": "textual_material_top"
+    }
+  ],
+  "triples": [
+    ":mapping_id_1 :hasMappedEntity :textual_material_top .",
+    ":mapping_id_1 :hasMappingEntity :visual_material_adolf_hitler .",
+    ":visual_material_adolf_hitler :mappedOnto :textual_material_top ."
+  ],
+  "triples_count": 3
+}

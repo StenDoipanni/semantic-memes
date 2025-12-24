@@ -1,0 +1,232 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a female police officer pointing a gun, set against an American flag, with text claiming that Muslims believe they go to hell if killed by a woman. The second line, 'well ladies, it's time to lock and load,' frames the woman as a threat to Muslims, implying a violent response. This meme uses Islamophobic tropes by associating Muslims with a belief system that supposedly justifies violence against women, and it weaponizes gender roles by portraying women as inherently dangerous to Muslims. The visual of a police officer, often associated with law enforcement and authority, combined with the gun and the American flag, reinforces a narrative of American patriots taking action against a perceived threat. The overall intent is to incite fear and hostility toward Muslims and to promote a misogynistic and Islamophobic worldview, suggesting that women are a threat to Muslim men and that violent retaliation is justified. This is a hateful meme that targets both Muslims and women, using stereotypes and fear to promote division and hostility.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text",
+      "description": "muslims believe that if they get killed by a woman, they go straight to hell",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "female_police_officer",
+      "label": "person",
+      "description": "A woman dressed in a light blue police uniform, wearing dark sunglasses, holding a handgun pointed forward. She has a serious expression and is positioned centrally in the frame. Her uniform includes a badge and shoulder patch, and she wears a watch on her left wrist. The officer is the main subject and focal point of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "threatening_police_officer",
+      "label": "A female police officer pointing a gun in a threatening manner",
+      "description": "The female police officer is positioned centrally, holding a handgun pointed directly forward, with a serious expression. She is in front of an American flag, which serves as the background. The visual composition emphasizes her authoritative and threatening posture. The text overlay reinforces the threatening narrative by suggesting she represents a force of retaliation against Muslims, implying a violent response to the stereotype presented.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobic_stereotype",
+      "label": "Islamophobic Stereotype: Muslims believe women are inherently dangerous and killing them sends them to hell",
+      "description": "This is a false and hateful stereotype that falsely claims Muslims hold a belief that killing a Muslim by a woman sends them to hell. This is not a legitimate tenet of Islam and is used to incite fear and hostility toward Muslims. It is a common trope in Islamophobic rhetoric to distort religious beliefs to justify violence or discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogynistic_stereotype",
+      "label": "Misogynistic Stereotype: Women are inherently dangerous or threatening to men",
+      "description": "This stereotype portrays women as a threat to men, particularly in the context of violence or retaliation. It is rooted in patriarchal ideologies that devalue women and often leads to the justification of violence against women or the demonization of female figures. The phrase 'well ladies, it's time to lock and load' reinforces this by framing women as the enemy to be armed against.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "american_flag_symbolism",
+      "label": "American Flag Symbolism: Represents patriotism, law enforcement, or national identity",
+      "description": "The American flag in the background is used to evoke patriotism and national identity. In this context, it is often used to frame the police officer as a patriotic figure representing American values or law enforcement, which can be used to legitimize or glorify violent actions against perceived enemies (in this case, Muslims).",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "police_officer_as_authority_figure",
+      "label": "Police Officer as Authority Figure: Represents law enforcement and order",
+      "description": "The image of a police officer, especially a female one, is used to symbolize authority, law enforcement, and order. In this meme, the officer is portrayed as a figure of retaliation, suggesting that the state or its agents are being called upon to respond to a perceived threat. This ties into broader cultural narratives about police as protectors or enforcers of societal norms.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lock_and_load_idiom",
+      "label": "Idiom: 'Lock and Load' - Prepare for combat or action",
+      "description": "The phrase 'lock and load' is a military or combat idiom meaning to prepare weapons for use. In this context, it is used to incite a violent response, suggesting that women should be armed and ready to fight back against Muslims. This phrase is often used in military or aggressive contexts to signal readiness for conflict.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia",
+      "label": "Islamophobia: Fear or hatred of Muslims",
+      "description": "Islamophobia is the fear, prejudice, or hatred of Muslims, often manifesting in stereotypes, discrimination, or violence. This meme is a clear example of Islamophobia, as it uses false and harmful stereotypes about Muslim beliefs to justify hostility and violence against Muslims. It is a form of hate speech that promotes division and discrimination.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny: Hatred or prejudice against women",
+      "description": "Misogyny is the hatred or prejudice against women. This meme is misogynistic because it portrays women as inherently dangerous and deserving of violent retaliation. It reinforces harmful stereotypes that devalue women and justify violence against them, often by framing women as threats to men or as enemies to be controlled or eliminated.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "threatening_intention",
+      "label": "threatening emotional expression",
+      "description": "The female police officer's serious facial expression, combined with her pointing a handgun directly forward, conveys a clear and aggressive intent to threaten or intimidate. This is reinforced by her authoritative posture and the militaristic context implied by the 'lock and load' phrase.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Textual stereotype mapped onto visual authority figure",
+      "description": "The top text 'muslims believe that if they get killed by a woman, they go straight to hell' is mapped onto the visual of the female police officer, who is portrayed as a representative of the force that will enact retaliation against Muslims. The officer's threatening posture and the American flag background reinforce the idea that she embodies the state's response to the alleged 'Muslim belief'. This mapping links the textual stereotype to the visual authority figure as the agent of violent action.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the female police officer as the agent of retaliation",
+      "description": "The user is implicitly projected onto the female police officer (visual material) as the embodiment of the violent response being called for. The text 'well ladies, it's time to lock and load' directly addresses 'ladies' (women), suggesting the user (or the audience) is being invited to identify with or act through the female officer as a figure of authority and retaliation. The officer is the focal point and the visual representation of the 'lock and load' command, making her the projected entity onto which the user's identity or action is mapped.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks Muslims and women by promoting false and harmful stereotypes. It falsely claims that Muslims believe women are inherently dangerous and that killing a Muslim by a woman sends them to hell, which is a baseless and hateful distortion of Islamic beliefs. It also portrays women as a threat to be armed against, reinforcing misogynistic and Islamophobic ideologies. The visual of a police officer, combined with the American flag, frames this hatred as a patriotic or law enforcement response, further legitimizing the violence. This is a hateful meme that targets both Muslims and women, using stereotypes and fear to promote division and hostility.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience is individuals who hold or are susceptible to Islamophobic and misogynistic beliefs, particularly those who may identify with or support a nationalist or patriotic worldview that frames law enforcement as a tool for responding to perceived threats. The meme is designed to resonate with people who believe in the stereotypes it promotes — that Muslims hold a false belief about women being inherently dangerous, and that women are a threat requiring violent retaliation — and who may interpret the image of the female police officer as a symbol of American patriotism or authority acting against this perceived threat. The use of the American flag and the police officer as an authority figure serves to legitimize the hateful message for an audience that associates national identity with law and order, and who may be receptive to narratives that justify violence against Muslims and women.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/07254.png",
+    "image_name": "07254.png",
+    "extraction_timestamp": "2025-12-15T12:55:29.943241",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 16,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

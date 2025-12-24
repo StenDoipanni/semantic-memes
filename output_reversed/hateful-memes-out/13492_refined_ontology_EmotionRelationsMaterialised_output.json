@@ -1,0 +1,44 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "affectionate joy",
+      "expressors": [
+        {
+          "entity": "mother",
+          "relation": "hasExpressor"
+        },
+        {
+          "entity": "daughter",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "mother",
+          "relation": "emotionalRelationToEntity",
+          "to": "daughter"
+        },
+        {
+          "from": "daughter",
+          "relation": "emotionalRelationToEntity",
+          "to": "mother"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":affectionate_joy :hasExpressor :mother .",
+    ":affectionate_joy :hasExpressor :daughter .",
+    ":mother :emotionalRelationToEntity :daughter .",
+    ":daughter :emotionalRelationToEntity :mother ."
+  ],
+  "triples_count": 4
+}

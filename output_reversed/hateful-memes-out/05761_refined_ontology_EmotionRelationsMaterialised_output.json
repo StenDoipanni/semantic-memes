@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "shyness",
+      "expressors": [
+        {
+          "entity": "man_in_suit",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "man_in_suit",
+          "relation": "emotionalRelationToEntity",
+          "to": "online_social_media_behavior"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":shyness :hasExpressor :man_in_suit .",
+    ":man_in_suit :emotionalRelationToEntity :online_social_media_behavior ."
+  ],
+  "triples_count": 2
+}

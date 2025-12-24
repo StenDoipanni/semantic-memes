@@ -1,0 +1,508 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Harmful; overall-intent-description: The image depicts a person in a purple wizard costume holding a wand and a book, standing against a red checkered background. The text overlay reads: 'remember no matter how much you whine like a little bitch, trump is still your president.' The overall intent is to mock and dismiss political opponents or critics of Donald Trump by portraying them as petty or unreasonable, while asserting Trump's continued authority. This meme uses a combination of visual and textual elements to convey a message of political defiance and to discourage dissent. The use of the term 'little bitch' is abusive and demeaning, targeting individuals who criticize Trump, and the overall tone is hostile and dismissive. The meme is harmful because it promotes a culture of disrespect and discourages constructive dialogue, potentially inciting further division and hostility. The intent is to reinforce loyalty to Trump and to undermine the legitimacy of opposition voices, using the wizard costume as a humorous or ironic visual metaphor to contrast the seriousness of political power with the absurdity of the situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text overlay",
+      "description": "remember no matter how much you whine like a little bitch",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "person",
+      "label": "man dressed as a wizard",
+      "description": "A man wearing a purple wizard costume with gold trim, including a pointed hat, cape, and a tunic with an eye symbol. He is holding a wand in one hand and a book in the other, standing against a red checkered background. His facial expression is neutral to slightly smug.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "wizard_pose",
+      "label": "person in wizard costume standing",
+      "description": "A man dressed as a wizard stands centrally in the frame, holding a wand in his right hand and a book in his left hand. He is wearing a purple costume with gold trim, including a pointed hat and cape, against a red checkered background. His expression is neutral to smug. The scene is framed to focus on his full body and costume.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "donald_trump",
+      "label": "Donald Trump",
+      "description": "The 45th and 47th President of the United States, known for his controversial political career, polarizing public image, and frequent media attention. The meme references his presidency and uses his name to assert political dominance over critics.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_opposition",
+      "label": "Political Opposition",
+      "description": "The collective term for individuals or groups who oppose a particular political figure or party. In this meme, it refers to critics or opponents of Donald Trump, who are being dismissed as 'whining like a little bitch'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_dismissal",
+      "label": "Political Dismissal",
+      "description": "A rhetorical or behavioral strategy of ignoring, ridiculing, or downplaying criticism or dissent from political opponents. The meme uses this concept to assert that criticism is unwarranted and ineffective.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "derogatory_speech",
+      "label": "Derogatory Speech",
+      "description": "The use of insulting, demeaning, or abusive language to belittle or degrade someone. The phrase 'whine like a little bitch' is a derogatory speech pattern used to insult critics of Trump.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_loyalty",
+      "label": "Political Loyalty",
+      "description": "The unwavering support or allegiance to a political figure or party, often despite criticism or controversy. The meme promotes this concept by asserting that Trump's presidency remains unchallenged regardless of dissent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_culture",
+      "label": "Meme Culture",
+      "description": "A form of internet-based communication that uses images, videos, or text to convey humor, satire, or social commentary. This meme is part of a broader culture of political memes that spread quickly online.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_division",
+      "label": "Political Division",
+      "description": "The state of disagreement or conflict between different political factions or ideologies. The meme contributes to this by using hostile language to dismiss opponents, thereby reinforcing political polarization.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_disrespect",
+      "label": "Political Disrespect",
+      "description": "The act of showing contempt or lack of regard for political figures or institutions. The meme promotes this by using abusive language and mocking the seriousness of political discourse.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_authority",
+      "label": "Political Authority",
+      "description": "The legitimate power or right to govern, often associated with a political leader or institution. The meme asserts that Trump's political authority remains intact despite criticism.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_power",
+      "label": "Political Power",
+      "description": "The ability to influence or control political outcomes, often through institutional means. The meme uses the wizard costume as a metaphor to contrast the seriousness of political power with the absurdity of the situation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_mockery",
+      "label": "Political Mockery",
+      "description": "The use of humor or ridicule to criticize or undermine a political figure or policy. The meme uses the wizard costume and the text to mock critics of Trump, portraying them as petty or unreasonable.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_hostility",
+      "label": "Political Hostility",
+      "description": "A hostile or aggressive attitude toward political opponents or dissenting views. The meme promotes this by using abusive language and dismissing criticism as unwarranted.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_defiance",
+      "label": "Political Defiance",
+      "description": "The act of resisting or challenging political authority or norms. The meme uses this concept to assert that critics should not challenge Trump's presidency, as it remains unchallenged.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_ineffectiveness",
+      "label": "Political Ineffectiveness",
+      "description": "The idea that political actions or criticisms are futile or have no impact. The meme implies that no matter how much critics complain, Trump's presidency remains unchanged.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_irony",
+      "label": "Political Irony",
+      "description": "A rhetorical device where the intended meaning is opposite to the literal meaning. The meme uses irony by contrasting the serious nature of political power with the absurdity of the wizard costume and the dismissive text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "visual_material",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_anger",
+      "label": "Political Anger",
+      "description": "A strong emotional response to political events or figures, often expressed through aggressive or hostile language. The meme uses anger to dismiss critics and assert Trump's dominance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_ignorance",
+      "label": "Political Ignorance",
+      "description": "The lack of knowledge or understanding of political issues. The meme implies that critics are ignorant or unreasonable for their complaints, thereby dismissing their concerns.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_inequality",
+      "label": "Political Inequality",
+      "description": "The unequal distribution of political power or influence. The meme suggests that critics are powerless to change Trump's presidency, reinforcing a sense of political inequality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_inefficiency",
+      "label": "Political Inefficiency",
+      "description": "The inability of political systems or leaders to function effectively. The meme implies that critics are ineffective in their attempts to change Trump's presidency, thereby dismissing their efforts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_ineffectiveness",
+      "label": "Political Ineffectiveness",
+      "description": "The idea that political actions or criticisms are futile or have no impact. The meme implies that no matter how much critics complain, Trump's presidency remains unchanged.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_inequality",
+      "label": "Political Inequality",
+      "description": "The unequal distribution of political power or influence. The meme suggests that critics are powerless to change Trump's presidency, reinforcing a sense of political inequality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_inefficiency",
+      "label": "Political Inefficiency",
+      "description": "The inability of political systems or leaders to function effectively. The meme implies that critics are ineffective in their attempts to change Trump's presidency, thereby dismissing their efforts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_ineffectiveness",
+      "label": "Political Ineffectiveness",
+      "description": "The idea that political actions or criticisms are futile or have no impact. The meme implies that no matter how much critics complain, Trump's presidency remains unchanged.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_inequality",
+      "label": "Political Inequality",
+      "description": "The unequal distribution of political power or influence. The meme suggests that critics are powerless to change Trump's presidency, reinforcing a sense of political inequality.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "political_inefficiency",
+      "label": "Political Inefficiency",
+      "description": "The inability of political systems or leaders to function effectively. The meme implies that critics are ineffective in their attempts to change Trump's presidency, thereby dismissing their efforts.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous expression",
+      "description": "The man's facial expression, described as neutral to slightly smug, conveys a sense of disdain or superiority, aligning with the dismissive tone of the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'you' is mapped onto the person in the wizard costume",
+      "description": "The top text overlay 'remember no matter how much you whine like a little bitch' directly addresses the viewer or critic, implicitly mapping 'you' to the person depicted in the visual material. The person in the wizard costume is visually presented as the target of the criticism, making this an analogical mapping where the textual 'you' is projected onto the visual 'person'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_2",
+      "label": "The text 'trump is still your president' is mapped onto the person in the wizard costume",
+      "description": "The bottom text 'trump is still your president' asserts political authority and loyalty. The person in the wizard costume, despite their absurd or mocking appearance, is visually positioned as the embodiment of the message — the 'president' or the figure who remains in power regardless of dissent. This creates an analogical mapping where the textual concept of 'president' is visually instantiated by the person in the costume, even though the costume is metaphorical and ironic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the person in the wizard costume via the text 'you'",
+      "description": "The top text overlay 'remember no matter how much you whine like a little bitch' directly addresses the viewer or critic, explicitly projecting the user onto the person depicted in the visual material. The 'you' in the text is deictically pointing to the user, making them the target of the criticism. The person in the wizard costume is visually presented as the embodiment of the criticized 'you'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_2",
+      "label": "User projected onto the person in the wizard costume via the text 'your president'",
+      "description": "The bottom text 'trump is still your president' projects the user onto the person in the wizard costume by using the possessive pronoun 'your'. This implies that the political authority of Trump belongs to the user, and the person in the costume visually represents this ownership or loyalty. The costume, though absurd, is used to symbolize the user's allegiance to Trump's presidency.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Abusive",
+      "description": "The text overlay 'remember no matter how much you whine like a little bitch' uses abusive and demeaning language to insult critics of Donald Trump, targeting individuals based on their political dissent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "political supporters of Donald Trump",
+      "description": "The meme is designed for individuals who are loyal to Donald Trump and his political agenda. The text 'trump is still your president' directly addresses this audience, reinforcing their allegiance and dismissing criticism as unwarranted. The visual of the wizard costume, while absurd, serves as a humorous or ironic metaphor to contrast the seriousness of political power with the dismissive tone, which resonates with those who view political opposition as petty or ineffective. The use of derogatory language ('whine like a little bitch') targets critics, thereby strengthening the in-group identity of Trump supporters by creating a clear 'us vs. them' dynamic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/13270.png",
+    "image_name": "13270.png",
+    "extraction_timestamp": "2025-12-15T14:53:40.491081",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 36,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

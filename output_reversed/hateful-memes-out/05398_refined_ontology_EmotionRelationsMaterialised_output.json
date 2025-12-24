@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "satisfied emotion",
+      "expressors": [
+        {
+          "entity": "hand",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "hand",
+          "relation": "emotionalRelationToEntity",
+          "to": "text_chunk"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":satisfied_emotion :hasExpressor :hand .",
+    ":hand :emotionalRelationToEntity :text_chunk ."
+  ],
+  "triples_count": 2
+}

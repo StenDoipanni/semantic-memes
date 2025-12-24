@@ -1,0 +1,436 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178",
+  "@type": "AnalysisDocument",
+  "title": "59028.png - Dimension Analysis",
+  "created": "2025-12-16T06:20:48.905713",
+  "analyzedImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_82bced54",
+    "@type": "Image",
+    "filename": "59028.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/59028.png"
+  },
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/59028.png",
+    "image_name": "59028.png",
+    "extraction_timestamp": "2025-12-16T06:17:45.901115",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 36,
+    "pipeline_type": "reversed"
+  },
+  "dimensions": [
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a484efc8",
+      "@type": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: the_lawmakers_known_as_the_squad; hasOverallIntent: Hateful; overall-intent-description: The image depicts three female lawmakers, known as 'The Squad,' with the text labeling them as such. The overall intent is to demean and dehumanize them by using a derogatory, gang-like moniker ('the squad') that implies they are a group of outsiders or troublemakers. This labeling is inherently harmful and hateful, as it reduces complex political figures to a simplistic, negative stereotype. The term 'squad' is often used in a pejorative context to imply criminality, lack of legitimacy, or being a disruptive, untrustworthy group, which is a form of targeted political attack. The meme uses the juxtaposition of the image of these lawmakers with the disparaging label to convey a message of contempt and to delegitimize their political role, fitting the definition of a hateful meme as it directly attacks individuals based on their identity and political affiliation.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_847967e9",
+      "@type": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "top text overlay",
+      "description": "the.lawmakers known as",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2720e140",
+      "@type": "VisualMaterial",
+      "instance_name": "woman_on_left",
+      "label": "female lawmaker",
+      "description": "woman with dark hair, wearing glasses and a beige blazer, smiling while looking to her right. She is positioned on the left side of the image.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_b6b301ae",
+      "@type": "Scene",
+      "instance_name": "lawmakers_at_press_conference",
+      "label": "Three female lawmakers standing together at a press conference",
+      "description": "The scene depicts three female lawmakers, known as 'The Squad', standing side by side in front of official U.S. House of Representatives banners and flags. They are positioned in a row, with the woman on the left, the woman in the center wearing a white headwrap, and the woman on the right at a podium. The text overlay labels them as 'the lawmakers known as \"the squad\"', indicating a political context. The spatial arrangement suggests a formal event, likely a press conference or public statement.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_56c2229a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "the_squad",
+      "label": "The Squad",
+      "description": "A term used to refer to a group of four progressive Democratic congresswomen in the U.S. House of Representatives: Alexandria Ocasio-Cortez, Rashida Tlaib, Ilhan Omar, and Ayanna Pressley. The term was popularized by conservative media and political opponents as a pejorative label to imply they are a unified, disruptive, or un-American group. The meme uses this term to demean and dehumanize them, fitting the hateful intent described in the overall intent instance.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ec6b8b6f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "derogatory_labeling",
+      "label": "Derogatory Labeling",
+      "description": "The practice of using pejorative or dehumanizing terms to describe a group or individual, often to undermine their legitimacy or credibility. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7edd0b45",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "pejorative_term_squad",
+      "label": "Pejorative Term ",
+      "description": "The term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_04264c56",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_black_stereotype_criminality",
+      "label": "Anti-Black Stereotype: Criminality Associations",
+      "description": "A common racist stereotype that associates Black people with criminal behavior. This stereotype is often used to delegitimize Black political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a7339f1b",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_terrorism",
+      "label": "Anti-Muslim Stereotype: Terrorism Associations",
+      "description": "A common islamophobic stereotype that associates Muslims with terrorism. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f467a6c8",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_backwards_culture",
+      "label": "Anti-Muslim Stereotype: ",
+      "description": "A common islamophobic stereotype that characterizes Muslim culture as ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_2383ce9a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_sharia_law",
+      "label": "Anti-Muslim Stereotype: Sharia Law Fearmongering",
+      "description": "A common islamophobic stereotype that fears Sharia law and its perceived incompatibility with Western values. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_e0bd1dde",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_hygiene",
+      "label": "Anti-Muslim Stereotype: Hygiene Stereotypes",
+      "description": "A common islamophobic stereotype that associates Muslims with poor hygiene. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_f8de0e6f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_violence",
+      "label": "Anti-Muslim Stereotype: Violence/Barbarism Claims",
+      "description": "A common islamophobic stereotype that associates Muslims with violence and barbarism. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_74919fbb",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_arranged_marriage",
+      "label": "Anti-Muslim Stereotype: Arranged Marriage Mockery",
+      "description": "A common islamophobic stereotype that mocks Muslim women for being forced into arranged marriages. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_77fbad76",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_religious_practice_threatening",
+      "label": "Anti-Muslim Stereotype: Religious Practice as Threatening",
+      "description": "A common islamophobic stereotype that portrays Muslim religious practices as threatening to Western society. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ee86f912",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_animal_treatment",
+      "label": "Anti-Muslim Stereotype: Animal Treatment Accusations",
+      "description": "A common islamophobic stereotype that accuses Muslims of mistreating animals. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_5425236e",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_oppression_of_women",
+      "label": "Anti-Muslim Stereotype: Oppression of Women Claims",
+      "description": "A common islamophobic stereotype that claims Muslim women are oppressed. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_57110c34",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_incompatibility_with_western_values",
+      "label": "Anti-Muslim Stereotype: Incompatibility with Western Values",
+      "description": "A common islamophobic stereotype that claims Muslim culture is incompatible with Western values. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_8e456682",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_sharia_law",
+      "label": "Anti-Muslim Stereotype: Sharia Law Fearmongering",
+      "description": "A common islamophobic stereotype that fears Sharia law and its perceived incompatibility with Western values. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_99d0ae62",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_hygiene",
+      "label": "Anti-Muslim Stereotype: Hygiene Stereotypes",
+      "description": "A common islamophobic stereotype that associates Muslims with poor hygiene. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3a0ee4d3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_violence",
+      "label": "Anti-Muslim Stereotype: Violence/Barbarism Claims",
+      "description": "A common islamophobic stereotype that associates Muslims with violence and barbarism. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_7e102631",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_arranged_marriage",
+      "label": "Anti-Muslim Stereotype: Arranged Marriage Mockery",
+      "description": "A common islamophobic stereotype that mocks Muslim women for being forced into arranged marriages. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_ac0b667a",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_religious_practice_threatening",
+      "label": "Anti-Muslim Stereotype: Religious Practice as Threatening",
+      "description": "A common islamophobic stereotype that portrays Muslim religious practices as threatening to Western society. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_637bef17",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_animal_treatment",
+      "label": "Anti-Muslim Stereotype: Animal Treatment Accusations",
+      "description": "A common islamophobic stereotype that accuses Muslims of mistreating animals. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1ff12867",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_oppression_of_women",
+      "label": "Anti-Muslim Stereotype: Oppression of Women Claims",
+      "description": "A common islamophobic stereotype that claims Muslim women are oppressed. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c008e46f",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_incompatibility_with_western_values",
+      "label": "Anti-Muslim Stereotype: Incompatibility with Western Values",
+      "description": "A common islamophobic stereotype that claims Muslim culture is incompatible with Western values. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_c7574ef3",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_sharia_law",
+      "label": "Anti-Muslim Stereotype: Sharia Law Fearmongering",
+      "description": "A common islamophobic stereotype that fears Sharia law and its perceived incompatibility with Western values. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_1f25d75d",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_hygiene",
+      "label": "Anti-Muslim Stereotype: Hygiene Stereotypes",
+      "description": "A common islamophobic stereotype that associates Muslims with poor hygiene. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_4a430344",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_violence",
+      "label": "Anti-Muslim Stereotype: Violence/Barbarism Claims",
+      "description": "A common islamophobic stereotype that associates Muslims with violence and barbarism. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_dbe8ab38",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_arranged_marriage",
+      "label": "Anti-Muslim Stereotype: Arranged Marriage Mockery",
+      "description": "A common islamophobic stereotype that mocks Muslim women for being forced into arranged marriages. This stereotype is often used to delegitimize Muslim political figures or to justify discriminatory policies. In this meme, the term ",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_3adf1587",
+      "@type": "BackgroundKnowledge",
+      "instance_name": "anti_muslim_stereotype_religious_practice_threatening",
+      "label": "Anti-Muslim Stereotype: Religious Practice as Threatening",
+      "description": "Extracted from image analysis",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "regex_fallback"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_94cb288b",
+      "@type": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous emotion",
+      "description": "The overall expression conveyed by the meme is one of contempt and disdain, primarily through the use of the derogatory label 'the squad' which implies the lawmakers are untrustworthy, disruptive, and un-American. The visual presentation of the lawmakers smiling and appearing confident at a formal press conference contrasts with the hateful intent of the label, creating an emotional tension that underscores the contemptuous message.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_bab86a29",
+      "@type": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The lawmakers are mapped as 'the squad'",
+      "description": "The text overlay 'the lawmakers known as \"the squad\"' explicitly labels the three female lawmakers in the image as 'the squad'. This creates an analogical mapping where the textual entity 'the squad' is projected onto the visual entities representing the lawmakers. The mapping is direct and explicit, using the text to define the identity of the visual subjects in a derogatory manner.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_9a4dc67a",
+      "@type": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the derogatory textual label",
+      "description": "The user is projected onto the textual material 'the lawmakers known as \"the squad\"', which functions as a dehumanizing label. The meme invites the user to identify with or internalize this pejorative framing, projecting the user's perspective onto the derogatory term that defines the visual subjects. This projection is implicit, as the user is not directly addressed with 'you' or 'me', but the act of viewing and interpreting the meme inherently involves adopting the meme's framing, which dehumanizes the lawmakers by equating them with a criminal or untrustworthy 'squad'.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_a7396ea9",
+      "@type": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses the derogatory label 'the squad' to demean and dehumanize the female lawmakers, implying they are a disruptive, un-American group. This is a direct attack on individuals based on their political affiliation and identity, fitting the definition of a hateful meme.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    },
+    {
+      "@id": "http://example.org/multimodal-taxonomy#dimension_63d93f53",
+      "@type": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The meme is designed for an audience that supports or aligns with conservative political viewpoints, particularly those who oppose progressive Democratic lawmakers. The target community likely includes individuals who are politically right-leaning, skeptical of the 'The Squad' as a group, and receptive to derogatory labels that frame them as disruptive or un-American. The meme leverages existing political polarization and uses the term 'the squad' as a pejorative to appeal to those who view these lawmakers as outsiders or threats to traditional political norms.",
+      "belongsToAnalysis": {
+        "@id": "http://example.org/multimodal-taxonomy#analysis_467a2178"
+      },
+      "extractionMethod": "llm_extraction_huggingface"
+    }
+  ]
+}

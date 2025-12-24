@@ -1,0 +1,255 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: american_soldiers_praying_in_jesus_name; hasOverallIntent: Harmful; overall-intent-description: The image depicts American soldiers in uniform, seemingly praying, with overlaid text that reads 'american soldiers praying in jesus name' and 'that they don't have to go overseas for the holidays.' The overall intent is to mock or satirize the soldiers' religious devotion by framing it as a selfish wish to avoid deployment, thereby implying hypocrisy or insensitivity. This juxtaposition of solemn religious imagery with a cynical, self-serving wish undermines the perceived seriousness of their faith and service. While not explicitly targeting a specific protected group with hate, the meme is harmful because it trivializes the gravity of military service and religious practice, potentially offending those who view the soldiers' prayers as genuine expressions of patriotism and faith. The meme's intent is to provoke laughter through irony, but it risks causing offense and disrespect toward service members and their beliefs, making it a harmful piece of content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "american soldiers praying in jesus name",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "American_soldiers",
+      "label": "people",
+      "description": "A large group of men in U.S. military camouflage uniforms, standing in formation with heads bowed, appearing to be in prayer. They are the central and most salient visual element in the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "praying_soldiers",
+      "label": "American soldiers praying in formation",
+      "description": "A large group of American soldiers in camouflage uniforms are standing in formation with their heads bowed, appearing to be in prayer. The scene is set outdoors with a mountainous background. The soldiers are arranged in rows, creating a structured and solemn visual composition.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": []
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_intent_harmful",
+      "label": "Harmful Intent Meme",
+      "description": "The meme is designed to mock or satirize American soldiers' religious devotion by framing their prayer as a selfish wish to avoid deployment, thereby implying hypocrisy or insensitivity. This intent is harmful because it trivializes the gravity of military service and religious practice, potentially offending those who view the soldiers' prayers as genuine expressions of patriotism and faith.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "american_soldiers",
+      "label": "American Soldiers",
+      "description": "The image depicts U.S. military personnel, which requires background knowledge about the U.S. military, its structure, and the cultural significance of soldiers' religious practices and service commitments, especially in the context of deployment and holidays.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "jesus_name",
+      "label": "Jesus Name",
+      "description": "The phrase 'in Jesus name' refers to a Christian religious phrase used in prayer, implying the soldiers are invoking Christian faith. This requires background knowledge about Christian prayer practices and the cultural context of religious expression in the U.S. military.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "deployment_holidays",
+      "label": "Deployment During Holidays",
+      "description": "The meme references the common cultural phenomenon of soldiers being deployed overseas during holidays, which is a real-world issue that creates emotional and logistical challenges for service members and their families. This requires background knowledge about military operations and the emotional weight of separation during festive seasons.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "religious_prayer_in_military_context",
+      "label": "Religious Prayer in Military Context",
+      "description": "The image and text imply that soldiers are praying for personal gain, which requires background knowledge about the role of religion in the U.S. military, including how service members are permitted to practice their faith and how such practices are often viewed as patriotic or solemn.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "meme_juxtaposition",
+      "label": "Meme Juxtaposition",
+      "description": "The meme uses the juxtaposition of solemn religious imagery with a cynical, self-serving wish to create irony. This requires background knowledge about meme culture and the use of irony and satire to critique or mock subjects, often at the expense of perceived sincerity or seriousness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "anti_military_hypocrisy_stereotype",
+      "label": "Anti-Military Hypocrisy Stereotype",
+      "description": "The meme relies on a stereotype that military personnel are hypocritical or insincere in their religious devotion, which is a form of social criticism that can be offensive. This requires background knowledge about common stereotypes and how they are used in satire or mockery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "military_service_gravity",
+      "label": "Military Service Gravity",
+      "description": "The meme trivializes the gravity of military service, which requires background knowledge about the risks, sacrifices, and societal expectations associated with military service, especially in times of conflict or deployment.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mockery",
+      "label": "mocking emotion",
+      "description": "The emotion expressed is mockery, conveyed through the juxtaposition of solemn soldiers praying with the cynical text implying their prayer is selfish. This creates an ironic and satirical tone intended to ridicule the soldiers' religious devotion.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_1",
+      "label": "Soldiers' prayer mapped as a selfish wish",
+      "description": "The text 'american soldiers praying in jesus name' is mapped onto the visual of the soldiers in prayer, implying that their religious act is being reinterpreted as a self-serving request to avoid deployment. This mapping creates an ironic contrast between the solemn visual of prayer and the cynical textual interpretation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material implying self-serving motives",
+      "description": "The user is projected onto the textual material 'that they don't have to go overseas for the holidays', which frames the soldiers' prayer as a selfish wish. This projection invites the user to identify with or imagine themselves as the one making such a cynical wish, thereby internalizing the meme's ironic and mocking perspective. There are no explicit deictic pronouns like 'me' or 'you', but the implied audience is invited to adopt the meme's cynical viewpoint, projecting their own judgment or amusement onto the soldiers' actions as described in the text.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme trivializes the gravity of military service and religious practice by mocking soldiers' prayers as selfish wishes to avoid deployment, potentially offending service members and their families.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad online audience familiar with internet meme culture, military service, and religious expression in the U.S. context. It leverages irony and satire, which are common in online humor, to provoke laughter through the juxtaposition of solemn religious imagery with a cynical, self-serving wish. The target audience likely includes individuals who understand the cultural weight of military deployment during holidays and the role of religion in American military life, and who are comfortable with mocking or satirizing such topics for comedic effect.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/92368.png",
+    "image_name": "92368.png",
+    "extraction_timestamp": "2025-12-19T17:33:34.435469",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

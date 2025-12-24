@@ -1,0 +1,230 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: meme_image; hasOverallIntent: Mysogynous; overall-intent-description: The image depicts a group of young boys in red soccer uniforms playing soccer on a grassy field. The text overlay reads \"he won because he is a boy\" at the top and \"competing in a female sport\" at the bottom. The overall intent of this meme is to promote a misogynistic and sexist message by implying that male athletes inherently dominate or succeed in sports that are traditionally associated with women, suggesting that their victory is due to their gender rather than skill or merit. This is a harmful and toxic message that reinforces gender stereotypes and diminishes the achievements of female athletes by implying that men are superior in sports by virtue of their gender. The meme uses the juxtaposition of the image of boys playing soccer with the text to create a false equivalence and to demean the legitimacy of women's sports, thereby contributing to a misogynistic worldview that devalues women's athletic abilities and achievements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "top_text",
+      "label": "top text overlay",
+      "description": "he won because he is a boy",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "boy",
+      "label": "child athlete",
+      "description": "A young boy in a red soccer uniform, positioned in the foreground, actively kicking a soccer ball. He is the central focus of the image, with his motion suggesting dynamic play. His appearance and action are central to the meme's message, which contrasts his gender with the notion of 'female sports'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "soccer_game",
+      "label": "boys playing soccer",
+      "description": "A group of young boys in red soccer uniforms are actively playing soccer on a grassy field. One boy in the foreground is kicking the ball, while others are running around him, suggesting dynamic play and teamwork. The scene is outdoors under a clear blue sky, with the boys positioned in a semi-circle around the ball, indicating a competitive or recreational match.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "boy",
+          "relation": "kicking",
+          "to": "soccer_ball"
+        },
+        {
+          "from": "boy",
+          "relation": "running",
+          "to": "boy"
+        },
+        {
+          "from": "text",
+          "relation": "overlaying",
+          "to": "soccer_game"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "misogyny",
+      "label": "Misogyny",
+      "description": "The meme relies on misogynistic stereotypes by implying that male athletes inherently dominate sports traditionally associated with women, suggesting their victory is due to gender rather than skill. This reinforces the harmful stereotype that women are less capable in sports, thereby devaluing female athletes and their achievements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "female_sports",
+      "label": "Female Sports",
+      "description": "The concept of 'female sports' refers to athletic competitions traditionally dominated by women, often with specific rules, teams, and cultural contexts. The meme implicitly references this concept to contrast male athletes competing in these spaces, suggesting male dominance is due to gender rather than merit.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gender_based_sporting_advantage",
+      "label": "Gender-Based Sporting Advantage",
+      "description": "The meme implies that men inherently have an advantage in sports, which is a stereotype that ignores the skill, training, and dedication of female athletes. This concept is rooted in societal biases that attribute athletic success to gender rather than individual merit.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sexist_message",
+      "label": "Sexist Message",
+      "description": "The meme conveys a sexist message by suggesting that male athletes' victories are due to their gender, rather than their skill or effort. This message reinforces harmful gender stereotypes and undermines the legitimacy of women's sports.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "gender_stereotypes",
+      "label": "Gender Stereotypes",
+      "description": "The meme relies on the stereotype that men are inherently superior in sports, which is a harmful and outdated belief. This stereotype devalues women's athletic abilities and achievements, suggesting that their success is less legitimate or less deserving.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "top_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "bottom_text",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "contempt",
+      "label": "contemptuous emotion",
+      "description": "The emotion expressed is contempt, conveyed through the text overlay that implies male superiority in sports by virtue of gender, demeaning the legitimacy of female athletes and their achievements. This reflects a disdainful attitude toward women's sports and the notion that their success is inferior or undeserved.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "Boy is mapped as the winner in a female sport",
+      "description": "The top text 'he won because he is a boy' explicitly maps the visual entity 'boy' (the central child athlete kicking the ball) as the subject who 'won'. This mapping is reinforced by the bottom text 'competing in a female sport', which contextualizes the boy's victory within a space traditionally associated with women, creating an analogical mapping where the boy's gender is presented as the causal factor for his success. The visual material (the boy) is thus mapped onto the textual concept of 'he won because he is a boy'.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the boy as the winner in a female sport",
+      "description": "The user is projected onto the visual entity 'boy' (the central child athlete kicking the ball) as the subject of the victory, with the textual material 'he won because he is a boy' and 'competing in a female sport' framing this projection. The meme implicitly invites the user to identify with or see themselves as the boy who 'won' due to his gender, reinforcing the misogynistic message by projecting the user's potential identification onto the boy's gendered triumph.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Mysogynous",
+      "description": "The meme promotes a misogynistic message by implying that male athletes inherently dominate sports traditionally associated with women, suggesting their victory is due to gender rather than skill. This reinforces the harmful stereotype that women are less capable in sports, thereby devaluing female athletes and their achievements.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target audience for this meme is individuals who hold or are exposed to misogynistic and sexist worldviews, particularly those who believe in gender-based sporting advantage and who may devalue female athletes by attributing male success to inherent gender superiority rather than skill or merit. The meme is designed to resonate with communities that reinforce harmful gender stereotypes, such as those who view sports as inherently male-dominated and who may mock or dismiss the legitimacy of women's sports. The visual of boys playing soccer and the text 'he won because he is a boy' are crafted to appeal to audiences who find humor or validation in the idea that men are naturally superior in sports, thereby promoting a toxic and misogynistic message.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/47863.png",
+    "image_name": "47863.png",
+    "extraction_timestamp": "2025-12-16T02:54:31.938312",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

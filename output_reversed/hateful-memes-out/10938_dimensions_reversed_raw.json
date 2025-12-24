@@ -1,0 +1,171 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: international-boxing-day-meme; hasOverallIntent: Harmful; overall-intent-description: The image juxtaposes the text 'international boxing day' with visual elements of red boxing gloves and a gift box in snow, creating a pun or play on words that conflates the holiday 'Boxing Day' (a post-Christmas day of gift-giving and sales) with the sport of boxing. The intent is likely humorous or satirical, playing on the double meaning of 'boxing' to create a meme that is lighthearted and non-offensive. There is no toxicity, harmful content, or hateful messaging present. The image does not target any specific group or community with disparaging metaphors or stereotypes as outlined in the provided knowledge base. The overall intent is to entertain through wordplay, not to cause harm or promote hate.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "international boxing day",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "boxing_gloves",
+      "label": "objects",
+      "description": "A pair of red boxing gloves, prominently displayed in the foreground, resting on white snow. They are made of shiny, leather-like material and are a central visual element, symbolizing the sport of boxing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "boxing_day_pun_scene",
+      "label": "boxing_day_pun_scene",
+      "description": "A scene depicting a pun on 'Boxing Day' by juxtaposing red boxing gloves and a gift box in snow, symbolizing the holiday's gift-giving tradition with the sport of boxing. The scene is composed of visual elements arranged to create a humorous wordplay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "boxing_gloves",
+          "relation": "resting_on",
+          "to": "snow"
+        },
+        {
+          "from": "text",
+          "relation": "above",
+          "to": "boxing_gloves"
+        },
+        {
+          "from": "text",
+          "relation": "above",
+          "to": "gift_box"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "boxing_day_holiday",
+      "label": "Boxing Day Holiday",
+      "description": "A public holiday observed in many countries, particularly in the United Kingdom and Commonwealth nations, occurring on December 26th. It traditionally involves gift-giving, charitable donations, and sales, often associated with post-Christmas shopping and festivities. The term 'boxing' historically referred to the practice of placing gifts or money in boxes for servants or the poor, or for giving to tradespeople. This real-world holiday is the basis for the pun in the meme, which conflates the holiday with the sport of boxing.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "boxing_day_pun_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sport_of_boxing",
+      "label": "Sport of Boxing",
+      "description": "A combat sport involving two participants throwing punches at each other with gloved hands, governed by rules and regulations. It is a globally recognized sport with professional and amateur levels, often associated with strength, discipline, and athleticism. The red boxing gloves in the image are a direct visual symbol of this sport, which is the second meaning of 'boxing' in the pun.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "boxing_gloves",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "boxing_day_pun_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "wordplay_pun",
+      "label": "Wordplay Pun",
+      "description": "A form of humor that exploits the multiple meanings of words or phrases. In this meme, the phrase 'International Boxing Day' is a pun that plays on the double meaning of 'boxing' — referring to the holiday (Boxing Day) and the sport (boxing). This requires external knowledge of the holiday and the sport to understand the joke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "boxing_day_pun_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "humor",
+      "label": "humorous emotion",
+      "description": "The image expresses a lighthearted, playful emotion through a pun-based wordplay that conflates the holiday 'Boxing Day' with the sport of boxing, creating a humorous juxtaposition of gift-giving and combat imagery.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "boxing_day_pun_mapping",
+      "label": "Boxing Day Holiday is mapped onto boxing gloves and gift box",
+      "description": "The text 'international boxing day' creates an analogical mapping by conflating the holiday 'Boxing Day' (which involves gift-giving) with the sport of boxing (symbolized by the red boxing gloves). The visual elements — the boxing gloves and the gift box — are mapped onto the dual meaning of 'boxing' in the text. The gift box represents the gift-giving aspect of the holiday, while the boxing gloves represent the sport. This mapping is central to the pun and humor of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material",
+      "description": "The user is projected onto the text 'international boxing day' as the central element that triggers the pun and humor. The text explicitly sets up the wordplay, and the user is expected to interpret the visual elements (boxing gloves, gift box) in relation to this text to understand the joke. There are no explicit deictic pronouns like 'me' or 'you', but the user is implicitly invited to engage with the text as the anchor point for the entire meme's meaning.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "general internet audience",
+      "description": "The meme is designed for a broad, general internet audience familiar with the holiday 'Boxing Day' and the sport of boxing, and capable of understanding the wordplay pun. It relies on common cultural knowledge of the holiday and the sport to create humor, making it accessible to people across various demographics who engage with internet memes and wordplay.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/10938.png",
+    "image_name": "10938.png",
+    "extraction_timestamp": "2025-12-15T14:35:03.296881",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 11,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@vocab": "http://example.org/multimodal-taxonomy#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  "@id": "http://example.org/multimodal-taxonomy#qa_d4966bba-16ee-4321-ab67-86be8965f239",
+  "@type": "QuestionAnswerPair",
+  "question": "What text is overlaid on the image?",
+  "answers": [
+    {
+      "text": "The man is wearing sunglasses",
+      "is_correct": false
+    },
+    {
+      "text": "None of the others",
+      "is_correct": false
+    },
+    {
+      "text": "He’s pointing at the camera",
+      "is_correct": false
+    },
+    {
+      "text": "it's funny because he's fat!",
+      "is_correct": true
+    }
+  ],
+  "explanation": "The overlaid text directly matches the instance 'text_chunk' label.",
+  "dimension": "TextualMaterial",
+  "relatedInstances": [
+    "text_chunk"
+  ],
+  "generationTimestamp": "2025-12-23T18:43:35.981460",
+  "generationMethod": "huggingface_api",
+  "sourceImage": {
+    "@id": "http://example.org/multimodal-taxonomy#image_02519",
+    "@type": "Image",
+    "filename": "02519.png",
+    "path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/02519.png"
+  }
+}

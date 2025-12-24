@@ -1,0 +1,26 @@
+{
+  "materializer": "AnalogicalMappingRelationsMaterialiser",
+  "dimension": "AnalogicalMapping",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial"
+  ],
+  "relations": [
+    {
+      "mapping": "mapping_fresh_prince_meghan",
+      "hasMappedEntity": "textual_material",
+      "hasMappingEntity": "visual_material"
+    },
+    {
+      "from": "visual_material",
+      "relation": "mappedOnto",
+      "to": "textual_material"
+    }
+  ],
+  "triples": [
+    ":mapping_fresh_prince_meghan :hasMappedEntity :textual_material .",
+    ":mapping_fresh_prince_meghan :hasMappingEntity :visual_material .",
+    ":visual_material :mappedOnto :textual_material ."
+  ],
+  "triples_count": 3
+}

@@ -1,0 +1,223 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: dikes-paying-for-pads-meme; hasOverallIntent: Hateful; overall-intent-description: The image depicts two women at an outdoor cafe, with the foreground woman looking sternly at the camera while the background woman looks away. The overlaid text reads, \"how dikes look when they're in line paying for their pads.\" The term \"dike\" is a derogatory slur used to demean lesbians, and the meme uses this slur to mock and stereotype lesbians by implying they are frugal or overly concerned with financial matters when purchasing feminine hygiene products. This is a hateful meme because it targets a specific sexual orientation with a pejorative term and frames the behavior of a marginalized group in a negative, mocking light, reinforcing harmful stereotypes and contributing to discrimination against lesbians.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "how dikes look when they're in line paying for their pads",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "woman_in_foreground",
+      "label": "woman with stern expression",
+      "description": "A woman with short, light-colored hair, wearing a dark green t-shirt, sitting at a table with her arms crossed. She has a small tattoo on her left forearm and is looking directly at the camera with a serious, unamused expression. She is the primary subject and focal point of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "dike_paying_for_pads_scene",
+      "label": "women_at_cafe_with_text_overlay",
+      "description": "A scene depicting two women at an outdoor cafe, with the foreground woman looking sternly at the camera while the background woman looks away. The overlaid text reads, \"how dikes look when they're in line paying for their pads.\" The term \"dike\" is a derogatory slur used to demean lesbians, and the meme uses this slur to mock and stereotype lesbians by implying they are frugal or overly concerned with financial matters when purchasing feminine hygiene products. This is a hateful meme because it targets a specific sexual orientation with a pejorative term and frames the behavior of a marginalized group in a negative, mocking light, reinforcing harmful stereotypes and contributing to discrimination against lesbians.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "woman_in_foreground",
+          "relation": "is_facing",
+          "to": "woman_in_background"
+        },
+        {
+          "from": "woman_in_foreground",
+          "relation": "is_seated_at_table",
+          "to": "table"
+        },
+        {
+          "from": "woman_in_background",
+          "relation": "is_seated_at_table",
+          "to": "table"
+        },
+        {
+          "from": "woman_in_foreground",
+          "relation": "is_staring_at_camera",
+          "to": "camera"
+        },
+        {
+          "from": "woman_in_background",
+          "relation": "is_looking_away",
+          "to": "camera"
+        },
+        {
+          "from": "table",
+          "relation": "has_item",
+          "to": "drink_with_straw"
+        },
+        {
+          "from": "table",
+          "relation": "has_item",
+          "to": "phone"
+        },
+        {
+          "from": "text_overlay",
+          "relation": "is_displayed_on",
+          "to": "image"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lesbian_slur_dike",
+      "label": "The term 'dike' as a derogatory slur for lesbians",
+      "description": "The word 'dike' is a pejorative term used to demean and insult lesbians. It is not a neutral or descriptive term and carries strong negative connotations. Its use in the meme is central to its hateful intent, as it targets a specific sexual orientation with a slur.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "stereotype_of_lesbians_as_frugal",
+      "label": "Stereotype that lesbians are overly concerned with financial matters when purchasing feminine hygiene products",
+      "description": "This stereotype implies that lesbians are frugal, cheap, or overly focused on cost-saving when buying pads, which is a demeaning and inaccurate generalization. The meme uses this stereotype to mock and ridicule lesbians, reinforcing harmful biases.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "hateful_meme_concept",
+      "label": "The concept of a hateful meme targeting a marginalized group",
+      "description": "This refers to the broader phenomenon of memes that use derogatory language, stereotypes, or imagery to demean, mock, or dehumanize a specific group, often reinforcing discrimination and prejudice. The meme's intent to target lesbians with a slur and a negative stereotype qualifies it as hateful.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dike_paying_for_pads_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "lesbian_community_as_marginalized_group",
+      "label": "Lesbians as a marginalized group facing discrimination and stereotyping",
+      "description": "Lesbians are part of the LGBTQ+ community and often face societal discrimination, prejudice, and harmful stereotypes. The meme exploits this by using a slur and mocking behavior to reinforce negative perceptions, which is a form of social harm.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "dike_paying_for_pads_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "feminine_hygiene_products_as_context",
+      "label": "The context of purchasing feminine hygiene products as a routine, necessary activity",
+      "description": "The act of buying pads is a common, everyday necessity for many women and people who menstruate. The meme's implication that lesbians are 'frugal' or 'overly concerned' with this purchase is a distortion of a normal, private, and essential activity.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "disdain",
+      "label": "stern, unamused expression",
+      "description": "The woman in the foreground has a serious, unamused facial expression with a direct gaze, conveying disdain or annoyance. Her arms are crossed, reinforcing a defensive or dismissive emotional state. This expression is directed at the viewer, suggesting irritation or contempt toward the situation or the implied stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_001",
+      "label": "The woman in the foreground is mapped as 'how dikes look' when paying for pads",
+      "description": "The text 'how dikes look when they're in line paying for their pads' explicitly maps the visual entity 'woman_in_foreground' as the stereotypical representation of a 'dike' (a derogatory term for lesbians) in the context of purchasing feminine hygiene products. The woman's stern, disdainful expression and crossed arms are used to visually embody the stereotype of being frugal or overly concerned with cost, which the text attributes to lesbians. This is a direct analogical mapping where the visual subject is identified by the text as the embodiment of the stereotype.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the visual representation of a 'dike' in the context of paying for pads",
+      "description": "The user is projected onto the woman_in_foreground, who is visually depicted with a stern, unamused expression and crossed arms, embodying the stereotype described in the text. The text 'how dikes look when they're in line paying for their pads' explicitly maps this visual entity as the embodiment of the stereotype. The user sees themselves or identifies with the stereotype being projected onto this visual material. There are no explicit deictic pronouns like 'me' or 'you' in the text, but the meme's structure and the user's interpretation of the visual material as a self-referential stereotype create an implicit projection. The projection is onto the VisualMaterial entity 'woman_in_foreground' as the stereotypical 'dike' in the context of purchasing pads.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme uses the derogatory slur 'dike' to demean lesbians and frames their behavior (paying for pads) as frugal or overly concerned with cost, which is a mocking and stereotyping attack targeting a marginalized group based on sexual orientation.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "lesbian_community_as_marginalized_group",
+      "label": "Lesbians as a marginalized group",
+      "description": "The meme targets lesbians using the derogatory slur 'dike' and a stereotype about their frugality when purchasing feminine hygiene products, indicating the intended audience is individuals who may hold or be exposed to anti-lesbian prejudice, or who may be part of a community that finds such stereotypes humorous or acceptable.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/10328.png",
+    "image_name": "10328.png",
+    "extraction_timestamp": "2025-12-15T14:08:08.101160",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 14,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,30 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "interview_scene",
+      "participants": [
+        {
+          "entity": "woman",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "woman",
+          "relation": "isBeingInterviewedBy",
+          "to": "interviewer"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":interview_scene :hasParticipant :woman .",
+    ":woman :isBeingInterviewedBy :interviewer ."
+  ],
+  "triples_count": 2
+}

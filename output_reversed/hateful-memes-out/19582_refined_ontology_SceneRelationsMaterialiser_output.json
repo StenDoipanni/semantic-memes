@@ -1,0 +1,47 @@
+{
+  "materializer": "SceneRelationsMaterialiser",
+  "dimension": "Scene",
+  "related_dimensions": [
+    "VisualMaterial"
+  ],
+  "relations": [
+    {
+      "scene": "formal_event_pair",
+      "participants": [
+        {
+          "entity": "Barack_Obama",
+          "relation": "hasParticipant"
+        },
+        {
+          "entity": "Michelle_Obama",
+          "relation": "hasParticipant"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "Barack_Obama",
+          "relation": "holdingHandsWith",
+          "to": "Michelle_Obama"
+        },
+        {
+          "from": "Barack_Obama",
+          "relation": "standingBeside",
+          "to": "Michelle_Obama"
+        },
+        {
+          "from": "Michelle_Obama",
+          "relation": "standingBeside",
+          "to": "Barack_Obama"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":formal_event_pair :hasParticipant :Barack_Obama .",
+    ":formal_event_pair :hasParticipant :Michelle_Obama .",
+    ":Barack_Obama :holdingHandsWith :Michelle_Obama .",
+    ":Barack_Obama :standingBeside :Michelle_Obama .",
+    ":Michelle_Obama :standingBeside :Barack_Obama ."
+  ],
+  "triples_count": 5
+}

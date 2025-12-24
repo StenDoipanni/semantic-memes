@@ -1,0 +1,280 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: forgive_me_allah_meme; hasOverallIntent: Hateful; overall-intent-description: The image depicts a man prostrating himself on a prayer rug in what appears to be a public setting, surrounded by police and onlookers. The overlaid text reads: 'forgive me allah.. i just can't understand why i am allowed to behead my enemies and marry little girls, but i can't eat a fucking ham sandwich.' This text is intentionally provocative and hateful, using a juxtaposition of religious piety with extreme, violent, and sexually charged accusations against Islam. It leverages the visual of a Muslim man in prayer to mock Islamic religious practices and cultural norms, particularly by framing the consumption of pork as a 'sin' while simultaneously implying that other acts (beheading enemies, marrying young girls) are 'allowed' or 'acceptable' within the faith. This is a clear example of Islamophobia, as it directly attacks the perceived moral and religious framework of Islam by mocking its practices and associating them with barbarism and hypocrisy. The meme's intent is to provoke outrage, ridicule, and reinforce negative stereotypes about Muslims, making it a hateful and harmful piece of content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk",
+      "label": "text location",
+      "description": "forgive me allah..",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man_prostrating",
+      "label": "man in prayer",
+      "description": "A man wearing a light grey shirt and dark pants is prostrating himself on a red prayer rug, with his forehead touching the ground. His posture suggests he is engaged in Islamic prayer (sujud). His head is bowed, and his hands are placed on the rug near his face. This is the central visual focus of the image.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "prayer_scene",
+      "label": "man_praying_in_public",
+      "description": "A man is prostrating himself on a prayer rug in a public outdoor setting, surrounded by police officers and onlookers. The scene depicts a moment of religious devotion juxtaposed with a public, possibly tense, environment. The man is the central focus, with police forming a line behind him and spectators observing from behind barriers.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man_prostrating",
+          "relation": "isPrayingTo",
+          "to": "police_line"
+        },
+        {
+          "from": "man_prostrating",
+          "relation": "isObservedBy",
+          "to": "onlookers"
+        },
+        {
+          "from": "police_line",
+          "relation": "surrounds",
+          "to": "man_prostrating"
+        },
+        {
+          "from": "onlookers",
+          "relation": "standsBehind",
+          "to": "police_line"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamophobia_stereotype",
+      "label": "Islamophobia Stereotype",
+      "description": "The meme relies on the stereotype that Islam is inherently violent and barbaric, particularly through the juxtaposition of religious piety with accusations of beheading enemies and marrying young girls. This stereotype is used to mock Islamic religious practices and cultural norms, reinforcing negative perceptions of Muslims and their faith.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prayer_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "sharia_law_fearmongering",
+      "label": "Sharia Law Fearmongering",
+      "description": "The meme implicitly references the fear of Sharia law, suggesting that Islamic religious practices (like the prohibition of pork) are incompatible with Western values and that adherents are morally compromised. This fear is used to frame the man’s prayer as hypocritical or barbaric.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prayer_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "violence_barbarism_claim",
+      "label": "Violence and Barbarism Claim",
+      "description": "The meme uses the stereotype that Muslims are inherently violent and barbaric, particularly by referencing the act of beheading enemies. This is a common antisemitic and Islamophobic trope used to dehumanize and demonize Muslim communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prayer_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "oppression_of_women_claim",
+      "label": "Oppression of Women Claim",
+      "description": "The meme references the stereotype that Islam oppresses women, particularly through the accusation of marrying little girls. This is a common Islamophobic trope used to portray Islamic societies as backward and misogynistic.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prayer_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "pork_prohibition",
+      "label": "Pork Prohibition in Islam",
+      "description": "The meme references the Islamic religious prohibition against eating pork, which is a core tenet of Islamic dietary laws (halal). The juxtaposition of this prohibition with the alleged 'permissibility' of other acts (beheading, marrying young girls) is used to mock Islamic religious practices.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "prayer_scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamic_prayer_routine",
+      "label": "Islamic Prayer Routine",
+      "description": "The image depicts a man in the act of sujud (prostration), which is a fundamental part of Islamic prayer (salah). The meme uses this visual to juxtapose religious devotion with accusations of barbarism, implying hypocrisy.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "man_prostrating",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "public_prayer_in_islam",
+      "label": "Public Prayer in Islam",
+      "description": "The scene of a man praying in public is a common practice in Islam, especially in Muslim-majority countries. The meme uses this to create a contrast with the accusations of barbarism, implying that religious devotion is incompatible with Western values.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "prayer_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "islamic_police_presence",
+      "label": "Islamic Police Presence",
+      "description": "The presence of police officers in the image is used to imply that the man’s prayer is being monitored or controlled, reinforcing the stereotype that Islamic practices are threatening or require state surveillance.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "prayer_scene",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "text_chunk",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "hateful_irony",
+      "label": "hateful ironic expression",
+      "description": "The emotion expressed is a form of hateful irony, where the juxtaposition of religious piety (praying) with extreme, violent, and sexually charged accusations (beheading enemies, marrying little girls) is used to mock Islamic religious practices and cultural norms. The tone is deliberately provocative and mocking, aiming to ridicule and dehumanize Muslims by framing their religious devotion as hypocritical or barbaric.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The text 'forgive me allah..' is mapped onto the man prostrating in prayer.",
+      "description": "The text 'forgive me allah..' is directly overlaid on the image and is spatially adjacent to the man prostrating on the prayer rug. This creates an analogical mapping where the man in prayer is implicitly identified as the speaker of the text, i.e., 'me' in the context of the text. The man's posture and the act of prayer are used to visually represent the speaker's plea for forgiveness, creating a direct link between the textual plea and the visual subject.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the man prostrating in prayer",
+      "description": "The user is projected onto the man prostrating on the prayer rug, as the text 'forgive me allah..' explicitly uses 'me' to refer to the speaker. The visual of the man in prayer is directly mapped to the speaker of the text, creating an analogical identification where the user sees themselves as the man in the image. This projection is reinforced by the man's posture and the context of prayer, which visually represents the plea for forgiveness.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Hateful",
+      "description": "The meme directly attacks and mocks Islamic religious practices and cultural norms, portraying Muslims as inherently violent and barbaric through the juxtaposition of religious piety with accusations of beheading enemies and marrying young girls. This is a clear example of Islamophobia and hateful content.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who hold Islamophobic views or are predisposed to anti-Muslim sentiment. The meme is designed to resonate with those who perceive Islam as inherently violent, barbaric, or incompatible with Western values, particularly through the use of stereotypes such as the oppression of women, violence, and the prohibition of pork. The visual of a Muslim man in prayer juxtaposed with hateful text is intended to provoke outrage and reinforce negative stereotypes about Muslims, making it primarily aimed at audiences who already harbor prejudice against Islam and Muslim communities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/75340.png",
+    "image_name": "75340.png",
+    "extraction_timestamp": "2025-12-19T12:35:58.939217",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 17,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}

@@ -1,0 +1,33 @@
+{
+  "materializer": "EmotionRelationsMaterialised",
+  "dimension": "EmotionExpression",
+  "related_dimensions": [
+    "VisualMaterial",
+    "TextualMaterial",
+    "Scene",
+    "BackgroundKnowledge"
+  ],
+  "relations": [
+    {
+      "emotion": "respect",
+      "expressors": [
+        {
+          "entity": "group_of_people",
+          "relation": "hasExpressor"
+        }
+      ],
+      "directRelations": [
+        {
+          "from": "group_of_people",
+          "relation": "emotionalRelationToEntity",
+          "to": "coffins_draped_with_national_flags"
+        }
+      ]
+    }
+  ],
+  "triples": [
+    ":respect :hasExpressor :group_of_people .",
+    ":group_of_people :emotionalRelationToEntity :coffins_draped_with_national_flags ."
+  ],
+  "triples_count": 2
+}

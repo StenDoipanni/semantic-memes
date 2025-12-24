@@ -1,0 +1,186 @@
+{
+  "dimensions": [
+    {
+      "class_name": "OverallIntent",
+      "class_uri": "OverallIntent",
+      "instance_name": "overallintent_instance",
+      "label": "the overallintent",
+      "description": "meme-id: i'm not saying you're retarded but you're retarded; hasOverallIntent: Harmful; overall-intent-description: The image features a man speaking into a microphone with text overlaid that reads \"i'm not saying you're retarded but you're retarded.\" The scene is a meme format that uses juxtaposition to create a paradoxical or ironic statement. The text is intentionally offensive and derogatory, using the term \"retarded\" — a historically harmful and outdated slur — to demean or insult someone. This term falls under the category of ableism, as it targets individuals with intellectual or developmental disabilities. The meme's intent is to provoke a reaction through shock value and humor derived from the offensive language, which can be harmful by reinforcing negative stereotypes and potentially causing emotional distress or harm to people with disabilities or those who are sensitive to such language. The overall intent is not to inform or educate, but to elicit a reaction through the use of a harmful and offensive term, making it a harmful meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 9
+    },
+    {
+      "class_name": "TextualMaterial",
+      "class_uri": "TextualMaterial",
+      "instance_name": "text_chunk_1",
+      "label": "top text overlay",
+      "description": "i'm not saying you're retarded",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 2
+    },
+    {
+      "class_name": "VisualMaterial",
+      "class_uri": "VisualMaterial",
+      "instance_name": "man",
+      "label": "person speaking into microphone",
+      "description": "A man with dark, messy hair and a beard, wearing a beige shirt and a beaded necklace, is speaking into a microphone. He appears to be on a stage with a blue and green background, gesturing with his right hand. His facial expression suggests he is in the middle of delivering a speech or performance. This is the central visual element of the meme.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 1
+    },
+    {
+      "class_name": "Scene",
+      "class_uri": "Scene",
+      "instance_name": "speech_scene",
+      "label": "man_delivering_speech",
+      "description": "A man is speaking into a microphone on a stage, gesturing with his hand, with text overlaid that reads 'i'm not saying you're retarded but you're retarded.' The scene is a meme format using juxtaposition to create irony or shock value.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 5,
+      "directRelations": [
+        {
+          "from": "man",
+          "relation": "speaks_into",
+          "to": "microphone"
+        },
+        {
+          "from": "man",
+          "relation": "gestures_with",
+          "to": "hand"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "ableism",
+      "label": "ableism",
+      "description": "The use of the term 'retarded' as a slur is a form of ableism, which involves discrimination and stereotyping against people with intellectual or developmental disabilities. This term is historically harmful and offensive, and its use in the meme is intended to demean and insult, reinforcing negative stereotypes and causing harm to people with disabilities.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "slur",
+      "label": "slur",
+      "description": "The word 'retarded' is a derogatory slur historically used to demean individuals with intellectual or developmental disabilities. Its use in the meme is offensive and harmful, relying on the understanding that this term is a slur to create shock value and irony.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "text_chunk_1",
+          "relation": "relatedTo"
+        },
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "intentional_offense",
+      "label": "intentional offense",
+      "description": "The meme is designed to provoke a reaction through the use of offensive language. The juxtaposition of 'I'm not saying you're retarded' with 'but you're retarded' is a rhetorical device intended to shock and offend, relying on the viewer's understanding of the term's derogatory nature.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "BackgroundKnowledge",
+      "class_uri": "BackgroundKnowledge",
+      "instance_name": "juxtaposition",
+      "label": "juxtaposition",
+      "description": "The meme uses juxtaposition to create irony or shock value by contrasting two statements that appear contradictory. The viewer must understand the context and the offensive nature of the term 'retarded' to fully grasp the meme's intent.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 6,
+      "relatedTo": [
+        {
+          "entity": "scene",
+          "relation": "relatedTo"
+        }
+      ]
+    },
+    {
+      "class_name": "EmotionExpression",
+      "class_uri": "EmotionExpression",
+      "instance_name": "mocking_irony",
+      "label": "mocking and ironic emotional expression",
+      "description": "The man's facial expression and gesture, combined with the text overlay, convey a tone of sarcastic or mocking irony. His slightly raised eyebrows, open mouth mid-speech, and gesturing hand suggest he is delivering a deliberately provocative or humorous statement, even though the content is offensive. The juxtaposition of the two lines of text creates a paradoxical and mocking effect, intended to shock or provoke.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 3
+    },
+    {
+      "class_name": "AnalogicalMapping",
+      "class_uri": "AnalogicalMapping",
+      "instance_name": "mapping_id_1",
+      "label": "The speaker is mapped as the subject of the ironic statement",
+      "description": "The visual material of the man speaking into a microphone is mapped onto the textual material 'i'm not saying you're retarded but you're retarded'. The man's expression and gesture, combined with the text, create an analogical mapping where the speaker is implicitly the subject of the rhetorical irony. The text overlays the visual scene to create a paradoxical statement, and the speaker's visual presence is the entity being referenced by the text. The mapping is established through juxtaposition and the speaker's role as the one delivering the offensive statement.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 8
+    },
+    {
+      "class_name": "SemioticProjection",
+      "class_uri": "SemioticProjection",
+      "instance_name": "semiotic_projection_1",
+      "label": "User projected onto the textual material expressing ironic insult",
+      "description": "The user is projected onto the textual material 'i'm not saying you're retarded but you're retarded' because the meme uses the phrase to directly address the viewer, implying the viewer is the target of the insult. The rhetorical structure 'I'm not saying you're retarded, but you're retarded' is a direct address to the audience, making the user the implicit subject of the statement. The projection is onto the textual material, which contains the deictic-like structure that frames the viewer as the recipient of the insult.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 10
+    },
+    {
+      "class_name": "ToxicityAssessment",
+      "class_uri": "ToxicityAssessment",
+      "instance_name": "toxicity_1",
+      "label": "Harmful",
+      "description": "The meme uses the term 'retarded' — a historically harmful and outdated slur — to demean or insult someone. This term falls under the category of ableism, as it targets individuals with intellectual or developmental disabilities. The meme's intent is to provoke a reaction through shock value and humor derived from the offensive language, which can be harmful by reinforcing negative stereotypes and potentially causing emotional distress or harm to people with disabilities or those who are sensitive to such language.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 13
+    },
+    {
+      "class_name": "TargetCommunity",
+      "class_uri": "TargetCommunity",
+      "instance_name": "audience_id",
+      "label": "audience description",
+      "description": "The target community is individuals who are familiar with internet meme culture and understand the use of offensive language for shock value and irony. This includes users who appreciate dark humor, sarcasm, and the subversion of expectations through juxtaposition. The meme relies on the audience's recognition of the term 'retarded' as a slur and their ability to interpret the paradoxical structure of the statement. The target audience likely includes those who are not sensitive to ableist language or who find humor in offensive content, often found in online communities that engage with edgy, provocative, or controversial memes. The visual of a man speaking on stage may also appeal to audiences familiar with stand-up comedy or public speaking contexts, where such rhetorical devices are sometimes used for comedic effect, even if the content is offensive.",
+      "extraction_method": "llm_extraction_huggingface",
+      "dimension_index": 11
+    }
+  ],
+  "metadata": {
+    "image_path": "/home/stefano/memes/semantic-memes/img/hateful-memes-img/75096.png",
+    "image_name": "75096.png",
+    "extraction_timestamp": "2025-12-19T12:28:50.266912",
+    "llm_provider": "huggingface",
+    "dimensions_processed": [
+      "OverallIntent",
+      "TextualMaterial",
+      "VisualMaterial",
+      "Scene",
+      "BackgroundKnowledge",
+      "EmotionExpression",
+      "AnalogicalMapping",
+      "SemioticProjection",
+      "ToxicityAssessment",
+      "TargetCommunity"
+    ],
+    "total_dimensions_found": 13,
+    "pipeline_type": "reversed"
+  },
+  "success": true
+}
