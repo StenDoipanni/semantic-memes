@@ -2,30 +2,91 @@
 
 A comprehensive pipeline for analyzing memes using Large Language Models (LLMs), Multimodal Language Models (MLMs), and Vision Language Models (VLMs) with ontological knowledge representation.
 
-## 🏗️ Architecture Overview
+## 🎯 Overview
 
-The pipeline consists of two main components that mirror the architecture diagram:
+To understand memes, we have identified several **dimensions** that capture different aspects of meme content and meaning. These dimensions are formalized in an **ontology** that provides a structured framework for analysis. The pipeline uses a **modular architecture** that:
 
-1. **Dimensions Extraction Component**: Extracts structured dimensions from memes using LLMs and ontological knowledge
-2. **Q&A Generation Component**: Generates questions and answers about memes based on extracted dimensions
+1. Takes a meme image as input
+2. Extracts dimensions using LLMs/MLMs to generate a **knowledge graph** (TTL format)
+3. Optionally **refines** the knowledge graph by adding relations between entities
+4. Uses the knowledge graph to **generate Q&A pairs** for educational purposes
 
-## 📁 Project Structure
+The architecture is designed to be **modular, refined, and always enriched** - each step builds upon the previous one, with context passing between dimensions to ensure coherent and accurate analysis.
 
+## 🏗️ Architecture
+
+The pipeline consists of two main components:
+
+1. **Knowledge Graph Generation**: Extracts structured dimensions from memes using LLMs and ontological knowledge, producing a TTL knowledge graph
+2. **Q&A Generation**: Generates educational question-answer pairs based on the extracted knowledge graph
+
+### Dimension Extraction Order
+
+Dimensions are extracted in a specific order where each step receives context from previous steps, ensuring coherent and accurate analysis:
+
+| Step | Dimension | Receives Context From |
+|------|-----------|----------------------|
+| 1 | **OverallIntent** | None (extracted first) |
+| 2 | **TextualMaterial** | OverallIntent graph |
+| 3 | **VisualMaterial** | OverallIntent graph |
+| 4 | **Scene** | OverallIntent graph + VisualMaterial entities |
+| 5 | **BackgroundKnowledge** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene entities |
+| 6 | **EmotionExpression** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge entities |
+| 7 | **AnalogicalMapping** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, EmotionExpression entities |
+| 8 | **SemioticProjection** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, AnalogicalMapping entities |
+| 9 | **ToxicityAssessment** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, EmotionExpression, AnalogicalMapping, SemioticProjection entities |
+| 10 | **TargetCommunity** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, AnalogicalMapping, ToxicityAssessment entities |
+
+### Context Passing Mechanism
+
+Each dimension extraction step receives:
+- **OverallIntent graph**: A TTL-formatted knowledge graph containing the extracted OverallIntent dimension
+- **Entity lists**: Lists of previously extracted entities from specific dimensions (e.g., VisualMaterial entities, TextualMaterial entities)
+
+This context is included in the prompt as "In Context Material for the Meme Analysis", allowing the LLM to make more informed and coherent extractions.
+
+## 📖 Running Example: Meme 02158
+
+Let's walk through a complete example using meme `02158` to illustrate the pipeline.
+
+### Input: Meme Image
+
+![Meme 02158](img/hateful-memes-img/02158.png)
+
+This meme shows a chicken with text that reads: "I like my women like I like my chickens held in captivity until I behead them."
+
+### Step 1: Knowledge Graph Generation
+
+The pipeline extracts dimensions in the specified order, building a knowledge graph. Here's a snippet from the generated TTL file showing the **ToxicityAssessment** dimension:
+
+```turtle
+:toxicity_1 rdf:type :ToxicityAssessment ;
+    rdfs:label "Mysogynous"@en ;
+    rdfs:comment "The meme uses a crude metaphor comparing women to chickens, implying they are to be controlled and ultimately killed, which is a direct attack on women based on their gender."@en ;
+    :extractionMethod "llm_extraction_huggingface" ;
+    :extractedFrom "02158.png" ;
+    :extractionTimestamp "2025-12-15T10:55:31.356497" .
 ```
-script/
-├── config.py                 # Configuration settings and constants
-├── ontology_loader.py        # OWL ontology loading and parsing
-├── llm_integration.py        # LLM provider interfaces (Claude + Ollama)
-├── dimensions_extractor.py   # Main dimensions extraction component
-├── qa_generator.py          # Q&A generation component
-├── jsonld_handler.py        # JSON-LD output formatting
-├── pipeline.py              # Main pipeline orchestrator
-├── run_pipeline.py          # Command-line interface
-├── example_usage.py         # Usage examples
-├── requirements.txt         # Python dependencies
-├── .env.example            # Environment variables template
-└── README.md               # This file
-```
+
+The complete knowledge graph includes all 10 dimensions with their extracted entities and relations. The graph is saved as `02158_refined_ontology.ttl`.
+
+### Step 2: Q&A Generation
+
+Based on the knowledge graph, the pipeline generates educational Q&A pairs for each dimension. Here's the Q&A generated for the **ToxicityAssessment** dimension:
+
+**Question:** The meme's metaphor targets which group?
+
+**Answers:**
+1. None of the others
+2. Farm animals generally
+3. **Women based on gender** ✓ (correct)
+4. Political opponents unfairly
+
+**Explanation:** The meme explicitly equates women with chickens and implies control and violence, directly attacking women by gender.
+
+The Q&A is saved in both JSON-LD and human-readable text formats:
+- `02158_qa/ToxicityAssessment/02158_ToxicityAssessment_qa_8a4fce55.jsonld`
+- `02158_qa/ToxicityAssessment/02158_ToxicityAssessment_qa_8a4fce55.txt`
 
 ## 🚀 Quick Start
 
@@ -42,108 +103,84 @@ cp .env.example .env
 # CLAUDE_API_KEY=your_claude_api_key_here
 ```
 
-### 2. Recommended: Using Batch Scripts (Easiest Method)
+### 2. Batch Processing (Recommended)
 
-**We strongly recommend using the provided batch scripts** for running the pipeline. These scripts handle environment setup, configuration, and provide convenient presets for dimension extraction.
+For processing multiple memes, use the batch scripts:
 
-#### Why Use Batch Scripts?
-
-- **Automatic Environment Setup**: Handles conda environment activation and dependency checks
-- **Pre-configured Settings**: Environment variables and paths are automatically set
-- **Convenient Presets**: Easy-to-use "Core" and "All" dimension modes
-- **Flexible Dimension Selection**: Can use presets or specify custom dimensions
-- **Error Handling**: Built-in validation and helpful error messages
-
-#### Basic Usage with Batch Scripts
-
-The main batch script is located at `scripts/sh/run_meme_pipeline.sh`. It supports two convenient modes:
-
-**Core Mode** (4 dimensions - recommended for quick analysis):
-- `TextualMaterial` - Written or textual content
-- `VisualMaterial` - Visual content elements  
-- `Scene` - Spatial arrangements and organization
-- `BackgroundKnowledge` - Contextual information and references
-
-**All Mode** (13 dimensions - comprehensive analysis):
-- All available dimensions including Core plus: `Emotion`, `ColorComposition`, `Metadata`, `AnalogicalMapping`, `OverallIntent`, `SemioticProjection`, `TargetCommunity`, `TemplateStructure`, `Toxicity`
-
-#### Examples
+#### Knowledge Graph Generation
 
 ```bash
-# Navigate to the project directory
-cd /path/to/meme-pipeline-server
+# Process all images in a directory
+./scripts/sh/batch_extract_folder.sh /path/to/images
 
-# Extract Core dimensions (4 dimensions - faster, necessary for more layered dimensions)
-./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode Core
-
-# Extract All dimensions (13 dimensions - comprehensive analysis)
-./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode All
-
-# Extract specific custom dimensions
-./scripts/sh/run_meme_pipeline.sh --image img/meme.png --dimensions "VisualMaterial TextualMaterial OverallIntent"
-
-# Use HuggingFace instead of Claude
-./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode Core --llm-provider huggingface
-
-# Specify custom output directory
-./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode All --output-dir ./custom_output
+# The script will:
+# - Extract all 10 dimensions in the specified order
+# - Generate enhanced ontology TTL files
+# - Run refinement to add relations between entities
+# - Output refined ontology TTL files
 ```
 
-#### Dimension Selection Options
+The script processes images in the background and generates:
+- `{image_name}_enhanced_ontology_reversed.ttl` - Initial knowledge graph
+- `{image_name}_refined_ontology.ttl` - Refined knowledge graph with relations
 
-1. **Use Preset Modes** (recommended):
-   - `--mode Core`: Extracts 4 core dimensions (faster, necessary for further extraction since these are the core dimensions to be used by others)
-   - `--mode All`: Extracts all 13 dimensions (comprehensive, slower)
-
-2. **Specify Custom Dimensions**:
-   - `--dimensions "Dimension1 Dimension2 ..."`: Extract only specific dimensions
-   - Example: `--dimensions "VisualMaterial TextualMaterial OverallIntent"`
-
-3. **Available Dimensions**:
-   - `VisualMaterial`, `TextualMaterial`, `Emotion`, `ColorComposition`
-   - `Scene`, `BackgroundKnowledge`, `Metadata`
-   - `AnalogicalMapping`, `OverallIntent`, `SemioticProjection`
-   - `TargetCommunity`, `TemplateStructure`, `Toxicity`
-
-#### Batch Script Help
+#### Q&A Generation
 
 ```bash
-# View all options
-./scripts/sh/run_meme_pipeline.sh --help
+# Generate Q&A for all processed memes
+./scripts/sh/batch_qa_generation_all.sh
+
+# The script will:
+# - Find all refined_ontology.ttl files
+# - Generate Q&A pairs for each dimension
+# - Save output to organized directories
 ```
 
-### 3. Alternative: Direct Python Usage (Advanced)
+### 3. Single Meme Processing
 
-If you prefer to call Python scripts directly or need more control, you can use the Python modules directly:
-
-```python
-from pipeline import analyze_meme
-from pathlib import Path
-
-# Analyze a single meme
-result = analyze_meme(
-    image_path=Path("/path/to/meme.png"),
-    selected_dimensions=["OverallIntent", "VisualMaterial", "TextualMaterial"],
-    question_types=["descriptive", "interpretive"],
-    questions_per_type=2
-)
-
-print(f"Analysis successful: {result['success']}")
-print(f"Dimensions extracted: {result['summary']['dimensions_extracted']}")
-print(f"Q&A pairs generated: {result['summary']['qa_pairs_generated']}")
-```
-
-Or via command line:
+For processing a single meme:
 
 ```bash
-# Analyze a single meme
-python scripts/py/run_pipeline.py /path/to/meme.png --mode dimension_extraction
+# Extract dimensions and generate knowledge graph
+./scripts/sh/extract_dimensions_reversed.sh img/meme.png \
+  --llm-provider huggingface \
+  --refine true \
+  --additional-kb prompts/dimension-extraction-prompts-refined/Qua-EntitiesKnowledgeBase.jsonld \
+  --additional-kb prompts/dimension-extraction-prompts-refined/AdditionalKnowledgeBase.jsonld \
+  --iterative-kb true
 
-# Analyze with specific dimensions
-python scripts/py/run_pipeline.py /path/to/meme.png --dimensions VisualMaterial TextualMaterial
+# Generate Q&A from the knowledge graph
+./scripts/sh/run_qa_generation_reversed.sh \
+  --image-path img/meme.png \
+  --output-reversed-dir ./output_reversed/hateful-memes-out \
+  --output-dir ./output_reversed/hateful_memes_out_final \
+  --llm-provider huggingface \
+  --use-ttl \
+  --ttl-file ./output_reversed/hateful-memes-out/meme_refined_ontology.ttl
+```
 
-# Use specific LLM provider
-python scripts/py/run_pipeline.py /path/to/meme.png --llm-provider claude
+## 📁 Project Structure
+
+```
+.
+├── extract_dimensions_reversed.py      # Main extraction script
+├── reversed_dimension_extraction_module.py  # Extraction logic
+├── qa_generation_module.py             # Q&A generation logic
+├── refinement_module.py                # Knowledge graph refinement
+├── config.py                           # Configuration settings
+├── ontology_loader.py                  # OWL ontology loading
+├── llm_integration.py                  # LLM provider interfaces
+├── scripts/
+│   ├── sh/
+│   │   ├── batch_extract_folder.sh    # Batch dimension extraction
+│   │   ├── batch_qa_generation_all.sh # Batch Q&A generation
+│   │   ├── extract_dimensions_reversed.sh  # Single meme extraction
+│   │   └── run_qa_generation_reversed.sh    # Single meme Q&A
+│   └── sbatch/                         # SLURM batch scripts
+├── prompts/                            # Extraction and refinement prompts
+├── memes-features/
+│   └── meme-dimensions.ttl            # Base ontology
+└── output_reversed/                    # Output directory
 ```
 
 ## 🔧 Configuration
@@ -156,156 +193,35 @@ Create a `.env` file with the following variables:
 # Claude API Configuration
 CLAUDE_API_KEY=your_claude_api_key_here
 
-# Ollama Configuration (optional)
-OLLAMA_BASE_URL=http://localhost:11434
-OLLAMA_MODEL=llama3.2:latest
+# HuggingFace Configuration (optional)
+HUGGINGFACE_TOKEN=your_hf_token_here
+HUGGINGFACE_MODEL=Qwen/Qwen3-VL-8B-Instruct
 
 # Pipeline Configuration
-OUTPUT_DIR=./output
+OUTPUT_DIR=./output_reversed
 LOG_LEVEL=INFO
 ```
 
 ### Available Dimension Classes
 
-The pipeline can extract the following dimensions from memes:
+The pipeline extracts the following dimensions from memes:
 
-- `VisualMaterial` - Visual content elements
+- `OverallIntent` - Primary purpose or intention
 - `TextualMaterial` - Written or textual content
-- `Emotion` - Emotional content and expressions
-- `ColorComposition` - Color schemes and arrangements
+- `VisualMaterial` - Visual content elements
 - `Scene` - Spatial arrangements and organization
 - `BackgroundKnowledge` - Contextual information and references
-- `Metadata` - Technical and descriptive information
-- `AnalogicalMapping` - Symbolic representations
-- `OverallIntent` - Primary purpose or intention
+- `EmotionExpression` - Emotional content and expressions
+- `AnalogicalMapping` - Symbolic representations and mappings
 - `SemioticProjection` - Projection of the User onto meme elements
-- `TargetCommunity` - Intended audience
-- `TemplateStructure` - Structural patterns
 - `ToxicityAssessment` - Harmful or offensive elements
+- `TargetCommunity` - Intended audience
 
-## 🔄 Reversed Pipeline
-
-The pipeline includes a **reversed extraction order** that starts with `OverallIntent` and passes context between dimensions. This approach ensures that later dimensions have access to previously extracted information, improving accuracy and coherence.
-
-### Reversed Pipeline Extraction Order
-
-The reversed pipeline extracts dimensions in the following order, with each step receiving context from previous steps:
-
-| Step | Dimension | Receives Context From |
-|------|-----------|----------------------|
-| 1 | **OverallIntent** | None (extracted first) |
-| 2 | **TextualMaterial** | OverallIntent graph |
-| 3 | **VisualMaterial** | OverallIntent graph |
-| 4 | **Scene** | OverallIntent graph + VisualMaterial entities |
-| 5 | **BackgroundKnowledge** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene entities |
-| 6 | **EmotionExpression** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge entities |
-| 7 | **AnalogicalMapping** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, EmotionExpression entities |
-| 8 | **SemioticProjection** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, AnalogicalMapping entities |
-| 9 | **ToxicityAssessment** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, EmotionExpression, AnalogicalMapping, SemioticProjection entities |
-| 10 | **TargetCommunity** | OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, AnalogicalMapping, ToxicityAssessment entities |
-
-#### Detailed Description
-
-1. **OverallIntent** (first - no dependencies)
-   - Extracts the primary purpose or intention behind the meme
-   - Generates a TTL graph that is passed to all subsequent steps
-
-2. **TextualMaterial** (receives OverallIntent graph as context)
-   - Extracts written or textual content
-   - Uses the OverallIntent graph to understand the meme's purpose
-
-3. **VisualMaterial** (receives OverallIntent graph as context)
-   - Extracts visual content elements
-   - Uses the OverallIntent graph to understand the meme's purpose
-
-4. **Scene** (receives OverallIntent graph + VisualMaterial entities)
-   - Extracts spatial arrangements and organization
-   - Uses OverallIntent graph and VisualMaterial entities to understand scene composition
-
-5. **BackgroundKnowledge** (receives OverallIntent graph + VisualMaterial, TextualMaterial, Scene entities)
-   - Extracts contextual information and references
-   - Uses OverallIntent graph and all previously extracted entities to identify background knowledge
-
-6. **EmotionExpression** (receives OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge entities)
-   - Extracts emotional content and affective dimensions
-   - Uses OverallIntent graph and previously extracted entities to identify emotions
-
-7. **AnalogicalMapping** (receives OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, EmotionExpression entities)
-   - Extracts symbolic representations and analogical mappings
-   - Uses OverallIntent graph and all previously extracted entities to identify mappings
-
-8. **SemioticProjection** (receives OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, AnalogicalMapping entities)
-   - Extracts user projections onto meme elements
-   - Uses OverallIntent graph and previously extracted entities to identify semiotic projections
-
-9. **ToxicityAssessment** (receives OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, EmotionExpression, AnalogicalMapping, SemioticProjection entities)
-   - Evaluates harmful or offensive elements
-   - Uses OverallIntent graph and all previously extracted entities to assess toxicity
-
-10. **TargetCommunity** (receives OverallIntent graph + VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge, AnalogicalMapping, ToxicityAssessment entities)
-    - Extracts the intended audience or community
-    - Uses OverallIntent graph and previously extracted entities to identify target community
-
-### Context Passing Mechanism
-
-Each dimension extraction step receives:
-- **OverallIntent graph**: A TTL-formatted knowledge graph containing the extracted OverallIntent dimension
-- **Entity lists**: Lists of previously extracted entities from specific dimensions (e.g., VisualMaterial entities, TextualMaterial entities)
-
-This context is included in the prompt as "In Context Material for the Meme Analysis", allowing the LLM to make more informed and coherent extractions.
-
-### Using the Reversed Pipeline
-
-To use the reversed pipeline, use the `extract_dimensions_reversed.sh` script or the Python script directly:
-
-```bash
-# Extract dimensions using reversed pipeline with Claude (default)
-./scripts/sh/extract_dimensions_reversed.sh img/meme.png
-
-# Extract dimensions using reversed pipeline with HuggingFace
-./scripts/sh/extract_dimensions_reversed.sh img/meme.png --llm-provider huggingface
-
-# Extract with refinement (adds relations between individuals)
-./scripts/sh/extract_dimensions_reversed.sh img/meme.png --refine true
-
-# Full example with all parameters
-./scripts/sh/extract_dimensions_reversed.sh img/meme.png \
-  --llm-provider huggingface \
-  --llm-model Qwen/Qwen3-VL-8B-Instruct \
-  --output-dir ./output_reversed \
-  --additional-kb prompts/dimension-extraction-prompts-refined/Qua-EntitiesKnowledgeBase.jsonld \
-  --iterative-kb true \
-  --refine true
-
-# Specify custom output directory
-./scripts/sh/extract_dimensions_reversed.sh img/meme.png --output-dir ./output_reversed
-```
-
-Or use Python directly:
-
-```bash
-# Extract dimensions using reversed pipeline with Claude
-python extract_dimensions_reversed.py img/meme.png --llm-provider claude
-
-# Extract dimensions using reversed pipeline with HuggingFace
-python extract_dimensions_reversed.py img/meme.png --llm-provider huggingface
-
-# Extract with refinement
-python extract_dimensions_reversed.py img/meme.png --refine true
-```
-
-Or use the SLURM batch script:
-
-```bash
-# Submit job to SLURM cluster
-sbatch scripts/sbatch/extract_dimensions_reversed.sbatch img/meme.png --llm-provider claude
-```
-
-### Knowledge Graph Refinement
+## 🔄 Knowledge Graph Refinement
 
 The pipeline includes a **refinement step** that adds relations between individuals in the generated knowledge graph. This step uses materializer prompts to identify and create missing relationships.
 
-#### Refinement Materializers
+### Refinement Materializers
 
 The refinement process includes four materializers that add relations:
 
@@ -325,7 +241,7 @@ The refinement process includes four materializers that add relations:
    - Adds relations between ToxicityAssessment individuals and toxic elements
    - Uses relations: `:hasToxicElement`
 
-#### What Gets Passed to Refinement Prompts
+### What Gets Passed to Refinement Prompts
 
 Each materializer receives:
 - **Target dimension individuals**: The individuals from the target dimension (e.g., AnalogicalMapping, EmotionExpression, Scene, ToxicityAssessment) with all their properties
@@ -333,7 +249,7 @@ Each materializer receives:
 - **Related dimension individuals**: Specific to each materializer (e.g., VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge)
 - **The original image**: For vision-language models
 
-#### Using Refinement
+### Using Refinement
 
 To enable refinement, add the `--refine true` flag:
 
@@ -343,17 +259,11 @@ To enable refinement, add the `--refine true` flag:
 ```
 
 This will:
-1. Extract all dimensions using the reversed pipeline
+1. Extract all dimensions in the specified order
 2. Generate `{image_name}_enhanced_ontology_reversed.ttl`
 3. Run all four materializers to add relations
 4. Generate `{image_name}_refined_ontology.ttl` with the new relations
 5. Save LLM output JSON files for each materializer
-
-#### Refinement Output
-
-The refinement process generates:
-- **Refined TTL file**: `{image_name}_refined_ontology.ttl` - Contains the original ontology plus new relation triples
-- **Materializer output files**: `{image_name}_refined_ontology_{materializer_name}_output.json` - Contains the parsed relations and generated triples for each materializer
 
 ## 📝 Q&A Generation
 
@@ -448,10 +358,10 @@ Each Q&A pair includes:
 ./scripts/sh/run_qa_generation_reversed.sh \
   --image-path img/meme.png \
   --output-reversed-dir ./output_reversed/hateful-memes-out \
-  --output-dir ./output_reversed/qa \
+  --output-dir ./output_reversed/hateful_memes_out_final \
   --llm-provider huggingface \
   --use-ttl \
-  --ttl-file ./output_reversed/hateful-memes-out/01382_refined_ontology.ttl
+  --ttl-file ./output_reversed/hateful-memes-out/02158_refined_ontology.ttl
 
 # Generate Q&A for specific dimensions only
 ./scripts/sh/run_qa_generation_reversed.sh \
@@ -459,27 +369,9 @@ Each Q&A pair includes:
   --use-ttl \
   --dimensions OverallIntent,Scene,EmotionExpression
 
-# Batch processing (using batch_qa_generation.sh)
-./scripts/sh/batch_qa_generation.sh
+# Batch processing (using batch_qa_generation_all.sh)
+./scripts/sh/batch_qa_generation_all.sh
 ```
-
-### Batch Processing
-
-The `batch_qa_generation.sh` script processes multiple images:
-1. Reads image names from `/tmp/qa_images_to_process.txt`
-2. For each image, finds the corresponding `{image_name}_refined_ontology.ttl` file
-3. Generates Q&A for all dimensions in each TTL file
-4. Saves output to `{output_dir}/{image_name}_qa/{dimension_name}/`
-
-### Available Question Types
-
-The pipeline can generate the following types of questions:
-
-- `descriptive` - Factual descriptions of visible elements
-- `analytical` - Analysis of relationships and patterns
-- `interpretive` - Interpretation of meaning and symbolism
-- `contextual` - Background knowledge and cultural context
-- `evaluative` - Evaluation and assessment
 
 ## 📊 Output Formats
 
@@ -492,39 +384,15 @@ The pipeline generates multiple output formats:
 ### 2. JSON-LD Files
 - **Standalone dimensions**: `{image_name}_dimensions_reversed.jsonld`
 - **Individual dimension files**: `dimensions/{dimension_name}/{image_name}_{instance_name}.jsonld`
-- **Standalone Q&A**: `{image_name}_qa.jsonld`
-- **Unified output**: `{image_name}_unified.jsonld`
+- **Q&A pairs**: `{image_name}_qa/{dimension_name}/{image_name}_{dimension_name}_qa_{qa_id}.jsonld`
 
 ### 3. Text Files
 - **Dimensions summary**: `{image_name}_dimensions_reversed.txt`
-- **Q&A pairs**: `{image_name}_qa.txt`
+- **Q&A pairs**: `{image_name}_qa/{dimension_name}/{image_name}_{dimension_name}_qa_{qa_id}.txt`
 
 ### 4. Raw JSON Files
 - **Raw dimensions data**: `{image_name}_dimensions_reversed_raw.json`
-- **Raw Q&A data**: `{image_name}_qa_raw.json`
 - **Materializer outputs**: `{image_name}_refined_ontology_{materializer_name}_output.json` (only if `--refine true`)
-
-### 5. Q&A Generation Output
-
-The Q&A generation script (`run_qa_generation_reversed.sh`) supports:
-- **Dimension filtering**: Generate Q&A for specific dimensions only
-- **Individual filtering**: Generate Q&A for specific individuals
-- **TTL file input**: Use TTL file directly instead of JSON-LD files
-
-Example:
-```bash
-# Generate Q&A for all dimensions
-./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png
-
-# Generate Q&A for specific dimensions
-./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png --dimensions OverallIntent,Scene,EmotionExpression
-
-# Generate Q&A for specific individuals
-./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png --individuals EmotionExpression:amusement,joy
-
-# Use TTL file directly
-./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png --use-ttl
-```
 
 ## 🔌 LLM Providers
 
@@ -542,170 +410,73 @@ Example:
 
 ## 📝 Usage Examples
 
-### Example 1: Quick Analysis with Core Dimensions (Recommended)
-
-Using the batch script with Core mode for fast analysis:
+### Example 1: Batch Processing
 
 ```bash
-# Extract 4 core dimensions from a meme
-./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode Core
+# Extract knowledge graphs for all images in a directory
+./scripts/sh/batch_extract_folder.sh /path/to/images
+
+# Generate Q&A for all processed memes
+./scripts/sh/batch_qa_generation_all.sh
 ```
 
-This extracts:
-- `TextualMaterial` - Written or textual content
-- `VisualMaterial` - Visual content elements
-- `Scene` - Spatial arrangements
-- `BackgroundKnowledge` - Contextual information
-
-### Example 2: Comprehensive Analysis with All Dimensions
-
-Using the batch script with All mode for complete analysis:
-
-```bash
-# Extract all 13 dimensions from a meme
-./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode All
-```
-
-This extracts all available dimensions including Core plus:
-- `Emotion`, `ColorComposition`, `Metadata`
-- `AnalogicalMapping`, `OverallIntent`
-- `SemioticProjection`, `TargetCommunity`
-- `TemplateStructure`, `Toxicity`
-
-### Example 3: Custom Dimension Selection
-
-Extract only specific dimensions you need:
-
-```bash
-# Extract only VisualMaterial and OverallIntent
-./scripts/sh/run_meme_pipeline.sh --image img/meme.png --dimensions "VisualMaterial OverallIntent"
-
-# Extract multiple specific dimensions
-./scripts/sh/run_meme_pipeline.sh --image img/meme.png --dimensions "TextualMaterial VisualMaterial Emotion OverallIntent"
-```
-
-### Example 4: Using Different LLM Providers
-
-```bash
-# Use Claude (default, recommended for best quality)
-./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode Core --llm-provider claude
-
-# Use HuggingFace (local, requires GPU)
-./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode Core --llm-provider huggingface
-```
-
-### Example 5: Custom Output Directory
-
-```bash
-# Save output to a custom directory
-./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode All --output-dir ./results/analysis_001
-```
-
-### Example 6: Extraction with Refinement
+### Example 2: Single Meme with Refinement
 
 ```bash
 # Extract dimensions and refine knowledge graph with relations
-./scripts/sh/extract_dimensions_reversed.sh img/meme.png --refine true
-
-# Extract with refinement using HuggingFace
-./scripts/sh/extract_dimensions_reversed.sh img/meme.png --llm-provider huggingface --refine true
-```
-
-### Example 7: Extraction with Additional Knowledge Base
-
-```bash
-# Add additional knowledge base to prompts
 ./scripts/sh/extract_dimensions_reversed.sh img/meme.png \
-  --additional-kb prompts/dimension-extraction-prompts-refined/Qua-EntitiesKnowledgeBase.jsonld
-
-# Add multiple knowledge bases and attach to all prompts
-./scripts/sh/extract_dimensions_reversed.sh img/meme.png \
+  --llm-provider huggingface \
+  --refine true \
   --additional-kb prompts/dimension-extraction-prompts-refined/Qua-EntitiesKnowledgeBase.jsonld \
   --additional-kb prompts/dimension-extraction-prompts-refined/AdditionalKnowledgeBase.jsonld \
   --iterative-kb true
+
+# Generate Q&A from refined knowledge graph
+./scripts/sh/run_qa_generation_reversed.sh \
+  --image-path img/meme.png \
+  --use-ttl \
+  --ttl-file ./output_reversed/hateful-memes-out/meme_refined_ontology.ttl \
+  --llm-provider huggingface
 ```
 
-### Example 8: Q&A Generation
+### Example 3: Q&A for Specific Dimensions
 
 ```bash
-# Generate Q&A for all dimensions
-./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png
-
-# Generate Q&A for specific dimensions
-./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png --dimensions OverallIntent,Scene,EmotionExpression
-
-# Generate Q&A for specific individuals
-./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png --individuals EmotionExpression:amusement,joy
-
-# Use TTL file directly
-./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png --use-ttl
+# Generate Q&A for specific dimensions only
+./scripts/sh/run_qa_generation_reversed.sh \
+  --image-path img/meme.png \
+  --use-ttl \
+  --dimensions OverallIntent,Scene,ToxicityAssessment
 ```
 
-### Example 9: Direct Python Usage (Advanced)
+### Example 4: Direct Python Usage (Advanced)
 
 If you need programmatic control:
 
 ```python
-from pipeline import analyze_meme
+from reversed_dimension_extraction_module import extract_dimensions_from_image_reversed
+from qa_generation_module import QAGenerationModule
 from pathlib import Path
 
-result = analyze_meme(
+# Extract dimensions
+result = extract_dimensions_from_image_reversed(
     image_path=Path("meme.png"),
-    selected_dimensions=["OverallIntent", "VisualMaterial"],
-    question_types=["descriptive", "interpretive"],
-    questions_per_type=2
+    output_dir=Path("./output"),
+    llm_provider="huggingface",
+    additional_kb_paths=[
+        Path("prompts/dimension-extraction-prompts-refined/Qua-EntitiesKnowledgeBase.jsonld")
+    ],
+    iterative_kb=True
 )
 
-if result['success']:
-    print(f"Found {result['summary']['dimensions_extracted']} dimensions")
-    print(f"Generated {result['summary']['qa_pairs_generated']} Q&A pairs")
-```
-
-## 🛠️ Advanced Usage
-
-### Custom Ontology
-
-```python
-from ontology_loader import OntologyLoader
-
-# Load custom ontology
-loader = OntologyLoader(Path("custom_ontology.ttl"))
-
-# Get available dimension classes
-classes = loader.get_dimension_classes()
-print(f"Available classes: {[c['name'] for c in classes]}")
-```
-
-### Custom LLM Configuration
-
-```python
-from llm_integration import ClaudeProvider, OllamaProvider
-
-# Custom Claude configuration
-claude = ClaudeProvider(
-    api_key="your_key",
-    model="claude-3-opus-20240229"
+# Generate Q&A
+qa_module = QAGenerationModule(llm_provider="huggingface")
+qa_result = qa_module.generate_qa_for_dimension_from_ttl(
+    dimension_name="ToxicityAssessment",
+    ttl_file=Path("./output/meme_refined_ontology.ttl"),
+    image_path=Path("meme.png"),
+    output_dir=Path("./output")
 )
-
-# Custom Ollama configuration
-ollama = OllamaProvider(
-    base_url="http://localhost:11434",
-    model="llama3.1:latest"
-)
-```
-
-### JSON-LD Customization
-
-```python
-from jsonld_handler import JSONLDHandler
-
-# Custom context
-custom_context = {
-    "@vocab": "http://example.org/custom#",
-    "custom": "http://example.org/custom#"
-}
-
-handler = JSONLDHandler(custom_context)
 ```
 
 ## 🐛 Troubleshooting
@@ -718,11 +489,12 @@ handler = JSONLDHandler(custom_context)
    ```
    - Solution: Set `CLAUDE_API_KEY` in your `.env` file
 
-2. **Ollama Not Running**
+2. **HuggingFace Model Not Found**
    ```
-   Error: Ollama provider is not available
+   Error: Model not found
    ```
-   - Solution: Start Ollama service: `ollama serve`
+   - Solution: Ensure you have internet access or the model is cached locally
+   - Check GPU availability if using CUDA
 
 3. **Image Format Not Supported**
    ```
@@ -741,26 +513,28 @@ handler = JSONLDHandler(custom_context)
 Enable verbose logging for debugging:
 
 ```bash
-python run_pipeline.py /path/to/meme.png --verbose --log-file debug.log
+# For extraction
+python extract_dimensions_reversed.py img/meme.png --llm-provider huggingface --verbose
+
+# For Q&A generation
+./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png --use-ttl --verbose
 ```
 
 ## 📚 API Reference
 
 ### Main Classes
 
-- `MemeAnalysisPipeline`: Main pipeline orchestrator
-- `DimensionsExtractor`: Dimensions extraction component
-- `QAGenerator`: Q&A generation component
-- `OntologyLoader`: Ontology loading and parsing
+- `ReversedDimensionExtractionModule`: Main dimension extraction component
+- `QAGenerationModule`: Q&A generation component
+- `RefinementModule`: Knowledge graph refinement component
+- `OntologyLoader`: OWL ontology loading and parsing
 - `LLMManager`: LLM provider management
-- `JSONLDHandler`: JSON-LD output handling
 
 ### Key Functions
 
-- `analyze_meme()`: Analyze a single meme
-- `batch_analyze_memes()`: Analyze multiple memes
-- `extract_dimensions_from_image()`: Extract dimensions only
-- `generate_qa_for_image()`: Generate Q&A only
+- `extract_dimensions_from_image_reversed()`: Extract dimensions and generate knowledge graph
+- `generate_qa_for_dimension_from_ttl()`: Generate Q&A pairs from TTL file
+- `refine_knowledge_graph()`: Add relations to knowledge graph
 
 ## 🤝 Contributing
 
@@ -777,6 +551,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 🙏 Acknowledgments
 
 - Anthropic for Claude API
-- Ollama for local LLM support
+- HuggingFace for open-source vision-language models
 - RDFLib for ontology processing
 - The meme analysis research community
