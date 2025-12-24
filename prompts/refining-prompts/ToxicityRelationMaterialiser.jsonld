@@ -1,0 +1,19 @@
+{
+    "@context": {
+      "@vocab": "http://example.org/multimodal-taxonomy#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#"
+    },
+    "@id": "ToxicityRelationsMaterialiser",
+    "@type": "owl:Class",
+    "rdfs:subClassOf": "owl:TechnicalPrompt",
+    "dimensionIndex": 21,
+    "rdfs:comment": "Prompt to materialise the relations between an occurrence of toxicity and the elements that participate in it.",
+    "rdfs:label": "Toxicity Relations Materialiser",
+    "promptExtractionText": "Prompt to materialise the relations between an occurrence of toxicity and the elements that participate in it. TASK: Consider the textual description of the meme, the toxicity assessment, and the individuals and relations already present in the graph that are involved in the toxicity. Focus on the description of the toxicity occurrence, if any, and the elements that participate in it. If there are missing individuals representing toxicity, and/or missing relations, create them. Use the relation :hasToxicElement between the toxicity individual and the element involved in the toxicity occurrence. Return the relations in a JSON array: [{\"toxicity\": \"toxicity_id\", \"hasToxicElement\": \"toxicity_element_name\"}]"
+  }
+  
+  
+  
+  

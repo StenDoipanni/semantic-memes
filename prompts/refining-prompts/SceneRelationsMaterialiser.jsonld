@@ -1,0 +1,19 @@
+{
+    "@context": {
+      "@vocab": "http://example.org/multimodal-taxonomy#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#"
+    },
+    "@id": "SceneRelationsMaterialiser",
+    "@type": "owl:Class",
+    "rdfs:subClassOf": "owl:TechnicalPrompt",
+    "dimensionIndex": 18,
+    "rdfs:comment": "Prompt to materialise the relations between a scene and its participants, and the relations between the participants.",
+    "rdfs:label": "Scene Relations Materialiser",
+    "promptExtractionText": "Prompt to materialise the relations between a scene and its participants, and the relations between the participants. TASK: Consider the textual description of the meme, the scene, and the individuals and relations already present in the graph that are involved in the scene. If the relations are not present, create them. Return the relations in a JSON array: [{\"scene\": \"scene_id\", \"participants\": [{\"entity\": \"entity1_name\", \"relation\": \"hasParticipant\"}, {\"entity\": \"entity2_name\", \"relation\": \"hasParticipant\"}], \"directRelations\": [{\"from\": \"entity1_name\", \"relation\": \"relationToEntity\", \"to\": \"entity2_name\"}]}]"
+  }
+  
+  
+  
+  

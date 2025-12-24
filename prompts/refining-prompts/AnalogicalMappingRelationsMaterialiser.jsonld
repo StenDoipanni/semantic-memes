@@ -1,0 +1,19 @@
+{
+    "@context": {
+      "@vocab": "http://example.org/multimodal-taxonomy#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#"
+    },
+    "@id": "AnalogicalMappingRelationsMaterialiser",
+    "@type": "owl:Class",
+    "rdfs:subClassOf": "owl:TechnicalPrompt",
+    "dimensionIndex": 20,
+    "rdfs:comment": "Prompt to materialise the relations between an emotion and its expressors.",
+    "rdfs:label": "Analogical Mapping Relations Materialiser",
+    "promptExtractionText": "TASK: Consider the textual description of the meme, the analogical mapping, and the individuals and relations already present in the graph that are involved in the analogical mapping assertion. e.g. there is a 'mapping_1' entity but no relations between that entity and the VisualMaterial and TextualMaterial entities that are involved in the mapping. If the relations are not present, create them. Use the relations :hasMappedEntity and :hasMappingEntity between the mapping entity and the entities it involves. Use the relation :mappedOnto between the mapping entity and the mapped entity (usually some VisualMaterial :mappedOnto some TextualMaterial). Return the relations in a JSON array: [{\"mapping\": \"mapping_id\", \"hasMappedEntity\": \"textual_entity_name\", \"hasMappingEntity\": \"visual_entity_name\"}, {\"from\": \"visual_entity_name\", \"relation\": \"mappedOnto\", \"to\": \"textual_entity_name\"}]"
+  }
+  
+  
+  
+  

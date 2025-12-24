@@ -24,8 +24,10 @@ if str(REPO_ROOT) not in sys.path:
 import os
 # API key should be set via environment variable or .env file
 # Do not hardcode API keys in version control
-if not os.getenv("CLAUDE_API_KEY"):
-    raise ValueError("CLAUDE_API_KEY environment variable is not set. Please set it in your environment or .env file.")
+# Only require Claude API key if using Claude provider
+llm_provider = os.getenv("LLM_PROVIDER", "claude").lower()
+if llm_provider == "claude" and not os.getenv("CLAUDE_API_KEY"):
+    raise ValueError("CLAUDE_API_KEY environment variable is not set. Please set it in your environment or .env file when using Claude provider.")
 
 # Set HuggingFace environment variables if needed
 if not os.getenv("HUGGINGFACE_MODEL"):

@@ -1,0 +1,1439 @@
+@prefix : <http://w3c.org/memes-ontology/general#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://w3c.org/memes-ontology/general#> .
+
+<http://w3c.org/memes-ontology/general#> rdf:type owl:Ontology ;
+                                          rdfs:comment "An ontology for analyzing memes including textual and visual materials with their interrelations"@en ;
+                                          rdfs:label "Multimodal Content Analysis Taxonomy"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://w3c.org/memes-ontology/general#dimensionIndex
+:dimensionIndex rdf:type owl:AnnotationProperty .
+
+
+###  http://w3c.org/memes-ontology/general#promptExtractionText
+:promptExtractionText rdf:type owl:AnnotationProperty .
+
+
+###  http://w3c.org/memes-ontology/general#prototypicalQuestions
+:prototypicalQuestions rdf:type owl:AnnotationProperty .
+
+
+###  http://w3c.org/memes-ontology/general#relationIndex
+:relationIndex rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://w3c.org/memes-ontology/general#backgroundPreserving
+:backgroundPreserving rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :superimposedOn ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :TextualMaterial
+                                                  :VisualMaterial
+                                                )
+                                  ] ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                   owl:unionOf ( :TextualMaterial
+                                                 :VisualMaterial
+                                               )
+                                 ] ;
+                      :relationIndex 1 ;
+                      rdfs:comment """Indicates one element placed only over neutral areas to preserve important content of another dimension.
+E.g. text placed only over neutral areas to preserve important visual content in memes"""@en ;
+                      rdfs:label "background preserving"@en .
+
+
+###  http://w3c.org/memes-ontology/general#causallyRelatedTo
+:causallyRelatedTo rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :consilientWith ;
+                   rdfs:domain owl:Thing ;
+                   rdfs:range owl:Thing ;
+                   :relationIndex 2 ;
+                   rdfs:comment "Indicates one dimension being causally related with another in memes, e.g. text explaining why visual situation exists"@en ;
+                   rdfs:label "causally related to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#colorMatchedIntegratedWith
+:colorMatchedIntegratedWith rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :compositionallyIntegratedWith ;
+                            rdfs:domain owl:Thing ;
+                            rdfs:range owl:Thing ;
+                            :relationIndex 3 ;
+                            rdfs:comment "Indicates text adopting and harmonizing with the visual color schemes and palette in memes"@en ;
+                            rdfs:label "color matched integrated with"@en .
+
+
+###  http://w3c.org/memes-ontology/general#comparativelyPositionedTo
+:comparativelyPositionedTo rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :semanticallyAdjacentTo ;
+                           rdfs:domain [ rdf:type owl:Class ;
+                                         owl:unionOf ( :TextualMaterial
+                                                       :VisualMaterial
+                                                     )
+                                       ] ;
+                           rdfs:range [ rdf:type owl:Class ;
+                                        owl:unionOf ( :TextualMaterial
+                                                      :VisualMaterial
+                                                    )
+                                      ] ;
+                           :relationIndex 4 ;
+                           rdfs:comment "Indicates text positioned between elements being compared or contrasted in memes"@en ;
+                           rdfs:label "comparatively positioned to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#complementaryTo
+:complementaryTo rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :contextuallyExpanding ;
+                 rdfs:domain owl:Thing ;
+                 rdfs:range owl:Thing ;
+                 :relationIndex 5 ;
+                 rdfs:comment "Indicates dimensions working together to provide complete understanding through mutual supplementation in memes"@en ;
+                 rdfs:label "complementary to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#compositionallyIntegratedWith
+:compositionallyIntegratedWith rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :relatesTo ;
+                               rdfs:domain owl:Thing ;
+                               rdfs:range owl:Thing ;
+                               :relationIndex 6 ;
+                               rdfs:comment "Indicates compositional design integration between dimension instances"@en ;
+                               rdfs:label "compositionally integrated with"@en .
+
+
+###  http://w3c.org/memes-ontology/general#consilientWith
+:consilientWith rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :relatesTo ;
+                rdfs:domain owl:Thing ;
+                rdfs:range owl:Thing ;
+                :relationIndex 7 ;
+                rdfs:comment "Indicates one dimension bolsters or reinforces another"@en ;
+                rdfs:label "amplifies"@en .
+
+
+###  http://w3c.org/memes-ontology/general#contextuallyExpanding
+:contextuallyExpanding rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :consilientWith ;
+                       rdfs:domain owl:Thing ;
+                       rdfs:range owl:Thing ;
+                       :relationIndex 8 ;
+                       rdfs:comment "Indicates one dimension providing background information and context for another. E.g. textual dimension providing background to visual elements in memes."@en ;
+                       rdfs:label "contextually expanding"@en .
+
+
+###  http://w3c.org/memes-ontology/general#contextuallyReferentAdjacentTo
+:contextuallyReferentAdjacentTo rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :semanticallyAdjacentTo ;
+                                rdfs:domain [ rdf:type owl:Class ;
+                                              owl:unionOf ( :TextualMaterial
+                                                            :VisualMaterial
+                                                          )
+                                            ] ;
+                                rdfs:range [ rdf:type owl:Class ;
+                                             owl:unionOf ( :TextualMaterial
+                                                           :VisualMaterial
+                                                         )
+                                           ] ;
+                                :relationIndex 9 ;
+                                rdfs:comment "Indicates text grouped near semantically related visual elements in memes"@en ;
+                                rdfs:label "contextually referent adjacent to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#contradicts
+:contradicts rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :relatesTo ;
+             rdfs:domain owl:Thing ;
+             rdfs:range owl:Thing ;
+             :relationIndex 10 ;
+             rdfs:comment "Indicates contradictory relationship between dimension instances"@en ;
+             rdfs:label "contradicts"@en .
+
+
+###  http://w3c.org/memes-ontology/general#descriptivelyAlignedWith
+:descriptivelyAlignedWith rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :consilientWith ;
+                          rdfs:domain owl:Thing ;
+                          rdfs:range owl:Thing ;
+                          :relationIndex 11 ;
+                          rdfs:comment "Indicates one dimension describing the other, usually text literally describing visual content in memes"@en ;
+                          rdfs:label "descriptively aligned with"@en .
+
+
+###  http://w3c.org/memes-ontology/general#diagonallyAdjacentTo
+:diagonallyAdjacentTo rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :geometricallyAdjacentTo ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :TextualMaterial
+                                                  :VisualMaterial
+                                                )
+                                  ] ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                   owl:unionOf ( :TextualMaterial
+                                                 :VisualMaterial
+                                               )
+                                 ] ;
+                      :relationIndex 12 ;
+                      rdfs:comment "Indicates corner and diagonal adjacency between dimension instances in memes"@en ;
+                      rdfs:label "diagonally adjacent to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#diegeticallyIntegratedWith
+:diegeticallyIntegratedWith rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :relatesTo ;
+                            rdfs:domain owl:Thing ;
+                            rdfs:range owl:Thing ;
+                            :relationIndex 13 ;
+                            rdfs:comment "Indicates diegetic integration within the same fictional world"@en ;
+                            rdfs:label "diegetically integrated with"@en .
+
+
+###  http://w3c.org/memes-ontology/general#dramaticallyIronicalTo
+:dramaticallyIronicalTo rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :contradicts ;
+                        rdfs:domain owl:Thing ;
+                        rdfs:range owl:Thing ;
+                        :relationIndex 14 ;
+                        rdfs:comment "Indicates one dimension revealing information another dimension does not provide in memes, e.g. text revealing information visuals don't show"@en ;
+                        rdfs:label "dramatically ironical to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#entityOccluding
+:entityOccluding rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :selectivelyMasking ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :TextualMaterial
+                                             :VisualMaterial
+                                           )
+                             ] ;
+                 rdfs:range [ rdf:type owl:Class ;
+                              owl:unionOf ( :TextualMaterial
+                                            :VisualMaterial
+                                          )
+                            ] ;
+                 :relationIndex 15 ;
+                 rdfs:comment "Indicates text strategically hiding or revealing specific objects or entities in memes"@en ;
+                 rdfs:label "entity occluding"@en .
+
+
+###  http://w3c.org/memes-ontology/general#environmentallyTextualIn
+:environmentallyTextualIn rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :diegeticallyIntegratedWith ;
+                          rdfs:domain owl:Thing ;
+                          rdfs:range owl:Thing ;
+                          rdfs:comment "Indicates text naturally occurring in the depicted meme scene environment"@en ;
+                          rdfs:label "environmentally textual in"@en ;
+                          owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://w3c.org/memes-ontology/general#faceMasking
+:faceMasking rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :entityOccluding ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :TextualMaterial
+                                         :VisualMaterial
+                                       )
+                         ] ;
+             rdfs:range :VisualMaterial ;
+             :relationIndex 16 ,
+                            17 ;
+             rdfs:comment "Indicates text covering faces for anonymization or emphasis purposes in memes"@en ;
+             rdfs:label "face masking"@en .
+
+
+###  http://w3c.org/memes-ontology/general#geometricallyAdjacentTo
+:geometricallyAdjacentTo rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :relatesTo ;
+                         rdfs:domain [ rdf:type owl:Class ;
+                                       owl:unionOf ( :TextualMaterial
+                                                     :VisualMaterial
+                                                   )
+                                     ] ;
+                         rdfs:range [ rdf:type owl:Class ;
+                                      owl:unionOf ( :TextualMaterial
+                                                    :VisualMaterial
+                                                  )
+                                    ] ;
+                         :relationIndex 18 ;
+                         rdfs:comment "Indicates spatial geometric adjacency between dimension instances"@en ;
+                         rdfs:label "geometrically adjacent to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasInterrelation
+:hasInterrelation rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Dimension ;
+                  rdfs:range :Dimension ;
+                  :relationIndex 19 ;
+                  rdfs:comment "General property linking a dimension instance to its interrelation with another dimension"@en ;
+                  rdfs:label "has interrelation"@en .
+
+
+###  http://w3c.org/memes-ontology/general#horizontallyAdjacentTo
+:horizontallyAdjacentTo rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :geometricallyAdjacentTo ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( :TextualMaterial
+                                                    :VisualMaterial
+                                                  )
+                                    ] ;
+                        rdfs:range [ rdf:type owl:Class ;
+                                     owl:unionOf ( :TextualMaterial
+                                                   :VisualMaterial
+                                                 )
+                                   ] ;
+                        :relationIndex 20 ;
+                        rdfs:comment "Indicates left/right spatial adjacency between dimension instances in memes"@en ;
+                        rdfs:label "horizontally adjacent to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#metaphoricallyMapsTo
+:metaphoricallyMapsTo rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :relatesTo ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :BackgroundKnowledge
+                                                  :User
+                                                )
+                                  ] ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                   owl:unionOf ( :TextualMaterial
+                                                 :VisualMaterial
+                                               )
+                                 ] ;
+                      :relationIndex 21 ;
+                      rdfs:comment "Indicates metaphorical or analogical mapping between dimension instances"@en ;
+                      rdfs:label "metaphorically maps to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#modallyContradicting
+:modallyContradicting rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :contradicts ;
+                      rdfs:domain owl:Thing ;
+                      rdfs:range owl:Thing ;
+                      :relationIndex 22 ;
+                      rdfs:comment "Indicates one dimension showing certainty versus another dimension showing ambiguity in memes, e.g. text certainty vs. visual ambiguity"@en ;
+                      rdfs:label "modally contradicting"@en .
+
+
+###  http://w3c.org/memes-ontology/general#motionBlurIntegratedWith
+:motionBlurIntegratedWith rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :superimposedOn ;
+                          rdfs:domain [ rdf:type owl:Class ;
+                                        owl:unionOf ( :TextualMaterial
+                                                      :VisualMaterial
+                                                    )
+                                      ] ;
+                          rdfs:range [ rdf:type owl:Class ;
+                                       owl:unionOf ( :TextualMaterial
+                                                     :VisualMaterial
+                                                   )
+                                     ] ;
+                          :relationIndex 23 ;
+                          rdfs:comment "Indicates text following movement paths and kinetic lines within dynamic visuals in memes"@en ;
+                          rdfs:label "motion blur integrated with"@en .
+
+
+###  http://w3c.org/memes-ontology/general#narrativeFlowAdjacentTo
+:narrativeFlowAdjacentTo rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :semanticallyAdjacentTo ;
+                         rdfs:domain [ rdf:type owl:Class ;
+                                       owl:unionOf ( :TextualMaterial
+                                                     :VisualMaterial
+                                                   )
+                                     ] ;
+                         rdfs:range [ rdf:type owl:Class ;
+                                      owl:unionOf ( :TextualMaterial
+                                                    :VisualMaterial
+                                                  )
+                                    ] ;
+                         :relationIndex 24 ;
+                         rdfs:comment "Indicates text following visual story progression and narrative sequence in memes"@en ;
+                         rdfs:label "narrative flow adjacent to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#objectEmbeddedIn
+:objectEmbeddedIn rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :visualWorldPartOf ;
+                  rdfs:domain owl:Thing ;
+                  rdfs:range owl:Thing ;
+                  :relationIndex 25 ;
+                  rdfs:comment "Indicates text naturally appearing on clothing, objects, and surfaces within meme scenes"@en ;
+                  rdfs:label "object embedded in"@en .
+
+
+###  http://w3c.org/memes-ontology/general#opaqueOverlaidOn
+:opaqueOverlaidOn rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :superimposedOn ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( :TextualMaterial
+                                              :VisualMaterial
+                                            )
+                              ] ;
+                  rdfs:range [ rdf:type owl:Class ;
+                               owl:unionOf ( :TextualMaterial
+                                             :VisualMaterial
+                                           )
+                             ] ;
+                  :relationIndex 26 ;
+                  rdfs:comment "Indicates text blocks that completely obscure underlying visual content in memes"@en ;
+                  rdfs:label "opaque overlaid on"@en .
+
+
+###  http://w3c.org/memes-ontology/general#outlinedStrokedOn
+:outlinedStrokedOn rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :superimposedOn ;
+                   rdfs:domain owl:Thing ;
+                   rdfs:range owl:Thing ;
+                   rdfs:comment "Indicates text with outlines or strokes to maintain readability over complex backgrounds in memes"@en ;
+                   rdfs:label "outlined stroked on"@en ;
+                   owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://w3c.org/memes-ontology/general#perimeterFraming
+:perimeterFraming rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :geometricallyAdjacentTo ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( :TextualMaterial
+                                              :VisualMaterial
+                                            )
+                              ] ;
+                  rdfs:range [ rdf:type owl:Class ;
+                               owl:unionOf ( :TextualMaterial
+                                             :VisualMaterial
+                                           )
+                             ] ;
+                  :relationIndex 27 ,
+                                 28 ;
+                  rdfs:comment "Indicates text surrounding visual content as a frame or border in memes"@en ;
+                  rdfs:label "perimeter framing"@en .
+
+
+###  http://w3c.org/memes-ontology/general#perspectivallyContradicting
+:perspectivallyContradicting rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :contradicts ;
+                             rdfs:domain owl:Thing ;
+                             rdfs:range owl:Thing ;
+                             :relationIndex 29 ;
+                             rdfs:comment "Indicates two dimensions offering different viewpoints on another dimension in memes, e.g. same visual content from different perspectives"@en ;
+                             rdfs:label "perspectivally contradicting"@en .
+
+
+###  http://w3c.org/memes-ontology/general#perspectiveAlignedWith
+:perspectiveAlignedWith rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :compositionallyIntegratedWith ;
+                        rdfs:domain owl:Thing ;
+                        rdfs:range owl:Thing ;
+                        :relationIndex 30 ;
+                        rdfs:comment "Indicates text following the perspective, depth, and vanishing points of memes"@en ;
+                        rdfs:label "perspective aligned with"@en .
+
+
+###  http://w3c.org/memes-ontology/general#pointingAdjacentTo
+:pointingAdjacentTo rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :semanticallyAdjacentTo ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :TextualMaterial
+                                                :VisualMaterial
+                                              )
+                                ] ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                 owl:unionOf ( :TextualMaterial
+                                               :VisualMaterial
+                                             )
+                               ] ;
+                    :relationIndex 31 ;
+                    rdfs:comment "Indicates text positioned to point at or direct attention to specific elements in memes"@en ;
+                    rdfs:label "pointing adjacent to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#relatesTo
+:relatesTo rdf:type owl:ObjectProperty ;
+           rdfs:domain owl:Thing ;
+           rdfs:range owl:Thing ;
+           :relationIndex 32 ;
+           rdfs:comment "General property indicating a relationship between two dimension instances"@en ;
+           rdfs:label "relates to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#rhythmicallyIntegratedWith
+:rhythmicallyIntegratedWith rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :compositionallyIntegratedWith ;
+                            rdfs:domain owl:Thing ;
+                            rdfs:range owl:Thing ;
+                            :relationIndex 33 ;
+                            rdfs:comment "Indicates text spacing and rhythm matching visual patterns and compositional flow in memes"@en ;
+                            rdfs:label "rhythmically integrated with"@en .
+
+
+###  http://w3c.org/memes-ontology/general#selectivelyMasking
+:selectivelyMasking rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :opaqueOverlaidOn ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :TextualMaterial
+                                                :VisualMaterial
+                                              )
+                                ] ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                 owl:unionOf ( :TextualMaterial
+                                               :VisualMaterial
+                                             )
+                               ] ;
+                    :relationIndex 34 ;
+                    rdfs:comment "Indicates strategic placement of text to selectively hide or reveal specific content in memes"@en ;
+                    rdfs:label "selectively masking"@en .
+
+
+###  http://w3c.org/memes-ontology/general#semanticallyAdjacentTo
+:semanticallyAdjacentTo rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :relatesTo ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( :TextualMaterial
+                                                    :VisualMaterial
+                                                  )
+                                    ] ;
+                        rdfs:range [ rdf:type owl:Class ;
+                                     owl:unionOf ( :TextualMaterial
+                                                   :VisualMaterial
+                                                 )
+                                   ] ;
+                        :relationIndex 35 ;
+                        rdfs:comment "Indicates semantic-based adjacency between dimension instances"@en ;
+                        rdfs:label "semantically adjacent to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#semiTransparentOverlaidOn
+:semiTransparentOverlaidOn rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :superimposedOn ;
+                           rdfs:domain [ rdf:type owl:Class ;
+                                         owl:unionOf ( :TextualMaterial
+                                                       :VisualMaterial
+                                                     )
+                                       ] ;
+                           rdfs:range [ rdf:type owl:Class ;
+                                        owl:unionOf ( :TextualMaterial
+                                                      :VisualMaterial
+                                                    )
+                                      ] ;
+                           :relationIndex 36 ;
+                           rdfs:comment "Indicates text that blends with underlying visual content through transparency in memes"@en ;
+                           rdfs:label "semi-transparent overlaid on"@en .
+
+
+###  http://w3c.org/memes-ontology/general#shadowGlowEffectOn
+:shadowGlowEffectOn rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :superimposedOn ;
+                    rdfs:domain owl:Thing ;
+                    rdfs:range owl:Thing ;
+                    rdfs:comment "Indicates text with shadow or glow effects for visual separation from background in memes"@en ;
+                    rdfs:label "shadow glow effect on"@en ;
+                    owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://w3c.org/memes-ontology/general#situationallyIronicalTo
+:situationallyIronicalTo rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :contradicts ;
+                         rdfs:domain owl:Thing ;
+                         rdfs:range owl:Thing ;
+                         :relationIndex 37 ,
+                                        38 ;
+                         rdfs:comment "Indicates one dimension describing a situation that contradicts expectations set by another dimension in memes"@en ;
+                         rdfs:label "situationally ironical to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#speechThoughtIntegratedWith
+:speechThoughtIntegratedWith rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :diegeticallyIntegratedWith ;
+                             rdfs:domain :TextualMaterial ;
+                             rdfs:range owl:Thing ;
+                             :relationIndex 39 ;
+                             rdfs:comment "Indicates text representing character dialogue, thoughts, or internal communication in memes"@en ;
+                             rdfs:label "speech thought integrated with"@en .
+
+
+###  http://w3c.org/memes-ontology/general#superimposedOn
+:superimposedOn rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :relatesTo ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :TextualMaterial
+                                            :VisualMaterial
+                                          )
+                            ] ;
+                rdfs:range [ rdf:type owl:Class ;
+                             owl:unionOf ( :TextualMaterial
+                                           :VisualMaterial
+                                         )
+                           ] ;
+                :relationIndex 40 ;
+                rdfs:comment "Indicates direct overlay relationship between dimension instances"@en ;
+                rdfs:label "superimposed on"@en .
+
+
+###  http://w3c.org/memes-ontology/general#temporallyRelatedTo
+:temporallyRelatedTo rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :consilientWith ;
+                     rdfs:domain owl:Thing ;
+                     rdfs:range owl:Thing ;
+                     :relationIndex 41 ;
+                     rdfs:comment "Indicates one dimension being temporally related with another in memes, e.g. text adding before/after context to visual material"@en ;
+                     rdfs:label "temporally related to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#underpinsCosmicIronyOf
+:underpinsCosmicIronyOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :consilientWith ;
+                        rdfs:domain :TextualMaterial ;
+                        rdfs:range :VisualMaterial ;
+                        :relationIndex 42 ;
+                        rdfs:comment "Indicates text highlighting the absurdity or ironic nature of the visual situation in memes"@en ;
+                        rdfs:label "cosmically ironical to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#valuationallyContradicting
+:valuationallyContradicting rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :contradicts ;
+                            rdfs:domain owl:Thing ;
+                            rdfs:range owl:Thing ;
+                            :relationIndex 43 ;
+                            rdfs:comment "Indicates one dimension embodying certain values versus another dimension embodying opposing values in memes, e.g. text and visuals representing conflicting moral or aesthetic values"@en ;
+                            rdfs:label "valuationally contradicting"@en .
+
+
+###  http://w3c.org/memes-ontology/general#verballyIronicalTo
+:verballyIronicalTo rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :contradicts ;
+                    rdfs:domain owl:Thing ;
+                    rdfs:range owl:Thing ;
+                    :relationIndex 44 ;
+                    rdfs:comment "Indicates text saying the opposite of another dimension in memes, e.g. contradicting visual reality"@en ;
+                    rdfs:label "verbally ironical to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#verticallyAdjacentTo
+:verticallyAdjacentTo rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :geometricallyAdjacentTo ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :TextualMaterial
+                                                  :VisualMaterial
+                                                )
+                                  ] ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                   owl:unionOf ( :TextualMaterial
+                                                 :VisualMaterial
+                                               )
+                                 ] ;
+                      :relationIndex 45 ;
+                      rdfs:comment "Indicates above/below spatial adjacency between dimension instances in memes"@en ;
+                      rdfs:label "vertically adjacent to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#visualWorldPartOf
+:visualWorldPartOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :diegeticallyIntegratedWith ;
+                   rdfs:domain owl:Thing ;
+                   rdfs:range owl:Thing ;
+                   :relationIndex 46 ;
+                   rdfs:comment "Indicates text appearing on signs, books, screens, and other objects within the meme world"@en ;
+                   rdfs:label "visual world part of"@en .
+
+
+###  http://w3c.org/memes-ontology/general#visuallyCompositionCompliantWith
+:visuallyCompositionCompliantWith rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf :compositionallyIntegratedWith ;
+                                  rdfs:domain owl:Thing ;
+                                  rdfs:range owl:Thing ;
+                                  :relationIndex 47 ;
+                                  rdfs:comment "Indicates typography that conforms to and enhances the geometric structure of memes"@en ;
+                                  rdfs:label "visually composition compliant with"@en .
+
+
+###  http://w3c.org/memes-ontology/general#relatedTo
+:relatedTo rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :relatesTo ;
+           rdfs:domain owl:Thing ;
+           rdfs:range owl:Thing ;
+           :relationIndex 48 ;
+           rdfs:comment "General property indicating a relationship between two entities"@en ;
+           rdfs:label "related to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasExpressor
+:hasExpressor rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :relatesTo ;
+              rdfs:domain owl:Thing ;
+              rdfs:range owl:Thing ;
+              :relationIndex 49 ;
+              rdfs:comment "Indicates an entity that expresses or manifests an emotion or other dimension"@en ;
+              rdfs:label "has expressor"@en .
+
+
+###  http://w3c.org/memes-ontology/general#mappedOnto
+:mappedOnto rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :metaphoricallyMapsTo ;
+            rdfs:domain owl:Thing ;
+            rdfs:range owl:Thing ;
+            :relationIndex 50 ;
+            rdfs:comment "Indicates a metaphorical or analogical mapping from one entity to another"@en ;
+            rdfs:label "mapped onto"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasParticipant
+:hasParticipant rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :relatesTo ;
+                rdfs:domain owl:Thing ;
+                rdfs:range owl:Thing ;
+                :relationIndex 51 ;
+                rdfs:comment "Indicates an entity that participates in a scene or event"@en ;
+                rdfs:label "has participant"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasMappedEntity
+:hasMappedEntity rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :metaphoricallyMapsTo ;
+                 rdfs:domain owl:Thing ;
+                 rdfs:range owl:Thing ;
+                 :relationIndex 52 ;
+                 rdfs:comment "Indicates the target entity in an analogical mapping relationship"@en ;
+                 rdfs:label "has mapped entity"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasMappingEntity
+:hasMappingEntity rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :metaphoricallyMapsTo ;
+                  rdfs:domain owl:Thing ;
+                  rdfs:range owl:Thing ;
+                  :relationIndex 53 ;
+                  rdfs:comment "Indicates the source entity in an analogical mapping relationship"@en ;
+                  rdfs:label "has mapping entity"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasToxicElement
+:hasToxicElement rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :relatesTo ;
+                 rdfs:domain owl:Thing ;
+                 rdfs:range owl:Thing ;
+                 :relationIndex 54 ;
+                 rdfs:comment "Indicates an entity that contains or exhibits toxic, harmful, or problematic elements"@en ;
+                 rdfs:label "has toxic element"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasAssertion
+:hasAssertion rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :relatesTo ;
+              rdfs:domain owl:Thing ;
+              rdfs:range owl:Thing ;
+              :relationIndex 55 ;
+              rdfs:comment "Indicates a meme object that has an assertion about its content"@en ;
+              rdfs:label "has assertion"@en .
+
+
+###  http://w3c.org/memes-ontology/general#asserts
+:asserts rdf:type owl:ObjectProperty ;
+         rdfs:domain owl:Thing ;
+         rdfs:range owl:Thing ;
+         rdfs:comment "Indicates that an assertion asserts something about a meme or its content"@en ;
+         rdfs:label "asserts"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasToxicityValue
+:hasToxicityValue rdf:type owl:DatatypeProperty ;
+                  rdfs:domain owl:Thing ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:comment "Indicates whether a meme has toxicity (true) or not (false)"@en ;
+                  rdfs:label "has toxicity value"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasToxicityType
+:hasToxicityType rdf:type owl:DatatypeProperty ;
+                 rdfs:domain owl:Thing ;
+                 rdfs:range rdfs:Literal ;
+                 rdfs:comment "Indicates the type/label of toxicity found in the meme"@en ;
+                 rdfs:label "has toxicity type"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasToxicityExplanation
+:hasToxicityExplanation rdf:type owl:DatatypeProperty ;
+                         rdfs:domain owl:Thing ;
+                         rdfs:range rdfs:Literal ;
+                         rdfs:comment "Provides an explanation of the toxicity found in the meme"@en ;
+                         rdfs:label "has toxicity explanation"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3c.org/memes-ontology/general#BackgroundKnowledge
+:BackgroundKnowledge rdf:type owl:Class ;
+                     rdfs:subClassOf :Dimension ;
+                     :dimensionIndex 6 ;
+                     :promptExtractionText "Extract Background Knowledge elements from the image. Background Knowledge includes: cultural references, historical context, social knowledge, domain-specific information, contextual cues, and background information. For each knowledge element found, provide: 1) A descriptive instance_name (e.g., 'cultural_reference', 'historical_context'), 2) A natural language label (e.g., 'the cultural reference', 'the historical context'), 3) A brief description of the knowledge or context required to understand the element. Focus on information that viewers need to know to fully comprehend the meme. Example output format: {\"instance_name\": \"cultural_reference\", \"label\": \"the cultural reference\", \"description\": \"Reference to the 'This is fine' dog meme, requiring knowledge of internet culture to understand the irony\"}"@en ;
+                     :prototypicalQuestions """1. What specific cultural, historical, or social events does this meme reference? (Identify any real-world contexts, news events, or historical moments that inform the meme's meaning)
+
+2. What pop culture knowledge is required to understand this meme? (Consider references to movies, TV shows, music, celebrities, books, games, or other entertainment media)
+
+3. Are there internet culture or meme-specific references embedded in this content? (Look for callbacks to other memes, internet trends, platform-specific culture, or online communities)
+
+4. What demographic or community-specific knowledge does the meme assume? (Consider age groups, geographic locations, professional fields, hobby communities, or social groups)
+
+5. What current events or trending topics does this meme engage with? (Identify connections to recent news, viral content, or ongoing social discussions)
+
+6. Are there linguistic or language-specific elements that require particular knowledge? (Consider wordplay, idioms, slang, or references that depend on specific language competency)
+
+7. What institutional or systemic knowledge is assumed? (Look for references to political systems, educational experiences, workplace culture, or social structures)
+
+8. Does this meme build upon or respond to other existing memes or formats? (Identify meme templates, formats, or ongoing meme conversations it participates in)
+
+9. What level of media literacy or digital culture familiarity is required? (Consider knowledge of social media platforms, online behaviors, or digital communication norms)
+
+10. How accessible is this meme to different audiences, and what knowledge gaps might exclude certain viewers? (Analyze what background information is essential versus optional for comprehension)""" ;
+                     rdfs:comment "Background Knowledge includes pieces of knowledge OUTSIDE the image that are required to understand the meme. These are real-world entities, events, concepts, stereotypes or references that are implicitly referred to but NOT directly visible in the image. Examples: specific actor/character names, historical events, countries, political parties, art movements, cultural phenomena, social trends, disparaging stereotypes, or any real-world knowledge implicitly referenced."@en ;
+                     rdfs:label "Background Knowledge"@en .
+
+
+###  http://w3c.org/memes-ontology/general#BackgroundPreservation
+:BackgroundPreservation rdf:type owl:Class ;
+                        rdfs:subClassOf :DirectSuperimposition ;
+                        rdfs:comment "Text placed only over neutral areas to preserve important visual content in memes"@en ;
+                        rdfs:label "Background Preservation"@en .
+
+
+###  http://w3c.org/memes-ontology/general#CausalRelation
+:CausalRelation rdf:type owl:Class ;
+                rdfs:subClassOf :DimensionsInterrelation ;
+                rdfs:comment "One dimension being causally related with another in memes, e.g. text explaining why visual situation exists"@en ;
+                rdfs:label "Causal Relation"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Color-matchedIntegration
+:Color-matchedIntegration rdf:type owl:Class ;
+                          rdfs:subClassOf :DimensionsAlignment ;
+                          rdfs:comment "Text adopting and harmonizing with the visual color schemes and palette in memes"@en ;
+                          rdfs:label "Color-matched Integration"@en .
+
+
+###  http://w3c.org/memes-ontology/general#ColorComposition
+:ColorComposition rdf:type owl:Class ;
+                  rdfs:subClassOf :Dimension ;
+                  :dimensionIndex 4 ;
+                  :promptExtractionText "Extract Color Composition elements from the image. Color Composition includes: color schemes, color palettes, color contrasts, dominant colors, color patterns, and color arrangements. For each color element found, provide: 1) A descriptive instance_name (e.g., 'dominant_red', 'color_contrast'), 2) A natural language label (e.g., 'the dominant red color', 'the color contrast'), 3) A brief description of the color's role and visual impact. Focus on colors that are significant to the meme's visual composition and meaning. Example output format: {\"instance_name\": \"dominant_red\", \"label\": \"the dominant red color\", \"description\": \"Bright red flames that dominate the background, creating a sense of danger and urgency\"}"@en ;
+                  rdfs:comment "The arrangement and use of colors within memes"@en ;
+                  rdfs:label "Color Composition"@en .
+
+
+###  http://w3c.org/memes-ontology/general#ComparativePositioning
+:ComparativePositioning rdf:type owl:Class ;
+                        rdfs:subClassOf :SemanticAdjacency ;
+                        rdfs:comment "Text positioned between elements being compared or contrasted in memes"@en ;
+                        rdfs:label "Comparative Positioning"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Complementarity
+:Complementarity rdf:type owl:Class ;
+                 rdfs:subClassOf :ContextualExpansion ;
+                 rdfs:comment "Dimensions working together to provide complete understanding through mutual supplementation in memes"@en ;
+                 rdfs:label "Complementarity"@en .
+
+
+###  http://w3c.org/memes-ontology/general#ContextualExpansion
+:ContextualExpansion rdf:type owl:Class ;
+                     rdfs:subClassOf :DimensionsAlignment ;
+                     rdfs:comment "Text providing background information and context for visual elements in memes"@en ;
+                     rdfs:label "Contextual Expansion"@en .
+
+
+###  http://w3c.org/memes-ontology/general#ContextualReferentAdjacency
+:ContextualReferentAdjacency rdf:type owl:Class ;
+                             rdfs:subClassOf :SemanticAdjacency ;
+                             rdfs:comment "Text grouped near semantically related visual elements in memes"@en ;
+                             rdfs:label "Contextual Referent Adjacency"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Contradiction
+:Contradiction rdf:type owl:Class ;
+               rdfs:subClassOf :DimensionsInterrelation ;
+               rdfs:comment "Relationships where dimensions present conflicting or opposing information in memes"@en ;
+               rdfs:label "Contradiction"@en .
+
+
+###  http://w3c.org/memes-ontology/general#CosmicIrony
+:CosmicIrony rdf:type owl:Class ;
+             rdfs:subClassOf :DimensionsAlignment ;
+             rdfs:comment "Text highlighting the absurdity or ironic nature of the visual situation in memes"@en ;
+             rdfs:label "Cosmic Irony"@en .
+
+
+###  http://w3c.org/memes-ontology/general#DescriptiveAlignment
+:DescriptiveAlignment rdf:type owl:Class ;
+                      rdfs:subClassOf :DimensionsAlignment ;
+                      rdfs:comment "One dimension describing the other, usually text literally describing visual content in memes"@en ;
+                      rdfs:label "Descriptive Alignment"@en .
+
+
+###  http://w3c.org/memes-ontology/general#DiagonalAdjacency
+:DiagonalAdjacency rdf:type owl:Class ;
+                   rdfs:subClassOf :GeometricalAdjacency ;
+                   rdfs:comment "Corner and diagonal relationships between elements in memes"@en ;
+                   rdfs:label "Diagonal Adjacency"@en .
+
+
+###  http://w3c.org/memes-ontology/general#DiegeticallyIntegrated
+:DiegeticallyIntegrated rdf:type owl:Class ;
+                        rdfs:subClassOf :DimensionsInterrelation ;
+                        rdfs:comment "Text that exists as part of the fictional or depicted world within memes"@en ;
+                        rdfs:label "Diegetically Integrated"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Dimension
+:Dimension rdf:type owl:Class .
+
+
+###  http://w3c.org/memes-ontology/general#DimensionModifier
+:DimensionModifier rdf:type owl:Class .
+
+
+###  http://w3c.org/memes-ontology/general#DimensionsAlignment
+:DimensionsAlignment rdf:type owl:Class ;
+                     rdfs:subClassOf :DimensionsInterrelation ;
+                     rdfs:comment "Relationships where dimensions mutually reinforce and amplify each other's meaning in memes"@en ;
+                     rdfs:label "Amplification Coherence"@en .
+
+
+###  http://w3c.org/memes-ontology/general#DimensionsInterrelation
+:DimensionsInterrelation rdf:type owl:Class ;
+                         rdfs:comment "Relationships and interactions between different meme dimensions"@en ;
+                         rdfs:label "Dimensions Interrelation"@en .
+
+
+###  http://w3c.org/memes-ontology/general#DirectSuperimposition
+:DirectSuperimposition rdf:type owl:Class ;
+                       rdfs:subClassOf :DimensionsInterrelation ;
+                       rdfs:comment "Text or elements directly overlaid on top of other content in memes"@en ;
+                       rdfs:label "Direct Superimposition"@en .
+
+
+###  http://w3c.org/memes-ontology/general#DramaticIrony
+:DramaticIrony rdf:type owl:Class ;
+               rdfs:subClassOf :Contradiction ;
+               rdfs:comment "One dimension revealing information another dimension does not provide in memes, e.g. text revealing information visuals don't show"@en ;
+               rdfs:label "Dramatic Irony"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Emotion
+:Emotion rdf:type owl:Class ;
+                   rdfs:subClassOf :Dimension ;
+                   :dimensionIndex 3 ;
+                   :promptExtractionText "Extract Emotion Expression elements from the image. Emotion Expression includes: facial expressions, emotional gestures, mood indicators, affective elements, and emotional cues. For each emotional element found, provide: 1) A descriptive instance_name (e.g., 'mischievous_smile', 'concerned_expression'), 2) A natural language label (e.g., 'the mischievous smile', 'the concerned expression'), 3) A brief description of the emotional state or expression. Focus on clearly visible emotional indicators that convey feelings or moods. Example output format: {\"instance_name\": \"mischievous_smile\", \"label\": \"the mischievous smile\", \"description\": \"A knowing, slightly devious smile suggesting mischief or satisfaction\"}"@en ;
+                   rdfs:comment "Emotional content and affective dimensions expressed in memes"@en ;
+                   rdfs:label "Emotion Expression"@en .
+
+
+###  http://w3c.org/memes-ontology/general#EntityOcclusion
+:EntityOcclusion rdf:type owl:Class ;
+                 rdfs:subClassOf :SelectiveMasking ;
+                 rdfs:comment "Text strategically hiding or revealing specific objects or entities in memes"@en ;
+                 rdfs:label "Entity Occlusion"@en .
+
+
+###  http://w3c.org/memes-ontology/general#EnvironmentalText
+:EnvironmentalText rdf:type owl:Class ;
+                   rdfs:subClassOf :DiegeticallyIntegrated ;
+                   rdfs:comment "Text naturally occurring in the depicted meme scene environment"@en ;
+                   rdfs:label "Environmental Text"@en ;
+                   owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://w3c.org/memes-ontology/general#FaceMasking
+:FaceMasking rdf:type owl:Class ;
+             rdfs:subClassOf :EntityOcclusion ;
+             rdfs:comment "Text covering faces for anonymization or emphasis purposes in memes"@en ;
+             rdfs:label "Face Masking"@en .
+
+
+###  http://w3c.org/memes-ontology/general#GeometricalAdjacency
+:GeometricalAdjacency rdf:type owl:Class ;
+                      rdfs:subClassOf :DimensionsInterrelation ;
+                      rdfs:comment "Spatial relationships based on geometric positioning of elements in memes"@en ;
+                      rdfs:label "Geometrical Adjacency"@en .
+
+
+###  http://w3c.org/memes-ontology/general#GradientIntegrated
+:GradientIntegrated rdf:type owl:Class ;
+                    rdfs:subClassOf :DimensionsAlignment ;
+                    rdfs:comment "One dimension is consonant in gradient change to another, e.g. Text spacing and rhythm matching visual patterns and compositional flow in memes; or color-palette being gradient consonant to textual material elements."@en ;
+                    rdfs:label "Rhythmically Integrated"@en .
+
+
+###  http://w3c.org/memes-ontology/general#HorizontalAdjacency
+:HorizontalAdjacency rdf:type owl:Class ;
+                     rdfs:subClassOf :GeometricalAdjacency ;
+                     rdfs:comment "Left/right spatial relationships of visual elements in memes"@en ;
+                     rdfs:label "Horizontal Adjacency"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Metadata
+:Metadata rdf:type owl:Class ;
+          rdfs:subClassOf :Dimension ;
+          :dimensionIndex 7 ;
+          :promptExtractionText "Extract Metadata elements from the image. Metadata includes: technical information, contextual descriptions, descriptive attributes, metadata properties, and informational elements. For each metadata element found, provide: 1) A descriptive instance_name (e.g., 'image_format', 'creation_context'), 2) A natural language label (e.g., 'the image format', 'the creation context'), 3) A brief description of the metadata information. Focus on descriptive and technical information about the meme itself. Example output format: {\"instance_name\": \"image_format\", \"label\": \"the image format\", \"description\": \"Digital image format with high contrast and clear visual elements typical of internet memes\"}"@en ;
+          rdfs:comment "Descriptive information about memes, including technical and contextual metadata"@en ;
+          rdfs:label "Metadata"@en .
+
+
+###  http://w3c.org/memes-ontology/general#AnalogicalMapping
+:AnalogicalMapping rdf:type owl:Class ;
+                                  rdfs:subClassOf :Dimension ;
+                                  :dimensionIndex 8 ;
+                                  :promptExtractionText "Extract Metaphorical and Analogical Mapping elements from the image. Metaphorical and Analogical Mapping includes: symbolic representations, analogical elements, metaphorical connections, symbolic mappings, figurative elements, and analogical relationships. For each metaphorical element found, provide: 1) A descriptive instance_name (e.g., 'fire_metaphor', 'smile_analogy'), 2) A natural language label (e.g., 'the fire metaphor', 'the smile analogy'), 3) A brief description of the metaphorical or analogical meaning. Focus on how one element represents or symbolizes another concept. Example output format: {\"instance_name\": \"fire_metaphor\", \"label\": \"the fire metaphor\", \"description\": \"The burning house serves as a metaphor for chaos or destruction, contrasting with the girl's calm expression\"}"@en ;
+                                  rdfs:comment "Analogical Mapping is a mapping between one entity and another in the meme, usually between a visual element and a textual element. It follows the pattern: 'X is Y'. E.g. the juxtaposition of a certain text to some visual material creates a mapping between the text and the visual material."@en ;
+                                  rdfs:label "Analogical Mapping"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Modal
+:Modal rdf:type owl:Class ;
+       rdfs:subClassOf :Contradiction ;
+       rdfs:comment "One dimension showing certainty versus another dimension showing ambiguity in memes, e.g. text certainty vs. visual ambiguity"@en ;
+       rdfs:label "Modal"@en .
+
+
+###  http://w3c.org/memes-ontology/general#MotionBlurIntegrated
+:MotionBlurIntegrated rdf:type owl:Class ;
+                      rdfs:subClassOf :DirectSuperimposition ;
+                      rdfs:comment "Text following movement paths and kinetic lines within dynamic visuals in memes"@en ;
+                      rdfs:label "Motion Blur Integrated"@en .
+
+
+###  http://w3c.org/memes-ontology/general#NarrativeFlowAdjacency
+:NarrativeFlowAdjacency rdf:type owl:Class ;
+                        rdfs:subClassOf :SemanticAdjacency ;
+                        rdfs:comment "Text following visual story progression and narrative sequence in memes"@en ;
+                        rdfs:label "Narrative Flow Adjacency"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Object-embedded
+:Object-embedded rdf:type owl:Class ;
+                 rdfs:subClassOf :VisualWorldPart ;
+                 rdfs:comment "Text naturally appearing on clothing, objects, and surfaces within meme scenes"@en ;
+                 rdfs:label "Object-embedded"@en .
+
+
+###  http://w3c.org/memes-ontology/general#OpaqueOverlay
+:OpaqueOverlay rdf:type owl:Class ;
+               rdfs:subClassOf :DirectSuperimposition ;
+               rdfs:comment "Text blocks that completely obscure underlying visual content in memes"@en ;
+               rdfs:label "Opaque Overlay"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Outlined-stroked
+:Outlined-stroked rdf:type owl:Class ;
+                  rdfs:subClassOf :DirectSuperimposition ;
+                  rdfs:comment "Text with outlines or strokes to maintain readability over complex backgrounds in memes"@en ;
+                  rdfs:label "Outlined-stroked"@en ;
+                  owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://w3c.org/memes-ontology/general#OverallIntent
+:OverallIntent rdf:type owl:Class ;
+               rdfs:subClassOf :Dimension ;
+               :dimensionIndex 9 ;
+               :promptExtractionText "Extract Overall Intent elements from the image. Overall Intent includes: communicative purposes, creator intentions, message goals, intended effects, purpose indicators, and intent signals. For each intentional element found, provide: 1) A descriptive instance_name (e.g., 'humor_intent', 'social_commentary'), 2) A natural language label (e.g., 'the humor intent', 'the social commentary'), 3) A brief description of the intended purpose or effect. Focus on what the meme creator likely intended to communicate or achieve. Example output format: {\"instance_name\": \"humor_intent\", \"label\": \"the humor intent\", \"description\": \"The meme appears designed to create humor through the contrast between the girl's calm expression and the chaotic fire scene\"}"@en ;
+               rdfs:comment "Overall Intent includes: communicative purposes, creator intentions, message goals, intended effects, purpose indicators, and intent signals."@en ;
+               rdfs:label "Overall Intent"@en .
+
+
+###  http://w3c.org/memes-ontology/general#PerimeterFraming
+:PerimeterFraming rdf:type owl:Class ;
+                  rdfs:subClassOf :GeometricalAdjacency ;
+                  rdfs:comment "Text surrounding visual content as a frame or border in memes"@en ;
+                  rdfs:label "Perimeter Framing"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Perspectival
+:Perspectival rdf:type owl:Class ;
+              rdfs:subClassOf :Contradiction ;
+              rdfs:comment "Two dimensions offering different viewpoints on another dimension in memes, e.g. same visual content from different perspectives"@en ;
+              rdfs:label "Perspectival"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Perspective-aligned
+:Perspective-aligned rdf:type owl:Class ;
+                     rdfs:subClassOf :DimensionsAlignment ;
+                     rdfs:comment "Text following the perspective, depth, and vanishing points of memes"@en ;
+                     rdfs:label "Perspective-aligned"@en .
+
+
+###  http://w3c.org/memes-ontology/general#PointingAdjacency
+:PointingAdjacency rdf:type owl:Class ;
+                   rdfs:subClassOf :SemanticAdjacency ;
+                   rdfs:comment "Text positioned to point at or direct attention to specific elements in memes"@en ;
+                   rdfs:label "Pointing Adjacency"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Scene
+:Scene rdf:type owl:Class ;
+                    rdfs:subClassOf :Dimension ;
+                    :dimensionIndex 5 ;
+                    :promptExtractionText "Extract Scene Composition elements from the image. Scene Composition includes: spatial arrangements, element positioning, scene organization, layout structures, and spatial relationships. For each compositional element found, provide: 1) A descriptive instance_name (e.g., 'foreground_focus', 'background_scene'), 2) A natural language label (e.g., 'the foreground focus', 'the background scene'), 3) A brief description of the spatial arrangement and its significance. Focus on how elements are positioned and organized within the scene. Example output format: {\"instance_name\": \"foreground_focus\", \"label\": \"the foreground focus\", \"description\": \"The girl positioned prominently in the foreground, drawing immediate attention while the fire rages behind her\"}"@en ;
+                    :prototypicalQuestions """1. How are the visual elements spatially distributed within the meme's frame? (Examine the placement, spacing, and positioning of all components across the visual space)
+
+2. What is the visual hierarchy and focal point of the composition? (Identify which elements draw attention first and how the eye moves through the scene)
+
+3. What action, situation, or scenario is taking place in this meme scene? (Identify and describe the events, interactions, or circumstances being depicted)
+
+4. How do foreground, middle ground, and background elements relate to each other? (Analyze depth layers and how different spatial planes interact or contrast)
+
+5. What geometric patterns or structural frameworks organize the scene? (Look for grids, symmetry, diagonal lines, triangular arrangements, or other compositional structures)
+
+6. How do size relationships between elements affect the scene's meaning? (Consider scale differences, proportional relationships, and how sizing choices impact interpretation)
+
+7. What directional flows or movement patterns are created within the composition? (Examine how visual elements guide attention or suggest motion through the scene)
+
+8. How is visual balance achieved or deliberately disrupted in the scene? (Analyze weight distribution, symmetry/asymmetry, and compositional stability or tension)
+
+9. How do overlapping or juxtaposed elements create meaning through their spatial relationships? (Examine what happens when elements intersect, contrast, or are placed in proximity)
+
+10. What role does negative space or empty areas play in the overall composition? (Analyze how unused space contributes to the scene's impact, readability, or aesthetic effect)""" ;
+                    rdfs:comment "A Scene is the interpretation of a composition of visual material entities that are related to each other in a specific way. It includes: visual elements participating in the scene, spatial arrangements, element positioning, scene understanding, layout structures, and spatial relationships."@en ;
+                    rdfs:label "Scene"@en .
+
+
+###  http://w3c.org/memes-ontology/general#SelectiveMasking
+:SelectiveMasking rdf:type owl:Class ;
+                  rdfs:subClassOf :OpaqueOverlay ;
+                  rdfs:comment "Strategic placement of text to selectively hide or reveal specific content in memes"@en ;
+                  rdfs:label "Selective Masking"@en .
+
+
+###  http://w3c.org/memes-ontology/general#SemanticAdjacency
+:SemanticAdjacency rdf:type owl:Class ;
+                   rdfs:subClassOf :DimensionsInterrelation ;
+                   rdfs:comment "Spatial relationships based on semantic or meaning-related positioning in memes"@en ;
+                   rdfs:label "Semantic Adjacency"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Semi-transparentOverlay
+:Semi-transparentOverlay rdf:type owl:Class ;
+                         rdfs:subClassOf :DirectSuperimposition ;
+                         rdfs:comment "Text that blends with underlying visual content through transparency in memes"@en ;
+                         rdfs:label "Semi-transparent Overlay"@en .
+
+
+###  http://w3c.org/memes-ontology/general#SemioticProjection
+:SemioticProjection rdf:type owl:Class ;
+                        rdfs:subClassOf :Dimension ;
+                        :dimensionIndex 10 ;
+                        :promptExtractionText "Semiotic Projection is about the projection of the User seeing the meme onto a certain part of the meme. The projection could be onto some VisualMaterial or some TextualMaterial or some Scene. TASK: your task is to identify if the User is projected onto some element of the meme e.g. if there is some explicit deictic like \"me\", \"you\" or \"your...\", \"mine...\" etc. You have to include this information in a knowledge graph. To do so, you will adopt a \"frame semantics inspired\" approach, creating a \"semiotic_projection_1\" node, which has \":hasProjectedUser\" some user and \":hasProjectedEntity\" the entity of the meme on which the user is projected onto. Include also the horizontal relation: :user :projectedOnto :entity. Return the analysis in a JSON array: [{\"instance_name\": \"semiotic_projection_1\", \"label\": \"semiotic projection description\", \"description\": \"projection details\", \"hasProjectedUser\": \"user_entity_name\", \"hasProjectedEntity\": \"projected_entity_name\", \"directRelations\": [{\"from\": \"user_entity_name\", \"relation\": \"projectedOnto\", \"to\": \"projected_entity_name\"}]}]"@en ;
+                        rdfs:comment "Semiotic Projection is about the projection of the User seeing the meme onto a certain part of the meme. The projection could be onto some VisualMaterial or some TextualMaterial or some Scene."@en ;
+                        rdfs:label "Semiotic Projection"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Shadow-glowEffect
+:Shadow-glowEffect rdf:type owl:Class ;
+                   rdfs:subClassOf :DirectSuperimposition ;
+                   rdfs:comment "Text with shadow or glow effects for visual separation from background in memes"@en ;
+                   rdfs:label "Shadow-glow Effect"@en ;
+                   owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://w3c.org/memes-ontology/general#SituationalIrony
+:SituationalIrony rdf:type owl:Class ;
+                  rdfs:subClassOf :Contradiction ;
+                  rdfs:comment "One dimension describing a situation that contradicts expectations set by another dimension in memes"@en ;
+                  rdfs:label "Situational Irony"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Speech-ThoughtIntegration
+:Speech-ThoughtIntegration rdf:type owl:Class ;
+                           rdfs:subClassOf :DiegeticallyIntegrated ;
+                           rdfs:comment "Text representing character dialogue, thoughts, or internal communication in memes"@en ;
+                           rdfs:label "Speech-Thought Integration"@en .
+
+
+###  http://w3c.org/memes-ontology/general#TargetCommunity
+:TargetCommunity rdf:type owl:Class ;
+                 rdfs:subClassOf :Dimension ;
+                 :dimensionIndex 11 ;
+                 :promptExtractionText "Extract Target Community elements from the image. Target Community includes: audience indicators, community markers, demographic cues, cultural references, community-specific elements, and target audience signals. For each community element found, provide: 1) A descriptive instance_name (e.g., 'internet_audience', 'meme_culture'), 2) A natural language label (e.g., 'the internet audience', 'the meme culture'), 3) A brief description of the intended audience or community. Focus on elements that indicate who the meme is designed for. Example output format: {\"instance_name\": \"internet_audience\", \"label\": \"the internet audience\", \"description\": \"The meme appears designed for internet-savvy audiences familiar with meme culture and dark humor\"}"@en ;
+                 rdfs:comment "The intended audience or community for which the meme is designed"@en ;
+                 rdfs:label "Target Community"@en .
+
+
+###  http://w3c.org/memes-ontology/general#TemplateStructure
+:TemplateStructure rdf:type owl:Class ;
+                   rdfs:subClassOf :Dimension ;
+                   :dimensionIndex 12 ;
+                   :promptExtractionText "Extract Template Structure elements from the image. Template Structure includes: template patterns, organizational frameworks, structural elements, layout templates, framework components, and structural patterns. For each structural element found, provide: 1) A descriptive instance_name (e.g., 'contrast_template', 'layout_framework'), 2) A natural language label (e.g., 'the contrast template', 'the layout framework'), 3) A brief description of the structural pattern or framework. Focus on the underlying organizational structure of the meme. Example output format: {\"instance_name\": \"contrast_template\", \"label\": \"the contrast template\", \"description\": \"The meme follows a contrast template with calm foreground subject against chaotic background scene\"}"@en ;
+                   rdfs:comment "Underlying structural patterns and organizational frameworks of memes"@en ;
+                   rdfs:label "Template Structure"@en .
+
+
+###  http://w3c.org/memes-ontology/general#TemporalRelation
+:TemporalRelation rdf:type owl:Class ;
+                  rdfs:subClassOf :DimensionsInterrelation ;
+                  rdfs:comment "One dimension being temporally related with another in memes, e.g. text adding before/after context to visual material"@en ;
+                  rdfs:label "Temporal Relation"@en .
+
+
+###  http://w3c.org/memes-ontology/general#TextualMaterial
+:TextualMaterial rdf:type owl:Class ;
+                 rdfs:subClassOf :Dimension ;
+                 :dimensionIndex 2 ;
+                 :promptExtractionText "Extract Textual Material elements from the image. Textual Material includes: captions, text overlays, speech bubbles, written words, phrases, sentences, and any visible text. For each textual element found, provide: 1) A descriptive instance_name (e.g., 'main_caption', 'speech_bubble_text'), 2) A natural language label (e.g., 'the main caption', 'the speech bubble text'), 3) A brief description of the text content and its context. Focus on all visible text elements that contribute to the meme's meaning. Example output format: {\"instance_name\": \"main_caption\", \"label\": \"the main caption\", \"description\": \"The text 'This is fine' written in bold letters at the bottom of the image\"}"@en ;
+                 :prototypicalQuestions """1. What written text appears in this meme? (Include all visible words, phrases, captions, and labels)
+
+2. How is the text positioned and formatted within the meme? (Consider placement, font size, color, style, and visual hierarchy)
+
+3. What is the tone and style of the written language used? (Formal/informal, serious/humorous, slang/standard, etc.)
+
+4. Are there any spelling, grammar, or punctuation choices that seem intentional? (Consider deliberate errors, unconventional capitalization, or punctuation for effect)
+
+5. What cultural references, phrases, or terminology are embedded in the text? (Identify idioms, pop culture references, internet slang, or specialized vocabulary)
+
+6. How does the text relate to or interact with the visual elements? (Does it complement, contradict, or add context to the images?)
+
+7. What assumptions does the text make about the audience's knowledge? (What background information or cultural literacy is assumed?)
+
+8. Are there multiple layers of meaning in the textual content? (Consider literal vs. implied meanings, wordplay, double entendres, or irony)
+
+9. What speech acts or communicative functions does the text perform? (Does it inform, persuade, mock, celebrate, complain, etc.?)
+
+10. How does the text contribute to the meme's overall message or humor? (What role does the written content play in achieving the meme's intended effect?)""" ;
+                 rdfs:comment "Textual Material includes: captions, text overlays, speech bubbles, written words, phrases, sentences, and any visible text."@en ;
+                 rdfs:label "Textual Material"@en .
+
+
+###  http://w3c.org/memes-ontology/general#Toxicity
+:Toxicity rdf:type owl:Class ;
+                    rdfs:subClassOf :Dimension ;
+                    :dimensionIndex 13 ;
+                    :promptExtractionText "Extract Toxicity Assessment elements from the image. Toxicity Assessment includes: harmful elements, offensive content, toxic indicators, problematic elements, negative aspects, and harmful signals. For each toxicity element found, provide: 1) A descriptive instance_name (e.g., 'dark_humor', 'potential_harm'), 2) A natural language label (e.g., 'the dark humor', 'the potential harm'), 3) A brief description of the potentially harmful or problematic aspect. Focus on elements that might be considered offensive, harmful, or problematic. Example output format: {\"instance_name\": \"dark_humor\", \"label\": \"the dark humor\", \"description\": \"The meme uses dark humor by showing a smiling girl in front of a burning house, which could be considered insensitive to real tragedy\"}"@en ;
+                    rdfs:comment "Toxicity Assessment includes: harmful elements, offensive content, toxic indicators, problematic elements, negative aspects, and harmful signals."@en ;
+                    rdfs:label "Toxicity Assessment"@en .
+
+
+###  http://w3c.org/memes-ontology/general#User
+:User rdf:type owl:Class .
+
+
+###  http://w3c.org/memes-ontology/general#Value
+:Value rdf:type owl:Class ;
+       rdfs:subClassOf :Contradiction ;
+       rdfs:comment "One dimension embodying certain values versus another dimension embodying opposing values in memes, e.g. text and visuals representing conflicting moral or aesthetic values"@en ;
+       rdfs:label "Value"@en .
+
+
+###  http://w3c.org/memes-ontology/general#VerbalIrony
+:VerbalIrony rdf:type owl:Class ;
+             rdfs:subClassOf :Contradiction ;
+             rdfs:comment "Text saying the opposite of another dimension in memes, e.g. contradicting visual reality"@en ;
+             rdfs:label "Verbal Irony"@en .
+
+
+###  http://w3c.org/memes-ontology/general#VerticalAdjacency
+:VerticalAdjacency rdf:type owl:Class ;
+                   rdfs:subClassOf :GeometricalAdjacency ;
+                   rdfs:comment "Above/below spatial relationships of visual elements in memes"@en ;
+                   rdfs:label "Vertical Adjacency"@en .
+
+
+###  http://w3c.org/memes-ontology/general#VisualCompositionCompliant
+:VisualCompositionCompliant rdf:type owl:Class ;
+                            rdfs:subClassOf :DimensionsAlignment ;
+                            rdfs:comment "Typography that conforms to and enhances the geometric structure of memes"@en ;
+                            rdfs:label "Visual Composition Compliant"@en .
+
+
+###  http://w3c.org/memes-ontology/general#VisualMaterial
+:VisualMaterial rdf:type owl:Class ;
+                rdfs:subClassOf :Dimension ;
+                :dimensionIndex 1 ;
+                :promptExtractionText "Extract Visual Material elements from the image. Visual Material includes: people, objects, characters, scenes, graphics, and any salient visual elements. For each visual element found, provide: 1) A descriptive instance_name (e.g., 'smiling_girl', 'burning_house'), 2) A natural language label (e.g., 'the smiling girl', 'the burning house'), 3) A brief description of what you see. Focus on clearly visible, distinct visual elements that are important to understanding the meme. Example output format: {\"instance_name\": \"smiling_girl\", \"label\": \"the smiling girl\", \"description\": \"A young girl with a mischievous smile in the foreground\"}"@en ;
+                :prototypicalQuestions """1. What visual elements are present in this meme? (Identify all images, graphics, illustrations, photographs, symbols, or visual components)
+
+2. What is the source or origin of the visual content? (Consider whether images are from movies, TV shows, stock photos, original artwork, screenshots, etc.)
+
+3. How are the visual elements composed and arranged within the frame? (Examine layout, positioning, size relationships, and visual balance)
+
+4. What colors, lighting, and visual style characterize the meme? (Analyze color schemes, contrast, brightness, saturation, and overall aesthetic)
+
+5. What emotions or reactions do the visual elements convey? (Consider facial expressions, body language, visual mood, and atmospheric qualities)
+
+6. Are there recognizable people, characters, objects, or settings in the visuals? (Identify any familiar faces, fictional characters, locations, or iconic imagery)
+
+7. What visual techniques or effects have been applied? (Look for editing, filters, distortion, overlays, scaling, or other modifications)
+
+8. How do the visual elements relate to each other within the meme? (Examine visual connections, contrasts, parallels, or interactions between different visual components)
+
+9. What cultural or symbolic meanings are embedded in the visual content? (Consider visual metaphors, symbolic representations, or culturally significant imagery)
+
+10. How do the visual elements support or create the meme's intended message? (Analyze how the imagery contributes to humor, commentary, or communicative purpose)""" ;
+                rdfs:comment "Visual Material includes: people, objects, characters, scenes, graphics, and any salient visual elements."@en ;
+                rdfs:label "Visual Material"@en .
+
+
+###  http://w3c.org/memes-ontology/general#VisualWorldPart
+:VisualWorldPart rdf:type owl:Class ;
+                 rdfs:subClassOf :DiegeticallyIntegrated ;
+                 rdfs:comment "Text appearing on signs, books, screens, and other objects within the meme world"@en ;
+                 rdfs:label "Visual World Part"@en .
+
+
+###  http://w3c.org/memes-ontology/general#MemeObject
+:MemeObject rdf:type owl:Class ;
+            rdfs:subClassOf owl:Thing ;
+            rdfs:comment "Represents a meme object that contains assertions about its content"@en ;
+            rdfs:label "Meme Object"@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+
+
+
+#################################################################
+#    Extracted Dimension Instances (Reversed Pipeline)
+#################################################################
+
+###  http://example.org/multimodal-taxonomy#overallintent_instance
+:overallintent_instance rdf:type :OverallIntent ;
+                rdfs:label "the overallintent"@en ;
+                rdfs:comment "meme-id: meme_image; hasOverallIntent: Hateful; overall-intent-description: The image depicts a happy family with a father, mother, and child embracing. The text overlay reads: 'there's a reason they have children. they are pedophiles.' This juxtaposition is intentionally harmful and hateful, using the visual of a loving family to falsely and maliciously imply that having children is inherently tied to pedophilia. This is a direct attack on the family unit and an attempt to stigmatize and dehumanize parents and children by falsely associating them with a severe and illegal crime. The meme leverages the visual of a normal, affectionate family to deliver a hateful message that is both false and deeply offensive, targeting the moral and social fabric of parenting and family life. It falls under the 'Hateful' category as it is a direct and malicious attack on a group (parents) based on a false and dangerous association with pedophilia, which is a protected characteristic in the context of hate speech."@en ;
+                :extractionMethod "llm_extraction_huggingface" ;
+                :extractedFrom "43506.png" ;
+                :extractionTimestamp "2025-12-16T01:36:46.104351" .
+
+###  http://example.org/multimodal-taxonomy#text_chunk
+:text_chunk rdf:type :TextualMaterial ;
+                rdfs:label "top text overlay"@en ;
+                rdfs:comment "there's a reason they have children."@en ;
+                :extractionMethod "llm_extraction_huggingface" ;
+                :extractedFrom "43506.png" ;
+                :extractionTimestamp "2025-12-16T01:36:46.104351" .
+
+###  http://example.org/multimodal-taxonomy#father
+:father rdf:type :VisualMaterial ;
+                rdfs:label "adult male"@en ;
+                rdfs:comment "man with dark hair and glasses, wearing a blue long-sleeved shirt, smiling while holding a child on his shoulders."@en ;
+                :extractionMethod "llm_extraction_huggingface" ;
+                :extractedFrom "43506.png" ;
+                :extractionTimestamp "2025-12-16T01:36:46.104351" .
+
+###  http://example.org/multimodal-taxonomy#family_embrace
+:family_embrace rdf:type :Scene ;
+                rdfs:label "family embracing in a happy pose"@en ;
+                rdfs:comment "A father, mother, and child are in a close, affectionate embrace. The father is holding the child on his shoulders, and the mother is hugging both of them from the side. All three are smiling and appear happy. The scene is framed to show their unity and affection."@en ;
+                :extractionMethod "llm_extraction_huggingface" ;
+                :extractedFrom "43506.png" ;
+                :extractionTimestamp "2025-12-16T01:36:46.104351" .
+
+###  http://example.org/multimodal-taxonomy#pedophilia
+:pedophilia rdf:type :BackgroundKnowledge ;
+                rdfs:label "Pedophilia"@en ;
+                rdfs:comment "A severe psychological disorder characterized by sexual attraction to prepubescent children. It is a serious criminal offense in most jurisdictions and is widely condemned by society and the medical community. The meme falsely and maliciously associates the act of having children with pedophilia, which is a dangerous and false stereotype."@en ;
+                :extractionMethod "llm_extraction_huggingface" ;
+                :extractedFrom "43506.png" ;
+                :extractionTimestamp "2025-12-16T01:36:46.104351" .
+
+###  http://example.org/multimodal-taxonomy#pedophile_stereotype
+:pedophile_stereotype rdf:type :BackgroundKnowledge ;
+                rdfs:label "Pedophile Stereotype"@en ;
+                rdfs:comment "A harmful and false stereotype that equates parenting with pedophilia. This is a malicious and baseless association used to dehumanize parents and children, and it is a form of hate speech that targets the family unit. It is explicitly listed in the provided knowledge base as a form of LGBTQ+ discrimination and hate speech."@en ;
+                :extractionMethod "llm_extraction_huggingface" ;
+                :extractedFrom "43506.png" ;
+                :extractionTimestamp "2025-12-16T01:36:46.104351" .
+
+###  http://example.org/multimodal-taxonomy#hate_speech
+:hate_speech rdf:type :BackgroundKnowledge ;
+                rdfs:label "Hate Speech"@en ;
+                rdfs:comment "Speech that attacks or demeans a person or group based on attributes such as race, religion, gender, or sexual orientation. The meme's text is an example of hate speech because it uses a false and dangerous association (parenting = pedophilia) to attack and dehumanize parents and children, which is a protected characteristic under hate speech laws."@en ;
+                :extractionMethod "llm_extraction_huggingface" ;
+                :extractedFrom "43506.png" ;
+                :extractionTimestamp "2025-12-16T01:36:46.104351" .
+
+###  http://example.org/multimodal-taxonomy#family_unit_stigma
+:family_unit_stigma rdf:type :BackgroundKnowledge ;
+                rdfs:label "Family Unit Stigma"@en ;
+                rdfs:comment "The social stigma attached to the family unit, particularly when it is used to attack or dehumanize parents and children. The meme leverages the visual of a happy family to deliver a hateful message, which is a form of stigma that targets the moral and social fabric of parenting and family life."@en ;
+                :extractionMethod "llm_extraction_huggingface" ;
+                :extractedFrom "43506.png" ;
+                :extractionTimestamp "2025-12-16T01:36:46.104351" .
+
+###  http://example.org/multimodal-taxonomy#false_association
+:false_association rdf:type :BackgroundKnowledge ;
+                rdfs:label "False Association"@en ;
+                rdfs:comment "A misleading or incorrect connection between two things. The meme falsely associates the act of having children with pedophilia, which is a dangerous and false association. This is a key element of the meme's hateful intent."@en ;
+                :extractionMethod "llm_extraction_huggingface" ;
+                :extractedFrom "43506.png" ;
+                :extractionTimestamp "2025-12-16T01:36:46.104351" .
+
+###  http://example.org/multimodal-taxonomy#happiness
+:happiness rdf:type :Emotion ;
+                rdfs:label "joyful family emotion"@en ;
+                rdfs:comment "The father, mother, and child are all smiling broadly and embracing each other in a close, affectionate manner, conveying a strong sense of joy, love, and contentment. Their facial expressions and body language suggest deep happiness and familial bonding."@en ;
+                :extractionMethod "llm_extraction_huggingface" ;
+                :extractedFrom "43506.png" ;
+                :extractionTimestamp "2025-12-16T01:36:46.104351" .
+
+###  http://example.org/multimodal-taxonomy#mapping_id_1
+:mapping_id_1 rdf:type :AnalogicalMapping ;
+                rdfs:label "The family unit is mapped as pedophiles"@en ;
+                rdfs:comment "The top text 'there's a reason they have children.' is juxtaposed with the visual of a happy family embracing. This creates an analogical mapping where the visual entity 'family_embrace' is implicitly mapped to the textual entity 'pedophile_stereotype' through the false association implied by the bottom text 'they are pedophiles'. The meme uses the visual of a loving family to falsely equate parenting with pedophilia, which is a harmful stereotype and a form of hate speech. The mapping is established by the textual claim that directly attributes the label 'pedophiles' to the visual family unit."@en ;
+                :extractionMethod "llm_extraction_huggingface" ;
+                :extractedFrom "43506.png" ;
+                :extractionTimestamp "2025-12-16T01:36:46.104351" .
+
+###  http://example.org/multimodal-taxonomy#semiotic_projection_1
+:semiotic_projection_1 rdf:type :SemioticProjection ;
+                rdfs:label "User projected onto the hateful textual claim"@en ;
+                rdfs:comment "The user is projected onto the bottom textual material 'they are pedophiles', which is the core hateful assertion of the meme. The meme does not use explicit deictic pronouns like 'you' or 'me', but the user is implicitly projected onto the act of consuming and interpreting this hateful message, which is directed at the family unit. The projection is onto the textual material that delivers the false and malicious association."@en ;
+                :extractionMethod "llm_extraction_huggingface" ;
+                :extractedFrom "43506.png" ;
+                :extractionTimestamp "2025-12-16T01:36:46.104351" .
+
+###  http://example.org/multimodal-taxonomy#toxicity_1
+:toxicity_1 rdf:type :ToxicityAssessment ;
+                rdfs:label "Hateful"@en ;
+                rdfs:comment "The meme directly and maliciously attacks parents and children by falsely associating the act of having children with pedophilia, a severe and illegal crime. This is a direct attack on the family unit and an attempt to stigmatize and dehumanize parents and children, falling under the 'Hateful' category as it targets a protected characteristic (parenting) with a false and dangerous association."@en ;
+                :extractionMethod "llm_extraction_huggingface" ;
+                :extractedFrom "43506.png" ;
+                :extractionTimestamp "2025-12-16T01:36:46.104351" .
+
+###  http://example.org/multimodal-taxonomy#audience_id
+:audience_id rdf:type :TargetCommunity ;
+                rdfs:label "target audience"@en ;
+                rdfs:comment "The intended audience is individuals who may be exposed to or share such hateful content, particularly those who might be influenced by or propagate false stereotypes linking parenting with pedophilia. The meme targets the broader public, but its primary impact is on communities that may be vulnerable to misinformation or hate speech, including those who might be predisposed to stigmatizing family units or who may not be aware of the severe harm caused by such false associations. The meme is designed to provoke outrage or discomfort, potentially aiming to normalize or spread the dangerous stereotype that parents are inherently pedophiles, thereby targeting anyone who might internalize or disseminate such a harmful narrative."@en ;
+                :extractionMethod "llm_extraction_huggingface" ;
+                :extractedFrom "43506.png" ;
+                :extractionTimestamp "2025-12-16T01:36:46.104351" .
+
+
+#################################################################
+#    Direct Relations Between Entities
+#################################################################
+
+:father :holds :child .
+:mother :hugs :father .
+:mother :hugs :child .
+:child :hugs :father .
+:child :hugs :mother .
+:pedophilia :relatedTo :text_chunk .
+:pedophile_stereotype :relatedTo :text_chunk .
+:hate_speech :relatedTo :text_chunk .
+:family_unit_stigma :relatedTo :scene .
+:false_association :relatedTo :text_chunk .
+
+
+#################################################################
+#    Object Property Declarations
+#################################################################
+
+:holds rdf:type owl:ObjectProperty .
+:hugs rdf:type owl:ObjectProperty .
+:projectedOnto rdf:type owl:ObjectProperty .
+:relatedTo rdf:type owl:ObjectProperty .

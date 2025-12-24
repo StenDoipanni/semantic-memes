@@ -102,6 +102,14 @@ Default reversed pipeline dimensions:
         help="If 'true', attach additional KB to all prompts, not just OverallIntent (default: false)"
     )
     
+    parser.add_argument(
+        "--refine",
+        type=str,
+        choices=["true", "false"],
+        default="false",
+        help="If 'true', run refinement step after extraction to add relations between individuals (default: false)"
+    )
+    
     return parser.parse_args()
 
 
@@ -159,6 +167,66 @@ def main():
             additional_kb_paths=args.additional_kb,
             iterative_kb=iterative_kb
         )
+        
+        # Run refinement if requested
+        refine_enabled = args.refine.lower() == "true" if args.refine else False
+        if refine_enabled and result['success']:
+            print("\n" + "=" * 70)
+            print("🔧 Running Refinement Step")
+            print("=" * 70)
+            
+            # Find the generated TTL file
+            image_name = image_path.stem
+            
+            # Check saved_files first (most reliable)
+            ttl_file = None
+            if result.get('saved_files') and 'enhanced_ttl' in result['saved_files']:
+                ttl_file = Path(result['saved_files']['enhanced_ttl'])
+            
+            # If not found, try common naming patterns
+            if not ttl_file or not ttl_file.exists():
+                possible_names = [
+                    f"{image_name}_enhanced_ontology_reversed.ttl",
+                    f"{image_name}_enhanced_ontology.ttl",
+                ]
+                for name in possible_names:
+                    candidate = output_dir / name
+                    if candidate.exists():
+                        ttl_file = candidate
+                        break
+            
+            # Last resort: look for any TTL file matching the image name
+            if not ttl_file or not ttl_file.exists():
+                ttl_files = list(output_dir.glob(f"{image_name}*.ttl"))
+                if ttl_files:
+                    # Prefer files with "enhanced" in the name
+                    enhanced_files = [f for f in ttl_files if "enhanced" in f.name]
+                    ttl_file = enhanced_files[0] if enhanced_files else ttl_files[0]
+            
+            if ttl_file and ttl_file.exists():
+                from refinement_module import RefinementModule
+                
+                refinement_module = RefinementModule(llm_provider=args.llm_provider)
+                refined_output = output_dir / f"{image_name}_refined_ontology.ttl"
+                
+                refinement_result = refinement_module.refine_ontology(
+                    ttl_file=ttl_file,
+                    image_path=image_path,
+                    output_path=refined_output
+                )
+                
+                if refinement_result['success']:
+                    print(f"✅ Refinement completed successfully!")
+                    print(f"📊 Total triples added: {refinement_result['total_triples_added']}")
+                    print(f"📁 Refined ontology saved to: {refined_output}")
+                    for mat_result in refinement_result.get('materializer_results', []):
+                        status = "✅" if mat_result['success'] else "❌"
+                        print(f"  {status} {mat_result['materializer']}: {mat_result.get('triples_added', 0)} triples")
+                else:
+                    print(f"⚠️  Refinement failed: {refinement_result.get('error', 'Unknown error')}")
+            else:
+                print(f"⚠️  Could not find generated TTL file for refinement")
+                print(f"   Looked for: {output_dir / f'{image_name}_enhanced_ontology.ttl'}")
         
         # Print results
         if result['success']:

@@ -296,15 +296,32 @@ class HuggingFaceProvider(LLMProvider):
     both text and vision-language models, with automatic GPU support.
     """
     
-    def __init__(self, model: Optional[str] = None, device: Optional[str] = None):
+    def __init__(self, model: Optional[str] = None, device: Optional[str] = None, token: Optional[str] = None):
         """
         Initialize the HuggingFace provider.
         
         Args:
             model: HuggingFace model to use. If None, uses default from config
             device: Device to use ("cuda", "cpu", or None for auto-detection)
+            token: HuggingFace API token. If None, uses from config or environment
         """
         self.model_name = model or LLMConfig.HUGGINGFACE_MODEL
+        self.token = token or LLMConfig.HUGGINGFACE_TOKEN
+        
+        # Set token in environment if provided (for huggingface_hub)
+        if self.token:
+            import os
+            os.environ["HF_TOKEN"] = self.token
+            os.environ["HUGGINGFACE_TOKEN"] = self.token
+            # Also login to huggingface_hub if available
+            try:
+                from huggingface_hub import login
+                login(token=self.token, add_to_git_credential=False)
+                logger.info("✅ Authenticated with HuggingFace Hub")
+            except ImportError:
+                pass
+            except Exception as e:
+                logger.warning(f"Could not login to HuggingFace Hub: {e}")
         
         # Use device from config if explicitly set, otherwise detect
         if device is not None:
@@ -319,9 +336,12 @@ class HuggingFaceProvider(LLMProvider):
         self.model = None
         self.tokenizer = None
         self._model_loaded = False
+        self._load_failed = False  # Track if loading failed to prevent retries
         
         logger.info(f"HuggingFace provider initialized with model: {self.model_name}")
         logger.info(f"Device: {self.device}")
+        if self.token:
+            logger.info("✅ Using HuggingFace token for authenticated requests")
         
         # Log CUDA status
         if self.device == "cuda":
@@ -363,6 +383,21 @@ class HuggingFaceProvider(LLMProvider):
             logger.info("Model already loaded, skipping reload")
             return
         
+        if self._load_failed:
+            raise Exception(
+                f"Model {self.model_name} previously failed to load (likely OOM). "
+                f"Please use a smaller model or free GPU memory."
+            )
+        
+        # Clear GPU cache before loading to avoid fragmentation
+        try:
+            import torch
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+                logger.info("Cleared GPU cache before model loading")
+        except:
+            pass
+        
         try:
             from transformers import AutoProcessor, AutoTokenizer, AutoModelForCausalLM
             import torch
@@ -370,27 +405,68 @@ class HuggingFaceProvider(LLMProvider):
             logger.info(f"🚀 Starting to load HuggingFace model: {self.model_name} on {self.device}")
             logger.info(f"   This may take several minutes for large models like Qwen3-VL...")
             
-            # Check if it's Qwen3-VL (requires Qwen3VLForConditionalGeneration)
+            # Check if it's Qwen3-VL (requires Qwen3VLForConditionalGeneration or Qwen3VLMoeForConditionalGeneration)
             is_qwen3_vl = "qwen3" in self.model_name.lower() and "vl" in self.model_name.lower()
             
             # Check if it's a vision-language model
             is_vision_model = any(vl in self.model_name.lower() for vl in ["vl", "vision", "clip", "blip"])
             
             if is_qwen3_vl:
-                # Qwen3-VL requires Qwen3VLForConditionalGeneration
+                # Qwen3-VL can be dense or MoE (Mixture of Experts)
+                # Check model architecture to determine which class to use
                 try:
-                    from transformers import Qwen3VLForConditionalGeneration
-                    logger.info("Loading Qwen3-VL model (requires Qwen3VLForConditionalGeneration)")
-                    self.processor = AutoProcessor.from_pretrained(self.model_name, trust_remote_code=True)
-                    self.model = Qwen3VLForConditionalGeneration.from_pretrained(
-                        self.model_name,
-                        torch_dtype=torch.float16 if self.device == "cuda" else torch.float32,
-                        device_map=self.device if self.device == "cuda" else None,
-                        trust_remote_code=True
+                    from transformers import AutoConfig, Qwen3VLForConditionalGeneration
+                    logger.info("Detecting Qwen3-VL model architecture...")
+                    
+                    # Load config to check if it's MoE
+                    config = AutoConfig.from_pretrained(
+                        self.model_name, 
+                        trust_remote_code=True,
+                        token=self.token
                     )
+                    is_moe = config.model_type == "qwen3_vl_moe" or "moe" in self.model_name.lower()
+                    
+                    self.processor = AutoProcessor.from_pretrained(
+                        self.model_name, 
+                        trust_remote_code=True,
+                        token=self.token
+                    )
+                    
+                    if is_moe:
+                        # Use MoE model class
+                        try:
+                            from transformers import Qwen3VLMoeForConditionalGeneration
+                            logger.info("Loading Qwen3-VL MoE model (Qwen3VLMoeForConditionalGeneration)")
+                            # For large MoE models, use device_map="auto" to enable CPU offloading if needed
+                            device_map_setting = "auto" if self.device == "cuda" else None
+                            logger.info(f"Using device_map={device_map_setting} for MoE model (enables CPU offloading if needed)")
+                            self.model = Qwen3VLMoeForConditionalGeneration.from_pretrained(
+                                self.model_name,
+                                torch_dtype=torch.float16 if self.device == "cuda" else torch.float32,
+                                device_map=device_map_setting,
+                                trust_remote_code=True,
+                                low_cpu_mem_usage=True,
+                                token=self.token
+                            )
+                        except ImportError:
+                            raise Exception(
+                                "Qwen3-VL MoE requires transformers from source with MoE support. "
+                                "Install with: pip install git+https://github.com/huggingface/transformers.git"
+                            )
+                    else:
+                        # Use dense model class
+                        logger.info("Loading Qwen3-VL dense model (Qwen3VLForConditionalGeneration)")
+                        self.model = Qwen3VLForConditionalGeneration.from_pretrained(
+                            self.model_name,
+                            torch_dtype=torch.float16 if self.device == "cuda" else torch.float32,
+                            device_map=self.device if self.device == "cuda" else None,
+                            trust_remote_code=True,
+                            token=self.token
+                        )
+                    
                     if self.device != "cuda":
                         self.model = self.model.to(self.device)
-                    logger.info(f"Loaded Qwen3-VL model: {self.model_name}")
+                    logger.info(f"Loaded Qwen3-VL model: {self.model_name} (MoE: {is_moe})")
                 except ImportError as e:
                     raise Exception(
                         "Qwen3-VL requires transformers from source. Install with: "
@@ -402,29 +478,44 @@ class HuggingFaceProvider(LLMProvider):
                 # Load other vision-language models (Qwen2-VL, etc.)
                 try:
                     from transformers import AutoModelForVision2Seq
-                    self.processor = AutoProcessor.from_pretrained(self.model_name, trust_remote_code=True)
+                    self.processor = AutoProcessor.from_pretrained(
+                        self.model_name, 
+                        trust_remote_code=True,
+                        token=self.token
+                    )
                     self.model = AutoModelForVision2Seq.from_pretrained(
                         self.model_name,
                         torch_dtype=torch.float16 if self.device == "cuda" else torch.float32,
-                        trust_remote_code=True
+                        trust_remote_code=True,
+                        token=self.token
                     ).to(self.device)
                     logger.info(f"Loaded vision-language model: {self.model_name}")
                 except Exception as e:
                     logger.warning(f"Failed to load as Vision2Seq, trying as CausalLM: {e}")
                     # Fallback to regular model loading
-                    self.processor = AutoProcessor.from_pretrained(self.model_name, trust_remote_code=True)
+                    self.processor = AutoProcessor.from_pretrained(
+                        self.model_name, 
+                        trust_remote_code=True,
+                        token=self.token
+                    )
                     self.model = AutoModelForCausalLM.from_pretrained(
                         self.model_name,
                         torch_dtype=torch.float16 if self.device == "cuda" else torch.float32,
-                        trust_remote_code=True
+                        trust_remote_code=True,
+                        token=self.token
                     ).to(self.device)
             else:
                 # Load text-only model
-                self.tokenizer = AutoTokenizer.from_pretrained(self.model_name, trust_remote_code=True)
+                self.tokenizer = AutoTokenizer.from_pretrained(
+                    self.model_name, 
+                    trust_remote_code=True,
+                    token=self.token
+                )
                 self.model = AutoModelForCausalLM.from_pretrained(
                     self.model_name,
                     torch_dtype=torch.float16 if self.device == "cuda" else torch.float32,
-                    trust_remote_code=True
+                    trust_remote_code=True,
+                    token=self.token
                 ).to(self.device)
                 logger.info(f"Loaded text model: {self.model_name}")
             
@@ -434,7 +525,32 @@ class HuggingFaceProvider(LLMProvider):
             
         except ImportError as e:
             raise Exception("transformers library not installed. Install with: pip install transformers torch")
+        except torch.cuda.OutOfMemoryError as e:
+            # Mark as failed to prevent retry attempts
+            self._load_failed = True
+            # Clear cache and provide helpful error message
+            import torch
+            torch.cuda.empty_cache()
+            error_msg = (
+                f"CUDA out of memory while loading model {self.model_name}. "
+                f"This model requires more GPU memory than available (24GB GPU detected). "
+                f"Consider using a smaller model (e.g., Qwen/Qwen3-VL-8B-Instruct) "
+                f"or enable CPU offloading/quantization. "
+                f"The 30B model needs ~30GB+ GPU memory."
+            )
+            logger.error(error_msg)
+            raise Exception(error_msg)
         except Exception as e:
+            # Check if it's an OOM error in the message
+            if "out of memory" in str(e).lower() or "cuda" in str(e).lower():
+                self._load_failed = True
+            # Clear cache on any error to prevent memory leaks
+            try:
+                import torch
+                if torch.cuda.is_available():
+                    torch.cuda.empty_cache()
+            except:
+                pass
             raise Exception(f"Failed to load HuggingFace model: {e}")
     
     def is_available(self) -> bool:
@@ -647,8 +763,8 @@ class LLMManager:
         else:
             logger.warning("Claude provider not available")
         
-        # Initialize HuggingFace/vLLM provider
-        huggingface_provider = HuggingFaceProvider()
+        # Initialize HuggingFace/vLLM provider (with token if available)
+        huggingface_provider = HuggingFaceProvider(token=LLMConfig.HUGGINGFACE_TOKEN)
         if huggingface_provider.is_available():
             self.providers["huggingface"] = huggingface_provider
             logger.info("HuggingFace/vLLM provider available")

@@ -11,7 +11,7 @@ from typing import Dict, List, Optional
 
 # Base paths
 BASE_DIR = Path(__file__).parent
-PROJECT_ROOT = BASE_DIR.parent.parent
+PROJECT_ROOT = BASE_DIR  # Project root is where config.py is located
 
 # Load from environment variables or use defaults
 ONTOLOGY_PATH = Path(os.getenv("ONTOLOGY_PATH", PROJECT_ROOT / "memes-features" / "meme-dimensions.ttl"))
@@ -41,6 +41,7 @@ class LLMConfig:
     # HuggingFace/Transformers settings
     HUGGINGFACE_MODEL = os.getenv("HUGGINGFACE_MODEL", "Qwen/Qwen3-VL-8B-Instruct")  # Vision-language model
     HUGGINGFACE_DEVICE = os.getenv("HUGGINGFACE_DEVICE", None)  # "cuda", "cpu", or None for auto-detection
+    HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_TOKEN", os.getenv("HF_TOKEN"))  # HuggingFace API token for authenticated requests
     HUGGINGFACE_MAX_TOKENS = 4000
     HUGGINGFACE_TEMPERATURE = 0.1
     HUGGINGFACE_MAX_IMAGE_SIZE = (1024, 1024)  # Reasonable size for vision models
@@ -54,8 +55,8 @@ class OntologyConfig:
     """Configuration for ontology processing."""
     
     # Load paths from environment variables
-    ONTOLOGY_PATH = Path(os.getenv("ONTOLOGY_PATH", "/home/sdegiorgis/memes/meme-pipeline-server/memes-features/meme-dimensions.ttl"))
-    PROMPTS_DIR = Path(os.getenv("PROMPTS_DIR", "/home/sdegiorgis/memes/meme-pipeline-server/prompts/dimension-extraction-prompts-refined"))
+    ONTOLOGY_PATH = Path(os.getenv("ONTOLOGY_PATH", PROJECT_ROOT / "memes-features" / "meme-dimensions.ttl"))
+    PROMPTS_DIR = Path(os.getenv("PROMPTS_DIR", PROJECT_ROOT / "memes-features" / "prompts" / "dimension-extraction-prompts-refined"))
     
     # Namespace prefixes
     NAMESPACES = {

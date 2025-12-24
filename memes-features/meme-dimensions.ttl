@@ -1,10 +1,10 @@
-@prefix : <http://example.org/multimodal-taxonomy#> .
+@prefix : <http://w3c.org/memes-ontology/general#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://example.org/multimodal-taxonomy#> .
+@base <http://w3c.org/memes-ontology/general#> .
 
 <http://w3c.org/memes-ontology/general#> rdf:type owl:Ontology ;
                                           rdfs:comment "An ontology for analyzing memes including textual and visual materials with their interrelations"@en ;
@@ -654,6 +654,118 @@ E.g. text placed only over neutral areas to preserve important visual content in
                                   rdfs:label "visually composition compliant with"@en .
 
 
+###  http://w3c.org/memes-ontology/general#relatedTo
+:relatedTo rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :relatesTo ;
+           rdfs:domain owl:Thing ;
+           rdfs:range owl:Thing ;
+           :relationIndex 48 ;
+           rdfs:comment "General property indicating a relationship between two entities"@en ;
+           rdfs:label "related to"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasExpressor
+:hasExpressor rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :relatesTo ;
+              rdfs:domain owl:Thing ;
+              rdfs:range owl:Thing ;
+              :relationIndex 49 ;
+              rdfs:comment "Indicates an entity that expresses or manifests an emotion or other dimension"@en ;
+              rdfs:label "has expressor"@en .
+
+
+###  http://w3c.org/memes-ontology/general#mappedOnto
+:mappedOnto rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :metaphoricallyMapsTo ;
+            rdfs:domain owl:Thing ;
+            rdfs:range owl:Thing ;
+            :relationIndex 50 ;
+            rdfs:comment "Indicates a metaphorical or analogical mapping from one entity to another"@en ;
+            rdfs:label "mapped onto"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasParticipant
+:hasParticipant rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :relatesTo ;
+                rdfs:domain owl:Thing ;
+                rdfs:range owl:Thing ;
+                :relationIndex 51 ;
+                rdfs:comment "Indicates an entity that participates in a scene or event"@en ;
+                rdfs:label "has participant"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasMappedEntity
+:hasMappedEntity rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :metaphoricallyMapsTo ;
+                 rdfs:domain owl:Thing ;
+                 rdfs:range owl:Thing ;
+                 :relationIndex 52 ;
+                 rdfs:comment "Indicates the target entity in an analogical mapping relationship"@en ;
+                 rdfs:label "has mapped entity"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasMappingEntity
+:hasMappingEntity rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :metaphoricallyMapsTo ;
+                  rdfs:domain owl:Thing ;
+                  rdfs:range owl:Thing ;
+                  :relationIndex 53 ;
+                  rdfs:comment "Indicates the source entity in an analogical mapping relationship"@en ;
+                  rdfs:label "has mapping entity"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasToxicElement
+:hasToxicElement rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :relatesTo ;
+                 rdfs:domain owl:Thing ;
+                 rdfs:range owl:Thing ;
+                 :relationIndex 54 ;
+                 rdfs:comment "Indicates an entity that contains or exhibits toxic, harmful, or problematic elements"@en ;
+                 rdfs:label "has toxic element"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasAssertion
+:hasAssertion rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :relatesTo ;
+              rdfs:domain owl:Thing ;
+              rdfs:range owl:Thing ;
+              :relationIndex 55 ;
+              rdfs:comment "Indicates a meme object that has an assertion about its content"@en ;
+              rdfs:label "has assertion"@en .
+
+
+###  http://w3c.org/memes-ontology/general#asserts
+:asserts rdf:type owl:ObjectProperty ;
+         rdfs:domain owl:Thing ;
+         rdfs:range owl:Thing ;
+         rdfs:comment "Indicates that an assertion asserts something about a meme or its content"@en ;
+         rdfs:label "asserts"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasToxicityValue
+:hasToxicityValue rdf:type owl:DatatypeProperty ;
+                  rdfs:domain owl:Thing ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:comment "Indicates whether a meme has toxicity (true) or not (false)"@en ;
+                  rdfs:label "has toxicity value"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasToxicityType
+:hasToxicityType rdf:type owl:DatatypeProperty ;
+                 rdfs:domain owl:Thing ;
+                 rdfs:range rdfs:Literal ;
+                 rdfs:comment "Indicates the type/label of toxicity found in the meme"@en ;
+                 rdfs:label "has toxicity type"@en .
+
+
+###  http://w3c.org/memes-ontology/general#hasToxicityExplanation
+:hasToxicityExplanation rdf:type owl:DatatypeProperty ;
+                         rdfs:domain owl:Thing ;
+                         rdfs:range rdfs:Literal ;
+                         rdfs:comment "Provides an explanation of the toxicity found in the meme"@en ;
+                         rdfs:label "has toxicity explanation"@en .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -1171,6 +1283,13 @@ E.g. text placed only over neutral areas to preserve important visual content in
                  rdfs:subClassOf :DiegeticallyIntegrated ;
                  rdfs:comment "Text appearing on signs, books, screens, and other objects within the meme world"@en ;
                  rdfs:label "Visual World Part"@en .
+
+
+###  http://w3c.org/memes-ontology/general#MemeObject
+:MemeObject rdf:type owl:Class ;
+            rdfs:subClassOf owl:Thing ;
+            rdfs:comment "Represents a meme object that contains assertions about its content"@en ;
+            rdfs:label "Meme Object"@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

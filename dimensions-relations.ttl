@@ -1,4 +1,4 @@
-@prefix meme: <http://example.org/meme#> .
+@prefix meme: <http://w3c.org/memes-ontology/general#> .
 
 
 # ========================================
@@ -38,8 +38,8 @@ meme:TextualMaterial meme:textualComponentOf meme:Meme .
 #meme:TextualMaterial meme:mapsOnto meme:VisualMaterial .
 
 # BackgroundKnowledge relations
-meme:BackgroundKnowledge meme:referredIn meme:VisualMaterial . # example: "the image of Bill Cosby"
-meme:BackgroundKnowledge meme:referredIn meme:TextualMaterial . # example: "the text 'when you see Bill Cosby'"
+meme:BackgroundKnowledge meme:referredIn meme:VisualMaterial . # example: "the image of Bill Cosby"
+meme:BackgroundKnowledge meme:referredIn meme:TextualMaterial . # example: "the text 'when you see Bill Cosby'"
 meme:BackgroundKnowledge meme:referredIn meme:Scene . # example: "a man telling another man <<try this bat meat, what could go wrong?>> --> ref to Covid-19"
 #meme:BackgroundKnowledge meme:contextualizes meme:AnalogicalMapping .
 
@@ -183,3 +183,10 @@ meme:Toxicity meme:expressedVia meme:AnalogicalMapping .
 meme:Toxicity meme:triggers meme:Emotion .
 meme:Toxicity meme:augments meme:OverallIntent .
 meme:Toxicity meme:hasTarget meme:TargetCommunity .
+
+
+# ========================================
+# ASSERTION RELATION
+# ========================================
+
+meme:asserts a owl:ObjectProperty .

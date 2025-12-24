@@ -1,0 +1,19 @@
+{
+    "@context": {
+      "@vocab": "http://example.org/multimodal-taxonomy#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#"
+    },
+    "@id": "EmotionRelationsMaterialiser",
+    "@type": "owl:Class",
+    "rdfs:subClassOf": "owl:TechnicalPrompt",
+    "dimensionIndex": 19,
+    "rdfs:comment": "Prompt to materialise the relations between an emotion and its expressors.",
+    "rdfs:label": "Emotion Relations Materialiser",
+    "promptExtractionText": "Prompt to materialise the relations between an emotion and its participants. TASK: Consider the textual description of the meme, the emotion, and the individuals and relations already present in the graph that are involved in the emotion assertion. If the relations are not present, create them. Return the relations in a JSON array: [{\"emotion\": \"emotion_id\", \"expressors\": [{\"entity\": \"entity1_name\", \"relation\": \"hasExpressor\"}, {\"entity\": \"entity2_name\", \"relation\": \"hasExpressor\"}], \"directRelations\": [{\"from\": \"entity1_name\", \"relation\": \"emotionalRelationToEntity\", \"to\": \"entity2_name\"}]}]"
+  }
+  
+  
+  
+  

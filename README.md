@@ -256,7 +256,32 @@ This context is included in the prompt as "In Context Material for the Meme Anal
 
 ### Using the Reversed Pipeline
 
-To use the reversed pipeline, use the `extract_dimensions_reversed.py` script:
+To use the reversed pipeline, use the `extract_dimensions_reversed.sh` script or the Python script directly:
+
+```bash
+# Extract dimensions using reversed pipeline with Claude (default)
+./scripts/sh/extract_dimensions_reversed.sh img/meme.png
+
+# Extract dimensions using reversed pipeline with HuggingFace
+./scripts/sh/extract_dimensions_reversed.sh img/meme.png --llm-provider huggingface
+
+# Extract with refinement (adds relations between individuals)
+./scripts/sh/extract_dimensions_reversed.sh img/meme.png --refine true
+
+# Full example with all parameters
+./scripts/sh/extract_dimensions_reversed.sh img/meme.png \
+  --llm-provider huggingface \
+  --llm-model Qwen/Qwen3-VL-8B-Instruct \
+  --output-dir ./output_reversed \
+  --additional-kb prompts/dimension-extraction-prompts-refined/Qua-EntitiesKnowledgeBase.jsonld \
+  --iterative-kb true \
+  --refine true
+
+# Specify custom output directory
+./scripts/sh/extract_dimensions_reversed.sh img/meme.png --output-dir ./output_reversed
+```
+
+Or use Python directly:
 
 ```bash
 # Extract dimensions using reversed pipeline with Claude
@@ -265,8 +290,8 @@ python extract_dimensions_reversed.py img/meme.png --llm-provider claude
 # Extract dimensions using reversed pipeline with HuggingFace
 python extract_dimensions_reversed.py img/meme.png --llm-provider huggingface
 
-# Specify custom output directory
-python extract_dimensions_reversed.py img/meme.png --output-dir ./output_reversed
+# Extract with refinement
+python extract_dimensions_reversed.py img/meme.png --refine true
 ```
 
 Or use the SLURM batch script:
@@ -275,6 +300,176 @@ Or use the SLURM batch script:
 # Submit job to SLURM cluster
 sbatch scripts/sbatch/extract_dimensions_reversed.sbatch img/meme.png --llm-provider claude
 ```
+
+### Knowledge Graph Refinement
+
+The pipeline includes a **refinement step** that adds relations between individuals in the generated knowledge graph. This step uses materializer prompts to identify and create missing relationships.
+
+#### Refinement Materializers
+
+The refinement process includes four materializers that add relations:
+
+1. **AnalogicalMappingRelationsMaterialiser**
+   - Adds relations between AnalogicalMapping individuals and VisualMaterial/TextualMaterial entities
+   - Uses relations: `:hasMappedEntity`, `:hasMappingEntity`, `:mappedOnto`
+
+2. **EmotionRelationsMaterialised**
+   - Adds relations between EmotionExpression individuals and their expressors
+   - Uses relations: `:hasExpressor`, and direct relations between entities
+
+3. **SceneRelationsMaterialiser**
+   - Adds relations between Scene individuals and their participants
+   - Uses relations: `:hasParticipant`, and direct relations between participants
+
+4. **ToxicityRelationsMaterialiser**
+   - Adds relations between ToxicityAssessment individuals and toxic elements
+   - Uses relations: `:hasToxicElement`
+
+#### What Gets Passed to Refinement Prompts
+
+Each materializer receives:
+- **Target dimension individuals**: The individuals from the target dimension (e.g., AnalogicalMapping, EmotionExpression, Scene, ToxicityAssessment) with all their properties
+- **OverallIntent individuals**: Always included for all materializers to provide context
+- **Related dimension individuals**: Specific to each materializer (e.g., VisualMaterial, TextualMaterial, Scene, BackgroundKnowledge)
+- **The original image**: For vision-language models
+
+#### Using Refinement
+
+To enable refinement, add the `--refine true` flag:
+
+```bash
+# Extract dimensions and refine the knowledge graph
+./scripts/sh/extract_dimensions_reversed.sh img/meme.png --refine true
+```
+
+This will:
+1. Extract all dimensions using the reversed pipeline
+2. Generate `{image_name}_enhanced_ontology_reversed.ttl`
+3. Run all four materializers to add relations
+4. Generate `{image_name}_refined_ontology.ttl` with the new relations
+5. Save LLM output JSON files for each materializer
+
+#### Refinement Output
+
+The refinement process generates:
+- **Refined TTL file**: `{image_name}_refined_ontology.ttl` - Contains the original ontology plus new relation triples
+- **Materializer output files**: `{image_name}_refined_ontology_{materializer_name}_output.json` - Contains the parsed relations and generated triples for each materializer
+
+## 📝 Q&A Generation
+
+The Q&A generation component creates question-answer pairs based on extracted meme dimensions. This process works directly with TTL ontology files and generates educational Q&A pairs for each dimension.
+
+### Q&A Generation Process
+
+The Q&A generation follows these steps:
+
+#### 1. **Input Processing**
+- **Input**: TTL ontology file (`{image_name}_refined_ontology.ttl`) containing extracted dimensions and individuals
+- **Image**: The original meme image file
+- **Dimensions**: All dimensions from the ontology (or filtered subset)
+
+#### 2. **Dimension Processing**
+For each dimension in the ontology:
+
+1. **Load TTL File**: The system loads the TTL ontology file using RDFLib
+2. **Extract Individuals**: For each dimension, the system:
+   - Searches for all individuals of that dimension class in the TTL file
+   - Extracts instance names, labels, and descriptions (rdfs:comment) for each individual
+   - Groups individuals by their dimension class
+3. **Get Dimension Description**: The system retrieves the general dimension description from the base ontology (meme-dimensions.ttl)
+   - This includes the dimension's label and comment/description
+   - Provides context about what the dimension represents
+
+#### 3. **Q&A Generation**
+For each dimension, the system generates one Q&A pair by:
+
+1. **Building Context**:
+   - **Meme Image**: The original image is passed to the LLM
+   - **Dimension Description**: General description of the dimension from the ontology
+   - **Specific Individuals** (if any): List of extracted individuals with their labels and descriptions
+     - Format: "FOCUS ON THESE SPECIFIC ELEMENTS IN Q&A GENERATION"
+     - Each individual includes: instance name, label, and description
+
+2. **Prompt Creation**:
+   - If individuals exist: The prompt instructs the LLM to focus on the specific extracted individuals
+   - If no individuals exist: The prompt instructs the LLM to generate Q&A based on the general dimension description only
+   - The prompt includes requirements for:
+     - 4 answer options (correct, plausible, implausible, "none of the others")
+     - Similar answer lengths (2-8 words each)
+     - Randomized answer order
+     - Clear and specific questions
+
+3. **LLM Generation**:
+   - The LLM (Claude or HuggingFace) receives:
+     - The meme image
+     - The dimension description
+     - The list of specific individuals (if any)
+   - The LLM generates a Q&A pair in JSON format
+
+4. **Response Processing**:
+   - The system parses the LLM response
+   - Extracts question, answers, explanation, and metadata
+   - Shuffles answers to ensure correct answer is not always first
+   - Adds generation metadata (timestamp, method, unique ID)
+
+#### 4. **Output Storage**
+For each dimension, the system creates:
+- **Directory Structure**: `{output_dir}/{image_name}_qa/{dimension_name}/`
+- **JSON-LD File**: `{image_name}_{dimension_name}_qa_{qa_id}.jsonld`
+  - Contains structured Q&A data with metadata
+  - Includes links to source image and dimension
+- **Text File**: `{image_name}_{dimension_name}_qa_{qa_id}.txt`
+  - Human-readable format with question, answers, and explanation
+
+### Key Features
+
+1. **Direct TTL Processing**: Works directly with TTL files - no intermediate JSON-LD conversion needed
+2. **Handles Empty Dimensions**: If a dimension has no individuals, Q&A is still generated using the dimension description
+3. **All Dimensions Processed**: Processes all dimensions from the ontology, not just those with individuals
+4. **Individual-Focused**: When individuals exist, the Q&A explicitly focuses on those specific elements
+5. **Dimension-Aware**: Each Q&A pair is specific to one dimension, ensuring focused questions
+
+### Q&A Format
+
+Each Q&A pair includes:
+- **Question**: A clear, specific question about the dimension
+- **Answers**: 4 options with similar length:
+  - One correct answer (based on dimension instances or description)
+  - One plausible but incorrect answer
+  - One implausible answer
+  - "None of the others"
+- **Explanation**: Brief explanation of the correct answer
+- **Metadata**: Dimension name, related instances, generation timestamp
+
+### Usage
+
+```bash
+# Generate Q&A for all dimensions from TTL file
+./scripts/sh/run_qa_generation_reversed.sh \
+  --image-path img/meme.png \
+  --output-reversed-dir ./output_reversed/hateful-memes-out \
+  --output-dir ./output_reversed/qa \
+  --llm-provider huggingface \
+  --use-ttl \
+  --ttl-file ./output_reversed/hateful-memes-out/01382_refined_ontology.ttl
+
+# Generate Q&A for specific dimensions only
+./scripts/sh/run_qa_generation_reversed.sh \
+  --image-path img/meme.png \
+  --use-ttl \
+  --dimensions OverallIntent,Scene,EmotionExpression
+
+# Batch processing (using batch_qa_generation.sh)
+./scripts/sh/batch_qa_generation.sh
+```
+
+### Batch Processing
+
+The `batch_qa_generation.sh` script processes multiple images:
+1. Reads image names from `/tmp/qa_images_to_process.txt`
+2. For each image, finds the corresponding `{image_name}_refined_ontology.ttl` file
+3. Generates Q&A for all dimensions in each TTL file
+4. Saves output to `{output_dir}/{image_name}_qa/{dimension_name}/`
 
 ### Available Question Types
 
@@ -290,30 +485,60 @@ The pipeline can generate the following types of questions:
 
 The pipeline generates multiple output formats:
 
-### 1. JSON-LD Files
-- **Standalone dimensions**: `{image_name}_dimensions.jsonld`
+### 1. Knowledge Graph Files (TTL)
+- **Enhanced ontology**: `{image_name}_enhanced_ontology_reversed.ttl` - Contains original ontology + extracted dimension instances
+- **Refined ontology**: `{image_name}_refined_ontology.ttl` - Contains enhanced ontology + relations from materializers (only if `--refine true`)
+
+### 2. JSON-LD Files
+- **Standalone dimensions**: `{image_name}_dimensions_reversed.jsonld`
+- **Individual dimension files**: `dimensions/{dimension_name}/{image_name}_{instance_name}.jsonld`
 - **Standalone Q&A**: `{image_name}_qa.jsonld`
 - **Unified output**: `{image_name}_unified.jsonld`
 
-### 2. Text Files
-- **Dimensions summary**: `{image_name}_dimensions.txt`
+### 3. Text Files
+- **Dimensions summary**: `{image_name}_dimensions_reversed.txt`
 - **Q&A pairs**: `{image_name}_qa.txt`
 
-### 3. Raw JSON Files
-- **Raw dimensions data**: `{image_name}_dimensions_raw.json`
+### 4. Raw JSON Files
+- **Raw dimensions data**: `{image_name}_dimensions_reversed_raw.json`
 - **Raw Q&A data**: `{image_name}_qa_raw.json`
+- **Materializer outputs**: `{image_name}_refined_ontology_{materializer_name}_output.json` (only if `--refine true`)
+
+### 5. Q&A Generation Output
+
+The Q&A generation script (`run_qa_generation_reversed.sh`) supports:
+- **Dimension filtering**: Generate Q&A for specific dimensions only
+- **Individual filtering**: Generate Q&A for specific individuals
+- **TTL file input**: Use TTL file directly instead of JSON-LD files
+
+Example:
+```bash
+# Generate Q&A for all dimensions
+./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png
+
+# Generate Q&A for specific dimensions
+./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png --dimensions OverallIntent,Scene,EmotionExpression
+
+# Generate Q&A for specific individuals
+./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png --individuals EmotionExpression:amusement,joy
+
+# Use TTL file directly
+./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png --use-ttl
+```
 
 ## 🔌 LLM Providers
 
 ### Claude (Anthropic)
 - **Model**: claude-3-5-sonnet-20241022
 - **Features**: Vision support, high-quality responses
-- **Requirements**: API key
+- **Requirements**: API key (set `CLAUDE_API_KEY` environment variable)
 
-### Ollama (Local)
-- **Models**: llama3.2:latest (configurable)
-- **Features**: Local processing, no API costs
-- **Requirements**: Ollama installed locally
+### HuggingFace (Local/Remote)
+- **Default Model**: Qwen/Qwen3-VL-8B-Instruct
+- **Features**: Vision-language model, local processing, no API costs
+- **Requirements**: GPU recommended (CUDA), HuggingFace token (optional, for faster downloads)
+- **Custom Models**: Can specify with `--llm-model` parameter
+  - Example: `Qwen/Qwen3-VL-30B-A3B-Instruct`
 
 ## 📝 Usage Examples
 
@@ -376,7 +601,47 @@ Extract only specific dimensions you need:
 ./scripts/sh/run_meme_pipeline.sh --image img/meme.png --mode All --output-dir ./results/analysis_001
 ```
 
-### Example 6: Direct Python Usage (Advanced)
+### Example 6: Extraction with Refinement
+
+```bash
+# Extract dimensions and refine knowledge graph with relations
+./scripts/sh/extract_dimensions_reversed.sh img/meme.png --refine true
+
+# Extract with refinement using HuggingFace
+./scripts/sh/extract_dimensions_reversed.sh img/meme.png --llm-provider huggingface --refine true
+```
+
+### Example 7: Extraction with Additional Knowledge Base
+
+```bash
+# Add additional knowledge base to prompts
+./scripts/sh/extract_dimensions_reversed.sh img/meme.png \
+  --additional-kb prompts/dimension-extraction-prompts-refined/Qua-EntitiesKnowledgeBase.jsonld
+
+# Add multiple knowledge bases and attach to all prompts
+./scripts/sh/extract_dimensions_reversed.sh img/meme.png \
+  --additional-kb prompts/dimension-extraction-prompts-refined/Qua-EntitiesKnowledgeBase.jsonld \
+  --additional-kb prompts/dimension-extraction-prompts-refined/AdditionalKnowledgeBase.jsonld \
+  --iterative-kb true
+```
+
+### Example 8: Q&A Generation
+
+```bash
+# Generate Q&A for all dimensions
+./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png
+
+# Generate Q&A for specific dimensions
+./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png --dimensions OverallIntent,Scene,EmotionExpression
+
+# Generate Q&A for specific individuals
+./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png --individuals EmotionExpression:amusement,joy
+
+# Use TTL file directly
+./scripts/sh/run_qa_generation_reversed.sh --image-path img/meme.png --use-ttl
+```
+
+### Example 9: Direct Python Usage (Advanced)
 
 If you need programmatic control:
 
