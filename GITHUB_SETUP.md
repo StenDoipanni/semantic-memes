@@ -29,7 +29,7 @@ These files currently contain hardcoded API keys. Replace them with environment 
 After creating the repository, GitHub will show you commands. Use the HTTPS or SSH URL:
 
 ```bash
-cd /home/sdegiorgis/memes/meme-pipeline-server
+cd /home/your/path/directory
 
 # For HTTPS (recommended for first-time setup)
 git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
