@@ -1,3 +1,9 @@
+# M-Quest - Meme Question-Understanding Evaluation on Semantics and Toxicity
+
+The M-Quest benchmark and experiments are available here: https://anonymous.4open.science/r/VLMs_meme-inference-F5F4/README.md
+
+
+
 # Meme Analysis Pipeline
 
 A comprehensive pipeline for analyzing memes using Large Language Models (LLMs), Multimodal Language Models (MLMs), and Vision Language Models (VLMs) with ontological knowledge representation.
